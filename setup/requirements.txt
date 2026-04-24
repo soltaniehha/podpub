@@ -1,2 +1,14 @@
 feedgen>=1.0.0
 PyYAML>=6.0
+
+# Transcription (local, no cloud APIs)
+# Pinned to versions verified on macOS 14+ / Apple Silicon / Python 3.12.
+# Note: torch>=2.4 is required by current transformers; pyannote.audio 4.x
+# is required for compatibility with torchaudio>=2.4. matplotlib is imported
+# unconditionally by pyannote but not declared as a dependency upstream.
+whisperx==3.8.5
+torch==2.8.0
+torchaudio==2.8.0
+librosa==0.11.0
+numpy==2.4.4
+matplotlib==3.10.9

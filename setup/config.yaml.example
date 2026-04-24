@@ -14,3 +14,18 @@ podcast:
   language: en-us
   category: Education
   cover_image_url: https://YOUR_GITHUB_USER.github.io/podpub/NotebookLM-PodPub-Cover.png
+
+transcription:
+  model: large-v3
+  language: en
+  # Get a token from https://huggingface.co/settings/tokens (free, read scope).
+  # Also accept the licenses on these two models before first run:
+  #   https://huggingface.co/pyannote/speaker-diarization-3.1
+  #   https://huggingface.co/pyannote/segmentation-3.0
+  hf_token: hf_REPLACE_ME
+  male_label: Daniel
+  female_label: Maya
+  # Below this fundamental frequency the diarized speaker is labeled as the
+  # male voice; above, as the female voice. 165 Hz is a clean midpoint
+  # between typical male (85-155) and female (165-255) F0 ranges.
+  f0_threshold_hz: 165
