@@ -15,7 +15,8 @@ When the user asks to publish, inspect `inbox/` and follow this procedure:
 
 3. **Preview, then publish.**
    - First run: `.venv/bin/python podpub.py --dry-run` — sanity-check the rename plan, feed XML, and commit message.
-   - If everything looks right, run: `.venv/bin/python podpub.py` — this moves files into `audio/`, rebuilds `feed.xml`, commits, and pushes to `origin/main`. GitHub Pages auto-deploys within ~30 seconds.
+   - If everything looks right, run: `.venv/bin/python podpub.py` — this transcribes each new episode (takes 1–2 min per episode), moves files into `audio/` and `transcripts/`, rebuilds `feed.xml`, commits, and pushes to `origin/main`. GitHub Pages auto-deploys within ~30 seconds.
+   - To publish without transcribing (e.g., transcription tooling is broken): add `--skip-transcripts`.
 
 4. **Delete the PDF(s) after publish.** Once `podpub.py` succeeds, `rm` the source PDF from `inbox/`. The user's standing preference is a clean inbox — do this without asking. If you're not sure publishing succeeded, leave the PDF and flag it.
 
@@ -83,6 +84,9 @@ Google Scholar citations: 66
 - `.venv/bin/python podpub.py --dry-run` — preview without writing or pushing.
 - `.venv/bin/python podpub.py --no-push` — commit locally but skip `git push`.
 - `.venv/bin/python podpub.py --rebuild-feed` — re-emit `feed.xml` from existing items without processing the inbox. Use after editing `config.yaml` (show title, description, cover URL) so the feed picks up channel-level changes.
+- `.venv/bin/python podpub.py --backfill-transcripts` — generate VTTs for existing episodes that don't have one, inject transcript URLs into `feed.xml`, commit, and push.
+- `.venv/bin/python podpub.py --skip-transcripts` — publish without generating transcripts for new episodes.
+- `.venv/bin/python transcribe.py <audio_file> [--output <vtt>] [--force]` — standalone transcriber; useful for one-off re-transcription.
 
 ## Layout notes
 
@@ -90,6 +94,30 @@ Google Scholar citations: 66
 - **`setup/`**: `requirements.txt`, `config.yaml.example`. Setup-only, not touched day-to-day.
 - **`inbox/`**: user's drop zone. Contents gitignored (including PDFs).
 - **`config.yaml`** (gitignored, at root): paths + podcast metadata. Read by `podpub.py` on every run.
+
+## Transcription setup (one-time, per machine)
+
+Episode transcripts are generated locally by `transcribe.py` using WhisperX
+(faster-whisper `large-v3`) and pyannote.audio for speaker diarization. Both
+run fully offline once the model weights are downloaded. Speakers are labeled
+**Daniel** (male voice) and **Maya** (female voice).
+
+To enable transcription on a fresh machine:
+
+1. **Create a HuggingFace account** (free): https://huggingface.co/join
+2. **Accept the license** on each of these two models (click through once):
+   - https://huggingface.co/pyannote/speaker-diarization-3.1
+   - https://huggingface.co/pyannote/segmentation-3.0
+3. **Generate a read-scope access token** at
+   https://huggingface.co/settings/tokens. Copy it.
+4. **Paste the token** into `config.yaml` under `transcription.hf_token`
+   (replace `hf_REPLACE_ME`). This file is gitignored — the token never leaves
+   your machine.
+5. **First transcription run** downloads ~3 GB of model weights to
+   `~/.cache/huggingface/`. Subsequent runs are offline.
+
+If the token is missing or the licenses are not accepted, `transcribe.py`
+fails fast with a pointer to the URLs above.
 
 ## One-time setup (only needed on a fresh clone or new machine)
 
