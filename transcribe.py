@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -207,18 +208,153 @@ def _build_speaker_map(audio: np.ndarray, result: dict, cfg: dict) -> dict[str, 
     return mapping
 
 
-if __name__ == "__main__":
-    # Temporary: verify ASR + diarization + speaker mapping.
-    # This block will be replaced by the real CLI in Task 7.
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    audio_arg = sys.argv[1] if len(sys.argv) > 1 else "audio/001 - Why AI Has A Body Problem.m4a"
-    cfg = load_config()
-    result, audio = _transcribe_and_align(Path(audio_arg), cfg)
+def _collapse_to_cues(result: dict, speaker_map: dict[str, str], max_cue_sec: float = 15.0) -> list[dict]:
+    """Group consecutive same-speaker words into cues, breaking on speaker
+    change or when cue duration exceeds max_cue_sec.
+
+    Returns list of cues: {"start": float, "end": float, "speaker": str, "text": str}
+    where `speaker` is already the mapped name (Daniel/Maya) or the raw
+    SPEAKER_XX string if not in the map.
+    """
+    cues: list[dict] = []
+    current: dict | None = None
+    for seg in result["segments"]:
+        for w in seg.get("words", []):
+            if "start" not in w or "end" not in w:
+                continue
+            raw_spk = w.get("speaker")
+            spk_name = speaker_map.get(raw_spk, raw_spk or "")
+            word_text = w.get("word", "")
+            if current is None:
+                current = {"start": w["start"], "end": w["end"],
+                           "speaker": spk_name, "text": word_text}
+                continue
+            same_speaker = current["speaker"] == spk_name
+            within_limit = (w["end"] - current["start"]) <= max_cue_sec
+            if same_speaker and within_limit:
+                current["end"] = w["end"]
+                # Always insert a separator; whitespace is normalized at the end.
+                # Older whisperx versions had leading-space-on-word; newer ones don't.
+                current["text"] += " " + word_text
+            else:
+                cues.append(current)
+                current = {"start": w["start"], "end": w["end"],
+                           "speaker": spk_name, "text": word_text}
+    if current is not None:
+        cues.append(current)
+    # Normalize: collapse any run of whitespace to a single space, trim ends.
+    for c in cues:
+        c["text"] = re.sub(r"\s+", " ", c["text"]).strip()
+    return cues
+
+
+def _format_vtt_time(seconds: float) -> str:
+    if seconds < 0:
+        seconds = 0.0
+    h = int(seconds // 3600)
+    m = int((seconds % 3600) // 60)
+    s = seconds - (h * 3600) - (m * 60)
+    return f"{h:02d}:{m:02d}:{s:06.3f}"
+
+
+def _write_vtt(cues: list[dict], output_path: Path) -> None:
+    lines = ["WEBVTT", ""]
+    for i, c in enumerate(cues, start=1):
+        start = _format_vtt_time(c["start"])
+        end = _format_vtt_time(c["end"])
+        text = c["text"]
+        spk = c["speaker"]
+        lines.append(str(i))
+        lines.append(f"{start} --> {end}")
+        if spk and not spk.startswith("SPEAKER_"):
+            lines.append(f"<v {spk}>{text}</v>")
+        else:
+            # Unmapped or no speaker: emit plain text
+            lines.append(text)
+        lines.append("")
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def transcribe_audio(
+    audio_path: Path,
+    output_vtt_path: Path,
+    cfg: dict,
+    *,
+    force: bool = False,
+) -> TranscriptionResult:
+    """Transcribe one audio file to VTT with Daniel/Maya speaker labels.
+
+    Raises FileExistsError if output_vtt_path exists and force=False.
+    Raises FileNotFoundError if audio_path doesn't exist.
+    Any downstream failure (corrupt audio, missing HF license) propagates.
+    """
+    if not audio_path.exists():
+        raise FileNotFoundError(f"audio file not found: {audio_path}")
+    if output_vtt_path.exists() and not force:
+        raise FileExistsError(
+            f"{output_vtt_path} already exists. Pass force=True (or --force) to overwrite."
+        )
+    output_vtt_path.parent.mkdir(parents=True, exist_ok=True)
+
+    result, audio = _transcribe_and_align(audio_path, cfg)
     result = _diarize(audio, result, cfg)
     speaker_map = _build_speaker_map(audio, result, cfg)
-    print(f"\nSpeaker map: {speaker_map}\n")
-    print("First 5 segments with named speakers:\n")
-    for s in result["segments"][:5]:
-        raw_spk = s.get("speaker", "UNKNOWN")
-        named = speaker_map.get(raw_spk, raw_spk)
-        print(f"  [{named}] [{s['start']:.2f}-{s['end']:.2f}] {s['text'][:80]}")
+    cues = _collapse_to_cues(result, speaker_map)
+    _write_vtt(cues, output_vtt_path)
+
+    duration = float(len(audio)) / 16000.0
+    male = cfg["transcription"]["male_label"]
+    female = cfg["transcription"]["female_label"]
+    male_time = sum(c["end"] - c["start"] for c in cues if c["speaker"] == male)
+    female_time = sum(c["end"] - c["start"] for c in cues if c["speaker"] == female)
+    total_speech = male_time + female_time
+    male_ratio = (male_time / total_speech) if total_speech > 0 else 0.0
+    female_ratio = (female_time / total_speech) if total_speech > 0 else 0.0
+
+    log.info(
+        "%s: %d cues, %s (%.0f%%) + %s (%.0f%%), duration %.1fs",
+        output_vtt_path.name, len(cues),
+        male, male_ratio * 100, female, female_ratio * 100, duration,
+    )
+    if total_speech > 0 and (male_ratio < 0.20 or male_ratio > 0.80):
+        log.warning(
+            "speaker ratio looks skewed (%s %.0f%% / %s %.0f%%); "
+            "diarization may be suspect", male, male_ratio * 100, female, female_ratio * 100,
+        )
+
+    return TranscriptionResult(
+        num_cues=len(cues),
+        duration_sec=duration,
+        daniel_ratio=male_ratio,
+        maya_ratio=female_ratio,
+        model=cfg["transcription"]["model"],
+    )
+
+
+def _main() -> int:
+    ap = argparse.ArgumentParser(description="Transcribe an audio file to VTT with speaker diarization.")
+    ap.add_argument("audio_path", help="Path to audio file (.m4a, .mp3, .wav)")
+    ap.add_argument("--output", help="Path to output .vtt (default: sibling of audio_path)")
+    ap.add_argument("--force", action="store_true", help="Overwrite existing VTT")
+    args = ap.parse_args()
+
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    audio_path = Path(args.audio_path)
+    output_path = Path(args.output) if args.output else audio_path.with_suffix(".vtt")
+
+    cfg = load_config()
+    try:
+        result = transcribe_audio(audio_path, output_path, cfg, force=args.force)
+    except FileExistsError as e:
+        log.error(str(e))
+        return 2
+    except FileNotFoundError as e:
+        log.error(str(e))
+        return 2
+    log.info("wrote: %s", output_path)
+    log.info("result: %s", result)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(_main())
