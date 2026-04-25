@@ -276,6 +276,10 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="Preview without moving files, writing feed, or pushing")
     ap.add_argument("--no-push", action="store_true", help="Commit locally but skip git push")
     ap.add_argument("--rebuild-feed", action="store_true", help="Re-emit feed.xml from existing items (no inbox processing); useful after editing config.yaml")
+    ap.add_argument("--backfill-transcripts", action="store_true",
+                    help="Generate VTTs for existing episodes missing them, add to feed, commit, push.")
+    ap.add_argument("--skip-transcripts", action="store_true",
+                    help="Publish without generating transcripts for new episodes.")
     args = ap.parse_args()
 
     log = setup_logging()
@@ -296,6 +300,10 @@ def main() -> int:
 
     if args.rebuild_feed:
         return _rebuild_feed(cfg, repo_dir, feed_path, args, log)
+
+    if args.backfill_transcripts:
+        return _backfill_transcripts(cfg, repo_dir, audio_dir, feed_path, base_url,
+                                     audio_subdir, args, log)
 
     if not inbox_dir.is_dir():
         log.error("inbox_dir does not exist: %s", inbox_dir)
@@ -418,6 +426,105 @@ def _rebuild_feed(cfg: dict, repo_dir: Path, feed_path: Path, args: argparse.Nam
         log.info("--no-push: skipping git push")
     else:
         git_run(repo_dir, "push", log=log)
+    return 0
+
+
+def _backfill_transcripts(cfg: dict, repo_dir: Path, audio_dir: Path, feed_path: Path,
+                          base_url: str, audio_subdir: str, args: argparse.Namespace,
+                          log: logging.Logger) -> int:
+    """Generate VTTs for existing audio/ entries that lack a sibling transcripts/ VTT.
+    Rebuild feed with transcript URLs. Commit + push.
+    """
+    import transcribe  # lazy import so --help is instant and transcribe-only CLIs work
+
+    transcripts_dir = repo_dir / "transcripts"
+    transcripts_dir.mkdir(parents=True, exist_ok=True)
+
+    _, existing_items = parse_existing_feed(feed_path)
+    if not existing_items:
+        log.info("No existing items in feed; nothing to backfill.")
+        return 0
+
+    # Find audio files that have no VTT yet
+    missing: list[tuple[Path, Path]] = []  # (audio_path, vtt_path)
+    for audio_path in sorted(audio_dir.iterdir()):
+        if not audio_path.is_file():
+            continue
+        if audio_path.suffix.lower() not in SUPPORTED_EXTS:
+            continue
+        vtt_path = transcripts_dir / f"{audio_path.stem}.vtt"
+        if not vtt_path.exists():
+            missing.append((audio_path, vtt_path))
+
+    if not missing:
+        log.info("All existing episodes already have transcripts. Nothing to backfill.")
+        return 0
+
+    log.info("=== Backfill plan: %d episode(s) ===", len(missing))
+    for a, v in missing:
+        log.info("  %s -> %s", a.name, v.name)
+
+    if args.dry_run:
+        log.info("--dry-run: not transcribing.")
+        return 0
+
+    # Transcribe each; continue on per-episode failure
+    failures: list[tuple[str, str]] = []
+    new_vtts: list[Path] = []
+    for audio_path, vtt_path in missing:
+        try:
+            log.info("transcribing: %s", audio_path.name)
+            transcribe.transcribe_audio(audio_path, vtt_path, cfg)
+            new_vtts.append(vtt_path)
+        except Exception as e:  # intentional broad catch — per-episode isolation
+            log.error("transcription FAILED for %s: %s", audio_path.name, e)
+            failures.append((audio_path.name, str(e)))
+
+    if not new_vtts:
+        log.error("no episodes successfully transcribed; bailing without feed update.")
+        return 1
+
+    # Build transcript URL map keyed by guid, merge into existing_items
+    guid_to_transcript_url = {}
+    for it in existing_items:
+        # Recover the audio filename from the enclosure URL to pair with the VTT
+        name = f"{it['episode']:03d} - {it['title']}"
+        vtt_name = f"{name}.vtt"
+        vtt_path = transcripts_dir / vtt_name
+        if vtt_path.exists():
+            it["transcript_url"] = f"{base_url}/transcripts/{quote(vtt_name)}"
+            guid_to_transcript_url[it["guid"]] = it["transcript_url"]
+
+    log.info("transcript URLs in feed: %d", len(guid_to_transcript_url))
+
+    # Rebuild feed
+    feed_bytes = build_feed(cfg, existing_items)
+    feed_path.write_bytes(feed_bytes)
+    log.info("wrote feed: %s", feed_path)
+
+    # Commit + push
+    for v in new_vtts:
+        git_run(repo_dir, "add", str(v.relative_to(repo_dir)), log=log)
+    git_run(repo_dir, "add", str(feed_path.relative_to(repo_dir)), log=log)
+
+    if len(new_vtts) == len(missing):
+        commit_msg = f"Add transcripts for {len(new_vtts)} existing episode(s)"
+    else:
+        commit_msg = f"Add transcripts for {len(new_vtts)}/{len(missing)} existing episode(s)"
+    git_run(repo_dir, "commit", "-m", commit_msg, log=log)
+    log.info("committed: %s", commit_msg)
+
+    if args.no_push:
+        log.info("--no-push: skipping git push")
+    else:
+        git_run(repo_dir, "push", "-u", "origin", "main", log=log)
+        log.info("pushed to origin main")
+
+    if failures:
+        log.error("=== Backfill completed with %d failure(s) ===", len(failures))
+        for name, err in failures:
+            log.error("  %s: %s", name, err)
+        return 1
     return 0
 
 
