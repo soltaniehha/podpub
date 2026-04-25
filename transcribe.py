@@ -87,16 +87,45 @@ def _transcribe_and_align(audio_path: Path, cfg: dict) -> tuple[dict, np.ndarray
     return result, audio
 
 
+def _diarize(audio: np.ndarray, result: dict, cfg: dict) -> dict:
+    """Diarize the audio and assign a speaker label to each word.
+
+    Returns the aligned result mutated to include `speaker` on each word and
+    on each segment. Speaker labels are pyannote-native (SPEAKER_00 / SPEAKER_01).
+    """
+    import whisperx
+    from whisperx.diarize import DiarizationPipeline, assign_word_speakers
+
+    t = cfg["transcription"]
+    model_name = t.get("diarization_model", "pyannote/speaker-diarization-3.1")
+    log.info("loading diarization pipeline: %s", model_name)
+    pipeline = DiarizationPipeline(model_name=model_name, token=t["hf_token"], device="cpu")
+
+    log.info("diarizing (forced num_speakers=2)")
+    diarize_segments = pipeline(audio, num_speakers=2)
+
+    log.info("assigning speakers to words")
+    result = assign_word_speakers(diarize_segments, result)
+
+    # Count speakers seen
+    speakers = set()
+    for seg in result["segments"]:
+        if "speaker" in seg:
+            speakers.add(seg["speaker"])
+    log.info("diarization found speakers: %s", sorted(speakers))
+    return result
+
+
 if __name__ == "__main__":
-    # Temporary: verify ASR+alignment on a real audio file.
+    # Temporary: verify ASR + alignment + diarization end-to-end.
     # This block will be replaced by the real CLI in Task 7.
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     audio_arg = sys.argv[1] if len(sys.argv) > 1 else "audio/001 - Why AI Has A Body Problem.m4a"
     cfg = load_config()
-    result, _audio = _transcribe_and_align(Path(audio_arg), cfg)
+    result, audio = _transcribe_and_align(Path(audio_arg), cfg)
+    result = _diarize(audio, result, cfg)
     segments = result["segments"]
-    print(f"\n{len(segments)} segments, first 3:\n")
-    for s in segments[:3]:
-        words = s.get("words", [])
-        print(f"  [{s['start']:.2f}-{s['end']:.2f}] {s['text'][:80]}")
-        print(f"    ({len(words)} word timestamps, first: {words[0] if words else 'N/A'})")
+    print(f"\n{len(segments)} segments, first 5 with speakers:\n")
+    for s in segments[:5]:
+        spk = s.get("speaker", "UNKNOWN")
+        print(f"  [{spk}] [{s['start']:.2f}-{s['end']:.2f}] {s['text'][:80]}")

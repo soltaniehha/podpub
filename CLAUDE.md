@@ -105,9 +105,10 @@ run fully offline once the model weights are downloaded. Speakers are labeled
 To enable transcription on a fresh machine:
 
 1. **Create a HuggingFace account** (free): https://huggingface.co/join
-2. **Accept the license** on each of these two models (click through once):
+2. **Accept the license** on each of these three models (click through once):
    - https://huggingface.co/pyannote/speaker-diarization-3.1
    - https://huggingface.co/pyannote/segmentation-3.0
+   - https://huggingface.co/pyannote/speaker-diarization-community-1 (required by pyannote 4.x as a transitive dependency of `speaker-diarization-3.1`, even though we pin to 3.1 in `config.yaml`)
 3. **Generate a read-scope access token** at
    https://huggingface.co/settings/tokens. Copy it.
 4. **Paste the token** into `config.yaml` under `transcription.hf_token`

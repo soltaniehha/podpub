@@ -19,10 +19,17 @@ transcription:
   model: large-v3
   language: en
   # Get a token from https://huggingface.co/settings/tokens (free, read scope).
-  # Also accept the licenses on these two models before first run:
+  # Also accept the licenses on these three models before first run:
   #   https://huggingface.co/pyannote/speaker-diarization-3.1
   #   https://huggingface.co/pyannote/segmentation-3.0
+  #   https://huggingface.co/pyannote/speaker-diarization-community-1
+  # (community-1 is a transitive dependency of pyannote 4.x's 3.1 impl.)
   hf_token: hf_REPLACE_ME
+  # WhisperX 3.8+ defaults to pyannote/speaker-diarization-community-1,
+  # which is a separate gated model. We pin to 3.1 (the model referenced in
+  # the license URLs above) for simplicity; change this if you've accepted
+  # community-1's license and want to try that model instead.
+  diarization_model: pyannote/speaker-diarization-3.1
   male_label: Daniel
   female_label: Maya
   # Below this fundamental frequency the diarized speaker is labeled as the
