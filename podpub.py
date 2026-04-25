@@ -344,6 +344,8 @@ def main() -> int:
             "url": f"{base_url}/{quote(audio_subdir)}/{quote(new_name)}",
             "guid": make_guid(new_name),
             "has_sidecar": sidecar_text is not None,
+            "base_url": base_url,
+            "audio_subdir": audio_subdir,
         })
 
     log.info("")
@@ -361,6 +363,37 @@ def main() -> int:
         log.info("  message: %s", _commit_message(plans))
         return 0
 
+    # Transcribe each planned audio file. VTT lands in inbox alongside audio,
+    # then we move it with the rest in the move loop below.
+    if not args.skip_transcripts:
+        import transcribe
+        single_item = len(plans) == 1
+        transcription_failures: list[tuple[str, str]] = []
+        for p in plans:
+            vtt_src = p["src"].with_suffix(".vtt")
+            p["vtt_src"] = vtt_src
+            p["vtt_dest"] = (repo_dir / "transcripts" / f"{p['dest'].stem}.vtt")
+            try:
+                log.info("transcribing: %s", p["src"].name)
+                transcribe.transcribe_audio(p["src"], vtt_src, cfg, force=True)
+            except Exception as e:
+                log.error("transcription FAILED for %s: %s", p["src"].name, e)
+                transcription_failures.append((p["src"].name, str(e)))
+                if single_item:
+                    log.error("single-item publish; aborting. Inbox untouched.")
+                    return 1
+                p["vtt_src"] = None  # mark as no-transcript; continue with others
+
+        if transcription_failures and not single_item:
+            log.warning("continuing publish despite %d transcription failure(s); "
+                        "failed items ship without transcripts",
+                        len(transcription_failures))
+    else:
+        log.info("--skip-transcripts: not generating transcripts")
+        for p in plans:
+            p["vtt_src"] = None
+            p["vtt_dest"] = None
+
     moved_files: list[Path] = []
     for p in plans:
         shutil.move(str(p["src"]), str(p["dest"]))
@@ -374,6 +407,14 @@ def main() -> int:
                     shutil.move(str(sc), str(sc_dest))
                     moved_files.append(sc_dest)
                     log.info("moved sidecar: %s", sc_dest)
+
+        vtt_src = p.get("vtt_src")
+        vtt_dest = p.get("vtt_dest")
+        if vtt_src and vtt_src.exists() and vtt_dest:
+            vtt_dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(vtt_src), str(vtt_dest))
+            moved_files.append(vtt_dest)
+            log.info("moved transcript: %s", vtt_dest)
 
     new_items = [_plan_to_item(p) for p in plans]
     feed_bytes = build_feed(cfg, existing_items + new_items)
@@ -529,6 +570,12 @@ def _backfill_transcripts(cfg: dict, repo_dir: Path, audio_dir: Path, feed_path:
 
 
 def _plan_to_item(p: dict) -> dict:
+    base_url = p.get("base_url", "")
+    audio_subdir = p.get("audio_subdir", "audio")
+    transcript_url = ""
+    vtt_dest = p.get("vtt_dest")
+    if vtt_dest is not None and vtt_dest.exists():
+        transcript_url = f"{base_url}/transcripts/{quote(vtt_dest.name)}"
     return {
         "title": p["title"],
         "guid": p["guid"],
@@ -538,6 +585,7 @@ def _plan_to_item(p: dict) -> dict:
         "enclosure_length": p["size"],
         "enclosure_type": p["mime"],
         "episode": p["episode"],
+        "transcript_url": transcript_url,
     }
 
 
