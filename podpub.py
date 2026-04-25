@@ -228,6 +228,11 @@ def _inject_podcast_transcripts(feed_bytes: bytes, items: list[dict]) -> bytes:
     Podcasting 2.0 namespace and a <podcast:transcript> child on each item
     that has a non-empty transcript_url. Items are matched by guid.
     """
+    # Re-register namespaces feedgen emits so ET preserves their prefixes
+    # (otherwise itunes: gets rewritten as ns0: which Apple Podcasts ignores).
+    ET.register_namespace("itunes", ITUNES_NS)
+    ET.register_namespace("atom", "http://www.w3.org/2005/Atom")
+    ET.register_namespace("content", "http://purl.org/rss/1.0/modules/content/")
     ET.register_namespace("podcast", PODCAST_NS)
     root = ET.fromstring(feed_bytes)
     root.set("xmlns:podcast", PODCAST_NS)
