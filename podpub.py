@@ -36,6 +36,7 @@ CONFIG_FILE = "config.yaml"
 LOG_FILE = "podpub.log"
 SCRIPT_DIR = Path(__file__).resolve().parent
 ITUNES_NS = "http://www.itunes.com/dtds/podcast-1.0.dtd"
+PODCAST_NS = "https://podcastindex.org/namespace/1.0"
 
 
 # ---------- config ----------
@@ -162,7 +163,7 @@ def parse_existing_feed(feed_path: Path) -> tuple[int, list[dict]]:
     channel = tree.getroot().find("channel")
     if channel is None:
         return 0, []
-    ns = {"itunes": ITUNES_NS}
+    ns = {"itunes": ITUNES_NS, "podcast": PODCAST_NS}
     items: list[dict] = []
     max_ep = 0
     for el in channel.findall("item"):
@@ -170,6 +171,8 @@ def parse_existing_feed(feed_path: Path) -> tuple[int, list[dict]]:
         ep_text = el.findtext("itunes:episode", default="", namespaces=ns)
         ep_num = int(ep_text) if ep_text.isdigit() else 0
         max_ep = max(max_ep, ep_num)
+        transcript_el = el.find("podcast:transcript", namespaces=ns)
+        transcript_url = transcript_el.get("url") if transcript_el is not None else ""
         items.append({
             "title": _strip_title_prefix(el.findtext("title", "")),
             "guid": el.findtext("guid", ""),
@@ -179,6 +182,7 @@ def parse_existing_feed(feed_path: Path) -> tuple[int, list[dict]]:
             "enclosure_length": enc.get("length", "0") if enc is not None else "0",
             "enclosure_type": enc.get("type", "audio/mp4") if enc is not None else "audio/mp4",
             "episode": ep_num,
+            "transcript_url": transcript_url,
         })
     return max_ep, items
 
@@ -215,7 +219,33 @@ def build_feed(config: dict, items: list[dict]) -> bytes:
         fe.enclosure(it["enclosure_url"], str(it["enclosure_length"]), it["enclosure_type"])
         fe.podcast.itunes_episode(it["episode"])
 
-    return fg.rss_str(pretty=True)
+    feed_bytes = fg.rss_str(pretty=True)
+    return _inject_podcast_transcripts(feed_bytes, items)
+
+
+def _inject_podcast_transcripts(feed_bytes: bytes, items: list[dict]) -> bytes:
+    """Given feedgen-generated RSS bytes and the list of items, inject the
+    Podcasting 2.0 namespace and a <podcast:transcript> child on each item
+    that has a non-empty transcript_url. Items are matched by guid.
+    """
+    ET.register_namespace("podcast", PODCAST_NS)
+    root = ET.fromstring(feed_bytes)
+    root.set("xmlns:podcast", PODCAST_NS)
+
+    guid_to_url = {it["guid"]: it["transcript_url"] for it in items if it.get("transcript_url")}
+    if not guid_to_url:
+        return ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+    channel = root.find("channel")
+    for item in channel.findall("item"):
+        guid = item.findtext("guid", "")
+        url = guid_to_url.get(guid)
+        if not url:
+            continue
+        trans = ET.SubElement(item, f"{{{PODCAST_NS}}}transcript")
+        trans.set("url", url)
+        trans.set("type", "text/vtt")
+    return ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
 
 # ---------- git ----------
