@@ -1,0 +1,1333 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:02.492
+<v Daniel>I am not in my body. I am my body.</v>
+
+2
+00:00:03.912 --> 00:00:10.314
+<v Maya>That's Maurice Merleau-Ponty from his phenomenology of perception, I think, back in 1945. It</v>
+
+3
+00:00:10.514 --> 00:00:14.895
+<v Daniel>is. And it sounds like something you'd hear at the end of a really intense hot yoga session.</v>
+
+4
+00:00:14.915 --> 00:00:17.736
+<v Maya>Right. I am not in my body. I am my body.</v>
+
+5
+00:00:18.391 --> 00:00:31.695
+<v Daniel>But we aren't talking about mindfulness today. We're actually talking about the absolute cutting edge of artificial intelligence, that quote. It's the opening salvo in a massive, really dense research paper that Meta put out.</v>
+
+6
+00:00:31.935 --> 00:00:43.739
+<v Maya>It is a bit of a curveball, isn't it? You open up this paper, you're expecting, I don't know, code snippets and math equations. Yeah, exactly. And they hit you with mid-century French phenomenology. But it is there for a very specific reason.</v>
+
+7
+00:00:43.939 --> 00:00:44.319
+<v Daniel>What's that?</v>
+
+8
+00:00:44.879 --> 00:00:52.522
+<v Maya>it signals this huge pivot in the field i mean for the last decade maybe more we've been obsessed with what you could call disembodied ai</v>
+
+9
+00:00:53.003 --> 00:00:54.623
+<v Daniel>the brain in the jar the brain in the jar</v>
+
+10
+00:00:54.703 --> 00:01:09.670
+<v Maya>or you know the brain in the server farm think about something like chat gpt or claude these are for all intents and purposes disembodied intelligences they process text they can process code they can generate these amazing images But they</v>
+
+11
+00:01:09.690 --> 00:01:10.551
+<v Maya>don't exist anywhere.</v>
+
+12
+00:01:10.591 --> 00:01:11.432
+<v Daniel>There's no there there.</v>
+
+13
+00:01:11.692 --> 00:01:16.716
+<v Maya>No, they don't have a spatial relationship with reality. It's all just pure abstraction.</v>
+
+14
+00:01:17.016 --> 00:01:28.305
+<v Daniel>And the argument in this meta paper is that if you want to get to that next level, you know, whether you call it AGI or just something that doesn't hallucinate like a sleepy college student. You need a body.</v>
+
+15
+00:01:28.465 --> 00:01:41.649
+<v Maya>You need a body. We're moving into the era of embodied A.I.. These are agents that have visual or virtual or even physical forms, agents that have to obey the laws of physics or at least the laws of whatever virtual environment they're in.</v>
+
+16
+00:01:41.769 --> 00:01:43.110
+<v Daniel>And that's where Merleau Ponty comes in.</v>
+
+17
+00:01:43.230 --> 00:01:50.992
+<v Maya>Exactly. His whole point was that you can't separate thinking from being the way you or I learn about, say, a cup is by holding it.</v>
+
+18
+00:01:51.237 --> 00:01:52.197
+<v Daniel>Feeling the weight of it.</v>
+
+19
+00:01:52.298 --> 00:02:02.843
+<v Maya>Feeling the weight, realizing gravity pulls it down, that it's solid. A chatbot has never held a cup. It just knows the statistical probability of the word cup showing up near the word coffee.</v>
+
+20
+00:02:03.403 --> 00:02:18.200
+<v Daniel>And that's really the mission for this deep dive. We're looking at the open questions surrounding this whole field of embodied AI. And I want to be really clear with you listening. We're not just going to read off the spec sheet for the new</v>
+
+21
+00:02:18.240 --> 00:02:19.260
+<v Daniel>MetaSmart glasses.</v>
+
+22
+00:02:19.320 --> 00:02:20.661
+<v Maya>No, this isn't a product review.</v>
+
+23
+00:02:20.861 --> 00:02:27.546
+<v Daniel>Not at all. We're actually looking at the failures. We're looking at the bottlenecks, the things that are keeping these engineers and researchers up at night.</v>
+
+24
+00:02:27.986 --> 00:02:42.176
+<v Maya>And we've got a really rich stack of sources to pull from today. We have that big meta paper, of course, embodied AI agents modeling the world. But we're also pairing it with a Delphi study that I found just, I mean, absolutely fascinating. They interviewed 13 experts.</v>
+
+25
+00:02:43.295 --> 00:02:44.556
+<v Daniel>And not just AI coders.</v>
+
+26
+00:02:44.876 --> 00:02:53.300
+<v Maya>No, that's the interesting part. They talk to Oscar-winning visual effects artists, Hollywood character, rigorous people whose job it is to create believable humans.</v>
+
+27
+00:02:53.681 --> 00:02:59.165
+<v Daniel>And then to ground all the psychological stuff, we've got an analysis of something called the AI trust curve.</v>
+
+28
+00:02:59.346 --> 00:03:05.270
+<v Maya>Right. So just to set the stage, we're really talking about three different kinds of agents here, just so everyone has a clear mental image.</v>
+
+29
+00:03:05.550 --> 00:03:06.551
+<v Daniel>Okay, lay them out for us.</v>
+
+30
+00:03:06.631 --> 00:03:12.716
+<v Maya>So first, you have your virtual embodied agents, VEAs. These are your avatars.</v>
+
+31
+00:03:12.896 --> 00:03:15.538
+<v Daniel>Digital humans in the metaverse or just on a screen?</v>
+
+32
+00:03:15.638 --> 00:03:25.737
+<v Maya>Exactly. Then second, you've got wearable agents. This is the AI that lives in your smart glasses. It doesn't have its own body, but it kind of it hijacks yours.</v>
+
+33
+00:03:26.097 --> 00:03:26.897
+<v Daniel>It sees what I see.</v>
+
+34
+00:03:26.957 --> 00:03:37.603
+<v Maya>It sees what you see. The technical term is egocentric perception. And then third, of course, you've got your robotic agents, actual physical machines that have to interact with the real world.</v>
+
+35
+00:03:37.907 --> 00:03:50.910
+<v Daniel>I want to start with the virtual agents because, frankly, this is the part where I just went down a complete rabbit hole. I think most of us have this built-in assumption that better graphics just automatically equals more realistic.</v>
+
+36
+00:03:50.950 --> 00:03:52.170
+<v Maya>It's the video game model, right?</v>
+
+37
+00:03:52.190 --> 00:04:00.852
+<v Daniel>Yeah. You see a game from 2005, then you see one from 2025, and you just think, okay, give it another 10 years and we literally won't be able to tell the difference.</v>
+
+38
+00:04:01.259 --> 00:04:09.229
+<v Maya>It feels like an inevitability. It's Moore's law, right? You just throw more computing power at it, you get more polygons, better lighting, and eventually, problem solved.</v>
+
+39
+00:04:09.470 --> 00:04:18.642
+<v Daniel>But this Delphi study, with all these Hollywood experts, basically throws a giant bucket of cold water on that whole idea. They're saying, no, you're all completely wrong.</v>
+
+40
+00:04:19.092 --> 00:04:31.716
+<v Maya>It's a hard stop. I mean, the consensus in this study, and again, these are people who have spent their entire lives simulating human faces for blockbuster movies. They all agree that rendering is, for the most part, a solved problem. A</v>
+
+41
+00:04:31.796 --> 00:04:33.977
+<v Daniel>solved problem. That seems like a huge claim.</v>
+
+42
+00:04:34.137 --> 00:04:48.929
+<v Maya>Well, or that it will be solved just by raw computing power. We can already simulate how light hits an individual pore on a person's skin. We can simulate the way moisture beads on an eyeball. If you take a high-resolution still image of a top-tier</v>
+
+43
+00:04:48.989 --> 00:04:52.811
+<v Maya>digital avatar today, it is often indistinguishable from a photograph.</v>
+
+44
+00:04:53.031 --> 00:04:58.555
+<v Daniel>So if the photo looks real, why does the video, the animation, look like a nightmare half the time?</v>
+
+45
+00:04:58.775 --> 00:05:02.838
+<v Maya>Because of the uncanny valley, or as that AI trust curve source calls it. Phase</v>
+
+46
+00:05:02.898 --> 00:05:09.381
+<v Daniel>four, the ick. Ick is such a perfect term for it. It's not really fear, is it? It's a feeling of repulsion.</v>
+
+47
+00:05:09.721 --> 00:05:24.592
+<v Maya>It's a biological repulsion. The uncanny valley is that famous dip on the graph where something looks almost human, but it fails in some subtle, inexplicable way. And the study uses this very specific and, frankly, very haunting term for what</v>
+
+48
+00:05:24.632 --> 00:05:26.673
+<v Maya>happens when an avatar's animation fails.</v>
+
+49
+00:05:26.693 --> 00:05:27.093
+<v Daniel>What's that?</v>
+
+50
+00:05:27.334 --> 00:05:29.035
+<v Maya>They call it the death mask effect.</v>
+
+51
+00:05:29.295 --> 00:05:31.276
+<v Daniel>OK, that sounds like the title of a horror movie.</v>
+
+52
+00:05:31.416 --> 00:05:46.363
+<v Maya>And it feels like one when you see it. The idea is that our brains are just hyper evolved to detect life. We have these very specific neural pathways dedicated just to processing faces. Right. So when you see an avatar that has. say, perfect skin texture, but</v>
+
+53
+00:05:46.403 --> 00:05:51.145
+<v Maya>the movement is slightly off, your brain doesn't register it as, oh, that's bad animation.</v>
+
+54
+00:05:51.205 --> 00:05:51.745
+<v Daniel>What does it say?</v>
+
+55
+00:05:51.925 --> 00:06:02.490
+<v Maya>Your brain says, that is a corpse. That is a reanimated body. It has all the features of a human, but the spark, the life, is gone. It flags it as a biological threat.</v>
+
+56
+00:06:02.610 --> 00:06:03.070
+<v Daniel>A zombie.</v>
+
+57
+00:06:03.150 --> 00:06:08.452
+<v Maya>A zombie. And so the paradox is, the better the graphics get, the worse this problem can become.</v>
+
+58
+00:06:08.472 --> 00:06:08.993
+<v Daniel>How so?</v>
+
+59
+00:06:09.333 --> 00:06:14.395
+<v Maya>Because the contrast between the perfect skin and the dead movement gets higher and higher. It's more jarring.</v>
+
+60
+00:06:14.763 --> 00:06:21.647
+<v Daniel>Yeah, that makes sense. If it looks like a cartoon, you forgive weird movements. But if it looks like a photograph, you demand absolute perfection.</v>
+
+61
+00:06:21.867 --> 00:06:32.274
+<v Maya>You demand perfection. And the experts in the study identified the real bottleneck. It's not the rendering. It's the rigging and the biological modeling underneath.</v>
+
+62
+00:06:32.414 --> 00:06:37.857
+<v Daniel>Okay, let's get into that. The report mentioned the hockey mask problem. This was a totally new concept to me.</v>
+
+63
+00:06:38.068 --> 00:06:48.018
+<v Maya>This comes directly from the visual effects veterans. They were saying that when AI researchers build facial models, they tend to obsess over the features, the eyes, the nose, the mouth.</v>
+
+64
+00:06:48.466 --> 00:06:52.827
+<v Daniel>The parts of your face that would be covered by like a Jason Voorhees hockey mask.</v>
+
+65
+00:06:52.947 --> 00:06:54.648
+<v Maya>Exactly. The expressive zone.</v>
+
+66
+00:06:54.808 --> 00:06:55.048
+<v Daniel>Right.</v>
+
+67
+00:06:55.228 --> 00:07:06.251
+<v Maya>But a human face isn't an island. It's connected to a head, which is connected to a neck. The experts pointed out that when you genuinely smile, your ears actually move. They shift back just slightly. I'm</v>
+
+68
+00:07:06.291 --> 00:07:10.012
+<v Daniel>doing it right now. I'm smiling and feeling my ears. You're right. They do move.</v>
+
+69
+00:07:10.352 --> 00:07:21.356
+<v Maya>They do. And your scalp moves. The muscles in your neck tense up in a specific way. But most AI models, they treat the head like this floating, disembodied mask.</v>
+
+70
+00:07:21.756 --> 00:07:23.997
+<v Daniel>So they'll animate the mouth and the eyes perfectly.</v>
+
+71
+00:07:24.117 --> 00:07:36.121
+<v Maya>But the ears are static. The neck is static. The scalp doesn't move. And your subconscious brain, which is constantly scanning for all those tiny involuntary signals of life, it immediately screams, fake.</v>
+
+72
+00:07:36.361 --> 00:07:38.082
+<v Daniel>It looks like a mask floating in the void.</v>
+
+73
+00:07:38.487 --> 00:07:45.215
+<v Maya>It does. But here's the part that really made me just stop and reread a page a few times. The muscle variance.</v>
+
+74
+00:07:45.355 --> 00:07:45.616
+<v Daniel>OK.</v>
+
+75
+00:07:45.956 --> 00:07:55.948
+<v Maya>I think you and I and probably most people listening, we just assume that human anatomy is standardized. We all have a bicep. We all have a quadriceps. So we must all have the same facial muscles, right?</v>
+
+76
+00:07:56.219 --> 00:07:59.984
+<v Daniel>It's what you see in the medical textbooks, a diagram with everything labeled.</v>
+
+77
+00:08:00.204 --> 00:08:11.660
+<v Maya>It's the standard model. But one of the experts in this Delphi study actually went to autopsies to verify this. They literally cut open cadavers to look at the underlying facial structure. Wow.</v>
+
+78
+00:08:12.140 --> 00:08:14.041
+<v Daniel>That is some serious dedication to the craft.</v>
+
+79
+00:08:14.121 --> 00:08:23.386
+<v Maya>It is. And what they found is frankly terrifying for anyone trying to code a universal facial model. They found massive, massive variants.</v>
+
+80
+00:08:23.446 --> 00:08:23.906
+<v Daniel>In what way?</v>
+
+81
+00:08:24.146 --> 00:08:38.714
+<v Maya>So in one person, the zygomaticus major, that's the main smiling muscle. It might be a thick, robust strip of meat. In another person, it's like a tiny, thin piece of string. In someone else, it might branch into two separate muscles.</v>
+
+82
+00:08:39.244 --> 00:08:44.105
+<v Daniel>So you're telling me my smile is literally constructed differently than yours on a mechanical level?</v>
+
+83
+00:08:44.365 --> 00:08:59.288
+<v Maya>Mechanically, yes. The leverage is different. The way the skin folds over that muscle is different. So when we build a universal AI face model and we try to map a generic smile onto it, we're often applying a muscle structure that just doesn't fit the</v>
+
+84
+00:08:59.388 --> 00:09:00.249
+<v Maya>underlying face.</v>
+
+85
+00:09:00.509 --> 00:09:06.010
+<v Daniel>Like trying to put a Ferrari engine inside an old Honda Civic. The parts just don't align correctly.</v>
+
+86
+00:09:06.413 --> 00:09:21.060
+<v Maya>That's a great analogy. And that mismatch is what creates those micro expressions that look wrong. The corner of the mouth pulls up a millimeter too high or the eye doesn't crinkle in quite the right way because the simulation is assuming a muscle that isn't there or that shaped completely differently.</v>
+
+87
+00:09:21.280 --> 00:09:28.423
+<v Daniel>And then as if that wasn't already hard enough, we have to talk about blood. This was the detail that just completely blew my mind. The blood flow issue.</v>
+
+88
+00:09:29.021 --> 00:09:36.863
+<v Maya>This is really the bleeding edge of realism. It's not just about muscles moving bones and skin. It's about hemodynamics.</v>
+
+89
+00:09:37.063 --> 00:09:37.463
+<v Daniel>Which is?</v>
+
+90
+00:09:37.483 --> 00:09:48.306
+<v Maya>The physics of blood flow. The experts in the study argue that to truly, finally cross the uncanny valley, you have to simulate the redistribution of hemoglobin under the skin.</v>
+
+91
+00:09:48.346 --> 00:09:52.867
+<v Daniel>Okay, but break that down for me. Are we just talking about blushing? Like someone gets embarrassed and their cheeks turn red.</v>
+
+92
+00:09:53.067 --> 00:10:02.526
+<v Maya>It's so much more subtle than just a big cartoon blush. Think about how light works for a second. Human skin isn't opaque like a sheet of plastic.</v>
+
+93
+00:10:02.586 --> 00:10:03.506
+<v Daniel>Right. It's translucent.</v>
+
+94
+00:10:03.606 --> 00:10:18.290
+<v Maya>It's translucent. Light hits your face. It penetrates the top layers of skin and it bounces around inside the tissue. It hits veins. It hits blood cells. It hits muscle. And then it exits back out towards the observer. That phenomenon is called subsurface</v>
+
+95
+00:10:18.390 --> 00:10:18.950
+<v Maya>scattering.</v>
+
+96
+00:10:19.606 --> 00:10:20.427
+<v Daniel>Okay, I think I'm with you.</v>
+
+97
+00:10:20.727 --> 00:10:34.821
+<v Maya>Now, when you move your face or when you feel a strong emotion, blood rushes to different areas. That changes the color of that light that's bouncing back out. But here is the catch, and this is the really big open question for the researchers. The timing is different. There's a lag.</v>
+
+98
+00:10:35.141 --> 00:10:35.561
+<v Daniel>A lag?</v>
+
+99
+00:10:35.782 --> 00:10:50.781
+<v Maya>Yes. Think about it. Muscles are electrical. They're controlled by nerves. They move almost instantly. Blood is hydraulic. It's a fluid being pumped through tubes. It moves slow. So if you get embarrassed, you might grimace or widen your eyes instantly.</v>
+
+100
+00:10:51.262 --> 00:10:58.536
+<v Maya>But the redness, the actual blood flow arriving in your cheeks, That can take seconds to fully appear.</v>
+
+101
+00:10:58.656 --> 00:11:05.419
+<v Daniel>So if I'm an A.I. animator and I make the avatar turn red at the exact same microsecond that it smiles or looks surprised.</v>
+
+102
+00:11:05.479 --> 00:11:05.839
+<v Maya>Yeah,</v>
+
+103
+00:11:05.919 --> 00:11:06.379
+<v Daniel>that's wrong.</v>
+
+104
+00:11:06.579 --> 00:11:21.065
+<v Maya>It's fundamentally wrong. It looks like a lighting trick. It feels synthetic, like a red light bulb just turned on inside the avatar's head. Real biological events happen on different timelines. And the experts are still wrestling with this. Is that lag something that people can consciously read?</v>
+
+105
+00:11:21.608 --> 00:11:27.570
+<v Daniel>I mean, if I watched a video, I doubt I could tell you, oh, the blood was 1.5 seconds late to the party. I wouldn't be able to articulate that.</v>
+
+106
+00:11:27.650 --> 00:11:38.695
+<v Maya>Consciously. No, you'd never spot it. But your subconscious, that ancient pattern-mashing part of your brain, it notices. It expects that hydraulic lag. It's seen it millions of times in other real humans.</v>
+
+107
+00:11:39.095 --> 00:11:40.796
+<v Daniel>And if it's missing or if it's instant.</v>
+
+108
+00:11:40.956 --> 00:11:45.798
+<v Maya>The death mask effect kicks in. It feels like a simulation, not a living organism.</v>
+
+109
+00:11:46.532 --> 00:11:58.199
+<v Daniel>It's just wild to think that we have this supercomputer in our skulls that is constantly, quietly measuring the viscosity of blood in other people's faces just to see if they're safe to talk to.</v>
+
+110
+00:11:58.439 --> 00:12:06.083
+<v Maya>Evolution is a powerful, powerful thing. For millions of years, we needed to know at a glance who was sick, who was angry, who was fertile, who was dead.</v>
+
+111
+00:12:06.627 --> 00:12:17.831
+<v Daniel>So we've got the muscles being wrong, the blood being wrong, and then the research points to a third major problem, the way we actually code emotions in the first place, the FACS controversy.</v>
+
+112
+00:12:17.931 --> 00:12:24.214
+<v Maya>Right, FACS. It stands for the Facial Action Coding System. And this has been the industry standard for decades. How</v>
+
+113
+00:12:24.234 --> 00:12:24.654
+<v Daniel>does it work?</v>
+
+114
+00:12:25.134 --> 00:12:35.018
+<v Maya>It basically breaks the face down into a catalog of action units, or AUS. So action unit one might be inner brow razor. Action unit 12 might be lip corner puller, which is part of a smile.</v>
+
+115
+00:12:35.427 --> 00:12:40.492
+<v Daniel>It's kind of a Lego approach to faces. You want to build an expression, just stack block A on top of block B.</v>
+
+116
+00:12:40.872 --> 00:12:55.446
+<v Maya>Exactly. And that's the core problem. It assumes linearity. It assumes that if I want to create a happy surprise, I can just take the code for the happy AUS and add the code for the surprise AUS. You know, one plus one equals two.</v>
+
+117
+00:12:55.586 --> 00:12:59.490
+<v Daniel>But what the experts are saying is one plus one equals a monster.</v>
+
+118
+00:12:59.794 --> 00:13:14.486
+<v Maya>They're saying faces are fundamentally non-linear systems. Yeah. You can't just stack expressions like Lego blocks. When you smile, the entire geometry of your face shifts. The skin around your eyes bunches up. The tension across your forehead changes. The whole system is</v>
+
+119
+00:13:14.566 --> 00:13:15.687
+<v Maya>preloaded with tension.</v>
+
+120
+00:13:15.827 --> 00:13:18.830
+<v Daniel>You can't play the same note on a guitar string that's already been tightened.</v>
+
+121
+00:13:18.981 --> 00:13:29.884
+<v Maya>That is a perfect analogy. The physics are different. If you try to overlay a brow raise on top of a face that is already smiling, the skin doesn't stretch in the same way it would from a neutral position.</v>
+
+122
+00:13:29.984 --> 00:13:32.845
+<v Daniel>And there's a psychological layer to this too, right? A huge one.</v>
+
+123
+00:13:33.205 --> 00:13:39.786
+<v Maya>One of the experts in the study pointed out that you can't even get good source data from actors if you use this Lego method.</v>
+
+124
+00:13:39.886 --> 00:13:40.267
+<v Daniel>What do you mean?</v>
+
+125
+00:13:40.587 --> 00:13:49.170
+<v Maya>If you bring an actor into a lab and tell them, okay, now give me action unit 12, smile. They will use their zygomaticus muscle to pull their lips up.</v>
+
+126
+00:13:49.290 --> 00:13:49.310
+A
+
+127
+00:13:49.370 --> 00:13:50.470
+<v Daniel>commanded smile.</v>
+
+128
+00:13:50.490 --> 00:14:02.336
+<v Maya>A commanded fake smile. But if you tell that same actor a genuinely funny joke and they actually laugh, they involuntarily engage the orbicularis oculi, the muscles all around the eyes.</v>
+
+129
+00:14:02.576 --> 00:14:04.757
+<v Daniel>The Duchenne smile. The real smile.</v>
+
+130
+00:14:04.777 --> 00:14:17.044
+<v Maya>Real smile. A commanded expression uses different biology than a felt expression. So if we're training our AI models on these massive databases of actors being told to make a happy face or make a sad face</v>
+
+131
+00:14:17.144 --> 00:14:19.005
+<v Daniel>we're literally training the ai to fake it</v>
+
+132
+00:14:19.226 --> 00:14:24.969
+<v Maya>we're training it to be a psychopath that mimics emotion rather than generating it from an authentic internal state</v>
+
+133
+00:14:25.049 --> 00:14:29.312
+<v Daniel>which would explain why so many of these avatars look like they're you know hiding a dark secret</v>
+
+134
+00:14:29.472 --> 00:14:32.034
+<v Maya>they are the secret is that they're just geometry and math</v>
+
+135
+00:14:32.454 --> 00:14:43.910
+<v Daniel>so this paints a pretty bleak picture for our first section here we're sort of stuck in the uncanny valley The physics are harder than we thought. The biology is a complete mess. And our code is based on a flawed linear assumption.</v>
+
+136
+00:14:44.270 --> 00:14:45.373
+<v Maya>It sounds like a dead end.</v>
+
+137
+00:14:45.866 --> 00:14:56.953
+<v Daniel>It does, but the research pivots here in a really interesting way. Section 2 offers a potential solution. And surprisingly, the solution isn't, well, just throw more GPUs at it.</v>
+
+138
+00:14:57.173 --> 00:14:59.415
+<v Maya>No, the solution is interaction.</v>
+
+139
+00:14:59.535 --> 00:15:05.478
+<v Daniel>Now, wait a minute. The old theory, the zombie theory, was that movement makes the uncanny valley worse.</v>
+
+140
+00:15:05.939 --> 00:15:06.139
+<v Maya>Right.</v>
+
+141
+00:15:06.299 --> 00:15:13.423
+<v Daniel>If a wax museum figure is standing perfectly still... It's a little creepy, but it's fine. If it starts moving towards me, I'm running away.</v>
+
+142
+00:15:13.583 --> 00:15:23.809
+<v Maya>That was the classic assumption. Motion highlights the flaws. But this Delphi panel of experts, they found a kind of loophole. They found that social interaction actually builds a bridge over the valley.</v>
+
+143
+00:15:24.009 --> 00:15:25.149
+<v Daniel>How on earth does that work?</v>
+
+144
+00:15:25.229 --> 00:15:34.518
+<v Maya>Think about video games. We've all played these big story-driven RPGs. You're watching a cut scene. It's the passive movie part of the game. And you find yourself in critic mode.</v>
+
+145
+00:15:34.618 --> 00:15:38.342
+<v Daniel>Totally. Man, his hair looks really stiff or her eyes look dead.</v>
+
+146
+00:15:38.462 --> 00:15:49.913
+<v Maya>Exactly. You are analyzing the graphics. But then the gameplay starts. Now you're controlling the character. Or maybe a non-player character runs up to you and asks for help. Hey, you have to help me lift this.</v>
+
+147
+00:15:50.173 --> 00:15:51.836
+<v Daniel>Suddenly you're not looking at their hair anymore.</v>
+
+148
+00:15:52.017 --> 00:15:56.926
+<v Maya>You stop looking at the pixels entirely. You're focused on the goal. You're focused on the task.</v>
+
+149
+00:15:57.066 --> 00:16:00.332
+<v Daniel>Because I have a job to do. I have agency.</v>
+
+150
+00:16:01.027 --> 00:16:15.691
+<v Maya>Agency overrides aesthetics. This is the core of what they call effective computing. If an avatar makes eye contact with you, if it nods when you speak, if it responds intelligently to your mood and your questions, your</v>
+
+151
+00:16:15.811 --> 00:16:22.953
+<v Maya>brain creates a powerful shortcut. It says, this thing is communicating with me, therefore it is a subject, not an object.</v>
+
+152
+00:16:23.433 --> 00:16:30.555
+<v Daniel>So if the AI is useful to me, or if it just feels like it's genuinely listening, my brain just forgives the fact that its ears aren't moving quite right.</v>
+
+153
+00:16:30.850 --> 00:16:37.756
+<v Maya>You don't just forgive it. On a neurological level, you literally stop seeing it. The experts in the study call this emotional flooding.</v>
+
+154
+00:16:37.916 --> 00:16:38.676
+<v Daniel>Emotional flooding.</v>
+
+155
+00:16:38.797 --> 00:16:46.883
+<v Maya>The emotional connection you feel during the interaction floods the uncanny valley. You stop judging the geometry of the face and you start trying to figure out what the agent is thinking.</v>
+
+156
+00:16:47.244 --> 00:16:54.970
+<v Daniel>This connects right back to that AI trust curve we mentioned. The curve goes from fear and the ick, but then it shoots way up to a phase of high trust.</v>
+
+157
+00:16:55.325 --> 00:17:08.371
+<v Maya>Yes, and that is where it gets, well, dangerous, or at least very complicated. Because once your brain crosses that interaction bridge, you often overshoot. The source specifically mentions the movie Her.</v>
+
+158
+00:17:08.611 --> 00:17:11.652
+<v Daniel>Right, with Joaquin Phoenix falling in love with his operating system.</v>
+
+159
+00:17:11.903 --> 00:17:26.427
+<v Maya>That's the extreme sci-fi version. But we see little versions of it all the time already. People saying please and thank you to ChatGPT. I do that. We all do. People confessing their deepest secrets to therapeutic chatbots.</v>
+
+160
+00:17:27.127 --> 00:17:34.169
+<v Maya>Once that interaction loop is closed, we can't help but project humanity onto the machine. Our brains are wired to fill in the blanks.</v>
+
+161
+00:17:34.489 --> 00:17:39.991
+<v Daniel>So the solution to the uncanny valley isn't necessarily perfect biology. It's perfect psychology.</v>
+
+162
+00:17:40.232 --> 00:17:43.916
+<v Maya>In a way, yes. If you can convince the mind, the eye relaxes its standards.</v>
+
+163
+00:17:44.016 --> 00:17:53.285
+<v Daniel>But, and this is a really big but, for that interaction to feel real and not just like a script, the agent can't just be a pretty puppet. It has to actually be smart. It has to understand the world.</v>
+
+164
+00:17:53.365 --> 00:17:54.306
+<v Maya>It has to have a brain.</v>
+
+165
+00:17:54.726 --> 00:17:58.010
+<v Daniel>Which brings us to section three of our sources, world models.</v>
+
+166
+00:17:58.586 --> 00:18:04.748
+<v Maya>This is the real meat of that huge meta research paper. This is the brain behind the face.</v>
+
+167
+00:18:05.088 --> 00:18:12.490
+<v Daniel>I feel like world model is a buzzword we hear thrown around a lot. So let's actually define it. What is a world model in the context of AI?</v>
+
+168
+00:18:12.751 --> 00:18:26.775
+<v Maya>A world model is an internal representation of how reality functions. It's what allows an agent to reason, to predict what will happen next, and to plan its actions. It's the fundamental difference between a reflex and a thought.</v>
+
+169
+00:18:27.162 --> 00:18:30.063
+<v Daniel>Okay, give me the explain like I'm five version of that.</v>
+
+170
+00:18:30.103 --> 00:18:34.623
+<v Maya>All right. Imagine you're planning a road trip, let's say from New York to Los Angeles.</v>
+
+171
+00:18:34.643 --> 00:18:35.244
+<v Daniel>Okay, I'm with you.</v>
+
+172
+00:18:35.684 --> 00:18:50.146
+<v Maya>In your head, you are visualizing that trip. You see the map of the country. You think about where you'll need to stop for gas. You anticipate traffic around Chicago. But are you visualizing every single leaf on every single tree along the entire</v>
+
+173
+00:18:50.206 --> 00:18:51.087
+<v Maya>highway? God,</v>
+
+174
+00:18:51.147 --> 00:18:51.347
+no.
+
+175
+00:18:51.487 --> 00:18:53.267
+<v Daniel>That would be impossible. My brain would melt.</v>
+
+176
+00:18:53.487 --> 00:18:57.777
+<v Maya>Are you visualizing the exact texture of the asphalt for every single mile of I-80?</v>
+
+177
+00:18:57.937 --> 00:19:01.325
+<v Daniel>No. I'm visualizing the route, the concept of the trip.</v>
+
+178
+00:19:01.627 --> 00:19:16.618
+<v Maya>Exactly. You are using an abstract model of the world. You strip away all the irrelevant sensory noise and you focus only on the signals that matter for your plan. Okay. Now compare that to how we currently do a lot of generative AI, like those AI video generators</v>
+
+179
+00:19:16.678 --> 00:19:17.479
+<v Maya>we see online.</v>
+
+180
+00:19:17.519 --> 00:19:20.721
+<v Daniel>The ones that make those weird morphing wobbly videos.</v>
+
+181
+00:19:20.821 --> 00:19:35.429
+<v Maya>Right. Those models are working in what's called pixel space. If you ask one for a video of a road trip, it is obsessively trying to predict the color of every single pixel in the next frame. Is pixel number 4732 going</v>
+
+182
+00:19:36.189 --> 00:19:37.470
+<v Maya>to be green or gray?</v>
+
+183
+00:19:37.650 --> 00:19:39.250
+<v Daniel>It doesn't actually know what a car is.</v>
+
+184
+00:19:39.471 --> 00:19:45.833
+<v Maya>Not at all. It just knows that a certain cluster of gray pixels usually hangs out near a certain cluster of black pixels.</v>
+
+185
+00:19:45.873 --> 00:19:52.516
+<v Daniel>That's why you see those videos where a dog suddenly grows a fifth leg or a car just kind of melts into a bicycle halfway down the street.</v>
+
+186
+00:19:52.597 --> 00:19:53.457
+<v Maya>It's hallucinating.</v>
+
+187
+00:19:53.677 --> 00:19:58.699
+<v Daniel>The AI is hallucinating because it's just painting by numbers. It's not understanding the actual object.</v>
+
+188
+00:19:59.159 --> 00:20:13.803
+<v Maya>Precisely. It has no sense of object permanence. It has no concept of physics. It's basically a dream machine. And Meta is arguing that this whole approach is a complete dead end for embodied AI. If a robot is holding a glass of water, it can't be</v>
+
+189
+00:20:13.923 --> 00:20:20.065
+<v Maya>dreaming about the glass. It needs to know with certainty that if it lets go, gravity is going to happen.</v>
+
+190
+00:20:20.245 --> 00:20:23.186
+<v Daniel>So what's the alternative? The paper talks about something called JEPA.</v>
+
+191
+00:20:23.406 --> 00:20:26.227
+<v Maya>Right. Joint embedding predictive architecture.</v>
+
+192
+00:20:26.327 --> 00:20:27.048
+<v Daniel>And swan tights.</v>
+
+193
+00:20:27.128 --> 00:20:38.633
+<v Maya>I know. It's a mouthful. But the concept behind it is actually really beautiful and intuitive. Instead of predicting the next pixel, Jaypa learns to predict the next state of the world in an abstract space.</v>
+
+194
+00:20:38.813 --> 00:20:40.614
+<v Daniel>Okay. Use the dog analogy again for me.</v>
+
+195
+00:20:40.674 --> 00:20:55.524
+<v Maya>All right. Imagine you throw a frisbee for a dog. A pixel generator is trying to guess the color of the grass in the sky in the very next frame. Jaypa is different. Jaypa is saying concept, dog, action, jump, physics. Gravity. It then predicts at a high</v>
+
+196
+00:20:55.564 --> 00:20:57.307
+<v Maya>level the dog must come down.</v>
+
+197
+00:20:57.608 --> 00:20:59.671
+<v Daniel>It doesn't care if the grass is light green or dark green.</v>
+
+198
+00:21:00.072 --> 00:21:09.396
+<v Maya>It doesn't care about the pixels. It cares that the event obeys the known laws of reality. It's predicting the representation, not the raw sensory data.</v>
+
+199
+00:21:09.636 --> 00:21:12.718
+<v Daniel>It's simulating the logic of the world, not just the image of the world.</v>
+
+200
+00:21:12.778 --> 00:21:25.766
+<v Maya>Yes. And that is absolutely essential for anything that has to move and interact. If you're a robot, you need to know that a wall is solid. You don't need to know the exact texture of the wallpaper to understand that you can't walk through it.</v>
+
+201
+00:21:26.469 --> 00:21:37.454
+<v Daniel>So that's the physical world model. It's for dealing with gravity and walls and solid objects. But the paper also talks about a mental world model. And this, to me, felt even more sci-fi.</v>
+
+202
+00:21:37.594 --> 00:21:52.280
+<v Maya>This is where we get into theory of mind. For an agent to be truly useful and collaborative, especially a wearable agent that literally lives on your face, it needs to be able to model your brain. It needs to understand that you have beliefs and, crucially, that those</v>
+
+203
+00:21:52.300 --> 00:21:53.220
+<v Maya>beliefs might be wrong.</v>
+
+204
+00:21:53.415 --> 00:21:55.897
+<v Daniel>The classic Sally Ann test from developmental psychology.</v>
+
+205
+00:21:55.917 --> 00:21:59.901
+<v Maya>The very same. Let's play it out really quick. I'm an evil robot. You are. Let's call you Beth. I</v>
+
+206
+00:21:59.941 --> 00:22:00.781
+<v Daniel>am Beth. Sounds</v>
+
+207
+00:22:00.801 --> 00:22:05.505
+<v Maya>good. You put your phone down on the desk in front of you and then you walk out of the room to get a coffee.</v>
+
+208
+00:22:05.586 --> 00:22:07.367
+<v Daniel>Okay, I'm gone. I'm getting a latte.</v>
+
+209
+00:22:07.427 --> 00:22:12.812
+<v Maya>While you're gone, I, the evil robot, take your phone and I hide it in the refrigerator.</v>
+
+210
+00:22:13.332 --> 00:22:13.893
+<v Daniel>You jerk.</v>
+
+211
+00:22:14.713 --> 00:22:21.577
+<v Maya>I am a chaotic agent. Now, you walk back into the room. You want to check your phone. Where is the first place you look?</v>
+
+212
+00:22:21.777 --> 00:22:24.158
+<v Daniel>I look on the desk because that's where I left it.</v>
+
+213
+00:22:24.278 --> 00:22:38.565
+<v Maya>Correct. You have what's called a false belief. Your mental model of the world is out of sync with reality. But a dumb AI, a current generation AI, if you ask it, where will Beth look for her phone?</v>
+
+214
+00:22:39.365 --> 00:22:40.706
+<v Maya>It will say the fridge.</v>
+
+215
+00:22:41.245 --> 00:22:44.528
+<v Daniel>Because the AI knows the phone is in the fridge, it has the ground truth.</v>
+
+216
+00:22:44.688 --> 00:22:51.834
+<v Maya>Exactly. It assumes that because it knows the truth, you must also know the truth. It can't distinguish between objective reality and your subjective belief.</v>
+
+217
+00:22:52.034 --> 00:22:58.059
+<v Daniel>And why does this matter for a real product? I mean, why does my smart assistant need to know that I might be delusional?</v>
+
+218
+00:22:58.499 --> 00:23:12.738
+<v Maya>It's all about interpreting your intent. Imagine you're leaving your house. You're wearing those meta-ray bands. The AI, through the camera, sees your keys sitting on the kitchen counter. You walk out the front door. Should the AI yell at you?</v>
+
+219
+00:23:13.219 --> 00:23:15.842
+<v Daniel>Well, if I forgot my keys, then yes, absolutely it should.</v>
+
+220
+00:23:15.862 --> 00:23:19.947
+<v Maya>What if you left them there on purpose? What if you're just walking out to the mailbox and you'll be right back?</v>
+
+221
+00:23:20.307 --> 00:23:22.530
+<v Daniel>Then I'd be incredibly annoyed if it started yelling at me.</v>
+
+222
+00:23:22.690 --> 00:23:37.190
+<v Maya>Exactly. The AI has to look at your behavior and model your internal mental state. Did he see the keys and consciously ignore them? Or did he never even look in the direction of the keys? The difference between user is forgetting and user is</v>
+
+223
+00:23:37.230 --> 00:23:41.734
+<v Maya>deciding is entirely internal to you. It's a theory of mind problem.</v>
+
+224
+00:23:41.934 --> 00:23:47.559
+<v Daniel>If it gets that wrong, it goes from being Jargus, your helpful assistant, to being a nagging spouse.</v>
+
+225
+00:23:47.980 --> 00:23:50.802
+<v Maya>And nobody is going to pay for the nagging spouse upgrade.</v>
+
+226
+00:23:51.448 --> 00:24:03.353
+<v Daniel>So, okay, we've built the perfect face, or at least we're trying to. We've built the brain, both physical and mental world models. Now we need to actually talk about the body itself. And that brings us to section four, the hardware.</v>
+
+227
+00:24:03.634 --> 00:24:12.998
+<v Maya>We're moving from the purely digital to the physical. And the meta paper really splits this into two categories, wearable agents and robotic agents.</v>
+
+228
+00:24:13.478 --> 00:24:18.840
+<v Daniel>Let's start with wearables. This is basically the her scenario, but with cameras attached.</v>
+
+229
+00:24:19.060 --> 00:24:22.802
+<v Maya>The key technical term here is egocentric perception.</v>
+
+230
+00:24:23.242 --> 00:24:25.563
+<v Daniel>Which sounds a bit like a narcissist robot.</v>
+
+231
+00:24:25.823 --> 00:24:33.446
+<v Maya>It does sound bad, but it just means first person view. The AI sees the world from your center. It shares your perceptual field.</v>
+
+232
+00:24:33.866 --> 00:24:35.747
+<v Daniel>So this is for tasks like show and tell.</v>
+
+233
+00:24:36.127 --> 00:24:42.590
+<v Maya>Right. Hey Meta, look at this weird vegetable I found at the farmer's market. What is it? Or, hey Meta, can you see where I put my wallet?</v>
+
+234
+00:24:42.978 --> 00:24:51.445
+<v Daniel>It sounds incredibly useful. I mean, I lose my wallet on a daily basis. But the paper suggests that these agents are actually, well, kind of bad at this right now.</v>
+
+235
+00:24:51.485 --> 00:24:58.451
+<v Maya>They are struggling. There's a specific benchmark they use called world prediction. And the stats that came out of it are really quite humbling for the field.</v>
+
+236
+00:24:58.831 --> 00:24:59.792
+<v Daniel>OK, hit me with the numbers.</v>
+
+237
+00:25:00.213 --> 00:25:12.699
+<v Maya>So humans, as you can imagine, are incredibly good at predicting the next logical step in a procedure. If I'm watching you chop an onion, get a pan out and then grab a bottle of olive oil. I have a very good idea of what you're about to do.</v>
+
+238
+00:25:12.779 --> 00:25:14.120
+<v Daniel>You know I'm going to sauté those onions.</v>
+
+239
+00:25:14.160 --> 00:25:26.911
+<v Maya>You're sautéing. Humans have near 100% accuracy on predicting that next immediate step. The state-of-the-art AI models that they tested, they hover at around 57% accuracy.</v>
+
+240
+00:25:26.952 --> 00:25:30.635
+<v Daniel>57%. Yeah. That's barely better than a coin flip.</v>
+
+241
+00:25:30.795 --> 00:25:32.577
+<v Maya>It's barely better than random guessing.</v>
+
+242
+00:25:33.117 --> 00:25:39.754
+<v Daniel>But why? If these models have read every single recipe on the entire internet, why can't they figure out I'm making pasta?</v>
+
+243
+00:25:39.934 --> 00:25:51.596
+<v Maya>Because they struggle profoundly with something called action equivalence. They don't have the common sense to understand that there are often multiple equally valid ways to skin a cat or multiple ways to make an omelet.</v>
+
+244
+00:25:51.856 --> 00:25:52.596
+<v Daniel>A rigidity problem.</v>
+
+245
+00:25:52.656 --> 00:26:05.256
+<v Maya>A huge rigidity problem. If the AI was trained on a million videos where the chef salts the pasta water before it starts boiling and you happen to salt it after it boils... The AI gets completely confused.</v>
+
+246
+00:26:05.376 --> 00:26:06.497
+<v Daniel>It thinks I've gone off script.</v>
+
+247
+00:26:06.857 --> 00:26:17.642
+<v Maya>It thinks you're failing the task. It doesn't understand the goal, which is just to have salty water. It only understands the specific sequence of pixels that it memorized from its training data.</v>
+
+248
+00:26:17.903 --> 00:26:24.331
+<v Daniel>So there's a difference between a real chef and someone who is just blindly following a recipe card without any understanding.</v>
+
+249
+00:26:24.411 --> 00:26:37.107
+<v Maya>And that fragility makes them intensely frustrating to use in the real world. If you grab the blue knife instead of the red knife from the knife block, the AI might panic and give you a wrong instruction because the training video happened to use a red knife.</v>
+
+250
+00:26:37.442 --> 00:26:44.844
+<v Daniel>So that's wearables. But at least wearables only have to watch me mess up in the kitchen. Robotic agents have to actually do the work. They have to touch things.</v>
+
+251
+00:26:45.044 --> 00:26:49.846
+<v Maya>The touch barrier. This is in many ways the final boss of embodied AI.</v>
+
+252
+00:26:49.946 --> 00:26:58.348
+<v Daniel>We see all these videos of robots from like Boston Dynamics doing backflips and parkour. It looks incredibly impressive. So why can't they fold my laundry?</v>
+
+253
+00:26:58.603 --> 00:27:06.392
+<v Maya>Because, and this sounds completely counterintuitive, backflips are actually mathematically much, much easier than folding laundry.</v>
+
+254
+00:27:06.412 --> 00:27:07.433
+<v Daniel>Okay, you have to explain that.</v>
+
+255
+00:27:07.873 --> 00:27:22.799
+<v Maya>A backflip is what's called rigid body physics. It's just mass, velocity, momentum. The robot is a solid, predictable object. The floor is a solid, predictable object. It's pure, calculable math. Laundry, on the other</v>
+
+256
+00:27:22.839 --> 00:27:36.147
+<v Maya>hand, laundry is a deformable object. A sock has no set shape. It can be a ball. It can be a long strip. It can be a crumpled pile. It changes shape the moment you touch it. It has static clang. It has friction that changes based on the material. It's</v>
+
+257
+00:27:36.207 --> 00:27:36.848
+<v Daniel>pure chaos. It</v>
+
+258
+00:27:36.888 --> 00:27:42.770
+<v Maya>is physical chaos. And this brings us to the biggest problem in robotics, which is the sim to real gap.</v>
+
+259
+00:27:42.890 --> 00:27:44.131
+<v Daniel>Simulation to reality.</v>
+
+260
+00:27:44.251 --> 00:27:52.855
+<v Maya>Right. We train robots in virtual simulations because it's faster and cheaper. We can run a million hours of virtual laundry folding in a single day on a server farm.</v>
+
+261
+00:27:53.190 --> 00:27:55.771
+<v Daniel>But the virtual sock doesn't act exactly like a real sock.</v>
+
+262
+00:27:55.852 --> 00:28:10.840
+<v Maya>Not even close. In the simulation, the physics are perfect and simplified. There's no dust in the air. There's no grease or moisture on the robot's fingers. There's no random air draft from the HVAC system. So when you take that perfectly trained brain and you put it in a real robot</v>
+
+263
+00:28:11.080 --> 00:28:13.962
+<v Maya>in your real messy house, it fails.</v>
+
+264
+00:28:14.142 --> 00:28:14.722
+<v Daniel>How does it fail?</v>
+
+265
+00:28:14.882 --> 00:28:25.805
+<v Maya>The robot reaches for the sock, but maybe the sock is silkier than the one in the simulation, so it slips just a millimeter. The robot's sensors can't handle that. It freezes. It has no tactile intuition.</v>
+
+266
+00:28:26.125 --> 00:28:33.769
+<v Daniel>Humans have fingertips with thousands of nerve endings. We feel that slip, and we instantly, subconsciously adjust our grip.</v>
+
+267
+00:28:33.869 --> 00:28:48.718
+<v Maya>We don't even have to think about it. We dynamically adjust our grip pressure dozens of times a second. Current robots are almost entirely visual. They're trying to see if they're holding the object correctly. Imagine trying to tie your shoes with your hands completely numb only by</v>
+
+268
+00:28:48.778 --> 00:28:49.258
+<v Maya>watching them.</v>
+
+269
+00:28:49.593 --> 00:28:51.793
+<v Daniel>That would be a complete nightmare. I couldn't do it.</v>
+
+270
+00:28:51.913 --> 00:28:54.994
+<v Maya>That is the state of mainstream robotics right now. They are numb.</v>
+
+271
+00:28:55.394 --> 00:29:10.377
+<v Daniel>So how do we fix this? How do we get from this numb robot to the useful butler that we've been promised for decades? This leads us to the final section, section five, future directions. The researchers propose a new way</v>
+
+272
+00:29:10.437 --> 00:29:10.877
+<v Daniel>of learning.</v>
+
+273
+00:29:11.077 --> 00:29:13.817
+<v Maya>They call it the unification of system A and system B.</v>
+
+274
+00:29:14.077 --> 00:29:17.118
+<v Daniel>This sounds a lot like Daniel Kahneman's thinking fast and slow.</v>
+
+275
+00:29:17.501 --> 00:29:25.323
+<v Maya>It's a very similar concept. So system A is learning by observation. This is passive. This is the AI watching YouTube videos.</v>
+
+276
+00:29:25.383 --> 00:29:31.004
+<v Daniel>Right. I watch a five minute video of a guy fixing a leaky sink and suddenly I feel like I'm a master plumber.</v>
+
+277
+00:29:31.124 --> 00:29:45.148
+<v Maya>Exactly. You get the general idea. You see the pattern. And AI is very, very good at this. It can watch a billion hours of video, but it has no grounding. You don't actually know how tight the bolt should be or what it feels like when the threads catch.</v>
+
+278
+00:29:45.435 --> 00:29:46.315
+<v Daniel>And system B is?</v>
+
+279
+00:29:46.596 --> 00:29:57.241
+<v Maya>System B is learning by action. This is trial and error. This is you actually picking up the wrench. You turn it. It slips off the bolt. You bust your knuckles. You try again with a different amount of force.</v>
+
+280
+00:29:57.341 --> 00:29:58.622
+<v Daniel>This is reinforcement learning.</v>
+
+281
+00:29:58.682 --> 00:30:11.508
+<v Maya>Yes. It's the only way to get true physical grounding. But it's incredibly slow. The technical term is sample inefficient. You have to fail 10,000 times just to learn one specific simple movement.</v>
+
+282
+00:30:11.835 --> 00:30:19.782
+<v Daniel>So we have one system that is very fast but shallow, which is watching, and another system that is very deep but agonizingly slow, which is doing.</v>
+
+283
+00:30:20.302 --> 00:30:26.788
+<v Maya>And the grand challenge, the holy grail, is to merge them. The analogy they use throughout the paper is babies.</v>
+
+284
+00:30:26.928 --> 00:30:29.290
+<v Daniel>Babies are the ultimate learning machines, for sure.</v>
+
+285
+00:30:29.534 --> 00:30:37.656
+<v Maya>Think about a baby in a high chair. They watch their parents eating. That's system A. They're passively absorbing the patterns of movement. But then what do they do?</v>
+
+286
+00:30:37.676 --> 00:30:38.937
+<v Daniel>They start smashing things.</v>
+
+287
+00:30:38.977 --> 00:30:50.240
+<v Maya>They motor babble. They smash the peas on the tray. They drop the spoon on the floor over and over again. They put the toy in their mouth to see what it feels like.</v>
+
+288
+00:30:50.340 --> 00:30:51.580
+<v Daniel>We move in order to see.</v>
+
+289
+00:30:52.133 --> 00:31:06.260
+<v Maya>That's the core philosophy from the paper. The baby is using interaction, using system B to generate new data. Oh, when I drop the spoon, it makes a loud noise and mom makes a funny face. That new data then trains their internal world model, their system A.</v>
+
+290
+00:31:06.540 --> 00:31:15.205
+<v Daniel>So Meta wants to build AI that learns like a baby. It watches, but then it actively pokes and prods the world to verify and refine its understanding.</v>
+
+291
+00:31:15.325 --> 00:31:17.927
+<v Maya>Exactly. Move, see, update the model, repeat.</v>
+
+292
+00:31:18.167 --> 00:31:32.875
+<v Daniel>That's fascinating. But it also hints at this future where our homes are just filled with these things, all learning, all watching, all interacting with each other. The paper briefly touches on multi-agent collaboration.</v>
+
+293
+00:31:33.503 --> 00:31:47.127
+<v Maya>And this is the really messy, complicated future. You won't just have the AI in your house. You're going to have a whole fleet of specialized agents. Your glasses are an agent. Your refrigerator is an agent. Your car is an agent.</v>
+
+294
+00:31:47.207 --> 00:31:49.347
+<v Daniel>And they could all have different goals and different information?</v>
+
+295
+00:31:49.607 --> 00:32:01.231
+<v Maya>Correct. And that creates a massive conflict resolution problem that hasn't been solved yet. Imagine your smart fridge agent knows you're on a diet. It sees you reaching for the cake. It locks the door. No cake for you.</v>
+
+296
+00:32:01.251 --> 00:32:02.731
+<v Daniel>That's a good fridge. I need that fridge.</v>
+
+297
+00:32:03.312 --> 00:32:12.557
+<v Maya>But at the same time, your smartwatch agent knows you just ran 10 miles and your blood sugar is getting dangerously low. It sends a message to the other agents, give them the cake immediately.</v>
+
+298
+00:32:12.837 --> 00:32:16.759
+<v Daniel>So now my kitchen appliances are arguing with each other about my caloric intake.</v>
+
+299
+00:32:17.180 --> 00:32:32.088
+<v Maya>Who wins that argument? Does the health and safety protocol from the watch outrank the dietary plan protocol from the fridge? Do they vote on it? This sounds like a funny far-off problem, but it's a legitimate technical protocol that simply hasn't been written yet.</v>
+
+300
+00:32:33.268 --> 00:32:38.374
+<v Maya>How do these different world models synchronize when they have conflicting data and conflicting goals about the user?</v>
+
+301
+00:32:38.795 --> 00:32:47.165
+<v Daniel>It sounds just like my own internal monologue. You know, my brain versus my stomach. Now we're just externalizing that fight into our kitchen appliances.</v>
+
+302
+00:32:47.305 --> 00:32:51.570
+<v Maya>We are building a digital id and a digital superego and setting them loose in our homes.</v>
+
+303
+00:32:52.103 --> 00:33:00.570
+<v Daniel>We can't wrap this up without talking about the risks. We have a final section here on the ethical landscape. And honestly, reading through some of this stuff is genuinely terrifying.</v>
+
+304
+00:33:00.670 --> 00:33:10.318
+<v Maya>It is. The stakes are incredibly high. Because if we succeed, if we actually build agents with accurate mental world models, we are building machines that could know us better than we know ourselves.</v>
+
+305
+00:33:10.498 --> 00:33:15.502
+<v Daniel>Privacy is the big obvious one. If the AI knows my intent, then it knows my secrets.</v>
+
+306
+00:33:16.022 --> 00:33:26.287
+<v Maya>It knows your habits, your weaknesses, your desires, your political leanings, your deviations from your normal routine. The paper mentions federated learning as a potential solution.</v>
+
+307
+00:33:26.887 --> 00:33:27.868
+<v Daniel>What is that exactly?</v>
+
+308
+00:33:28.028 --> 00:33:42.670
+<v Maya>It's the idea that the core learning happens on the device. Your smart glasses learn your personal habits, but that raw, sensitive data stays on the glasses. It doesn't get uploaded to a central meta server. The only thing that gets sent back to the mothership is a</v>
+
+309
+00:33:42.710 --> 00:33:50.799
+<v Maya>generic anonymized update like a mathematical adjustment that helps the global model improve without ever sharing your specific raw data.</v>
+
+310
+00:33:51.399 --> 00:33:54.042
+<v Daniel>So my secrets stay in my pocket, not on a server somewhere.</v>
+
+311
+00:33:54.122 --> 00:33:58.827
+<v Maya>That's the promise. But it's a promise we as users have to be vigilant about holding them to.</v>
+
+312
+00:33:59.107 --> 00:34:07.788
+<v Daniel>There's another risk, though. One that brings us all the way back to the start to the AI trust curve. We talked about high trust and that emotional flooding effect.</v>
+
+313
+00:34:07.868 --> 00:34:12.216
+<v Maya>The risk of anthropomorphism or what the people calls illusory agency.</v>
+
+314
+00:34:12.396 --> 00:34:13.578
+<v Daniel>We start to treat them like people.</v>
+
+315
+00:34:13.973 --> 00:34:28.543
+<v Maya>And that's dangerous because the illusion will eventually break. The trust curve gives a stark warning about this. When the illusion shatters, when your trusted AI friend suddenly hallucinates or gets a software update that changes its personality or just</v>
+
+316
+00:34:28.643 --> 00:34:32.825
+<v Maya>glitches out, we don't just feel annoyed like we do when an app crashes.</v>
+
+317
+00:34:32.845 --> 00:34:33.586
+<v Daniel>We feel betrayed.</v>
+
+318
+00:34:33.846 --> 00:34:48.600
+<v Maya>We feel betrayed. It's not a software bug. It's a violation of a social contract that we thought we had. If you treat your AI like a therapist and then it suddenly uses your confessions to show you an ad for antidepressants, that psychological damage is real and</v>
+
+319
+00:34:48.660 --> 00:34:53.845
+<v Maya>profound. We are deeply vulnerable to things that convincingly mimic humanity.</v>
+
+320
+00:34:54.501 --> 00:35:04.684
+<v Daniel>So where does this leave us? I mean, we've covered the horror of the death mask, the incredible complexity of the world model, the clumsiness of modern robots, and the profound risk of betrayal. It's a lot to take in.</v>
+
+321
+00:35:04.984 --> 00:35:19.849
+<v Maya>It is. But I want to go back to that AI Trust Curve article for a final thought. It had a really interesting take on the ick that we feel. We're currently trapped in this cycle of hype and repulsion. One week, we think AI is a god that's going to solve all our problems. The next week, we</v>
+
+322
+00:35:19.889 --> 00:35:33.972
+<v Maya>see a weird animation and think it's a zombie that's going to destroy us. But the article suggests we need to recalibrate our entire relationship with it. We need to stop treating AI like a magic wizard and also stop treating it like a monster.</v>
+
+323
+00:35:34.112 --> 00:35:35.172
+<v Daniel>So what should we treat it like?</v>
+
+324
+00:35:35.392 --> 00:35:35.872
+<v Maya>A mirror.</v>
+
+325
+00:35:36.152 --> 00:35:36.593
+<v Daniel>A mirror.</v>
+
+326
+00:35:36.833 --> 00:35:51.756
+<v Maya>Think about it. Garbage in, garbage out. The AI is trained on human data. It's a vast statistical reflection of us. If a chat bot is biased, it's because our society is biased. If an avatar is uncanny, it's because we haven't yet figured out how to fully model our own</v>
+
+327
+00:35:51.796 --> 00:36:02.519
+<v Maya>biology. That feeling of ick. That repulsion we feel when we look into the uncanny valley. It might just be the deep discomfort of seeing a reflection that is almost us but has been stripped of its soul.</v>
+
+328
+00:36:02.679 --> 00:36:04.120
+<v Daniel>That is a heavy thought to end on.</v>
+
+329
+00:36:04.340 --> 00:36:16.324
+<v Maya>It is. But I also think it's kind of empowering. It means the future of AI isn't something that's just happening to us. It's something we are actively building for better or for worse. The mirror can only reflect what we choose to put in front of it.</v>
+
+330
+00:36:16.595 --> 00:36:31.415
+<v Daniel>So here's our challenge to you, the listener. For the next week, try to observe your own trust curve. When you're talking to Siri or you see a digital influencer on Instagram or you're using ChatGPT for work, just catch yourself. Are you trusting it too much? Are you</v>
+
+331
+00:36:31.435 --> 00:36:36.422
+<v Daniel>getting the ick? And then ask yourself, what is that machine reflecting back at you?</v>
+
+332
+00:36:37.003 --> 00:36:39.967
+<v Maya>It's a fascinating and critical time to be watching that mirror.</v>
+
+333
+00:36:40.347 --> 00:36:43.512
+<v Daniel>It certainly is. We'll be watching it right along with you. Thanks for deep diving with us.</v>
