@@ -249,6 +249,7 @@ def _inject_podcast_transcripts(feed_bytes: bytes, items: list[dict]) -> bytes:
         trans = ET.SubElement(item, f"{{{PODCAST_NS}}}transcript")
         trans.set("url", url)
         trans.set("type", "text/vtt")
+        trans.set("language", "en")
     return ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
 
