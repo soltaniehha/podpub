@@ -22,6 +22,9 @@ Open the **Discover** (or search) screen, paste the RSS URL into the search fiel
 ### Overcast (iOS)
 Overcast adds non-directory feeds through its web form. In a browser, go to [overcast.fm/add](https://overcast.fm/add), paste the URL, and hit **Add Podcast**. It syncs to the Overcast iOS app as long as you are signed in with the same account.
 
+### YouTube Music (Android, iOS)
+Open the YouTube Music app → **Library** → **Podcast** → **+ Add podcast** (bottom-right) → **Add a podcast by RSS feed** → accept the disclaimer → paste the URL → **Add**. Episodes usually appear within a few minutes. RSS-added podcasts don't support like/dislike, captions, or audio↔video switching — they play as audio with the cover image.
+
 ---
 
 Cover art, `feed.xml`, and all episode audio are served from this repo via GitHub Pages. New episodes appear within about a minute of a push; podcast apps may take up to an hour to refresh on their own, or immediately if you pull down to refresh in the app.
