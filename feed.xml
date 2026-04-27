@@ -2,7 +2,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0" xmlns:podcast="https://podcastindex.org/namespace/1.0">
   <channel>
     <title>NotebookLM Deep Dives</title>
-    <link>https://synthyclaw.github.io/podpub</link>
+    <link>https://soltaniehha.github.io/podpub</link>
     <description>Deep-dive explorations of research papers, books, and articles, generated with NotebookLM.</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
@@ -11,7 +11,7 @@
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
-    <itunes:image href="https://synthyclaw.github.io/podpub/NotebookLM-PodPub-Cover.png" />
+    <itunes:image href="https://soltaniehha.github.io/podpub/NotebookLM-PodPub-Cover.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:owner>
       <itunes:name>Mohammad Soltaniehha</itunes:name>
@@ -29,10 +29,10 @@ Reference: Fung, P., Bachrach, Y., Celikyilmaz, A., et al. (2025). Embodied AI A
 
 Google Scholar citations: 66</description>
       <guid isPermaLink="false">4b9ab875d10204e16c5b1d6e65dc402c7d4b1146</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/001%20-%20Why%20AI%20Has%20A%20Body%20Problem.m4a" length="70929329" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/001%20-%20Why%20AI%20Has%20A%20Body%20Problem.m4a" length="70929329" type="audio/mp4" />
       <pubDate>Thu, 23 Apr 2026 22:22:49 +0000</pubDate>
       <itunes:episode>1</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/001%20-%20Why%20AI%20Has%20A%20Body%20Problem.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/001%20-%20Why%20AI%20Has%20A%20Body%20Problem.vtt" type="text/vtt" /></item>
     <item>
       <title>002 - Why Artificial Intelligence Needs A Body</title>
       <description>A Survey of Embodied AI: From Simulators to Research Tasks (April 2022)
@@ -43,10 +43,10 @@ We walk through the nine simulators the paper benchmarks (DeepMind Lab, AI2-THOR
 
 Reference: Duan, J., Yu, S., Tan, H. L., Zhu, H., &amp; Tan, C. (2022). A Survey of Embodied AI: From Simulators to Research Tasks. IEEE Transactions on Emerging Topics in Computational Intelligence, 6(2), 230–244. https://doi.org/10.1109/TETCI.2022.3141105</description>
       <guid isPermaLink="false">89c659f0d087eba07686583b50989a15bb76aeb3</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/002%20-%20Why%20Artificial%20Intelligence%20Needs%20A%20Body.m4a" length="44447012" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/002%20-%20Why%20Artificial%20Intelligence%20Needs%20A%20Body.m4a" length="44447012" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 03:03:30 +0000</pubDate>
       <itunes:episode>2</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/002%20-%20Why%20Artificial%20Intelligence%20Needs%20A%20Body.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/002%20-%20Why%20Artificial%20Intelligence%20Needs%20A%20Body.vtt" type="text/vtt" /></item>
     <item>
       <title>003 - How AI Cues Hijack Human Psychology</title>
       <description>Machines and Mindlessness (2000) + On Seeing Human: A Three-Factor Theory of Anthropomorphism (2007)
@@ -59,10 +59,10 @@ Reference: Nass, C., &amp; Moon, Y. (2000). Machines and Mindlessness: Social Re
 
 Reference: Epley, N., Waytz, A., &amp; Cacioppo, J. T. (2007). On Seeing Human: A Three-Factor Theory of Anthropomorphism. Psychological Review, 114(4), 864–886. https://doi.org/10.1037/0033-295X.114.4.864</description>
       <guid isPermaLink="false">7586ac61da0a994b71d589e74e131c13ce9de416</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/003%20-%20How%20AI%20Cues%20Hijack%20Human%20Psychology.m4a" length="38342250" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/003%20-%20How%20AI%20Cues%20Hijack%20Human%20Psychology.m4a" length="38342250" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 03:47:20 +0000</pubDate>
       <itunes:episode>3</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/003%20-%20How%20AI%20Cues%20Hijack%20Human%20Psychology.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/003%20-%20How%20AI%20Cues%20Hijack%20Human%20Psychology.vtt" type="text/vtt" /></item>
     <item>
       <title>004 - Why Human Intelligence Needs A Body</title>
       <description>The Development of Embodied Cognition: Six Lessons from Babies (2005)
@@ -73,10 +73,10 @@ We walk through the six lessons the authors draw from developmental psychology f
 
 Reference: Smith, L., &amp; Gasser, M. (2005). The Development of Embodied Cognition: Six Lessons from Babies. Artificial Life, 11(1–2), 13–29. https://doi.org/10.1162/1064546053278973</description>
       <guid isPermaLink="false">4d20d05286c00b1359c92d331e18a78e09a8cabb</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/004%20-%20Why%20Human%20Intelligence%20Needs%20A%20Body.m4a" length="47854668" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/004%20-%20Why%20Human%20Intelligence%20Needs%20A%20Body.m4a" length="47854668" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 03:52:35 +0000</pubDate>
       <itunes:episode>4</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/004%20-%20Why%20Human%20Intelligence%20Needs%20A%20Body.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/004%20-%20Why%20Human%20Intelligence%20Needs%20A%20Body.vtt" type="text/vtt" /></item>
     <item>
       <title>005 - Moshi Ends The Voice AI Walkie Talkie</title>
       <description>Moshi: A Speech-Text Foundation Model for Real-Time Dialogue (October 2024)
@@ -87,10 +87,10 @@ We walk through the three components that make this work: Helium, a 7B-parameter
 
 Reference: Défossez, A., Mazaré, L., Orsini, M., Royer, A., Pérez, P., Jégou, H., Grave, E., &amp; Zeghidour, N. (2024). Moshi: a speech-text foundation model for real-time dialogue. arXiv:2410.00037. https://arxiv.org/abs/2410.00037</description>
       <guid isPermaLink="false">051b4537dc5c76e9f458f7a495bd3d6541420b3f</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/005%20-%20Moshi%20Ends%20The%20Voice%20AI%20Walkie%20Talkie.m4a" length="38295934" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/005%20-%20Moshi%20Ends%20The%20Voice%20AI%20Walkie%20Talkie.m4a" length="38295934" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 03:59:36 +0000</pubDate>
       <itunes:episode>5</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/005%20-%20Moshi%20Ends%20The%20Voice%20AI%20Walkie%20Talkie.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/005%20-%20Moshi%20Ends%20The%20Voice%20AI%20Walkie%20Talkie.vtt" type="text/vtt" /></item>
     <item>
       <title>006 - Why Machines Need Bodies To Communicate</title>
       <description>Embodied Conversational Agents: Representation and Intelligence in User Interfaces (Winter 2001)
@@ -101,10 +101,10 @@ We walk through her brief history of embodied interfaces, from the eighteenth-ce
 
 Reference: Cassell, J. (2001). Embodied Conversational Agents: Representation and Intelligence in User Interfaces. AI Magazine, 22(4).</description>
       <guid isPermaLink="false">85a2e367c04bb56eb5979e6f5a42da343ea88505</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/006%20-%20Why%20Machines%20Need%20Bodies%20To%20Communicate.m4a" length="25239667" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/006%20-%20Why%20Machines%20Need%20Bodies%20To%20Communicate.m4a" length="25239667" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 04:05:57 +0000</pubDate>
       <itunes:episode>6</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/006%20-%20Why%20Machines%20Need%20Bodies%20To%20Communicate.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/006%20-%20Why%20Machines%20Need%20Bodies%20To%20Communicate.vtt" type="text/vtt" /></item>
     <item>
       <title>007 - Why Physical Robots Need Social Intelligence</title>
       <description>Cooperative AI: Machines Must Learn to Find Common Ground (May 2021) + Embodied Large Language Models Enable Robots to Complete Complex Tasks in Unpredictable Environments (April 2025)
@@ -117,9 +117,9 @@ Reference: Dafoe, A., Bachrach, Y., Hadfield, G., Horvitz, E., Larson, K., &amp;
 
 Reference: Mon-Williams, R., Li, G., Long, R., Du, W., &amp; Lucas, C. G. (2025). Embodied large language models enable robots to complete complex tasks in unpredictable environments. Nature Machine Intelligence, 7(4), 592–601. https://doi.org/10.1038/s42256-025-01005-x</description>
       <guid isPermaLink="false">b9b0b7489c1a969943b5757f3c577a976b8f6fcd</guid>
-      <enclosure url="https://synthyclaw.github.io/podpub/audio/007%20-%20Why%20Physical%20Robots%20Need%20Social%20Intelligence.m4a" length="40912991" type="audio/mp4" />
+      <enclosure url="https://soltaniehha.github.io/podpub/audio/007%20-%20Why%20Physical%20Robots%20Need%20Social%20Intelligence.m4a" length="40912991" type="audio/mp4" />
       <pubDate>Fri, 24 Apr 2026 04:11:49 +0000</pubDate>
       <itunes:episode>7</itunes:episode>
-    <podcast:transcript url="https://synthyclaw.github.io/podpub/transcripts/007%20-%20Why%20Physical%20Robots%20Need%20Social%20Intelligence.vtt" type="text/vtt" /></item>
+    <podcast:transcript url="https://soltaniehha.github.io/podpub/transcripts/007%20-%20Why%20Physical%20Robots%20Need%20Social%20Intelligence.vtt" type="text/vtt" /></item>
   </channel>
 </rss>
