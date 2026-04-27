@@ -235,7 +235,6 @@ def _inject_podcast_transcripts(feed_bytes: bytes, items: list[dict]) -> bytes:
     ET.register_namespace("content", "http://purl.org/rss/1.0/modules/content/")
     ET.register_namespace("podcast", PODCAST_NS)
     root = ET.fromstring(feed_bytes)
-    root.set("xmlns:podcast", PODCAST_NS)
 
     guid_to_url = {it["guid"]: it["transcript_url"] for it in items if it.get("transcript_url")}
     if not guid_to_url:
