@@ -9,7 +9,7 @@ The current run is a thread on embodied AI: why intelligence needs a body, how s
 The show is not listed in public podcast directories. Add it by RSS feed URL:
 
 ```
-https://soltaniehha.github.io/podpub/feed.xml
+https://soltaniehha.com/podpub/feed.xml
 ```
 
 ### Apple Podcasts

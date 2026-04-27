@@ -1,6 +1,6 @@
 # podpub — instructions for Claude
 
-This is a lightweight CLI (`podpub.py`) that publishes NotebookLM audio episodes to a private podcast RSS feed hosted on GitHub Pages. The feed URL is `https://soltaniehha.github.io/podpub/feed.xml` and is served via the `itunes:block=yes` directive (hidden from Apple's public directory, but subscribable by URL).
+This is a lightweight CLI (`podpub.py`) that publishes NotebookLM audio episodes to a private podcast RSS feed hosted on GitHub Pages. The feed URL is `https://soltaniehha.com/podpub/feed.xml` and is served via the `itunes:block=yes` directive (hidden from Apple's public directory, but subscribable by URL).
 
 ## Publishing workflow
 
