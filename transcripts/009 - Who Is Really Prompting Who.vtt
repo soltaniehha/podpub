@@ -1,0 +1,593 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:10.602
+<v Daniel>Have you ever noticed how using generative AI feels less like using a normal tool and more like managing, I don't know, a completely unpredictable intern?</v>
+
+2
+00:00:10.803 --> 00:00:11.543
+<v Maya>Oh, absolutely.</v>
+
+3
+00:00:11.563 --> 00:00:22.315
+<v Daniel>Like you ask for something simple, right? And they either come back with this brilliant masterpiece that saves you three hours or they confidently hand you something so bizarrely wrong you don't even know where to begin correcting</v>
+
+4
+00:00:22.355 --> 00:00:22.415
+it.
+
+5
+00:00:22.636 --> 00:00:37.432
+<v Maya>Yeah, it really is the defining technological experience of our time right now. And, you know, that unpredictability isn't a glitch. It actually represents a complete tearing up of the rules for how humans and computers interact. I mean, we are moving away from machines that just execute</v>
+
+6
+00:00:37.512 --> 00:00:43.138
+<v Maya>explicit commands to machines that attempt to interpret what you actually mean.</v>
+
+7
+00:00:43.555 --> 00:00:58.298
+<v Daniel>And that shift in control is really the core of our deep dive today. We're pulling from a stack of recent research in human computer interaction and information systems. And we are tracking this rapidly shifting balance of agency between you and your software. Because if you look closely at how these</v>
+
+8
+00:00:58.338 --> 00:01:02.618
+<v Daniel>systems are designed, well, the user is no longer in absolute control.</v>
+
+9
+00:01:02.998 --> 00:01:12.600
+<v Maya>No, not at all. We are moving into an era of shared, heavily negotiated control. And in some cases, the algorithms are actually the ones telling us what to do.</v>
+
+10
+00:01:13.052 --> 00:01:14.673
+<v Daniel>Which is wild to think about.</v>
+
+11
+00:01:14.873 --> 00:01:29.803
+<v Maya>It is. So to understand how we got here, we really have to look at a concept from Jakob Nielsen called intent-based outcome specification. The researchers in our first paper, Weiss and his team, they use this to explain why designing AI feels</v>
+
+12
+00:01:29.883 --> 00:01:30.924
+<v Maya>so radically different.</v>
+
+13
+00:01:31.104 --> 00:01:32.605
+<v Daniel>Right, because traditional computing.</v>
+
+14
+00:01:32.645 --> 00:01:47.573
+<v Maya>Yeah, think about traditional computing. Whether you were typing a command line prompt in the 80s or, you know, just clicking a graphical menu yesterday, you controlled the how. You specified the exact steps the computer needed to take. Right. But intent-based design completely flips that. You no</v>
+
+15
+00:01:47.613 --> 00:01:53.997
+<v Maya>longer control the how. You just use natural language to specify what your intent, and the model figures out how to actually produce it.</v>
+
+16
+00:01:54.422 --> 00:02:09.271
+<v Daniel>It really feels like the difference between cooking in your own kitchen versus ordering from a private chef. Like in your own kitchen, you're using traditional software. You pick the knife. You chop the onions. You control the heat on the stove. You dictate</v>
+
+17
+00:02:09.371 --> 00:02:10.572
+<v Daniel>every single slice and stir.</v>
+
+18
+00:02:10.652 --> 00:02:12.453
+<v Maya>Exactly. You're micromanaging the process.</v>
+
+19
+00:02:12.533 --> 00:02:27.382
+<v Daniel>Yeah. But generative AI is the private chef. You just sit at the table and state your craving. Like, I want something spicy with noodles. And the chef goes to work. They figure out the recipe, the techniques, the ingredients. But the catch is the chef might totally surprise you.</v>
+
+20
+00:02:27.903 --> 00:02:31.485
+<v Daniel>You might get pad thai or you might get a really fiery Italian arrabbiata.</v>
+
+21
+00:02:31.865 --> 00:02:46.021
+<v Maya>And that surprise element is crucial here. the chef might bring you something way better than you imagined, or they might bring you something you're severely allergic to. Because the user has surrendered the how, designers are kind of scrambling to build new safety nets.</v>
+
+22
+00:02:46.762 --> 00:02:59.213
+<v Maya>So Weiss and his team mapped out six design principles for these new AI experiences, and they divided them into two buckets. You've got new takes on old AI problems, and then entirely new challenges that are unique to generative models.</v>
+
+23
+00:02:59.672 --> 00:03:04.613
+<v Daniel>Okay, so what falls into that first bucket, like the old problems getting a generative makeover?</v>
+
+24
+00:03:04.893 --> 00:03:19.317
+<v Maya>So one of the biggest is design responsibly, which really comes down to managing emergent behaviors. With a traditional algorithm, it only does what it was programmed to do. But a large language model, it might have underlying capabilities that designers didn't</v>
+
+25
+00:03:19.377 --> 00:03:20.277
+<v Maya>anticipate at all.</v>
+
+26
+00:03:20.627 --> 00:03:21.748
+<v Daniel>Give me an example of that.</v>
+
+27
+00:03:21.788 --> 00:03:33.334
+<v Maya>Sure. So if you deploy a chatbot specifically for, say, processing returns on a retail website, the underlying model might also secretly know how to write Python code or offer medical advice.</v>
+
+28
+00:03:33.734 --> 00:03:34.134
+<v Daniel>Oh, wow.</v>
+
+29
+00:03:34.274 --> 00:03:43.820
+<v Maya>Yeah. So the design challenge is creating mechanisms to suppress those emergent skills so the bot doesn't start diagnosing a customer's rash instead of just refunding their shoes.</v>
+
+30
+00:03:43.940 --> 00:03:54.705
+<v Daniel>That makes sense. And I imagine another old problem is just getting the AI to understand who it is talking to, right? Right. Because a generic assistant isn't nearly as helpful as one that knows my specific context.</v>
+
+31
+00:03:55.305 --> 00:04:08.831
+<v Maya>Exactly. That falls under the principle of design for mental models. The system needs to build a mental model of you, the user, and you need one of the system. A really great manifestation of this is the custom instructions feature.</v>
+
+32
+00:04:09.297 --> 00:04:10.498
+<v Daniel>Oh, like in ChatGPT.</v>
+
+33
+00:04:10.719 --> 00:04:22.470
+<v Maya>Yes, exactly. Where you explicitly state your profession, your background, the formatting you prefer, the system just stops treating you like a blank slate and uses that context to filter its responses.</v>
+
+34
+00:04:22.848 --> 00:04:34.131
+<v Daniel>But, you know, that brings up a really dangerous dynamic. If the AI knows my context and it speaks to me in this perfect, competent, natural language, I mean, I am incredibly likely to just believe whatever it says.</v>
+
+35
+00:04:34.271 --> 00:04:34.991
+<v Maya>Oh, absolutely.</v>
+
+36
+00:04:35.051 --> 00:04:43.233
+<v Daniel>We see this all the time, right? People just copy-paste an AI-generated legal brief or an email without even reading it. And it turns out to be totally full of hallucinations.</v>
+
+37
+00:04:43.628 --> 00:04:57.952
+<v Maya>Psychologists actually call that automation bias. When a machine presents information confidently, humans have a documented tendency to just shut off their critical thinking and defer to the machine. So the third principle for these older AI issues is</v>
+
+38
+00:04:58.432 --> 00:05:04.854
+<v Maya>design for appropriate trust and reliance. Designers literally have to engineer friction back into the workflow.</v>
+
+39
+00:05:05.054 --> 00:05:07.255
+<v Daniel>Wait, meaning they have to actively slow us down?</v>
+
+40
+00:05:07.905 --> 00:05:22.768
+<v Maya>Yes, they do. They might design the interface so that you physically cannot hit send on an AI-generated email until you have, like, clicked on the highlighted text to verify the source citations. They want to break that automation bias by forcing you to evaluate the output</v>
+
+41
+00:05:23.188 --> 00:05:26.369
+<v Maya>rather than just blindly relying on your unpredictable intern.</v>
+
+42
+00:05:26.689 --> 00:05:36.811
+<v Daniel>Wow. Okay. So those are the updated versions of classic AI problems. But what about that second bucket? What are the completely new principles that only exist because these models are generative?</v>
+
+43
+00:05:37.416 --> 00:05:44.741
+<v Maya>The most prominent one is designed for generative variability. Look, if you ask a traditional database the same question twice, you get the exact same answer twice.</v>
+
+44
+00:05:44.941 --> 00:05:45.901
+<v Daniel>Right. It's deterministic.</v>
+
+45
+00:05:46.182 --> 00:06:00.751
+<v Maya>Exactly. But if you give a generative model the exact same prompt twice, you might get two completely different responses. Designers have to account for that. It's why tools like Google BARD or certain AI writing assistants will instantly generate, say,</v>
+
+46
+00:06:01.091 --> 00:06:04.073
+<v Maya>three distinct draft options for a single query.</v>
+
+47
+00:06:04.393 --> 00:06:05.333
+<v Daniel>Oh, yeah, I've seen that.</v>
+
+48
+00:06:05.353 --> 00:06:11.495
+<v Maya>The interface is visually communicating to the user that there is no single correct mathematical answer here.</v>
+
+49
+00:06:11.755 --> 00:06:26.139
+<v Daniel>And it changes how we work, right? It's not a vending machine where you put in a coin and get a soda. It's more of a, well, a collaborative process. Yeah. Like with Adobe Photoshop's generative fill, where you highlight a background, type add a mountain, and the AI blends it in. You are</v>
+
+50
+00:06:26.539 --> 00:06:29.280
+<v Daniel>essentially co-creating the final artifact together.</v>
+
+51
+00:06:29.340 --> 00:06:43.071
+<v Maya>It is a shared workspace, yeah, but it's a volatile one. When you highlight that image or a block of code in GitHub Copilot, the AI doesn't always understand the broader context of your entire project. It's really just guessing based on a localized window of information.</v>
+
+52
+00:06:43.191 --> 00:06:44.192
+<v Daniel>Which is pretty risky.</v>
+
+53
+00:06:44.552 --> 00:06:58.995
+<v Maya>It is, which leads directly to the final principle designed for imperfection. Because the model is operating on probabilities, it will inevitably make mistakes or hallucinate facts. the user interface has to make that uncertainty visible.</v>
+
+54
+00:06:59.216 --> 00:07:00.197
+<v Daniel>Like highlighting text.</v>
+
+55
+00:07:00.337 --> 00:07:08.010
+<v Maya>Exactly. Perhaps by color coding text, the AI is less confident about so the user knows exactly where to focus their editing.</v>
+
+56
+00:07:08.308 --> 00:07:22.911
+<v Daniel>But the utility of all this variability and imperfection really depends on what I'm trying to accomplish on any given Tuesday. If I'm trying to brainstorm a name for a new project and the AI gives me five wildly different weird variations, I'm thrilled. That</v>
+
+57
+00:07:23.011 --> 00:07:35.033
+<v Daniel>generative variability is a massive feature. But if I ask it to write a specific Python script to migrate a database, I don't want five creative variations. I want the single script that works without deleting my hard drive.</v>
+
+58
+00:07:35.558 --> 00:07:50.227
+<v Maya>The researchers make that exact distinction, actually. They divide user goals into two categories, exploration versus optimization. In exploration like brainstorming your project name, the generative process itself is the value. The weirdness and variability expand your thinking. But in optimization,</v>
+
+59
+00:07:50.587 --> 00:07:59.292
+<v Maya>the goal is a highly specific, flawless artifact. And for optimization tasks, generative variability is a massive liability.</v>
+
+60
+00:08:00.077 --> 00:08:15.069
+<v Daniel>but that raises a massive logistical nightmare for the people actually building this software. If the AI's output is this variable, and if the interface needs to constantly adapt to whether the user is exploring or optimizing, I mean, traditional wireframes are useless. You can't draw</v>
+
+61
+00:08:15.089 --> 00:08:23.235
+<v Daniel>a button in a design app for a feature that changes its behavior every single time you click it. How are engineering teams actually building these things without just flying blind?</v>
+
+62
+00:08:23.615 --> 00:08:37.006
+<v Maya>They've had to completely invent a new way of working, which brings us to the research by Subramaniam and colleagues. They studied 39 industry professionals, UX designers, AI engineers, product managers, to see how they actually prototype generative AI applications.</v>
+
+63
+00:08:37.246 --> 00:08:38.126
+<v Daniel>Okay, what did they find?</v>
+
+64
+00:08:38.467 --> 00:08:48.795
+<v Maya>Well, historically, software design decoupled the user interface from the back-end math. You drew the screens, and someone else coded the logic later. But with generative AI, the interface is the computation.</v>
+
+65
+00:08:48.815 --> 00:08:49.976
+<v Daniel>Because the prompt is the code.</v>
+
+66
+00:08:50.287 --> 00:09:05.149
+<v Maya>Yes. So teams use a method called content-centric prototyping. Using developer platforms, they don't build fake visual screens. Instead, they constantly tweak massive, complex prompts behind the scenes and analyze the generated</v>
+
+67
+00:09:05.209 --> 00:09:09.972
+<v Maya>text that comes out. They're literally testing the behavioral logic of the application using language.</v>
+
+68
+00:09:10.012 --> 00:09:21.399
+<v Daniel>Okay, let's look under the hood of that. When I use AI, I just type a messy sentence and hit enter. But for an enterprise software team building a commercial tool, how are they structuring these underlying prompts?</v>
+
+69
+00:09:25.654 --> 00:09:40.648
+<v Maya>The first layer is the input context. This passes the user's specific scenario to the model, like injecting the fact that the target audience for this output is teenagers or that the geographic location is Europe. Got it. The second layer involves the system instructions. These are the</v>
+
+70
+00:09:40.708 --> 00:09:45.653
+<v Maya>high-level behavioral directives, like telling the model to act as an award-winning marketing copywriter.</v>
+
+71
+00:09:46.146 --> 00:10:00.774
+<v Daniel>Okay, so you have the specific context and you have the overarching persona. But language is incredibly subjective. An award-winning copywriter might write a 500-word essay or they might write a three-word slogan. How do they actually constrain the</v>
+
+72
+00:10:00.874 --> 00:10:03.536
+<v Daniel>AI so it fits into the software interface they're building?</v>
+
+73
+00:10:04.047 --> 00:10:17.678
+<v Maya>That's where the third component comes in, output constraints. These are the strict structural guardrails. The prompt might explicitly state keep the response strictly under 100 characters or output the response only in JSON format.</v>
+
+74
+00:10:18.378 --> 00:10:24.323
+<v Daniel>But even with rules and formatting, how does it know what professional or sassy actually sounds like to my specific company?</v>
+
+75
+00:10:24.655 --> 00:10:38.699
+<v Maya>That relies on the fourth and arguably most powerful component, few shot examples. This is where the designers embed two or three gold standard examples of an input and the exact desired output directly into the prompt. It gives the AI a literal pattern to mimic.</v>
+
+76
+00:10:38.871 --> 00:10:53.510
+<v Daniel>I have to pause on that. Few shot examples. Isn't that just a fancy way of saying we're giving the AI a Mad Libs template to fill out? If the designers have to manually write the perfect examples for it to copy, is the system actually exhibiting intelligence or is it just parroting our</v>
+
+77
+00:10:53.550 --> 00:10:54.672
+<v Daniel>format with different nouns?</v>
+
+78
+00:10:55.198 --> 00:11:09.752
+<v Maya>It's a really common critique, but it goes much deeper than just filling in a template. In traditional machine learning, if you wanted a model to recognize a pattern, say, identifying a cat in a photo, you had to feed it 10,000</v>
+
+79
+00:11:09.952 --> 00:11:24.701
+<v Maya>labeled examples. Large language models are different. Providing just a few shots allows the model to extract the abstract relationship between the input and the output. Okay. It isn't just string matching. It is learning the implicit rules of your examples, the cadence, the underlying</v>
+
+80
+00:11:24.741 --> 00:11:32.165
+<v Maya>logic, the specific tone of voice, and it can then apply those abstract rules to novel unseen situations that weren't in your examples at all.</v>
+
+81
+00:11:32.677 --> 00:11:47.573
+<v Daniel>Oh, so it's extracting the vibe and the underlying logic, not just copying the words. I can see why software teams would love that. It allows for incredibly rapid iteration. You don't have to rewrite thousands of lines of backend code. You just change one of the few</v>
+
+82
+00:11:47.613 --> 00:11:52.539
+<v Daniel>shot examples from formal to casual, and the entire application instantly behaves differently.</v>
+
+83
+00:11:53.411 --> 00:12:08.102
+<v Maya>The speed of iteration is definitely the biggest advantage. The study noted that teams even start using the LLM as an active design partner. Like, a product manager might not know the standard steps for a corporate approval workflow, so they just prompt the AI to generate the</v>
+
+84
+00:12:08.122 --> 00:12:08.843
+<v Maya>workflow first.</v>
+
+85
+00:12:09.003 --> 00:12:09.564
+<v Daniel>Oh, wow, okay.</v>
+
+86
+00:12:09.664 --> 00:12:18.711
+<v Maya>Yeah, and then they take that AI-generated workflow and use it as the foundation for their prompt prototype. The AI is literally helping design the application that manages the AI.</v>
+
+87
+00:12:18.771 --> 00:12:24.864
+<v Daniel>That is incredibly meta. But this content-centric prototyping can't be flawless, right? What happens when it breaks down?</v>
+
+88
+00:12:25.265 --> 00:12:40.138
+<v Maya>There are significant hurdles. The first is the cold start problem. Because foundation models are trained on the entire internet, they are vast and unpredictable. Designers often stare at a blank prompt interface, completely unsure of how the</v>
+
+89
+00:12:40.158 --> 00:12:44.482
+<v Maya>base model will react to a novel query because they just don't know its default behavior.</v>
+
+90
+00:12:44.582 --> 00:12:44.763
+<v Daniel>Yeah.</v>
+
+91
+00:12:45.123 --> 00:12:47.645
+<v Maya>But the more dangerous trap is overfitting.</v>
+
+92
+00:12:47.845 --> 00:12:51.809
+<v Daniel>Meaning they give it a few shot example and the AI takes it too literally.</v>
+
+93
+00:12:51.909 --> 00:13:06.339
+<v Maya>Exactly. When you give the model highly specific examples to lock in a tone, it can get trapped in that context. The researchers shared a really telling anecdote. A team was prototyping an application meant to generate marketing campaigns for various sports.</v>
+
+94
+00:13:06.999 --> 00:13:13.203
+<v Maya>To teach the AI the right enthusiastic tone, they provided a few-shot example using an NFL and Gatorade ad.</v>
+
+95
+00:13:13.483 --> 00:13:14.404
+<v Daniel>Okay, seems reasonable.</v>
+
+96
+00:13:14.768 --> 00:13:21.171
+<v Maya>And the AI successfully extracted the vibe and generated a great response like, let's kick the NFL season off with some energy.</v>
+
+97
+00:13:21.191 --> 00:13:22.252
+<v Daniel>Sounds like it worked perfectly.</v>
+
+98
+00:13:22.552 --> 00:13:37.540
+<v Maya>It did, for football. But as a stress test, the designers changed the input variable from the NFL to tennis. They wanted to see if the model could generalize that enthusiasm to a different sport. But the output was awkward and completely missed the mark for tennis</v>
+
+99
+00:13:37.580 --> 00:13:37.920
+<v Maya>culture.</v>
+
+100
+00:13:38.222 --> 00:13:46.509
+<v Daniel>Because it lacked the real-world contextual understanding that tennis fans don't scream about kicking off with energy the way football fans do.</v>
+
+101
+00:13:46.549 --> 00:14:01.341
+<v Maya>Right. It had overfit to the aggressive, high-energy vocabulary of the football example. It couldn't intuitively pivot its tone to match the more refined vibe of Wimbledon. The designers realized that by giving it a highly specific example to ensure quality, they had</v>
+
+102
+00:14:01.461 --> 00:14:04.964
+<v Maya>accidentally locked the AI into a very narrow creative box.</v>
+
+103
+00:14:05.304 --> 00:14:05.945
+<v Daniel>So what do they do?</v>
+
+104
+00:14:06.433 --> 00:14:16.736
+<v Maya>They end up in this constant tug of war, spending hours tweaking the prompt, making the examples more generic so it can generalize, but not so generic that it loses the specific tone they wanted in the first place.</v>
+
+105
+00:14:17.186 --> 00:14:32.156
+<v Daniel>We spend so much time, energy, and research agonizing over how to put guardrails on these algorithms. We use intent-based design principles to limit their emergent behaviors, and we build complex prompt prototypes to force them to output exactly what</v>
+
+106
+00:14:32.176 --> 00:14:40.602
+<v Daniel>we want. But the rich irony of all this is that there is an entirely different domain of software where the algorithms are the ones agonizing over how to control us.</v>
+
+107
+00:14:41.041 --> 00:14:55.676
+<v Maya>which is a perfect segue into our final paper by Stelmazak and colleagues. They examined the phenomenon of distributed delegation. For decades, delegation in computing meant a human asking an algorithm to calculate a spreadsheet or render a file. But in modern</v>
+
+108
+00:14:55.716 --> 00:15:04.044
+<v Maya>multi-agent systems, the flow of authority has reversed. The algorithms are appraising complex environments and actively delegating physical actions to human workers.</v>
+
+109
+00:15:04.405 --> 00:15:12.207
+<v Daniel>To understand how they manage us, we have to understand the two different types of algorithmic agents pulling the strings. How do the researchers categorize them?</v>
+
+110
+00:15:12.462 --> 00:15:27.412
+<v Maya>They break them down into simple reflex agents and model-based agents. A simple reflex agent has no memory. It doesn't care about the past. It just reacts to the current data in the environment based on preset, if then rules. A model-based agent</v>
+
+111
+00:15:27.452 --> 00:15:35.197
+<v Maya>is much more sophisticated. It maintains an internal state, tracks history, and analyzes past interactions to predict future outcomes.</v>
+
+112
+00:15:35.597 --> 00:15:41.120
+<v Daniel>I like to think of it as the difference between a bouncer at a crowded club and a high-end hotel concierge.</v>
+
+113
+00:15:41.260 --> 00:15:41.921
+<v Maya>Oh, I like that.</v>
+
+114
+00:15:42.236 --> 00:15:53.180
+<v Daniel>Yeah, the simple reflex agent is the bouncer. They check your ID right now, make sure you are over 21, and let you in. They don't remember you from last week, and they don't care. They just react to the current data point.</v>
+
+115
+00:15:53.300 --> 00:15:53.500
+<v Maya>Right.</v>
+
+116
+00:15:53.600 --> 00:16:06.525
+<v Daniel>The model-based agent is the concierge. They remember that you visited three years ago. Yeah. They know you prefer a room away from the elevator, and they anticipate that you'll probably want a dinner reservation around 8 p.m. They track your history to model your future behavior.</v>
+
+117
+00:16:06.786 --> 00:16:20.893
+<v Maya>that is a fantastic way to conceptualize it. And in massive platforms, these bouncers and concierges work together to manage human labor through a framework of three specific mechanisms, appraisal, distribution, and coordination.</v>
+
+118
+00:16:21.297 --> 00:16:24.520
+<v Daniel>Let's walk through how those mechanisms actually function in real time.</v>
+
+119
+00:16:24.680 --> 00:16:36.971
+<v Maya>It starts with appraisal. The algorithms continuously evaluate the environment and ask, is a human required here? They process massive amounts of real-time data to identify a task that the system cannot execute digitally.</v>
+
+120
+00:16:37.072 --> 00:16:38.413
+<v Daniel>Okay, step one, find a human.</v>
+
+121
+00:16:38.813 --> 00:16:53.344
+<v Maya>Right. Once a human task is identified, the system moves to distribution. The algorithms search the available pool of human workers, use those model-based agents to evaluate the worker's past performance and current status, and decide who gets the assignment. Finally, there's</v>
+
+122
+00:16:53.364 --> 00:17:03.052
+<v Maya>coordination. The algorithm doesn't just email you a task and walk away. It actively manages your execution, aligning your physical work with the system's broader goals and nudging your behavior as you go.</v>
+
+123
+00:17:03.452 --> 00:17:18.318
+<v Daniel>The quintessential example of this is a ride-sharing platform like Uber, right? The overarching goal of the platform is completing a ride efficiently. The algorithms handle the immense cognitive load of multidata assembly. The simple reflex agents, the</v>
+
+124
+00:17:18.339 --> 00:17:22.505
+<v Daniel>bouncers, are looking at real-time traffic jams and immediate GPS pings.</v>
+
+125
+00:17:22.805 --> 00:17:23.326
+<v Maya>Exactly.</v>
+
+126
+00:17:23.526 --> 00:17:38.315
+<v Daniel>The model-based agents, the concierges, are tracking driver reliability histories and running predictive surge pricing models. They appraise the environment, realize a passenger needs a ride, distribute that specific task to a human driver and then actively coordinate the</v>
+
+127
+00:17:38.355 --> 00:17:41.037
+<v Daniel>execution by providing turn-by-turn navigation.</v>
+
+128
+00:17:41.306 --> 00:17:53.307
+<v Maya>And if the driver misses a turn, the algorithm recalculates. If the driver declines too many rides, the algorithm might penalize their visibility. The software does the cognitive heavy lifting, but it physically delegates the driving to the human.</v>
+
+129
+00:17:53.967 --> 00:18:08.696
+<v Daniel>And it measures every single metric of how that human performs the delegated task. It is so easy for someone listening to think, well, I'm not a gig worker. I don't drive for a rideshare app, so algorithms aren't managing me. But that is a dangerous underestimation.</v>
+
+130
+00:18:09.136 --> 00:18:12.178
+<v Daniel>Algorithms are already distributing tasks to you probably every day.</v>
+
+131
+00:18:12.338 --> 00:18:12.998
+<v Maya>Oh, completely.</v>
+
+132
+00:18:13.218 --> 00:18:27.906
+<v Daniel>Think about your smartwatch. If an algorithm appraises your lack of movement, distributes a haptic notification to your wrist, and coordinates your behavior by telling you to stand up and walk for a minute, that is distributed delegation. If you work in a corporate</v>
+
+133
+00:18:27.986 --> 00:18:42.838
+<v Daniel>office and your customer service software automatically routes a highly sensitive escalated client ticket to your specific dashboard instead of your coworkers because a model-based agent tracked your history and determined you resolve angry clients 12% faster. An algorithm</v>
+
+134
+00:18:42.858 --> 00:18:46.982
+<v Daniel>just acted as your middle manager. You didn't pull that task. It was delegated to you.</v>
+
+135
+00:18:47.122 --> 00:19:01.649
+<v Maya>When you look at all of this together, it reveals a massive fluid spectrum of interaction. In some contexts, we are the managers. We use intent-based design frameworks and agonizing prompt prototypes to strictly control our generative AI interns.</v>
+
+136
+00:19:02.289 --> 00:19:13.895
+<v Maya>But in other contexts, within these multi-agent platforms, we are the interns. We are the physical actuators executing the tasks that simple reflex and model-based algorithms have mathematically decided we are best suited for.</v>
+
+137
+00:19:14.507 --> 00:19:28.833
+<v Daniel>The boundaries are completely dissolving. Let's recap the journey we just took. We started by exploring how intent-based design forces us to surrender control over the howl of computing, requiring designers to build new safety nets around generative variability and user trust.</v>
+
+138
+00:19:29.454 --> 00:19:44.375
+<v Daniel>We saw how software teams try to wrangle that unpredictability using content-centric prototyping, leveraging few-shot examples to teach the AI implicit rules while battling the trap of overfitting. And finally, we looked at the startling reality of distributed delegation, where the algorithms use</v>
+
+139
+00:19:44.415 --> 00:19:48.103
+<v Daniel>appraisal, distribution, and coordination to manage human labor in the physical world.</v>
+
+140
+00:19:48.419 --> 00:20:03.368
+<v Maya>But the line between tool and manager isn't just blurring. It is actively moving back and forth depending on the software you are using. And the research leaves us with one final, deeply provocative thought to consider. We spent a significant amount of time</v>
+
+141
+00:20:03.428 --> 00:20:18.376
+<v Maya>discussing how human designers embed few-shot examples into their prototypes. We provide the AI with the gold standard of how to act. how to mimic a specific tone, and how to execute a workflow flawlessly so the machine can learn the implicit rules of</v>
+
+142
+00:20:18.396 --> 00:20:18.856
+<v Maya>the task.</v>
+
+143
+00:20:18.916 --> 00:20:23.658
+<v Daniel>Right. We do the manual labor of showing the AI what good work looks like so it can take over the heavy lifting.</v>
+
+144
+00:20:23.893 --> 00:20:38.747
+<v Maya>But consider what happens during distributed delegation. As model-based algorithms manage us, as they track our work histories, observe how we solve complex problems, measure how we respond to difficult emails, and record every digital and physical action we take to complete a routed workflow,</v>
+
+145
+00:20:39.228 --> 00:20:54.122
+<v Maya>are we inadvertently becoming the few-shot examples? Are these overarching systems simply using our daily delegated labor as the ultimate training data set? learning the implicit rules of how we operate so that eventually they won't need to delegate those tasks back to us</v>
+
+146
+00:20:54.282 --> 00:20:54.562
+<v Maya>at all.</v>
+
+147
+00:20:54.802 --> 00:21:09.475
+<v Daniel>That is a staggering implication. Are our daily workflows just generating the few-shot examples for the AI that will eventually replace us? It perfectly frames the stakes of modern human-computer interaction. We aren't just using software anymore. We are in a constant, dynamic, and</v>
+
+148
+00:21:09.556 --> 00:21:22.594
+<v Daniel>sometimes precarious negotiation with it. Thank you for joining us on this deep dive. I highly recommend that tomorrow, as you open your laptop or check your smartwatch, you take a hard look at the systems you use and ask yourself, who is really prompting who?</v>

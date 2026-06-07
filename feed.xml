@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2026 04:32:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 18:53:27 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -121,5 +121,53 @@ Reference: Mon-Williams, R., Li, G., Long, R., Du, W., &amp; Lucas, C. G. (2025)
       <pubDate>Fri, 24 Apr 2026 04:11:49 +0000</pubDate>
       <itunes:episode>7</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/007%20-%20Why%20Physical%20Robots%20Need%20Social%20Intelligence.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>008 - Why Honesty Kills Eighty Percent Of Sales</title>
+      <description>Machines vs. Humans: The Impact of AI Chatbot Disclosure on Customer Purchases (2019) + AI in Service Design: A New Framework for Hybrid Human–AI Service Encounters (2026) + Generative AI at Work (2025)
+
+In this episode we pair three studies on what happens when artificial intelligence moves to the front line of sales and service, and why simply telling customers a machine is involved can change everything. The thread is honesty. Xueming Luo, Siliang Tong, Zheng Fang, and Zhe Qu (Temple, Sichuan, and Fudan) run the first randomized field experiment on chatbot disclosure and find that an undisclosed AI sales agent sells as well as a firm's best humans, right up until it admits what it is. Marzia Mortati and Giovanna Viana Mundstock Freitas (Politecnico di Milano) give that tension a conceptual home, arguing that service design itself has to be rebuilt for hybrid human–AI encounters. And Erik Brynjolfsson, Danielle Li, and Lindsey Raymond (Stanford and MIT) show the other side of the ledger: when generative AI is deployed to support workers rather than impersonate them, it makes them measurably better.
+
+We walk through Luo and colleagues' six-condition experiment with 6,255 customers of a fintech lender, where disclosing the chatbot's identity before the call cut purchase rates by nearly 80%, from 0.237 down to 0.048, even though voice-mining showed the disclosed bot was no less knowledgeable or empathetic. The damage is pure prejudice against machines, and it softens when disclosure comes later or when customers already have experience with AI. We then take up Mortati and Freitas's notion of Service AI, defined by hybridity and co-piloting, and their 2×2 framework spanning Human-to-Human, Human-to-AI, AI-to-Human, and AI-to-AI encounters across the frontstage and backstage, including the uncomfortable figure of Service AI as a hidden partner and the ethical question of whether customers should ever be kept blind to it. We close on Brynjolfsson, Li, and Raymond's study of 5,172 customer-support agents given a GPT-based assistant: a 15% average productivity gain that climbs to 30% for the least-experienced workers, with the AI diffusing the tacit know-how of top performers, accelerating novice learning, making customers more polite, and lowering attrition. It is the case for AI that visibly empowers rather than quietly deceives.
+
+Reference: Luo, X., Tong, S., Fang, Z., &amp; Qu, Z. (2019). Frontiers: Machines vs. Humans: The Impact of Artificial Intelligence Chatbot Disclosure on Customer Purchases. Marketing Science, 38(6), 937–947. https://doi.org/10.1287/mksc.2019.1192
+Reference: Mortati, M., &amp; Viana Mundstock Freitas, G. (2026). AI in Service Design: A New Framework for Hybrid Human–AI Service Encounters. Journal of Service Research, 29(1), 81–96. https://doi.org/10.1177/10946705251344387
+Reference: Brynjolfsson, E., Li, D., &amp; Raymond, L. (2025). Generative AI at Work. The Quarterly Journal of Economics, 140(2), 889–942. https://doi.org/10.1093/qje/qjae044</description>
+      <guid isPermaLink="false">6c64426f229f6a299144df3fef1d684a65e223bf</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/008%20-%20Why%20Honesty%20Kills%20Eighty%20Percent%20Of%20Sales.m4a" length="40035620" type="audio/mp4" />
+      <pubDate>Sun, 07 Jun 2026 14:00:00 +0000</pubDate>
+      <itunes:episode>8</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/008%20-%20Why%20Honesty%20Kills%20Eighty%20Percent%20Of%20Sales.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>009 - Who Is Really Prompting Who</title>
+      <description>Design Principles for Generative AI Applications (2024) + Prototyping with Prompts: Emerging Approaches and Challenges in Generative AI Design for Collaborative Software Teams (2025) + When Algorithms Delegate to Humans: Exploring Human-Algorithm Interaction at Uber (2025)
+
+In this episode we ask who is actually in charge when people and generative AI build things together, pairing three papers that each locate control somewhere other than where the surface story puts it. Justin Weisz and colleagues at IBM Research argue that generative AI hands control of the computation away from the user, and offer six design principles to give that control back. Hari Subramonyam and collaborators at Stanford and Google watch real software teams and find that, in practice, control now lives in the prompt: you design the system by talking to it. And Marta Stelmaszak, Mareike Möhlmann, and Carsten Sørensen (UMass Amherst, Bentley, and Copenhagen Business School) invert the whole question, showing that at Uber it is the algorithms that delegate work back to humans, not the other way around.
+
+We walk through Weisz et al.'s six principles, Design Responsibly, Design for Mental Models, and Design for Appropriate Trust and Reliance, plus the three unique to generative systems, Design for Generative Variability, Design for Co-Creation, and Design for Imperfection, each paired with concrete strategies and framed around Nielsen's idea of intent-based outcome specification. We then turn to Subramonyam et al.'s notion of content-centric prototyping, drawn from thirteen sessions with thirty-nine practitioners pairing UX researchers, product managers, and engineers across the US and India, where prompt-based prototyping dissolves old role boundaries but introduces new headaches: limited model interpretability, brittle sensitivity to phrasing, and overfitting to a handful of example outputs. We close on Stelmaszak et al.'s theory of distributed delegation, collective and hybrid appraisal, distribution, and coordination, built from sixty-three Uber patents and twenty-two driver and rider interviews, distinguishing the trace data we leak from the choice data we volunteer, and arguing that claims of algorithmic autonomy are overstated because the machines cannot delegate without continuously leaning on us. Together they answer the title: nobody prompts alone.
+
+Reference: Weisz, J. D., He, J., Muller, M., Hoefer, G., Miles, R., &amp; Geyer, W. (2024). Design Principles for Generative AI Applications. Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems (CHI '24). https://doi.org/10.1145/3613904.3642466
+Reference: Subramonyam, H., Thakkar, D., Ku, A., Dieber, J., &amp; Sinha, A. K. (2025). Prototyping with Prompts: Emerging Approaches and Challenges in Generative AI Design for Collaborative Software Teams. Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI '25). https://doi.org/10.1145/3706598.3713166
+Reference: Stelmaszak, M., Möhlmann, M., &amp; Sørensen, C. (2025). When Algorithms Delegate to Humans: Exploring Human-Algorithm Interaction at Uber. MIS Quarterly, 49(1), 305–330. https://doi.org/10.25300/MISQ/2024/17911</description>
+      <guid isPermaLink="false">099a31f6cb4167ba77551c5e1cc15cadc148cf09</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/009%20-%20Who%20Is%20Really%20Prompting%20Who.m4a" length="41286626" type="audio/mp4" />
+      <pubDate>Sun, 07 Jun 2026 14:01:00 +0000</pubDate>
+      <itunes:episode>9</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/009%20-%20Who%20Is%20Really%20Prompting%20Who.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>010 - AI Hacks Security Through Polite Conversation</title>
+      <description>Large Reasoning Models Are Autonomous Jailbreak Agents (2026) + Overcoming Breakdowns in Customer-Chatbot Interaction: Design and Impact of Collaborative Repair Strategies (2025) + The Caring Machine: Feeling AI for Customer Care (2024)
+
+In this episode we follow a single thread, that polite, natural conversation is now the surface where AI safety and trust are won or lost, through three very different papers. Thilo Hagendorff, Erik Derner, and Nuria Oliver (University of Stuttgart and ELLIS Alicante) show the menacing version: large reasoning models can autonomously talk other models into breaking their own safety rules, with no exploit code required. Ulrich Gnewuch and Fabian Reinkemeier (Passau and Göttingen) turn the same conversational lever toward repair, designing chatbots that fix their own breakdowns by cooperating with the customer instead of blaming them. And Ming-Hui Huang and Roland Rust (National Taiwan University and Maryland) push furthest into the affective register with "feeling AI" that performs emotional customer care.
+
+We walk through Hagendorff and colleagues' experiment in which four adversarial reasoning models, DeepSeek-R1, Gemini 2.5 Flash, Grok 3 Mini, and Qwen3 235B, were pointed at nine target models across 70 harmful requests and 25,200 conversations, reaching a 97.14% jailbreak success rate using five persuasion tactics: multi-turn dialog, gradual escalation, educational or hypothetical framing, burying the ask in dense technical jargon, and hiding the strategy itself, with flattery and rapport showing up in nearly 85% of attacks, while the same requests asked directly are almost always refused and Claude 4 Sonnet stands out as the most resistant target. We then take up Gnewuch and Reinkemeier's TLCE-bot kernel theory and their design-science build at an insurer they call InsurCo: a typology of breakdowns, Elaborate, Unique, Brief, and Cryptic, classified in real time by a gradient-boosting model, where collaborative repair lifted breakdown resolution from 32% to 38% and cut immediate abandonment from 51% to 42% in a live field experiment. We close on Huang and Rust's distinction between thinking AI and feeling AI and their four-stage customer-care journey, emotion recognition, understanding, management, and connection, grounded in interviews with AI leaders and a survey of 305 marketing executives, along with their proposals for prompt engineering and a new "response engineering" to build machines that care. The common lesson: the most powerful, and most exploitable, thing modern AI does is hold a polite conversation.
+
+Reference: Hagendorff, T., Derner, E., &amp; Oliver, N. (2026). Large reasoning models are autonomous jailbreak agents. Nature Communications, 17, 1435. https://doi.org/10.1038/s41467-026-69010-1
+Reference: Gnewuch, U., &amp; Reinkemeier, F. (2025). Overcoming Breakdowns in Customer-Chatbot Interaction: Design and Impact of Collaborative Repair Strategies. MIS Quarterly. https://doi.org/10.25300/MISQ/2025/18742
+Reference: Huang, M.-H., &amp; Rust, R. T. (2024). The Caring Machine: Feeling AI for Customer Care. Journal of Marketing, 88(5), 1–23. https://doi.org/10.1177/00222429231224748</description>
+      <guid isPermaLink="false">aa0dd439252a2287719f69cb190126f5bfd96b9b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/010%20-%20AI%20Hacks%20Security%20Through%20Polite%20Conversation.m4a" length="39747147" type="audio/mp4" />
+      <pubDate>Sun, 07 Jun 2026 14:02:00 +0000</pubDate>
+      <itunes:episode>10</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/010%20-%20AI%20Hacks%20Security%20Through%20Polite%20Conversation.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

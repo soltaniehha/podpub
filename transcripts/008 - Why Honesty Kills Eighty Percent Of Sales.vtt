@@ -1,0 +1,677 @@
+WEBVTT
+
+1
+00:00:00.071 --> 00:00:07.815
+<v Maya>What if I told you that simply being honest with your customers could instantly destroy like 80 percent of your sales?</v>
+
+2
+00:00:08.155 --> 00:00:11.617
+<v Daniel>I mean, most business owners would call that a catastrophic failure of marketing, right?</v>
+
+3
+00:00:11.677 --> 00:00:23.484
+<v Maya>Right. But when you introduce artificial intelligence into the mix, that catastrophic failure actually becomes a very real, scientifically documented phenomenon. So welcome to today's deep dive.</v>
+
+4
+00:00:23.664 --> 00:00:25.665
+<v Daniel>Glad to be here for this one. It's a wild topic.</v>
+
+5
+00:00:25.950 --> 00:00:39.483
+<v Maya>It really is. Our mission today is to explore exactly how artificial intelligence is just fundamentally rewiring the service industry. And we're looking at this for you, the listener, because, well, it's completely changing the services you interact with every single day.</v>
+
+6
+00:00:39.683 --> 00:00:44.908
+<v Daniel>Yeah. And it's important to realize this isn't just that old story about robots replacing humans.</v>
+
+7
+00:00:45.048 --> 00:00:56.362
+<v Maya>Exactly. It's about... a highly complex new world of hybrid interactions where machines and humans are basically dancing around each other in ways nobody really predicted.</v>
+
+8
+00:00:56.542 --> 00:01:05.734
+<v Daniel>The whole dynamic is shifting from AI being this passive tool we use to AI being an active participant in the service itself. It just changes the entire equation.</v>
+
+9
+00:01:06.143 --> 00:01:18.153
+<v Maya>It does. And to make sense of this, we are looking at a really fantastic stack of sources today. We have a theoretical paper establishing a brand new framework for understanding these human interactions.</v>
+
+10
+00:01:18.193 --> 00:01:20.115
+<v Daniel>Which is super helpful for getting the big picture.</v>
+
+11
+00:01:20.415 --> 00:01:35.088
+<v Maya>Right. And then we have a massive field experiment looking at the shocking impact of disclosing AI chat bots in outbound sales. Plus, we're diving into this sprawling study on how generative AI impacts the productivity of</v>
+
+12
+00:01:35.288 --> 00:01:38.131
+<v Maya>thousands of human customer support agents.</v>
+
+13
+00:01:38.311 --> 00:01:50.283
+<v Daniel>It is such a fascinating cross-section of research. I mean, it takes us from the high-level theory of how we even design these systems right down into the trenches of what happens when human psychology collides with algorithmic efficiency.</v>
+
+14
+00:01:50.463 --> 00:02:02.947
+<v Maya>Yeah, we aren't just going to stare at the data. We're going to break down the basic concepts, the real world examples, and the surprising pros and cons. So by the end of this deep dive, you will understand why handing AI to a complete novice makes them perform like a seasoned veteran.</v>
+
+15
+00:02:03.047 --> 00:02:04.607
+<v Daniel>Which is huge for businesses.</v>
+
+16
+00:02:05.007 --> 00:02:17.488
+<v Maya>Definitely. But also why your top human performers might actually get worse when you give them AI help. And of course, the massive astonishing penalty businesses. simply for telling you that you're talking to a machine.</v>
+
+17
+00:02:17.748 --> 00:02:22.935
+<v Daniel>Yeah, that psychological pushback from consumers is a major recurring theme we really need to unpack today.</v>
+
+18
+00:02:23.156 --> 00:02:31.127
+<v Maya>So let's build the foundation first. For decades, service design was built on a pretty basic assumption, right? Humans providing a service to other humans.</v>
+
+19
+00:02:31.601 --> 00:02:43.368
+<v Daniel>Exactly. The theoretical framework we're looking at points out that traditionally, mapping out a customer journey basically just assumed that human-to-human interaction was the absolute core of the service.</v>
+
+20
+00:02:43.488 --> 00:02:50.652
+<v Maya>And AI was just a passive backstage tool, like, I don't know, a database pulling up a customer profile or a calculator crunching some numbers.</v>
+
+21
+00:02:50.812 --> 00:03:01.038
+<v Daniel>Right. But that passive era is just over. AI has evolved into what the researchers call a co-pilot. It now has its own agency and its own decision-making capabilities.</v>
+
+22
+00:03:01.138 --> 00:03:03.419
+<v Maya>Meaning it's not just waiting for instructions anymore.</v>
+
+23
+00:03:03.500 --> 00:03:10.683
+<v Daniel>Exactly. It interprets data, it learns, and it acts. And that completely shatters those old linear models of service design.</v>
+
+24
+00:03:10.884 --> 00:03:12.604
+<v Maya>So how do we even map that out now?</v>
+
+25
+00:03:12.845 --> 00:03:26.272
+<v Daniel>Well, to make sense of this new landscape, the researchers propose a two-by-two matrix for the hybrid service encounter. It basically categorizes every service interaction based on two simple questions. Who is the provider and who is the user?</v>
+
+26
+00:03:26.678 --> 00:03:38.007
+<v Maya>Unpacking this matrix really clarifies what we're dealing with here. So quadrant one is the classic setup, right? Human to human, but with AI operating in the backstage as that co-pilot.</v>
+
+27
+00:03:38.227 --> 00:03:43.892
+<v Daniel>Yeah. So imagine a telemedicine appointment. You are the human patient talking to a human doctor over a video call.</v>
+
+28
+00:03:44.032 --> 00:03:44.992
+<v Maya>Okay. Standard stuff.</v>
+
+29
+00:03:45.213 --> 00:03:54.480
+<v Daniel>Right. But in the background, an AI is transcribing the conversation in real time. It's analyzing your medical records and actively suggesting diagnoses to the doctor on their screen.</v>
+
+30
+00:03:54.684 --> 00:04:00.329
+<v Maya>Wow. Okay. So the primary interaction is still human to human, but the AI is actively co-delivering the service.</v>
+
+31
+00:04:00.429 --> 00:04:07.715
+<v Daniel>Exactly. Then we have quadrant two, which, I mean, it feels a little sci-fi, but it's already happening. Human to AI. This is where the AI is actually the customer.</v>
+
+32
+00:04:07.815 --> 00:04:10.057
+<v Maya>Wait, the AI is the customer? How does that work?</v>
+
+33
+00:04:10.482 --> 00:04:20.547
+<v Daniel>It happens when an A.I. acts on behalf of a human. So think of a virtual assistant like Google Duplex. You tell your phone, hey, book a hotel room for a specific weekend.</v>
+
+34
+00:04:20.647 --> 00:04:20.888
+<v Maya>Right.</v>
+
+35
+00:04:21.028 --> 00:04:32.374
+<v Daniel>The A.I. actually calls the hotel, talks to the human booking agent, negotiates the room availability and finalizes the payment to that hotel employee. The A.I. is the customer.</v>
+
+36
+00:04:32.534 --> 00:04:38.523
+<v Maya>That's why. OK, so quadrant three flips that around. AI to human. So the AI is the front stage provider.</v>
+
+37
+00:04:38.563 --> 00:04:46.389
+<v Daniel>Yep. Here, algorithms deliver the service directly to you without any human intermediary at all. A great example of this is an AI fitness app.</v>
+
+38
+00:04:46.689 --> 00:04:49.372
+<v Maya>Oh, right. Because there's no human personal trainer watching you.</v>
+
+39
+00:04:49.492 --> 00:05:00.421
+<v Daniel>Exactly. The algorithm analyzes your biometric data through your smartwatch in real time. It adapts your workout plan dynamically based on like your fatigue levels and delivers the customized service entirely on its own.</v>
+
+40
+00:05:00.685 --> 00:05:07.308
+<v Maya>Okay, makes sense. And finally, we hit quadrant four, AI to AI. Fully automated, machines just talking to machines.</v>
+
+41
+00:05:07.848 --> 00:05:12.610
+<v Daniel>This is completely devoid of interpersonal interaction. The smart city traffic system is a really good example of this one.</v>
+
+42
+00:05:12.750 --> 00:05:14.531
+<v Maya>Like the traffic lights managing themselves.</v>
+
+43
+00:05:14.971 --> 00:05:24.755
+<v Daniel>Yeah, exactly. Algorithms monitor traffic congestion, they predict where bottlenecks will happen, and then communicate directly with other algorithms controlling the traffic lights to adjust the typings autonomously.</v>
+
+44
+00:05:25.174 --> 00:05:33.449
+<v Maya>So humans are the ultimate beneficiaries sitting in their cars. But the service encounter itself is entirely machine to machine. You</v>
+
+45
+00:05:33.489 --> 00:05:33.749
+<v Daniel>got it.</v>
+
+46
+00:05:34.110 --> 00:05:49.033
+<v Maya>I got to say, I love how this framework organizes the chaos. To me, traditional service design is kind of like directing a stage play. You know, you have a script, you have human actors, and you tell everyone exactly where to stand and what to say.</v>
+
+47
+00:05:49.513 --> 00:05:51.534
+<v Maya>Every interaction is rigidly planned.</v>
+
+48
+00:05:51.614 --> 00:05:52.615
+<v Daniel>That's a great way to put it.</v>
+
+49
+00:05:52.635 --> 00:06:03.581
+<v Maya>But bringing AI into this framework, it's like dropping an improv actor onto the stage. They understand the general theme of the scene, sure, but they have their own agency. They change the lines on the fly based on the audience's reaction.</v>
+
+50
+00:06:03.741 --> 00:06:04.221
+<v Daniel>Exactly.</v>
+
+51
+00:06:04.241 --> 00:06:13.749
+<v Maya>But if AI has this... this algorithmic agency, how do designers even map out a service blueprint when the AI might just decide to go completely off script?</v>
+
+52
+00:06:13.949 --> 00:06:26.842
+<v Daniel>Well, that's the big shift. The researchers argue that service designers have to completely change their mindset. You know, you can no longer create these rigid, static blueprints. Instead, designers must become orchestrators.</v>
+
+53
+00:06:27.398 --> 00:06:30.319
+<v Maya>orchestrator so you aren't writing the strict dialogue anymore</v>
+
+54
+00:06:30.559 --> 00:06:43.765
+<v Daniel>no not at all you are designing the environment you're building machine readable interfaces setting up the data architecture and crucially you're establishing the ethical boundaries for what the ai is actually allowed to improvise</v>
+
+55
+00:06:44.005 --> 00:06:50.487
+<v Maya>oh i see you're building the sandbox setting the rules of the game and then letting the human and the ai play within those constraints</v>
+
+56
+00:06:50.567 --> 00:06:54.169
+<v Daniel>exactly you orchestrate the conditions rather than scripting the actions</v>
+
+57
+00:06:54.774 --> 00:07:03.562
+<v Maya>So that's the underlying theory. Let's look at what actually happens when we take that AI to human quadrant, you know, the front stage improv, and actually test it in the wild.</v>
+
+58
+00:07:03.902 --> 00:07:05.523
+<v Daniel>This is where things get really interesting.</v>
+
+59
+00:07:05.764 --> 00:07:18.615
+<v Maya>Yeah. What happens when an AI provides a service directly to a customer? This brings us to a massive randomized field experiment involving over 6,200 customers of an internet-based financial service company in Asia.</v>
+
+60
+00:07:18.939 --> 00:07:28.862
+<v Daniel>Right. And these were customers who had good credit and were near the end of a loan term. So the company was making outbound sales calls to offer them a promotional deal to renew their loan.</v>
+
+61
+00:07:29.042 --> 00:07:31.182
+<v Maya>And they randomly assigned who made the call, right?</v>
+
+62
+00:07:31.242 --> 00:07:39.965
+<v Daniel>Exactly. It was either an inexperienced human worker, an underdog, basically a highly proficient, top-performing human worker, or an AI voice chatbot.</v>
+
+63
+00:07:40.275 --> 00:07:46.737
+<v Maya>Now, it's really important to note for you listening, this wasn't some clinky robotic voice from the 90s. The AI was highly optimized.</v>
+
+64
+00:07:46.837 --> 00:08:01.540
+<v Daniel>Oh, absolutely. It used a female voice, carefully tuned for pitch, speed, and intonation to perfectly emulate the company's absolute best human workers. It could handle dynamic, natural conversations about complex loan terms.</v>
+
+65
+00:08:01.788 --> 00:08:05.332
+<v Maya>So how did it do? Because the initial data was incredibly promising, wasn't it?</v>
+
+66
+00:08:05.592 --> 00:08:13.281
+<v Daniel>It was. When the chatbot was undisclosed, meaning the customer had absolutely no idea they were talking to an AI, it was exceptionally competent.</v>
+
+67
+00:08:13.321 --> 00:08:14.603
+<v Maya>Like, how competent are we talking?</v>
+
+68
+00:08:14.970 --> 00:08:27.359
+<v Daniel>It performed just as well as the most proficient, experienced human workers. And even more impressive, it was four times more effective at securing a loan renewal than the inexperienced human underdogs. Four times.</v>
+
+69
+00:08:27.679 --> 00:08:37.626
+<v Maya>Wow. Okay, so from a purely objective standpoint, the technology worked perfectly. It mastered the sales script, it understood the adaptive selling strategies, and it closed the deals.</v>
+
+70
+00:08:37.926 --> 00:08:39.247
+<v Daniel>It did its job flawlessly.</v>
+
+71
+00:08:39.467 --> 00:08:50.912
+<v Maya>But then comes the massive penalty we teased at the beginning of the show. In one of the experiment groups, the chatbot introduced itself right at the start of the call by saying, I am the AI voice chatbot of the company.</v>
+
+72
+00:08:51.033 --> 00:08:56.415
+<v Daniel>And that's when purchase rates absolutely plummeted by an astonishing 79.7%.</v>
+
+73
+00:08:57.155 --> 00:08:58.896
+<v Maya>Almost an 80% drop in sales.</v>
+
+74
+00:08:58.916 --> 00:09:01.397
+<v Daniel>Truly as a consequence of being honest about its identity.</v>
+
+75
+00:09:01.718 --> 00:09:06.620
+<v Maya>Why the violent rejection, though? I mean, it makes no logical sense if the bot is objectively that competent.</v>
+
+76
+00:09:06.922 --> 00:09:21.362
+<v Daniel>Well, we have to look at the psychological mechanism at play here. It's a phenomenon known as algorithm aversion. The researchers dug into the analytics and found that when the identity was disclosed upfront, the actual structure of the conversation broke down.</v>
+
+77
+00:09:21.743 --> 00:09:23.786
+<v Maya>What do you mean? Like, did people just hang up?</v>
+
+78
+00:09:24.152 --> 00:09:32.857
+<v Daniel>Pretty much. Call lengths dropped significantly. Customers became curt, they gave shorter, way less informative answers, and yet they hung up much faster.</v>
+
+79
+00:09:33.037 --> 00:09:38.440
+<v Maya>Wow. And the researchers also surveyed the customers afterward to see how they felt about the interaction, right?</v>
+
+80
+00:09:38.721 --> 00:09:51.048
+<v Daniel>They did, and the results were super revealing. Customers who were subjected to that upfront disclosure rated the bot as significantly less knowledgeable and less empathetic compared to the groups that didn't know it was a bot.</v>
+
+81
+00:09:51.196 --> 00:09:57.280
+<v Maya>But it was the exact same Bach, the exact same voice, the exact same script, the exact same logic tree.</v>
+
+82
+00:09:57.320 --> 00:10:08.242
+<v Daniel>It was. The researchers even ran voice mining analytics on the audio recordings, just to be absolutely sure. Objectively, the bot's tone and empathetic responses didn't change a single decibel.</v>
+
+83
+00:10:08.423 --> 00:10:09.043
+<v Maya>That's crazy.</v>
+
+84
+00:10:09.243 --> 00:10:23.634
+<v Daniel>Right. The drop in perceived empathy and knowledge was a purely subjective human bias against machines. When humans know they are talking to an algorithm, especially in a high-stakes scenario like personal finance, they prejudice the interaction.</v>
+
+85
+00:10:23.818 --> 00:10:27.781
+<v Maya>They assume a machine cannot possibly understand their unique financial struggles.</v>
+
+86
+00:10:28.002 --> 00:10:35.508
+<v Daniel>Exactly. Or feel genuine empathy for their situation. They basically decide the bot is useless before it even gets a chance to help them.</v>
+
+87
+00:10:35.708 --> 00:10:48.159
+<v Maya>Wait, hold on. If telling the truth tanks sales by 80%, businesses are essentially being bribed to lie to us. They are financially rewarded for tricking you into thinking you are talking to a human.</v>
+
+88
+00:10:48.299 --> 00:10:49.460
+<v Daniel>It's a very real problem.</v>
+
+89
+00:10:49.708 --> 00:10:55.891
+<v Maya>So how do we balance business efficiency with the basic ethical right of the consumer to know they aren't talking to a real person?</v>
+
+90
+00:10:56.031 --> 00:11:08.457
+<v Daniel>It is the ultimate front stage dilemma. And the researchers actually acknowledge this ethical tension in the paper. They tested a few mitigation strategies to see if we can have honesty without, you know, total financial ruin.</v>
+
+91
+00:11:08.577 --> 00:11:09.217
+<v Maya>What did they find?</v>
+
+92
+00:11:09.538 --> 00:11:14.340
+<v Daniel>Well, they found that the negative impact of disclosure can be heavily mitigated by something called late disclosure.</v>
+
+93
+00:11:14.861 --> 00:11:20.231
+<v Maya>late disclosure, so revealing the identity later in the call once the customer is already engaged.</v>
+
+94
+00:11:20.848 --> 00:11:34.976
+<v Daniel>Exactly. If the bot reveals it is an AI after the initial conversation has taken place, after it has built a rapport, answered some preliminary questions, and actually demonstrated its competence, the purchase rates do not drop nearly as much.</v>
+
+95
+00:11:35.056 --> 00:11:38.558
+<v Maya>Oh, that makes sense. Because the customer has already experienced the value.</v>
+
+96
+00:11:38.838 --> 00:11:47.703
+<v Daniel>Right. The psychological mechanism here is that they have formed a positive impression and that empirical proof overrides their initial anti-machine bias.</v>
+
+97
+00:11:48.140 --> 00:11:54.742
+<v Maya>It's like a customer thinking, wow, you were really helpful with my interest rate question. Wait, you're a robot. Well, OK, I guess you're a helpful robot.</v>
+
+98
+00:11:54.882 --> 00:12:09.806
+<v Daniel>That's exactly it. And another really effective strategy is targeted rollout. The study found that customers who already had experience using AI apps on their smartphones, like digital assistants or smart home devices, they didn't penalize the disclosed chatbot</v>
+
+99
+00:12:09.946 --> 00:12:10.627
+<v Daniel>nearly as much.</v>
+
+100
+00:12:10.867 --> 00:12:11.787
+<v Maya>Because they're already used to it.</v>
+
+101
+00:12:12.092 --> 00:12:22.881
+<v Daniel>Yeah, they were already acclimatized to the idea of conversational AI. So businesses can mitigate the damage by targeting these tech-savvy segments first, basically building normalization over time.</v>
+
+102
+00:12:23.061 --> 00:12:36.532
+<v Maya>Okay, so if the front stage is that fraught with psychological landmines, let's look at the backstage. What if we completely avoid the disclosure problem by putting a human back on the microphone, but we use the AI to secretly feed them the answers?</v>
+
+103
+00:12:36.812 --> 00:12:39.594
+<v Daniel>Now we're moving back to the human-to-human quadrant of our framework.</v>
+
+104
+00:12:39.694 --> 00:12:45.545
+<v Maya>Right, but with heavy AI support. Let's explore generative AI as the ultimate co-pilot.</v>
+
+105
+00:12:45.977 --> 00:12:56.682
+<v Daniel>This brings us to another massive study. This one looked at a Fortune 500 software company that deployed a generative AI assistant to over 5,000 of its customer support agents.</v>
+
+106
+00:12:57.003 --> 00:12:58.663
+<v Maya>5,000? That's a huge sample size.</v>
+
+107
+00:12:58.763 --> 00:13:13.451
+<v Daniel>Massive. And this AI was built on a GPT-3 model. What it does is it monitors the live text chats between the human agent and the customer. As the customer is typing out their software problem, the AI is generating real-time suggestions on the agent's screen for how to respond.</v>
+
+108
+00:13:13.711 --> 00:13:15.612
+<v Maya>So it's feeding them the technical fixes?</v>
+
+109
+00:13:16.020 --> 00:13:25.768
+<v Daniel>It suggests technically accurate troubleshooting steps. Yeah. But it also suggests empathetic phrasing to calm frustrated users.</v>
+
+110
+00:13:26.028 --> 00:13:35.416
+<v Maya>The pros here are just staggering. Overall productivity, which they measured by the number of customer issues resolved per hour, increased by 15% across the board.</v>
+
+111
+00:13:35.616 --> 00:13:38.739
+<v Daniel>15% is a huge jump for a company that size.</v>
+
+112
+00:13:38.859 --> 00:13:46.140
+<v Maya>But the really crazy part is who actually got that boost? The gains were completely lopsided, right? They disproportionately favored the underdogs.</v>
+
+113
+00:13:46.160 --> 00:14:00.812
+<v Daniel>They really did. Low-skill and novice workers saw a 30% productivity boost. The study actually found that workers with just two months of experience using the AI were suddenly performing like veteran workers who had been on the job for over six months.</v>
+
+114
+00:14:01.012 --> 00:14:06.720
+<v Maya>Two months to match six months of experience. That is wild. We need to look at how that actually works under the hood.</v>
+
+115
+00:14:06.820 --> 00:14:14.830
+<v Daniel>Well, the generative AI is essentially acting as a real time mechanism for capturing and disseminating the tacit knowledge of the company's absolute best workers.</v>
+
+116
+00:14:14.930 --> 00:14:18.435
+<v Maya>Right. Because the AI model was trained on millions of past conversations.</v>
+
+117
+00:14:18.835 --> 00:14:33.383
+<v Daniel>Exactly. Heavily weighting the successful chats of top performers. So when a novice agent gets a complex, angry customer, they might normally panic. But the AI instantly hands them the exact phrasing and the exact</v>
+
+118
+00:14:33.443 --> 00:14:37.545
+<v Daniel>technical solution that a top performer would use in that specific scenario.</v>
+
+119
+00:14:37.665 --> 00:14:39.586
+<v Maya>It bridges the skill gap instantly.</v>
+
+120
+00:14:39.946 --> 00:14:49.650
+<v Daniel>It does. And it wasn't just speed that improved either. The actual experience of doing the work got better. The AI helped the agents use more reassuring professional language.</v>
+
+121
+00:14:49.730 --> 00:14:52.251
+<v Maya>Which probably calmed the customers down a lot faster.</v>
+
+122
+00:14:52.531 --> 00:15:04.638
+<v Daniel>Exactly. The study showed that customers interacting with AI-assisted agents were significantly less likely to use hostile language. So less swearing, less typing in all caps. and they were less likely to demand to speak to a manager.</v>
+
+123
+00:15:04.758 --> 00:15:11.384
+<v Maya>And because the work got less stressful and the novices felt supported, the quit rate, the agent attrition, actually dropped.</v>
+
+124
+00:15:11.504 --> 00:15:15.208
+<v Daniel>Which is a tremendous win for onboarding and just leveling the playing field in general.</v>
+
+125
+00:15:15.328 --> 00:15:21.074
+<v Maya>But as with all things complex, there is a fascinating nuance here. The catch. Let's talk about the top performers.</v>
+
+126
+00:15:21.500 --> 00:15:36.230
+<v Daniel>Yeah, this is where it gets complicated. The highest skilled, most experienced veteran workers saw almost zero gains in speed. Wait, zero? Almost zero. In fact, the data showed they actually experienced a slight decline in conversation quality. Their</v>
+
+127
+00:15:36.290 --> 00:15:42.454
+<v Daniel>resolution rates and their customer satisfaction scores dropped slightly when they were forced to use the AI assistant.</v>
+
+128
+00:15:42.574 --> 00:15:45.796
+<v Maya>Why would the AI actually hurt the experts? That feels backward.</v>
+
+129
+00:15:46.357 --> 00:16:01.243
+<v Daniel>To understand why this happens, you have to think about cognitive load and the concept of a flow state. A top performing support agent has a natural rhythm. They've completely internalized the solutions to hundreds of problems over the years.</v>
+
+130
+00:16:01.343 --> 00:16:13.528
+<v Daniel>So when a customer asks a question, the expert's gut instinct instantly provides the answer. But when you introduce an AI constantly popping up on their screen with good enough suggestions, it actually interrupts that flow state.</v>
+
+131
+00:16:13.950 --> 00:16:16.752
+<v Maya>It sounds like the AI acts as training wheels on a bicycle.</v>
+
+132
+00:16:16.772 --> 00:16:17.192
+<v Daniel>Yeah.</v>
+
+133
+00:16:17.292 --> 00:16:25.957
+<v Maya>If you have a novice who is just learning to ride, bolting on those training wheels is a miracle. It keeps them upright, it builds their confidence, and they move way faster than they would on their own.</v>
+
+134
+00:16:26.337 --> 00:16:27.318
+<v Daniel>That's a great analogy.</v>
+
+135
+00:16:27.718 --> 00:16:39.865
+<v Maya>But if you take those same heavy training wheels and bolt them onto the bike of a Tour de France cyclist, it just slows them down. It messes with their balance. It forces them to fight the training wheels instead of just trusting their own momentum.</v>
+
+136
+00:16:40.340 --> 00:16:55.187
+<v Daniel>That analogy captures the mechanics perfectly. The expert is forced to pause, evaluate the AI's generic suggestion, compare it to their own nuanced intuition, and then make a decision. That cognitive friction degrades their</v>
+
+137
+00:16:55.227 --> 00:16:55.687
+<v Daniel>performance.</v>
+
+138
+00:16:56.187 --> 00:17:05.271
+<v Maya>That makes total sense. And the data also shows another critical limitation of the AI here, right? It wasn't actually best at solving the most common problems.</v>
+
+139
+00:17:05.658 --> 00:17:12.743
+<v Daniel>Right, because human agents already knew how to handle basic password reset super efficiently. The AI didn't add any value there.</v>
+
+140
+00:17:12.983 --> 00:17:15.805
+<v Maya>Nor was it best at the rarest, most complex problem.</v>
+
+141
+00:17:15.965 --> 00:17:23.270
+<v Daniel>Exactly, because the AI didn't have enough historical training data to generate a good answer for a one in a million software bug.</v>
+
+142
+00:17:23.550 --> 00:17:34.938
+<v Maya>So it was best at the moderately rare issues, problems that an individual human agent might not see often enough to memorize the solution, but that occur often enough across the whole company for the AI to have learned the pattern.</v>
+
+143
+00:17:35.426 --> 00:17:40.009
+<v Daniel>Exactly. But this dynamic brings up a really profound forward-looking concern.</v>
+
+144
+00:17:40.109 --> 00:17:40.469
+<v Maya>Which is?</v>
+
+145
+00:17:40.629 --> 00:17:55.558
+<v Daniel>Well, the AI model is powerful specifically because it learned its best responses from the historical data of the top human performers. It essentially mined human genius. But now those top performers are using the AI and we see their</v>
+
+146
+00:17:55.638 --> 00:17:56.519
+<v Daniel>quality dropping.</v>
+
+147
+00:17:56.883 --> 00:18:10.286
+<v Maya>Oh, wow. So if those top veterans start getting lazy or fatigued and they just start clicking the AI's good enough suggestions instead of coming up with their own brilliant nuanced responses, don't we eventually run out of fresh human genius?</v>
+
+148
+00:18:10.507 --> 00:18:11.887
+<v Daniel>That is the exact problem.</v>
+
+149
+00:18:11.947 --> 00:18:16.108
+<v Maya>How do you train the next generation of AI models if the humans stop innovating?</v>
+
+150
+00:18:16.328 --> 00:18:18.529
+<v Daniel>The paper explicitly flags this risk.</v>
+
+151
+00:18:18.749 --> 00:18:18.909
+<v Maya>Yeah.</v>
+
+152
+00:18:19.089 --> 00:18:25.431
+<v Daniel>If human AI collaboration reduces original contributions from top workers, future AI models will absolutely stagnate.</v>
+
+153
+00:18:25.451 --> 00:18:27.512
+<v Maya>They'll just be training on their own recycled outputs.</v>
+
+154
+00:18:28.112 --> 00:18:43.016
+<v Daniel>Exactly. An echo chamber of average performance. It highlights a massive design challenge for the future. We have to figure out how to incentivize our human experts to keep innovating, to keep pushing the boundaries of service, even when they have a machine sitting right there</v>
+
+155
+00:18:43.116 --> 00:18:44.897
+<v Daniel>offering to do the heavy lifting for them.</v>
+
+156
+00:18:45.242 --> 00:18:51.263
+<v Maya>We have to design systems that reward original human thought. Otherwise, the AI's knowledge base just freezes in time.</v>
+
+157
+00:18:51.524 --> 00:18:51.946
+<v Daniel>Exactly.</v>
+
+158
+00:18:52.363 --> 00:19:06.588
+<v Maya>Let's bring this all together. We started with the idea that AI in the service industry fundamentally breaks the old linear equations of business efficiency. And we've seen exactly why today. AI is no longer a backstage calculator. It is an active</v>
+
+159
+00:19:06.728 --> 00:19:15.731
+<v Maya>co-pilot. It holds this incredible promise for boosting efficiency, leveling the playing field for novices, and capturing the tacit knowledge of an entire workforce.</v>
+
+160
+00:19:15.851 --> 00:19:30.707
+<v Daniel>Yet the human element still introduces chaos into the system. Our deep-seated psychological bias against talking to machines, that algorithm aversion we talked about, means that front-stage AI faces massive consumer rejection if we don't orchestrate the</v>
+
+161
+00:19:30.747 --> 00:19:31.748
+<v Daniel>disclosure properly.</v>
+
+162
+00:19:32.068 --> 00:19:42.014
+<v Maya>Right. And backstage AI, while it's a total miracle for novices, risks distracting our experts and potentially stagnating the very source of the AI's intelligence.</v>
+
+163
+00:19:42.235 --> 00:19:44.937
+<v Daniel>it really requires a completely new kind of service blueprint.</v>
+
+164
+00:19:45.077 --> 00:19:45.978
+<v Maya>It absolutely does.</v>
+
+165
+00:19:46.038 --> 00:20:00.909
+<v Daniel>And looking forward, it leaves us with a pretty provocative thought to mull over. We've seen that generative AI allows someone on their very first day of work to perfectly mimic the empathy, the tone, and the technical knowledge of a 10-year veteran. Yeah. So if that</v>
+
+166
+00:20:00.949 --> 00:20:15.864
+<v Daniel>becomes the norm, what happens to the inherent value of human expertise? If every single service interaction you have, whether it's negotiating a loan or getting complex technical support, is perfectly optimized and smoothed out by an algorithm, does perfect just become the new</v>
+
+167
+00:20:16.205 --> 00:20:22.232
+<v Daniel>invisible baseline? Wow. And if perfection is the baseline, how will we as humans ever stand out again?</v>
+
+168
+00:20:22.642 --> 00:20:37.365
+<v Maya>If everyone has an expert co-pilot, nobody is an expert. Thank you so much for joining us on this deep dive. Next time you call customer service, use a fitness app, or book a hotel, look a little closer at the interaction. Because as we've learned today, there is a</v>
+
+169
+00:20:37.405 --> 00:20:43.735
+<v Maya>very good chance an algorithm is already acting as the co-pilot, quietly changing the script on the fly. We'll catch you on the next one.</v>
