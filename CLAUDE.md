@@ -10,6 +10,7 @@ When the user asks to publish, inspect `inbox/` and follow this procedure:
    - `.md` sidecar present → use it as-is. Skip to step 3.
    - `.pdf` present but no `.md` → generate the `.md` from the PDF (step 2).
    - Neither → the script will auto-generate a generic `"Episode N of …"` description. Ask the user if that's acceptable before running, or if they want to provide a description.
+   - **PDFs in a subfolder** named after the audio basename (`inbox/<basename>/*.pdf`) → a multi-paper episode; read them from there and write one `.md` next to the audio.
 
 2. **Generate `.md` from PDF.** Read the PDF with the `Read` tool, then write a file at `inbox/<same basename as audio>.md` following the format in the next section. Do not proceed to publish until the `.md` exists.
 
@@ -18,7 +19,9 @@ When the user asks to publish, inspect `inbox/` and follow this procedure:
    - If everything looks right, run: `.venv/bin/python podpub.py` — this transcribes each new episode (takes 1–2 min per episode), moves files into `audio/` and `transcripts/`, rebuilds `feed.xml`, commits, and pushes to `origin/main`. GitHub Pages auto-deploys within ~30 seconds.
    - To publish without transcribing (e.g., transcription tooling is broken): add `--skip-transcripts`.
 
-4. **Delete the PDF(s) after publish.** Once `podpub.py` succeeds, `rm` the source PDF from `inbox/`. The user's standing preference is a clean inbox — do this without asking. If you're not sure publishing succeeded, leave the PDF and flag it.
+4. **Delete the PDF(s) after publish.** Once `podpub.py` succeeds, `rm` the source PDF(s) — and any per-episode subfolder — from `inbox/`. The user's standing preference is a clean inbox — do this without asking. If you're not sure publishing succeeded, leave the PDF and flag it.
+
+> **Episode order.** Numbers are assigned by audio-file **mtime** (oldest → lowest `NNN`), continuing from the feed's current max. To control the order of a multi-file batch, `touch -t` the audio files in the desired sequence before running. Run only one `podpub.py` at a time — it mutates `feed.xml` and git.
 
 ## Standardized episode description format
 
@@ -119,6 +122,15 @@ To enable transcription on a fresh machine:
 
 If the token is missing or the licenses are not accepted, `transcribe.py`
 fails fast with a pointer to the URLs above.
+
+**Transcripts in Apple Podcasts:** the feed's `<podcast:transcript>` VTTs (with `<v Daniel>` / `<v Maya>` speaker labels) render automatically in Podcasting 2.0 apps (Overcast, Pocket Casts, Podverse, etc.). **Apple Podcasts only shows transcripts for shows processed via Apple Podcasts Connect** — this private, `itunes:block=yes`, URL-added feed will not display them in Apple's own app (neither auto-generated nor provided).
+
+## Fresh-machine gotchas (learned)
+
+- **Broken venv after Drive sync.** `.venv` lives in a Google Drive–synced folder; on a new machine Drive turns `.venv/bin/python` symlinks into plain-text files and drops the exec bit (`permission denied` running `.venv/bin/python`). Rebuild: `rm -rf .venv && python3 -m venv .venv && .venv/bin/python -m pip install -r setup/requirements.txt`. Match whatever `python3` is — the pinned wheels work on 3.13.
+- **SSL `CERTIFICATE_VERIFY_FAILED` on first transcription.** The alignment-model download goes through `torch.hub` → stdlib `urllib`, which has no CA bundle on a fresh python.org install (HuggingFace downloads still work via `certifi`). Fix once: run `/Applications/Python <ver>/Install Certificates.command`.
+- **ffmpeg required** for `.m4a` decode: `brew install ffmpeg`. The `libtorchcodec_core*.dylib … no LC_RPATH` warnings are harmless (whisperx decodes via the ffmpeg subprocess).
+- `large-v3` is already the best Whisper model (config default); weights cache under `~/.cache/huggingface/` on first run (~3 GB).
 
 ## One-time setup (only needed on a fresh clone or new machine)
 
