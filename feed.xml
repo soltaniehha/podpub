@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 18:53:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 19:12:45 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -169,5 +169,21 @@ Reference: Huang, M.-H., &amp; Rust, R. T. (2024). The Caring Machine: Feeling A
       <pubDate>Sun, 07 Jun 2026 14:02:00 +0000</pubDate>
       <itunes:episode>10</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/010%20-%20AI%20Hacks%20Security%20Through%20Polite%20Conversation.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>011 - Service Blueprinting From Houseboats To AI</title>
+      <description>How to Design a Service (1982) + Service Blueprinting: A Practical Technique for Service Innovation (2008) + Service Blueprinting for Better Collaboration in Human-Centric AI: The Design of a Digital Scribe for Orthopedic Consultations (2023)
+
+In this episode we trace forty years of a single idea, the service blueprint, from its invention to its newest home inside artificial intelligence. We start with G. Lynn Shostack, the banking executive who in 1982 argued in the European Journal of Marketing that services are processes that exist only in time, and who gave marketers their first engineering-grade way to draw one. We move to Mary Jo Bitner, Amy Ostrom, and Felicia Morgan of Arizona State's Center for Services Leadership, who in 2008 turned Shostack's invention into a mature, customer-centered innovation technique. And we end with Reka Magyari and Fernando Secomandi of TU Delft, who in 2023 carry the same blueprint logic into human-centric AI, using it to get UX designers and machine-learning engineers speaking the same language.
+
+We walk through Shostack's founding vocabulary, the blueprint itself, the molecular model, the line of visibility, fail points, and deviation tolerance, all worked out on the humble corner shoeshine. We then take up Bitner and colleagues' modern five-component blueprint, customer actions, onstage and backstage employee actions, support processes, and physical evidence, and its three dividing lines of interaction, visibility, and internal interaction, illustrated by case studies from Yellow Transportation to the San Francisco Giants, including the houseboats of the title: an ARAMARK vacation rental at Arizona's Lake Powell where blueprinting exposed just how hard customers had to work for their own holiday. We close on Magyari and Secomandi's digital scribe, an AI documentation tool built from automated speech recognition and natural language processing for orthopedic consultations, where blueprinting does something new: it creates a shared foundation across UX and ML, enriches the map with user insight, and reframes AI capability as one organizational resource among many rather than a black box. From a shoeshine to a houseboat to a clinical AI, the same line of visibility holds.
+
+Reference: Shostack, G. L. (1982). How to Design a Service. European Journal of Marketing, 16(1), 49–63. https://doi.org/10.1108/EUM0000000004799
+Reference: Bitner, M. J., Ostrom, A. L., &amp; Morgan, F. N. (2008). Service Blueprinting: A Practical Technique for Service Innovation. California Management Review, 50(3), 66–94. https://doi.org/10.2307/41166446
+Reference: Magyari, R., &amp; Secomandi, F. (2023). Service Blueprinting for Better Collaboration in Human-Centric AI: The Design of a Digital Scribe for Orthopedic Consultations. International Journal of Design, 17(3), 63–77. https://doi.org/10.57698/v17i3.04</description>
+      <guid isPermaLink="false">e1cac8e96bc67fc99c8d1238efe059eff21efd16</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/011%20-%20Service%20Blueprinting%20From%20Houseboats%20To%20AI.m4a" length="41350871" type="audio/mp4" />
+      <pubDate>Sun, 07 Jun 2026 18:20:11 +0000</pubDate>
+      <itunes:episode>11</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/011%20-%20Service%20Blueprinting%20From%20Houseboats%20To%20AI.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
