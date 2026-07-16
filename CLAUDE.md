@@ -19,7 +19,7 @@ When the user asks to publish, inspect `inbox/` and follow this procedure:
    - If everything looks right, run: `.venv/bin/python podpub.py` — this transcribes each new episode (takes 1–2 min per episode), moves files into `audio/` and `transcripts/`, rebuilds `feed.xml`, commits, and pushes to `origin/main`. GitHub Pages auto-deploys within ~30 seconds.
    - To publish without transcribing (e.g., transcription tooling is broken): add `--skip-transcripts`.
 
-4. **Delete the PDF(s) after publish.** Once `podpub.py` succeeds, `rm` the source PDF(s) — and any per-episode subfolder — from `inbox/`. The user's standing preference is a clean inbox — do this without asking. If you're not sure publishing succeeded, leave the PDF and flag it.
+4. **Archive the PDF(s) after publish.** Once `podpub.py` succeeds, rename each source PDF to `NNN-YYYY-LastName-Short-Title.pdf` (NNN = the new episode number, 4–6 title words, e.g. `012-2023-Kortemeyer-Could-AI-Pass-Introductory-Physics.pdf`) and move it from `inbox/` into `PDFs/` at the repo root, removing any per-episode subfolder. `PDFs/` is tracked in git — commit the new PDFs (`Add episode NNN source papers`) and push. The user's standing preference is a clean inbox — do this without asking. If you're not sure publishing succeeded, leave the PDFs in `inbox/` and flag it. **Never delete the source PDFs** — an earlier delete-after-publish workflow lost the episode 008–011 papers and they had to be recovered from another project.
 
 > **Episode order.** Numbers are assigned by audio-file **mtime** (oldest → lowest `NNN`), continuing from the feed's current max. To control the order of a multi-file batch, `touch -t` the audio files in the desired sequence before running. Run only one `podpub.py` at a time — it mutates `feed.xml` and git.
 
@@ -94,6 +94,7 @@ Google Scholar citations: 66
 ## Layout notes
 
 - **Root (served by GitHub Pages)**: `feed.xml`, `audio/`, `NotebookLM-PodPub-Cover.png`. Don't move these — their URLs are baked into `feed.xml`.
+- **`PDFs/`**: tracked archive of every episode's source papers, named `NNN-YYYY-LastName-Short-Title.pdf`. Populated as part of each publish (workflow step 4).
 - **`setup/`**: `requirements.txt`, `config.yaml.example`. Setup-only, not touched day-to-day.
 - **`inbox/`**: user's drop zone. Contents gitignored (including PDFs).
 - **`config.yaml`** (gitignored, at root): paths + podcast metadata. Read by `podpub.py` on every run.
@@ -131,6 +132,7 @@ fails fast with a pointer to the URLs above.
 - **SSL `CERTIFICATE_VERIFY_FAILED` on first transcription.** The alignment-model download goes through `torch.hub` → stdlib `urllib`, which has no CA bundle on a fresh python.org install (HuggingFace downloads still work via `certifi`). Fix once: run `/Applications/Python <ver>/Install Certificates.command`.
 - **ffmpeg required** for `.m4a` decode: `brew install ffmpeg`. The `libtorchcodec_core*.dylib … no LC_RPATH` warnings are harmless (whisperx decodes via the ffmpeg subprocess).
 - `large-v3` is already the best Whisper model (config default); weights cache under `~/.cache/huggingface/` on first run (~3 GB).
+- **CPU thread scaling (benchmarked Jul 2026, 18-core Mac: 6P+12E).** `transcribe.py` doesn't pass `threads=` to `whisperx.load_model()`, so the whisper stage runs on CTranslate2's default of 4 CPU threads (~400% CPU, most of the machine idle). On a 2-min clip of large-v3/int8: 4 threads → 87 s, 6 → 54 s, 8 → 51–62 s, 10 → 48 s, 14 → 72 s, 18 → 88 s. Sweet spot is **8–10 threads (~1.6–1.8× faster)**; beyond ~10, work spills onto efficiency cores and it gets *slower* — 18 threads is as slow as 4. To apply: pass `threads=8` (up to 10) in the `whisperx.load_model()` call in `transcribe.py`.
 
 ## One-time setup (only needed on a fresh clone or new machine)
 
