@@ -69,7 +69,8 @@ def _transcribe_and_align(audio_path: Path, cfg: dict) -> tuple[dict, np.ndarray
 
     log.info("loading whisper model: %s", t["model"])
     model = whisperx.load_model(
-        t["model"], device, compute_type=compute_type, language=t["language"]
+        t["model"], device, compute_type=compute_type, language=t["language"],
+        threads=12,  # >10 spills onto E-cores; 4 (CTranslate2 default) leaves the machine idle — see CLAUDE.md benchmark
     )
 
     log.info("transcribing (%.1fs of audio)", len(audio) / 16000)
