@@ -1,0 +1,701 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:15.015
+<v Maya>Imagine handing the notoriously brutal German physics Olympiad to a student, right? Okay. And they just hand it back to you flawlessly completed in a matter of seconds. Oh, wow. Like every complex multi-step derivation is</v>
+
+2
+00:00:15.075 --> 00:00:21.736
+<v Maya>perfectly executed. Now imagine that the student sitting across from you isn't a human prodigy at all, but, you know, a string of code.</v>
+
+3
+00:00:21.836 --> 00:00:32.249
+<v Daniel>And that is exactly the reality we're sitting in right now. So welcome to this deep dive, specifically tailored for all of you, the university physics faculty attending today's APT workshop.</v>
+
+4
+00:00:32.369 --> 00:00:32.890
+<v Maya>Exactly.</v>
+
+5
+00:00:33.170 --> 00:00:39.560
+<v Daniel>We know the pedagogical landscape you are navigating has been completely upended in, frankly, a remarkably short amount of time.</v>
+
+6
+00:00:39.720 --> 00:00:53.243
+<v Maya>Yeah, we are looking at a stack of incredibly recent research today. We've got studies from 2023 all the way up to brand new 2025 papers, a massive nature review and community roadmaps for curriculum changes.</v>
+
+7
+00:00:53.323 --> 00:00:55.764
+<v Daniel>Right. But we aren't just going to sit here and list off statistics.</v>
+
+8
+00:00:56.064 --> 00:01:10.957
+<v Maya>No, no. Our goal today is to trace the actual arc of artificial intelligence in physics. from a flawed algorithm that couldn't handle simple algebra to a system that is actively reshaping how scientific discovery itself</v>
+
+9
+00:01:11.017 --> 00:01:11.417
+<v Maya>happens.</v>
+
+10
+00:01:11.497 --> 00:01:19.567
+<v Daniel>And the most crucial part is where we land. Because understanding this explosive evolution points directly to how you can practically adapt your undergraduate curriculum.</v>
+
+11
+00:01:19.787 --> 00:01:27.195
+<v Maya>Right, so you can actually thrive in this new era rather than just playing a, well, a losing game of defense against a cheating machine.</v>
+
+12
+00:01:27.316 --> 00:01:27.836
+<v Daniel>Exactly.</v>
+
+13
+00:01:28.317 --> 00:01:38.647
+<v Maya>Okay, let's unpack this. To really understand the velocity of this shift, we have to rewind to 2023. Which, I mean, in the timeline of AI, feels like ancient history.</v>
+
+14
+00:01:38.687 --> 00:01:50.117
+<v Daniel>Oh, absolutely. Late another century. Right. Think back to the Cordemeyer study at ETH Zurich. Researchers essentially threw ChachiPT into a standard calculus-based introductory physics course just to see what would happen.</v>
+
+15
+00:01:50.197 --> 00:01:57.706
+<v Maya>And the performance profile there was deeply revealing of the AI architecture at that time. The model took the force concept inventory, and it scored a 60%.</v>
+
+16
+00:01:58.046 --> 00:02:08.138
+<v Daniel>Okay, so it could generally handle the basic Newtonian concepts. Right. But on the final exam, which required actual mathematical execution, it scored a 47%. It barely scraped a 1.5 grade.</v>
+
+17
+00:02:09.860 --> 00:02:16.006
+<v Maya>Yeah, it was kind of like that smooth talking student in the front row, you know, the one who has memorized all the right buzzwords.</v>
+
+18
+00:02:16.106 --> 00:02:17.407
+<v Daniel>Oh, we all know that student.</v>
+
+19
+00:02:17.527 --> 00:02:32.182
+<v Maya>Right. They can chat with you about Newton's laws conceptually all day long. But the second you hand them a blank sheet of paper and ask them to execute a basic algebraic integration, they just completely freeze. Yep. The 2023 models kept dropping negative signs. They were</v>
+
+20
+00:02:32.282 --> 00:02:34.524
+<v Maya>failing basic integer calculations.</v>
+
+21
+00:02:34.784 --> 00:02:49.530
+<v Daniel>Because fundamentally, that 2023 architecture was just operating as a probabilistic auto-completer. It knew which words and symbols mathematically sounded plausible next to each other based on its training data, but it lacked an underlying logical</v>
+
+22
+00:02:49.590 --> 00:02:51.790
+<v Daniel>reasoning engine to actually execute the math.</v>
+
+23
+00:02:52.030 --> 00:03:01.194
+<v Maya>So predictably, a lot of physics faculty breathed a huge sigh of relief. The prevailing thought was, well, if it can't do the math, traditional physics homework is perfectly safe.</v>
+
+24
+00:03:01.652 --> 00:03:09.696
+<v Daniel>But that safety net evaporated almost overnight. I mean, if we jump to the 2025 G-scale study out of Germany, the entire conversation shifts. Oh,</v>
+
+25
+00:03:09.716 --> 00:03:10.097
+<v Maya>completely.</v>
+
+26
+00:03:10.117 --> 00:03:20.102
+<v Daniel>They tested the general-purpose GPT-40 and the reasoning-optimized O1 preview models. And they didn't just test them on introductory mechanics. They threw them at the German Physics Olympiad.</v>
+
+27
+00:03:20.448 --> 00:03:31.974
+<v Maya>Which, just for context, these are complex, multi-step, theoretically rich problems. They are designed specifically to stump the brightest high school minds in the entire country.</v>
+
+28
+00:03:32.094 --> 00:03:46.922
+<v Daniel>Exactly. And the jumping capability here is just staggering. Both models surpass the average performance of top-tier human competitors. When you look at the statistical effect sizes, we are talking about a Cohen's d of over 2</v>
+
+29
+00:03:47.102 --> 00:03:48.583
+<v Daniel>for the O1 preview model.</v>
+
+30
+00:03:48.683 --> 00:03:59.031
+<v Maya>Wait, wait, an effect size of over two? I mean, in education research, anything over 0.8 is usually considered massive. So this isn't just a marginal incremental improvement. This is an absolute blowout.</v>
+
+31
+00:03:59.071 --> 00:04:14.022
+<v Daniel>Oh, it is a totally different paradigm. What's fascinating here is the O1 preview model is designed to internally think and self-correct before it outputs an answer. And because of that, it flawlessly handled the mathematical application and multi-step reasoning that completely tripped up</v>
+
+32
+00:04:14.122 --> 00:04:14.522
+<v Daniel>the 2023 model.</v>
+
+33
+00:04:16.082 --> 00:04:24.424
+<v Maya>But surely it isn't completely flawless yet, right? If it can execute complex Olympiad algebra, where does it actually break down?</v>
+
+34
+00:04:24.784 --> 00:04:38.908
+<v Daniel>That is where the blind spots get incredibly specific and honestly pretty fascinating. The models aced almost all the advanced mechanics, but they hit a hard wall on one particular subtask. Which is what? Modeling air molecules deflecting off a cone-shaped tip.</v>
+
+35
+00:04:39.147 --> 00:04:46.948
+<v Maya>Wait, a cone. Why would a multi-step calculus problem be fine, but a simple geometric cone causes a system failure?</v>
+
+36
+00:04:47.468 --> 00:04:52.369
+<v Daniel>Because of how these models represent reality. You have to remember, these are, at their core, language models.</v>
+
+37
+00:04:52.629 --> 00:04:52.829
+<v Maya>Right.</v>
+
+38
+00:04:53.049 --> 00:05:04.391
+<v Daniel>So when a problem requires intrinsic 3D spatial intuition, like building a mental model of physical geometry that doesn't map cleanly to a standard text description, the AI hallucinates.</v>
+
+39
+00:05:05.272 --> 00:05:05.332
+<v Maya>It</v>
+
+40
+00:05:05.352 --> 00:05:07.932
+<v Daniel>tries to rely on text patterns rather than structural physics.</v>
+
+41
+00:05:07.972 --> 00:05:22.806
+<v Maya>So it's like trying to navigate a complex three-dimensional maze by only reading a massive text file of left and right turns. Without ever being allowed to look at a visual map, the moment the geometry gets weird or unusual, the text instructions fail because you don't actually have a picture of the</v>
+
+42
+00:05:22.846 --> 00:05:23.607
+<v Maya>maze in your head.</v>
+
+43
+00:05:23.867 --> 00:05:25.588
+<v Daniel>That is a perfect way to visualize it.</v>
+
+44
+00:05:25.668 --> 00:05:25.829
+<v Maya>Yeah.</v>
+
+45
+00:05:26.429 --> 00:05:41.240
+<v Daniel>But despite that specific spatial limitation, the immediate implication for the listener today is clear. The summative threat is fully realized. If you are assigning traditional, unsupervised assessments, take-home exams, online</v>
+
+46
+00:05:41.260 --> 00:05:44.683
+<v Daniel>quizzes, standard homework sets, Those are compromised.</v>
+
+47
+00:05:44.903 --> 00:05:45.423
+<v Maya>Entirely.</v>
+
+48
+00:05:45.504 --> 00:05:55.731
+<v Daniel>You can no longer guarantee the authenticity of unsupervised student work when an AI can crush Olympiad-level physics better than your top students.</v>
+
+49
+00:05:55.792 --> 00:06:04.939
+<v Maya>Okay, so if unsupervised homework is essentially dead, the obvious question for faculty is, well, how do we handle the massive influx of in-class supervised work we now have to assign?</v>
+
+50
+00:06:04.979 --> 00:06:05.959
+<v Daniel>Right, the grading load.</v>
+
+51
+00:06:06.080 --> 00:06:11.804
+<v Maya>Yeah, exactly. Can the very AI that broke our take-home exams actually help us grade the in-person ones?</v>
+
+52
+00:06:11.924 --> 00:06:26.532
+<v Daniel>And that is exactly the pivot we are seeing right now. We are moving from AI as a cheating threat to AI as an instructional colleague. And a 2045 study by Chen and Wan at the University of Central Florida put this to the test. They asked if an LLM, specifically GPT-40,</v>
+
+53
+00:06:26.872 --> 00:06:31.914
+<v Daniel>could reliably grade written physics explanations based on a partial credit rubric.</v>
+
+54
+00:06:32.455 --> 00:06:34.976
+<v Maya>So not just checking the final numerical answer?</v>
+
+55
+00:06:35.036 --> 00:06:39.098
+<v Daniel>No, no, actually evaluating the step-by-step conceptual reasoning of the student.</v>
+
+56
+00:06:39.263 --> 00:06:44.528
+<v Maya>Which, let's be honest, is notoriously difficult even for human teaching assistants to do consistently.</v>
+
+57
+00:06:44.648 --> 00:06:45.409
+<v Daniel>Oh, absolutely.</v>
+
+58
+00:06:45.569 --> 00:06:47.031
+<v Maya>So how did the AI perform?</v>
+
+59
+00:06:47.351 --> 00:06:53.357
+<v Daniel>It achieved human-level grading agreement. The AI agreed with a human expert 70% to 80% of the time.</v>
+
+60
+00:06:53.517 --> 00:06:53.897
+<v Maya>Really?</v>
+
+61
+00:06:53.997 --> 00:07:03.687
+<v Daniel>Yeah. To put that into context, that is the exact same statistical agreement rate you get when two human physics instructors grade the exact same stack of papers.</v>
+
+62
+00:07:03.887 --> 00:07:18.509
+<v Maya>Okay, but, and I have to push back here. Human TAs make mistakes because they are tired or overworked, right? Sure. And AI makes mistakes because it hallucinates. I would be terrified of the AI confidently giving a brilliant student a zero just because it completely misread their reasoning.</v>
+
+63
+00:07:18.887 --> 00:07:33.679
+<v Daniel>And the researchers anticipated that exact problem. They didn't just run the AI once. They utilized what they call a five-run confidence mechanism. They had the AI grade the exact same student response five separate</v>
+
+64
+00:07:33.719 --> 00:07:34.040
+<v Daniel>times.</v>
+
+65
+00:07:34.717 --> 00:07:40.844
+<v Maya>I need to stop you there. Why five times? If it is a computer program, shouldn't it just spit out the exact same grade five times in a row?</v>
+
+66
+00:07:40.884 --> 00:07:48.331
+<v Daniel>See, that is the beautiful thing about large language models. They operate on a principle of probabilistic variance, which is often referred to as temperature.</v>
+
+67
+00:07:48.592 --> 00:07:49.352
+<v Maya>Right, temperature.</v>
+
+68
+00:07:49.513 --> 00:07:56.400
+<v Daniel>They don't use a fixed, rigid algorithmic rubric. Every time you ask them a question, they probabilistically generate the response.</v>
+
+69
+00:07:56.964 --> 00:07:57.925
+<v Maya>Ah, I see where this is going.</v>
+
+70
+00:07:58.085 --> 00:08:12.954
+<v Daniel>So if the AI evaluates a student's answer and assigns a one all five times, you can be highly confident the grade is solid. Yeah. But if it gives three ones and two wins, that variance acts as a built-in confidence index. It mathematically flags its</v>
+
+71
+00:08:12.994 --> 00:08:13.675
+<v Daniel>own uncertainty.</v>
+
+72
+00:08:13.755 --> 00:08:19.278
+<v Maya>That is remarkably clever. You are essentially using the AI's tendency to fluctuate as a feature, not a bug.</v>
+
+73
+00:08:19.598 --> 00:08:20.059
+<v Daniel>Exactly.</v>
+
+74
+00:08:20.079 --> 00:08:21.940
+<v Maya>It literally tells you when it is confused.</v>
+
+75
+00:08:22.305 --> 00:08:37.057
+<v Daniel>Precisely. So the human instructor doesn't have to grade 300 exams from scratch. You let the AI grade all of them five times and you only manually review the 10 to 15 percent of responses where the AI disagreed with itself. By doing that, you catch</v>
+
+76
+00:08:37.158 --> 00:08:40.260
+<v Daniel>roughly 40 percent of the errors the AI would have made on a single run.</v>
+
+77
+00:08:40.460 --> 00:08:48.947
+<v Maya>Now, I have to step in here on behalf of our listeners because I can hear the faculty at large public universities doing the mental math on their departmental budgets right now.</v>
+
+78
+00:08:49.108 --> 00:08:49.528
+<v Daniel>Oh, I'm sure.</v>
+
+79
+00:08:49.862 --> 00:09:00.106
+<v Maya>Getting an API to run complex, multi-step grading queries five times per student for a 300-person lecture, is that actually financially feasible for a state school?</v>
+
+80
+00:09:00.307 --> 00:09:05.149
+<v Daniel>It is astonishingly cheap. The UCF study actually broke down the API token costs.</v>
+
+81
+00:09:05.169 --> 00:09:05.929
+<v Maya>You pail it on me.</v>
+
+82
+00:09:06.349 --> 00:09:14.813
+<v Daniel>To grade and generate detailed, personalized feedback for 100 student answers, running it five times each, it costs roughly $5. $5</v>
+
+83
+00:09:14.933 --> 00:09:28.440
+<v Maya>for 100 students. Okay, if the computation is that cheap and that accurate, it opens up entirely new possibilities. I mean, we aren't just talking about post-exam grading anymore. We are talking about real-time personalized feedback.</v>
+
+84
+00:09:28.600 --> 00:09:40.490
+<v Daniel>And that brings us perfectly to the 2025 Harvard study. They ran a randomized controlled crossover experiment in physical sciences. Two, their massive introductory physics class for life sciences. That's</v>
+
+85
+00:09:40.550 --> 00:09:41.570
+<v Maya>a big class, right?</v>
+
+86
+00:09:41.590 --> 00:09:48.376
+<v Daniel>Yeah, nearly 200 students. And they pitted an AI tutor directly against an in-class active learning session.</v>
+
+87
+00:09:48.570 --> 00:09:53.472
+<v Maya>Okay, so how does an AI tutor actually compare to a live active learning environment?</v>
+
+88
+00:09:53.752 --> 00:10:02.216
+<v Daniel>It completely held its own. One week, a group used the AI tutor for surface tension, while the other did active learning, and then they swapped conditions for fluid flow.</v>
+
+89
+00:10:02.536 --> 00:10:03.677
+<v Maya>So a true crossover?</v>
+
+90
+00:10:03.757 --> 00:10:17.883
+<v Daniel>Yes, but the real value wasn't just in the test score equivalence. It is the shift toward formative assessment. Right. Because the AI is available 24-7 and costs pennies, you can provide immediate high-quality Socratic feedback to every single student.</v>
+
+91
+00:10:17.983 --> 00:10:19.584
+<v Maya>It's like having a TA in their pocket.</v>
+
+92
+00:10:19.984 --> 00:10:30.267
+<v Daniel>Exactly. The AI acts as a constant companion, helping students evaluate their own reasoning in real time rather than waiting a week to get a piece of paper back with a red circle on it.</v>
+
+93
+00:10:30.407 --> 00:10:44.633
+<v Maya>So we have an AI that is crushing Olympiads, grading with human precision and tutoring 2047. But if we are training the next generation of physicists, we really have to ask ourselves, what are we actually training them for?</v>
+
+94
+00:10:44.813 --> 00:10:45.953
+<v Daniel>That is the big question.</v>
+
+95
+00:10:46.033 --> 00:10:56.677
+<v Maya>Because AI isn't just sitting in an undergraduate classroom doing homework. According to a massive review published in Nature, AI is fundamentally reshaping the scientific method itself.</v>
+
+96
+00:10:56.797 --> 00:11:03.600
+<v Daniel>The scope of that Nature paper is just breathtaking. It outlines how AI is accelerating every single phase of the discovery loop.</v>
+
+97
+00:11:03.765 --> 00:11:07.027
+<v Maya>Data collection, hypothesis generation, experimentation.</v>
+
+98
+00:11:07.187 --> 00:11:12.930
+<v Daniel>All of it. AI is no longer just a tool physicists use. It is becoming the environment in which physics is actually done.</v>
+
+99
+00:11:13.190 --> 00:11:18.612
+<v Maya>Let's dig into the mechanics of that because the specifics are wild. Take data collection at the Large Hadron Collider.</v>
+
+100
+00:11:18.713 --> 00:11:19.773
+<v Daniel>Okay, yes, the LHC.</v>
+
+101
+00:11:20.033 --> 00:11:34.988
+<v Maya>The LHC generates over 100 terabytes of data every single second. You physically cannot store that on any hard drive system in existence. Impossible. So they use deep learning, specifically unsupervised autoencoders, to</v>
+
+102
+00:11:35.048 --> 00:11:39.489
+<v Maya>filter out 99.99% of the background noise in real time.</v>
+
+103
+00:11:39.709 --> 00:11:45.630
+<v Daniel>And the way these autoencoders do this is brilliant. They aren't programmed to look for specific new physics.</v>
+
+104
+00:11:45.730 --> 00:11:48.090
+<v Maya>Because we don't even know what that new physics looks like yet, right?</v>
+
+105
+00:11:48.110 --> 00:11:56.232
+<v Daniel>Exactly. We have no idea. So instead, the autoencoder is trained to compress and reconstruct the normal, boring background data.</v>
+
+106
+00:11:56.536 --> 00:11:58.497
+<v Maya>Okay, the everyday baseline stuff.</v>
+
+107
+00:11:58.558 --> 00:12:06.503
+<v Daniel>Right. It learns that baseline normal distribution so intimately that when a rare, strange collision event happens, it fails.</v>
+
+108
+00:12:06.803 --> 00:12:08.605
+<v Maya>Oh, it fails to reconstruct it properly.</v>
+
+109
+00:12:08.645 --> 00:12:14.009
+<v Daniel>Yes, and that failure mathematically spikes as an anomaly. It throws away the junk and only saves the anomalies.</v>
+
+110
+00:12:14.129 --> 00:12:19.212
+<v Maya>So it finds the needle in the haystack by perfectly understanding what hay looks like. That is amazing.</v>
+
+111
+00:12:19.292 --> 00:12:19.793
+<v Daniel>It really is.</v>
+
+112
+00:12:20.193 --> 00:12:29.343
+<v Maya>But it goes beyond just filtering data. The Nature Review also highlights a revolution in geometric deep learning. Why is that such a game changer for physics?</v>
+
+113
+00:12:29.827 --> 00:12:36.970
+<v Daniel>Well, historically, if you trained a standard neural network on a physical data set, it had to learn the laws of physics entirely from scratch. What</v>
+
+114
+00:12:36.990 --> 00:12:37.330
+<v Maya>do you mean?</v>
+
+115
+00:12:37.470 --> 00:12:46.974
+<v Daniel>Like if you showed the AI a molecule and then you rotated that exact same molecule 90 degrees, the standard AI thought it was a completely new object. It had to relearn it.</v>
+
+116
+00:12:47.054 --> 00:12:48.555
+<v Maya>Which sounds incredibly inefficient.</v>
+
+117
+00:12:48.595 --> 00:13:03.504
+<v Daniel>Well, it is massively inefficient. It requires gargantuan data sets just to teach the AI basic 3D reality. But geometric deep learning fixes this by baking the physics directly into the mathematical architecture of the neural</v>
+
+118
+00:13:03.544 --> 00:13:03.884
+<v Daniel>network.</v>
+
+119
+00:13:04.084 --> 00:13:05.486
+<v Maya>So it already knows the geometry.</v>
+
+120
+00:13:05.746 --> 00:13:13.814
+<v Daniel>Right. They respect physical symmetry, like the SE3 group in rigid body dynamics. They maintain invariance and equivariance natively.</v>
+
+121
+00:13:14.035 --> 00:13:14.415
+<v Maya>Wow.</v>
+
+122
+00:13:14.655 --> 00:13:19.240
+<v Daniel>Because 3D conservation is hard-coded into the math, they save massive amounts of compute.</v>
+
+123
+00:13:19.690 --> 00:13:25.273
+<v Maya>And these models aren't just sitting in server farms crunching numbers either. They're actually interacting with the physical world.</v>
+
+124
+00:13:25.393 --> 00:13:25.993
+<v Daniel>Very much so.</v>
+
+125
+00:13:26.313 --> 00:13:40.200
+<v Maya>Reinforcement learning algorithms are dynamically navigating stratospheric balloons in real time by reading wind currents. And in nuclear fusion, AI controllers are continuously adjusting the magnetic coils and tokamak reactors to contain the plasma.</v>
+
+126
+00:13:40.688 --> 00:13:51.443
+<v Daniel>The reinforcement AI is actually doing the physics. It is operating at speeds and optimizing across variables that a human operator simply couldn't track simultaneously.</v>
+
+127
+00:13:51.815 --> 00:14:06.762
+<v Maya>Which brings us to the core conflict for our listeners today. Here's where it gets really interesting. The physics workforce of the future, your students, will require high level fluency in these specific AI and data science tools. If they don't have them, they won't be able</v>
+
+128
+00:14:06.782 --> 00:14:13.485
+<v Maya>to participate in modern research. A physicist who can't leverage AI will be like an astronomer refusing to use a telescope.</v>
+
+129
+00:14:13.743 --> 00:14:28.713
+<v Daniel>That is a great way to put it. So the question becomes, how do we actually change the undergraduate curriculum to reflect this reality? Right. We know the exams are compromised. We know AI is a powerful tutor. And we know modern research demands data science skills. But how does a busy physics</v>
+
+130
+00:14:28.753 --> 00:14:31.455
+<v Daniel>faculty member actually implement this without burning out?</v>
+
+131
+00:14:31.815 --> 00:14:46.421
+<v Maya>Right. And I have to push back hard here on behalf of the faculty listening. It is easy for us to sit here in a studio and say, just teach them data science. Sure. But as the DSCOP survey, the Data Science Education Community of Practice pointed out, the barriers are</v>
+
+132
+00:14:46.501 --> 00:14:46.841
+<v Maya>huge.</v>
+
+133
+00:14:47.001 --> 00:14:47.822
+<v Daniel>They are very real.</v>
+
+134
+00:14:47.902 --> 00:14:54.885
+<v Maya>Faculty often lack AI training themselves. But more importantly, a multi-semester physics course is already packed to the brim.</v>
+
+135
+00:14:54.925 --> 00:14:56.005
+<v Daniel>There's no extra time.</v>
+
+136
+00:14:56.086 --> 00:15:10.657
+<v Maya>Exactly. If a department chair says, drop in six hours of Python and AI training, the immediate response is, OK, do you want me to cut six hours of thermodynamics or six hours of Maxwell's equations? How do we justify that trade-off?</v>
+
+137
+00:15:10.797 --> 00:15:25.751
+<v Daniel>And that is the exact tension Dezacop was created to solve. Their solution is incredibly pragmatic. You don't blow up the curriculum. You don't delete Maxwell's equations. Instead, this community of practice Builds modular two</v>
+
+138
+00:15:25.771 --> 00:15:27.653
+<v Daniel>to six hour drop-in lessons. Drop-in</v>
+
+139
+00:15:27.673 --> 00:15:27.954
+<v Maya>lessons.</v>
+
+140
+00:15:28.114 --> 00:15:39.790
+<v Daniel>Yeah. And the brilliance is that these are not computer science classes imported into the physics department. They use modern data science tools to demonstrate the existing fundamental physics concepts you are already going to teach.</v>
+
+141
+00:15:40.170 --> 00:15:49.492
+<v Maya>Ah, so you are still teaching the core physics, but you are just using a modern lens computation and AI to visualize and manipulate it.</v>
+
+142
+00:15:49.632 --> 00:15:58.695
+<v Daniel>Exactly. And a 2025 paper in the journal AI and Society gives us some beautiful vignettes of what this era of experiential learning looks like in practice.</v>
+
+143
+00:15:58.715 --> 00:15:59.475
+<v Maya>Give me an example.</v>
+
+144
+00:15:59.615 --> 00:16:08.137
+<v Daniel>Take a quantum materials workshop, for example. In a traditional setting, students might spend hours hand-solving the Schrodinger equation for a simple potential well.</v>
+
+145
+00:16:08.317 --> 00:16:11.700
+<v Maya>Which, let's be real, is mostly just a test of algebraic endurance.</v>
+
+146
+00:16:11.800 --> 00:16:21.669
+<v Daniel>Precisely. But in this experiential model, students use AI and data science tools to rapidly simulate finite 1D chains and 2D lattices of periodic wells.</v>
+
+147
+00:16:21.890 --> 00:16:23.411
+<v Maya>Okay, so they bypass the grunt work.</v>
+
+148
+00:16:23.591 --> 00:16:34.321
+<v Daniel>Yes. They compute the IG energies for varying tumbling strengths instantly. They physically observe how discrete energy levels split into minibands, and they visualize Van Hove singularities on continuous dispersion surfaces.</v>
+
+149
+00:16:34.596 --> 00:16:49.382
+<v Maya>That's incredible because they aren't bogged down in hours of manual calculations. They can run dozens of simulations and abstract the hero six themselves. Right. They learn firsthand that, you know, stronger coupling widens bands. They cement their</v>
+
+150
+00:16:49.422 --> 00:16:53.164
+<v Maya>computational fluency while actually building deeper physical intuition.</v>
+
+151
+00:16:53.464 --> 00:16:58.809
+<v Daniel>Another vignette from that paper is an unmanned aerial system capstone, essentially a drone lab.</v>
+
+152
+00:16:59.210 --> 00:17:00.051
+<v Maya>Oh, that sounds fun.</v>
+
+153
+00:17:00.411 --> 00:17:15.366
+<v Daniel>The students alternate roles. One group acts as ground crew diagnosticians using physical oscilloscopes and flow charts to isolate hardware faults. Okay. The other group acts as autonomous mission pilots using AI dashboards to adjust flight parameters</v>
+
+154
+00:17:15.446 --> 00:17:17.608
+<v Daniel>in real time based on sensor data.</v>
+
+155
+00:17:17.903 --> 00:17:21.226
+<v Maya>So they are synthesizing hardware knowledge with live AI software.</v>
+
+156
+00:17:21.306 --> 00:17:22.066
+<v Daniel>Yes, exactly. They</v>
+
+157
+00:17:22.106 --> 00:17:33.255
+<v Maya>develop quick fix rules, like if the altimeter is noisy but the GPS is steady, it is a barometric sensor failure. Or, you know, if wind gusts hit 15 miles per hour, tell the AI to slow the descent rate by 10%.</v>
+
+158
+00:17:33.555 --> 00:17:48.133
+<v Daniel>If we connect this to the bigger picture, this highlights the vital transition we must make. We must move away from teaching students to be repetitive answer tools. AI is infinitely better at repetitive calculation than a human will ever be.</v>
+
+159
+00:17:49.094 --> 00:18:01.618
+<v Daniel>Instead, we have to teach iterative cycles of doing, receiving feedback, reflecting, and heuristic abstraction. The AI simply becomes a dashboard for strategic problem solving.</v>
+
+160
+00:18:01.947 --> 00:18:07.829
+<v Maya>It really is a complete inversion of how we think about a physics education. I mean, we've traced this incredible arc today. We</v>
+
+161
+00:18:07.889 --> 00:18:08.369
+<v Daniel>really have.</v>
+
+162
+00:18:08.509 --> 00:18:23.155
+<v Maya>We started with a 2023 version of ChatGPT that functioned like an overconfident student fumbling basic algebra. Fast forward just two years, and we were looking at reasoning models that crushed the physics Olympiad, grade complex written reasoning with human level accuracy.</v>
+
+163
+00:18:23.795 --> 00:18:25.916
+<v Maya>and act as real-time Socratic tutors.</v>
+
+164
+00:18:25.996 --> 00:18:36.762
+<v Daniel>And beyond the classroom, we see autoencoders filtering LHC noise, geometric neural networks intrinsically respecting 3D physical symmetries, and reinforcement learning actively containing nuclear fusion.</v>
+
+165
+00:18:36.842 --> 00:18:37.743
+<v Maya>It's just wild.</v>
+
+166
+00:18:37.903 --> 00:18:42.005
+<v Daniel>The technology has matured from a text predictor to fundamental scientific infrastructure.</v>
+
+167
+00:18:42.445 --> 00:18:57.404
+<v Maya>So, to the faculty sitting at the AAPT workshop today, you are the architects of this transition. Incorporating data science and AI does not detract from core physics. It amplifies it. Absolutely. It gives your students the computational leverage they need</v>
+
+168
+00:18:57.444 --> 00:19:04.490
+<v Maya>to actually participate in modern research. And through communities like DSA Cop, you don't have to build these modules from scratch.</v>
+
+169
+00:19:04.590 --> 00:19:15.339
+<v Daniel>No. The lesson plans, the code, the workflows, they are being built collaboratively right now by your peers. It is an unprecedented opportunity to redefine the undergraduate experience.</v>
+
+170
+00:19:15.600 --> 00:19:19.224
+<v Maya>But it also leaves us with a pretty profound question to wrestle with as we close out.</v>
+
+171
+00:19:19.344 --> 00:19:19.925
+<v Daniel>Oh, definitely.</v>
+
+172
+00:19:20.065 --> 00:19:34.761
+<v Maya>If AI systems are increasingly capable of perfectly simulating physical environments, formulating mathematical hypotheses, analyzing the resulting data, and even grading the tests, what does a human physics degree actually certify by the end of this</v>
+
+173
+00:19:34.801 --> 00:19:48.556
+<v Maya>decade? heavy thought. If we are outsourcing the calculation and the simulation, will the most valuable skill for a human physicist of the 2030s simply be the philosophical intuition of knowing which scientific questions are actually worth asking in the first place?</v>
+
+174
+00:19:48.896 --> 00:19:56.062
+<v Daniel>I think so. In a world of infinite answers, knowing how to ask the right question becomes the ultimate human advantage.</v>
+
+175
+00:19:56.862 --> 00:20:02.747
+<v Maya>Something to think about as you head into your next session. That's all for this deep dive. Thanks for listening and enjoy the rest of your workshop.</v>
