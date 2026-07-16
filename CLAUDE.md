@@ -94,6 +94,7 @@ Google Scholar citations: 66
 ## Layout notes
 
 - **Root (served by GitHub Pages)**: `feed.xml`, `audio/`, `NotebookLM-PodPub-Cover.png`. Don't move these — their URLs are baked into `feed.xml`.
+- **`.nojekyll`** (root): makes Pages deploy files as-is instead of running Jekyll — do not delete. The Jekyll build calls the GitHub API mid-build (`jekyll-github-metadata`), so deploys used to fail with a no-detail "Page build failed" every time GitHub's API was degraded (recurring until Jul 2026). If a deploy still fails, check githubstatus.com first, then retrigger without a commit: `gh api -X POST repos/soltaniehha/podpub/pages/builds`.
 - **`PDFs/`**: tracked archive of every episode's source papers, named `NNN-YYYY-LastName-Short-Title.pdf`. Populated as part of each publish (workflow step 4).
 - **`setup/`**: `requirements.txt`, `config.yaml.example`. Setup-only, not touched day-to-day.
 - **`inbox/`**: user's drop zone. Contents gitignored (including PDFs).
