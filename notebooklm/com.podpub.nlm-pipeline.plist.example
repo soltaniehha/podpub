@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  TEMPLATE ONLY - not installed and not loaded by this repo.
+
+  To use it:
+    1. Replace every CHANGEME with a real absolute path.
+    2. cp notebooklm/com.podpub.nlm-pipeline.plist.example \
+         ~/Library/LaunchAgents/com.podpub.nlm-pipeline.plist
+    3. launchctl load ~/Library/LaunchAgents/com.podpub.nlm-pipeline.plist
+
+  Notes:
+    * StartCalendarInterval fires at fixed times so runs are spaced out; the
+      pipeline's own lockfile is what actually guarantees no two instances
+      overlap. Never schedule this to run alongside podpub.py.
+    * A NotebookLM Deep Dive takes 10-20 minutes, so keep firings hours apart.
+    * launchd does not inherit your shell PATH - set notebooklm_bin and
+      ffprobe_bin to absolute paths in config.yaml (PATH below is a backstop).
+    * Cookie keepalive is a separate concern: schedule
+      `notebooklm auth refresh --quiet` every 15-20 minutes in its own agent
+      if the account otherwise sits idle for long stretches.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.podpub.nlm-pipeline</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/CHANGEME/podpub/.venv/bin/python</string>
+        <string>/CHANGEME/podpub/notebooklm/nlm_pipeline.py</string>
+        <string>run</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/CHANGEME/podpub</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/CHANGEME</string>
+    </dict>
+
+    <!-- Three spaced runs a day. Add or remove dicts to taste. -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key><integer>8</integer>
+            <key>Minute</key><integer>17</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>13</integer>
+            <key>Minute</key><integer>43</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>19</integer>
+            <key>Minute</key><integer>11</integer>
+        </dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/CHANGEME/podpub/notebooklm/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/CHANGEME/podpub/notebooklm/logs/launchd.err.log</string>
+
+    <!-- Grace period between SIGTERM and SIGKILL when launchd stops the job.
+         This does NOT bound how long a run may take: launchd will not
+         interrupt a healthy long-running job, and a Deep Dive legitimately
+         blocks for 10-20 minutes. The pipeline's own generate.timeout is what
+         bounds a wedged wait. -->
+    <key>ExitTimeOut</key>
+    <integer>60</integer>
+
+    <!-- launchd's default is already 10s; set explicitly so a crash-looping
+         run (bad config, missing binary) cannot be respawned in a tight loop
+         against Google's servers. -->
+    <key>ThrottleInterval</key>
+    <integer>300</integer>
+</dict>
+</plist>

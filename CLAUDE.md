@@ -143,3 +143,12 @@ If `config.yaml` does not exist, the project has not been initialized yet. Walk 
 2. **Cover art**. Square PNG/JPG at repo root (1400×1400 minimum). `NotebookLM-PodPub-Cover.png` ships in the repo; replacing it is fine but keep the filename (or update `cover_image_url` in `config.yaml`).
 3. **Python deps**. `python3 -m venv .venv && source .venv/bin/activate && pip install -r setup/requirements.txt`.
 4. **First run**. `.venv/bin/python podpub.py` — prompts for paths, base URL, and podcast metadata; writes `config.yaml`. See `setup/config.yaml.example` for the schema.
+
+## Automated generation (notebooklm/ + automation/)
+
+Episodes no longer have to be made by hand in the NotebookLM web UI. `notebooklm/` is a local pipeline that drives the unofficial `notebooklm` CLI (notebooklm-py) to generate a Deep Dive from PDFs, verifies the download with ffprobe, and drops the `.m4a` + `.md` sidecar into `inbox/` for the workflow above. It never touches `podpub.py`, `feed.xml`, or git.
+
+- **New agents: start with `automation/ONBOARDING.md`** — the entry point: where everything lives, the condensed run procedure, how to customize the generation prompt, and how to query an episode's NotebookLM notebook afterwards (`notebooklm ask`).
+- **Agents: read `automation/INSTRUCTIONS.md` before running it** — it is the end-to-end playbook (intake → sidecar → generate → verify → publish → PDF archival).
+- **Agents: after every run, append the run's entry to `automation/LOGS.md` and promote any durable lesson into `automation/MEMORY.md`'s Standing rules.** Mandatory. MEMORY.md is the curated high-level knowledge (binding, read it first); LOGS.md is the append-only per-run history.
+- Design and setup notes: `notebooklm/README.md`. Never run the pipeline concurrently with `podpub.py`, or two instances of it at once.

@@ -9,3 +9,17 @@ venv/
 
 inbox/*
 !inbox/.gitkeep
+
+# notebooklm pipeline: runtime state, local config, work dirs
+notebooklm/config.yaml
+notebooklm/state.json*
+notebooklm/.lock*
+notebooklm/logs/
+notebooklm/tmp/
+notebooklm/quarantine/
+notebooklm/queue/*
+!notebooklm/queue/.gitkeep
+
+# nightly research automation: runtime state and logs stay local
+automation/logs/
+automation/state/

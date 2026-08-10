@@ -1,0 +1,65 @@
+# notebooklm pipeline config. Copy to notebooklm/config.yaml (gitignored) and edit.
+#   cp notebooklm/config.yaml.example notebooklm/config.yaml
+#
+# Relative paths - and the defaults for any key you omit - resolve against the
+# directory holding THIS FILE. A scratch config kept elsewhere therefore gets
+# its own state.json and lockfile instead of silently sharing production's.
+#
+# Keep the pipeline's working paths inside notebooklm/. The repo's .gitignore
+# rules are path-literal (notebooklm/state.json*, notebooklm/tmp/, ...), so a
+# state file or queue folder placed anywhere else is NOT ignored and will show
+# up as an untracked file - or get committed.
+#
+# This file holds NO credentials: Google auth lives entirely inside
+# notebooklm-py's own profile storage (~/.notebooklm/profiles/<profile>/).
+
+# --- paths ---
+queue_dir: queue                # watch folder: one subfolder per episode
+inbox_dir: ../inbox             # podpub's drop zone - verified audio lands here
+state_file: state.json          # episode state machine + quota ledger
+log_file: logs/pipeline.log
+tmp_dir: tmp                    # downloads land here first (same volume as inbox)
+quarantine_dir: quarantine      # files that fail ffprobe verification
+lock_file: .lock
+
+# --- external tools ---
+# Absolute path is safer under launchd, which does not inherit your shell PATH.
+# The pipeline is verified against notebooklm-py 0.8.0 and refuses to run on
+# any other version - install exactly:
+#   uv tool install --python 3.13 "notebooklm-py[browser]==0.8.0"
+notebooklm_bin: /Users/CHANGEME/.local/bin/notebooklm
+ffprobe_bin: /opt/homebrew/bin/ffprobe
+profile: null                   # notebooklm -p <profile>; null uses the default
+
+# --- quota ---
+# NotebookLM allows 3 audio generations/day on free, 20 on AI Pro. There is no
+# API to query the real remaining count, so this ledger is local-only and
+# conservative. Use 15 on AI Pro to leave headroom for manual web-UI runs on
+# the same account.
+daily_audio_cap: 3
+
+# Seconds before a short CLI call (create, source add, poll) is abandoned.
+command_timeout: 120
+
+# --- verification ---
+# Shortest audio accepted as a real Deep Dive. A long one runs 15-45 minutes;
+# anything materially shorter is a truncated or failed generation and gets
+# quarantined instead of delivered. Lower it only if you also set
+# generate.length to something shorter than "long".
+min_duration_sec: 300
+
+# --- generation ---
+generate:
+  format: deep-dive             # deep-dive | brief | critique | debate
+  length: long                  # short | default | long
+  # Long deep dives take 10-20 minutes. Anything under 1200 reports a false
+  # failure while the job keeps running server-side; 1800 is the floor we use.
+  timeout: 1800
+  interval: 10                  # seconds between status checks while waiting
+  retry: 3                      # CLI-side retries with backoff on rate limit
+  # NotebookLM refuses to generate audio while uploaded sources are still being
+  # indexed ("Audio generation is unavailable"). The pipeline polls
+  # `source list` until every source is `ready`, up to this many seconds, before
+  # spending a quota unit. Observed: 3 PDFs / 34MB took ~90s. Raise it if you
+  # routinely queue large papers.
+  source_ready_timeout: 300
