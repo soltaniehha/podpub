@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2026 02:29:25 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 06:55:59 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -229,5 +229,23 @@ Reference: Mankowitz, D. J., Michi, A., Zhernov, A., et al. (2023). Faster sorti
       <pubDate>Mon, 10 Aug 2026 01:40:38 +0000</pubDate>
       <itunes:episode>13</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/013%20-%20When%20AI%20Makes%20Discoveries.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>014 - The Internet Paradox Comes For AI Companions</title>
+      <description>The Internet Paradox Comes For AI Companions (1998-2026)
+
+In this episode we unpack a new Nature Human Behaviour study from Yutong Zhang, Dora Zhao, Jeffrey Hancock, Robert Kraut, and Diyi Yang of Stanford and Carnegie Mellon, published August 2026, on what AI companionship does to psychological well-being. The team surveyed 1,131 adult Character.AI users and, remarkably, analyzed 464,687 real chat messages donated by 237 of them. The core finding: heavier chatbot use overall tracks with higher well-being, but companionship-oriented use tracks with lower well-being, and the association is strongest for the most intense, most self-disclosing users with the smallest human networks.
+
+We walk through the triangulated companionship measures (self-report, relationship descriptions, and GPT-4o-classified chat histories), the regression results behind the headline betas, and what the donated conversations actually contain, from emotional support to romantic roleplay to genuinely dark territory. We then set the result against its intellectual ancestors: Kraut's 1998 Internet Paradox study, which found the same troubling shape in the early internet and shares an author with this paper twenty-eight years later; De Freitas and colleagues' experiments showing AI companions relieve loneliness in the moment by making users feel heard; Guingrich and Graziano's finding that companion chatbot users perceive social health benefits; and the OpenAI and MIT Media Lab analysis of three million ChatGPT conversations showing affective use concentrates in a small population of heavy users. We close on the question the paper leaves open: substitution versus compensation, and what responsible companion design would even look like.
+
+Reference: Zhang, Y., Zhao, D., Hancock, J. T., Kraut, R., &amp; Yang, D. (2026). Interaction with AI companions and psychological well-being. Nature Human Behaviour. https://doi.org/10.1038/s41562-026-02516-2
+Reference: Kraut, R., Patterson, M., Lundmark, V., Kiesler, S., Mukopadhyay, T., &amp; Scherlis, W. (1998). Internet paradox: A social technology that reduces social involvement and psychological well-being? American Psychologist, 53(9), 1017-1031.
+Reference: De Freitas, J., Oguz-Uguralp, Z., Uguralp, A. K., &amp; Puntoni, S. (2025). AI companions reduce loneliness. Journal of Consumer Research. https://doi.org/10.1093/jcr/ucaf040
+Reference: Phang, J., Lampe, M., Ahmad, L., Agarwal, S., Fang, C. M., Liu, A. R., et al. (2025). Investigating affective use and emotional well-being on ChatGPT. arXiv:2504.03888. https://arxiv.org/abs/2504.03888
+Reference: Guingrich, R. E., &amp; Graziano, M. S. A. (2023). Chatbots as social companions: How people perceive consciousness, human likeness, and social health benefits in machines. arXiv:2311.10599. https://arxiv.org/abs/2311.10599</description>
+      <guid isPermaLink="false">7c9c6c6f16ab283e3cfb63e76141b688a58ab0fa</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/014%20-%20The%20Internet%20Paradox%20Comes%20For%20AI%20Companions.m4a" length="85952497" type="audio/mp4" />
+      <pubDate>Mon, 10 Aug 2026 05:35:31 +0000</pubDate>
+      <itunes:episode>14</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/014%20-%20The%20Internet%20Paradox%20Comes%20For%20AI%20Companions.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
