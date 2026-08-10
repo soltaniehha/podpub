@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 21:12:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 02:29:25 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -213,5 +213,21 @@ Reference: Zaldarriaga, M. (2026). Universal distance modes from DESI BAO and Ty
       <pubDate>Thu, 16 Jul 2026 20:38:40 +0000</pubDate>
       <itunes:episode>12</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/012%20-%20How%20AI%20Is%20Reshaping%20Physics%20Education.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>013 - When AI Makes Discoveries</title>
+      <description>Highly Accurate Protein Structure Prediction with AlphaFold (July 2021) + Discovering Faster Matrix Multiplication Algorithms with Reinforcement Learning (October 2022) + Faster Sorting Algorithms Discovered Using Deep Reinforcement Learning (June 2023)
+
+In this episode we unpack DeepMind's discovery trilogy: three open-access Nature papers in which the AlphaZero lineage stops playing board games and starts producing real discoveries. John Jumper, Demis Hassabis and colleagues deliver AlphaFold, the first computational method to predict protein structures at near-experimental accuracy; Alhussein Fawzi and colleagues follow with AlphaTensor, which finds faster matrix multiplication algorithms than any human has; and Daniel Mankowitz and colleagues close the arc with AlphaDev, whose machine-discovered sorting routines now run inside the C++ standard library. The shared thesis: recast a hard scientific or algorithmic search problem as a single-player game with a verifiable reward, and reinforcement learning can push past human intuition.
+
+We walk through AlphaFold's blind-test dominance at CASP14 and the redesigned network that leverages multi-sequence alignments to reach atomic accuracy even without a known homologous structure; AlphaTensor's TensorGame, which frames matrix multiplication as low-rank tensor decomposition and yields a 4x4 finite-field algorithm beating Strassen's two-level construction for the first time in 50 years, plus hardware-tuned variants optimized for real runtime; and AlphaDev's AssemblyGame, which searches at the level of individual CPU instructions and produced fixed and variable small-sort routines fast enough to be merged into LLVM's libc++ sort. We close on the pattern that unites them - enormous action spaces, provable correctness as the reward, measured performance as the score - and on the open question of which discoveries this recipe can reach next.
+
+Reference: Jumper, J., Evans, R., Pritzel, A., et al. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596, 583-589. https://doi.org/10.1038/s41586-021-03819-2
+Reference: Fawzi, A., Balog, M., Huang, A., et al. (2022). Discovering faster matrix multiplication algorithms with reinforcement learning. Nature, 610, 47-53. https://doi.org/10.1038/s41586-022-05172-4
+Reference: Mankowitz, D. J., Michi, A., Zhernov, A., et al. (2023). Faster sorting algorithms discovered using deep reinforcement learning. Nature, 618, 257-263. https://doi.org/10.1038/s41586-023-06004-9</description>
+      <guid isPermaLink="false">aaeb42ea30ab55b01cba90391622432dba850ae6</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/013%20-%20When%20AI%20Makes%20Discoveries.m4a" length="83385492" type="audio/mp4" />
+      <pubDate>Mon, 10 Aug 2026 01:40:38 +0000</pubDate>
+      <itunes:episode>13</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/013%20-%20When%20AI%20Makes%20Discoveries.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

@@ -1,0 +1,1269 @@
+WEBVTT
+
+1
+00:00:00.191 --> 00:00:08.759
+<v Maya>Right now, at this exact second, the device you are using to listen to this is running just a tiny bit faster than it did a couple of years ago.</v>
+
+2
+00:00:08.859 --> 00:00:11.662
+<v Daniel>Yeah. And the battery is actually draining just a little bit slower, too.</v>
+
+3
+00:00:11.982 --> 00:00:25.094
+<v Maya>Exactly. And it's not because you bought a new phone or, you know, upgraded your computer. It is because somewhere in a laboratory, an artificial intelligence literally sat down and played a game of invisible heisting.</v>
+
+4
+00:00:33.744 --> 00:00:37.886
+<v Daniel>It's a very specific, somewhat comforting scenario.</v>
+
+5
+00:00:38.046 --> 00:00:40.587
+<v Maya>Like a computer moving knights and rooks across a chessboard.</v>
+
+6
+00:00:40.907 --> 00:00:49.670
+<v Daniel>Exactly. Or placing black and white stones on a dough board. Or even, you know, navigating a little digital character through a retro video game. It feels contained.</v>
+
+7
+00:00:49.770 --> 00:00:50.410
+<v Maya>It feels safe.</v>
+
+8
+00:00:50.570 --> 00:01:05.239
+<v Daniel>Yeah, feel safe because it's happening inside this perfectly defined, completely artificial box. The rules are made up by humans. The stakes are essentially zero. And the whole environment is completely isolated from the messy, complex physical reality that you and I</v>
+
+9
+00:01:05.299 --> 00:01:05.940
+<v Daniel>actually live in.</v>
+
+10
+00:01:06.370 --> 00:01:15.794
+<v Maya>But the walls of that box have completely come down. I mean, we are looking at a monumental shift today in this deep dive. What happens when an AI just stops playing board games?</v>
+
+11
+00:01:16.135 --> 00:01:16.355
+<v Daniel>Right.</v>
+
+12
+00:01:16.615 --> 00:01:31.362
+<v Maya>What happens when it takes that exact same game playing machinery? The algorithms that were literally designed to beat human grandmasters at chess turns around and starts treating the fundamental laws of nature, the structural fabric of human biology, and the</v>
+
+13
+00:01:31.502 --> 00:01:34.183
+<v Maya>abstract rules of mathematics as a video game.</v>
+
+14
+00:01:34.543 --> 00:01:45.048
+<v Daniel>That is the exact moment the game stops being a mere simulation. It transforms into this, well, this lens for peering into the deepest, most intractable mechanics of our universe. It's</v>
+
+15
+00:01:45.128 --> 00:01:45.849
+<v Maya>fascinating. It</v>
+
+16
+00:01:45.869 --> 00:01:55.954
+<v Daniel>really is. The algorithms originally designed to maximize a score on a screen are now being used to unravel mysteries that have stumped brilliant human minds for half a century.</v>
+
+17
+00:01:56.234 --> 00:02:04.276
+<v Maya>And that is our mission for today. We've got a stack of three landmark papers published in the journal Nature, often referred to as DeepMind's Discovery Trilogy. A</v>
+
+18
+00:02:04.496 --> 00:02:05.877
+<v Daniel>very fitting name, honestly.</v>
+
+19
+00:02:06.137 --> 00:02:15.759
+<v Maya>Yeah. They chronicle how this specific lineage of artificial intelligence, the AlphaZero family, produced genuine, world-changing scientific and mathematical breakthroughs.</v>
+
+20
+00:02:16.019 --> 00:02:21.561
+<v Daniel>We are going to unpack exactly how this architecture was adapted to solve impossibly hard problems.</v>
+
+21
+00:02:22.286 --> 00:02:33.895
+<v Maya>Right, so here's the roadmap for you listening. We are going to start in the messy physical world of biology, examining how AI solved a 50-year-old mystery regarding the building blocks of life itself.</v>
+
+22
+00:02:34.315 --> 00:02:34.776
+<v Daniel>Alpha fold.</v>
+
+23
+00:02:34.916 --> 00:02:44.483
+<v Maya>Yep, alpha fold. Then we'll look at what happens when you remove physical reality entirely and let the AI loose in the pure abstract realm of theoretical mathematics.</v>
+
+24
+00:02:44.882 --> 00:02:53.126
+<v Daniel>And finally, we will dive into the bare metal of modern computing, uncovering how AI actually rewrote the foundational code running on trillions of devices right now.</v>
+
+25
+00:02:53.666 --> 00:03:06.192
+<v Maya>So whether you write code for a living, casually follow biology, or are just insanely curious about how the invisible world around you is constantly being optimized behind the scenes, this deep dive is going to completely change how you view the concept of playing a game.</v>
+
+26
+00:03:06.644 --> 00:03:21.516
+<v Daniel>The through-line connecting biology, theoretical math, and low-level computer code is astonishing. I mean, we're moving from flesh and blood to abstract thought to silicon and electricity, all united by a single computational</v>
+
+27
+00:03:21.576 --> 00:03:22.117
+<v Daniel>philosophy.</v>
+
+28
+00:03:22.364 --> 00:03:31.573
+<v Maya>Let's start with the flesh and blood then, the biological mystery. I really want to talk about AlphaFold, but to understand what this AI actually did, we need to understand the headache it was trying to cure, right?</v>
+
+29
+00:03:31.613 --> 00:03:32.854
+<v Daniel>Oh, it was a massive headache.</v>
+
+30
+00:03:33.014 --> 00:03:37.538
+<v Maya>Set the stage for us regarding the protein folding problem. What are we actually talking about here?</v>
+
+31
+00:03:37.758 --> 00:03:51.529
+<v Daniel>So to grasp the magnitude of the problem, we have to look at what proteins actually are. They are, quite literally, the microscopic workhorses of all living things. Everything your body does is mediated by proteins.</v>
+
+32
+00:03:51.609 --> 00:03:52.810
+<v Maya>Like literally everything.</v>
+
+33
+00:03:52.970 --> 00:04:04.298
+<v Daniel>Pretty much. They make up the physical structure of your muscles. They carry the oxygen in your bloodstream. They form the antibodies that fight off viruses in your immune system. And they act as the enzymes that digest your food.</v>
+
+34
+00:04:04.458 --> 00:04:05.899
+<v Maya>Okay, so they're incredibly important.</v>
+
+35
+00:04:06.160 --> 00:04:17.898
+<v Daniel>Right. But here is the critical mind-bending catch. When a protein is first created in your cells, it is not a functional machine. It's just a linear string.</v>
+
+36
+00:04:18.038 --> 00:04:19.660
+<v Maya>Wait, a linear string of what?</v>
+
+37
+00:04:19.800 --> 00:04:29.610
+<v Daniel>A string of chemical building blocks called amino acids. There are 20 different types of these amino acids, and they link together in a specific sequence dictated by your DNA.</v>
+
+38
+00:04:29.650 --> 00:04:34.395
+<v Maya>So if I'm picturing this, it's like a long string of different colored beads.</v>
+
+39
+00:04:34.755 --> 00:04:36.316
+<v Daniel>That is a perfect visualization.</v>
+
+40
+00:04:36.356 --> 00:04:36.616
+<v Maya>Yeah.</v>
+
+41
+00:04:37.217 --> 00:04:51.126
+<v Daniel>But a straight string of beads floating around in a cell doesn't do anything. To become a functional machine, to become an antibody or an enzyme, that one-dimensional string has to crumple, twist, and fold up into a very precise, highly complex three-dimensional shape.</v>
+
+42
+00:04:51.367 --> 00:04:54.068
+<v Maya>Because in biology, shape dictates function, right?</v>
+
+43
+00:04:54.128 --> 00:05:00.109
+<v Daniel>Exactly. A protein's physical form determines what other molecules it can bind to and what chemical reactions it can trigger.</v>
+
+44
+00:05:00.229 --> 00:05:04.690
+<v Maya>Meaning, if it folds up correctly into the shape of a key, it can unlock a specific cellular door.</v>
+
+45
+00:05:05.190 --> 00:05:15.772
+<v Daniel>And if it folds incorrectly, it can't. In fact, misfolded proteins are the root cause of many devastating conditions, including Alzheimer's, Parkinson's, and cystic fibrosis.</v>
+
+46
+00:05:15.992 --> 00:05:17.652
+<v Maya>Oh, wow. I didn't realize that.</v>
+
+47
+00:05:18.030 --> 00:05:25.387
+<v Daniel>Yeah, so understanding the exact 3D shape of a protein is the holy grail for understanding biology and developing targeted medicines.</v>
+
+48
+00:05:25.823 --> 00:05:34.647
+<v Maya>That brings us to the problem part of the protein folding problem, because we know the sequence of the beads, right? Like we can read DNA pretty easily now.</v>
+
+49
+00:05:34.947 --> 00:05:35.948
+<v Daniel>We can read it very easily.</v>
+
+50
+00:05:36.028 --> 00:05:42.151
+<v Maya>The problem is predicting how that specific string of beads is going to spontaneously crumple up into a 3D shape.</v>
+
+51
+00:05:42.271 --> 00:05:51.655
+<v Daniel>Yes. The 50-year-old protein folding problem is the quest to predict that final 3D structure based solely on the one-dimensional sequence of amino acids.</v>
+
+52
+00:05:51.775 --> 00:05:52.796
+<v Maya>And why is that so hard?</v>
+
+53
+00:05:53.450 --> 00:06:07.802
+<v Daniel>Well, to understand why it took 50 years to solve, we have to talk about Leventhal's paradox. In 1969, a molecular biologist named Cyrus Leventhal did some basic math. He calculated the number of possible ways a typical protein chain could bend and twist.</v>
+
+54
+00:06:08.675 --> 00:06:19.201
+<v Daniel>Because every link in the chain can rotate in multiple directions, the number of potential 3D shapes for a single, average-sized protein is estimated to be roughly 10 to the 300th power.</v>
+
+55
+00:06:19.261 --> 00:06:29.166
+<v Maya>Okay, let's unpack that number, 10 to the 300th power. For context for you listening, the estimated number of atoms in the entire observable universe is roughly 10 to the 80th power.</v>
+
+56
+00:06:29.706 --> 00:06:36.008
+<v Daniel>Exactly. The number of possible shapes for one tiny protein completely dwarfs the number of atoms in the universe.</v>
+
+57
+00:06:36.188 --> 00:06:37.689
+<v Maya>That is incomprehensible.</v>
+
+58
+00:06:37.889 --> 00:06:51.253
+<v Daniel>It really is. Leventhal pointed out that if a protein had to arrive at its correct shape by randomly trying out every possible configuration, even if it tried millions of shapes per second, it would take longer than the age of the universe to fold correctly.</v>
+
+59
+00:06:51.593 --> 00:06:55.734
+<v Maya>But inside our bodies, proteins fold into their correct shapes in a matter of milliseconds.</v>
+
+60
+00:06:56.134 --> 00:07:10.906
+<v Daniel>Which means they aren't guessing randomly. The physical forces, the attractions and repulsions between the different amino acids guide the protein down a highly specific folding pathway. The challenge for human scientists was trying to simulate or predict that exact</v>
+
+61
+00:07:11.006 --> 00:07:11.486
+<v Daniel>pathway.</v>
+
+62
+00:07:11.706 --> 00:07:20.512
+<v Maya>How are we doing it before AI? If predicting it computationally was impossible because of the sheer number of possibilities, how did we know what any protein looked like?</v>
+
+63
+00:07:20.652 --> 00:07:21.572
+<v Daniel>We had to do it the hard way.</v>
+
+64
+00:07:21.892 --> 00:07:22.693
+<v Maya>Like in a lab?</v>
+
+65
+00:07:22.813 --> 00:07:34.137
+<v Daniel>Yeah, through enormous, painstaking physical experiments. Scientists used techniques like X-ray crystallography, where you force a protein to crystallize and then blast it with X-rays to see how the beams scatter.</v>
+
+66
+00:07:34.197 --> 00:07:35.317
+<v Maya>That sounds complicated.</v>
+
+67
+00:07:35.377 --> 00:07:49.902
+<v Daniel>It's incredibly tedious. Or they used cryo-electron microscopy, where you flash freeze the protein and bombard it with electrons. Over several decades of grueling lab work, the global scientific community managed to determine the structures of about 100,000 unique proteins.</v>
+
+68
+00:07:51.120 --> 00:07:57.990
+<v Maya>Which sounds like a massive achievement, 100,000 proteins. But what's the denominator there? How many proteins are actually out there in nature?</v>
+
+69
+00:07:58.451 --> 00:08:13.394
+<v Daniel>Billions. There are billions of known protein sequences identified across different species. We had this massive, crippling bottleneck. Figuring out just one single protein structure experimentally could take a PhD student months, sometimes years,</v>
+
+70
+00:08:13.854 --> 00:08:16.075
+<v Daniel>of agonizing trial and error in a laboratory.</v>
+
+71
+00:08:16.095 --> 00:08:17.415
+<v Maya>That expensive, too, I'd imagine.</v>
+
+72
+00:08:17.515 --> 00:08:24.237
+<v Daniel>Oh, incredibly. It costs hundreds of thousands of dollars per structure. The scientific community desperately needed a computational shortcut.</v>
+
+73
+00:08:24.518 --> 00:08:39.456
+<v Maya>So we have a search space larger than the universe, a desperate need for a shortcut, and decades of computational failures. This is where DeepMind enters the picture with AlphaFold at an event called CASP14. What is CASP and why is this</v>
+
+74
+00:08:39.516 --> 00:08:41.899
+<v Maya>specific event so important to this story?</v>
+
+75
+00:08:42.352 --> 00:08:57.248
+<v Daniel>So CASP stands for the Critical Assessment of Protein Structure Prediction. It's essentially the global Olympics for computational biology, and it's held every two years. It's a rigorously designed blind test. The organizers collect amino acid sequences for proteins whose 3D structures have</v>
+
+76
+00:08:57.308 --> 00:09:04.096
+<v Daniel>recently been mapped in the lab by experimentalists. But crucially, those structures have not been made public yet. They're kept locked in a vault.</v>
+
+77
+00:09:04.411 --> 00:09:05.952
+<v Maya>So it's the ultimate answer key.</v>
+
+78
+00:09:06.172 --> 00:09:17.436
+<v Daniel>Yes. The organizers give the sequences to all the competing computational teams around the world. The teams use their algorithms and supercomputers to predict the 3D shapes and they submit their answers.</v>
+
+79
+00:09:17.736 --> 00:09:18.496
+<v Maya>And then they grade them.</v>
+
+80
+00:09:18.676 --> 00:09:33.515
+<v Daniel>Right. Then the organizers open the vault and compare the AI predictions to the hidden experimental truth. It is the absolute gold standard for measuring accuracy because it's literally impossible to cheat. The AI cannot memorize the answer because the</v>
+
+81
+00:09:33.596 --> 00:09:35.637
+<v Daniel>answer has never been published anywhere on Earth.</v>
+
+82
+00:09:36.220 --> 00:09:50.144
+<v Maya>The tension in that room when they reveal the results must be incredible. Let's talk about AlphaFold's performance at CASP14 because looking at the data, they didn't just win the competition. They fundamentally broke the scale of what anyone thought was possible.</v>
+
+83
+00:09:50.364 --> 00:10:01.987
+<v Daniel>Yeah. To say it was a breakthrough really undersells the shockwave it sent to the biological community. The primary metric they used to judge accuracy at CASP measures how close the predicted atoms are to the actual physical atoms.</v>
+
+84
+00:10:02.147 --> 00:10:02.347
+<v Maya>OK.</v>
+
+85
+00:10:03.087 --> 00:10:07.569
+<v Daniel>AlphaFold achieved a median backbone accuracy of 0.96 angstroms.</v>
+
+86
+00:10:07.949 --> 00:10:14.732
+<v Maya>Wait, hold on. Put that in perspective for me. I know an angstrom is used to measure things on an atomic scale, but how small is that physically?</v>
+
+87
+00:10:14.872 --> 00:10:21.155
+<v Daniel>To make that 0.96 number tangible, the width of a single carbon atom is roughly 1.4 angstroms.</v>
+
+88
+00:10:21.455 --> 00:10:31.860
+<v Maya>Are you saying the system predicted the crumpled, twisted, massive 3B position of an entire molecular chain, and its average margin of error was smaller than the width of a single carbon atom?</v>
+
+89
+00:10:31.960 --> 00:10:41.658
+<v Daniel>Yes. Its predictions were essentially indistinguishable from the painstaking physical experiments done in the lab. It was within the margin of error of the experimental equipment itself.</v>
+
+90
+00:10:41.758 --> 00:10:51.341
+<v Maya>That's just, that's insane. And just for context, how did the rest of the world do? How did the next best human design computational method perform in that exact same blind test?</v>
+
+91
+00:10:51.662 --> 00:10:56.925
+<v Daniel>The runner-up method at CASP14 managed a median backbone accuracy of 2.8 angstroms. But</v>
+
+92
+00:10:56.965 --> 00:10:57.565
+<v Maya>not even close.</v>
+
+93
+00:10:57.945 --> 00:11:12.833
+<v Daniel>Not even close. AlphaFold was orders of magnitude closer to physical reality. And when you look at the all-atom accuracy, meaning it isn't just predicting the main spine of the protein, but also the exact positions of all the tiny chemical side chains sticking out off</v>
+
+94
+00:11:12.873 --> 00:11:17.836
+<v Daniel>that spine, AlphaFold hit 1.5 angstroms. The next best team was at 3.5.</v>
+
+95
+00:11:19.296 --> 00:11:33.984
+<v Maya>So the obvious burning question is, how on earth did DeepMind solve Levinthal's paradox? How did they find the right shape out of 10 to the 300th possibilities without taking billions of years? Because I know previous computational methods tried two different routes,</v>
+
+96
+00:11:34.064 --> 00:11:34.384
+<v Maya>right?</v>
+
+97
+00:11:34.424 --> 00:11:43.429
+<v Daniel>Right. Some tried to simulate the raw physics of the molecules bouncing around, which just took too long. Others tried to look at evolutionary history, which was fast but never accurate enough.</v>
+
+98
+00:11:43.509 --> 00:11:44.950
+<v Maya>Exactly. So how did AlphaFull do it?</v>
+
+99
+00:11:45.010 --> 00:11:59.764
+<v Daniel>The brilliance of AlphaFold is how it elegantly and dynamically fused those two approaches together. Prior physical simulations failed because modeling the thermodynamic reality of thousands of interacting atoms pushing and pulling on each other at a quantum level is computationally</v>
+
+100
+00:11:59.904 --> 00:12:00.505
+<v Daniel>intractable.</v>
+
+101
+00:12:00.565 --> 00:12:01.506
+<v Maya>It's just too much math.</v>
+
+102
+00:12:01.786 --> 00:12:16.633
+<v Daniel>Way too much. And prior evolutionary approaches fell short because just knowing that two proteins share a common ancestor doesn't give you exact 3D atomic coordinates. DeepMind realized they had to redesign their entire neural network architecture from the ground up</v>
+
+103
+00:12:16.953 --> 00:12:22.936
+<v Daniel>to incorporate both evolutionary clues and physical geometric constraints into the deep learning algorithm itself.</v>
+
+104
+00:12:23.216 --> 00:12:35.415
+<v Maya>And they built this core engine called the Evoformer, the evolutionary transformer. This is the heart of the prediction machine. How does this evoformer actually process a string of amino acids?</v>
+
+105
+00:12:35.575 --> 00:12:44.559
+<v Daniel>The evoformer frames the prediction of a protein structure as a spatial graph inference problem. It processes two distinct but massive tracks of information simultaneously.</v>
+
+106
+00:12:44.619 --> 00:12:45.760
+<v Maya>OK. What's the first track?</v>
+
+107
+00:12:46.024 --> 00:13:00.791
+<v Daniel>The first track is called a multi-sequence alignment, or MSA. When you give AlphaFold a target protein sequence, it doesn't just look at that sequence in isolation. It immediately scans massive genetic databases to find millions of similar sequences from across the entire tree of life, from</v>
+
+108
+00:13:00.831 --> 00:13:02.612
+<v Daniel>bacteria to plants to other animals.</v>
+
+109
+00:13:02.872 --> 00:13:17.740
+<v Maya>It's looking for evolutionary breadcrumbs. Like, if I have a specific amino acid at position 10 and another one at position 50, and I notice that over millions of years of evolution, whenever the one at position 10 mutates, the one at position 50 always mutates with it, I can reasonably</v>
+
+110
+00:13:17.780 --> 00:13:26.865
+<v Maya>guess those two parts must be physically touching each other in the folded 3D shape, right? Otherwise, why would they co-mutate? Exactly.</v>
+
+111
+00:13:27.546 --> 00:13:42.170
+<v Daniel>Evolutionary commutation is a massive clue about spatial proximity. If they always change together to maintain the protein's function, they are likely neighbors in 3D space, even if they're far apart on the 1D string. Right. That is the MSA track.</v>
+
+112
+00:13:42.610 --> 00:13:55.089
+<v Daniel>The second track of information flowing through the evoformer is the pair representation. This encodes information about the geometric and physical relationship between the amino acid residues. It is the mathematical representation of the physical constraints of the universe.</v>
+
+113
+00:13:55.229 --> 00:13:56.770
+<v Maya>The rules of anatomy, essentially.</v>
+
+114
+00:13:56.790 --> 00:14:04.554
+<v Daniel>Yes. And the evoformer's truly groundbreaking innovation is that it constantly exchanges information between these two tracks. It isn't a one-way street. They never</v>
+
+115
+00:14:04.574 --> 00:14:05.415
+<v Maya>talk to each other?</v>
+
+116
+00:14:05.915 --> 00:14:18.082
+<v Daniel>Exactly. The evolutionary data updates the physical geometry track. And the physical geometry track updates the evolutionary data track. They cross-communicate back and forth dozens of times within the network block.</v>
+
+117
+00:14:18.435 --> 00:14:33.368
+<v Maya>I want to try and visualize this for a second because the engineering here is wild. Imagine you were tasked with guessing a specific person's exact 3D posture. You have to know exactly how their arms are crossed, how their knees are bent, and how their head is tilted. Okay. But you can't see them.</v>
+
+118
+00:14:34.049 --> 00:14:48.619
+<v Maya>All you have are millions of flat 2B photographs of their distant relatives. That's your multi-sequence alignment, your evolutionary breadcrumbs. But simultaneously, you are holding a strict rulebook of human anatomy that applies the rigid laws of</v>
+
+119
+00:14:48.679 --> 00:14:58.164
+<v Maya>physics. The rulebook tells you that human elbows cannot bend backward and two bones cannot occupy the same physical space at the same time. That's your pair representation.</v>
+
+120
+00:14:58.344 --> 00:15:00.786
+<v Daniel>That's a great analogy. The cross-communication is the key there.</v>
+
+121
+00:15:00.986 --> 00:15:15.540
+<v Maya>Right. So the AI looks at the family photos and says, it looks like the left hand is touching the right shoulder. It passes that guess to the physics rulebook. The physics rulebook calculates it and says, well, if the hand is touching the shoulder, the elbow must be bent at this</v>
+
+122
+00:15:15.620 --> 00:15:18.822
+<v Maya>exact 45 degree angle. Otherwise, the bone breaks.</v>
+
+123
+00:15:18.862 --> 00:15:19.603
+<v Daniel>Yes, exactly.</v>
+
+124
+00:15:19.863 --> 00:15:34.413
+<v Maya>And then the physics rulebook passes that 45 degree angle back to the photos to see if it makes sense with the other relatives. The system just constantly bounces back and forth between the evolutionary clues and the rigid laws of physics until it locks in a posture that perfectly satisfies both.</v>
+
+125
+00:15:34.929 --> 00:15:42.312
+<v Daniel>And the way it finally locks in that posture brings us to another critical, deeply elegant mechanism in AlphaFold, which is called recycling.</v>
+
+126
+00:15:42.647 --> 00:15:45.808
+<v Maya>Iterative refinement, the system double-checking its own math.</v>
+
+127
+00:15:45.928 --> 00:16:00.514
+<v Daniel>Yes. Once the Evoformer finishes its processing and the network generates a 3D structural output, it doesn't just print the result and stop. It takes that final 3D shape, along with all of its internal confidence scores and distance calculations, and it</v>
+
+128
+00:16:00.574 --> 00:16:04.075
+<v Daniel>recursively feeds them right back into the very beginning of the same modules.</v>
+
+129
+00:16:04.256 --> 00:16:05.656
+<v Maya>It recycles its own output.</v>
+
+130
+00:16:06.116 --> 00:16:10.418
+<v Daniel>Exactly. It continuously and locally refines all parts of the structure simultaneously.</v>
+
+131
+00:16:10.730 --> 00:16:19.053
+<v Maya>It's basically asking, does this crumpled shape still make sense if I run it through the laws of physics one more time? Are there any overlapping atoms I missed?</v>
+
+132
+00:16:19.473 --> 00:16:34.258
+<v Daniel>Precisely. It passes the entire structure through the network multiple times, smoothing out the physical impossibilities with each pass. And the scale at which this works is breathtaking. The paper highlights a specific, incredibly difficult target from</v>
+
+133
+00:16:34.318 --> 00:16:36.899
+<v Daniel>CASP14, known as T10O44.</v>
+
+134
+00:16:38.148 --> 00:16:41.609
+<v Maya>Why was T10-044 such a nightmare for the competitors?</v>
+
+135
+00:16:42.029 --> 00:16:55.834
+<v Daniel>Two reasons. First, it was massive. It was a 2,180 residue single-chain protein. Predicting the shape of a small protein is hard enough. Predicting one with over 2,000 links is exponentially harder due to that combinatorial explosion we talked about with Leventhal's paradox.</v>
+
+136
+00:16:55.914 --> 00:16:58.755
+<v Maya>Right. The 10 to the 300th power problem just gets worse.</v>
+
+137
+00:16:58.955 --> 00:17:04.477
+<v Daniel>Much worse. Second, and crucially, T10-044 had no known structural homologs.</v>
+
+138
+00:17:04.778 --> 00:17:11.384
+<v Maya>meaning there were no known similar protein structures in the public databases to cheat off of. The AI was flying completely blind.</v>
+
+139
+00:17:11.724 --> 00:17:26.336
+<v Daniel>It was a true zero-shot structural prediction challenge. And AlphaFold nailed it perfectly. It predicted this massive complex structure with correct domain packing completely automatically without any human intervention or tweaking.</v>
+
+140
+00:17:26.665 --> 00:17:28.127
+<v Maya>That is just incredible.</v>
+
+141
+00:17:28.287 --> 00:17:37.175
+<v Daniel>It proved that this game playing architecture doesn't just work for tiny, simple proteins. Yeah. But for the massive labyrinthian molecular machines that actually drive biological life.</v>
+
+142
+00:17:37.456 --> 00:17:52.119
+<v Maya>So AlphaFull proves that we can constrain an A.I. with the laws of physics and evolutionary history to solve a real world biological crisis. But reading through this, it makes me wonder, physics is essentially just applied mathematics. The physical universe has strict rules.</v>
+
+143
+00:17:52.520 --> 00:18:03.792
+<v Maya>What happens if we take those training wheels off? If we remove physical reality completely, discard the atoms and the amino acids, and just let this AI loose inside a pure, theoretical, abstract math problem?</v>
+
+144
+00:18:03.992 --> 00:18:17.545
+<v Daniel>That transition takes us away from the microscope and into the realm of pure computation. We enter the world of Alpha Tensor, which is perhaps an even more striking example of recasting reality as a game because the reality it is exploring is entirely invisible.</v>
+
+145
+00:18:17.843 --> 00:18:32.726
+<v Maya>Let's talk about the math game. The core problem Alpha Tensor tackled is matrix multiplication. Now, I have to be honest. When I first saw this, I scratched my head. Matrix multiplication is literally just taking grids of numbers and columns and multiplying</v>
+
+146
+00:18:32.746 --> 00:18:43.788
+<v Maya>them together. I learned how to do that by hand on a chalkboard in high school. Why is finding a new way to do something so fundamental, something so basic, considered a massive deal for artificial intelligence?</v>
+
+147
+00:18:44.475 --> 00:18:59.442
+<v Daniel>It is easy to dismiss it as a chalkboard exercise. But if we connect this to the bigger picture of how our modern world operates, matrix multiplication is arguably the single most foundational computational operation in existence. Almost all digital computing relies</v>
+
+148
+00:18:59.522 --> 00:18:59.682
+<v Daniel>on it.</v>
+
+149
+00:18:59.902 --> 00:19:01.143
+<v Maya>Really? Almost all of it?</v>
+
+150
+00:19:01.183 --> 00:19:16.019
+<v Daniel>Yes. When a computer renders the 3D graphics in a video game, it's multiplying matrices. When a server compresses a video file to stream it to your TV, it's multiplying matrices. When meteorologists simulate global weather patterns, matrices. And most importantly, the entire</v>
+
+151
+00:19:16.159 --> 00:19:30.954
+<v Daniel>field of modern artificial intelligence. the training of the massive neural networks like the one we are discussing right now is fundamentally just multiplying gigantically massive matrices together billions and billions of times a</v>
+
+152
+00:19:30.994 --> 00:19:31.315
+<v Daniel>second</v>
+
+153
+00:19:31.415 --> 00:19:35.939
+<v Maya>it isn't just a math problem it's the raw plumbing of the internet and modern technology</v>
+
+154
+00:19:36.140 --> 00:19:36.600
+<v Daniel>exactly</v>
+
+155
+00:19:36.760 --> 00:19:37.001
+<v Maya>yeah</v>
+
+156
+00:19:37.121 --> 00:19:51.794
+<v Daniel>it is the plumbing And because it is the plumbing, if you can find a mathematical shortcut, a way to multiply those matrices using even a tiny fraction of a percent fewer mathematical operations, that computational savings scales exponentially across the globe.</v>
+
+157
+00:19:51.994 --> 00:19:53.655
+<v Maya>It massively speeds up software.</v>
+
+158
+00:19:53.735 --> 00:20:04.665
+<v Daniel>It massively speeds up software, it saves vast amounts of electrical energy, and it frees up computing time. But finding those faster mathematical methods is a monumental, mind-bending, combinatorial search problem.</v>
+
+159
+00:20:04.983 --> 00:20:18.246
+<v Maya>And this is where the history of this problem gets really fascinating, because before DeepMind stepped in, humans had been banging their heads against this specific wall for a long time. Tell me about Volker Strassen, because his story sets the stakes for what Alpha Tensor actually achieved.</v>
+
+160
+00:20:18.567 --> 00:20:33.270
+<v Daniel>So Volker Strassen is a German mathematician who, in 1969, shocked the mathematical world. For centuries, everyone assumed that the standard, traditional way to multiply matrices was the most efficient way possible. Right. For example, if you want to</v>
+
+161
+00:20:33.310 --> 00:20:48.053
+<v Daniel>multiply two 2x2 matrices together, the standard schoolbook method required eight individual scalar multiplications. Mathematicians were actually trying to write proof showing that it was physically impossible to do it in fewer than eight multiplications.</v>
+
+162
+00:20:48.304 --> 00:20:50.865
+<v Maya>They were trying to prove the ceiling was mathematically absolute.</v>
+
+163
+00:20:50.925 --> 00:21:03.690
+<v Daniel>Right. But Strassen, while trying to prove that 8 was the limit, accidentally discovered a wildly unintuitive algebraic trick. He proved that you could actually multiply two 2x2 matrices using only seven multiplications.</v>
+
+164
+00:21:03.910 --> 00:21:07.972
+<v Maya>He found a shortcut through the math that no one in human history had ever seen.</v>
+
+165
+00:21:08.232 --> 00:21:21.259
+<v Daniel>He didn't stop there. Because matrix multiplication is recursive, he scaled that insight up. He showed that for a 4x4 matrix, you could complete the multiplication using 49 scalar multiplications, rather than the standard 64.</v>
+
+166
+00:21:21.990 --> 00:21:36.456
+<v Maya>And that number 49 multiplications for a 4x4 matrix became a wall. For 50 years, half a century, armies of brilliant mathematicians and rooms full of supercomputers tried to find a way to do it in 48 or 47,</v>
+
+167
+00:21:36.956 --> 00:21:37.496
+<v Maya>and they couldn't.</v>
+
+168
+00:21:37.797 --> 00:21:38.757
+<v Daniel>It was untouchable.</v>
+
+169
+00:21:38.897 --> 00:21:47.781
+<v Maya>The 49 multiplication record stood completely untouched. Until DeepMind decided to turn this abstract algebra problem into a single-player video game.</v>
+
+170
+00:21:48.241 --> 00:21:54.082
+<v Daniel>This is the genius of the AlphaZero architecture. DeepMind formulated a game they called Tensor Game.</v>
+
+171
+00:21:54.803 --> 00:21:59.932
+<v Maya>If I'm listening to this, I'm probably wondering, how on earth do you play a game of math? What is the board and what are the pieces?</v>
+
+172
+00:22:00.529 --> 00:22:10.313
+<v Daniel>In Tensor Game, the board is a 3D tensor, which you can visualize as a multidimensional grid or a queue of numbers that perfectly represents the matrix multiplication problem you were trying to</v>
+
+173
+00:22:10.353 --> 00:22:11.134
+<v Maya>solve.</v>
+
+174
+00:22:11.414 --> 00:22:26.220
+<v Daniel>At each step of the game, the AI player selects how to combine different entries of those matrices. Each move it makes represents one mathematical operation. The score, or the reward it gets at the end of the game, is based entirely on minimizing the total number of operations required to reach the</v>
+
+175
+00:22:26.260 --> 00:22:27.481
+<v Daniel>mathematically correct result.</v>
+
+176
+00:22:27.762 --> 00:22:42.750
+<v Maya>So it's trying to reach the destination using the fewest possible steps. But the scale of this game, this is where my brain starts to melt. Let's compare this to the games this AI architecture was originally designed for. When you play chess, at any given moment, you evaluate</v>
+
+177
+00:22:42.770 --> 00:22:57.578
+<v Maya>the board and you have maybe a few dozen possible legal moves. Even in Go, which is notoriously complex and considered the pinnacle of board games, you're looking at a couple hundred possible actions per turn. In Tensor Game, how many possible moves is the</v>
+
+178
+00:22:57.658 --> 00:23:00.640
+<v Maya>AI looking at for every single step?</v>
+
+179
+00:23:00.960 --> 00:23:09.224
+<v Daniel>The AI is facing an action space of more than 10 to the 12th power. That is over 1 trillion possible actions per step.</v>
+
+180
+00:23:09.424 --> 00:23:20.450
+<v Maya>Over a trillion choices every single time it tries to make a move. How does a computer not just instantly crash or freeze when faced with a trillion choices per second? How does it actually choose a path without calculating until the end of time?</v>
+
+181
+00:23:20.905 --> 00:23:35.391
+<v Daniel>This is why traditional continuous optimization algorithms and human-designed heuristics completely fall apart here. They get lost in that trillion-path maze. Alpha Tensor survives this combinatorial explosion by using a sophisticated mechanism called</v>
+
+182
+00:23:35.731 --> 00:23:40.313
+<v Daniel>Monte Carlo Tree Search, or MCTS, guided by a deep neural network.</v>
+
+183
+00:23:40.713 --> 00:23:43.914
+<v Maya>Write down Monte Carlo Tree Search for me. What is it actually doing?</v>
+
+184
+00:23:44.154 --> 00:23:58.950
+<v Daniel>Think about how a human grandmaster plays chess. When they look at the board, they don't calculate every single possible move and every single possible counter move until the end of the game. That's impossible. There are too many branches on the tree. Instead, the Grandmaster relies</v>
+
+185
+00:23:59.110 --> 00:24:13.533
+<v Daniel>on intuition to immediately prune the bad branches. They look at the board and instantly dismiss 99% of the possible moves as terrible, focusing their deep calculation only on the two or three moves that feel right. MCTS does exactly this, but</v>
+
+186
+00:24:13.573 --> 00:24:14.353
+<v Daniel>computationally.</v>
+
+187
+00:24:14.767 --> 00:24:23.976
+<v Maya>It builds a branching tree of possible futures, but it only explores the branches that look promising. But how does it know which mathematical branches are promising out of a trillion options?</v>
+
+188
+00:24:24.377 --> 00:24:33.546
+<v Daniel>That is where the deep neural network comes in. The network looks at the current state of the 3D tensor, and it outputs two critical signals, a policy and a value.</v>
+
+189
+00:24:33.826 --> 00:24:34.807
+<v Maya>Okay, what's the policy?</v>
+
+190
+00:24:35.314 --> 00:24:49.366
+<v Daniel>The policy is essentially the AI's intuition. It provides a probability distribution over the most promising potential actions. It tells the MCTS planner, out of these trillion moves, only look at these specific thousand because the rest are garbage.</v>
+
+191
+00:24:50.042 --> 00:24:53.305
+<v Maya>So the policy is the gut feeling. What is the value?</v>
+
+192
+00:24:53.625 --> 00:25:06.097
+<v Daniel>The value is the calculated confidence score. It is the network's estimate of the cumulative reward. It is looking down a specific branch of math and guessing, if we go down this path, I estimate it will cost us 50 multiplications in total.</v>
+
+193
+00:25:06.477 --> 00:25:07.118
+<v Maya>Ah, I see.</v>
+
+194
+00:25:07.630 --> 00:25:22.476
+<v Daniel>The MCTS planner uses the policy gut feeling and the value confidence score to navigate the maze. And crucially, when the game finally finishes, the AI takes the final verified mathematical result and uses it to update its own neural network. It teaches itself which gut</v>
+
+195
+00:25:22.516 --> 00:25:25.417
+<v Daniel>feelings were right and which were wrong, getting smarter for the next game.</v>
+
+196
+00:25:25.698 --> 00:25:40.144
+<v Maya>And to make the problem even slightly manageable, they constrained alpha tensor initially to a specific type of arithmetic. The source paper mentions modular arithmetic, specifically a finite field known as Z2. What does that mean in plain English?</v>
+
+197
+00:25:40.582 --> 00:25:54.794
+<v Daniel>In plain English, Z2 modular arithmetic is essentially wraparound math or clock math, working purely with binary zeros and ones. Think about a clock face. If it is 10 o'clock and you add four hours, it doesn't become 14 o'clock.</v>
+
+198
+00:25:54.895 --> 00:25:56.576
+<v Maya>It wraps around the 12 and becomes 2 o'clock.</v>
+
+199
+00:25:56.856 --> 00:26:06.865
+<v Daniel>Exactly. Z2 is a mathematical space that works similarly but with only two numbers. It is a highly constrained, simplified environment that is very common in computer science and cryptography.</v>
+
+200
+00:26:06.985 --> 00:26:17.692
+<v Maya>So they put Alpha Tensor into this Z2 wraparound math environment, tasked it with multiplying 4x4 matrices, and told it to beat the 50-year-old Volker Strassen record of 49 multiplications.</v>
+
+201
+00:26:17.752 --> 00:26:26.678
+<v Daniel>Yes, and Alpha Tensor, navigating a trillion-choice maze, discovered an entirely novel algorithm to multiply 4x4 matrices in just 47 multiplications.</v>
+
+202
+00:26:27.053 --> 00:26:41.747
+<v Maya>It shattered a 50-year-old ceiling by finding a path that no human mind had ever conceptualized. And the AI didn't just stumble upon this by brute force. It actually learned clever ways to generate its own training data, right? I read about a trick they used called</v>
+
+203
+00:26:41.827 --> 00:26:42.928
+<v Maya>data augmentation.</v>
+
+204
+00:26:43.632 --> 00:26:58.538
+<v Daniel>That was a brilliant piece of engineering. Matrix multiplication is fundamentally order invariant in certain ways. If you find a sequence of operations that works, you can often swap the order of some of those operations or swap the rows and columns, and the underlying algorithm</v>
+
+205
+00:26:58.598 --> 00:26:59.318
+<v Daniel>is still valid.</v>
+
+206
+00:26:59.598 --> 00:26:59.878
+<v Maya>Okay.</v>
+
+207
+00:27:00.219 --> 00:27:11.183
+<v Daniel>DeepMind took the AI's successful finished games, mathematically permuted them, shuffled them around, and fed thousands of these variations back to the neural network as bonus training data.</v>
+
+208
+00:27:11.600 --> 00:27:19.567
+<v Maya>It's like a chess player winning a match and then realizing, wait, if I mirror the board, the strategy still works and instantly learning two strategies for the price of one.</v>
+
+209
+00:27:19.747 --> 00:27:32.358
+<v Daniel>Exactly. It squeezed massive amounts of learning out of every single success. And it is vital to point out that Alpha Tensor didn't just break the Z2 modular arithmetic record. It eventually moved on to standard arithmetic, the normal math we use every day.</v>
+
+210
+00:27:32.798 --> 00:27:34.260
+<v Maya>And did it find improvements there, too?</v>
+
+211
+00:27:34.671 --> 00:27:49.438
+<v Daniel>it found completely novel improvements there as well. For example, when multiplying a 4x5 matrix by a 5x5 matrix, the previous human state-of-the-art algorithm required 80 multiplications. AlphaTensor found a rank 76 decomposition,</v>
+
+212
+00:27:49.778 --> 00:27:51.739
+<v Daniel>meaning it solved it in exactly 76 operations.</v>
+
+213
+00:27:52.910 --> 00:28:07.901
+<v Maya>It is consistently finding efficiencies in spaces where humanity assumed there was absolutely no room left to optimize. But what really blew me away is that Alpha Tensor didn't just output theoretical equations on a whiteboard. It actually optimized algorithms for specific physical</v>
+
+214
+00:28:07.941 --> 00:28:08.401
+<v Maya>hardware?</v>
+
+215
+00:28:08.461 --> 00:28:21.551
+<v Daniel>Yes. You can program the Tensor game's reward function not just to count the absolute number of operations, but to measure how fast the algorithm physically executes on a specific microchip, like an NVIDIA GPU or a Google TPU.</v>
+
+216
+00:28:21.746 --> 00:28:28.150
+<v Maya>Because the way a specific processor handles memory can make a theoretically longer math equation run faster in reality.</v>
+
+217
+00:28:28.350 --> 00:28:36.336
+<v Daniel>Exactly. Alpha Tensor learned the physical quirks of the silicon and designed bespoke mathematical algorithms tailored to run blindingly fast on that exact chip.</v>
+
+218
+00:28:36.556 --> 00:28:51.365
+<v Maya>Which perfectly bridges us to the third and final chapter of this deep dive. Alpha Fold mastered the physical 3D world of biology. Alpha Tensor mastered the abstract theoretical world of mathematical algorithms. But as you just hinted at, an</v>
+
+219
+00:28:51.445 --> 00:29:06.069
+<v Maya>algorithm on a whiteboard is one thing. To actually change the world, that math has to be translated into the raw, literal electrical instructions that flow through a computer's processor. We are moving from the abstract to the extremely literal.</v>
+
+220
+00:29:06.629 --> 00:29:07.670
+<v Maya>Let's talk about AlphaDev.</v>
+
+221
+00:29:07.950 --> 00:29:17.272
+<v Daniel>AlphaDev is where this technology hits the bare metal. The target problem DeepMind chose for AlphaDev was sorting algorithms, specifically at the assembly code level.</v>
+
+222
+00:29:17.473 --> 00:29:27.430
+<v Maya>Okay, sorting algorithms. That's not simple enough. Taking a random list of numbers and arranging them from smallest to largest, or a list of names and putting them in alphabetical order. Why is sorting such a big deal?</v>
+
+223
+00:29:27.881 --> 00:29:42.629
+<v Daniel>Sorting is, alongside matrix multiplication, a foundational pillar of computer science. It is estimated that sorting routines consume a massive percentage of the world's daily computing power. Oh, absolutely. Every time your computer searches a database, every time it renders a</v>
+
+224
+00:29:42.689 --> 00:29:47.971
+<v Daniel>list of files in a folder, every time it processes a web query, it is running a sorting algorithm.</v>
+
+225
+00:29:48.191 --> 00:29:58.076
+<v Maya>But D-Mind didn't have Alphadev optimize this in a high-level, human-readable coding language like Python or C++, right? They sent the AI down into the basement of computing.</v>
+
+226
+00:29:58.116 --> 00:30:08.944
+<v Daniel>They sent it to the assembly level. When a human software engineer writes code in C++A, they're writing in a language that humans can somewhat read. But a computer processor doesn't speak C++A.</v>
+
+227
+00:30:09.264 --> 00:30:09.444
+<v Maya>Right.</v>
+
+228
+00:30:09.905 --> 00:30:24.618
+<v Daniel>A piece of software called a compiler has to translate that C++ code down into assembly instructions. Assembly is the absolute lowest level, most primitive set of commands that a CPU architecture can understand right before it gets translated into raw electrical</v>
+
+229
+00:30:24.698 --> 00:30:26.440
+<v Daniel>pulses of binary ones and there is.</v>
+
+230
+00:30:26.600 --> 00:30:31.865
+<v Maya>We are talking about the by 86 processor architecture using AT&T syntax.</v>
+
+231
+00:30:32.286 --> 00:30:47.209
+<v Daniel>Exactly. We are talking about highly granular instructions that manipulate the physical hardware of the chip. Instructions like MOV, which physically moves a piece of data from the computer's memory into a temporary holding cell on the processor called a register,</v>
+
+232
+00:30:47.589 --> 00:30:48.970
+<v Daniel>like percent EAX.</v>
+
+233
+00:30:49.190 --> 00:30:50.371
+<v Maya>Wow, that is low level.</v>
+
+234
+00:30:50.551 --> 00:31:04.703
+<v Daniel>Very. Or the CMP instruction, which compares the voltages of two different registers. Or CMOVX, which conditionally moves a value based on the result of that previous comparison. It is incredibly tedious, rigid, and unforgiving.</v>
+
+235
+00:31:05.193 --> 00:31:19.666
+<v Maya>DeepMind took this microscopic world and formulated it into assembly game. The AI player has to select from a combinatorial space of these raw assembly instructions one by one to build a perfectly functioning sorting algorithm</v>
+
+236
+00:31:19.746 --> 00:31:20.927
+<v Maya>entirely from scratch.</v>
+
+237
+00:31:20.967 --> 00:31:21.928
+<v Daniel>That's the premise, yeah.</v>
+
+238
+00:31:22.168 --> 00:31:37.043
+<v Maya>I want to spend some time on this because the sheer difficulty of assembly game is hard to wrap your head around. I have an analogy and I want to see if this accurately captures the stakes. When an AI plays Go... If it makes a suboptimal move, it might lose a little bit of territory on the board.</v>
+
+239
+00:31:37.463 --> 00:31:44.065
+<v Maya>Its probability of winning drops from 80% to 75%. But the game continues, right? The AI can recover.</v>
+
+240
+00:31:44.085 --> 00:31:45.626
+<v Daniel>Right. It's a continuous state space.</v>
+
+241
+00:31:45.933 --> 00:31:54.600
+<v Maya>Building a program in a raw assembly code is nothing like that. It is like playing Jenga, but you are building the tower blindfolded, starting entirely from scratch.</v>
+
+242
+00:31:54.780 --> 00:31:56.201
+<v Daniel>The foundation has to be flawless.</v>
+
+243
+00:31:56.401 --> 00:32:11.062
+<v Maya>Right, because in assembly, every single instruction relies on the absolute precision of the instruction before it. If the AI places a value into register A instead of register B... Or if it tells the processor to jump to memory address 10 instead of memory address 12,</v>
+
+244
+00:32:11.503 --> 00:32:16.728
+<v Maya>it doesn't just lose territory. The entire program instantly crashes. It results in a segmentation fault.</v>
+
+245
+00:32:16.828 --> 00:32:17.268
+<v Daniel>Exactly.</v>
+
+246
+00:32:17.328 --> 00:32:28.740
+<v Maya>The Jenga tower instantly collapses into dust. There is no partial credit in assembly code. The reward function here seems utterly brutal. It is either perfectly mathematically correct or it is total garbage.</v>
+
+247
+00:32:29.137 --> 00:32:43.626
+<v Daniel>That analogy captures the exact fragility of the environment. The absolute uncompromising demand for provable, flawless correctness makes exploration in assembly game incredibly difficult. The mathematical search base is massive,</v>
+
+248
+00:32:43.787 --> 00:32:58.549
+<v Daniel>comparable to the number of possible games in chess or Go. But unlike chess or Go, where millions of different moves can lead to a playable middle game, in assembly game, almost every single path leads to a fatal crash. The AI has to navigate an ocean of broken code to</v>
+
+249
+00:32:58.589 --> 00:33:00.651
+<v Daniel>find a single island of functionality.</v>
+
+250
+00:33:01.010 --> 00:33:08.437
+<v Maya>So how do you even score a game like that? How does the AI know it actually built a sorting algorithm and not just a random sequence of MOV commands?</v>
+
+251
+00:33:08.677 --> 00:33:15.122
+<v Daniel>The reward function for assembly game evaluates the AI's code on two strictly ordered criteria, correctness and latency.</v>
+
+252
+00:33:15.202 --> 00:33:16.203
+<v Maya>Okay, correctness first.</v>
+
+253
+00:33:16.544 --> 00:33:31.355
+<v Daniel>First is correctness. The game engine takes the AI's generated assembly code and feeds it a massive, exhaustive suite of test input sequences. It gives it every possible permutation of unsorted numbers and checks if the output is perfectly sorted</v>
+
+254
+00:33:31.455 --> 00:33:38.999
+<v Daniel>every single time. If the code fails to sort even one single test sequence correctly, the AI gets heavily penalized and scores a zero.</v>
+
+255
+00:33:39.039 --> 00:33:40.500
+<v Maya>The code has to be bulletproof.</v>
+
+256
+00:33:40.680 --> 00:33:50.644
+<v Daniel>It must be mathematically proven to be perfectly correct. Only if the algorithm passes that brutal correctness test does the system then reward the AI based on latency.</v>
+
+257
+00:33:51.005 --> 00:33:52.486
+<v Maya>And latency is just speed, right?</v>
+
+258
+00:33:52.546 --> 00:34:01.933
+<v Daniel>Right. Latency is measured by either how few absolute instructions the code used or by deploying it to a physical CPU and measuring exactly how fast it executed in real time.</v>
+
+259
+00:34:02.093 --> 00:34:16.792
+<v Maya>And the results. Again, they are staggering. AlphaDev discovered entirely new sorting algorithms from scratch that beat the state-of-the-art human benchmarks, algorithms that human engineers had spent decades refining. The paper breaks these discoveries down into fixed sort algorithms and</v>
+
+260
+00:34:16.832 --> 00:34:19.095
+<v Maya>variable sort algorithms. What is the difference?</v>
+
+261
+00:34:19.575 --> 00:34:34.479
+<v Daniel>A fixed sort algorithm. is designed to sort sequences of a very specific, unchanging length. For example, sorting exactly three elements. Yeah. Or exactly five elements. A variable sort algorithm is more complex. It can handle lists of</v>
+
+262
+00:34:34.539 --> 00:34:39.040
+<v Daniel>varying, unpredictable lengths. Alphadev discovered breakthroughs in both categories.</v>
+
+263
+00:34:39.361 --> 00:34:45.242
+<v Maya>Let's quantify the impact of these discoveries. How much faster was the AI's assembly code compared to the best human code?</v>
+
+264
+00:34:45.450 --> 00:34:54.597
+<v Daniel>For sorting very short sequences, like a fixed length of five elements, AlphaDev achieved an astonishing 70% improvement in computational efficiency.</v>
+
+265
+00:34:54.657 --> 00:34:56.259
+<v Maya>70%! That's insane!</v>
+
+266
+00:34:56.339 --> 00:35:08.288
+<v Daniel>That is a massive leap, and what is incredible is that it achieved these speed-ups by discovering a technique researchers call AlphaDev Swap and Copy. It essentially figured out how to eliminate certain branching predictions.</v>
+
+267
+00:35:08.489 --> 00:35:10.010
+<v Maya>Branching predictions, what are those?</v>
+
+268
+00:35:10.509 --> 00:35:18.935
+<v Daniel>Basically, they are the moments where a CPU has to guess which path a code will take. Alphadev eliminated them by using conditional move instructions in a highly unintuitive sequence.</v>
+
+269
+00:35:19.235 --> 00:35:25.300
+<v Maya>It eliminated the CPU's need to guess, which eliminated the microsecond delays caused when the CPU guesses wrong.</v>
+
+270
+00:35:25.565 --> 00:35:40.102
+<v Daniel>Precisely. And even for sorting massive sequences, with over 250,000 elements, Alphadev still achieved roughly a 1.7% improvement in speed across various architectures, including ARMv8, Intel Skylake, and</v>
+
+271
+00:35:40.222 --> 00:35:41.804
+<v Daniel>AMD Zen 2 CPUs.</v>
+
+272
+00:35:42.085 --> 00:35:56.208
+<v Maya>Now, to someone casually listening, a 1.7% improvement might sound a bit underwhelming compared to the 70% jump, but we have to emphasize the sheer gravity of where this code actually went. Yes, absolutely. These discoveries did not stay in a white paper. DeepMind took these exact,</v>
+
+273
+00:35:56.488 --> 00:36:11.152
+<v Maya>ultra-optimized assembly subroutines discovered by Alphadev, reverse-engineered them back into readable C++ code, and pushed them to the official LLVM Libby++ standard library. Let's explain what that library is, because it is the linchpin of this entire</v>
+
+274
+00:36:11.212 --> 00:36:11.512
+<v Maya>story.</v>
+
+275
+00:36:11.917 --> 00:36:26.826
+<v Daniel>The LLVM Libby++ standard sorting library is one of the most fundamental pillars of modern software engineering. It is an open source repository of code used by millions of developers and countless international corporations. When a software engineer writing an application types a</v>
+
+276
+00:36:26.866 --> 00:36:36.071
+<v Daniel>command to sort a list, they are not writing the sorting math themselves. Their compiler reaches into the standard library and pulls out this exact underlying code.</v>
+
+277
+00:36:36.558 --> 00:36:51.168
+<v Maya>So it is the bedrock layer. And changing the bedrock layer is incredibly risky. The developers who maintain that library do not accept updates lightly. I read that this was the first time in over a decade that this specific sorting code was updated.</v>
+
+278
+00:36:51.688 --> 00:37:04.917
+<v Daniel>It had remained unpatched for over 10 years because it was assumed to be as optimal as humanly possible. And it was the first time in history that a component in this foundational library was replaced by an algorithm automatically discovered using reinforcement learning.</v>
+
+279
+00:37:05.310 --> 00:37:19.594
+<v Maya>This is the mind-blowing part for me. Because this code is sitting inside a standard library used globally, these AI-discovered routines are literally being called trillions of times every single day. Trillions of times a day. Servers running cloud</v>
+
+280
+00:37:19.614 --> 00:37:34.143
+<v Maya>infrastructure, laptops browsing the web, and mobile phones querying databases are saving a tiny fraction of a microsecond of processing time. They are saving a tiny fraction of a watt of electricity. And it is all happening silently in the background</v>
+
+281
+00:37:34.725 --> 00:37:38.978
+<v Maya>because an AI played a game of Jenga with Agi 86 assembly code.</v>
+
+282
+00:37:39.268 --> 00:37:53.661
+<v Daniel>It is the ultimate manifestation of the butterfly effect in computer science. A single brilliantly placed conditional move instruction saved at the absolute base of the computational pyramid translates into massive, compounding global efficiencies at the top.</v>
+
+283
+00:37:53.881 --> 00:38:08.514
+<v Maya>We have covered an immense amount of ground today. We started with the realization that playing a game for an AI has evolved far beyond moving plastic pieces on a wooden board. We saw AlphaFold conquer a 50-year-old biological mystery, balancing the evolutionary</v>
+
+284
+00:38:08.614 --> 00:38:23.464
+<v Maya>clues of multi-sequence alignments with the physical laws of atomic geometry, and proving its accuracy with a margin of error smaller than a single carbon atom. We watched AlphaTensor dive into the trillion path maze of pure mathematics, using Monte Carlo tree search to</v>
+
+285
+00:38:23.504 --> 00:38:36.235
+<v Maya>break a matrix multiplication record that had stood entirely untouched since 1969. And we just saw Alphadev quietly rewrite the bare metal assembly code that is running the devices of billions of users right now.</v>
+
+286
+00:38:36.375 --> 00:38:38.216
+<v Daniel>It's an incredible trilogy of discoveries.</v>
+
+287
+00:38:38.477 --> 00:38:47.745
+<v Maya>Let's weave this together into the final chapter. What is the golden thread here? What is the profound insight that connects protein folding, matrix math, and assembly code?</v>
+
+288
+00:38:48.048 --> 00:39:02.902
+<v Daniel>If we synthesize the successes of the AlphaZero lineage across these three nature papers, a distinct, incredibly powerful secret recipe emerges. The profound insight driving this era of AI is not simply throwing more brute force computing</v>
+
+289
+00:39:02.942 --> 00:39:13.372
+<v Daniel>power at a problem. The secret is the architecture's ability to perfectly recast a seemingly impossible, deeply complex scientific or algorithmic search problem into a single-player game.</v>
+
+290
+00:39:13.532 --> 00:39:21.735
+<v Maya>It's a fundamental translation problem. They take a 50-year-old scientific headache, translate its parameters into a digital environment, and tell the AI, go get a high score.</v>
+
+291
+00:39:21.975 --> 00:39:35.820
+<v Daniel>But the architecture alone isn't enough. The crucial, non-negotiable constraint that makes this entire approach work, the golden thread you are looking for, is the absolute necessity of a mathematically verifiable reward.</v>
+
+292
+00:39:36.051 --> 00:39:37.733
+<v Maya>The system has to have a ground truth.</v>
+
+293
+00:39:37.933 --> 00:39:39.695
+<v Daniel>It must have an unsaleable ground truth.</v>
+
+294
+00:39:39.755 --> 00:39:39.935
+<v Maya>Yeah.</v>
+
+295
+00:39:40.235 --> 00:39:51.426
+<v Daniel>The AI cannot lie to itself and it cannot be graded on a curve. In AlphaFold, the reward was verifiable against the hidden physical CASP14 experimental structures.</v>
+
+296
+00:39:51.506 --> 00:39:52.847
+<v Maya>Right. The answer key in the vault.</v>
+
+297
+00:39:52.927 --> 00:40:04.138
+<v Daniel>Exactly. In AlphaTensor, the tensor game could instantly and perfectly verify if the AI's tensor decomposition was mathematically equivalent to the target matrix multiplication. There is no debate in math.</v>
+
+298
+00:40:04.318 --> 00:40:04.598
+<v Maya>True.</v>
+
+299
+00:40:04.899 --> 00:40:16.810
+<v Daniel>In AlphaDev, the assembly game fed the code exhaustive test input sequences and demanded absolute perfect sorting. In all three cases, human scientists were able to build a flawless objective game engine to evaluate the score.</v>
+
+300
+00:40:17.030 --> 00:40:27.917
+<v Maya>But that constraint raises a massive, immediate question for the future. If recasting reality as a game with a verifiable reward is the ultimate recipe for world-changing discovery, what can it do?</v>
+
+301
+00:40:28.017 --> 00:40:28.697
+<v Daniel>Well, there are limits.</v>
+
+302
+00:40:29.198 --> 00:40:44.147
+<v Maya>Why isn't this specific alpha-zero architecture writing best-selling, emotionally devastating novels? Why isn't it drafting flawless geopolitical peace treaties? Or, more importantly, why isn't it curing complex multi-system diseases right now?</v>
+
+303
+00:40:44.398 --> 00:40:59.274
+<v Daniel>because of that exact constraint. This lineage of AI is bound by the absolute necessity of that perfect, easily computable game engine. These systems cannot currently tackle problems where the reward function is subjective, fuzzy, or cannot be quickly and</v>
+
+304
+00:40:59.334 --> 00:41:00.315
+<v Daniel>perfectly simulated.</v>
+
+305
+00:41:00.601 --> 00:41:09.308
+<v Maya>Right. You cannot write a mathematical formula for what makes a novel beautiful or moving. If you can't write the formula, the AI doesn't know how to score its moves so it can't play the game.</v>
+
+306
+00:41:09.448 --> 00:41:24.201
+<v Daniel>Precisely. You cannot build a perfect game engine for human emotion or for macroeconomic stability or even for the chaotic cascading variables of a whole body disease where millions of overlapping genetic and environmental factors interact in ways we haven't fully</v>
+
+307
+00:41:24.261 --> 00:41:24.741
+<v Daniel>mapped yet.</v>
+
+308
+00:41:24.901 --> 00:41:27.043
+<v Maya>Because we don't know the rules well enough to build the box.</v>
+
+309
+00:41:27.418 --> 00:41:42.395
+<v Daniel>If you cannot quickly and perfectly simulate the environment to verify the exact score of the AI's output, this specific AI lineage is paralyzed. The Monte Carlo tree search requires solid walls to bounce off of. If the walls of the maze are blurry or</v>
+
+310
+00:41:42.435 --> 00:41:44.417
+<v Daniel>subjective, the AI cannot navigate.</v>
+
+311
+00:41:44.732 --> 00:41:59.522
+<v Maya>It is so illuminating to look at it that way. The brilliance of this discovery trilogy isn't just the sheer computing power of the artificial intelligence itself. The true brilliance lies with the human scientists at DeepMind figuring out how to build the precise, mathematically rigid boxes for the</v>
+
+312
+00:41:59.662 --> 00:42:06.206
+<v Maya>AI to play inside. The humans had to translate the messy universe into a game board before the AI could master it.</v>
+
+313
+00:42:06.477 --> 00:42:17.885
+<v Daniel>It is a profound partnership. It is human ingenuity framing the question, combined with artificial reinforcement learning, exploring the answers in spaces that are too vast, too complex, or too fragile for the human mind to navigate alone.</v>
+
+314
+00:42:18.225 --> 00:42:33.096
+<v Maya>It fundamentally reframes our relationship with these machines. But it leaves me with one final lingering question for you, the listener, to mull over as you look at the device in your hand. We have established today that this powerful AlphaZero lineage relies</v>
+
+315
+00:42:33.357 --> 00:42:48.172
+<v Maya>absolutely on humans. Humans have to define the rules of the game. Humans have to build the simulated environment. Humans have to write the code for the perfectly verifiable reward function. But as these AI systems become increasingly masterful at manipulating the lowest levels of</v>
+
+316
+00:42:48.212 --> 00:43:02.658
+<v Maya>computer code and navigating incredibly complex abstract mathematics, what happens when the AI is tasked with playing a new kind of single-player game? What happens when we build a game where the objective is for the AI to design a perfectly verifiable reward function for its own</v>
+
+317
+00:43:02.738 --> 00:43:10.621
+<v Maya>next-generation architecture? Could the next game that artificial intelligence masters be the design, the coding, and the optimization of its own successor?</v>
