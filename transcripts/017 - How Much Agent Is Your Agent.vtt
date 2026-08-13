@@ -1,0 +1,557 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:11.397
+<v Daniel>Imagine you've got two AI systems operating out there in the real world right now. One is like a customer service chatbot just trying to process a refund for your canceled flight.</v>
+
+2
+00:00:11.597 --> 00:00:12.798
+<v Maya>Right, something super common.</v>
+
+3
+00:00:12.958 --> 00:00:27.573
+<v Daniel>Exactly. And the other is a two-ton self-driving car navigating through a blizzard with a whole family inside. Now today, the tech industry, the media, and even regulators, they call both of those things AI agents. Which is</v>
+
+4
+00:00:27.673 --> 00:00:42.403
+<v Daniel>wild. It's completely wild. I mean, if you are a lawmaker trying to write a safety regulation or just, you know, a regular person trying to understand the technology creeping into your life, that shared label isn't just confusing. It's actually dangerous. Calling a chatbot and a</v>
+
+5
+00:00:42.443 --> 00:00:48.687
+<v Daniel>self-driving car by the exact same name is basically like pointing at a skateboard and a space shuttle and calling them both vehicles.</v>
+
+6
+00:00:49.368 --> 00:00:51.009
+<v Maya>I mean, technically true.</v>
+
+7
+00:00:51.069 --> 00:00:55.652
+<v Daniel>Technically true, yeah. But utterly useless if you're trying to figure out which one requires a pilot's license.</v>
+
+8
+00:00:56.108 --> 00:01:10.819
+<v Maya>Exactly. And, you know, that is exactly why the conversation around AI regulation has felt so incredibly stalled lately. You simply cannot govern a category of technology that broad. We've been trying to regulate, quote unquote, agents without</v>
+
+9
+00:01:10.979 --> 00:01:16.443
+<v Maya>any agreed upon scientific way of actually measuring how much of an agent a given system is.</v>
+
+10
+00:01:16.843 --> 00:01:27.290
+<v Daniel>Which brings us to our mission for today's Deep Dive. We are unpacking a really massive, groundbreaking new paper that just landed in the journal Nature Today, August 12, 2026. A</v>
+
+11
+00:01:27.510 --> 00:01:28.331
+<v Maya>lot off the presses.</v>
+
+12
+00:01:28.571 --> 00:01:41.319
+<v Daniel>Literally today. It's by Atusa Kazerzadeh from Carnegie Mellon University and Aysen Gabriel from Google DeepMind. And their whole argument is that we need to just completely abandon this blanket term AI agent.</v>
+
+13
+00:01:41.379 --> 00:01:42.160
+<v Maya>You just throw it out.</v>
+
+14
+00:01:42.300 --> 00:01:57.271
+<v Daniel>Right. Instead, they are proposing this highly specific four-dimensional framework to measure any given system and draw its unique agentic profile. So we're finally moving away from that old philosophical question of is this thing an agent and moving into the actual engineering question of to what degree is this</v>
+
+15
+00:01:57.311 --> 00:01:57.911
+<v Daniel>thing an agent?</v>
+
+16
+00:01:58.311 --> 00:02:12.954
+<v Maya>And to really appreciate how big of a paradigm shift that is, I think it helps to look at the scientific baseline they're challenging. Decades ago, back in like 1996 or 97, researchers like Franklin and Gracer basically built a</v>
+
+17
+00:02:13.014 --> 00:02:14.015
+<v Maya>binary checklist.</v>
+
+18
+00:02:14.115 --> 00:02:14.976
+<v Daniel>Okay, a checklist.</v>
+
+19
+00:02:15.056 --> 00:02:27.609
+<v Maya>Yeah, they defined an agent as something situated in an environment, sensing and acting over time for its own agenda. It was a light switch. You know, you either were a basic computer program or you were an agent. End of story.</v>
+
+20
+00:02:27.669 --> 00:02:35.334
+<v Daniel>Well, binary system makes sense when you're dealing with like 1990 software, but modern AI completely breaks that light switch model.</v>
+
+21
+00:02:35.374 --> 00:02:50.285
+<v Maya>Oh, it shatters it, which is why the industry today relies on a much more fluid definition. Most of this comes from a 2023 OpenAI paper by Chivit and colleagues. They redefined agentic systems as those taking actions toward goals over extended periods without their</v>
+
+22
+00:02:50.305 --> 00:02:56.350
+<v Maya>exact behavior being specified in advance. Plus, you know, practices like constraining the action space and being able to interrupt them.</v>
+
+23
+00:02:56.370 --> 00:03:11.039
+<v Daniel>Right. So it became a spectrum, a dimmer switch rather than a light switch. Exactly. A dimmer switch. The problem with a dimmer switch, though, is what happens when you slide it up. There was another 2023 paper, this one by Chan and colleagues, and they cataloged the harms of these increasingly</v>
+
+24
+00:03:11.119 --> 00:03:25.748
+<v Daniel>agentic systems. This is basically where all our modern risk vocabulary comes from. And what blew my mind looking through their research is that as an AI gets more independence, the risks don't just scale up linearly. They fundamentally</v>
+
+25
+00:03:25.868 --> 00:03:26.308
+<v Daniel>mutate.</v>
+
+26
+00:03:26.448 --> 00:03:27.249
+<v Maya>Right. They change shape.</v>
+
+27
+00:03:27.509 --> 00:03:42.498
+<v Daniel>Yeah. Like a low-level AI might just give you a biased text response. But a highly agentic AI might execute this flawed, complex strategy that causes systemic delayed harm to people who never even interacted with the software in the first place.</v>
+
+28
+00:03:42.638 --> 00:03:57.383
+<v Maya>And because the risks mutate so drastically, lawmakers and engineers desperately need to know exactly what specific sliders exist on that theoretical dimmer switch. I mean, if we don't know what we're measuring, we really can't build guardrails. Right. So that is the core contribution of this new major</v>
+
+29
+00:03:57.403 --> 00:04:03.986
+<v Maya>paper. Kazirzadeh and Gabriel argue there are four distinct dimensions we absolutely have to measure to understand the machine sitting in front of us.</v>
+
+30
+00:04:04.366 --> 00:04:19.061
+<v Daniel>OK, so let's actually build this four dimensional map for you guys listening. If we're trying to figure out how capable or dangerous a machine is, the most obvious starting point is asking how much human supervision it actually needs, which the authors call autonomy.</v>
+
+31
+00:04:19.401 --> 00:04:27.645
+<v Maya>Right. And autonomy is measured here on a scale from 8.0 to 8.5. The authors explicitly adapted this from the Society of Automotive Engineers.</v>
+
+32
+00:04:27.885 --> 00:04:29.206
+<v Daniel>Oh, the self-driving car levels.</v>
+
+33
+00:04:29.266 --> 00:04:41.755
+<v Maya>Exactly. Their famous six levels of driving automation. So an 8.0 means absolutely no autonomy. The AI is entirely dependent on a human principle. It only acts when prompted, does exactly what it's told, nothing else.</v>
+
+34
+00:04:42.273 --> 00:04:53.122
+<v Daniel>And as you strip away human oversight, you move up the ladder all the way to an 8.5, which is full autonomy. All tasks, all conditions, without any oversight or even an override switch from a human.</v>
+
+35
+00:04:53.262 --> 00:05:01.649
+<v Maya>But the authors make this really fascinating concession about that top level. They argue that 8.5 is generally not a desirable goal for humanity. Wow.</v>
+
+36
+00:05:02.169 --> 00:05:03.330
+<v Daniel>Just flat out not desirable.</v>
+
+37
+00:05:03.582 --> 00:05:18.514
+<v Maya>Right, because if a system reaches 8.5, it means the human principle has fundamentally lost control of it. They state, the only condition under which full autonomy might be acceptable is if the system is completely contained, robustly aligned to human values,</v>
+
+38
+00:05:19.134 --> 00:05:23.338
+<v Maya>and, this is key, significantly limited in its actual capabilities.</v>
+
+39
+00:05:23.638 --> 00:05:34.567
+<v Daniel>which naturally begs the question, how do we measure those capabilities? Autonomy just tells us who is holding the steering wheel. But what if the vehicle itself is like a golf cart or what if it's a tank?</v>
+
+40
+00:05:34.667 --> 00:05:34.947
+<v Maya>Right.</v>
+
+41
+00:05:35.167 --> 00:05:47.957
+<v Daniel>So that brings us to the second dimension, efficacy. How much causal power does this system actually have in the real world? And I found this to be the most counterintuitive part of the whole paper because efficacy isn't just a straight line from zero to five.</v>
+
+42
+00:05:48.057 --> 00:06:02.750
+<v Maya>It can't be a straight line because power depends on context. So the authors build efficacy as a matrix. To measure an AI's causal impact, you basically have to cross-reference two things. First, the raw degree of causal impact. Is it just observing? Does it have minor,</v>
+
+43
+00:06:02.830 --> 00:06:17.776
+<v Maya>intermediate, or comprehensive impact? And second, you have to look at the kind of environment it operates in. Is it trapped in a simulated environment, a mediated one where it needs human intermediaries, or is it unleashed directly into the physical environment? And</v>
+
+44
+00:06:17.876 --> 00:06:20.577
+<v Maya>that matrix produces scores from E.0 through E.5.</v>
+
+45
+00:06:22.506 --> 00:06:37.220
+<v Daniel>but looking at how they combine those things create some wild results. For instance, they show how a robotic arm in a car factory, which is a physical agent with very constrained movements, scores an E.3 for efficacy. But a financial trading</v>
+
+46
+00:06:37.280 --> 00:06:45.468
+<v Daniel>AI that just generates text prompts for human brokers, which is completely trapped in a digital mediated environment, that also scores an E.3.</v>
+
+47
+00:06:46.137 --> 00:06:47.458
+<v Maya>Yeah, it seems weird at first.</v>
+
+48
+00:06:47.698 --> 00:06:55.764
+<v Daniel>Totally weird. On the surface, a heavy piece of industrial robotics feels vastly more powerful than a chatbot spitting out stock tickers. How do those two things equate?</v>
+
+49
+00:06:55.884 --> 00:07:07.052
+<v Maya>Well, we have to look at the true weight of their actions. To explain this, the authors pull in this incredible concept from a 2005 paper by Kleiben, Polanyi, and Nehaniv. It's called the Empowerment Metric.</v>
+
+50
+00:07:07.192 --> 00:07:08.233
+<v Daniel>Okay, break that down for us.</v>
+
+51
+00:07:08.541 --> 00:07:22.990
+<v Maya>Think of it like a game of chess, right? Your power on the board isn't just about how many pieces you can capture on your current turn. It's about how many future moves you open up for yourself or deny your opponent. The empowerment metric uses an impact variable, which they call eta.</v>
+
+52
+00:07:23.370 --> 00:07:24.611
+<v Daniel>Eta, like the Greek letter.</v>
+
+53
+00:07:24.711 --> 00:07:32.456
+<v Maya>Yes, eta. It sits between zero and one, and it mathematically calculates how much an agent can influence its own future inputs.</v>
+
+54
+00:07:32.797 --> 00:07:47.487
+<v Daniel>Oh, I see. So the robotic arm in the factory has raw physical strength, but its options are incredibly limited. Its eta is tiny. It can't suddenly decide to stop welding car doors and start baking a cake. Its future states are completely</v>
+
+55
+00:07:47.547 --> 00:07:47.807
+<v Daniel>locked.</v>
+
+56
+00:07:47.967 --> 00:08:02.455
+<v Maya>Precisely. The financial AI has zero physical presence, but its potential to dramatically alter future states is massive. By recommending a huge short sell, it can trigger market cascades, bankrupt a firm, and radically alter the entire financial</v>
+
+57
+00:08:02.535 --> 00:08:11.760
+<v Maya>ecosystem it operates in. Its ADA is huge. Wow. So the efficacy matrix balances the raw physicality of the environment against the sheer scope of the agent's causal reach.</v>
+
+58
+00:08:12.112 --> 00:08:26.923
+<v Daniel>That makes perfect sense. Okay, so we have independent agents, and we have a way to measure their raw power in the world. But power is completely useless or incredibly destructive if the agent doesn't know how to wield it. Which brings us to the third dimension of the profile,</v>
+
+59
+00:08:27.283 --> 00:08:28.164
+<v Daniel>goal complexity.</v>
+
+60
+00:08:28.604 --> 00:08:28.804
+<v Maya>Right.</v>
+
+61
+00:08:29.224 --> 00:08:32.807
+<v Daniel>If I give an AI a goal, how much of the logical heavy lifting can it do on its own?</v>
+
+62
+00:08:33.087 --> 00:08:48.018
+<v Maya>At GC.0, it has no goal at all, which means it technically isn't an agent. But as we slide up the scale toward GC.5, which is unbounded, we enter the realm of hierarchical planning and goal decomposition. Can the agent take a massive,</v>
+
+63
+00:08:48.238 --> 00:08:54.083
+<v Maya>underspecified objective, generate its own goal structures, and break it down into a tree of subgoals?</v>
+
+64
+00:08:54.468 --> 00:09:08.974
+<v Daniel>And I love how the authors ground this in something we can actually measure in practice right now. They point to the AI testing organization, METR, specifically research led by Kwa and colleagues from 2025, which looks at task length. Essentially, how long can an AI reliably work on a problem before it</v>
+
+65
+00:09:09.014 --> 00:09:11.855
+<v Daniel>hallucinates, gets confused, or just goes off the rails?</v>
+
+66
+00:09:12.147 --> 00:09:26.760
+<v Maya>Task length is the ultimate stress test for goal complexity. If you ask an AI to write an email, that's a five-minute task. If it messes up, the human sees it instantly. But if an AI reaches GC.4 or GC.5, you are giving it an underspecified prompt like,</v>
+
+67
+00:09:27.181 --> 00:09:29.583
+<v Maya>optimize my global supply chain for the next six months.</v>
+
+68
+00:09:29.862 --> 00:09:44.594
+<v Daniel>It has to generate its own sub-goals. Hire a vendor, analyze weather patterns, rewrote a shipping link. And the longer that timeline stretches, the more catastrophic a tiny deviation in its logic becomes. A multi-month, thousand-step project without</v>
+
+69
+00:09:44.634 --> 00:09:48.777
+<v Daniel>human intervention is just a radically different beast than a five-minute text summary.</v>
+
+70
+00:09:49.090 --> 00:10:03.159
+<v Maya>Which naturally leads us to the final dimension. To plan that far ahead, the agent needs a vast repository of knowledge and skills. That dimension is generality. It ranges from G.0 to G.5, and the authors build this directly on Morris and colleagues' famous framework for the levels of AGI.</v>
+
+71
+00:10:03.359 --> 00:10:18.068
+<v Daniel>Right, artificial general intelligence. So a G.0 or G.1 is a narrow specialist, single specialty, task domain mastery. It does one specific thing brilliantly. And a G.5 is fully general, meaning it has mastered the entire suite of human cognitive tasks across</v>
+
+72
+00:10:18.108 --> 00:10:18.508
+<v Daniel>domains.</v>
+
+73
+00:10:18.807 --> 00:10:33.414
+<v Maya>So let's just take a breath and look at the map we've drawn. We have autonomy, efficacy, goal complexity, and generality. Having this theoretical blueprint is fantastic for academics, but the real breakthrough of this nature paper is when the authors take these four</v>
+
+74
+00:10:33.474 --> 00:10:38.596
+<v Maya>scales and apply them to the actual AI systems you are interacting with every single day.</v>
+
+75
+00:10:38.807 --> 00:10:53.169
+<v Daniel>Yeah, this is where the abstract theory turns into a massive aha moment for me. Because they create four work profiles, and mapping these familiar tools completely changes how you view them. Think about AlphaGo, the famous system that beat the world champion at the board game Go.</v>
+
+76
+00:10:53.309 --> 00:10:54.411
+<v Maya>Oh, this is a great example.</v>
+
+77
+00:10:54.651 --> 00:11:09.321
+<v Daniel>Right. Once the match begins, AlphaGo makes its own decisions without a human steering it, meaning it actually scores a surprisingly high 8.3 for autonomy, but its power to affect the world. Its efficacy is rock bottom. It's an E.1. It is completely caged</v>
+
+78
+00:11:09.401 --> 00:11:20.168
+<v Daniel>inside a simulated board game. It only knows how to do one thing, giving it a G.1 for generality, and its goal complexity is just a GC.22. So AlphaGo is highly independent, but perfectly contained.</v>
+
+79
+00:11:20.548 --> 00:11:35.211
+<v Maya>Exactly. Now contrast that with the standalone chat box version of chat GPT 3.5. It's almost the exact inverse of AlphaGo. Because it can write Python code, translate French, and write poetry, it scores a G.3 for broad generality.</v>
+
+80
+00:11:35.591 --> 00:11:49.454
+<v Maya>But it relies entirely on a human to prompt it step by step, meaning its autonomy is only A.2. And because it's trapped behind a text interface, unable to act on the physical world, its efficacy is only E.2. Its goal complexity is GC.3.</v>
+
+81
+00:11:50.225 --> 00:12:05.187
+<v Daniel>So it's this massive general brain trapped in a digital jar. It can think about anything, but it can't really do anything without you. Right. But then we look at the third profile, and this is the turning point of the whole paper for me. The authors look at Claude 2.5 Sonnet, but specifically with tool use enabled.</v>
+
+82
+00:12:05.648 --> 00:12:20.414
+<v Daniel>Meaning that the AI can actually use a web browser, move a cursor, and access your local files. Scaffolding. Exactly, scaffolding. Its profile jumps to an 8.3 for autonomy, an 8.3 for efficacy, and a GC.4 for goal complexity. But its generality stays exactly at a G.3.</v>
+
+83
+00:12:20.674 --> 00:12:31.518
+<v Maya>Notice what happened there. Compared to a standard chatbot, just by giving the AI access to tools, the system spiked on three of the four dimensions. But its generality stayed identical.</v>
+
+84
+00:12:31.900 --> 00:12:45.533
+<v Daniel>That is the mind-blowing part. The underlying AI model didn't actually get any smarter. The base weights weren't updated. It is the exact same brain. It just got digital hands and a longer memory, and suddenly its risk profile exploded.</v>
+
+85
+00:12:45.673 --> 00:13:00.664
+<v Maya>And this proves the ultimate punchline of Khazirzadeh and Gabriel's work. Agentic profiles are completely dynamic. They are not static, inherent properties of a foundation model. The exact same string of code has a totally different agentic profile depending on the tools, the</v>
+
+86
+00:13:00.724 --> 00:13:03.865
+<v Maya>memory, the reasoning protocols, and the deployment environment.</v>
+
+87
+00:13:03.965 --> 00:13:18.827
+<v Daniel>So if I download an open source language model onto my laptop to summarize PDFs, it might be an efficacy level 2. But if I write a Python script that hooks that exact same model up to my company's live database and a corporate credit card, it instantly becomes an efficacy level 4. The</v>
+
+88
+00:13:18.867 --> 00:13:21.588
+<v Daniel>model didn't change at all, but the agent completely transformed.</v>
+
+89
+00:13:21.934 --> 00:13:36.641
+<v Maya>Which is why the authors flag this as the individuation question, and they leave it open as a massive challenge for the future. If a risk profile changes just by handing an AI a new tool, when does one agent legally or practically become a completely different agent? Right.</v>
+
+90
+00:13:37.081 --> 00:13:42.584
+<v Maya>If you give a chatbot a calculator, is it a new entity? How often must we recompute these profiles?</v>
+
+91
+00:13:42.832 --> 00:13:57.641
+<v Daniel>It's an absolute nightmare for lawmakers. Regulators can't just slap an approval sticker on a base model like GBT-4 and walk away because the moment a developer builds a new scaffolding around it, the safety profile resets to zero. And speaking of safety profiles, we have to talk about the final worked</v>
+
+92
+00:13:57.721 --> 00:14:00.783
+<v Daniel>profile on the paper, Waymo, the self-driving car.</v>
+
+93
+00:14:01.158 --> 00:14:16.061
+<v Maya>Waymo is the ultimate paradox in this framework. It has incredibly narrow generality just to G.2. It doesn't know how to write a poem or pass the bar exam. It only knows how to navigate roads. But its autonomy and efficacy both score a level four. It interacts directly, continuously, and</v>
+
+94
+00:14:16.141 --> 00:14:20.141
+<v Maya>heavily with the chaotic physical world. Its goal complexity is also a four.</v>
+
+95
+00:14:20.561 --> 00:14:30.483
+<v Daniel>Out of all the cutting-edge AI profiles we just went through, the one with the narrowest, most restricted intelligence is the only one that could directly kill a pedestrian if it makes a math error.</v>
+
+96
+00:14:30.908 --> 00:14:45.559
+<v Maya>And this highlights exactly why a single smooth scale for AI risk is so fiercely debated in the scientific community right now. The Nature paper gives us this beautiful zero to five map, but there is a very vocal contingent of researchers who believe</v>
+
+97
+00:14:45.719 --> 00:14:49.262
+<v Maya>putting a level five on a map is incredibly dangerous.</v>
+
+98
+00:14:49.555 --> 00:15:04.462
+<v Daniel>Yeah, we have to dive into that disagreement because it is legitimately tearing the AI safety community apart right now. A group of prominent researchers at Hugging Face, Margaret Mitchell, Avijit Ghosh, Sasha Luciani, and Giada Pistilli, they recently published a paper</v>
+
+99
+00:15:04.562 --> 00:15:09.904
+<v Daniel>with a title that does not pull any punches. It's called Fully Autonomous AI Agents Should Not Be Developed.</v>
+
+100
+00:15:10.204 --> 00:15:10.885
+<v Maya>Very clear.</v>
+
+101
+00:15:11.125 --> 00:15:15.947
+<v Daniel>Right. They argue that reaching level five autonomy shouldn't be a goal at all. It should be completely off the table entirely.</v>
+
+102
+00:15:16.195 --> 00:15:31.148
+<v Maya>Their logic is really grounded in human safety. They argue that the risks to human beings rise monotonically with the amount of autonomy we see to a machine. More autonomy mathematically equals more danger. Kizzerzadeh and Gabriel, however, take</v>
+
+103
+00:15:31.188 --> 00:15:33.650
+<v Maya>a much softer stance in this Nature paper.</v>
+
+104
+00:15:33.850 --> 00:15:37.053
+<v Daniel>Right. They treat 8.5 as undesirable under conditions.</v>
+
+105
+00:15:37.353 --> 00:15:44.279
+<v Maya>Exactly. Which crucially leaves the door open for tech companies to build it, provided they think they can meet the safety requirements.</v>
+
+106
+00:15:44.739 --> 00:15:59.644
+<v Daniel>There's a massive psychological friction point here for policymakers. If you provide tech CEOs and venture capitalists with a neatly graduated zero to five scale for autonomy, does that actually create a better tool for governance? Or does drawing a smooth scale</v>
+
+107
+00:15:59.684 --> 00:16:07.747
+<v Daniel>just make it easier for them to keep inching their way up it? Does having a level five on the board make it look like a finish line to cross rather than a cliff we should all avoid?</v>
+
+108
+00:16:08.108 --> 00:16:22.502
+<v Maya>It's a vital critique. Normalizing the extreme end of the spectrum just by giving it a scientific designation can absolutely shift the Overton window of what companies are willing to build. But, you know, to be fair to Caserzada and Gabriel, they include a</v>
+
+109
+00:16:22.702 --> 00:16:30.750
+<v Maya>massive caveat in their paper. They explicitly concede that these judgments and the four profiles we just explored are heuristic and ex-ante.</v>
+
+110
+00:16:30.977 --> 00:16:34.098
+<v Daniel>Meaning they're basically educated estimates made before the fact.</v>
+
+111
+00:16:34.278 --> 00:16:49.225
+<v Maya>Correct. Nobody has actually validated the scientific metrics for any of these four dimensions yet. The hard work of creating the universal benchmarks, the standardized tests that objectively prove a system, is an autonomy level three versus a level four that still has to be</v>
+
+112
+00:16:49.245 --> 00:16:55.568
+<v Maya>done. This paper is not a finalized measurement. It is a proposed framework for how we should build the ruler in the first place.</v>
+
+113
+00:16:56.179 --> 00:17:07.095
+<v Daniel>But even as a proposal for a ruler, if lawmakers around the world were to adopt these four specific dimensions tomorrow, it would fundamentally rewrite the entire global legal landscape for artificial intelligence.</v>
+
+114
+00:17:07.573 --> 00:17:22.482
+<v Maya>Because current attempts at governance are already showing massive cracks. You have major frameworks like the EU AI Act or NIST's AI risk management framework in the US. They are what we call risk proportionate regulations. They</v>
+
+115
+00:17:22.502 --> 00:17:32.948
+<v Maya>try to categorize the overall risk of an AI system and apply broad safeguards. Then you have domain specific regulations where you try to handle a vehicle differently than a classroom assistant.</v>
+
+116
+00:17:33.456 --> 00:17:44.901
+<v Daniel>But the core argument of this Nature paper is that neither of those approaches, the broad one or the domain-specific one, can work well until you can accurately characterize the multidimensional agents sitting right in front of you.</v>
+
+117
+00:17:45.242 --> 00:18:00.009
+<v Maya>Right. And if regulators adopt these agentic profiles, the entire governance playbook becomes targeted. The authors break down exactly how this mapping would work. First, the strength of human oversight and the legal liability models become directly keyed to the agent's</v>
+
+118
+00:18:00.049 --> 00:18:00.489
+<v Maya>autonomy.</v>
+
+119
+00:18:00.932 --> 00:18:06.081
+<v Daniel>So if it operates in an 8.4, lawmakers know it requires massive real-time override switches.</v>
+
+120
+00:18:06.476 --> 00:18:21.163
+<v Maya>Exactly. Second, the physical safety protocols become keyed to the efficacy slider. If a system scores an E.4 or E.5, meaning it can act on the physical world or trigger massive digital cascades, it legally requires hard-coded</v>
+
+121
+00:18:21.203 --> 00:18:25.164
+<v Maya>safety limits, regardless of whether its base model is considered smart or dumb.</v>
+
+122
+00:18:25.384 --> 00:18:35.729
+<v Daniel>Wow. And third, the difficulty of alignment verification, basically making sure the AI's internal logic actually matches human intent. That becomes key to goal complexity.</v>
+
+123
+00:18:35.889 --> 00:18:47.319
+<v Maya>Right, because if an AI can generate its own multi-month subgoals at a GC.4 level, government auditors will need radically different tools to verify its safety than they would for a simple chatbot that only does five-minute tasks.</v>
+
+124
+00:18:47.559 --> 00:19:02.492
+<v Daniel>And finally, the scope of government intervention is key to generality. If a highly general G.4 model suffers a catastrophic failure, it doesn't just crash one sector of the economy. It could simultaneously disrupt finance, healthcare, and global logistics all at</v>
+
+125
+00:19:02.593 --> 00:19:02.793
+<v Daniel>once.</v>
+
+126
+00:19:03.308 --> 00:19:18.136
+<v Maya>And that generality slider isn't just about catastrophic risk. It is the exact metric that will dictate the future of your career and the broader labor market. The authors pull in some critical research from economists like Frey and Osborne, as well as Michael Webb, to make a point about</v>
+
+127
+00:19:18.217 --> 00:19:23.964
+<v Maya>human employment. The key insight is how displacement shifts as we move up the generality scale.</v>
+
+128
+00:19:24.144 --> 00:19:38.356
+<v Daniel>Because historically, technology automated a specific task, like the invention of the spreadsheet automated the incredibly tedious task of doing math on physical ledgers. But it didn't replace the human accountant. It just made them vastly faster at their job.</v>
+
+129
+00:19:38.376 --> 00:19:53.193
+<v Maya>But as an agentic system reaches level three or four on the generality scale, job displacement fundamentally changes. It stops being about automating specific tasks, and it starts being about automating entire professional domains. The AI isn't just crunching the numbers anymore. It is</v>
+
+130
+00:19:53.293 --> 00:19:58.962
+<v Maya>reading the client emails, gathering the raw data, running the math, writing the final report, and sending the invoice.</v>
+
+131
+00:19:59.313 --> 00:20:14.182
+<v Daniel>It is automating the entire workflow of the job. It's the difference between inventing a faster, lighter hammer and inventing a robot carpenter that can just build a house by itself. Tracking generality alongside autonomy tells economists not just if certain</v>
+
+132
+00:20:14.222 --> 00:20:19.045
+<v Daniel>jobs will change, but how the fundamental structure of human labor is about to be rewritten.</v>
+
+133
+00:20:19.472 --> 00:20:30.887
+<v Maya>This framework forces us to look at the entire picture. We aren't just building faster calculators anymore. We are building systems that can sense, plan, and act with varying degrees of power and independence.</v>
+
+134
+00:20:31.408 --> 00:20:45.939
+<v Daniel>We started this deep dive with the phrase AI agent, acting as this messy... completely unhelpful buzzword that equated a customer service bot with a self-driving car. But thanks to Kazirzadeh and Gabriel's work, we've replaced that buzzword with a precise</v>
+
+135
+00:20:46.179 --> 00:20:57.981
+<v Daniel>four-dimensional map, autonomy, efficacy, goal complexity, and generality. This map finally gives engineers and lawmakers the dials they need to actually understand the machines they are unleashing into the world.</v>
+
+136
+00:20:58.461 --> 00:21:04.082
+<v Maya>It moves the entire conversation out of philosophical debates about consciousness and into rigorous measurable engineering.</v>
+
+137
+00:21:04.450 --> 00:21:19.238
+<v Daniel>But the most profound insight in this entire paper, for me at least, is that those dials are not locked into the machine. We saw how Claude 3.5 Sonnet jumped up in its agentic profile, becoming vastly more capable and potentially more dangerous. Not</v>
+
+138
+00:21:19.278 --> 00:21:33.990
+<v Daniel>because its underlying brain got any smarter, but simply because we handed it a set of digital tools. We gave it access to the internet and the ability to click a mouse, and its risk profile exploded. So I want to leave you with this thought. If an AI's agentic profile changes dynamically just by</v>
+
+139
+00:21:34.030 --> 00:21:47.633
+<v Daniel>granting it access to a new tool, are we really regulating the mind of the AI or are we actually regulating the hands we choose to give it? The next time you sit down to use an AI assistant or plug it into your daily workflow, ask yourself, which of the four dimensions did I just extend?</v>
