@@ -1,0 +1,685 @@
+WEBVTT
+
+1
+00:00:00.171 --> 00:00:08.118
+<v Maya>Welcome to this custom-tailored deep dive. You know, they are building these incredible engines of creation with AI right now.</v>
+
+2
+00:00:08.278 --> 00:00:09.739
+<v Daniel>Right, massive leaps in technology.</v>
+
+3
+00:00:09.799 --> 00:00:17.486
+<v Maya>Yeah, exactly. But there's this underlying fear that they might actually be acting as a massive gravity well for human innovation.</v>
+
+4
+00:00:17.606 --> 00:00:18.587
+<v Daniel>It's a real concern, yeah.</v>
+
+5
+00:00:18.747 --> 00:00:33.605
+<v Maya>And that is exactly what a blockbuster August 2026 paper in PNAS finally proved with some just unprecedented data. We're looking at a fundamental shift today. Large language models, LLMs, they</v>
+
+6
+00:00:33.645 --> 00:00:38.050
+<v Maya>are already deeply embedded inside the U.S. federal research funding pipeline.</v>
+
+7
+00:00:38.090 --> 00:00:38.811
+<v Daniel>They absolutely are.</v>
+
+8
+00:00:38.971 --> 00:00:50.136
+<v Maya>But the core question this paper asks, the paper by Kian and their team out of Northwestern University, is how are these tools actually changing the direction of the science that gets paid for with our public money?</v>
+
+9
+00:00:50.616 --> 00:00:56.198
+<v Daniel>Right. And to understand the sheer magnitude of what they found, we have to look at the data they somehow managed to get their hands on.</v>
+
+10
+00:00:56.238 --> 00:00:57.359
+<v Maya>Because it's not normal data.</v>
+
+11
+00:00:57.459 --> 00:01:04.742
+<v Daniel>Not at all. Picture the federal grant system as this massive pipeline. Usually you and I, we only ever see what drips out the very end.</v>
+
+12
+00:01:05.057 --> 00:01:08.038
+<v Maya>Right, the winners, the public database of who got the cash.</v>
+
+13
+00:01:08.138 --> 00:01:21.722
+<v Daniel>Exactly. Yeah. But this team got something researchers almost never see. They obtained the confidential, highly private proposal submissions to the National Science Foundation, the NSF, and the National Institutes of Health, the NIH.</v>
+
+14
+00:01:22.185 --> 00:01:23.525
+<v Maya>Wow. From where?</v>
+
+15
+00:01:23.626 --> 00:01:26.266
+<v Daniel>From two large U.S. R1 universities.</v>
+
+16
+00:01:26.447 --> 00:01:36.170
+<v Maya>And just to clarify for everyone listening, when we say R1, we are talking about, you know, the massive top tier research institutions, the ones that pull in the lion's share of federal funding.</v>
+
+17
+00:01:36.190 --> 00:01:42.673
+<v Daniel>Exactly. So getting their private files is wild. That means they are looking at the unfunded proposals. The rejections.</v>
+
+18
+00:01:42.713 --> 00:01:46.095
+<v Maya>The pending ones. Basically all the ideas that never saw the light of day.</v>
+
+19
+00:01:46.195 --> 00:01:56.883
+<v Daniel>Right. They secured 1.6 thousand confidential NSF proposals and about 4.1 thousand confidential NIH proposals. And this is all between 2021 and 2025.</v>
+
+20
+00:01:56.984 --> 00:01:59.686
+<v Maya>That's a huge window for this specific AI shift.</v>
+
+21
+00:01:59.906 --> 00:02:09.153
+<v Daniel>It is. And then they paired that rare private data with the massive public databases from Dimension. So 57 thousand public NSF awards and 74 thousand NIH awards.</v>
+
+22
+00:02:09.498 --> 00:02:18.600
+<v Maya>So they are looking at the entire lifecycle of an idea from the second a scientist asks the government for money all the way to the papers they publish later.</v>
+
+23
+00:02:18.720 --> 00:02:19.240
+<v Daniel>Exactly.</v>
+
+24
+00:02:19.280 --> 00:02:32.342
+<v Maya>OK, let's unpack this, because the very first hurdle here seems really obvious to me. How do you definitively spot an invisible AI in a highly technical, jargon heavy scientific grant?</v>
+
+25
+00:02:32.622 --> 00:02:37.423
+<v Daniel>Right. It's not like the LLM leaves a watermark saying ChatGPT wrote this.</v>
+
+26
+00:02:37.703 --> 00:02:40.305
+<v Maya>Yeah, there's no red squiggly line under the AI text.</v>
+
+27
+00:02:40.585 --> 00:02:49.110
+<v Daniel>No. So the authors couldn't just look for obvious bot-like phrasing. Instead, they used a distributional detection framework. This was developed by Liang and colleagues.</v>
+
+28
+00:02:49.290 --> 00:02:50.050
+<v Maya>Okay, how does that work?</v>
+
+29
+00:02:50.271 --> 00:02:57.675
+<v Daniel>They estimate something called alpha. It basically represents the fraction of LLM-modified sentences within a grant abstract.</v>
+
+30
+00:02:57.883 --> 00:03:05.445
+<v Maya>OK, so it's not looking for one specific word, like a weird repetitive verb. It's looking for a broader chemical signature across the whole document.</v>
+
+31
+00:03:05.545 --> 00:03:07.285
+<v Daniel>Exactly. It's a statistical distribution.</v>
+
+32
+00:03:07.445 --> 00:03:10.906
+<v Maya>But wait, how do they calibrate that? How do they know what zero alpha even looks like?</v>
+
+33
+00:03:11.166 --> 00:03:16.648
+<v Daniel>Well, they went back in time. They took 6,000 real NSF and NIH grant abstracts from 2021.</v>
+
+34
+00:03:18.182 --> 00:03:19.724
+<v Maya>Ah, pre-chat GPT.</v>
+
+35
+00:03:19.804 --> 00:03:33.976
+<v Daniel>Right. So they know with absolute certainty these were written by humans. They mapped the precise statistical signatures of those human texts. Then they took those exact same 6,000 abstracts and forced GPT 3.5 to rewrite them.</v>
+
+36
+00:03:34.297 --> 00:03:35.137
+<v Maya>Oh, that's smart.</v>
+
+37
+00:03:35.157 --> 00:03:39.681
+<v Daniel>Yeah. By comparing the two corpora, they isolated the distinct statistical signature of the AI.</v>
+
+38
+00:03:40.022 --> 00:03:44.626
+<v Maya>So when they applied this alpha detector to the actual pipeline, what did the timeline look like?</v>
+
+39
+00:03:45.015 --> 00:03:55.887
+<v Daniel>It was pretty stark. The estimated LLM involvement sits near zero all the way through 2021 and 2022. Then, right after the public release of ChatGPT, it spikes dramatically into 2023, 2024, and 2025.</v>
+
+40
+00:03:57.833 --> 00:04:04.858
+<v Maya>But the crazy part to me isn't just the spike, it's how uneven the AI use is when you look at individual grants.</v>
+
+41
+00:04:04.958 --> 00:04:10.322
+<v Daniel>Yes, there's a massive bimodal distribution in the data, basically two giant mountains on the graph.</v>
+
+42
+00:04:10.382 --> 00:04:20.610
+<v Maya>Right. It totally reminds me of an analogy. It's like walking into a busy corporate office in, say, the late 1980s. You look to your left and half the staff are furiously typing on mechanical typewriters.</v>
+
+43
+00:04:21.029 --> 00:04:22.150
+<v Daniel>Just sticking to what they know.</v>
+
+44
+00:04:22.430 --> 00:04:35.859
+<v Maya>Exactly. But you look to your right and the other half have completely migrated over to early word processors with those glowing green screens. In this data, you have one massive group of grants where the alpha is hovering right around zero.</v>
+
+45
+00:04:36.099 --> 00:04:40.041
+<v Daniel>And then a totally separate cluster sitting around 10 to 15 percent alpha.</v>
+
+46
+00:04:40.421 --> 00:04:47.306
+<v Maya>There is this clear, hard split between researchers who barely touch these tools and those leaning on them incredibly hard.</v>
+
+47
+00:04:47.613 --> 00:04:58.136
+<v Daniel>What's fascinating here is what that split actually does to the ideas themselves. We've established some scientists use the tools heavily. But does the science they propose actually change?</v>
+
+48
+00:04:58.476 --> 00:05:03.277
+<v Maya>Because if you're asking for federal money, you want your science to be distinct. Right. You want to be innovative.</v>
+
+49
+00:05:03.517 --> 00:05:07.698
+<v Daniel>So to answer that, the authors measure something called semantic distinctiveness.</v>
+
+50
+00:05:08.077 --> 00:05:09.438
+<v Maya>How do you measure that mathematically?</v>
+
+51
+00:05:09.458 --> 00:05:18.424
+<v Daniel>They use a tool called Spectre 2. It's a text embedding model. It basically takes a complex scientific abstract and plots it as a single point in a 768 dimensional space.</v>
+
+52
+00:05:19.677 --> 00:05:31.183
+<v Maya>Let me jump in here so we can visualize this. Imagine a giant 3D map for you listening. If two proposals use similar concepts and language, they get pinned really close together on this map.</v>
+
+53
+00:05:31.483 --> 00:05:32.044
+<v Daniel>Exactly.</v>
+
+54
+00:05:32.464 --> 00:05:43.270
+<v Maya>And so the cosine distance they calculate is literally just measuring the physical space on this map between a new proposal and last year's winners. The shorter the distance, the more they sound exactly alike.</v>
+
+55
+00:05:43.490 --> 00:05:54.480
+<v Daniel>Right, and they convert those distances into a strict within-year percentile. And the central finding of the whole paper is this. Across all four datasets, higher alpha means lower distinctiveness.</v>
+
+56
+00:05:55.241 --> 00:05:56.102
+<v Maya>Wait, really?</v>
+
+57
+00:05:56.222 --> 00:06:04.830
+<v Daniel>Yes. If a researcher leans heavier on an LOM, their proposal ends up mathematically closer to the center of what the agency just funded last year.</v>
+
+58
+00:06:05.057 --> 00:06:18.647
+<v Maya>But let me push back on the numbers a bit because they sound kind of small at first glance. The paper says moving from the 25th percentile of LLM use up to the 75th percentile cost a proposal about five percentile points of distinctiveness at the NSF.</v>
+
+59
+00:06:18.908 --> 00:06:20.329
+<v Daniel>And about four points at the NIH.</v>
+
+60
+00:06:20.529 --> 00:06:24.532
+<v Maya>Right. So five percentile points doesn't sound like a massive drop. Why is that statistically alarming?</v>
+
+61
+00:06:24.792 --> 00:06:39.122
+<v Daniel>Because at the sheer scale of the NSF and NIH budgets. A five-point shift toward the center across the entire pipeline represents hundreds of millions of dollars. It's a diversion from radical exploratory science into safe</v>
+
+62
+00:06:39.463 --> 00:06:40.583
+<v Daniel>incremental science.</v>
+
+63
+00:06:40.883 --> 00:06:43.104
+<v Maya>Wow. Okay, that puts it in perspective.</v>
+
+64
+00:06:43.284 --> 00:06:47.927
+<v Daniel>And what makes this finding bulletproof is that they used investigator-fixed effects.</v>
+
+65
+00:06:48.452 --> 00:06:52.194
+<v Maya>Meaning the model is comparing a researcher against their own past work.</v>
+
+66
+00:06:52.394 --> 00:07:07.303
+<v Daniel>Exactly. When a specific scientist writes a proposal with heavy LLM involvement, that specific proposal is less distinctive than the proposals that same scientist writes without it. Oh, wow. It isolates the effect of the tool from the traits of the human scientist.</v>
+
+67
+00:07:07.563 --> 00:07:11.865
+<v Maya>But wait, couldn't this just be what we might call, I don't know, stylistic smoothing? What do</v>
+
+68
+00:07:11.885 --> 00:07:12.205
+<v Daniel>you mean?</v>
+
+69
+00:07:12.425 --> 00:07:24.939
+<v Maya>While scientists are notoriously terrible at writing, they use dense, awful jargon. What if the LM is just taking out the jargon, sanding the language flat, and making it read more like standard, boring, bureaucratic grant speak?</v>
+
+70
+00:07:25.079 --> 00:07:26.821
+<v Daniel>Like it's just a cosmetic change.</v>
+
+71
+00:07:26.861 --> 00:07:31.648
+<v Maya>Yeah. The science itself might be exactly as innovative. It's just wrapped in a blander package.</v>
+
+72
+00:07:32.085 --> 00:07:47.038
+<v Daniel>The authors actually anticipated that brilliantly. They ran a check specifically for stylistic smoothing. They went back to those 2021 pre-ChatGPT abstracts. And they explicitly prompted the LLM to rewrite</v>
+
+73
+00:07:47.098 --> 00:07:53.423
+<v Daniel>them by changing the surface level language and style while strictly holding the core scientific ideas fixed.</v>
+
+74
+00:07:53.772 --> 00:07:55.853
+<v Maya>So a purely cosmetic makeover.</v>
+
+75
+00:07:55.953 --> 00:08:02.654
+<v Daniel>Exactly. And when they ran those cosmetically altered abstracts through the Spectre 2 map, the distinctiveness barely moved.</v>
+
+76
+00:08:02.774 --> 00:08:03.254
+<v Maya>Really?</v>
+
+77
+00:08:03.514 --> 00:08:13.217
+<v Daniel>The semantic distance remained almost identical to the human originals. Therefore, the convergence we are seeing in the actual 2024 and 2025 pipeline is substantive.</v>
+
+78
+00:08:13.417 --> 00:08:14.137
+<v Maya>That's huge.</v>
+
+79
+00:08:14.197 --> 00:08:19.258
+<v Daniel>The ideas themselves are sitting closer to the center of the known universe, not just the vocabulary.</v>
+
+80
+00:08:19.338 --> 00:08:28.970
+<v Maya>Wow. So if you use an LLM, your actual ideas look more like last year's winners. Which brings up the million-dollar question. Does sounding like last year's winners actually get you the money?</v>
+
+81
+00:08:29.110 --> 00:08:32.734
+<v Daniel>Well, this is where the paper delivers its most surprising result, the agency split.</v>
+
+82
+00:08:32.814 --> 00:08:33.055
+<v Maya>Right.</v>
+
+83
+00:08:33.255 --> 00:08:47.934
+<v Daniel>At the National Science Foundation, leaning on an LLM does absolutely nothing for you. Nothing. There's no statistically significant relationship between LLM involvement and getting funded at the NSF. And later on, there's no relationship with your publication</v>
+
+84
+00:08:47.994 --> 00:08:49.456
+<v Daniel>output. It's a total flat line.</v>
+
+85
+00:08:50.024 --> 00:08:52.667
+<v Maya>But at the NIH, it is a completely different story.</v>
+
+86
+00:08:52.807 --> 00:08:54.008
+<v Daniel>A completely different story.</v>
+
+87
+00:08:54.028 --> 00:09:04.879
+<v Maya>Because a higher alpha, you know, moving from the 25th to the 75th percentile of LLM use, gives a researcher a roughly four percentage point jump in the probability of getting funded.</v>
+
+88
+00:09:05.059 --> 00:09:12.547
+<v Daniel>And if they get the money, that higher alpha is associated with about 5% more follow-on publications in the next one to two years.</v>
+
+89
+00:09:12.747 --> 00:09:20.410
+<v Maya>Here's where it gets really interesting to me. We have to dig into that 5% productivity premium. The authors restricted their analysis just to hit papers.</v>
+
+90
+00:09:20.470 --> 00:09:23.531
+<v Daniel>Meaning papers in the top 5% of citations worldwide?</v>
+
+91
+00:09:23.671 --> 00:09:28.733
+<v Maya>Right. And when they look only at those hits, that NIH productivity premium completely vanishes.</v>
+
+92
+00:09:28.973 --> 00:09:29.453
+<v Daniel>Completely.</v>
+
+93
+00:09:29.613 --> 00:09:38.457
+<v Maya>It's like, imagine a famous rock band using AI to help them write music. Suddenly they're releasing three albums a year instead of one. But it's all B-side tracks.</v>
+
+94
+00:09:38.477 --> 00:09:39.197
+<v Daniel>It's just filler.</v>
+
+95
+00:09:39.595 --> 00:09:51.018
+<v Maya>Yeah, they aren't writing any more chart-topping number one singles than they were before. It's just more volume, but it is not more impact. All the extra output is concentrated in the nong hits.</v>
+
+96
+00:09:51.509 --> 00:09:55.653
+<v Daniel>We do need to ground this conversation with an explicit caution from the authors themselves, though.</v>
+
+97
+00:09:55.773 --> 00:09:56.253
+<v Maya>Fair point.</v>
+
+98
+00:09:56.593 --> 00:10:10.205
+<v Daniel>As robust as this data is, these are conditional correlations within investigators. They are not proving a causal effect. We're looking at two universities, and for the downstream publications, we only have a short one- to two-year output window.</v>
+
+99
+00:10:10.440 --> 00:10:12.342
+<v Maya>Because the grants were only awarded recently.</v>
+
+100
+00:10:12.622 --> 00:10:27.277
+<v Daniel>Exactly. So we can't say for sure that the LLM caused the proposal to be less distinctive. It is entirely possible that an investigator sits down, looks at their projects and says, you know, this project is my safe incremental idea. I'll just use ChatGPT for this one.</v>
+
+101
+00:10:27.517 --> 00:10:31.942
+<v Maya>And they save their real human brainpower for their really wild high variance ideas.</v>
+
+102
+00:10:32.431 --> 00:10:46.122
+<v Daniel>Right. The causality could run in the other direction. But either way, the association is there. And if we look at that NIH finding, you know, more papers but not more hits, it plugs directly into a massive live fight happening in the scientific community right now.</v>
+
+103
+00:10:46.402 --> 00:10:52.387
+<v Maya>Oh, the academic drama here is just so good. This is a huge debate about whether AI actually makes scientists better.</v>
+
+104
+00:10:52.748 --> 00:11:02.779
+<v Daniel>It really is. And to understand the stakes, we have to look at where this whole claim originally came from. In December 2025, Science published a massive paper by Kusumegi and colleagues.</v>
+
+105
+00:11:03.200 --> 00:11:04.741
+<v Maya>Massive is an understatement.</v>
+
+106
+00:11:04.881 --> 00:11:13.791
+<v Daniel>Yeah. They analyzed 2.1 million preprints, over 28,000 peer review reports, and a staggering 246 million document accesses.</v>
+
+107
+00:11:13.971 --> 00:11:14.412
+<v Maya>Wow.</v>
+
+108
+00:11:14.712 --> 00:11:26.783
+<v Daniel>And they claim that scientists who adopted LLM saw their output increase by anywhere from twenty three point seven to eighty nine point three percent. They also claimed it reversed the old relationship where highly complex writing used to correlate with higher paper quality.</v>
+
+109
+00:11:26.823 --> 00:11:41.519
+<v Maya>Huge claims. But and this is where it gets crazy. On the exact same day that our main key and paper dropped in PNAS in August twenty twenty six. PNAS also published a formal comment by Renault, Bergeau and Bosquet. And they argued that Kusumedi's massive</v>
+
+110
+00:11:41.579 --> 00:11:44.683
+<v Maya>productivity boost is largely a statistical illusion. A</v>
+
+111
+00:11:44.964 --> 00:11:47.227
+<v Daniel>mechanical artifact of how they measured time.</v>
+
+112
+00:11:47.623 --> 00:11:59.590
+<v Maya>Let's break down Renault's argument for everyone listening, because it is a brilliant catch. In the Kusumegi paper, you don't have the researchers' search histories, right? You don't know the exact date they adopted AI.</v>
+
+113
+00:11:59.650 --> 00:12:01.351
+<v Daniel>No. You have to use a text detector.</v>
+
+114
+00:12:01.551 --> 00:12:07.375
+<v Maya>Right. And the very first month one of their papers trips the detector, you log that as their adoption month.</v>
+
+115
+00:12:07.575 --> 00:12:13.200
+<v Daniel>But Renault point out that by doing this, you mathematically tie their adoption date to their sheer volume of output.</v>
+
+116
+00:12:13.220 --> 00:12:24.569
+<v Maya>Yes. If I publish one paper a year, I have one lottery ticket to trip the detector. If I publish 10 papers a month, I have 10 tickets. The more you publish, the likelier you are to get flagged.</v>
+
+117
+00:12:24.849 --> 00:12:28.152
+<v Daniel>Exactly. And what happens to the baseline before that flag?</v>
+
+118
+00:12:28.325 --> 00:12:37.873
+<v Maya>Well, by definition, the month before adoption is a month where they didn't get flagged, which means it was likely a month where they published very little or literally nothing at all.</v>
+
+119
+00:12:38.053 --> 00:12:42.757
+<v Daniel>You have artificially selected a baseline month of unusually low output.</v>
+
+120
+00:12:43.077 --> 00:12:54.266
+<v Maya>Yes. And when you compare their later months to that artificially depressed baseline, it looks like their productivity is skyrocketing. But you manufactured the rising trend out of thin air.</v>
+
+121
+00:12:54.667 --> 00:13:07.893
+<v Daniel>Renaud proved this by running simulations where they forced the true effect of AI to be zero and the illusion still appeared perfectly. They also proved it with three different placebos, including random paper-level assignments and pre-chat GPT windows.</v>
+
+122
+00:13:08.298 --> 00:13:19.460
+<v Maya>It is such a profound critique. But to remain entirely impartial here, you know, because this is a live, totally unresolved debate, we have to look at Kusumegi's rebuttal, which was published shortly after.</v>
+
+123
+00:13:19.540 --> 00:13:20.800
+<v Daniel>Right. They didn't back down at all.</v>
+
+124
+00:13:21.040 --> 00:13:33.802
+<v Maya>No. Kusumegi and their team admitted that Renault's statistical artifact is real. However, they argued it is bounded, meaning the illusion simply isn't mathematically large enough to explain the massive 89 percent boost they found.</v>
+
+125
+00:13:33.902 --> 00:13:44.567
+<v Daniel>Right. They argued that Renault's placebo was actually biased toward the real effect. They found that LLM adopters were overrepresented among the placebo-treated group by a factor of about 1.3 to 1.5. Okay,</v>
+
+126
+00:13:44.787 --> 00:13:46.628
+<v Maya>so a skewed control group.</v>
+
+127
+00:13:46.928 --> 00:14:00.216
+<v Daniel>Exactly. They also rate-matched the placebo's firing rate to the actual detector's firing rate. But their absolute strongest defense was running four entirely new experimental designs where they didn't use that first detection dating method at all.</v>
+
+128
+00:14:00.316 --> 00:14:04.799
+<v Maya>Bypassing the bias entirely. Wait, how do you measure adoption without a start date, though?</v>
+
+129
+00:14:05.365 --> 00:14:18.714
+<v Daniel>One of the methods was an intensity specification, basically a statistical method that looks at the overall volume and concentration of LLM-like text over time for a researcher, without ever forcing the model to pick a single day one of adoption.</v>
+
+130
+00:14:19.014 --> 00:14:19.575
+<v Maya>And what happened?</v>
+
+131
+00:14:19.955 --> 00:14:31.683
+<v Daniel>In all four of these new designs, the strong association between LLM use and increased productivity survived. They even ran the exact same tests on pre-chat GPT data, and it correctly returned null results.</v>
+
+132
+00:14:31.803 --> 00:14:46.557
+<v Maya>So the effect is real. I want to be super clear to the listener. This fight is completely unresolved. We are not picking a winner today between Kusumegi and Renault. But if Renault proved the massive AI boost might be a statistical mirage and Kusumegi proved it survives rigorous new</v>
+
+133
+00:14:46.597 --> 00:14:48.940
+<v Maya>testing, how do we make sense of any of this?</v>
+
+134
+00:14:49.380 --> 00:14:54.085
+<v Daniel>Well, there is one very uncomfortable thread tying all this research together.</v>
+
+135
+00:14:54.415 --> 00:15:08.224
+<v Maya>The shared instrument. Yes. The main Qian paper we are talking about today, the Kusumegi paper with the productivity boost and the Renault critique that tried to tear it down all of them at their absolute foundation, relying on the exact same family of text detection.</v>
+
+136
+00:15:08.444 --> 00:15:09.945
+<v Daniel>Liang's distributional framework.</v>
+
+137
+00:15:10.115 --> 00:15:15.597
+<v Maya>Right, the tool that originally found LLM content hitting 22% in computer science abstract.</v>
+
+138
+00:15:15.618 --> 00:15:17.658
+<v Daniel>But far less in math and nature journals.</v>
+
+139
+00:15:17.678 --> 00:15:25.022
+<v Maya>Exactly. If the Liying text detection tool has fundamental flaws, this entire house of cards, all these major papers, shakes.</v>
+
+140
+00:15:25.222 --> 00:15:36.647
+<v Daniel>Which is exactly why researchers are desperately trying to triangulate the impact of AI using totally different methods. This brings us to a massive 2026 nature paper by Hao and colleagues.</v>
+
+141
+00:15:36.927 --> 00:15:38.068
+<v Maya>Okay, what did they do differently?</v>
+
+142
+00:15:38.168 --> 00:15:52.814
+<v Daniel>Instead of looking at 2 million papers, they looked at 41.3 million papers, and they used a totally different identification strategy. Instead of looking at word frequencies like Liang, they fine-tuned a neural network, a BERT language model, to understand the deep</v>
+
+143
+00:15:52.895 --> 00:15:54.775
+<v Daniel>context of how the text was generated.</v>
+
+144
+00:15:55.176 --> 00:15:57.997
+<v Maya>And what did Hauer find when they scaled it up that big?</v>
+
+145
+00:15:58.402 --> 00:16:13.187
+<v Daniel>They found a dynamic that perfectly mirrors the tension we've been discussing. At the individual level, AI-augmented scientists are thriving. They publish 3.02 times more. They get 4.84 times more citations. Wow.</v>
+
+146
+00:16:13.547 --> 00:16:17.569
+<v Daniel>And they become project leaders 1.37 years earlier than their peers.</v>
+
+147
+00:16:17.909 --> 00:16:19.809
+<v Maya>That is massive individual gain.</v>
+
+148
+00:16:19.849 --> 00:16:34.670
+<v Daniel>But at the collective level... The total volume of scientific topics being studied by those scientists shrank by 4.63%. Oh, wow. And engagement between scientists, meaning papers citing each other and building dense networks of ideas, fell by 22%.</v>
+
+149
+00:16:35.230 --> 00:16:49.113
+<v Maya>So individual gain, but collective narrowing. The AI helps the individual scientists scale the mountain way faster, but the whole community ends up climbing the exact same mountain. They move toward areas already rich in data rather than exploring the uncharted wilderness.</v>
+
+150
+00:16:49.253 --> 00:17:04.069
+<v Daniel>Exactly. And if we connect Howell back to our main paper by Kian Howell, prove that this narrowing of human knowledge happens downstream in the 41 million published papers. Klein's massive contribution is proving that this narrowing isn't just happening at the end of the pipeline.</v>
+
+151
+00:17:04.610 --> 00:17:10.136
+<v Daniel>It is happening upstream. At the exact moment, scientific ideas are born and submitted for public money.</v>
+
+152
+00:17:10.492 --> 00:17:14.413
+<v Maya>So as we step back and look at this whole system, how do we frame what's happening?</v>
+
+153
+00:17:14.533 --> 00:17:19.355
+<v Daniel>We can look at sociologist James March's classic concept of exploration versus exploitation.</v>
+
+154
+00:17:19.475 --> 00:17:20.415
+<v Maya>Break that down for us.</v>
+
+155
+00:17:20.735 --> 00:17:35.555
+<v Daniel>In any complex system, you have to balance exploiting the things you already know work versus exploring the completely unknown. Exploration is highly risky. It often fails, but it occasionally yields a massive breakthrough. Federal agencies</v>
+
+156
+00:17:35.595 --> 00:17:44.358
+<v Daniel>like the NSF and the NIH are specifically tasked by the public to fund high-variance exploratory science. They are the risk-takers of last resort.</v>
+
+157
+00:17:44.458 --> 00:17:47.541
+<v Maya>But if LLMs are quietly acting like a gravity, really.</v>
+
+158
+00:17:47.561 --> 00:18:02.197
+<v Daniel>Exactly. If the AI is pulling the framing of proposals toward the center of what the agency already funded last year, the entire U.S. research portfolio could slowly tilt toward exploitation of known ideas. And the chilling part is, this happens without a single</v>
+
+159
+00:18:02.277 --> 00:18:05.020
+<v Daniel>human policymaker ever deciding to make that shift.</v>
+
+160
+00:18:05.353 --> 00:18:07.673
+<v Maya>It's just an emergent property of the tool.</v>
+
+161
+00:18:07.853 --> 00:18:08.053
+<v Daniel>Yes.</v>
+
+162
+00:18:08.334 --> 00:18:23.196
+<v Maya>And the agencies are already scrambling to figure this out. We're seeing policy drop in real time. In July 2025, the NIH issued guidance explicitly stating that applications substantially developed by AI are not considered the applicant's original</v>
+
+163
+00:18:23.236 --> 00:18:23.476
+<v Maya>work.</v>
+
+164
+00:18:23.696 --> 00:18:24.576
+<v Daniel>Right. They're drawing a line.</v>
+
+165
+00:18:24.676 --> 00:18:36.700
+<v Maya>And the NSF is pushing heavily on investigator responsibility. They're saying if you use it, you have to disclose it and you are responsible for every single word. But, you know. Policy is always playing catch up to the tech.</v>
+
+166
+00:18:37.120 --> 00:18:42.745
+<v Daniel>It is. It forces the entire scientific community to rethink what a good grant proposal actually is.</v>
+
+167
+00:18:43.105 --> 00:18:57.997
+<v Maya>And that is exactly what I want to leave you with today. A lingering question for you to mull over long after this deep dive ends. We know the data shows that an AI-assisted proposal reads more like the work the agency just funded last year. But does that actually make it a worse, less</v>
+
+168
+00:18:58.137 --> 00:19:01.660
+<v Maya>innovative proposal? Or does it just make it a much clearer one?</v>
+
+169
+00:19:02.067 --> 00:19:02.968
+<v Daniel>That's the real question.</v>
+
+170
+00:19:03.169 --> 00:19:17.710
+<v Maya>Right. Maybe the science is just as wild and exploratory as ever. But for the first time, the AI is finally cutting through the dense academic jargon so the reviewers can actually understand the science being proposed. Is the gravity well pulling the ideas</v>
+
+171
+00:19:17.770 --> 00:19:26.122
+<v Maya>themselves or just the words we use to describe them? Thank you for exploring the edges of the known with us today. Keep questioning, keep digging, and we will see you next time.</v>
