@@ -1,0 +1,609 @@
+WEBVTT
+
+1
+00:00:00.091 --> 00:00:07.755
+<v Daniel>You know, it's funny. If you ask an AI to write like a Shakespearean sonnet about a toaster, it just does it in two seconds. It's basically magic.</v>
+
+2
+00:00:07.995 --> 00:00:09.976
+<v Maya>Right. Yeah. It's effortless.</v>
+
+3
+00:00:10.536 --> 00:00:17.720
+<v Daniel>But if you ask a multimillion dollar state of the art humanoid robot, just walk across a slightly uneven floor and pick up a coffee cup. Well,</v>
+
+4
+00:00:17.980 --> 00:00:18.260
+<v Maya>yeah,</v>
+
+5
+00:00:18.360 --> 00:00:21.441
+<v Daniel>you're usually holding your breath, waiting for it to face plant into the drywall.</v>
+
+6
+00:00:21.521 --> 00:00:26.664
+<v Maya>Oh, absolutely. The robotics fail videos are practically their own genre on the Internet.</v>
+
+7
+00:00:26.824 --> 00:00:41.824
+<v Daniel>Totally. So why is physical movement so much harder than writing poetry? And, you know, has a new breakthrough finally cracked the code? Today, we are bringing you along on a deep dive into a brand new peer reviewed paper from researchers at NVIDIA.</v>
+
+8
+00:00:42.042 --> 00:00:48.103
+<v Maya>Yeah, this one is hot off the presses. Published in Science Robotics on August 12, 2026. Right, and</v>
+
+9
+00:00:48.384 --> 00:01:02.087
+<v Daniel>it's called Sonic. Supersizing motion tracking for natural humanoid whole body control. The advisors on this are Lynxie Jim-Fan and Yuke Zhu. And their central claim is pretty bold. They're basically saying humanoid robots haven't been failing because of bad hardware.</v>
+
+10
+00:01:02.187 --> 00:01:03.347
+<v Maya>No, the hardware is fine.</v>
+
+11
+00:01:03.727 --> 00:01:06.968
+<v Daniel>Exactly. They've been failing because we've been giving them the wrong homework assignment.</v>
+
+12
+00:01:07.118 --> 00:01:22.082
+<v Maya>It's a massive paradigm shift, really. To appreciate what Sonic is doing, we have to look at the huge success of large language models. You know, things like ChatGPT. Those text models got better in a very predictable way. They scaled three specific</v>
+
+13
+00:01:22.142 --> 00:01:26.603
+<v Maya>things. Model size, the sheer volume of data, and the raw compute power.</v>
+
+14
+00:01:27.419 --> 00:01:30.860
+<v Daniel>But humanoid robot controllers, they just never had that luxury, did they?</v>
+
+15
+00:01:31.080 --> 00:01:41.285
+<v Maya>Not at all. While language models grew to billions of parameters, state-of-the-art humanoid controllers stayed tiny. I mean, historically, we're talking about three-layer MLPs.</v>
+
+16
+00:01:41.565 --> 00:01:49.088
+<v Daniel>Which, to put that in plain English, an MLP, a multilayer perceptron, is basically a tiny, hardwired digital reflex, right?</v>
+
+17
+00:01:49.108 --> 00:01:57.191
+<v Maya>Yeah, exactly. Trained on just a handful of GPUs. And each one was built for one specific task with its own hand-engineered reward system.</v>
+
+18
+00:01:57.271 --> 00:02:05.316
+<v Daniel>Which sounds incredibly limiting. I mean, hand engineering a reward means a human programmer has to sit there and write a mathematical formula defining what good behavior looks like.</v>
+
+19
+00:02:05.496 --> 00:02:07.317
+<v Maya>Right. And that is a nightmare to scale.</v>
+
+20
+00:02:07.477 --> 00:02:22.326
+<v Daniel>It's like, OK, it's like trying to teach a kid to ride a bike by writing an exact mathematical equation for balance. If you do that, learning to walk forward gives the robot zero mathematical signal for how to, say, dance or</v>
+
+21
+00:02:22.366 --> 00:02:23.207
+<v Daniel>get up from a fall.</v>
+
+22
+00:02:23.498 --> 00:02:32.486
+<v Maya>Exactly. You are just mathematically locking the machine into that one specific motion. And researchers have known this was a dead end for a while now.</v>
+
+23
+00:02:32.666 --> 00:02:35.708
+<v Daniel>Yeah, we've got a stack of older background papers here to give us some context.</v>
+
+24
+00:02:35.768 --> 00:02:44.135
+<v Maya>Right. If you trace the lineage of this field, looking at earlier milestones like the AMP paper from 2021 or Masked Mimic from 2024.</v>
+
+25
+00:02:44.376 --> 00:02:49.680
+<v Daniel>And it's worth noting, researcher Su Bin Peng was an author on both of those, and Masked Mimic came out of NVIDIA too.</v>
+
+26
+00:02:49.975 --> 00:02:57.159
+<v Maya>Yep, keeping it in the family. So their strategy back then was to use something called adversarial discriminators to escape those manual rewards.</v>
+
+27
+00:02:57.359 --> 00:03:02.622
+<v Daniel>Okay, let's untack this for the listener. An adversarial discriminator is essentially an AI judge, right?</v>
+
+28
+00:03:02.642 --> 00:03:03.482
+<v Maya>That's a great way to put it.</v>
+
+29
+00:03:03.782 --> 00:03:12.827
+<v Daniel>Like you have the robot trying to move and the judge AI scores it based on how closely it resembles generic human movement from like a video clip.</v>
+
+30
+00:03:13.127 --> 00:03:17.089
+<v Maya>Right. The robot tries to fool the judge into thinking its movements are perfectly natural.</v>
+
+31
+00:03:17.627 --> 00:03:24.609
+<v Daniel>But Sonic points out a fatal flaw in that approach when you try to scale it up. It's this phenomenon called mode collapse.</v>
+
+32
+00:03:24.769 --> 00:03:26.929
+<v Maya>Yeah, mode collapse is a huge issue.</v>
+
+33
+00:03:27.029 --> 00:03:40.612
+<v Daniel>Meaning the judge basically just gets overwhelmed. Like, if you only teach the AI to walk, the judge knows what walking looks like. But if you throw dancing, backflips, crawling, and boxing all into the data set, the judge just throws its hands up.</v>
+
+34
+00:03:40.772 --> 00:03:53.037
+<v Maya>Exactly. The training signal becomes chaotic. As your dataset grows in size and diversity, which is, you know, the fundamental requirement for scaling in AI, those discriminator-based signals just fail.</v>
+
+35
+00:03:53.417 --> 00:03:58.479
+<v Daniel>The judge can't reliably tell the robot what it's doing wrong across 10,000 different types of movement.</v>
+
+36
+00:03:58.539 --> 00:04:07.063
+<v Maya>Right. So those older unification attempts, they prided in the right direction by ditching manual rewards. But they used an objective that fundamentally could not scale.</v>
+
+37
+00:04:07.458 --> 00:04:20.053
+<v Daniel>Which brings us to the real aha moment of the sonic paper. The NVIDIA team realized they needed a training task that provides intense frame-by-frame supervision, but needs zero reward engineering.</v>
+
+38
+00:04:20.418 --> 00:04:23.639
+<v Maya>And their answer is surprisingly simple. Motion tracking.</v>
+
+39
+00:04:23.719 --> 00:04:37.724
+<v Daniel>Yeah, just directly tracking human motion capture data. Instead of a vague reward for staying upright or trying to fool an AI judge, the training task is literally just copy this motion capture data frame by frame.</v>
+
+40
+00:04:37.935 --> 00:04:44.360
+<v Maya>Which is brilliant because it gives the model an explicit target pose for every single joint, every single step.</v>
+
+41
+00:04:44.540 --> 00:04:52.766
+<v Daniel>Right. If the human elbow is at a 45 degree angle in the mocap data and the robot's elbow is at 40 degrees, the math instantly corrects it.</v>
+
+42
+00:04:53.046 --> 00:04:58.690
+<v Maya>Exactly. This allows the learning signal to remain incredibly robust no matter how much data you throw at it.</v>
+
+43
+00:04:58.810 --> 00:05:04.815
+<v Daniel>And that robust signal is what finally allows them to just mash the accelerator on those three axes of scale.</v>
+
+44
+00:05:04.935 --> 00:05:07.696
+<v Maya>The numbers here are just wild. Let's look at model size first.</v>
+
+45
+00:05:07.836 --> 00:05:13.659
+<v Daniel>Okay, yeah. They scaled the neural network from 1.2 million to 16 million, up to 42 million parameters.</v>
+
+46
+00:05:13.819 --> 00:05:21.282
+<v Maya>Which, obviously, 42 million is microscopic compared to an LLM. But for a physical robot controller, that is massive.</v>
+
+47
+00:05:21.382 --> 00:05:28.506
+<v Daniel>Oh, for sure. And then there's the data size. They started with 4 million frames of human motion capture data, then 10 million, then 22 million.</v>
+
+48
+00:05:28.606 --> 00:05:31.327
+<v Maya>And finally, they pushed it to 100 million frames.</v>
+
+49
+00:05:31.647 --> 00:05:36.931
+<v Daniel>Which breaks down to, what, going from 20,000 up to 317,000 distinct motion clips?</v>
+
+50
+00:05:37.051 --> 00:05:39.833
+<v Maya>Yeah, it totals about 700 hours of human motion capture.</v>
+
+51
+00:05:40.074 --> 00:05:49.581
+<v Daniel>And you need serious horsepower to process that. They scaled the compute on NVIDIA GPUs starting at 16, then 32, and all the way up to 128 GPUs.</v>
+
+52
+00:05:49.681 --> 00:06:01.889
+<v Maya>Right, which translates to a jump from roughly 2,000 GPU hours to over 21,000 GPU hours. To train that final model... They had 128 GPUs running continuously for seven full days.</v>
+
+53
+00:06:02.089 --> 00:06:08.391
+<v Daniel>The payoff, though, is undeniable. I mean, the biggest model hits a 99.6% success rate on held-out motion content.</v>
+
+54
+00:06:08.511 --> 00:06:10.852
+<v Maya>Right, motions it was never explicitly trained on.</v>
+
+55
+00:06:11.072 --> 00:06:17.995
+<v Daniel>And its tracking error, which they measure as local mean per joint position error, or MPJPEL, was just 23.8 millimeters.</v>
+
+56
+00:06:18.955 --> 00:06:28.638
+<v Maya>Less than an inch of deviation per joint. Compare that to the smallest 1.2 million parameter model, which had a 98.0% success rate and a 27.7 millimeter error.</v>
+
+57
+00:06:29.018 --> 00:06:38.860
+<v Daniel>So the bigger the model, the more data, the more compute, the better it performs. Just like language models. And I have to play devil's advocate here. I do want to push back on this premise just a little</v>
+
+58
+00:06:38.880 --> 00:06:39.660
+<v Maya>bit. Go for it.</v>
+
+59
+00:06:39.760 --> 00:06:45.142
+<v Daniel>So if we look back at a famous 2020 paper by Kaplan, the one that really established the scaling laws for language models.</v>
+
+60
+00:06:45.222 --> 00:06:45.442
+<v Maya>Yeah.</v>
+
+61
+00:06:45.702 --> 00:06:49.043
+<v Daniel>Kaplan showed power law improvements across seven orders of magnitude.</v>
+
+62
+00:06:49.203 --> 00:06:49.984
+<v Maya>Right. Seven.</v>
+
+63
+00:06:50.224 --> 00:07:04.830
+<v Daniel>Seven. With Sonic, we're looking at basically three data points on a log axis. 1.2, 16, and 42 million parameters. Are we prematurely declaring a, quote unquote, scaling law for robotics here?</v>
+
+64
+00:07:05.370 --> 00:07:07.011
+<v Daniel>Or is this just a really promising trend?</v>
+
+65
+00:07:07.650 --> 00:07:22.634
+<v Maya>That is a very fair tension to bring up. Three data points do not definitively establish a law of physics. But the reason the robotics community is taking this so seriously is because of where the gains are happening. The largest improvements aren't just on motions the robot</v>
+
+66
+00:07:22.654 --> 00:07:32.257
+<v Maya>memorized during training. The gains are largest on out-of-distribution motions. Scale isn't just buying memorization here. It's buying true generalization.</v>
+
+67
+00:07:32.625 --> 00:07:42.691
+<v Daniel>So if you show it 100 million frames of walking and dancing, it doesn't just get better at walking and dancing. It gets better at recovering from a trip or adapting to movements it has never seen.</v>
+
+68
+00:07:42.971 --> 00:07:47.954
+<v Maya>Exactly. It is developing an underlying fundamental representation of balance and momentum.</v>
+
+69
+00:07:48.055 --> 00:08:02.883
+<v Daniel>Which is super cool. But succeeding in your own lab environment is kind of like grading your own homework. Sure. The real test is external benchmarks. And here's where it gets really interesting. Sonic was thrown into the ring against other state-of-the-art trackers like Beyond Mimic</v>
+
+70
+00:08:03.023 --> 00:08:03.764
+<v Daniel>and NE2 Track.</v>
+
+71
+00:08:03.924 --> 00:08:07.164
+<v Maya>And the ultimate proving ground here is a benchmark called PMA.</v>
+
+72
+00:08:07.224 --> 00:08:18.087
+<v Daniel>Yeah, the numbers on PMA are just stark. Sonic hits a 97.2% success rate. Beyond Mimic only manages 73.8%. And NE2 Track is sitting at 78.5%.</v>
+
+73
+00:08:18.207 --> 00:08:25.329
+<v Maya>And Sonic slashed that joint tracking error by 42% compared to Beyond Mimic, dropping it to 23.7 millimeters from nearly 41 millimeters.</v>
+
+74
+00:08:27.438 --> 00:08:36.792
+<v Daniel>Why does FIUMA matter so much more than the internal tests? They got 98.5 on test content and 99.2 on test repetition, but you highlighted PMA specifically.</v>
+
+75
+00:08:37.202 --> 00:08:48.806
+<v Maya>because of how Huma is built. It relies on video-based pose estimation. It uses a totally different pipeline to translate human movement into robot movement than the one Sonic was trained on.</v>
+
+76
+00:08:49.106 --> 00:08:51.967
+<v Daniel>Got it. So it is wildly out of distribution.</v>
+
+77
+00:08:52.147 --> 00:09:01.290
+<v Maya>Exactly. For Sonic to drop into that completely foreign testing environment and succeed 97% of the time shows a profound level of robustness.</v>
+
+78
+00:09:01.610 --> 00:09:09.513
+<v Daniel>But the most striking result in the whole paper, to me at least, isn't against other general trackers. It's the generalist versus the specialist showdown.</v>
+
+79
+00:09:09.533 --> 00:09:10.874
+<v Maya>Oh, the open homey test. Yeah.</v>
+
+80
+00:09:10.894 --> 00:09:17.617
+<v Daniel>Yeah. So they put Sonic up against a system called open homey. And this is a fascinating contrast in engineering philosophies.</v>
+
+81
+00:09:17.857 --> 00:09:28.361
+<v Maya>It really is. The homey system, which was detailed in an earlier 2025 paper, was designed by researchers, including Kingway Ben, who, interestingly enough, is also a core contributor on Sonic.</v>
+
+82
+00:09:28.541 --> 00:09:37.977
+<v Daniel>Right. And Homey is a completely different approach to the robotics problem. It's basically a $500 open source hardware cockpit designed for human teleoperation.</v>
+
+83
+00:09:38.333 --> 00:09:49.703
+<v Maya>Yeah, it uses an isomorphic exoskeleton arm, meaning the metal exoskeleton you wear maps one-to-one exactly with the robot's joints, plus Hall sensor gloves for exact finger tracking.</v>
+
+84
+00:09:49.903 --> 00:10:00.652
+<v Daniel>Right, so the entire goal of HOMI is to keep a human directly in the loop, acting as the brain, to meticulously steer the robot and build a massive data flywheel of human intent.</v>
+
+85
+00:10:00.872 --> 00:10:08.272
+<v Maya>Exactly. Homie relies on clever hardware to perfectly capture the human mind, whereas Sonic represents the opposing bet.</v>
+
+86
+00:10:08.955 --> 00:10:16.100
+<v Daniel>Which is just to scale, compute, and data aggressively enough until the software policy outgrows the need for the human in the loop entirely.</v>
+
+87
+00:10:16.180 --> 00:10:23.684
+<v Maya>Right. So they test them head-to-head on a velocity tracking task. They command the robot to move at speeds ranging from 0 to 5 meters per second.</v>
+
+88
+00:10:23.724 --> 00:10:32.490
+<v Daniel>And keep in mind, OpenHomie is a purpose-built specialist here. It is optimized specifically and exclusively for this exact locomotion jaw. It is playing on its home turf.</v>
+
+89
+00:10:32.690 --> 00:10:35.672
+<v Maya>And yet, the generalist absolutely dismantles the specialist.</v>
+
+90
+00:10:35.732 --> 00:10:45.917
+<v Daniel>Completely. Sonic survives 98.5% of the runs. That's 197 out of 200. Open Homey survives only 43.0%, just 86 out of 200.</v>
+
+91
+00:10:46.317 --> 00:10:51.979
+<v Maya>It's wild. Open Homey's stability collapses once you push the speed past about 2 meters per second.</v>
+
+92
+00:10:52.019 --> 00:11:01.144
+<v Daniel>Yeah, and it falls below a 20% survival rate past 2.5 meters per second. Meanwhile, Sonic holds near 100% stability all the way up to 4 meters per second.</v>
+
+93
+00:11:01.352 --> 00:11:12.297
+<v Maya>When a generalist model trained broadly on diverse whole body motion beats a narrow specialist at the specialist's own bespoke game, That is the ultimate signature of a true scaling result.</v>
+
+94
+00:11:12.397 --> 00:11:14.918
+<v Daniel>The generalist didn't just learn a neat trick, it learned physics.</v>
+
+95
+00:11:15.258 --> 00:11:16.359
+<v Maya>Exactly. But learning</v>
+
+96
+00:11:16.399 --> 00:11:25.264
+<v Daniel>physics in a simulation, Isaac Lab, Mujoko, whatever, is still just math. Doing a backflip at a video game is easy. Doing it on actual asphalt is another story.</v>
+
+97
+00:11:25.324 --> 00:11:28.766
+<v Maya>Oh, absolutely. The cinturial gap is where a lot of robotic dreams go to die.</v>
+
+98
+00:11:28.826 --> 00:11:33.348
+<v Daniel>Right. So how does Sonic perform when deployed on the physical Unitree G1 robot?</v>
+
+99
+00:11:33.448 --> 00:11:44.796
+<v Maya>Well, this transition relies on an earlier 2025 breakthrough from the exact same NVIDIA team, Zengi Luo, Tyreen He, Linxi Fan, Yuxu. The paper was called ASAP.</v>
+
+100
+00:11:45.136 --> 00:11:46.297
+<v Daniel>ASAP. Okay, what did that do?</v>
+
+101
+00:11:46.647 --> 00:11:59.658
+<v Maya>It established a two-stage sim-to-real pipeline. First, you pre-train the tracking policies and the safety of a simulation. Then, you train what's called a delta action model from real physical rollouts to align the physics.</v>
+
+102
+00:12:00.119 --> 00:12:10.868
+<v Daniel>Ah, meaning you let the physical robot take a few steps, and this delta model calculates the difference, the delta, between the perfect math of the simulator and the messy reality of the physical floor.</v>
+
+103
+00:12:11.062 --> 00:12:21.253
+<v Maya>Precisely. Because of that ASAP groundwork, Sonic's real-world numbers aren't a fluke. They tested it on 124 diverse real-world motions.</v>
+
+104
+00:12:21.353 --> 00:12:21.813
+<v Daniel>In the numbers.</v>
+
+105
+00:12:22.033 --> 00:12:36.978
+<v Maya>In simulation, it had a 100% success rate on those motions. In the physical world, it achieved a staggering 99.2% real success rate. Yeah. The overall tracking error was 25.7 millimeters real versus 22.3 millimeters</v>
+
+106
+00:12:37.038 --> 00:12:39.379
+<v Maya>in sim. It barely noticed the transition.</v>
+
+107
+00:12:39.419 --> 00:12:49.503
+<v Daniel>Although I do have to point out, it's one glaring Achilles heel here. The feet. The feet. If you break down that tracking error, the gap between simulation and reality is incredibly tight at the upper body.</v>
+
+108
+00:12:49.583 --> 00:12:52.904
+<v Maya>Right. 22.2 millimeters real versus 21.8 in sim.</v>
+
+109
+00:12:53.324 --> 00:13:05.763
+<v Daniel>But when you look at the feet... The error jumps from 29.0mm in sim to a massive 53.7mm in the real world. That is over 2 inches of deviation when placing a foot.</v>
+
+110
+00:13:06.156 --> 00:13:12.417
+<v Maya>Which honestly makes perfect sense when you consider contact dynamics. The upper body is mostly moving through open air.</v>
+
+111
+00:13:12.677 --> 00:13:15.178
+<v Daniel>Right. The physics of swinging an arm are highly predictable.</v>
+
+112
+00:13:15.418 --> 00:13:29.621
+<v Maya>Exactly. But the feet are constantly slamming into the floor. They're dealing with micro slippages, uneven surfaces, the shock absorption of the robot's own joints. Managing that chaotic contact with the floor is where the physical world still bites back.</v>
+
+113
+00:13:29.905 --> 00:13:32.829
+<v Daniel>The feet are what make a humanoid a humanoid, really.</v>
+
+114
+00:13:33.089 --> 00:13:33.690
+<v Maya>Absolutely.</v>
+
+115
+00:13:33.850 --> 00:13:42.022
+<v Daniel>Okay. So we have this model that scales, it crushes specialists, and it successfully crosses the sim to real gap. So what does this all mean for the actual system? How does it run?</v>
+
+116
+00:13:42.687 --> 00:13:46.869
+<v Maya>Well, in practice, Sonic functions as a real-time generative kinematic motion planner.</v>
+
+117
+00:13:47.049 --> 00:13:51.392
+<v Daniel>Generating motion segments between 0.8 and 2.4 seconds into the future, right?</v>
+
+118
+00:13:51.412 --> 00:13:54.393
+<v Maya>Right. And it replans its movements every 100 milliseconds.</v>
+
+119
+00:13:54.413 --> 00:13:59.216
+<v Daniel>Which is blindingly fast. Yeah. I read it runs in under 5 milliseconds on a standard laptop.</v>
+
+120
+00:13:59.436 --> 00:14:08.181
+<v Maya>Yeah. And about 12 milliseconds on a Jetson Orin, which is the kind of actual edge compute brain you'd install inside a physical robot.</v>
+
+121
+00:14:08.401 --> 00:14:12.483
+<v Daniel>But to me, the real crown jewel of this system is its universal token space.</v>
+
+122
+00:14:12.754 --> 00:14:22.263
+<v Maya>Oh, for sure. Sonic maps robot motion, human motion, and hybrid motion into one single shared mathematical representation.</v>
+
+123
+00:14:22.283 --> 00:14:26.988
+<v Daniel>Meaning you don't have to retrain the brain just because you changed how you want to steer the robot.</v>
+
+124
+00:14:27.168 --> 00:14:27.648
+<v Maya>Exactly.</v>
+
+125
+00:14:27.668 --> 00:14:33.614
+<v Daniel>You can put on a VR headset and teleoperate it. You can just show it a video. You can type text prompts. You can even drive it with music.</v>
+
+126
+00:14:33.935 --> 00:14:41.477
+<v Maya>Right. They used a separate model called GEM to translate musical rhythm into joint angles. And Sonic just makes the robot dance.</v>
+
+127
+00:14:41.537 --> 00:14:56.482
+<v Daniel>It's incredible. It also handles autonomous vision language action or VLA models, allowing for whole body local manipulation across real world tasks. Like it can coordinate its hands and feet simultaneously walking over to a table while adjusting its balance to reach</v>
+
+128
+00:14:56.562 --> 00:14:57.442
+<v Daniel>out and grasp a cup.</v>
+
+129
+00:14:57.824 --> 00:15:05.328
+<v Maya>And because it learned from 700 hours of diverse human motion, it absorbed these complex styles without anyone explicitly programming them.</v>
+
+130
+00:15:05.668 --> 00:15:10.810
+<v Daniel>Yeah, zero-shot styles. Without any retraining, you can tell Sonic to walk like it's drunken.</v>
+
+131
+00:15:10.830 --> 00:15:11.111
+<v Maya>Yeah.</v>
+
+132
+00:15:11.331 --> 00:15:14.352
+<v Daniel>Or walk like it's injured, be happy, or do a stealth walk.</v>
+
+133
+00:15:14.392 --> 00:15:16.973
+<v Maya>It can box. It can squat. It can kneel.</v>
+
+134
+00:15:17.074 --> 00:15:24.097
+<v Daniel>It can even crawl across the floor at up to half a meter per second. It just knows how because it speaks this universal language of human movement.</v>
+
+135
+00:15:24.375 --> 00:15:39.200
+<v Maya>It really is a staggering leap from the fragile single task MLPs of just a few years ago. But, you know, this level of progress introduces some deep tensions that the robotics field now has to grapple with. Right. This raises an</v>
+
+136
+00:15:39.220 --> 00:15:42.861
+<v Maya>important question. Is motion tracking a foundation or is it a ceiling?</v>
+
+137
+00:15:43.761 --> 00:15:53.087
+<v Daniel>That's a really fascinating problem because a robot trained exclusively on human mocap inherits human movement, but it also inherits human limitations.</v>
+
+138
+00:15:53.227 --> 00:15:57.609
+<v Maya>Exactly. A humanoid robot has metal joints and motors. It doesn't have human muscles.</v>
+
+139
+00:15:57.789 --> 00:16:12.038
+<v Daniel>Right. So it might be physically capable of moving in ways that are far more efficient or powerful than a human. But if its entire worldview is constrained by mimicking human actors in mocap suits, can it ever learn motions no human has ever performed?</v>
+
+140
+00:16:12.384 --> 00:16:18.227
+<v Maya>It's very possible we are artificially capping its potential, and that leads directly into the data scarcity problem.</v>
+
+141
+00:16:18.407 --> 00:16:28.071
+<v Daniel>Yeah, we throw around the term scaling like it's the exact same thing as language models, but you can scrape the internet for trillions of text tokens. Motion capture data is incredibly scarce.</v>
+
+142
+00:16:28.489 --> 00:16:43.157
+<v Maya>And expensive. It requires studios, specialized suits, and hours of tedious human performance. 700 hours of mocap is a massive achievement for this team, but compared to the internet text used to train ChatGPT, it is a drop in the</v>
+
+143
+00:16:43.197 --> 00:16:43.518
+<v Maya>bucket.</v>
+
+144
+00:16:43.978 --> 00:16:47.640
+<v Daniel>How do you keep scaling when you literally run out of actors in mocap suits?</v>
+
+145
+00:16:48.064 --> 00:17:00.053
+<v Maya>And we also have to acknowledge the raw cost of embodiment here. Just to yield this one physical behavior model, they ran 128 GPUs for seven days. That's 21,000 GPU hours.</v>
+
+146
+00:17:00.373 --> 00:17:09.660
+<v Daniel>It really makes you wonder, is that a triumph of engineering progress? Or is it a glaring reminder of how ridiculously expensive and difficult the physical world still is compared to text?</v>
+
+147
+00:17:10.040 --> 00:17:17.934
+<v Maya>Moving metal in reality costs exponentially more than moving pixels on a screen. But Sonic proves that the scaling philosophy can cross that boundary.</v>
+
+148
+00:17:18.214 --> 00:17:33.167
+<v Daniel>It definitely does. Which leaves us with a pretty wild, provocative thought to mull over. Sonic created a universal token space that translates human text, VR movements, and music directly into metal joints. Are we looking at the beginning</v>
+
+149
+00:17:33.188 --> 00:17:36.070
+<v Daniel>of a universal operating system for physical movement itself?</v>
+
+150
+00:17:36.430 --> 00:17:37.551
+<v Maya>It really seems like it.</v>
+
+151
+00:17:37.571 --> 00:17:52.283
+<v Daniel>What happens when a robot translates an entirely different animal's motion capture data through this same pipeline? Could we see a two-legged humanoid robot suddenly drop down and gallop across a field using cheetah data, all running on the exact same underlying software? The</v>
+
+152
+00:17:52.323 --> 00:18:00.311
+<v Daniel>boundaries of what a machine can learn to do just blew wide open. Thank you all for joining us on this deep dive. Keep questioning the limits of what's possible, and we'll see you next time.</v>
