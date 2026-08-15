@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Aug 2026 06:51:22 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 06:46:31 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -322,5 +322,24 @@ Reference: Ben, Q., Jia, F., Zeng, J., Dong, J., Lin, D., &amp; Pang, J. (2025).
       <pubDate>Fri, 14 Aug 2026 06:21:24 +0000</pubDate>
       <itunes:episode>18</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/018%20-%20When%20Scaling%20Laws%20Reach%20The%20Body.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>019 - When Thinking Stops Being Words</title>
+      <description>When Thinking Stops Being Words (2019–2026)
+
+In this episode we unpack BDH-CQ, a reasoning model posted to arXiv on 10 August 2026 by Björn Engdahl, Adrian Kosowski, Jan Chorowski and colleagues at Pathway, with an independent audit by co-authors at Bielik AI and New York University. Its claim is not that it is the smartest system on the Abstraction and Reasoning Corpus. It is that a 150-million-parameter model reaches 29.5 percent pass@2 on the public ARC-AGI-1 evaluation set for about seven hundredths of a cent per task, breaking through the previously reported cost-accuracy Pareto frontier, and that it gets there without writing a single word of its reasoning down. We set that result against five papers that built the ideas underneath it: the architecture it runs on, the benchmark that defines what it is being measured for, and three rival attempts to move reasoning out of language.
+
+We walk through how BDH-CQ works, with demonstrations updating a recurrent memory one at a time and the query then solved by iteration in a high-dimensional latent workspace, and through what the authors find when they probe it: a latent reasoning dial that lifts accuracy from 21 to 29.5 percent with no tokens emitted, a consistency gap where 77.92 percent test-pair accuracy on ConceptARC collapses to 59.38 percent once a task must be solved in full, generalization ladders where boundary propagation extrapolates perfectly while eight-item ordering falls to one correct output in twenty-four, and the striking finding that a single demonstration at the target complexity rescues most of those failures. We trace the lineage through Adrian Kosowski's Dragon Hatchling, the brain-inspired post-Transformer architecture BDH-CQ extends; through François Chollet's definition of intelligence as skill-acquisition efficiency, which supplies this episode's sharpest question about a model trained on a curated pile of ARC-style data; through Coconut from FAIR at Meta and Jonas Geiping's recurrent-depth models, the two closest precedents for thinking in continuous space; and through Sapient Intelligence's Hierarchical Reasoning Model, which scores a higher 40.3 percent but has to train a solver for each puzzle at roughly two thousand times the cost per task. We close on whether cost per unit of reasoning is the axis that now matters, and on the authors' own honest limits: a proprietary training recipe, an untouched ARC-AGI-2, and a system that solves two of three test inputs without having truly induced the rule.
+
+Reference: Engdahl, B., Kosowski, A., Chorowski, J., Stamirowska, Z., Uznański, P., Jiang, J., Phadke, R., Kinas, R., &amp; Zhong, R. (2026). BDH-CQ: In-Context Learning with Recurrent Latent Reasoning. arXiv:2608.09888. https://arxiv.org/abs/2608.09888
+Reference: Kosowski, A., Uznański, P., Chorowski, J., Bartoszkiewicz, M., &amp; Stamirowska, Z. (2025). The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain. arXiv:2509.26507. https://arxiv.org/abs/2509.26507
+Reference: Chollet, F. (2019). On the Measure of Intelligence. arXiv:1911.01547. https://arxiv.org/abs/1911.01547
+Reference: Hao, S., Sukhbaatar, S., Su, D., Li, X., Hu, Z., Weston, J., &amp; Tian, Y. (2024). Training Large Language Models to Reason in a Continuous Latent Space. arXiv:2412.06769. https://arxiv.org/abs/2412.06769
+Reference: Geiping, J., McLeish, S., Jain, N., et al. (2025). Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach. arXiv:2502.05171. https://arxiv.org/abs/2502.05171
+Reference: Wang, G., Li, J., Sun, Y., Chen, X., Liu, C., Wu, Y., Lu, M., Song, S., &amp; Abbasi Yadkori, Y. (2025). Hierarchical Reasoning Model. arXiv:2506.21734. https://arxiv.org/abs/2506.21734</description>
+      <guid isPermaLink="false">d018a1ffb1d7aec0972048a9aea3386fec25bce6</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/019%20-%20When%20Thinking%20Stops%20Being%20Words.m4a" length="44656930" type="audio/mp4" />
+      <pubDate>Sat, 15 Aug 2026 06:19:24 +0000</pubDate>
+      <itunes:episode>19</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/019%20-%20When%20Thinking%20Stops%20Being%20Words.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
