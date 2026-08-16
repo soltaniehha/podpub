@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2026 06:46:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 06:47:09 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -341,5 +341,24 @@ Reference: Wang, G., Li, J., Sun, Y., Chen, X., Liu, C., Wu, Y., Lu, M., Song, S
       <pubDate>Sat, 15 Aug 2026 06:19:24 +0000</pubDate>
       <itunes:episode>19</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/019%20-%20When%20Thinking%20Stops%20Being%20Words.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>020 - When AI Runs The Whole Experiment</title>
+      <description>When AI Runs The Whole Experiment (2026)
+
+In this episode we unpack two papers posted on the same day, 12 August 2026, that both claim to automate the research process itself, and a third that says they cannot. Spark-to-Paper, from Zhuoyang Qian, Biao Wu, Wenhao Wang and colleagues at Vast Intelligence Lab and the University of Technology Sydney, argues that end-to-end paper generation needs no dedicated agent platform at all: it can be thirteen composable skills running inside an ordinary coding assistant. Mechanist, from Mengru Wang, Junfeng Fang, Ningyu Zhang, Huajun Chen and collaborators at Zhejiang University, the National University of Singapore and UC San Diego, points the same idea at a harder target, using an agentic system as a scientific instrument to discover the mechanisms of AI intelligence. Against both, a large team led by Peter Kirgis and Sayash Kapoor with Arvind Narayanan, Helen Toner and Gillian Hadfield reports that when frontier agents were handed the central question of a real unpublished paper, the paper's own authors rejected the results outright.
+
+We walk through Spark-to-Paper's separation of model judgment from deterministic gates, its Proposal and Data-Aware modes, and the ablation where fabrication detection climbs from 14 percent for a single-pass draft to 92 percent with the full integrity and adversarial-review stack, alongside 99.5 percent citation validity and the Self-Refutation Loop it names and caps at seven cycles. We turn to Mechanist's orchestrator and its hypothesis, experiment, verification and iteration agents, grounded in an interpretability knowledge graph of roughly 13,000 papers over a 43-million-paper cross-disciplinary base, and to what it actually found: that unsafe traits survive content filtering and transfer across modalities, driving unsafe answers on chemistry lab-safety questions to 48.6 percent, and that models hold World Knowledge, Personal Belief and Attributed Belief in separate attention heads making up about 0.05 percent of parameters. Then we set both against the shadow evaluations, where agents given six days and three thousand dollars of compute did all the engineering unaided and still scored 2 out of 6 and 1 out of 6 from confident expert reviewers, failing on judgment, budget awareness, backtracking and instruction drift. We close on the question underneath all of it, live in Nature's own news pages this month: if a machine can produce a cleaner manuscript than we do and surface a safety result nobody had noticed, but cannot tell whether the question was worth asking, what part of research have we actually automated?
+
+Reference: Qian, Z., Wu, B., Wang, Y., Yan, C. D., Dai, D., Zheng, L., Jiang, J., Zhang, J., &amp; Wang, W. (2026). Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill. arXiv:2608.11924. https://arxiv.org/abs/2608.11924
+Reference: Wang, M., Fang, J., Qiao, S., Xu, Z., Xu, H., Deng, S., Yang, L., Yao, Y., Zhang, N., McAuley, J., Chua, T. S., &amp; Chen, H., et al. (2026). Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence. arXiv:2608.12036. https://arxiv.org/abs/2608.12036
+Reference: Kirgis, P., Kapoor, S., Schwartz, A., Rabanser, S., Toner, H., Hadfield, G., Bommasani, R., &amp; Narayanan, A., et al. (2026). Can AI agents conduct open-ended AI research? Early evidence from two case studies. arXiv:2607.27191. https://arxiv.org/abs/2607.27191
+Reference: Lu, C., Lu, C., Lange, R. T., Yamada, Y., Hu, S., Foerster, J., Ha, D., &amp; Clune, J. (2026). Towards end-to-end automation of AI research. Nature, 651(8107), 914-919. https://doi.org/10.1038/s41586-026-10265-5
+Reference: Li, M., Wang, C., Li, X., Zeng, X., Li, D., Shi, P., Zhou, D., &amp; Zhou, T. (2026). How Can Rhetoric Reward-Hack AI Reviewers? Dissecting Rhetorical Sensitivity in AI-Based Peer Review. arXiv:2608.08975. https://arxiv.org/abs/2608.08975
+Reference: Hao, Q., Xu, F., Li, Y., &amp; Evans, J. (2026). Artificial intelligence tools expand scientists' impact but contract science's focus. Nature. https://doi.org/10.1038/s41586-025-09922-y</description>
+      <guid isPermaLink="false">46d0fa0ca75b44a9dcbc03ae325b07177747f98b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/020%20-%20When%20AI%20Runs%20The%20Whole%20Experiment.m4a" length="45878802" type="audio/mp4" />
+      <pubDate>Sun, 16 Aug 2026 06:19:07 +0000</pubDate>
+      <itunes:episode>20</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/020%20-%20When%20AI%20Runs%20The%20Whole%20Experiment.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

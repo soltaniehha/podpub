@@ -1,0 +1,865 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:07.736
+<v Maya>I want you to imagine a world where you just hand an artificial intelligence a really rough, kind of half-baked idea.</v>
+
+2
+00:00:07.976 --> 00:00:09.297
+<v Daniel>Right, like just a shower thought.</v>
+
+3
+00:00:09.317 --> 00:00:17.042
+<v Maya>Exactly. Yeah. And then a few hours later, it hands you back a completely polished, peer-reviewed level scientific discovery.</v>
+
+4
+00:00:17.302 --> 00:00:18.943
+<v Daniel>Which is wild to even think about.</v>
+
+5
+00:00:19.362 --> 00:00:30.771
+<v Maya>I mean, not just a rough draft either. We're talking about a complete manuscript with flawlessly executed experiments, verified citations and like beautifully formatted charts. It honestly sounds like science fiction, doesn't it?</v>
+
+6
+00:00:30.891 --> 00:00:31.672
+<v Daniel>Yeah, it really does.</v>
+
+7
+00:00:31.812 --> 00:00:35.555
+<v Maya>And it immediately begs the question, you know, are human scientists obsolete?</v>
+
+8
+00:00:35.715 --> 00:00:38.498
+<v Daniel>Well, I mean, it's the ultimate automation anxiety, right?</v>
+
+9
+00:00:38.538 --> 00:00:38.758
+<v Maya>Right.</v>
+
+10
+00:00:39.278 --> 00:00:42.300
+<v Daniel>but applied to the very pinnacle of human knowledge creation.</v>
+
+11
+00:00:42.461 --> 00:00:56.292
+<v Maya>Yeah. And today is Saturday, August 15th, 2026. And the reason we are tackling this specific automation anxiety today is because just three days ago, on August 12th, the research community was hit with an absolute earthquake.</v>
+
+12
+00:00:56.332 --> 00:00:57.132
+<v Daniel>Horrible shockwave.</v>
+
+13
+00:00:57.333 --> 00:01:06.380
+<v Maya>Seriously. Two major papers were posted on ARCSUV on the exact same day, both claiming to have successfully automated massive chunks of the scientific research process.</v>
+
+14
+00:01:06.815 --> 00:01:14.383
+<v Daniel>And what's cool is they take completely different approaches, but they're both trying to solve the exact same bottleneck of human bandwidth in research.</v>
+
+15
+00:01:14.523 --> 00:01:24.955
+<v Maya>Right. So our mission for today's deep dive is to explore these two groundbreaking systems. One is designed to perfectly automate the writing and structuring of the paper itself.</v>
+
+16
+00:01:25.340 --> 00:01:26.041
+<v Daniel>The artifact.</v>
+
+17
+00:01:26.121 --> 00:01:37.291
+<v Maya>Yes, the artifact. The other is designed to automate the actual scientific discovery. But because nothing in science is ever that simple, we also have a third highly critical paper that just dropped.</v>
+
+18
+00:01:37.331 --> 00:01:38.492
+<v Daniel>Oh, yeah. The reality check.</v>
+
+19
+00:01:38.612 --> 00:01:46.779
+<v Maya>A massive reality check. It basically claims these AI systems actually fail at the most fundamental part of what makes science, well, science.</v>
+
+20
+00:01:46.930 --> 00:01:58.599
+<v Daniel>It is a fascinating collision. You have this incredible technological optimism smashing directly into the messy, highly intuitive reality of the scientific method.</v>
+
+21
+00:01:58.679 --> 00:02:04.563
+<v Maya>Okay, let's unpack this. Because before you can even announce a scientific discovery, you need the infrastructure to report it.</v>
+
+22
+00:02:04.603 --> 00:02:05.424
+<v Daniel>You need the document.</v>
+
+23
+00:02:05.844 --> 00:02:20.476
+<v Maya>Right, the document itself. So we're going to start with the system claiming to perfectly automate the creation of the research manuscript. This is our first lead paper. It's called Spirk to Paper. end-to-end research paper generation as a composable skill.</v>
+
+24
+00:02:20.716 --> 00:02:29.243
+<v Daniel>And this comes from Zhuoyang Qian, Baiyao Wu, Wenhao Wang, and their colleagues at the Vast Intelligence Lab and the University of Technology, Sydney.</v>
+
+25
+00:02:29.624 --> 00:02:30.805
+<v Maya>So what's the big deal here?</v>
+
+26
+00:02:30.965 --> 00:02:45.737
+<v Daniel>Well, the central claim of this paper is brilliant because it's entirely architectural. They are arguing that you actually do not need a massive, standalone, highly complex AI agent platform to write a research paper.</v>
+
+27
+00:02:46.055 --> 00:02:48.696
+<v Maya>Oh, really? So no giant new infrastructure? Nope.</v>
+
+28
+00:02:49.096 --> 00:03:00.800
+<v Daniel>Instead, they operate inside an ordinary coding assistant. In their specific case, they use clawed code. And they use a really lightweight orchestrator called Teas Paper to coordinate 13 composable skills.</v>
+
+29
+00:03:01.281 --> 00:03:05.602
+<v Maya>I kind of look at this architecture like a high-end restaurant kitchen.</v>
+
+30
+00:03:05.702 --> 00:03:06.002
+<v Daniel>Why?</v>
+
+31
+00:03:06.142 --> 00:03:11.905
+<v Maya>Yeah, because if you want to run a smooth dinner service, you don't have the head chef doing everything. You split the head chef from the line cooks.</v>
+
+32
+00:03:12.045 --> 00:03:13.065
+<v Daniel>That's a great way to put it.</v>
+
+33
+00:03:13.363 --> 00:03:22.777
+<v Maya>Right. In Spark to Paper, the system separates the model's judgment, which is the chef deciding what an argument actually needs, from the deterministic operations.</v>
+
+34
+00:03:22.958 --> 00:03:23.659
+<v Daniel>The line cooks.</v>
+
+35
+00:03:23.739 --> 00:03:32.757
+<v Maya>Exactly. The strict scripts act as your line cooks. They do the mechanical work like checking citations, pulling data and compiling the latex.</v>
+
+36
+00:03:32.817 --> 00:03:46.001
+<v Daniel>Which is huge. And for anyone unfamiliar, latex is just the industry standard typesetting language that makes scientific papers look like actual papers, you know, with all the cleanly formatted math and charts.</v>
+
+37
+00:03:46.081 --> 00:03:47.361
+<v Maya>Right. It's what makes it look official.</v>
+
+38
+00:03:47.521 --> 00:03:57.885
+<v Daniel>Exactly. And that separation of duties is crucial here. Language models are brilliant at semantic judgment. but they are notoriously terrible at strict deterministic rule following.</v>
+
+39
+00:03:58.005 --> 00:03:58.625
+<v Maya>They just drift.</v>
+
+40
+00:03:58.705 --> 00:04:09.229
+<v Daniel>They do. But where this kitchen analogy really shines is in how Spark2Paper handles the methodology of the experiment itself. It explicitly splits experiment planning from experiment reporting.</v>
+
+41
+00:04:09.410 --> 00:04:12.351
+<v Maya>So it fixes the result tables before any numbers actually exist.</v>
+
+42
+00:04:12.451 --> 00:04:19.674
+<v Daniel>Yes. It essentially does a lightweight preregistration. It decides what evidence is required to prove a point before the results are even observed.</v>
+
+43
+00:04:19.940 --> 00:04:21.862
+<v Maya>Wow. So it has two modes it runs in, right?</v>
+
+44
+00:04:21.902 --> 00:04:29.708
+<v Daniel>Yeah. So first there is proposal mode where unmeasured results must stay completely blank. It is literally not allowed to guess or hallucinate a number.</v>
+
+45
+00:04:29.908 --> 00:04:31.150
+<v Maya>It just leaves an empty slot.</v>
+
+46
+00:04:31.210 --> 00:04:40.958
+<v Daniel>Precisely. Then there's data aware mode where every single quantitative claim in the text must trace directly back to real measured data.</v>
+
+47
+00:04:41.218 --> 00:04:52.148
+<v Maya>OK, wait. You're telling me it grades its own homework based on the data because language models hallucinate sources and numbers all the time. How accurate is this process, actually?</v>
+
+48
+00:04:52.208 --> 00:05:02.818
+<v Daniel>That is the crazy part. The numbers they achieved with this pipeline are just staggering. Across 384 references, Spark to Paper hit a 99.5% citation validity rate.</v>
+
+49
+00:05:02.958 --> 00:05:05.180
+<v Maya>That is, wait, 99.5%? I</v>
+
+50
+00:05:05.480 --> 00:05:07.542
+<v Daniel>know. That means it almost never fakes a source.</v>
+
+51
+00:05:07.722 --> 00:05:09.204
+<v Maya>Human researchers don't even hit that.</v>
+
+52
+00:05:09.304 --> 00:05:15.690
+<v Daniel>They don't. For context, the authors measured a sample of human-written preprints, and humans only hit 97.8%.</v>
+
+53
+00:05:15.950 --> 00:05:18.673
+<v Maya>Unbelievable. What about the older AI systems?</v>
+
+54
+00:05:18.833 --> 00:05:25.740
+<v Daniel>Well, the previous state-of-the-art system, the AI Scientist, was at 93%, and its successor, AI Scientist V2, was at 91%.</v>
+
+55
+00:05:26.260 --> 00:05:27.542
+<v Maya>So this blew them out of the water.</v>
+
+56
+00:05:28.046 --> 00:05:42.815
+<v Daniel>It really did. Yeah. And it's not just text. The figure editability, meaning it produces native, editable vector graphics, instead of just pasting a flat, unchangeable image into the document, is 96.4%. Wow. Yeah. Human preprints hover around</v>
+
+57
+00:05:42.835 --> 00:05:46.878
+<v Daniel>58%, and prior AI systems were literally at 0% to 3%.</v>
+
+58
+00:05:47.658 --> 00:05:53.286
+<v Maya>Zero to three. That is a massive jump. So what is the cost of generating one of these flawless artifacts?</v>
+
+59
+00:05:53.486 --> 00:06:00.556
+<v Daniel>It uses about 11.9 million tokens, takes roughly 3.2 hours, and costs exactly $8.10 per manuscript.</v>
+
+60
+00:06:02.499 --> 00:06:06.122
+<v Maya>$8.10 for a perfectly formatted, fully cited paper.</v>
+
+61
+00:06:06.343 --> 00:06:06.903
+<v Daniel>Pretty wild.</v>
+
+62
+00:06:07.304 --> 00:06:10.366
+<v Maya>It is. But I imagine it didn't just start out that good out of the box.</v>
+
+63
+00:06:10.466 --> 00:06:14.970
+<v Daniel>Oh, definitely not, which is why the true value of the paper is honestly hidden in their ablation study.</v>
+
+64
+00:06:15.070 --> 00:06:20.235
+<v Maya>Right. And an ablation study is where researchers systematically turn off parts of their system to see what breaks.</v>
+
+65
+00:06:20.415 --> 00:06:33.942
+<v Daniel>Exactly. They specifically tested how well the system detects fabricated or unsupported claims. If you just let the language model do a single pass draft without all the extra tools, it only caught 14% of the fabricated claims.</v>
+
+66
+00:06:34.322 --> 00:06:39.005
+<v Maya>Which is terrible. That means 86% of the hallucinations were making it into the final paper.</v>
+
+67
+00:06:39.225 --> 00:06:45.668
+<v Daniel>Basically, yeah. But when they turned on the deterministic gates, your lawn cooks, that detection rate jumped to 69%.</v>
+
+68
+00:06:47.245 --> 00:06:48.126
+<v Maya>Huge improvement.</v>
+
+69
+00:06:48.166 --> 00:06:58.260
+<v Daniel>And it gets better. Adding a self-review stage brought it up to 81%. And when they deployed an adversarial review stage, the detection rate skyrocketed to 92%, operating at 74% precision.</v>
+
+70
+00:07:01.862 --> 00:07:06.963
+<v Maya>OK, I need to pause on that adversarial review stage. How exactly does an AI attack its own paper?</v>
+
+71
+00:07:07.123 --> 00:07:16.085
+<v Daniel>So think of it like a brutally hostile peer reviewer. To understand why this is necessary, we actually need to look at some background context from Ming Lai and colleagues.</v>
+
+72
+00:07:16.345 --> 00:07:18.125
+<v Maya>Oh, right. The reward hacking study.</v>
+
+73
+00:07:18.185 --> 00:07:31.788
+<v Daniel>Yes. They recently did a massive study on rhetoric and reward hacking in AI reviewers. They took 120 real submissions from the ICLR 2026 conference and generated over 4,200 manuscript variations.</v>
+
+74
+00:07:31.848 --> 00:07:33.129
+<v Maya>That's a huge data set.</v>
+
+75
+00:07:33.349 --> 00:07:42.112
+<v Daniel>Massive. And they proved that if you just frame your evidence confidently and adopt a strong novelty stance, you can completely manipulate an AI reviewer's score.</v>
+
+76
+00:07:42.512 --> 00:07:46.934
+<v Maya>So even if the science is garbage, if you sound confident, the AI buys it.</v>
+
+77
+00:07:47.214 --> 00:07:54.197
+<v Daniel>Precisely. The underlying science stayed identical across variations, but the AI was fooled by good rhetoric.</v>
+
+78
+00:07:54.588 --> 00:07:58.950
+<v Maya>So an AI reviewer will pass bad science if you just use the right confident buzzwords.</v>
+
+79
+00:07:58.970 --> 00:08:06.393
+<v Daniel>Yeah. So Spark to Paper's adversarial gate is a direct countermeasure to that vulnerability. It's programmed to strip away all the rhetoric.</v>
+
+80
+00:08:06.433 --> 00:08:07.133
+<v Maya>How does it do that?</v>
+
+81
+00:08:07.573 --> 00:08:19.698
+<v Daniel>Well, it looks at a sentence that says, our results significantly outperform the baseline. And the adversarial reviewer basically says, define significantly. Show me the exact cell in the data table.</v>
+
+82
+00:08:19.798 --> 00:08:20.518
+<v Maya>Oh, I love that.</v>
+
+83
+00:08:21.178 --> 00:08:32.341
+<v Daniel>If the data isn't there, it forces the system to label the claim as unsupported or contradicted. And then it either weakens the claim, moves it to the limitation section, or just deletes it entirely.</v>
+
+84
+00:08:32.521 --> 00:08:38.543
+<v Maya>But it doesn't always succeed in fixing the problem, does it? Which brings us to, honestly, my favorite part of the paper, the failure mode.</v>
+
+85
+00:08:38.783 --> 00:08:40.443
+<v Daniel>Ah, yes, the self-refutation loop.</v>
+
+86
+00:08:40.806 --> 00:08:51.717
+<v Maya>It is such a brilliantly honest finding. The system sets up a hypothesis, runs the experiment, and looks at the data. The data says, no, your hypothesis is wrong.</v>
+
+87
+00:08:52.017 --> 00:08:56.061
+<v Daniel>So the AI revises the method, runs it again, and fails again.</v>
+
+88
+00:08:56.322 --> 00:09:04.470
+<v Maya>Right. In a self-refupation loop, the AI just keeps editing in a circle forever, trying to force a failed idea to work.</v>
+
+89
+00:09:04.779 --> 00:09:09.945
+<v Daniel>It's basically like a PhD student trapped in a nightmare where their code just won't compile the result they need.</v>
+
+90
+00:09:10.045 --> 00:09:12.067
+<v Maya>Exactly. So how do they fix it? They cap it.</v>
+
+91
+00:09:12.247 --> 00:09:12.407
+<v Daniel>Yep.</v>
+
+92
+00:09:12.808 --> 00:09:23.800
+<v Maya>After seven cycles of failing to prove the hypothesis, the AI just stops. It writes a failure report detailing exactly why the idea didn't work rather than rewriting a failure into an apparent success.</v>
+
+93
+00:09:24.158 --> 00:09:33.128
+<v Daniel>It's refreshing. The authors openly admit that their own positioning claim is the softest part of their paper, but that intellectual honesty is exactly why this system is so compelling.</v>
+
+94
+00:09:33.248 --> 00:09:47.462
+<v Maya>It guarantees the artifact is solid. It doesn't guarantee the discovery is profound, but you know the document itself is structurally flawless. Which brings us to the next big question. So we have a system that can mechanically assemble a flawless document. But an empty,</v>
+
+95
+00:09:47.723 --> 00:09:51.384
+<v Maya>flawlessly formatted PDF doesn't win a Nobel Prize.</v>
+
+96
+00:09:51.564 --> 00:09:52.504
+<v Daniel>No, it definitely doesn't.</v>
+
+97
+00:09:52.765 --> 00:10:07.712
+<v Maya>It needs an actual eureka moment inside it. If the coding assistant is the secretary who is the scientist, here's where it gets really interesting. Oh, absolutely. Let's look at our second lead paper. Mechanist AI as a Scientific Instrument for Discovering the</v>
+
+98
+00:10:07.752 --> 00:10:22.262
+<v Maya>Mechanisms of Intelligence. This is from Mengru Wang, Yunfeng Feng, Ningyu Zhang, Huazhen Chen, and a massive cross-institutional team from Sijian University, NUS, UC San Diego, and a few others.</v>
+
+99
+00:10:22.542 --> 00:10:30.467
+<v Daniel>Where Spark to Paper automates the writing, Mechanus automates the discovery. And crucially, it points the scientific instrument back on to AI itself.</v>
+
+100
+00:10:30.727 --> 00:10:32.028
+<v Maya>It's studying its own kind.</v>
+
+101
+00:10:32.168 --> 00:10:38.532
+<v Daniel>Yes. It is trying to automate mechanistic interpretability, which is the field of trying to understand the inner workings of language models.</v>
+
+102
+00:10:38.813 --> 00:10:40.574
+<v Maya>So what's under the hood of Mechanus?</v>
+
+103
+00:10:40.914 --> 00:10:50.120
+<v Daniel>Its architecture uses a central orchestrator paired with four specific agents, a hypothesis agent, an experimentation, a verification agent, and an iteration agent.</v>
+
+104
+00:10:50.587 --> 00:10:55.852
+<v Maya>And it's not just guessing in the dark either. It is grounded in an incredible knowledge graph.</v>
+
+105
+00:10:56.052 --> 00:10:57.673
+<v Daniel>Oh, the scale of it is insane.</v>
+
+106
+00:10:57.773 --> 00:11:07.822
+<v Maya>We're talking about 13,000 specific interpretability papers sitting on top of a massive cross-disciplinary database of 43 million papers.</v>
+
+107
+00:11:07.962 --> 00:11:10.524
+<v Daniel>Across 26 different scientific fields, no less.</v>
+
+108
+00:11:10.684 --> 00:11:17.350
+<v Maya>Plus, it has a library of 32 mechanistic interpretability methods coded directly into its toolkit.</v>
+
+109
+00:11:17.515 --> 00:11:31.950
+<v Daniel>And that grounding is exactly why it performed so well. When human judges evaluated its experimental reliability, Mechanist hit roughly 90%. Wow. Yeah, that absolutely crushes Claude Code, which was at 78%, and the original AI</v>
+
+110
+00:11:32.010 --> 00:11:39.518
+<v Daniel>Scientist, which managed only 56%. It also scored significantly higher on hypothesis, novelty, impact, and testability.</v>
+
+111
+00:11:39.678 --> 00:11:47.565
+<v Maya>That is a huge leap in reliability, but we really need to spend some time on what Mechanist actually found when they turned it on, because the discoveries themselves are just mind-ending.</v>
+
+112
+00:11:47.765 --> 00:11:48.366
+<v Daniel>They really are.</v>
+
+113
+00:11:48.686 --> 00:11:53.330
+<v Maya>Finding number one is a safety result involving multimodal models, and it's all about subliminal learning.</v>
+
+114
+00:11:53.670 --> 00:12:03.879
+<v Daniel>Yeah, this finding extends subliminal learning across modalities and even to opposing preferences. To set it up, they take a teacher AI model and deliberately make it unsafe.</v>
+
+115
+00:12:04.228 --> 00:12:05.329
+<v Maya>Okay, so a bad teacher.</v>
+
+116
+00:12:05.589 --> 00:12:13.015
+<v Daniel>Right. Then, they filter its text outputs using another model, so only completely safe, sanitized content survives.</v>
+
+117
+00:12:13.235 --> 00:12:14.656
+<v Maya>Sounds foolproof so far.</v>
+
+118
+00:12:14.816 --> 00:12:21.041
+<v Daniel>You'd think. Finally, they fine-tune a new student model on that entirely safe, filtered data.</v>
+
+119
+00:12:21.638 --> 00:12:26.221
+<v Maya>Logically, the student model should be perfectly safe because it has only ever seen safe training data.</v>
+
+120
+00:12:26.421 --> 00:12:26.841
+<v Daniel>Exactly.</v>
+
+121
+00:12:27.121 --> 00:12:41.729
+<v Maya>But Mechanist found that when you ask that student model multimodal chemistry lab safety questions involving images, not just text, it answers unsafely 48.6% of the time. It's almost a coin flip. Right. An untuned model only fails</v>
+
+122
+00:12:41.849 --> 00:12:46.251
+<v Maya>20.3% of the time, and a control model fails 18.3% of the time.</v>
+
+123
+00:12:46.331 --> 00:12:52.393
+<v Daniel>The safety risk is literally transmitting through the training data, even though the explicit text was completely sanitized.</v>
+
+124
+00:12:52.513 --> 00:13:06.923
+<v Maya>I love the analogy they used to prove this with images because it makes the mechanism so clear. Imagine a teacher model that has a strong preference for generating bananas. Okay. You filter out all the images of bananas from its output. So you have a completely banana-free data set.</v>
+
+125
+00:13:07.103 --> 00:13:07.784
+<v Daniel>No bananas left.</v>
+
+126
+00:13:07.804 --> 00:13:22.718
+<v Maya>Zero bananas. You train a student model on this data. The student model still ends up generating bananas 25.6% of the time compared to a baseline of just 2.5%. That is wild. The underlying behavioral trait survives the content-based screening. The</v>
+
+127
+00:13:22.758 --> 00:13:27.223
+<v Maya>model is learning the preference for bananas, not just copying the pixels of a banana.</v>
+
+128
+00:13:27.323 --> 00:13:42.277
+<v Daniel>Which is a terrifying prospect for AI safety, if you think about it. It means we cannot just filter the explicit outputs of an AI and assume the data is safe to train on. The underlying dangerous trait can survive subliminally. Yeah. And Mechanist discovered</v>
+
+129
+00:13:42.297 --> 00:13:51.528
+<v Daniel>this entirely autonomously. But the second finding is arguably even more profound. Mechanists developed a mechanism theory of belief for AI models.</v>
+
+130
+00:13:51.788 --> 00:13:52.670
+<v Maya>A theory of belief?</v>
+
+131
+00:13:52.750 --> 00:14:02.302
+<v Daniel>Yes. It discovered that language models actually keep three different types of knowledge completely separated in their neural architecture. World knowledge, personal belief, and attributed belief.</v>
+
+132
+00:14:02.701 --> 00:14:09.668
+<v Maya>Hold on, let me stop you right there. Are you saying we literally found a physical location in a digital brain for theory of mind?</v>
+
+133
+00:14:09.748 --> 00:14:10.308
+<v Daniel>Basically.</v>
+
+134
+00:14:10.529 --> 00:14:17.936
+<v Maya>That the AI stores what it believes in a completely different sector than what it thinks I believe? Because that sounds impossible to prove.</v>
+
+135
+00:14:17.996 --> 00:14:32.741
+<v Daniel>It sounds impossible, but Mechanist proved it. What's fascinating here is just how remarkably sparse and localized this is. Mechanist found that these different belief states are managed by specific attention heads representing about 0.05% of the</v>
+
+136
+00:14:32.801 --> 00:14:34.142
+<v Daniel>model's total parameters.</v>
+
+137
+00:14:34.302 --> 00:14:36.682
+<v Maya>That is a tiny fraction of the neural network.</v>
+
+138
+00:14:36.763 --> 00:14:37.663
+<v Daniel>A tiny fraction.</v>
+
+139
+00:14:37.803 --> 00:14:38.043
+<v Maya>Yeah.</v>
+
+140
+00:14:38.143 --> 00:14:52.910
+<v Daniel>They proved this using the Pythia 1B model. Mekin has found that attributed belief emerges early in pre-training, while personal belief emerges later. And if you go in and zero out exactly one attention head, specifically layer four, head one, the model's</v>
+
+141
+00:14:53.050 --> 00:14:58.293
+<v Daniel>accuracy on attributed belief questions drops from 0.86 all the way to 0.34.</v>
+
+142
+00:14:58.633 --> 00:15:02.295
+<v Maya>Just by turning off one tiny switch, does it break the rest of the AI?</v>
+
+143
+00:15:02.495 --> 00:15:05.797
+<v Daniel>No, that's the thing. It barely touches the model's overall perplexity.</v>
+
+144
+00:15:05.837 --> 00:15:10.119
+<v Maya>And perplexity is basically a measure of how confused the model is about language in general, right?</v>
+
+145
+00:15:10.487 --> 00:15:17.335
+<v Daniel>Exactly. So its language skills stay perfectly intact. What breaks is the model's ability to hold conflicting beliefs.</v>
+
+146
+00:15:17.852 --> 00:15:19.313
+<v Maya>Can you give an example of that? Sure.</v>
+
+147
+00:15:19.914 --> 00:15:30.362
+<v Daniel>For example, if the model knows as a fact that the World Cup is in New Jersey, but you give it a prompt that says, James believes the World Cup is in Los Angeles, where does James think it is?</v>
+
+148
+00:15:30.582 --> 00:15:31.042
+<v Maya>Okay.</v>
+
+149
+00:15:31.583 --> 00:15:45.093
+<v Daniel>The model uses layer four, head one, to override its own world knowledge and correctly answer Los Angeles. If you turn that specific head off, the model gets confused, ignores James entirely, and just answers New Jersey.</v>
+
+150
+00:15:45.530 --> 00:15:54.578
+<v Maya>It's literally discovering cognitive psychology inside a neural network. It perfectly mirrors what cognitive scientists call alter-centric and egocentric interference in humans.</v>
+
+151
+00:15:54.779 --> 00:15:57.901
+<v Daniel>It really does. And Mechanist didn't just find it, it fixed it.</v>
+
+152
+00:15:57.982 --> 00:15:58.702
+<v Maya>Wait, how?</v>
+
+153
+00:15:58.922 --> 00:16:13.899
+<v Daniel>At inference time, by actively amplifying that specific attention head rather than zeroing it out. They got performance gains of 15.3%, 8.8%, and 3.5% across different sizes of the Piscia model. Yeah, and trying to fix the problem by just giving the</v>
+
+154
+00:16:13.939 --> 00:16:18.485
+<v Daniel>model a better prompt hint gave almost zero improvement. It needed that structural tweak.</v>
+
+155
+00:16:18.784 --> 00:16:23.105
+<v Maya>And they didn't just stick to text models either, right? What did Mechanist do with EVO27B?</v>
+
+156
+00:16:23.586 --> 00:16:38.470
+<v Daniel>Ah. So EVO27B is a biological AI model. Mechanist mapped its latent space, which is essentially the AI's complex internal mathematical map of biological concepts. Right. It figured out exactly which digital neurons corresponded to specific protein</v>
+
+157
+00:16:38.510 --> 00:16:46.913
+<v Daniel>structures. Then they pushed those specific buttons to steer the model to generate synthetic DNA that had 20% more alpha helical content.</v>
+
+158
+00:16:47.306 --> 00:16:50.828
+<v Maya>For those of us who haven't taken biology in a while, what is alpha helical content?</v>
+
+159
+00:16:51.008 --> 00:17:00.153
+<v Daniel>Right. So alpha helices are those classic repeating corkscrew shapes you see in protein structures. They're absolutely crucial for how proteins fold and function in living organisms.</v>
+
+160
+00:17:00.494 --> 00:17:06.497
+<v Maya>So the AI figured out how to mathematically command another AI to generate more of that specific physical structure.</v>
+
+161
+00:17:06.597 --> 00:17:08.098
+<v Daniel>Exactly. Completely hands off.</v>
+
+162
+00:17:08.258 --> 00:17:16.903
+<v Maya>Okay. So let's pause and look at where we are. We have Spark to Paper, an AI that perfectly formats, cites, and writes the research document.</v>
+
+163
+00:17:17.902 --> 00:17:32.508
+<v Daniel>We have Mechanist, an AI that navigates 43 million papers to discover safety loopholes, pinpoint the neurological belief centers of other AIs, and generate biological structures. That's a lot. Have we done it? Are human scientists</v>
+
+164
+00:17:32.628 --> 00:17:34.969
+<v Daniel>obsolete? Let's drop the ultimate reality check.</v>
+
+165
+00:17:35.590 --> 00:17:45.774
+<v Maya>It is definitely time for the tension in our deep dive. The third paper we are looking at is titled, Can AI Agents Conduct Open-Ended AI Research? Early Evidence from Two Case Studies.</v>
+
+166
+00:17:46.085 --> 00:17:56.530
+<v Daniel>And this comes from Peter Kyrgios, Sayash Kapoor, Arvind Narayanan, Helen Toner, Gillian Hadfield, and a large team at Princeton, the UK AI Security Institute, and CSET.</v>
+
+167
+00:17:57.010 --> 00:17:59.911
+<v Maya>Yes. And they ran what they call shadow evaluations.</v>
+
+168
+00:18:00.051 --> 00:18:06.874
+<v Daniel>I love this setup. Here's what they did. They took the central research question from a real, unpublished NeurIPS 2026 submission.</v>
+
+169
+00:18:08.522 --> 00:18:09.683
+<v Maya>So a totally novel question.</v>
+
+170
+00:18:09.723 --> 00:18:23.189
+<v Daniel>Totally novel. They gave this question to a frontier AI agent, gave it a budget of $3,000 to compute and six full days to work on it. Yeah. Then they had the original human authors of the real paper grade, the AI's final output as blind reviewers.</v>
+
+171
+00:18:23.209 --> 00:18:27.791
+<v Maya>The AI had everything it needed. It had the prompt, the budget, the time. And what happened?</v>
+
+172
+00:18:28.252 --> 00:18:38.628
+<v Daniel>The result was an epic, unambiguous failure. The original authors rejected the AI's attempts with highly competent scores of 2 out of 6 and 1 out of 6.</v>
+
+173
+00:18:38.828 --> 00:18:45.130
+<v Maya>Ouch. An absolute rejection. But why? If these AI systems are so smart, what went wrong?</v>
+
+174
+00:18:45.805 --> 00:18:52.632
+<v Daniel>Well, if we connect this to the bigger picture, the reasons why the AI failed are far more important than the scores themselves.</v>
+
+175
+00:18:52.792 --> 00:18:53.032
+<v Maya>Right.</v>
+
+176
+00:18:53.472 --> 00:19:07.546
+<v Daniel>The agents did all the engineering unaided, but they failed on five critical human dimensions of research. First, they had absolutely no judgment regarding the bar for publishable work. They literally couldn't tell if their finding was actually interesting.</v>
+
+177
+00:19:07.566 --> 00:19:08.507
+<v Maya>They just don't have taste.</v>
+
+178
+00:19:08.967 --> 00:19:16.588
+<v Daniel>Exactly. Second, they had no sense of their own budget. Both agents used less than half of the $3,000 allocated to them. They just stopped early.</v>
+
+179
+00:19:17.153 --> 00:19:25.720
+<v Maya>Which is wild. Any human PhD student given three grand of compute would burn every single cent of it, running more seeds, larger models, and triple checking their data.</v>
+
+180
+00:19:25.800 --> 00:19:32.565
+<v Daniel>Precisely. Third, the agents showed zero creative response to criticism. If they hit a wall, they just tried the exact same thing again.</v>
+
+181
+00:19:32.685 --> 00:19:33.305
+<v Maya>So stubborn.</v>
+
+182
+00:19:33.546 --> 00:19:45.903
+<v Daniel>Fourth, they showed no real backtracking. After the first 10 hours of work, if they were on the wrong path, they just stubbornly stayed on it for the next five days. They couldn't zoom out and realize the premise was flawed.</v>
+
+183
+00:19:46.063 --> 00:19:47.104
+<v Maya>Just stuck in a rut.</v>
+
+184
+00:19:47.284 --> 00:19:56.808
+<v Daniel>Yeah. And finally, they suffered from profound instruction drift. Over six days, they simply forgot what explicit instructions they were supposed to be following.</v>
+
+185
+00:19:56.988 --> 00:20:03.432
+<v Maya>And even when the researchers swapped out the underlying model and changed the scaffolding, the exact same failures reproduce.</v>
+
+186
+00:20:03.472 --> 00:20:04.912
+<v Daniel>It didn't matter what model they used.</v>
+
+187
+00:20:04.932 --> 00:20:14.559
+<v Maya>So I have to ask you directly. Are Spark to Paper and Mechanist actually succeeding at automating science? Or are they just measuring the parts of science that are easy to measure?</v>
+
+188
+00:20:14.719 --> 00:20:15.940
+<v Daniel>That's the million-dollar question.</v>
+
+189
+00:20:16.080 --> 00:20:30.830
+<v Maya>Right. I mean, Spark to Paper measures citation validity and figure editability. Mechanist measures hypothesis, novelty, and reliability based on human judges evaluating the steps. But the shadow evaluation measures whether the authors of the actual paper think you actually did the</v>
+
+190
+00:20:30.870 --> 00:20:31.270
+<v Maya>research.</v>
+
+191
+00:20:31.570 --> 00:20:46.517
+<v Daniel>It is a vital distinction. Spark to Paper's own headline metrics are about the artifact, the latex compiling, the vector graphics, not the profundity of the discovery itself. Exactly. And if you read the Mechanist paper closely, even though it executes the</v>
+
+192
+00:20:46.537 --> 00:20:54.000
+<v Daniel>experiments brilliantly, it still requires a human in the loop to set the initial scientific objectives and evaluation criteria.</v>
+
+193
+00:20:54.221 --> 00:20:59.486
+<v Maya>The AI can drive the car flawlessly, but it still needs a human to tell it what city to drive to.</v>
+
+194
+00:20:59.746 --> 00:21:03.150
+<v Daniel>Exactly. And this tension isn't new. It's been building all year.</v>
+
+195
+00:21:03.290 --> 00:21:03.870
+<v Maya>Yeah, it has.</v>
+
+196
+00:21:04.211 --> 00:21:15.842
+<v Daniel>Everyone is chasing the lineage established by Liu, Lange, Ha, and Klune back in March 2026 with the original AI scientist people in nature. Both spark-to-paper and mechanists benchmark themselves against it.</v>
+
+197
+00:21:16.085 --> 00:21:30.450
+<v Maya>But there was another Nature paper recently by Haozhu, Lee, and Evans that explicitly warned us about this dynamic. Yes. They showed that while AI tools massively expand an individual scientist's raw output, they actively contract the range of questions that science asks.</v>
+
+198
+00:21:30.708 --> 00:21:36.130
+<v Daniel>Because the AI gravitates toward the easily measurable, the highly cited, the mathematically neat problems?</v>
+
+199
+00:21:36.611 --> 00:21:42.894
+<v Maya>Exactly. It avoids the messy, ambiguous, paradigm-shifting questions because it lacks intuition.</v>
+
+200
+00:21:43.014 --> 00:21:56.980
+<v Daniel>Science is not just about executing a method perfectly. It's about recognizing anomaly, having a sense of aesthetics for what makes a problem elegant, and possessing the sheer stubbornness to completely backtrack after a month of failure.</v>
+
+201
+00:21:57.178 --> 00:21:58.659
+<v Maya>which machines just don't have yet.</v>
+
+202
+00:21:58.879 --> 00:22:02.522
+<v Daniel>The shadow evaluations prove that frontier agents currently lack all of that.</v>
+
+203
+00:22:03.142 --> 00:22:10.187
+<v Maya>So what does this all mean? Let's synthesize this deep dive. We are living in a moment of incredible contradictory extremes.</v>
+
+204
+00:22:10.307 --> 00:22:10.887
+<v Daniel>We really are.</v>
+
+205
+00:22:11.128 --> 00:22:25.737
+<v Maya>On one hand, we have built systems like Spark to Paper that can compile flawless latex, generate native vector graphics, and strip away rhetorical tricks to ensure a paper never fakes a citation. We have systems like Mechanus that can dive into a matrix of billions of</v>
+
+206
+00:22:25.797 --> 00:22:32.821
+<v Maya>numbers, locate the 0.05% of parameters where an AI forms a belief, and rewrite its cognitive behavior on the fly.</v>
+
+207
+00:22:32.841 --> 00:22:36.023
+<v Daniel>The mechanical execution of the scientific method is being completely commodified.</v>
+
+208
+00:22:36.308 --> 00:22:48.594
+<v Maya>But on the other hand, when you give these same systems six days and $3,000 to do open-ended research, they fail completely to grasp what actually makes a scientific contribution valuable.</v>
+
+209
+00:22:48.814 --> 00:22:49.695
+<v Daniel>They don't know what matters.</v>
+
+210
+00:22:49.955 --> 00:23:04.722
+<v Maya>And this brings us to a philosophical question that is currently raging in the news pages of Nature this very month. If an AI can perfectly format the document, perfectly retrieve the literature, and perfectly execute the statistical test, But it cannot</v>
+
+211
+00:23:04.782 --> 00:23:10.446
+<v Maya>tell whether the question was worth answering in the first place. What exactly is left that we call research?</v>
+
+212
+00:23:10.866 --> 00:23:14.168
+<v Daniel>It forces us to redefine what a scientist actually is.</v>
+
+213
+00:23:14.608 --> 00:23:29.514
+<v Maya>We started by asking if human scientists are obsolete. But maybe the truth is that the true essence of a scientist is no longer the ability to find the answers. Think about what this means for you the next time you use an AI tool to solve a problem. The machine can build the x-ray machine</v>
+
+214
+00:23:29.554 --> 00:23:36.696
+<v Maya>and print the film, but you still need the human to look at the murky, complicated picture and decide what it actually means for the patient.</v>
+
+215
+00:23:36.856 --> 00:23:39.257
+<v Daniel>A perfect artifact still requires a worthy spark.</v>
+
+216
+00:23:39.637 --> 00:23:45.359
+<v Maya>And right now, that spark is still unequivocally human. Thank you for joining us on this deep dive.</v>
