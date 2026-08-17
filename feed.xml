@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2026 06:47:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 07:08:27 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -360,5 +360,24 @@ Reference: Hao, Q., Xu, F., Li, Y., &amp; Evans, J. (2026). Artificial intellige
       <pubDate>Sun, 16 Aug 2026 06:19:07 +0000</pubDate>
       <itunes:episode>20</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/020%20-%20When%20AI%20Runs%20The%20Whole%20Experiment.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>021 - Where AI Enters The Org Chart</title>
+      <description>How Organizations Use AI: Evidence from ChatGPT (August 2026)
+
+In this episode we unpack a working paper posted on 12 August 2026 by Aaron Chatterji, David Holtz, Neel Rakholia, Prasanna Tambe and Gawesha Weeratunga, from OpenAI, Columbia Business School and Wharton. Almost everything we know about how firms adopt AI comes from surveys, which are self-reported and coarse. This paper instead opens OpenAI's own administrative records: ChatGPT Enterprise account data linked to worker job titles, message-level task classifications and Compustat public-company financials through March 2026, covering 1,764 organizations and 17,446,551 messages measured 26 weeks after each firm adopted. The finding underneath the four stylized facts is that access to the same model does not produce the same use, and that adoption is only the very beginning of deployment.
+
+We walk through the growth decomposition, where enterprise output tokens rise roughly sevenfold between June 2025 and March 2026 but roughly fourfold within firms that had already adopted, so about half of it is existing customers going deeper. We look at who adopts: median revenue of $2,275.1M against $209.6M for non-adopters, top-revenue-quartile firms 6.9 percentage points more likely to adopt and the top five percent 9.8 points, and adoption tracking accumulated intangible capital, with SG&amp;A stock per employee the strongest predictor, exactly the organizational complements that Brynjolfsson, Rock and Syverson's Productivity J-Curve says a general purpose technology needs before its gains show up in the accounts. Then the result that unsettles everything else: managers and directors are about 24 percent of weekly active users and early-career workers only about 7 percent, but conditional on being active, early-career workers and trainees send roughly eight to nine more weekly messages than the average user in their own firm, while executives send fewer. We set that against Brynjolfsson, Li and Raymond's field experiment, where 5,172 support agents gained 15 percent in issues resolved per hour with the gains concentrated in the least experienced, and against the August 2026 revision of Canaries in the Coal Mine, where employment of 22-to-25-year-olds in AI-exposed occupations sits 19 percent below its counterfactual, through reduced hiring rather than layoffs. The workers whose entry-level jobs are thinning out are the ones leaning on the tool hardest, and we close on what nobody can yet say: whether that heavy use is how a junior stays valuable, or how the junior job gets absorbed.
+
+Reference: Chatterji, A., Holtz, D., Rakholia, N., Tambe, P., &amp; Weeratunga, G. (2026). How Organizations Use AI: Evidence from ChatGPT. arXiv:2608.12236. https://arxiv.org/abs/2608.12236
+Reference: Chatterji, A., Cunningham, T., Deming, D. J., Hitzig, Z., Ong, C., Shan, C., &amp; Wadman, K. (2025). How People Use ChatGPT. NBER Working Paper 34255. https://www.nber.org/papers/w34255
+Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence. Stanford Digital Economy Lab. https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
+Reference: Brynjolfsson, E., Li, D., &amp; Raymond, L. R. (2025). Generative AI at Work. Quarterly Journal of Economics, 140(2), 889-942. https://doi.org/10.1093/qje/qjae044
+Reference: Brynjolfsson, E., Rock, D., &amp; Syverson, C. (2021). The Productivity J-Curve: How Intangibles Complement General Purpose Technologies. American Economic Journal: Macroeconomics, 13(1), 333-372. https://www.nber.org/papers/w25148
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306-1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130</description>
+      <guid isPermaLink="false">e0ce8ff86e98345d6e524bd58be79fca67cad4c7</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/021%20-%20Where%20AI%20Enters%20The%20Org%20Chart.m4a" length="46789790" type="audio/mp4" />
+      <pubDate>Mon, 17 Aug 2026 06:20:16 +0000</pubDate>
+      <itunes:episode>21</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/021%20-%20Where%20AI%20Enters%20The%20Org%20Chart.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
