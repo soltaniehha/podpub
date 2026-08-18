@@ -1,0 +1,841 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:04.535
+<v Maya>Imagine stepping out of your office to the sound of a blaring fire alarm.</v>
+
+2
+00:00:04.856 --> 00:00:05.096
+<v Daniel>Right.</v>
+
+3
+00:00:05.416 --> 00:00:11.322
+<v Maya>You smell this acrid smoke in the hallway. You see the orange glow of flames licking the ceiling.</v>
+
+4
+00:00:11.422 --> 00:00:12.743
+<v Daniel>Yeah, full panic mode.</v>
+
+5
+00:00:12.903 --> 00:00:20.571
+<v Maya>Exactly. And then someone taps you on the shoulder and says, hey, relax, none of this is real. It is just an AI hallucination.</v>
+
+6
+00:00:20.751 --> 00:00:22.573
+<v Daniel>Which is a wild thing to even think about.</v>
+
+7
+00:00:22.793 --> 00:00:37.729
+<v Maya>It really is. But in today's digital landscape, that is exactly what is happening to our news feeds. We are basically standing in a hallway where our own senses and the safety sensors we built to protect us, well, they are fundamentally compromised.</v>
+
+8
+00:00:37.749 --> 00:00:38.850
+<v Daniel>Completely compromised, yeah.</v>
+
+9
+00:00:38.990 --> 00:00:45.113
+<v Maya>So welcome to this deep dive into the source material. Today, you and I are on a very clear, very urgent mission.</v>
+
+10
+00:00:45.133 --> 00:00:46.053
+<v Daniel>Yeah, it is a big one.</v>
+
+11
+00:00:46.233 --> 00:00:54.617
+<v Maya>It really is. We're trying to figure out if anything or anyone can reliably catch an AI generated video of a real world crisis event.</v>
+
+12
+00:00:54.717 --> 00:01:00.420
+<v Daniel>Right. And to do that, we're looking at a really fascinating, honestly, kind of terrifying stack of new research.</v>
+
+13
+00:01:00.580 --> 00:01:02.261
+<v Maya>Yeah. Terrifying is definitely the word.</v>
+
+14
+00:01:02.596 --> 00:01:10.660
+<v Daniel>The absolute centerpiece for us today is a massive new paper. It literally just dropped three days ago on August 14th, 2026.</v>
+
+15
+00:01:10.780 --> 00:01:11.681
+<v Maya>Hot off the presses.</v>
+
+16
+00:01:11.921 --> 00:01:22.146
+<v Daniel>Exactly. It is this huge collaborative effort led by Xu Liang, Yixing Ma, and Pengfei Zhu. And it involves a massive 36-author team.</v>
+
+17
+00:01:22.246 --> 00:01:25.208
+<v Maya>Wow, 36 authors. That is not your average paper.</v>
+
+18
+00:01:25.508 --> 00:01:36.755
+<v Daniel>No, not at all. We were talking researchers spanning the National University of Singapore, UC Berkeley, ETH Zurich, Stanford, CMU, Zhejiang, Rendon, Shanghai Jiao Tong, and more.</v>
+
+19
+00:01:36.855 --> 00:01:38.496
+<v Maya>They really brought out the heavy hitters for this.</v>
+
+20
+00:01:38.656 --> 00:01:42.038
+<v Daniel>They had to. And they introduced this new benchmark called RA Bench.</v>
+
+21
+00:01:42.318 --> 00:01:47.161
+<v Maya>Okay, our A-bench. And we also have five background papers we're bringing into the mix today, right?</v>
+
+22
+00:01:47.181 --> 00:01:55.826
+<v Daniel>Yeah, those trace the recent history of AI video generation and detection. We're going to use them to understand the actual theories that our A-bench is putting to the ultimate test.</v>
+
+23
+00:01:55.986 --> 00:02:05.251
+<v Maya>Perfect. So let us set the stakes for you, the listener, right now. Imagine a war zone or a devastating wildfire or a massive pandemic response.</v>
+
+24
+00:02:05.511 --> 00:02:06.592
+<v Daniel>High stakes situations.</v>
+
+25
+00:02:07.003 --> 00:02:21.655
+<v Maya>Exactly. A video of this hits your feed and you have to ask, is it real? Right. The terrifying answer from our A-bench is that, well, if it is a sophisticated fake, neither you nor the best AI detectors on the planet can reliably tell the difference anymore.</v>
+
+26
+00:02:22.128 --> 00:02:32.773
+<v Daniel>It is a profound shift in what we consider truth. But, you know, to grasp why detection is failing so spectacularly today, we actually have to look backward first.</v>
+
+27
+00:02:32.873 --> 00:02:33.814
+<v Maya>OK, let us rewind.</v>
+
+28
+00:02:34.094 --> 00:02:42.058
+<v Daniel>We need to understand how video generators got this incredibly good and why early research gave the whole field this very false sense of security.</v>
+
+29
+00:02:42.238 --> 00:02:53.445
+<v Maya>Right. Because teaching a computer to make a static image is one thing, but teaching it to generate video where lighting changes, objects move, physics has to actually make sense. That seems, I mean, infinitely harder.</v>
+
+30
+00:02:53.605 --> 00:03:01.130
+<v Daniel>Oh, absolutely. And the turning point is mapped out in this crucial 2023 paper by Blattman and colleagues on stable video diffusion.</v>
+
+31
+00:03:01.150 --> 00:03:02.370
+<v Maya>Stable video diffusion. OK.</v>
+
+32
+00:03:02.390 --> 00:03:08.714
+<v Daniel>Yeah. They laid out this very specific three stage recipe that basically created the hyper realism we are seeing today.</v>
+
+33
+00:03:08.794 --> 00:03:09.955
+<v Maya>And what are those three stages?</v>
+
+34
+00:03:10.275 --> 00:03:22.045
+<v Daniel>First, they do text-to-image pre-training. That teaches the model what objects actually look like. Second is low-resolution video pre-training, where the model learns how things move over time.</v>
+
+35
+00:03:22.105 --> 00:03:23.526
+<v Maya>Like basic physics and motion.</v>
+
+36
+00:03:23.806 --> 00:03:35.015
+<v Daniel>Exactly. And then third is high-quality video fine-tuning. But the real secret sauce they argued for wasn't just the algorithm itself. It was massive data curation.</v>
+
+37
+00:03:35.253 --> 00:03:39.056
+<v Maya>Right. So they didn't just scrape the entire Internet and dump everything into the machine.</v>
+
+38
+00:03:39.256 --> 00:03:44.581
+<v Daniel>No, no. They filtered out static scenes, excessive text, really awkward camera cuts.</v>
+
+39
+00:03:44.861 --> 00:03:50.325
+<v Maya>So they essentially fed the model a strict diet of pure, high quality cinematic motion.</v>
+
+40
+00:03:50.405 --> 00:03:59.993
+<v Daniel>Yes. And that curated training is exactly why the realism being tested in an R.A. bench is so unbelievably potent. The generators aren't just guessing how a fire moves anymore.</v>
+
+41
+00:04:00.073 --> 00:04:01.813
+<v Maya>They have internalized the physics of it.</v>
+
+42
+00:04:01.973 --> 00:04:04.554
+<v Daniel>Exactly. They have seen millions of perfect examples.</v>
+
+43
+00:04:04.614 --> 00:04:12.056
+<v Maya>Which naturally brings us to the detectors. Because, well, for a few years there, the academic community actually thought they had this fake video problem handled.</v>
+
+44
+00:04:12.296 --> 00:04:22.298
+<v Daniel>They really did. Yeah. Back in 2020, Wang and colleagues published this paper, it was called CNN Spot, showing that AI-generated images were, quote, surprisingly easy to spot.</v>
+
+45
+00:04:22.578 --> 00:04:24.718
+<v Maya>But there is a massive catch in that title, right?</v>
+
+46
+00:04:24.958 --> 00:04:28.619
+<v Daniel>Yes. The full quote is surprisingly easy to spot. For now.</v>
+
+47
+00:04:29.318 --> 00:04:33.001
+<v Maya>That, for now, Hedge, is basically the spine of this entire deep dive today.</v>
+
+48
+00:04:33.021 --> 00:04:43.129
+<v Daniel>It really is. In 2020, they showed that one classifier, trained on just a single early generator program in this case, could successfully generalize across 11 other models.</v>
+
+49
+00:04:43.329 --> 00:04:46.011
+<v Maya>Catching fakes from generators it had never even seen before.</v>
+
+50
+00:04:46.111 --> 00:04:55.759
+<v Daniel>Right. And that founded this whole era of massive optimism in the field. Everyone just assumed that AI fakes would always leave behind some kind of universal, invisible fingerprint.</v>
+
+51
+00:04:55.879 --> 00:04:59.242
+<v Maya>Like a digital smudge that the algorithms could always lock onto.</v>
+
+52
+00:04:59.302 --> 00:05:09.052
+<v Daniel>Yeah, and that optimism just kept snowballing. By 2023, Oja and colleagues published a paper literally promising a, quote, universal detector.</v>
+
+53
+00:05:09.232 --> 00:05:09.973
+<v Maya>UnivD, right.</v>
+
+54
+00:05:09.993 --> 00:05:17.560
+<v Daniel>Exactly, UnivD. They used this complex method involving nearest neighbor and linear probing in a pre-trained CLIP feature space.</v>
+
+55
+00:05:17.918 --> 00:05:21.941
+<v Maya>Okay, that sounds intensely technical. What does that actually mean for us?</v>
+
+56
+00:05:22.341 --> 00:05:31.987
+<v Daniel>It basically means they argued they could detect unseen diffusion and autoregressive models just by analyzing how the data clustered together in this vast digital library.</v>
+
+57
+00:05:32.207 --> 00:05:32.788
+<v Maya>And did it work?</v>
+
+58
+00:05:33.248 --> 00:05:42.174
+<v Daniel>In those early lab tests, it worked beautifully. They beat prior state-of-the-art models by a huge margin like 15.07 MAP on unseen models.</v>
+
+59
+00:05:44.175 --> 00:05:59.161
+<v Maya>Wow. But reading this with the benefit of hindsight, it is almost funny. It is like building a high tech burglar alarm in 2020 and confidently assuming it will catch all the thieves in 2026. Right. Totally missing the fact that the thieves</v>
+
+60
+00:05:59.201 --> 00:06:03.823
+<v Maya>have figured out how to just walk straight through the walls. The thieves do not even use the doors anymore.</v>
+
+61
+00:06:04.023 --> 00:06:05.084
+<v Daniel>Is the perfect analogy.</v>
+
+62
+00:06:05.284 --> 00:06:12.827
+<v Maya>So I have to ask you directly, what did this promise of a universal detector actually turn out to mean when our bench finally put it to the test?</v>
+
+63
+00:06:13.217 --> 00:06:17.343
+<v Daniel>It meant almost nothing. And this is exactly where our bench crashes the party.</v>
+
+64
+00:06:17.463 --> 00:06:19.787
+<v Maya>The bill finally comes due on that for now hedge.</v>
+
+65
+00:06:20.183 --> 00:06:31.991
+<v Daniel>Yes, because those older universal detectors were largely built and tested in academic vacuums. R.A. Bench built the ultimate stress test using the highest stakes content possible.</v>
+
+66
+00:06:32.211 --> 00:06:40.176
+<v Maya>And I love the setup here. It is brilliantly devious. They didn't just grab random Internet clips of, you know, artificial landscapes or people dancing.</v>
+
+67
+00:06:40.236 --> 00:06:41.557
+<v Daniel>No, they went straight for the throw. They</v>
+
+68
+00:06:41.597 --> 00:06:47.961
+<v Maya>really did. They gathered 675 public source videos of real actual crises.</v>
+
+69
+00:06:48.141 --> 00:06:51.363
+<v Daniel>Right. Wars, natural disasters, pandemic responses.</v>
+
+70
+00:06:51.543 --> 00:07:02.349
+<v Maya>And then they scene split those into over 5,000 clips. And after two intense rounds of human review for seven reviewers, then four adjudicators, they whittled it down.</v>
+
+71
+00:07:02.609 --> 00:07:04.530
+<v Daniel>Yeah, they were left with 1,830 verified real anchor clips.</v>
+
+72
+00:07:07.633 --> 00:07:14.078
+<v Maya>Coming from 338 different sources across 10 social risk categories and 44 subcategories, it is exhaustive.</v>
+
+73
+00:07:14.238 --> 00:07:23.144
+<v Daniel>And here is the design choice that makes R.A. Bench so lethal. They paired these real anchors with AI generations. But they didn't just type a random prompt into the machine.</v>
+
+74
+00:07:23.564 --> 00:07:28.348
+<v Maya>No, they conditioned the image to video generation on the exact first frame of the real video.</v>
+
+75
+00:07:28.448 --> 00:07:35.353
+<v Daniel>Exactly. They took the real first frame and added a highly detailed caption generated by Gemini 3.1 Pro Preview.</v>
+
+76
+00:07:35.676 --> 00:07:41.877
+<v Maya>This is such a crucial detail because it perfectly mimics a real misinformation attack.</v>
+
+77
+00:07:42.177 --> 00:07:42.617
+<v Daniel>How so?</v>
+
+78
+00:07:43.037 --> 00:07:51.719
+<v Maya>Well, it is like a con artist showing you a perfectly valid ID to get inside your house. And only once they are inside do they start pulling off the heist.</v>
+
+79
+00:07:51.999 --> 00:07:52.499
+<v Daniel>Ah, I see.</v>
+
+80
+00:07:52.779 --> 00:08:05.162
+<v Maya>The AI uses that real first frame as the valid ID to anchor your trust. You see a real rocket on a launch pad or a real protest gathering. And then seamlessly, the AI hallucinates the disaster from there.</v>
+
+81
+00:08:05.442 --> 00:08:13.744
+<v Daniel>That is exactly what happens. Yeah. So they ran this setup through four major open source generators, one 2.2 dynamic, one 2.2 lightning, LTX, and OmniWeaving. And</v>
+
+82
+00:08:13.784 --> 00:08:15.084
+<v Maya>they didn't stop at open source.</v>
+
+83
+00:08:15.244 --> 00:08:22.166
+<v Daniel>No. They also used five closed source heavyweights, Kling, Seedins 2.0, Runway, Hyluo, and Happy Horse.</v>
+
+84
+00:08:22.286 --> 00:08:25.267
+<v Maya>So they are throwing the absolute best commercial models at this.</v>
+
+85
+00:08:25.667 --> 00:08:29.128
+<v Daniel>Exactly. They generated 16,056 fake clips. That gave them a total of 17,886 videos to test.</v>
+
+86
+00:08:34.556 --> 00:08:45.427
+<v Maya>So we have this massive gauntlet of hyper-realistic, anchored crisis fakes. How did those optimistic detectors, like CNN Spot and UniVFD, how did they hold up?</v>
+
+87
+00:08:45.567 --> 00:08:54.916
+<v Daniel>It was a total collapse. They tested seven traditional detectors in total, CNN Spot, NPR, UniVFD, Forgelins, Decof, D3, and Restron.</v>
+
+88
+00:08:54.956 --> 00:08:56.658
+<v Maya>And historically, what were their scores?</v>
+
+89
+00:08:57.038 --> 00:09:11.630
+<v Daniel>On older data sets, their published reference AUCs, which is basically their ability to distinguish real from fake, were between 67.6 and 98.6%. So up in the high 90s for some. Right, but on our A bench. They fell to</v>
+
+90
+00:09:11.690 --> 00:09:15.091
+<v Daniel>source-level means of 43.9% to 57.3%.</v>
+
+91
+00:09:15.151 --> 00:09:19.913
+<v Maya>Wait, 43% to 57%? That is literally just random guessing. They dropped to coin flip territory.</v>
+
+92
+00:09:19.953 --> 00:09:29.256
+<v Daniel>In some cases, they were statistically worse than a coin flip. And it wasn't just a uniform drop, either. The detector rankings completely reshuffled depending on which generator made the fake.</v>
+
+93
+00:09:29.536 --> 00:09:32.997
+<v Maya>So a detector that caught Kling might totally fail on Seedence.</v>
+
+94
+00:09:33.138 --> 00:09:46.623
+<v Daniel>Exactly. None of the three major detector families generalized consistently. The algorithms fundamentally failed. Because the new generators aren't leaving those old pixel smudges anymore. They are generating flawless physical motion.</v>
+
+95
+00:09:47.444 --> 00:09:54.296
+<v Maya>Okay, so the algorithms completely fail. But, you know, you and I, humans, we have lived in the real world our whole lives.</v>
+
+96
+00:09:54.574 --> 00:09:56.156
+<v Daniel>We have a lot of practice with reality.</v>
+
+97
+00:09:56.236 --> 00:10:03.846
+<v Maya>Right. We understand gravity. We understand lighting, human anatomy. Surely we have a gut instinct for reality that a machine just does not have.</v>
+
+98
+00:10:03.986 --> 00:10:11.075
+<v Daniel>You would really hope so. But R.A. Bench tested human perception, too, and the results are incredibly sobering.</v>
+
+99
+00:10:11.195 --> 00:10:12.077
+<v Maya>Date me with the numbers.</v>
+
+100
+00:10:12.477 --> 00:10:18.786
+<v Daniel>So reviewers were able to flag 68.6% of the fakes made by open source models.</v>
+
+101
+00:10:18.846 --> 00:10:22.070
+<v Maya>Okay, almost 70%. Not great, but not terrible.</v>
+
+102
+00:10:22.110 --> 00:10:26.576
+<v Daniel>But when it came to the closed source generators, human detection dropped to 52.9%. Oh,</v>
+
+103
+00:10:26.997 --> 00:10:28.359
+<v Maya>wow. Back to a cornflip.</v>
+
+104
+00:10:28.539 --> 00:10:40.582
+<v Daniel>Yeah. And for specific state-of-the-art models, it is even worse. For seedings 2.0, human detection fell to 40.7%. For cling, it was 45.1%.</v>
+
+105
+00:10:40.682 --> 00:10:42.462
+<v Maya>We are failing the coin flip on those.</v>
+
+106
+00:10:42.743 --> 00:10:47.904
+<v Daniel>We are. But honestly, the number worth dwelling on goes in the complete other direction.</v>
+
+107
+00:10:47.944 --> 00:10:48.324
+<v Maya>What do you mean?</v>
+
+108
+00:10:48.524 --> 00:10:56.086
+<v Daniel>The researchers found that 22.8% of genuine real crisis videos were judged by humans as being generated by AI.</v>
+
+109
+00:10:56.947 --> 00:11:08.980
+<v Maya>Wait, let me wrap my head around that. 22.8%. Nearly a quarter of the time, we are looking at real footage of human suffering or actual real-world chaos, and our brains are rejecting it as a computer trick.</v>
+
+110
+00:11:09.200 --> 00:11:11.843
+<v Daniel>Exactly. We are already disbelieving reality.</v>
+
+111
+00:11:11.863 --> 00:11:15.727
+<v Maya>That is easily the most disturbing statistic in this entire stack of research.</v>
+
+112
+00:11:15.867 --> 00:11:24.311
+<v Daniel>And it brings us to a massive collision with a widely accepted theory from a few years ago. Let's talk about the Grow 2022 paper published in PNAS.</v>
+
+113
+00:11:24.411 --> 00:11:27.392
+<v Maya>Right. I remember this one. They had a huge sample size, didn't they?</v>
+
+114
+00:11:27.592 --> 00:11:35.016
+<v Daniel>Massive. 15,016 participants. They tested ordinary people and the leading deep fake detection model at the time.</v>
+
+115
+00:11:35.176 --> 00:11:37.137
+<v Maya>And what did they find back in 2022?</v>
+
+116
+00:11:37.397 --> 00:11:44.640
+<v Daniel>They concluded that humans and machines are similarly accurate, but, and this is the key, they make entirely different mistakes.</v>
+
+117
+00:11:44.820 --> 00:11:49.823
+<v Maya>Oh, I see where this is going. So the idea was a human machine team is the ultimate fix.</v>
+
+118
+00:11:50.103 --> 00:12:01.289
+<v Daniel>Exactly. Machine-informed crowds beat either humans or machines alone. The machine catches the invisible pixel artifacts and the human catches the weird physics or illogical context.</v>
+
+119
+00:12:01.389 --> 00:12:02.529
+<v Maya>A perfect symbiosis.</v>
+
+120
+00:12:02.689 --> 00:12:11.634
+<v Daniel>That was the hope. But the new RA Bench paper completely dismantles this remedy. And they do it with a subset of their data called RA Bench Human Proof.</v>
+
+121
+00:12:11.838 --> 00:12:15.039
+<v Maya>Human proof, that sounds ominous. What exactly is in that subset?</v>
+
+122
+00:12:15.059 --> 00:12:20.600
+<v Daniel>They isolated 633 generated clips that successfully fooled all five human reviewers.</v>
+
+123
+00:12:20.700 --> 00:12:25.341
+<v Maya>So every single person looked at these AI videos and confidently said, yes, this is real.</v>
+
+124
+00:12:25.621 --> 00:12:32.223
+<v Daniel>Every single one. So the researchers took exactly these 633 human deceptive clips and fed them to the machines.</v>
+
+125
+00:12:32.612 --> 00:12:37.380
+<v Maya>To see if the AI could catch what the humans missed, exactly like the Grow paper suggested.</v>
+
+126
+00:12:37.461 --> 00:12:42.029
+<v Daniel>Exactly. And the results? The seven traditional detectors averaged a 47.5% AUC.</v>
+
+127
+00:12:44.444 --> 00:12:45.285
+<v Maya>Worse than chance.</v>
+
+128
+00:12:45.365 --> 00:12:55.110
+<v Daniel>Worse than random chance. Even the massive state-of-the-art models like Gemini binary and diagnostic only reached 54.7 and 54.5%.</v>
+
+129
+00:12:55.191 --> 00:12:57.972
+<v Maya>Wow. So it completely breaks the growth theory.</v>
+
+130
+00:12:58.192 --> 00:13:02.715
+<v Daniel>Completely. Human failure and machine failure perfectly overlap on these videos.</v>
+
+131
+00:13:02.895 --> 00:13:09.399
+<v Maya>If the human deceptive videos are the exact same videos that deceive the detectors, it means our errors are correlated.</v>
+
+132
+00:13:09.499 --> 00:13:12.381
+<v Daniel>Yes. That is the paper's absolute sharpest finding.</v>
+
+133
+00:13:12.625 --> 00:13:23.413
+<v Maya>If our blind spot is exactly the same as the machine's blind spot, teaming up does not give us 20-20 vision. It just means we are both confidently walking off the same cliff together right when the stakes are highest.</v>
+
+134
+00:13:23.593 --> 00:13:35.842
+<v Daniel>Exactly. The videos that fool people are the exact ones the machines miss. The generators have learned to mimic the very visual shortcuts that both our organic brains and the silicon brains rely on to determine reality.</v>
+
+135
+00:13:36.270 --> 00:13:41.432
+<v Maya>And as if that wasn't bad enough, the study shows it actually gets much, much worse.</v>
+
+136
+00:13:41.592 --> 00:13:42.413
+<v Daniel>Oh, it really does.</v>
+
+137
+00:13:42.553 --> 00:13:52.477
+<v Maya>Because everything we just talked about, the terrible detector scores, the human failures, the correlated blind spots, all of that was achieved on pristine original video files.</v>
+
+138
+00:13:53.057 --> 00:13:55.478
+<v Daniel>The raw MP4 files straight out of the generator.</v>
+
+139
+00:13:55.538 --> 00:14:00.180
+<v Maya>But you and I both know that is not how you consume media on the Internet.</v>
+
+140
+00:14:00.365 --> 00:14:06.189
+<v Daniel>Not at all. Videos online are compressed, re-shared, ripped, uploaded again. They are messy.</v>
+
+141
+00:14:06.329 --> 00:14:08.050
+<v Maya>So how did the researchers test that?</v>
+
+142
+00:14:08.490 --> 00:14:18.056
+<v Daniel>They built another subset called RA Bench Last Mile. They ran a social dissemination simulation over 150 anchors to mimic what happens when a video goes viral.</v>
+
+143
+00:14:18.216 --> 00:14:20.917
+<v Maya>Like simulating a real-world sharing pipeline.</v>
+
+144
+00:14:21.098 --> 00:14:30.043
+<v Daniel>Yes. They did a VP9 to H.264 transcode. They did a 0.5x downsampling. They dropped the frame rate to 8 frames per second.</v>
+
+145
+00:14:30.253 --> 00:14:36.575
+<v Maya>So basically turning it into that slightly grainy, low res Internet sludge we are all so used to seeing on Twitter or Telegram.</v>
+
+146
+00:14:37.015 --> 00:14:44.858
+<v Daniel>Exactly. And then for the final touch, they slapped a synthetic news badge like a little breaking news graphic right in the corner of the video.</v>
+
+147
+00:14:44.918 --> 00:14:50.760
+<v Maya>Just a standard presentation cue. What did that whole last mile process do to the detectors?</v>
+
+148
+00:14:51.111 --> 00:15:03.958
+<v Daniel>The drop was devastating. Combined, these simple edits dropped the mean fake recall across five fine-tuned detector configurations from 46% down to a microscopic 1.4%.</v>
+
+149
+00:15:04.638 --> 00:15:05.518
+<v Maya>Wait,</v>
+
+150
+00:15:05.719 --> 00:15:06.839
+<v Daniel>1.4%. 1.4%.</v>
+
+151
+00:15:07.159 --> 00:15:11.902
+<v Maya>They went from feeling a coin flip to basically being completely blindfolded.</v>
+
+152
+00:15:12.042 --> 00:15:16.784
+<v Daniel>It is total systemic failure. But the most fascinating part is actually just the news badge.</v>
+
+153
+00:15:17.024 --> 00:15:18.185
+<v Maya>Right. Let's talk about that.</v>
+
+154
+00:15:18.445 --> 00:15:25.867
+<v Daniel>The paper notes that just slapping that fake news logo on the video dropped the fake recall from 29.9% down to 14%. It cut</v>
+
+155
+00:15:26.068 --> 00:15:27.668
+<v Maya>it in half, just a graphic.</v>
+
+156
+00:15:27.748 --> 00:15:36.091
+<v Daniel>Yes. A presentation cue that makes zero change to the underlying pixels of the actual crisis event pushes the detectors toward calling a fake reel.</v>
+
+157
+00:15:36.271 --> 00:15:39.032
+<v Maya>Why does that happen? It seems so foolish for an advanced AI.</v>
+
+158
+00:15:39.542 --> 00:15:54.351
+<v Daniel>It reveals how inherently lazy machine learning models can be. They look for the strongest, easiest signal to reduce their error rate. Analyzing complex temporal consistency is hard, but recognizing a static high contrast</v>
+
+159
+00:15:54.371 --> 00:15:57.193
+<v Daniel>news ticker, that is super easy.</v>
+
+160
+00:15:57.453 --> 00:16:03.816
+<v Maya>So the detector sees the professional packaging and essentially says, ah, reputable news graphics. This must be real.</v>
+
+161
+00:16:04.156 --> 00:16:12.641
+<v Daniel>Exactly. It judges the packaging, not the product inside. And sharing doesn't just weaken detection. It actually scrambles which detector looks best.</v>
+
+162
+00:16:12.921 --> 00:16:13.441
+<v Maya>How so?</v>
+
+163
+00:16:13.561 --> 00:16:20.365
+<v Daniel>The researchers checked the Spearman correlation between the detector rankings on the original pristine videos versus the fully disseminated videos.</v>
+
+164
+00:16:20.505 --> 00:16:21.505
+<v Maya>And what was the correlation?</v>
+
+165
+00:16:21.525 --> 00:16:21.805
+<v Daniel>0.07.</v>
+
+166
+00:16:23.066 --> 00:16:24.648
+<v Maya>Wow. So practically zero.</v>
+
+167
+00:16:24.688 --> 00:16:30.196
+<v Daniel>Yeah. A detector that won the pristine lab test was completely different from the one that did best in the real world simulation.</v>
+
+168
+00:16:30.316 --> 00:16:36.665
+<v Maya>Which naturally raises a massive question. Is this just a quirk of this specific simulated RA bench lab environment?</v>
+
+169
+00:16:36.765 --> 00:16:38.868
+<v Daniel>Right. That is always the fear with academic benchmarks.</v>
+
+170
+00:16:39.155 --> 00:16:48.068
+<v Maya>So to answer that, we have to look at our final background source today. It is a project called Deep Fake Evil 2024 by Chandra and colleagues.</v>
+
+171
+00:16:48.329 --> 00:16:51.554
+<v Daniel>And this one is crucial because they took a completely different approach.</v>
+
+172
+00:16:51.714 --> 00:16:54.378
+<v Maya>Right. They didn't build a controlled lab benchmark at all.</v>
+
+173
+00:16:54.578 --> 00:17:09.144
+<v Daniel>No. They went out into the wild. They scraped 45 hours of actual circulating video, 56.5 hours of audio, and nearly 2,000 images. From where? From 88 different websites across</v>
+
+174
+00:17:09.164 --> 00:17:12.945
+<v Daniel>52 languages. This is actual in-the-wild Internet media.</v>
+
+175
+00:17:12.965 --> 00:17:16.607
+<v Maya>The real deal. And did their findings contradict RA Bench?</v>
+
+176
+00:17:16.887 --> 00:17:24.814
+<v Daniel>No, their conclusion matched perfectly. They found that open source detector accuracy dropped by about 50% in the wild compared to academic benchmarks.</v>
+
+177
+00:17:25.154 --> 00:17:26.635
+<v Maya>And what about the big commercial models?</v>
+
+178
+00:17:26.835 --> 00:17:29.618
+<v Daniel>Absolutely no commercial model reached 90% accuracy.</v>
+
+179
+00:17:29.898 --> 00:17:41.928
+<v Maya>So you have two totally different methodologies. One is this pristine, perfectly controlled simulation, and the other is a messy scrape of the real internet. And they both arrive at the exact same bleak conclusion.</v>
+
+180
+00:17:42.028 --> 00:17:44.490
+<v Daniel>The exact same conclusion. Detection is failing.</v>
+
+181
+00:17:44.724 --> 00:17:51.867
+<v Maya>OK, let us zoom out here because we need to look at what this all actually means for you, the person listening to this right now.</v>
+
+182
+00:17:52.108 --> 00:17:53.608
+<v Daniel>The real world consequences.</v>
+
+183
+00:17:53.668 --> 00:18:06.674
+<v Maya>Exactly. If post hoc detection, you know, analyzing a video after it is already on your screen, if that doesn't even survive ordinary Internet compression and resharing, where on earth do we go from here?</v>
+
+184
+00:18:06.854 --> 00:18:18.638
+<v Daniel>Well, the entire way to the industry is shifting right now. Because detection is failing, the burden is shifting heavily toward proving provenance and watermarking at the exact time the video is generated.</v>
+
+185
+00:18:18.758 --> 00:18:25.540
+<v Maya>Right. And this is exactly the bet that companies like Anthropic and Google with their SynthEye lineage are making.</v>
+
+186
+00:18:25.760 --> 00:18:35.622
+<v Daniel>Exactly. The idea is to bake an invisible cryptographic signature directly into the pixels themselves as the AI creates the file long before it ever hits Twitter or the open Internet.</v>
+
+187
+00:18:35.995 --> 00:18:42.661
+<v Maya>But let me push back on that for a second, because even that is not a silver bullet, is it? We just talked about how videos get altered online.</v>
+
+188
+00:18:42.721 --> 00:18:56.853
+<v Daniel>You are totally right. Those watermarking systems have really well-known failure modes. Well, if a malicious actor simply crops the video, or if they paraphrase it by running it through a secondary model, or like we just saw in the last mile simulation, if they heavily re-encode it.</v>
+
+189
+00:18:57.193 --> 00:18:58.574
+<v Maya>The watermark just breaks.</v>
+
+190
+00:18:58.915 --> 00:19:01.517
+<v Daniel>Yeah, the watermark can break or be scrubbed out entirely.</v>
+
+191
+00:19:01.678 --> 00:19:10.543
+<v Maya>Which brings us back to the real human cost of all this. I really cannot stop thinking about that one number from earlier, the 22.8%.</v>
+
+192
+00:19:10.923 --> 00:19:13.344
+<v Daniel>The real footage that humans doubted.</v>
+
+193
+00:19:13.745 --> 00:19:22.890
+<v Maya>Yes. In a world without reliable detection, the cost is not just that we fall for fakes. We always tend to think of the danger as, oh, we might believe a lie.</v>
+
+194
+00:19:23.050 --> 00:19:24.391
+<v Daniel>Right. That is the obvious fear.</v>
+
+195
+00:19:24.551 --> 00:19:30.534
+<v Maya>But the true harm is totally symmetric. The cost falls heavily on authentic, true crisis footage, too.</v>
+
+196
+00:19:30.838 --> 00:19:35.901
+<v Daniel>Because if every video can be faked flawlessly, then every real video can be seamlessly denied.</v>
+
+197
+00:19:36.081 --> 00:19:43.826
+<v Maya>Exactly. Real atrocities, real natural disasters, real infrastructure failures. Bad actors can just dismiss them as AI hallucinations.</v>
+
+198
+00:19:44.066 --> 00:19:49.550
+<v Daniel>And there is no universally trusted algorithm you can point to that proves them wrong. Ari Bench proved that.</v>
+
+199
+00:19:49.850 --> 00:19:59.096
+<v Maya>So on a practical level, what is a newsroom or a social media platform or a government supposed to actually do based on the evidence in this paper?</v>
+
+200
+00:19:59.647 --> 00:20:07.909
+<v Daniel>It means we have crossed a major threshold. We can no longer rely on the media artifact itself to prove its own reality.</v>
+
+201
+00:20:08.349 --> 00:20:10.190
+<v Maya>The pixels are just not enough anymore.</v>
+
+202
+00:20:10.230 --> 00:20:23.433
+<v Daniel>No. We're moving into an era where the context, the chain of custody, and the verified cryptographic history of a piece of media are going to be infinitely more important than what your eyes actually see on the screen.</v>
+
+203
+00:20:23.613 --> 00:20:27.515
+<v Maya>Let's circle back to where we started today, that fire alarm going off in the hallway.</v>
+
+204
+00:20:27.675 --> 00:20:28.696
+<v Daniel>The smoke and the flames.</v>
+
+205
+00:20:28.916 --> 00:20:38.881
+<v Maya>Right. If the digital alarm is fundamentally broken and the smoke you smell on your feed might just be a flawless digital injection, how do you prove the house is actually burning?</v>
+
+206
+00:20:39.081 --> 00:20:40.462
+<v Daniel>It is an incredibly dark thought.</v>
+
+207
+00:20:40.682 --> 00:20:48.906
+<v Maya>It is. If our eyes can be reliably fooled and the machines we built to help our eyes fail exactly when we need them most, we are left with a massive question.</v>
+
+208
+00:20:49.086 --> 00:20:49.847
+<v Daniel>What is the question?</v>
+
+209
+00:20:50.248 --> 00:21:05.156
+<v Maya>Does the future of truth rely on fundamentally restricting who is technologically allowed to generate video in the first place? Or do we need to completely redefine what even counts as evidence in the digital age? Wow. It is something profound for you to mull over</v>
+
+210
+00:21:05.196 --> 00:21:09.745
+<v Maya>the next time a shocking breaking news video hits your feed. Thanks for joining us on this deep dive.</v>
