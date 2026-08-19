@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 06:50:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 06:53:17 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -398,5 +398,24 @@ Reference: Chandra, N. A., Lee, H., Murtfeldt, R., et al. (2025). Deepfake-Eval-
       <pubDate>Tue, 18 Aug 2026 06:25:58 +0000</pubDate>
       <itunes:episode>22</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/022%20-%20When%20Crisis%20Footage%20Stops%20Being%20Proof.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>023 - When Machine Discoveries Become Human Culture</title>
+      <description>When Machine Discoveries Become Human Culture (2022-2026)
+
+In this episode we unpack a Nature Communications paper published on 18 August 2026 by Levin Brinkmann, Thomas Eisenmann, Anne-Marie Nussberger, Maxime Derex, Sara Bonati, Valerii Chirkov and Iyad Rahwan, from the Max Planck Institute for Human Development's Center for Humans and Machines in Berlin. The question is whether a strategy discovered by a machine can enter human culture and stay there after the machine is gone. To test it they ran a preregistered cultural transmission experiment with 1,155 people: 30 populations, five generations of eight players each, half of them seeded with three machine players in the first generation and half kept entirely human. The task was a network of 12 nodes where the highest rewards were reachable only by deliberately accepting three losses first, which is exactly the kind of move people avoid. Roughly one human in six hundred found that strategy alone. A deep Q-learning agent found it reliably in under five minutes.
+
+We walk through what happened next, which is the actual result: in 9 of 15 populations seeded with machines the loss-taking strategy survived to the final generation, while 14 of 15 human-only populations never discovered it at all. Humans chose the best-performing demonstrator 86.7 percent of the time, 90 percent of the first generation picked a machine, and by the last generation every player was a cultural descendant of a machine player. They also did more than imitate, writing the strategy out in their own words and applying it to networks the machines never played. We look at the three conditions the authors argue govern all of this, that a machine discovery must be hard for humans to find, easy for humans to learn, and visibly better, and at the agent-based simulation that maps where each condition fails. Against the new result we set the same lab's 2022 experiment, which found algorithmic gains vanishing a step or two down the transmission chain and concluded human bias might prevent preservation; Bill Thompson and colleagues' Science study of 3,450 people showing selective social learning preserving algorithms humans discovered themselves; the Machine Culture framework; 5.8 million professional Go decisions from 1950 to 2021 showing human play improving after AlphaGo; and the AlphaZero concepts extracted and taught to four chess grandmasters. We close on what the authors themselves worry about, that these cultural shifts stay fragile in small populations, that human and machine cultures could bifurcate as systems train on each other, and that a strategy can be perfectly transmissible and still be one we should not have adopted.
+
+Reference: Brinkmann, L., Eisenmann, T. F., Nussberger, A.-M., Derex, M., Bonati, S., Chirkov, V., &amp; Rahwan, I. (2026). Propagation and preservation of AI-discovered problem-solving strategies in human culture. Nature Communications, 17, 8255. https://doi.org/10.1038/s41467-026-76113-2
+Reference: Brinkmann, L., Gezerli, D., Kleist, K. V., Müller, T. F., Rahwan, I., &amp; Pescetelli, N. (2022). Hybrid social learning in human-algorithm cultural transmission. Philosophical Transactions of the Royal Society A, 380, 20200426. https://doi.org/10.1098/rsta.2020.0426
+Reference: Thompson, B., van Opheusden, B., Sumers, T., &amp; Griffiths, T. L. (2022). Complex cognitive algorithms preserved by selective social learning in experimental populations. Science, 376(6588), 95-98. https://doi.org/10.1126/science.abn0915
+Reference: Brinkmann, L., Baumann, F., Bonnefon, J.-F., Derex, M., Müller, T. F., Nussberger, A.-M., et al. (2023). Machine culture. Nature Human Behaviour, 7, 1855-1868. https://doi.org/10.1038/s41562-023-01742-2
+Reference: Shin, M., Kim, J., van Opheusden, B., &amp; Griffiths, T. L. (2023). Superhuman artificial intelligence can improve human decision-making by increasing novelty. Proceedings of the National Academy of Sciences, 120(12), e2214840120. https://doi.org/10.1073/pnas.2214840120
+Reference: Schut, L., Tomašev, N., McGrath, T., Hassabis, D., Paquet, U., &amp; Kim, B. (2025). Bridging the human-AI knowledge gap through concept discovery and transfer in AlphaZero. Proceedings of the National Academy of Sciences, 122(13), e2406675122. https://doi.org/10.1073/pnas.2406675122</description>
+      <guid isPermaLink="false">1df0bd0d748b43843300d8f340f34fb6408927c1</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/023%20-%20When%20Machine%20Discoveries%20Become%20Human%20Culture.m4a" length="39852571" type="audio/mp4" />
+      <pubDate>Wed, 19 Aug 2026 06:18:13 +0000</pubDate>
+      <itunes:episode>23</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/023%20-%20When%20Machine%20Discoveries%20Become%20Human%20Culture.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

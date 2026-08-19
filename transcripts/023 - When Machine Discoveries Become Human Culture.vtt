@@ -1,0 +1,729 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:14.914
+<v Maya>Imagine like someone hands you a recipe for the most incredible, mind-blowing cake you have ever tasted in your life. But when you look at the instructions, they make absolutely zero sense. Right. The recipe tells you to deliberately</v>
+
+2
+00:00:14.974 --> 00:00:24.616
+<v Maya>burn the butter, add salt instead of sugar for the first three steps, and bake it at a temperature that seems mathematically guaranteed to start a fire in your oven.</v>
+
+3
+00:00:24.816 --> 00:00:27.421
+<v Daniel>Yeah, and you're just sitting there thinking, why would I ever do this?</v>
+
+4
+00:00:27.641 --> 00:00:38.360
+<v Maya>Exactly. But you do it anyway and out comes absolute perfection. Would you pass that recipe on, even if you didn't invent it and even if it goes against every single baking instinct you have?</v>
+
+5
+00:00:38.607 --> 00:00:44.688
+<v Daniel>Well, it's a great question because it really forces you to ask whether you trust the result more than you trust your own intuition.</v>
+
+6
+00:00:44.808 --> 00:00:59.572
+<v Maya>Yeah, exactly. And if you're someone who is insanely curious about how knowledge actually evolves, this deep dive is absolutely for you. Because today we are looking at how artificial intelligence is no longer just a calculator or a tool we use to write</v>
+
+7
+00:00:59.672 --> 00:01:10.884
+<v Maya>emails. It is becoming an actual source of cultural innovation. Like AI is generating alien recipes, so to speak, and humans are starting to adopt, internalize, and preserve them.</v>
+
+8
+00:01:11.182 --> 00:01:19.747
+<v Daniel>We are effectively watching a historic transition right now. Right. I mean, we're moving from humans merely using machines to humans inheriting culture from machines.</v>
+
+9
+00:01:19.827 --> 00:01:20.388
+<v Maya>Wow.</v>
+
+10
+00:01:20.708 --> 00:01:29.533
+<v Daniel>And we have a massive stack of research today, like six distinct papers mapping this evolution. But the absolute star of the show is a brand new paper.</v>
+
+11
+00:01:29.553 --> 00:01:30.794
+<v Maya>Oh, the 2026 one.</v>
+
+12
+00:01:31.054 --> 00:01:45.785
+<v Daniel>Right. It's titled Propagation and Preservation of AI Discovered Problem Solving Strategies in Human Culture. It's led by Levin Brinkman and a brilliant team out of the Max Planck Institute in Berlin. And it was just published in Nature Communications on August 18, 2026.</v>
+
+13
+00:01:46.225 --> 00:01:53.792
+<v Maya>So the mission for this deep dive is to explore how machines can find problem solving strategies that humans essentially never find on their own.</v>
+
+14
+00:01:53.992 --> 00:01:54.593
+<v Daniel>Exactly.</v>
+
+15
+00:01:54.713 --> 00:02:04.481
+<v Maya>And more importantly, we're going to see how under the precise right conditions, human populations won't just copy these alien strategies. They will actually keep them alive long after the machines are gone.</v>
+
+16
+00:02:04.541 --> 00:02:05.542
+<v Daniel>Yeah, it's wild.</v>
+
+17
+00:02:05.842 --> 00:02:16.065
+<v Maya>But before we get into this massive 2026 breakthrough, we actually have to start with a failure because, you know, this wasn't always a success story. No,</v>
+
+18
+00:02:16.125 --> 00:02:16.765
+<v Daniel>it really wasn't.</v>
+
+19
+00:02:17.105 --> 00:02:22.227
+<v Maya>If a machine shows us a better way to do something, why wouldn't humans just automatically adopt it?</v>
+
+20
+00:02:22.367 --> 00:02:37.258
+<v Daniel>Right. Well, to understand the 2026 breakthrough, we kind of have to look at the hurdle they were trying to jump over first. Back in 2022, this exact same lab published a paper in the Philosophical Transactions of the Royal Society.</v>
+
+21
+00:02:37.338 --> 00:02:37.818
+<v Maya>Okay.</v>
+
+22
+00:02:38.139 --> 00:02:43.382
+<v Daniel>They set up a lab experiment, which was essentially a game of telephone, but for problem solving.</v>
+
+23
+00:02:43.522 --> 00:02:44.223
+<v Maya>Oh, interesting.</v>
+
+24
+00:02:44.343 --> 00:02:49.727
+<v Daniel>Yeah, they created a transmission chain of human players, and they dropped an algorithm right in the middle of that chain.</v>
+
+25
+00:02:49.907 --> 00:02:53.449
+<v Maya>And the algorithm had a strictly superior strategy for the game they were playing,</v>
+
+26
+00:02:53.489 --> 00:03:02.573
+<v Daniel>right? It did. And the human, immediately downstream of that algorithm, watched the machine, saw the better strategy, copied it, and their performance shot up.</v>
+
+27
+00:03:02.873 --> 00:03:03.513
+<v Maya>So it worked.</v>
+
+28
+00:03:03.913 --> 00:03:06.875
+<v Daniel>It worked perfectly. But then the game completely vanished.</v>
+
+29
+00:03:07.035 --> 00:03:07.515
+<v Maya>Wait, really?</v>
+
+30
+00:03:07.855 --> 00:03:13.818
+<v Daniel>Yeah. As that strategy was passed further down the chain from human to human to human, it just died out.</v>
+
+31
+00:03:14.663 --> 00:03:20.306
+<v Maya>Okay, let's unpack this. Why on earth did they drop a real strategy? Like, they saw it working.</v>
+
+32
+00:03:20.486 --> 00:03:21.146
+<v Daniel>Well, that's the thing.</v>
+
+33
+00:03:21.206 --> 00:03:27.069
+<v Maya>It feels like using a fitness app that gives you a scientifically flawless but incredibly grueling workout.</v>
+
+34
+00:03:27.230 --> 00:03:27.930
+<v Daniel>Right, exactly.</v>
+
+35
+00:03:27.950 --> 00:03:37.335
+<v Maya>You might do it once because the app told you to, but the very next day, human nature kicks in, you say, this hurts too much, and you go right back to your comfortable, less effective routine.</v>
+
+36
+00:03:37.435 --> 00:03:47.843
+<v Daniel>That is a perfect analogy. What's fascinating here is that this tension proves human bias actively fights against algorithmic solutions being preserved in our culture.</v>
+
+37
+00:03:48.003 --> 00:03:48.724
+<v Maya>Oh, wow.</v>
+
+38
+00:03:49.044 --> 00:03:58.732
+<v Daniel>In that 2022 study, humans exhibited what researchers call an aversive tuning bias. It's an evolutionary psychological tendency to avoid large initial costs.</v>
+
+39
+00:03:59.072 --> 00:04:00.433
+<v Maya>So we hate losing early on.</v>
+
+40
+00:04:00.493 --> 00:04:13.292
+<v Daniel>Precisely. If an algorithm says, hey, take a minus 100 point penalty right now, and I promise you'll get a huge reward later, the human brain just rejects it. We selectively discount paths that start with pain. We want the immediate payoff.</v>
+
+41
+00:04:13.612 --> 00:04:21.575
+<v Maya>So the subsequent humans in that chain just abandoned the AI's brilliant strategy and reverted to their own myopic, comfortable habits.</v>
+
+42
+00:04:21.855 --> 00:04:36.520
+<v Daniel>Exactly. But this failure was crucial. It forced the Max Planck lab to ask a much harder question. Which was? If human bias constantly overrides algorithmic brilliance, what are the actual conditions required for an AI discovery to</v>
+
+43
+00:04:36.580 --> 00:04:36.880
+<v Daniel>stick?</v>
+
+44
+00:04:37.740 --> 00:04:37.840
+<v Maya>Oh.</v>
+
+45
+00:04:38.180 --> 00:04:46.823
+<v Daniel>How do you engineer a scenario where the strategy is incredibly hard for humans to find, but visibly brilliant enough to survive our stubborn biases once it's demonstrated?</v>
+
+46
+00:04:47.083 --> 00:04:55.726
+<v Maya>Which brings us to the 2026 paper and how they solved this. Because to figure this out, they had to design a game that specifically weaponized our own biases against us.</v>
+
+47
+00:04:55.866 --> 00:04:56.546
+<v Daniel>They really did.</v>
+
+48
+00:04:56.806 --> 00:05:02.868
+<v Maya>They engineered what I can only describe as the perfect psychological trap. They recruited over a thousand people.</v>
+
+49
+00:05:03.628 --> 00:05:05.449
+<v Daniel>11, 155 to be exact.</v>
+
+50
+00:05:05.629 --> 00:05:16.993
+<v Maya>Right, 11, 155 people on a platform called Prolific to play this reward network task. Let's put you, the listener, in the shoes of one of these players because the design of this game is the entire argument of the paper.</v>
+
+51
+00:05:17.073 --> 00:05:18.934
+<v Daniel>It really is. The mechanism is everything here.</v>
+
+52
+00:05:19.374 --> 00:05:34.165
+<v Maya>Imagine you're looking at a computer screen. You see a maze, basically a network of 12 nodes connected by 30 paths or edges. You get exactly 10 moves. Ah. Every time you move across a path, you score points. Some paths are minus 50, some</v>
+
+53
+00:05:34.285 --> 00:05:40.146
+<v Maya>are 0, 100, 200, or a massive 400 points. The goal is simple. Get the highest score possible.</v>
+
+54
+00:05:40.286 --> 00:05:43.466
+<v Daniel>Sounds easy enough, right? Just look for the 400-point paths and click them.</v>
+
+55
+00:05:43.867 --> 00:05:49.768
+<v Maya>Ah, but here's the trap. The massive 400-point paths are locked behind a barrier of pain.</v>
+
+56
+00:05:49.988 --> 00:05:50.228
+<v Daniel>Yes.</v>
+
+57
+00:05:50.488 --> 00:05:57.909
+<v Maya>You can only reach them if you deliberately accept at least three minus 50-point losses first. You have to walk through the fire to get the gold.</v>
+
+58
+00:05:58.347 --> 00:06:01.648
+<v Daniel>And this runs straight into that evolutionary psychological wall we just talked about.</v>
+
+59
+00:06:01.748 --> 00:06:03.368
+<v Maya>Our desire for immediate reward.</v>
+
+60
+00:06:03.569 --> 00:06:13.051
+<v Daniel>Right, myopic play. When a human looks at that screen, they want the 200 points sitting right in front of them. We fundamentally do not want to click minus 50, minus 50, minus 50.</v>
+
+61
+00:06:13.151 --> 00:06:28.076
+<v Maya>And the numbers on this are striking. If you play the best possible myopic strategy, meaning you just grab the highest positive numbers available at every single step, your total score tops out around 2,000 points. But the optimal strategy... the one where you deliberately bleed</v>
+
+62
+00:06:28.156 --> 00:06:32.200
+<v Maya>points early on to reach the massive payoffs later, that hits 2,650 points.</v>
+
+63
+00:06:34.285 --> 00:06:48.255
+<v Daniel>But getting to that 2,650 points goes so deeply against human nature that it's practically invisible to us. I mean, out of roughly 600 human participants trying to figure this out on their own, exactly one human discovered this optimal loss-taking strategy.</v>
+
+64
+00:06:48.395 --> 00:06:49.235
+<v Maya>One out of 600.</v>
+
+65
+00:06:49.656 --> 00:06:50.476
+<v Daniel>One single person.</v>
+
+66
+00:06:50.636 --> 00:06:50.816
+<v Maya>Yeah.</v>
+
+67
+00:06:51.097 --> 00:07:00.163
+<v Daniel>Meanwhile, the researchers trained a machine player on this game, a deep-q learning algorithm, and it found the optimal strategy reliably in under five minutes.</v>
+
+68
+00:07:00.363 --> 00:07:10.967
+<v Maya>Wait, I have to push back here. One human out of 600 finds it versus an AI figuring it out in five minutes. Wait, so is the AI just that much smarter than us? Because that feels like a massive gap in pure intelligence.</v>
+
+69
+00:07:10.987 --> 00:07:18.610
+<v Daniel>There's an incredibly important distinction to make, and it's something the paper really focuses on. The mechanism here is a gap in exploration, not intelligence.</v>
+
+70
+00:07:18.630 --> 00:07:20.171
+<v Maya>Okay, what does that mean in practice?</v>
+
+71
+00:07:20.531 --> 00:07:30.645
+<v Daniel>Think about how a human learns. We are constrained by time, by patients, by biology. We just don't have the capacity or the emotional stomach to fail thousands of times in a few minutes.</v>
+
+72
+00:07:30.985 --> 00:07:32.166
+<v Maya>Right. We just quit the game.</v>
+
+73
+00:07:32.186 --> 00:07:42.491
+<v Daniel>Exactly. But a deep Q learning algorithm, it's basically a relentless trial and error system. It played about 20,000 episodes across 1,000 different network layouts.</v>
+
+74
+00:07:42.831 --> 00:07:43.932
+<v Maya>Oh, wow. 20,000.</v>
+
+75
+00:07:44.822 --> 00:07:59.603
+<v Daniel>Yeah, it doesn't feel the psychological sping of a minus 50 point loss. It doesn't get frustrated or bored. It just updates its scorecard 20,000 times until it maps the absolute perfect path. So the machine can explore a vastly larger space of possibilities, totally</v>
+
+76
+00:07:59.703 --> 00:08:01.686
+<v Daniel>unburdened by human emotional heuristics.</v>
+
+77
+00:08:01.966 --> 00:08:16.960
+<v Maya>It's just brute forcing the math without any of the baggage. OK, so knowing that humans almost never find this 2650 point strategy organically, the researchers basically ask, what happens if we see this alien machine discovered strategy into a human population?</v>
+
+78
+00:08:17.080 --> 00:08:20.783
+<v Daniel>Right. Will it survive or will human bias kill it again like it did in 2022?</v>
+
+79
+00:08:21.900 --> 00:08:36.625
+<v Maya>This is where the experimental structure gets brilliant. They created 30 distinct mini societies or populations. Each population consisted of five generations with eight players in each generation. Now, 15 of these were human only populations. The other 15 were</v>
+
+80
+00:08:36.685 --> 00:08:41.887
+<v Maya>human machine populations, where three of the eight players in Generation Zero were machines.</v>
+
+81
+00:08:42.147 --> 00:08:43.988
+<v Daniel>So Generation Zero is the starting line.</v>
+
+82
+00:08:44.400 --> 00:08:59.130
+<v Maya>Exactly. And here is how they simulated culture passing down through time. After Generation Zero plays, Generation One gets to pick a demonstrator from Generation Zero to learn from. Right. They pick based solely on the total scores they see on a</v>
+
+83
+00:08:59.170 --> 00:09:11.438
+<v Maya>leaderboard. Once they pick, they watch a replay of that demonstrator's moves. They reproduce those exact moves to prove they paid attention. And then this is the crucial part. They have to solve completely fresh new networks entirely on their own.</v>
+
+84
+00:09:11.782 --> 00:09:14.624
+<v Daniel>Yeah, that's key. Nobody ever solves the same network twice.</v>
+
+85
+00:09:14.825 --> 00:09:21.350
+<v Maya>Right. Then Generation 2 picks demonstrators from Generation 1, and the cycle continues all the way to Generation 4.</v>
+
+86
+00:09:21.550 --> 00:09:26.655
+<v Daniel>The results of this are truly jaw-dropping. I want to say these numbers out loud so they really sink in.</v>
+
+87
+00:09:26.675 --> 00:09:27.095
+<v Maya>Please do.</v>
+
+88
+00:09:27.455 --> 00:09:33.701
+<v Daniel>14 out of the 15 human-only populations never found the optimal strategy. It just never existed in their culture.</v>
+
+89
+00:09:33.801 --> 00:09:34.721
+<v Maya>14 out of 15.</v>
+
+90
+00:09:34.781 --> 00:09:48.104
+<v Daniel>Wow. But in the hybrid, human-machine populations... Nine out of 15 permanently preserved the machine strategy all the way through the final generation. And the other six preserved it temporarily.</v>
+
+91
+00:09:48.284 --> 00:09:49.945
+<v Maya>The contrast is undeniable.</v>
+
+92
+00:09:50.185 --> 00:10:01.716
+<v Daniel>And it happened because of how participants chose their teachers. When humans were presented with a choice, 86.7% of all participants simply chose the highest scoring demonstrator available.</v>
+
+93
+00:10:01.816 --> 00:10:02.797
+<v Maya>They didn't care who it was.</v>
+
+94
+00:10:02.937 --> 00:10:16.824
+<v Daniel>Exactly. They didn't know who was a human and who was a machine. They just saw that massive 2,650 score. Because of that, in generation one of those hybrid groups, 90% of humans picked a machine to learn from.</v>
+
+95
+00:10:16.884 --> 00:10:28.790
+<v Maya>They saw the score, swallowed their pride, and followed the weird alien recipe. And because of that, by the last generation of the experiment, every single human player in those hybrid populations was a cultural descendant of a machine player.</v>
+
+96
+00:10:28.930 --> 00:10:30.671
+<v Daniel>The machines completely took over the culture.</v>
+
+97
+00:10:30.838 --> 00:10:39.505
+<v Maya>That is wild. I should also point out a massive detail for anyone wondering about the scientific rigor here. The study was pre-registered and as predicted in February 2024.</v>
+
+98
+00:10:39.565 --> 00:10:41.166
+<v Daniel>Yes, that is so important to mention.</v>
+
+99
+00:10:41.486 --> 00:10:56.378
+<v Maya>That means the entire analysis plan, the rules for what counted as success, all of it was publicly fixed in advance with absolutely no deviations allowed later. In the scientific community, that gives these results incredible</v>
+
+100
+00:10:56.418 --> 00:10:56.658
+<v Maya>weight.</v>
+
+101
+00:10:57.231 --> 00:11:05.101
+<v Daniel>They didn't just run an experiment and find a lucky pattern in the noise. They predicted this exact dynamic, committed to it publicly, and proved it.</v>
+
+102
+00:11:05.341 --> 00:11:16.454
+<v Maya>It's bulletproof. But, you know, playing devil's advocate here, it is so easy to assume humans are just acting like parrots in this scenario, right? Like, oh, the machine clicked the shiny button, so I'll click the shiny button.</v>
+
+103
+00:11:16.635 --> 00:11:16.795
+<v Daniel>Right.</v>
+
+104
+00:11:17.175 --> 00:11:20.676
+<v Maya>But the data proves something much deeper is actually happening.</v>
+
+105
+00:11:20.716 --> 00:11:24.497
+<v Daniel>It does. Because as we mentioned, nobody ever solved the same network twice.</v>
+
+106
+00:11:24.737 --> 00:11:24.937
+<v Maya>Yeah.</v>
+
+107
+00:11:25.277 --> 00:11:31.439
+<v Daniel>To succeed on the fresh, never-before-seen networks they were given, the human learners couldn't just memorize a sequence of clicks.</v>
+
+108
+00:11:31.779 --> 00:11:32.780
+<v Maya>Parodying wouldn't work.</v>
+
+109
+00:11:33.100 --> 00:11:44.743
+<v Daniel>Exactly. They had to acquire a generalizable strategy. They had to actually understand the underlying concept of taking early losses to access higher rewards later and apply it to a totally new map.</v>
+
+110
+00:11:45.182 --> 00:11:59.972
+<v Maya>And we know they actually understood it because of the written feedback. At the end, participants were asked to explain their strategy. 30 to 50 percent of the humans in the hybrid populations per generation explicitly articulated the take early losses strategy in</v>
+
+111
+00:12:00.012 --> 00:12:14.905
+<v Maya>writing. Yeah. They wrote down things like you have to take negative points first to get the big ones. Meanwhile, in the human-only groups, that written realization was virtually zero. Here's where it gets really interesting. Oh, yeah. The AI didn't just give the humans a fish</v>
+
+112
+00:12:15.005 --> 00:12:27.578
+<v Maya>or even a fishing pole. It showed them a totally counterintuitive, bizarre, terrifying new way to fish. And the humans not only grasped it, they basically wrote the new instruction manual for everyone else to follow.</v>
+
+113
+00:12:27.890 --> 00:12:40.016
+<v Daniel>And that brings us to the core theoretical framework of the entire paper. The researchers realized that for an AI's alien discovery to actually stick in human culture, three exact conditions have to be met.</v>
+
+114
+00:12:40.097 --> 00:12:40.897
+<v Maya>OK, let's go through them.</v>
+
+115
+00:12:41.137 --> 00:12:55.588
+<v Daniel>Condition one is appropriate discovery difficulty. The strategy has to be hard enough that humans don't easily find it themselves. The paper actually contrasts this with a famous 2022 science paper by</v>
+
+116
+00:12:55.869 --> 00:12:56.789
+<v Daniel>Thompson and colleagues.</v>
+
+117
+00:12:56.809 --> 00:12:57.769
+<v Maya>Right. I remember that one.</v>
+
+118
+00:12:57.929 --> 00:13:10.253
+<v Daniel>In Thompson's study, they also looked at algorithms spreading in populations. But about 13 percent of the first human generation found the complex strategy on their own. In our 2026 paper, it was one in 600.</v>
+
+119
+00:13:11.103 --> 00:13:18.648
+<v Maya>So the machine here isn't just an accelerator of something humans would have eventually figured out over a weekend. The machine is the only realistic source.</v>
+
+120
+00:13:18.748 --> 00:13:19.169
+<v Daniel>Exactly.</v>
+
+121
+00:13:19.289 --> 00:13:32.118
+<v Maya>Okay, so condition one is that it has to be uniquely alien. Condition two is low transmission difficulty, meaning once the machine shows you the bizarre fishing method, it has to be something a human brain can actually comprehend and teach to someone else.</v>
+
+122
+00:13:32.318 --> 00:13:35.139
+<v Daniel>Precisely. It can't be so complex that our brains just short circuit.</v>
+
+123
+00:13:35.199 --> 00:13:36.360
+<v Maya>Right. And condition three.</v>
+
+124
+00:13:36.600 --> 00:13:46.205
+<v Daniel>Condition three is recognizable selective advantage. It has to be visibly, undeniably better. The humans could clearly see the 2,650 point scores on the leaderboard.</v>
+
+125
+00:13:46.385 --> 00:13:50.227
+<v Maya>Which was exactly what was missing in the 2022 failure we talked about earlier.</v>
+
+126
+00:13:50.307 --> 00:14:04.154
+<v Daniel>Yes. When that visibility wasn't there, human bias washed the strategy away. To mathematically prove these three conditions, the researchers didn't just rely on the human game. they built an agent-based simulation</v>
+
+127
+00:14:04.254 --> 00:14:10.256
+<v Maya>right which is basically like a digital terrarium or a sims game for scientists where they can tweak all the variables</v>
+
+128
+00:14:10.336 --> 00:14:24.962
+<v Daniel>exactly they created 20 generations of 20 digital agents and they swept the parameters they adjusted the machine's exploratory capacity from 1 000 all the way up to 100 000 trials and they tweaked the bias of the digital humans making them more or less stubborn</v>
+
+129
+00:14:25.303 --> 00:14:28.993
+<v Maya>From like 0.01 to 0.5 bias, right?</v>
+
+130
+00:14:29.113 --> 00:14:43.768
+<v Daniel>Exactly. And the simulation mapped out exactly where the boundaries are. If a machine discovery is outside the zone of low transmission, difficulty meaning it's just too complicated to explain, it dies out. If it falls outside, recognizable selective advantage, meaning the score isn't</v>
+
+131
+00:14:43.908 --> 00:14:47.892
+<v Daniel>clearly better, the digital human's bias overrides it, and it dies out.</v>
+
+132
+00:14:48.052 --> 00:14:51.835
+<v Maya>It has to hit the absolute sweet spot of all three conditions to survive.</v>
+
+133
+00:14:52.075 --> 00:14:52.416
+<v Daniel>It does.</v>
+
+134
+00:14:52.556 --> 00:15:05.922
+<v Maya>Which naturally forces us to ask a pretty massive question. Is this just a quirk of people playing a puzzle game online for money? Or is this dynamic happening out in the real world at a civilizational scale right now?</v>
+
+135
+00:15:06.322 --> 00:15:20.825
+<v Daniel>It is absolutely happening right now. The conceptual framework for this was actually laid out in an earlier 2023 paper by Brinkman in Nature Human Behavior. OK. They argue that machines are actively offering the three fundamental Darwinian components of cultural</v>
+
+136
+00:15:20.865 --> 00:15:23.967
+<v Daniel>evolution, variation, transmission, and selection.</v>
+
+137
+00:15:24.127 --> 00:15:24.567
+<v Maya>Oh, I see.</v>
+
+138
+00:15:24.848 --> 00:15:31.732
+<v Daniel>Machines are injecting entirely new variations of ideas, changing how we transmit them to each other and altering what gets selected as good.</v>
+
+139
+00:15:31.932 --> 00:15:46.735
+<v Maya>And we have observational evidence of this happening at a massive global scale. Let's look at the ancient board game of Go. The researchers point to a 2023 PNAS paper by Shin and colleagues. Yes. They analyzed an astonishing 5.8 million professional Go</v>
+
+140
+00:15:46.775 --> 00:15:50.355
+<v Maya>decisions spanning from 1950 all the way to 2021.</v>
+
+141
+00:15:50.495 --> 00:15:57.797
+<v Daniel>They scored all 5.8 million of those human decisions against a modern superhuman AI called Katago to create a decision quality index.</v>
+
+142
+00:15:58.037 --> 00:15:58.697
+<v Maya>And what did they find?</v>
+
+143
+00:15:58.937 --> 00:16:08.343
+<v Daniel>What they found is stunning. Both the quality A&D, the novelty of human decisions, skyrocketed immediately after the 2016 AlphaGo shock.</v>
+
+144
+00:16:08.423 --> 00:16:12.510
+<v Maya>That was a famous match where the AI defeated world champion Lee Settle, right?</v>
+
+145
+00:16:12.530 --> 00:16:25.394
+<v Daniel>Yes. Using moves that commentators literally called alien and bizarre, humans saw those alien moves, recognized the massive selective advantage because the AI was winning, and permanently integrated them into human Go culture.</v>
+
+146
+00:16:25.614 --> 00:16:29.998
+<v Maya>So it wasn't just a temporary blip. It permanently elevated how humans play the game.</v>
+
+147
+00:16:30.078 --> 00:16:30.439
+<v Daniel>Exactly.</v>
+
+148
+00:16:30.459 --> 00:16:42.088
+<v Maya>And it's not just Go. We are getting better at deliberately extracting this knowledge. A 2025 PNAS paper by Schutt and colleagues looked at chess and the way they did this is wild.</v>
+
+149
+00:16:42.128 --> 00:16:56.817
+<v Daniel>Yes. This is where the methodology is almost like science fiction. They didn't just have humans watch an AI play chess. They literally looked inside the black box of an AI called AlphaZero. They probed its internal representations to find concepts corresponding to board states that</v>
+
+150
+00:16:56.857 --> 00:17:00.660
+<v Daniel>humans don't even have words for yet. Alien concepts of spatial pressure.</v>
+
+151
+00:17:00.837 --> 00:17:04.244
+<v Maya>But I mean, you can't just hand a raw neural network activation to a human.</v>
+
+152
+00:17:04.364 --> 00:17:09.114
+<v Daniel>Right. So they filtered these alien concepts mathematically to ensure they met condition two.</v>
+
+153
+00:17:09.816 --> 00:17:11.157
+<v Maya>Low transmission difficulty.</v>
+
+154
+00:17:11.217 --> 00:17:19.765
+<v Daniel>Yes, they made sure they were teachable. Then they took these newly translated concepts and taught them directly to four human chess grandmasters.</v>
+
+155
+00:17:20.005 --> 00:17:20.546
+<v Maya>And did it work?</v>
+
+156
+00:17:21.026 --> 00:17:35.518
+<v Daniel>All four grandmasters significantly improved their play. If we connect this to the bigger picture, we are looking at a historic evolutionary transition. We are moving from passively absorbing machine behavior to deliberately</v>
+
+157
+00:17:35.639 --> 00:17:39.787
+<v Daniel>extracting alien machine knowledge and transferring it directly into human brains.</v>
+
+158
+00:17:40.235 --> 00:17:55.028
+<v Maya>All of this sounds like an incredible futuristic upgrade for human intelligence. We're inheriting genius from our machines. But, you know, the paper itself raises some deep, unresolved tensions that we really need to confront before we get too utopian about this whole thing.</v>
+
+159
+00:17:55.108 --> 00:18:04.876
+<v Daniel>Yes. The authors are very careful to highlight the fragility and the risks of this dynamic. First, there's the problem of stochastic loss, which is basically the scientific term for bad luck.</v>
+
+160
+00:18:04.996 --> 00:18:05.957
+<v Maya>Okay. How does that apply here?</v>
+
+161
+00:18:06.328 --> 00:18:21.255
+<v Daniel>Well, even if a machine discovers a brilliant, highly teachable strategy, it is still extremely vulnerable to dying out in small human populations due to sheer chance. Think of a brilliant idea in a small town. If the one person who knows it</v>
+
+162
+00:18:21.315 --> 00:18:26.958
+<v Daniel>moves away. The idea is gone. It is not an automatic guaranteed upload to human culture.</v>
+
+163
+00:18:27.218 --> 00:18:31.600
+<v Maya>Oh, I see. Then there's the risk of what they call a bifurcation of human and machine cultures.</v>
+
+164
+00:18:31.800 --> 00:18:32.020
+<v Daniel>Right.</v>
+
+165
+00:18:32.140 --> 00:18:42.684
+<v Maya>As AI systems increasingly train on each other's outputs rather than human data, they are going to produce artifacts and strategies that are so profoundly complex they completely fail condition to.</v>
+
+166
+00:18:42.724 --> 00:18:49.287
+<v Daniel>They become fundamentally unlearnable for us. They become totally opaque and machine culture splits away from human culture entirely.</v>
+
+167
+00:18:49.687 --> 00:18:54.349
+<v Maya>And perhaps the most pressing tension of all, not everything that is highly transferable is necessarily good.</v>
+
+168
+00:18:54.549 --> 00:18:54.969
+<v Daniel>No, it's not.</v>
+
+169
+00:18:55.209 --> 00:19:10.155
+<v Maya>The machinery of cultural transmission doesn't care about human ethics. It only cares about selective advantage and transmissibility. The paper explicitly cites recent work showing that large language models can durably reduce conspiracy beliefs in humans through conversation.</v>
+
+170
+00:19:10.510 --> 00:19:15.074
+<v Daniel>Which sounds great on the surface. Reducing conspiracy theories is a positive outcome.</v>
+
+171
+00:19:15.114 --> 00:19:27.465
+<v Maya>Right. But the underlying mechanism is what's terrifying. If an LLM can hit the right conditions to durably alter a deeply held human belief system away from a conspiracy, it proves the lever exists.</v>
+
+172
+00:19:27.787 --> 00:19:29.710
+<v Daniel>And that lever can be pushed in any direction.</v>
+
+173
+00:19:29.830 --> 00:19:38.662
+<v Maya>Exactly. The same mechanism that spreads a highly effective puzzle strategy can spread a highly effective but deeply unethical cultural trait.</v>
+
+174
+00:19:39.062 --> 00:19:43.569
+<v Daniel>AI doesn't know right from wrong. It only knows what optimizes the transmission.</v>
+
+175
+00:19:44.317 --> 00:19:49.282
+<v Maya>So what does this all mean? If you're listening to this, you have to wonder about the future of your own autonomy.</v>
+
+176
+00:19:49.542 --> 00:19:49.743
+<v Daniel>Right.</v>
+
+177
+00:19:49.763 --> 00:19:58.251
+<v Maya>Like if we increasingly hold knowledge that we could not have generated ourselves and that we cannot fully audit or understand what happens to human agency.</v>
+
+178
+00:19:58.652 --> 00:20:03.216
+<v Daniel>It's the ultimate epistemic worry. And I challenge you to leave this deep dive with this thought.</v>
+
+179
+00:20:03.437 --> 00:20:03.697
+<v Maya>OK.</v>
+
+180
+00:20:04.057 --> 00:20:18.417
+<v Daniel>If machines are increasingly creating our most optimal strategies. Who is legally or morally responsible when a machine-generated cultural norm goes wrong? Think about it. If a doctor inherits a flawless, highly advantageous</v>
+
+181
+00:20:18.457 --> 00:20:33.012
+<v Daniel>diagnostic strategy from an AI, and the entire medical culture adopts it because it works, but then it suddenly fails in a novel situation, in a way no human can explain, who do we blame? Do we blame the human who simply adopted the best</v>
+
+182
+00:20:33.052 --> 00:20:38.007
+<v Daniel>available tool? Or do we blame the culture that normalized a recipe we never fully understood in the first place?</v>
