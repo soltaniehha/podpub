@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Aug 2026 06:40:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 07:49:14 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -436,5 +436,24 @@ Reference: Centola, D., &amp; Baronchelli, A. (2015). The spontaneous emergence 
       <pubDate>Thu, 20 Aug 2026 06:19:46 +0000</pubDate>
       <itunes:episode>24</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/024%20-%20When%20Agents%20Become%20A%20Crowd.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>025 - When Turbulence Gets Its ImageNet</title>
+      <description>When Turbulence Gets Its ImageNet (2009–2026)
+
+In this episode we unpack The HydroGym Reinforcement Learning Platform for Fluid Dynamics, a 28 page Nature paper published on 19 August 2026 by Christian Lagemann, Ricardo Vinuesa, Steven L. Brunton and eighteen co-authors spread across the University of Washington, RWTH Aachen, KTH Stockholm, the Technical University of Munich and Inha University. Their argument is that controlling turbulence has been held back less by learning algorithms than by the lack of shared ground: every controller in the literature is hand tuned to one geometry, one operating point and one numerical setup, so results cannot be compared and nothing accumulates. They call it the specificity trap, and their answer is more than sixty validated, openly available flow control environments plus one striking result, a controller that never saw a wing and flies one anyway.
+
+We walk through the benchmark demonstrations that establish the baselines with PPO, DDPG and TD3, over 150,000 GPU hours of them: a fluidic pinball at Reynolds 100 where agents find roughly 90 percent drag reduction through counter rotating cylinders, an open cavity at Reynolds 4,200 where controlled blowing suppresses Kelvin-Helmholtz instability, a circular cylinder at Reynolds 3,900 under a zero net mass flux constraint, and a NACA0012 airfoil riding out a transverse gust with three leading edge jets. We cover gradient enhanced PPO, which backpropagates through a differentiable solver and cuts training iterations by at least 65 percent on chaotic Kolmogorov flow, and the multi agent scheme that splits a three dimensional cylinder into cooperating local actuators sharing one replay buffer. Then the headline: controllers trained only inside a cheap turbulent channel at friction Reynolds number 206 are dropped, with no further training, onto a three dimensional wing section at chord Reynolds number 200,000, cutting local skin friction by 38 percent and total drag by 11 percent while reducing exploration cost by four orders of magnitude, because what the policy learned was near wall momentum transport rather than the shape of the body. We set that against DeepMind's tokamak plasma controller, Kochkov's learned CFD solvers, Suárez and colleagues' earlier multi agent cylinder work, and ImageNet itself, the analogy the authors reach for when they argue this is the substrate a foundation model for flow control would need. We close on what they concede: it is all direct numerical simulation, capped near Reynolds 400,000 against the 10^7 to 10^8 of a real aircraft, and nothing has met a wind tunnel yet.
+
+Reference: Lagemann, C., Mokbel, S., Gondrum, M., Rüttgers, M., Wang, Y., Suárez, P., et al. (2026). The HydroGym reinforcement learning platform for fluid dynamics. Nature. https://doi.org/10.1038/s41586-026-10917-6
+Reference: Degrave, J., Felici, F., Buchli, J., Neunert, M., Tracey, B., Carpanese, F., et al. (2022). Magnetic control of tokamak plasmas through deep reinforcement learning. Nature, 602, 414–419. https://doi.org/10.1038/s41586-021-04301-9
+Reference: Suárez, P., Alcántara-Ávila, F., Miró, A., Rabault, J., Font, B., Lehmkuhl, O., &amp; Vinuesa, R. (2025). Active flow control for drag reduction through multi-agent reinforcement learning on a turbulent cylinder at Re_D = 3900. Flow, Turbulence and Combustion. arXiv:2405.17655. https://arxiv.org/abs/2405.17655
+Reference: Kochkov, D., Smith, J. A., Alieva, A., Wang, Q., Brenner, M. P., &amp; Hoyer, S. (2021). Machine learning accelerated computational fluid dynamics. Proceedings of the National Academy of Sciences, 118(21), e2101784118. https://doi.org/10.1073/pnas.2101784118
+Reference: Brunton, S. L., Noack, B. R., &amp; Koumoutsakos, P. (2020). Machine learning for fluid mechanics. Annual Review of Fluid Mechanics, 52, 477–508. https://doi.org/10.1146/annurev-fluid-010719-060214
+Reference: Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., &amp; Fei-Fei, L. (2009). ImageNet: A large-scale hierarchical image database. In 2009 IEEE Conference on Computer Vision and Pattern Recognition (pp. 248–255). https://doi.org/10.1109/CVPR.2009.5206848</description>
+      <guid isPermaLink="false">bfc7d34763d30afc4b17a5a7de9fe6364febcd59</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/025%20-%20When%20Turbulence%20Gets%20Its%20ImageNet.m4a" length="47977298" type="audio/mp4" />
+      <pubDate>Fri, 21 Aug 2026 07:21:56 +0000</pubDate>
+      <itunes:episode>25</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/025%20-%20When%20Turbulence%20Gets%20Its%20ImageNet.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
