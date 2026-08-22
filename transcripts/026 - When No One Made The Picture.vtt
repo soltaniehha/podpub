@@ -1,0 +1,709 @@
+WEBVTT
+
+1
+00:00:00.091 --> 00:00:04.315
+<v Daniel>You know, you see an AI generated image pop up on your feet. Oh,</v>
+
+2
+00:00:04.335 --> 00:00:05.376
+<v Maya>yeah. All the time.</v>
+
+3
+00:00:05.516 --> 00:00:19.148
+<v Daniel>And maybe it's like this stunningly lifelike portrait or this wildly intricate fantasy landscape that looks like a master oil painting. And if you're like most people these days, you naturally wonder, well, who really made this?</v>
+
+4
+00:00:19.228 --> 00:00:22.091
+<v Maya>Right. Whose art was scraped to generate this exact picture?</v>
+
+5
+00:00:22.291 --> 00:00:31.838
+<v Daniel>Exactly. You expect there to be this clear line, right, like the digital thread you could just pull to trace that output straight back to a specific artist or, you know, photograph in the training data.</v>
+
+6
+00:00:32.298 --> 00:00:46.968
+<v Maya>And I mean, it makes complete sense that we look at it that way. We are totally wired to look for cause and effect. Right. So the intuitive assumption is that if a machine learning model ingested a data set, well, its final outputs just have to be fundamentally anchored to</v>
+
+7
+00:00:47.028 --> 00:00:49.450
+<v Maya>specific individual pieces of that data.</v>
+
+8
+00:00:49.690 --> 00:00:55.495
+<v Daniel>But what if that thread just doesn't exist? Yeah. What if you pull it and there's absolutely nothing attached to the other end?</v>
+
+9
+00:00:55.635 --> 00:00:55.835
+<v Maya>Yeah.</v>
+
+10
+00:00:56.215 --> 00:01:03.521
+<v Daniel>Welcome to today's deep dive. We were looking at a stack of six research papers today, but we really have a clear star of the show.</v>
+
+11
+00:01:03.581 --> 00:01:04.562
+<v Maya>Oh, absolutely we do.</v>
+
+12
+00:01:04.885 --> 00:01:19.493
+<v Daniel>Yeah, we are going on a mission to explore this brand new, just bombshell paper published on August 18th, 2026. It's in Nature Communications. It's by Zeng Dai and David K. Gifford over at MIT CSAIL. And it is</v>
+
+13
+00:01:19.533 --> 00:01:23.635
+<v Daniel>titled, Outputs of Generative Diffusion Models are Often Unattributable.</v>
+
+14
+00:01:24.176 --> 00:01:37.363
+<v Maya>And just to set the table, those other five papers in our stack, they're going to act as our historical foundation. We need them to understand the journey of how scientists have tried and largely struggled to trace AI outputs over the past few years.</v>
+
+15
+00:01:37.423 --> 00:01:38.263
+<v Daniel>Right, the backstory.</v>
+
+16
+00:01:38.343 --> 00:01:47.228
+<v Maya>Yeah, exactly. Setting up that context is going to show you why this new 2026 paper completely breaks our previous understanding of how AI attribution works.</v>
+
+17
+00:01:47.348 --> 00:02:02.043
+<v Daniel>Because the claim that Day and Gifford make in this paper, it completely hooked me. They found that when an AI is trained on enough data, you can delete a single image, a single person, or even an entire single artist from its training set. And the picture it generates does not change at all.</v>
+
+18
+00:02:02.163 --> 00:02:03.004
+<v Maya>Not one bit.</v>
+
+19
+00:02:03.084 --> 00:02:10.051
+<v Daniel>It is not a glitch. It is not like a bug in the code. It's this fundamental physical property of scale that they are calling attribution decay.</v>
+
+20
+00:02:10.380 --> 00:02:20.622
+<v Maya>Yeah, and to really grasp why attribution decay is such a disruptive concept, we first need to look at the mechanics, right? Like, we need to talk about how diffusion models actually construct an image.</v>
+
+21
+00:02:20.782 --> 00:02:35.765
+<v Daniel>And why the scientific community was so sure they could trace these outputs in the first place. Right. So let's start with that baseline. In our stack, we have Ho, Jane, and Abil's 2020 paper on denoising diffusion probabilistic models. These diffusion models, they're the engine behind, well,</v>
+
+22
+00:02:35.965 --> 00:02:37.726
+<v Daniel>all the biggest image generators today. They</v>
+
+23
+00:02:37.806 --> 00:02:37.926
+<v Maya>are.</v>
+
+24
+00:02:38.466 --> 00:02:45.809
+<v Daniel>And I've always heard it described as starting with pure Gaussian noise, basically just absolute visual static and then working backwards.</v>
+
+25
+00:02:46.383 --> 00:03:01.172
+<v Maya>That is basically the core mechanism. The model starts with a canvas of complete static. Then using these massive neural networks, it iteratively removes that noise like step by microscopic step to reveal a coherent image. Wow. Think of it like a</v>
+
+26
+00:03:01.212 --> 00:03:09.638
+<v Maya>sculptor, right? Slowly chipping away at a block of marble. But the sculptor is guided by the statistical distribution of billions of images it saw during training.</v>
+
+27
+00:03:10.059 --> 00:03:21.503
+<v Daniel>And because this entire unnoising process is guided by that training data, researchers just assumed that specific breaststrokes in the final output, they must rely on specific training inputs.</v>
+
+28
+00:03:21.743 --> 00:03:30.285
+<v Maya>Exactly. Which kicked off this massive quest to trace the data. Like back in 2017, Ko and Liang published a paper on influence functions.</v>
+
+29
+00:03:30.486 --> 00:03:30.886
+<v Daniel>Oh, right.</v>
+
+30
+00:03:30.966 --> 00:03:45.913
+<v Maya>Yeah. They introduced this brilliant idea of tracing a black box prediction back to the exact training data that shaped it. The idea was to use some honestly very heavy calculus to see how upweighting one specific training point changes the parameters of the</v>
+
+31
+00:03:45.974 --> 00:03:46.274
+<v Maya>model.</v>
+
+32
+00:03:46.474 --> 00:03:57.182
+<v Daniel>And that quest really continued right up until recently, right? Right. Because Park and colleagues, they tried to scale that exact concept up to modern models in 2023 with a method called TREC.</v>
+
+33
+00:03:57.322 --> 00:04:06.208
+<v Maya>Yep, TREC. They were trying to create a scalable framework to assign a concrete score to each training input, like indicating its exact importance to the final output.</v>
+
+34
+00:04:06.388 --> 00:04:15.117
+<v Daniel>So for years, the whole industry has basically been operating on the assumption that attribution is just a really hard math problem. Like we just needed better calculus to track the data.</v>
+
+35
+00:04:15.137 --> 00:04:16.138
+<v Maya>That was the dream. Yeah.</v>
+
+36
+00:04:16.398 --> 00:04:31.387
+<v Daniel>OK, well, let's unpack this. If those older papers from Koh, Liang and Park proved we could theoretically trace data using math. Why do Dye and Gifford come out in 2026 and claim it's physically impossible at scale? I mean, did those older papers just</v>
+
+37
+00:04:31.407 --> 00:04:32.208
+<v Daniel>get the math wrong?</v>
+
+38
+00:04:32.288 --> 00:04:46.866
+<v Maya>Well, no, the math wasn't wrong, but the testing methodology was deeply, deeply flawed. Dye and Gifford bring a very specific structural charge against that past work. They point out that those older methods were never actually evaluated against a</v>
+
+39
+00:04:46.966 --> 00:04:48.688
+<v Maya>strict leave one out benchmark.</v>
+
+40
+00:04:48.728 --> 00:05:01.441
+<v Daniel>Leave one out, meaning they did all this complex calculus to estimate influence, but they never actually tested what happens if you just physically delete the image from the data set. Right. Just delete it, retrain the model, and see if the output actually changes.</v>
+
+41
+00:05:01.728 --> 00:05:14.225
+<v Maya>That is the crucial missing piece. The field just kept producing these highly promising mathematical attribution methods. But in reality, actual physical attribution was quietly becoming impossible as these data sets grew.</v>
+
+42
+00:05:14.948 --> 00:05:22.914
+<v Daniel>Which brings us to a massive logistical problem. Because if Dye and Gifford claim older methods fail the leave one out test, how on earth did they test it?</v>
+
+43
+00:05:23.094 --> 00:05:24.115
+<v Maya>It's a great question.</v>
+
+44
+00:05:24.375 --> 00:05:35.863
+<v Daniel>I mean, if you have a data set of a million images retraining a massive AI model from scratch a million times to test every single omitted image, that sounds literally impossible.</v>
+
+45
+00:05:36.243 --> 00:05:47.891
+<v Maya>Oh, it would take centuries of compute time. It is a complete logistical nightmare. So to solve this, they actually stepped out of computer science for a moment and borrowed a framework from philosophy.</v>
+
+46
+00:05:48.112 --> 00:05:48.832
+<v Daniel>Wait, philosophy?</v>
+
+47
+00:05:48.852 --> 00:06:03.622
+<v Maya>Yeah. Back in 1973, the philosopher David Lewis wrote an incredibly influential account of causal counterfactuals. Basically, his account of causation says that a sample is only attributable to a unit of training data if</v>
+
+48
+00:06:03.782 --> 00:06:07.445
+<v Maya>all else being equal, omitting that unit would have produced a different image.</v>
+
+49
+00:06:07.716 --> 00:06:12.897
+<v Daniel>OK, I want to make sure I really understand this, because earlier I was thinking about this like baking a chocolate cake.</v>
+
+50
+00:06:12.957 --> 00:06:13.637
+<v Maya>OK, let's hear it.</v>
+
+51
+00:06:14.037 --> 00:06:28.921
+<v Daniel>If you bake a massive cake with a million grains of sugar and you take out one specific grain before you mix the batter, the cake tastes exactly the same. But that analogy feels a bit flawed here because sugar doesn't have unique information and every grain is the same. But images</v>
+
+52
+00:06:28.981 --> 00:06:30.801
+<v Daniel>in a data set, they're totally unique.</v>
+
+53
+00:06:31.281 --> 00:06:34.002
+<v Maya>Yeah, that is a really great distinction to draw.</v>
+
+54
+00:06:34.703 --> 00:06:42.189
+<v Daniel>Let me try a different analogy then. What if it's more like a massive choir of a million people and they're all singing the exact same chord?</v>
+
+55
+00:06:42.669 --> 00:06:43.430
+<v Maya>Oh, I like this.</v>
+
+56
+00:06:43.750 --> 00:06:48.934
+<v Daniel>If one person stops singing, the overall sound doesn't change at all, right? The chord is still there.</v>
+
+57
+00:06:49.215 --> 00:07:02.245
+<v Maya>That is a much better way to conceptualize it. The key here is redundancy. If a million people are singing, the information, like the note itself, is redundantly encoded by the entire choir. Removing one voice doesn't remove the note.</v>
+
+58
+00:07:02.719 --> 00:07:03.560
+<v Daniel>That makes total sense.</v>
+
+59
+00:07:03.900 --> 00:07:08.385
+<v Maya>And Dye and Gifford take this concept and apply it to what they call the counterfactual universe.</v>
+
+60
+00:07:08.485 --> 00:07:11.308
+<v Daniel>The counterfactual universe. That sounds like a Marvel movie.</v>
+
+61
+00:07:11.608 --> 00:07:23.740
+<v Maya>It kind of does. But for every single image the model generates, there is an alternate counterfactual universe consisting of all the images the model would have made had one specific unit of data been withheld.</v>
+
+62
+00:07:24.230 --> 00:07:30.473
+<v Daniel>Okay, so they are basically looking for the difference between the actual image we see and the image in the counterfactual universe.</v>
+
+63
+00:07:30.834 --> 00:07:36.357
+<v Maya>Exactly. And they measure this difference using a metric they call the counterfactual radius or CR.</v>
+
+64
+00:07:36.597 --> 00:07:37.557
+<v Daniel>Counterfactual radius.</v>
+
+65
+00:07:37.577 --> 00:07:47.683
+<v Maya>Yeah. It is the largest distance both geometrically in terms of pixels and semantically in terms of meaning between the real image and any image in that alternate universe.</v>
+
+66
+00:07:48.001 --> 00:07:55.011
+<v Daniel>So a large radius means the omitted image was structurally vital, like the output changed completely without</v>
+
+67
+00:07:55.051 --> 00:08:00.278
+<v Maya>it. Yes. And a small radius means nothing in the training set made a difference. The image didn't change at all.</v>
+
+68
+00:08:00.478 --> 00:08:13.169
+<v Daniel>But wait, we are still stuck on that compute problem. Measuring this honestly still requires retraining the model from scratch for every single omission just so you can look at that alternate universe. How do they get around that massive bottleneck?</v>
+
+69
+00:08:13.189 --> 00:08:21.899
+<v Maya>That is where their workaround comes in. It's really the major technical contribution of the paper. They designed a new architecture called the diffusion ensemble. The</v>
+
+70
+00:08:21.959 --> 00:08:22.839
+<v Daniel>diffusion ensemble.</v>
+
+71
+00:08:23.099 --> 00:08:32.464
+<v Maya>Right. Instead of training one monolithic giant model, they trained a series of independent components and then combined them by arithmetic averaging.</v>
+
+72
+00:08:32.764 --> 00:08:41.908
+<v Daniel>Oh, wow. So if you want to see what happens when you remove an image, you don't have to retrain the whole thing. You just delete the specific components of the ensemble that were trained on that image.</v>
+
+73
+00:08:42.148 --> 00:08:48.110
+<v Maya>Exactly. You just delete them, average the remaining ones together, and boom, you instantly have your counterfactual model.</v>
+
+74
+00:08:48.271 --> 00:08:49.331
+<v Daniel>It is incredibly clever.</v>
+
+75
+00:08:49.471 --> 00:09:04.317
+<v Maya>It is. But even with ensembles, you still need an efficient way to assign the data so you can test as many combinations as possible. So to do this, they used a binary code assignment leaning on a mathematical principle from 1928 called Sperner's Theorem.</v>
+
+76
+00:09:04.785 --> 00:09:09.528
+<v Daniel>Okay, I am definitely going to need you to break down Sperner's theorem for me because that just sounds intimidating.</v>
+
+77
+00:09:09.568 --> 00:09:24.396
+<v Maya>I promise it sounds way worse than it is. Imagine you have a team of 10 people, okay? Okay. If you just look at them one by one, that's 10 options. But if you look at every possible unique committee or overlapping subgroup you can make out of those 10</v>
+
+78
+00:09:24.456 --> 00:09:24.716
+<v Maya>people.</v>
+
+79
+00:09:24.796 --> 00:09:26.897
+<v Daniel>Oh, right. Suddenly you have hundreds of options. Yeah.</v>
+
+80
+00:09:27.137 --> 00:09:41.451
+<v Maya>Exactly. Sperner's theorem is essentially a rule that tells you exactly how to maximize the number of unique overlapping groups you can pull from a set. Wow. By applying this math to the training data, they extracted an exponential number of</v>
+
+81
+00:09:41.551 --> 00:09:47.637
+<v Maya>counterfactual combinations out of a fixed number of trained components, rather than just a linear number.</v>
+
+82
+00:09:48.235 --> 00:09:55.459
+<v Daniel>So they basically built this highly efficient machine to just peek into the counterfactual universe without melting down a supercomputer.</v>
+
+83
+00:09:55.559 --> 00:09:56.179
+<v Maya>Pretty much, yeah.</v>
+
+84
+00:09:56.239 --> 00:10:01.442
+<v Daniel>But does an ensemble model actually generate good images? Like, is it a fair test?</v>
+
+85
+00:10:01.829 --> 00:10:16.758
+<v Maya>Oh, they rigorously check that. These ensembles are real generative models. They measure their fresh at inception distance, or FID, which is, you know, the standard metric for image quality in the industry. And they found they are highly comparable to ordinary monolithic</v>
+
+86
+00:10:16.818 --> 00:10:17.658
+<v Maya>diffusion models.</v>
+
+87
+00:10:18.039 --> 00:10:25.163
+<v Daniel>Okay, so the machinery works. Here's where it gets really interesting for you listening. What happens when they turn this machine on and actually look at the data?</v>
+
+88
+00:10:25.455 --> 00:10:33.317
+<v Maya>Well, the scope of their experiment is massive. They trained 24 of these diffusion ensembles across seven different well-known image distributions.</v>
+
+89
+00:10:33.777 --> 00:10:34.277
+<v Daniel>Like which ones?</v>
+
+90
+00:10:34.577 --> 00:10:45.759
+<v Maya>We are talking MNIST, Fashion MNIST, CIFAR-10, CIFAR-100, Celeba, Metfaces, and Artbench. And they varied the training sizes dramatically from just 256 images all the way up to 162,770 images.</v>
+
+91
+00:10:49.846 --> 00:10:59.311
+<v Daniel>And the central finding is just a hard mathematical reality, attribution decay. They found that the counterfactual radius falls as an inverse power law in relation to the training set size.</v>
+
+92
+00:10:59.411 --> 00:11:07.695
+<v Maya>Yes. And the statistical fit on that is incredibly tight. They fitted this in an R squared of 0.85 geometric and 0.59 semantic.</v>
+
+93
+00:11:07.855 --> 00:11:12.337
+<v Daniel>For those of us who aren't statisticians, what does that R squared value actually mean in practical terms?</v>
+
+94
+00:11:12.661 --> 00:11:21.747
+<v Maya>It's basically a statistical way of saying the relationship is incredibly strong and predictable. As the volume of training data goes up, the line on the graph measuring attributability points straight down.</v>
+
+95
+00:11:21.947 --> 00:11:22.587
+<v Daniel>It just plummets.</v>
+
+96
+00:11:22.767 --> 00:11:29.431
+<v Maya>It plummets. It means that as you add more data, the ability to trace an output to a specific input physically dissolves.</v>
+
+97
+00:11:29.811 --> 00:11:44.712
+<v Daniel>I want to paint a picture of Figure 5 from their paper for you because it makes this abstract math so visceral. First, they looked at generating a face using a small data set. It was just 1,336 historical artworks from Met Faces. A</v>
+
+98
+00:11:44.732 --> 00:11:44.932
+<v Maya>pretty</v>
+
+99
+00:11:44.992 --> 00:11:45.272
+<v Daniel>small</v>
+
+100
+00:11:45.332 --> 00:11:45.632
+<v Maya>pool.</v>
+
+101
+00:11:45.813 --> 00:11:57.721
+<v Daniel>Right. And the model generates a nice portrait. Then, they take the 15th century artist Robert Campin and they remove him entirely from the training data. The result? The generated face visibly and obviously changes.</v>
+
+102
+00:11:58.001 --> 00:11:58.281
+<v Maya>Right.</v>
+
+103
+00:11:58.481 --> 00:12:03.905
+<v Daniel>At that small scale, Robert Campin's presence really mattered. His voice in the choir was necessary.</v>
+
+104
+00:12:04.285 --> 00:12:05.305
+<v Maya>But then they scale up.</v>
+
+105
+00:12:05.385 --> 00:12:17.209
+<v Daniel>Yes. Then they go to a data set of 50,000 artworks from Artbench. The model generates a landscape. They remove the artist Thomas Jones completely. And the landscape the model generates is essentially untouched.</v>
+
+106
+00:12:17.449 --> 00:12:17.989
+<v Maya>Unchanged.</v>
+
+107
+00:12:18.009 --> 00:12:25.812
+<v Daniel>It is identical. At 50,000 images, the redundancy completely takes over, and Thomas Jones' contribution just vanishes into the aggregate.</v>
+
+108
+00:12:25.912 --> 00:12:37.902
+<v Maya>And the decay holds true across every variable they tested. It doesn't matter if the omitted unit is a single image, a single person, or an entire single artist. The statistical significance is just staggering.</v>
+
+109
+00:12:37.922 --> 00:12:38.563
+<v Daniel>Give us the numbers.</v>
+
+110
+00:12:39.003 --> 00:12:49.915
+<v Maya>On a one-sided Mann-Whitney U-test, the p-values are below 1e4 for removing a single image. Below 1E33 for a person and below 1E22 for an artist.</v>
+
+111
+00:12:49.995 --> 00:12:51.978
+<v Daniel>I mean, those numbers are astronomically small.</v>
+
+112
+00:12:52.079 --> 00:13:00.952
+<v Maya>They really are. And the researchers were so incredibly thorough, they anticipated critics might say, well, maybe this is just an artifact of your fancy new ensemble trick.</v>
+
+113
+00:13:01.072 --> 00:13:03.414
+<v Daniel>Right. Like maybe it's just a quirk of the way they built the model.</v>
+
+114
+00:13:03.554 --> 00:13:15.865
+<v Maya>Exactly. So they brute forced it. They actually spent the compute to train 1,282 full traditional leave one out diffusion models on the MES data set. And the exact same decay held true.</v>
+
+115
+00:13:16.105 --> 00:13:30.766
+<v Daniel>So scale just flat out destroys attribution. And the absolute nail in the coffin for me was their finding on the binarized version of the MAS data set. They found 14 out of 3,731 samples had a counterfactual radius of exactly</v>
+
+116
+00:13:30.806 --> 00:13:31.147
+<v Daniel>zero.</v>
+
+117
+00:13:31.187 --> 00:13:32.749
+<v Maya>Exactly zero. That is huge.</v>
+
+118
+00:13:32.970 --> 00:13:40.875
+<v Daniel>That means completely provably unattributable images exist in the wild. If you remove the data, the final generated image does not change by a single pixel.</v>
+
+119
+00:13:41.015 --> 00:13:41.816
+<v Maya>Not one pixel.</v>
+
+120
+00:13:41.996 --> 00:13:52.163
+<v Daniel>But wait, doesn't that completely break the way the tech industry handles attribution right now? Because everyone right now uses those nearest neighbor similarity methods.</v>
+
+121
+00:13:52.303 --> 00:13:53.004
+<v Maya>Yeah, they do.</v>
+
+122
+00:13:53.024 --> 00:14:00.849
+<v Daniel>Like you generate an image, you scan the training data for the closest visual match, and you say, aha, the AI copied this specific photo.</v>
+
+123
+00:14:00.949 --> 00:14:12.254
+<v Maya>Well, Dai and Gifford proved that the nearest neighbor method is fundamentally broken at scale. As data grows, that similarity method climbs toward an 80 to 100% false attribution rate.</v>
+
+124
+00:14:12.274 --> 00:14:12.995
+<v Daniel>80 to 100% false?</v>
+
+125
+00:14:13.155 --> 00:14:24.760
+<v Maya>Yeah. You are pointing at a training image and saying the AI copied this, when in reality, the math proves that specific image had absolutely zero causal impact on the output. It just happens to look similar.</v>
+
+126
+00:14:25.080 --> 00:14:37.209
+<v Daniel>OK, I have to push back here, because this creates a genuine tension with the rest of our stack of sources today. I hear you saying attribution dissolves at scale due to redundancy, but what about the viral stories we've all seen in the news?</v>
+
+127
+00:14:37.670 --> 00:14:39.051
+<v Maya>Ah, the memorization stories.</v>
+
+128
+00:14:39.431 --> 00:14:54.196
+<v Daniel>Yeah. I'm looking at Carlini and colleagues from 2023. They literally extracted over a thousand memorized training images right out of stable diffusion and Imogen. We're talking highly identifiable photographs of real</v>
+
+129
+00:14:54.236 --> 00:14:56.177
+<v Daniel>people and trademarked logos.</v>
+
+130
+00:14:56.457 --> 00:14:58.458
+<v Maya>It is a totally valid pushback. I'll give you that.</v>
+
+131
+00:14:58.638 --> 00:15:13.501
+<v Daniel>And there's more, too. Sumpally's 2023 paper, the one titled Diffusion Art or Digital Forgery, showed stable diffusion blatantly copying and recombining images from the LION training data set. I mean, don't these real-world examples of copying totally</v>
+
+132
+00:15:13.541 --> 00:15:15.682
+<v Daniel>contradict everything Dye and Gifford are saying tonight?</v>
+
+133
+00:15:15.862 --> 00:15:30.090
+<v Maya>It seems like a glaring contradiction, I know. But it actually comes down to what we are measuring here. Dye and Gifford are studying the aggregate behavior of these models. They are looking at leave-one-out attribution as a fundamental structural property of the physics of the model.</v>
+
+134
+00:15:30.650 --> 00:15:36.053
+<v Maya>Memorization, like the kind Carlini found with those logos, is what statisticians call a tail event.</v>
+
+135
+00:15:36.073 --> 00:15:37.174
+<v Daniel>That's an extreme outlier.</v>
+
+136
+00:15:37.534 --> 00:15:52.279
+<v Maya>Yes, it is incredibly rare. It happens at a rate of roughly one in a million. Even Dye and Gifford concede in their own discussion that, sure, a determined user could sit there and keep sampling over and over until a rare, memorized,</v>
+
+137
+00:15:52.479 --> 00:15:55.120
+<v Maya>highly attributable image finally appears.</v>
+
+138
+00:15:55.983 --> 00:16:04.328
+<v Daniel>But pointing out a one in a million glitch doesn't change the fact that the vast, vast majority of the model's outputs are structurally unattributable.</v>
+
+139
+00:16:04.569 --> 00:16:05.189
+<v Maya>Exactly.</v>
+
+140
+00:16:05.449 --> 00:16:20.139
+<v Daniel>And digging deeper into our sources, there is actually this hidden alignment here that completely blew my mind. When you read Simpali's 2023 paper closely, the one about digital forgery, they actually found that replication rates, like the amount of direct copying going on, they</v>
+
+141
+00:16:20.299 --> 00:16:21.840
+<v Daniel>fall as training sets grow.</v>
+
+142
+00:16:22.041 --> 00:16:24.702
+<v Maya>which perfectly aligns with Diane Gifford's attribution decay.</v>
+
+143
+00:16:24.802 --> 00:16:25.622
+<v Daniel>It perfectly aligns.</v>
+
+144
+00:16:25.822 --> 00:16:40.668
+<v Maya>It really does. As the data set scales up, the model learns the underlying concepts, like what a dog looks like or what a sunset looks like, rather than relying on specific rote memories of individual photos. The concept becomes so redundantly encoded that no single photo matters anymore. And</v>
+
+145
+00:16:40.688 --> 00:16:47.576
+<v Maya>this actually brings us to a really fascinating, almost paradoxical conjecture that Dai and Gifford make about deduplication.</v>
+
+146
+00:16:47.676 --> 00:17:00.210
+<v Daniel>Oh, let's talk about deduplication, because this is the practice of removing duplicate or highly similar images from your training data, right? And the tech industry usually recommends it as the best way to reduce memorization and copying.</v>
+
+147
+00:17:00.438 --> 00:17:07.025
+<v Maya>Right, but Diane Gifford point out that deduplication might actually be one of the only things that makes attribution easier again.</v>
+
+148
+00:17:07.345 --> 00:17:11.409
+<v Daniel>Wait, how does removing data make it easier to trace? That feels backward.</v>
+
+149
+00:17:11.792 --> 00:17:24.664
+<v Maya>Because we have to remember why attribution decay happens in the first place, which is redundancy. If a model learns from 10 million slightly different pictures of a stop sign, removing one picture of a stop sign won't change the output.</v>
+
+150
+00:17:24.844 --> 00:17:25.985
+<v Daniel>Right. The quire is too big.</v>
+
+151
+00:17:26.125 --> 00:17:36.055
+<v Maya>Exactly. But if you aggressively deduplicate the data set, you remove that redundancy. You thin out the quire. Suddenly, individual images might carry causal weight again.</v>
+
+152
+00:17:36.443 --> 00:17:44.690
+<v Daniel>That is wild. The very thing companies do to stop the AI from copying might be the thing that actually allows us to prove they used our data.</v>
+
+153
+00:17:45.110 --> 00:17:53.677
+<v Maya>Yeah. But ultimately, Diane Gifford make a critical distinction here. An absence of copying is not the same thing as an absence of attribution.</v>
+
+154
+00:17:53.937 --> 00:17:54.377
+<v Daniel>What do you mean?</v>
+
+155
+00:17:54.798 --> 00:18:05.306
+<v Maya>Well, a model can generate a completely novel image that doesn't look like anything in the data set. But because of the scale, that novel image is still fundamentally unattributable to any specific creator.</v>
+
+156
+00:18:05.795 --> 00:18:20.790
+<v Daniel>Okay, so what does this all mean for you and me? Like, imagine you are an artist or photographer and you see an AI image that clearly mimics your style. Having proved that attribution physically, mathematically decays at scale, we really have to look</v>
+
+157
+00:18:20.810 --> 00:18:23.953
+<v Daniel>at the real world stakes here. Because they are massive.</v>
+
+158
+00:18:24.317 --> 00:18:34.327
+<v Maya>The stakes are deeply, deeply legal and ethical. Dye and Gifford state plainly in their conclusion that this structural unattributability provides what they call a refutation of access.</v>
+
+159
+00:18:34.467 --> 00:18:37.450
+<v Daniel>A refutation of access. What does that actually mean in a courtroom?</v>
+
+160
+00:18:37.710 --> 00:18:49.141
+<v Maya>In copyright law, proving infringement usually requires proving that the model had access to and fundamentally relied upon the copyrighted work to produce the infringing image. You have to prove causality.</v>
+
+161
+00:18:49.521 --> 00:19:04.109
+<v Daniel>But the paper just proved causality disappears. Diane Giffords showed that attributability decays at around ten to the power of four or ten to the power of five images. Today's commercial models, they are training on billions of images.</v>
+
+162
+00:19:04.209 --> 00:19:05.610
+<v Maya>Right. Ten to the power of nine.</v>
+
+163
+00:19:05.870 --> 00:19:20.839
+<v Daniel>they're operating so far past the threshold of attribution decay that they may be structurally immune to the attribution that copyright infringement claims depend on. Like, you can't successfully sue for infringement if an MIT scientist can prove the model</v>
+
+164
+00:19:20.859 --> 00:19:24.981
+<v Daniel>would have generated the exact same image, even if your art was never in the data set.</v>
+
+165
+00:19:25.242 --> 00:19:38.452
+<v Maya>It's a huge legal shield. But we have to sit with the incredible tension here because this exact same property cuts the other way. It is a total double-edged sword. If scale destroys attribution, it also fundamentally preserves privacy.</v>
+
+166
+00:19:38.572 --> 00:19:39.673
+<v Daniel>No, the privacy flip side.</v>
+
+167
+00:19:39.813 --> 00:19:52.042
+<v Maya>Exactly. Think about medical data or personal photos. Because generated pictures of people are causally independent of the real people in the training data, scaling up these models perfectly preserves the privacy of the individuals in the data set.</v>
+
+168
+00:19:52.354 --> 00:19:58.816
+<v Daniel>Because the model isn't leaking their identity. Their specific image has absolutely no causal bearing on the output.</v>
+
+169
+00:19:59.056 --> 00:20:09.320
+<v Maya>Right. The scale of the choir masks the individual voice. Scale preserves privacy at the exact same time that it completely dissolves credit to artists.</v>
+
+170
+00:20:10.102 --> 00:20:23.749
+<v Daniel>It is this profound structural trade-off. We gain the ability to build massive private systems that don't leak our personal data, but we lose the ability to give credit to the millions of human creators who built the foundation.</v>
+
+171
+00:20:24.249 --> 00:20:39.157
+<v Maya>It forces us to entirely rethink how we interact with and govern these systems. If we can't trace a line back to a single image or a single artist, All our current frameworks for copyright and compensation are trying to solve a problem that the basic physics of the model has already rendered</v>
+
+172
+00:20:39.238 --> 00:20:39.698
+<v Maya>obsolete.</v>
+
+173
+00:20:39.858 --> 00:20:54.848
+<v Daniel>It really leaves you spinning. Thank you for joining us on this deep dive into the muddy, frankly, decaying waters of AI attribution. We started by asking what happens when you pull that digital thread connecting an AI image to its source. And we found out that at a certain scale, the thread just dissolves</v>
+
+174
+00:20:54.888 --> 00:20:55.448
+<v Daniel>in your hands. It</v>
+
+175
+00:20:55.489 --> 00:20:56.089
+<v Maya>just vanishes.</v>
+
+176
+00:20:56.209 --> 00:21:11.183
+<v Daniel>Which leaves us with one final lingering question to mull over tonight. If the math proves that attribution to individual images, individual people, and individual artists is physically dissolving at scale, what course or unit could credit or liability possibly attach to?</v>
+
+177
+00:21:12.345 --> 00:21:17.457
+<v Daniel>When you look at a generated masterpiece on your feet tomorrow morning, who is left to answer for a picture that no one in particular made?</v>

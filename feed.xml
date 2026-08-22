@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 07:49:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 07:28:18 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -455,5 +455,24 @@ Reference: Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., &amp; Fei-Fei, L. 
       <pubDate>Fri, 21 Aug 2026 07:21:56 +0000</pubDate>
       <itunes:episode>25</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/025%20-%20When%20Turbulence%20Gets%20Its%20ImageNet.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>026 - When No One Made The Picture</title>
+      <description>Outputs of Generative Diffusion Models Are Often Unattributable (August 2026)
+
+In this episode we unpack a Nature Communications paper published on 18 August 2026 by Zheng Dai and David K. Gifford of MIT's Computer Science and Artificial Intelligence Laboratory. Their claim is unusually clean and unusually uncomfortable: once a diffusion model is trained on enough data, you can delete any single image, any single person, or any single artist from its training set and the picture it generates does not change. There is no unit of training data left to hold responsible. The authors call this attribution decay, and they argue it is a property of scale itself rather than a shortcoming of any particular attribution method, which means the entire project of tracing a generated image back to the work it learned from may be running out of road exactly as the models get big enough to matter.
+
+We walk through how they measure something that normally cannot be measured. Attribution here is causal and counterfactual, in David Lewis's sense: an image is attributable to a training example if omitting that example would have produced a different image. Every generated image has a counterfactual universe, and the Counterfactual Radius is the furthest that universe strays from the real thing. Testing that honestly would need a model retrained for every possible omission, so Dai and Gifford build the diffusion ensemble, independently trained components combined by arithmetic averaging, where removing a training example means deleting components rather than retraining, with Sperner's 1928 theorem supplying the code that makes the number of reachable counterfactuals exponential instead of linear. Across 24 ensembles on MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100, CelebA, MetFaces and ArtBench, the radius falls as an inverse power law in training set size, and it holds whether the unit is an image, a person or an artist. They rule out the obvious objections by fixing prompts, class labels, omitted proportion and training epochs, and by brute-force training 1,282 genuine leave-one-out models; on binarized MNIST they find images with a radius of exactly zero, provably attributable to nothing at all. Meanwhile the nearest-neighbour similarity matching that everyone actually uses gets less reliable as data grows, with false attribution rates climbing toward 80 to 100 percent. We set this against Carlini and colleagues, who pulled over a thousand memorized images straight out of Stable Diffusion and Imagen, and Somepalli and colleagues, who caught the same model copying its training art outright, and we work out why those findings and this one are both true. We close where the authors do, on the fact that unattributability amounts to a refutation of access, one of the elements a copyright claim is built from, and on the strange symmetry that the same property protecting a model from having to credit an artist is what protects a stranger's face from ever really being in the picture.
+
+Reference: Dai, Z., &amp; Gifford, D. K. (2026). Outputs of generative diffusion models are often unattributable. Nature Communications, 17, 6974. https://doi.org/10.1038/s41467-026-75667-5
+Reference: Ho, J., Jain, A., &amp; Abbeel, P. (2020). Denoising diffusion probabilistic models. Advances in Neural Information Processing Systems, 33, 6840–6851. arXiv:2006.11239. https://arxiv.org/abs/2006.11239
+Reference: Koh, P. W., &amp; Liang, P. (2017). Understanding black-box predictions via influence functions. In Proceedings of the 34th International Conference on Machine Learning (pp. 1885–1894). arXiv:1703.04730. https://arxiv.org/abs/1703.04730
+Reference: Park, S. M., Georgiev, K., Ilyas, A., Leclerc, G., &amp; Madry, A. (2023). TRAK: Attributing model behavior at scale. In Proceedings of the 40th International Conference on Machine Learning (pp. 27074–27113). arXiv:2303.14186. https://arxiv.org/abs/2303.14186
+Reference: Carlini, N., Hayes, J., Nasr, M., Jagielski, M., Sehwag, V., Tramèr, F., Balle, B., Ippolito, D., &amp; Wallace, E. (2023). Extracting training data from diffusion models. In 32nd USENIX Security Symposium (pp. 5253–5270). arXiv:2301.13188. https://arxiv.org/abs/2301.13188
+Reference: Somepalli, G., Singla, V., Goldblum, M., Geiping, J., &amp; Goldstein, T. (2023). Diffusion art or digital forgery? Investigating data replication in diffusion models. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 6048–6058). arXiv:2212.03860. https://arxiv.org/abs/2212.03860</description>
+      <guid isPermaLink="false">08a3fd5791a4608c425fdf248f05c6e5e11763b3</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/026%20-%20When%20No%20One%20Made%20The%20Picture.m4a" length="41135715" type="audio/mp4" />
+      <pubDate>Sat, 22 Aug 2026 06:18:41 +0000</pubDate>
+      <itunes:episode>26</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/026%20-%20When%20No%20One%20Made%20The%20Picture.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
