@@ -2,19 +2,19 @@ WEBVTT
 
 1
 00:00:00.031 --> 00:00:14.400
-<v Mohammad>why don't you just use the chat GPT app or cloud app on your phone? They can translate. Yeah, maybe for one turn or maybe two turns and it's gonna break. You're gonna say, how are you doing? And it's gonna answer you instead of translating halfway through. It does happen.</v>
+<v Mohammad>why don't you just use the ChatGPT app or Claude app on your phone? They can translate. Yeah, maybe for one turn or maybe two turns and it's gonna break. You're gonna say, how are you doing? And it's gonna answer you instead of translating halfway through. It does happen.</v>
 
 2
 00:00:14.861 --> 00:00:18.843
-<v Mohammad>Welcome to ODSC's AIX podcast. This episode is</v>
+<v Mohammad>Welcome to ODSC's AI X podcast. This episode is</v>
 
 3
 00:00:18.863 --> 00:00:33.293
-<v Gerry>sponsored by ODSCAI West, the premier AI builders conference coming up this October 27th to 29th in San Francisco and virtually. Learn more at odsc.ai slash west and use the code</v>
+<v Gerry>sponsored by ODSC AI West, the premier AI builders conference coming up this October 27th to 29th in San Francisco and virtually. Learn more at odsc.ai slash west and use the code</v>
 
 4
 00:00:33.333 --> 00:00:48.323
-<v Gerry>podcast for an exclusive 10% discount. All right. Hi, everybody. Welcome to the ODSC AIX podcast. I'm Jerry Wolf. I am guest hosting today, and I'm quite excited to do this. I'm quite</v>
+<v Gerry>podcast for an exclusive 10% discount. All right. Hi, everybody. Welcome to the ODSC AI X podcast. I'm Gerry Wolfe. I am guest hosting today, and I'm quite excited to do this. I'm quite</v>
 
 5
 00:00:48.363 --> 00:01:03.294
@@ -22,7 +22,7 @@ WEBVTT
 
 6
 00:01:03.334 --> 00:01:18.187
-<v Gerry>each other a little bit and we've stayed in touch and we're going to have a really cool conversation. I'm excited to introduce Mohamed Sultanea and he's quite an awesome guy. So with that said, I'm going to say, hi Mohamed, how are you? What's going on?</v>
+<v Gerry>each other a little bit and we've stayed in touch and we're going to have a really cool conversation. I'm excited to introduce Mohammad Soltaniehha and he's quite an awesome guy. So with that said, I'm going to say, hi Mohammad, how are you? What's going on?</v>
 
 7
 00:01:18.247 --> 00:01:19.648
@@ -30,7 +30,7 @@ WEBVTT
 
 8
 00:01:20.092 --> 00:01:24.834
-<v Mohammad>Hey Jerry, so good to see you and thank you for the invite and thank you for having me in the podcast.</v>
+<v Mohammad>Hey Gerry, so good to see you and thank you for the invite and thank you for having me in the podcast.</v>
 
 9
 00:01:25.094 --> 00:01:38.238
@@ -326,7 +326,7 @@ WEBVTT
 
 82
 00:16:59.600 --> 00:17:14.546
-<v Mohammad>cloud code agents to work on the issues I found that day. And I am the evaluator as well. It has to work for me and also for the opposite side as well. It was very important for me to understand informally without surveying the user. How was</v>
+<v Mohammad>Claude Code agents to work on the issues I found that day. And I am the evaluator as well. It has to work for me and also for the opposite side as well. It was very important for me to understand informally without surveying the user. How was</v>
 
 83
 00:17:14.566 --> 00:17:29.351
@@ -430,7 +430,7 @@ WEBVTT
 
 108
 00:22:42.027 --> 00:22:56.918
-<v Mohammad>Jerry, how are you doing? And then it will respond back, my name is not Jerry, but I'm doing well. I'm like, no, your job is to translate. Right. So I started, even it had the prompt, it would make those mistakes.</v>
+<v Mohammad>Gerry, how are you doing? And then it will respond back, my name is not Gerry, but I'm doing well. I'm like, no, your job is to translate. Right. So I started, even it had the prompt, it would make those mistakes.</v>
 
 109
 00:22:56.938 --> 00:23:11.816
@@ -478,7 +478,7 @@ you know,
 
 120
 00:25:01.860 --> 00:25:16.711
-<v Mohammad>what I've tried here is what I wanted to have. If such an app existed today, I wouldn't have gone out of my way to create it. One might say, okay, why don't you just use the ChatGPT app or Cloud app on your phone? They can translate. Yeah, maybe for one</v>
+<v Mohammad>what I've tried here is what I wanted to have. If such an app existed today, I wouldn't have gone out of my way to create it. One might say, okay, why don't you just use the ChatGPT app or Claude app on your phone? They can translate. Yeah, maybe for one</v>
 
 121
 00:25:16.771 --> 00:25:31.595
@@ -498,7 +498,7 @@ you know,
 
 125
 00:26:08.142 --> 00:26:22.827
-<v Gerry>Muhammad, you said something that is, again, so I think so very relevant. I experience it all the time where someone says, well, why can't you just do that in cloud? In other words, you know, I build a system or I build a tool. And then the question is, why can't you just do it in cloud? Well, yeah, you</v>
+<v Gerry>Mohammad, you said something that is, again, so I think so very relevant. I experience it all the time where someone says, well, why can't you just do that in Claude? In other words, you know, I build a system or I build a tool. And then the question is, why can't you just do it in Claude? Well, yeah, you</v>
 
 126
 00:26:22.947 --> 00:26:37.921
@@ -550,7 +550,7 @@ you know,
 
 138
 00:29:04.145 --> 00:29:19.108
-<v Gerry>Many of those conferences are just, they're all about vendors, right? It's kind of vendor-centric instead of community-centric or developer engineering specific, right? Just about the people, right? So that's great. I love that, Mohamed. Love it.</v>
+<v Gerry>Many of those conferences are just, they're all about vendors, right? It's kind of vendor-centric instead of community-centric or developer engineering specific, right? Just about the people, right? So that's great. I love that, Mohammad. Love it.</v>
 
 139
 00:29:19.308 --> 00:29:19.968
@@ -762,7 +762,7 @@ you know,
 
 191
 00:39:29.597 --> 00:39:44.564
-<v Mohammad>this person in Australia was using his cloud chat, maybe co-work, I'm not sure which interface, was asking, hey, can you get me in this gym class? And apparently the gym class was full. In order for the AI model to</v>
+<v Mohammad>this person in Australia was using his Claude chat, maybe co-work, I'm not sure which interface, was asking, hey, can you get me in this gym class? And apparently the gym class was full. In order for the AI model to</v>
 
 192
 00:39:44.864 --> 00:39:59.829
@@ -858,7 +858,7 @@ you know,
 
 215
 00:44:48.956 --> 00:45:03.902
-<v Mohammad>want to go full on another environment, maybe Codex and Cloud Code and anti-gravity and so on. But it remains so they can do things. Like at ODSC and other conferences, I've seen people having their AI agent to, I don't know, order lunch</v>
+<v Mohammad>want to go full on another environment, maybe Codex and Claude Code and Antigravity and so on. But it remains so they can do things. Like at ODSC and other conferences, I've seen people having their AI agent to, I don't know, order lunch</v>
 
 216
 00:45:03.942 --> 00:45:18.849
@@ -890,11 +890,11 @@ you know,
 
 223
 00:46:47.885 --> 00:47:02.414
-<v Mohammad>there, and I want to be able to take a screenshot, write down a quote. Like for instance, here, I could write down a quote and I say, let's see, what did, what did Jerry teach me today? If I wanted to quote you exactly, you'd say</v>
+<v Mohammad>there, and I want to be able to take a screenshot, write down a quote. Like for instance, here, I could write down a quote and I say, let's see, what did, what did Gerry teach me today? If I wanted to quote you exactly, you'd say</v>
 
 224
 00:47:02.855 --> 00:47:17.548
-<v Mohammad>use, I'm just going to put something here, use safely. Okay. Not your words, but I can, you know, I can put Jerry and I can say, I'm preparing for a keynote speech. I'm writing a book chapter and a book. I can</v>
+<v Mohammad>use, I'm just going to put something here, use safely. Okay. Not your words, but I can, you know, I can put Gerry and I can say, I'm preparing for a keynote speech. I'm writing a book chapter and a book. I can</v>
 
 225
 00:47:17.568 --> 00:47:32.543
@@ -914,7 +914,7 @@ you know,
 
 229
 00:48:17.882 --> 00:48:32.657
-<v Mohammad>to these files. I have several categories. So most things I've listened to, it goes to history once you listen. And these are some podcasts generated by actually Gemini Notebooks, previously known as Notebook LM. And so these are,</v>
+<v Mohammad>to these files. I have several categories. So most things I've listened to, it goes to history once you listen. And these are some podcasts generated by actually Gemini Notebooks, previously known as NotebookLM. And so these are,</v>
 
 230
 00:48:32.837 --> 00:48:47.787
@@ -950,7 +950,7 @@ you know,
 
 238
 00:49:50.974 --> 00:49:54.717
-<v Mohammad>These ones are Gemini notebook. So these are much higher quality. We</v>
+<v Mohammad>These ones are Gemini Notebook. So these are much higher quality. We</v>
 
 239
 00:49:54.777 --> 00:50:03.705
@@ -974,7 +974,7 @@ you know,
 
 244
 00:50:33.750 --> 00:50:48.539
-<v Gerry>Gemini came out, right, or, you know, when Notebook LM came out, like, man, that voice sounds so familiar. I'm like, oh, that's Leo Laporte. That's the tech guy. Anyway. When you did this, when you built this out, did you use AI Studio to like API endpoints from Google AI</v>
+<v Gerry>Gemini came out, right, or, you know, when NotebookLM came out, like, man, that voice sounds so familiar. I'm like, oh, that's Leo Laporte. That's the tech guy. Anyway. When you did this, when you built this out, did you use AI Studio to like API endpoints from Google AI</v>
 
 245
 00:50:48.579 --> 00:50:54.120
@@ -990,7 +990,7 @@ you know,
 
 248
 00:51:24.442 --> 00:51:39.374
-<v Mohammad>that I have used that library to build it. So the idea here is my cloud code agent has access to my meeting notes. It knows where my head is at and any given week or any given day. And based</v>
+<v Mohammad>that I have used that library to build it. So the idea here is my Claude Code agent has access to my meeting notes. It knows where my head is at and any given week or any given day. And based</v>
 
 249
 00:51:39.455 --> 00:51:54.263
@@ -1010,7 +1010,7 @@ you know,
 
 253
 00:52:29.503 --> 00:52:44.458
-<v Gerry>Man, this is some great work, Mohamed. This is great, great work. I really love this. Thank you. We don't have much time left, but let me ask you this. What was the biggest challenge in building the debriefs piece? And before you even</v>
+<v Gerry>Man, this is some great work, Mohammad. This is great, great work. I really love this. Thank you. We don't have much time left, but let me ask you this. What was the biggest challenge in building the debriefs piece? And before you even</v>
 
 254
 00:52:44.518 --> 00:52:59.169
@@ -1018,7 +1018,7 @@ you know,
 
 255
 00:52:59.549 --> 00:53:14.318
-<v Gerry>right? And that rounds it out. I love that because it provides more context, more extremely relevant context. I love that. When I read a paper via AI, you know, I do it more manual. Like I'll use, you know, Notebook LM or, you know, Gemini</v>
+<v Gerry>right? And that rounds it out. I love that because it provides more context, more extremely relevant context. I love that. When I read a paper via AI, you know, I do it more manual. Like I'll use, you know, NotebookLM or, you know, Gemini</v>
 
 256
 00:53:14.358 --> 00:53:29.267
@@ -1026,7 +1026,7 @@ you know,
 
 257
 00:53:29.307 --> 00:53:44.036
-<v Gerry>now. But to look at the top citations and bring those in. So that's your professorial background talking to me and saying, Jerry, get your act together. So that's how I'm going to take it. But I love that. I really love that.</v>
+<v Gerry>now. But to look at the top citations and bring those in. So that's your professorial background talking to me and saying, Gerry, get your act together. So that's how I'm going to take it. But I love that. I really love that.</v>
 
 258
 00:53:44.276 --> 00:53:47.558
@@ -1034,7 +1034,7 @@ you know,
 
 259
 00:53:47.758 --> 00:54:02.641
-<v Mohammad>So one quick comment. The other thing with this method you can do is that your Gemini notebook wouldn't know which paper to emphasize. So my cloud code agent writes the prompt for Gemini notebook. And it will</v>
+<v Mohammad>So one quick comment. The other thing with this method you can do is that your Gemini Notebook wouldn't know which paper to emphasize. So my Claude Code agent writes the prompt for Gemini Notebook. And it will</v>
 
 260
 00:54:02.661 --> 00:54:17.585
@@ -1066,7 +1066,7 @@ you know,
 
 267
 00:55:47.590 --> 00:56:02.575
-<v Mohammad>Gemini notebooks, but they've done a really good job. And I say one more thing for me, again, I wanted to make some distance between myself and my computer use. I am running a half marathon in a month and a half. Involuntarily, my sister</v>
+<v Mohammad>Gemini Notebooks, but they've done a really good job. And I say one more thing for me, again, I wanted to make some distance between myself and my computer use. I am running a half marathon in a month and a half. Involuntarily, my sister</v>
 
 268
 00:56:02.615 --> 00:56:17.383
@@ -1106,7 +1106,7 @@ you know,
 
 277
 00:57:46.688 --> 00:58:01.677
-<v Gerry>so I can appreciate the involuntary efforts. to work out because the hack that I have to do, Muhammad, is not all the time, but many times, especially in the winter when I have to go to the pool or the gym or whatever, sometimes it's, okay, I'm not going to go</v>
+<v Gerry>so I can appreciate the involuntary efforts. to work out because the hack that I have to do, Mohammad, is not all the time, but many times, especially in the winter when I have to go to the pool or the gym or whatever, sometimes it's, okay, I'm not going to go</v>
 
 278
 00:58:01.697 --> 00:58:16.472
@@ -1130,19 +1130,19 @@ you know,
 
 283
 00:59:16.537 --> 00:59:30.920
-<v Gerry>cause it's on your phone. Anyway, that's my two cents on that, but I love it. Muhammad, honestly, we could do like a long form on this, like in talk for another couple of hours, I'm sure. But man. So yeah, so to the audience, right? Like, you know, this is the</v>
+<v Gerry>cause it's on your phone. Anyway, that's my two cents on that, but I love it. Mohammad, honestly, we could do like a long form on this, like in talk for another couple of hours, I'm sure. But man. So yeah, so to the audience, right? Like, you know, this is the</v>
 
 284
 00:59:31.080 --> 00:59:45.603
-<v Gerry>ODSC AI podcast. Mohamed is my first guest that I've interviewed on a podcast. This is my first guest hosting of a podcast. So I'm very excited about that. I'm very excited to have spoken to Mohamed about his stuff</v>
+<v Gerry>ODSC AI podcast. Mohammad is my first guest that I've interviewed on a podcast. This is my first guest hosting of a podcast. So I'm very excited about that. I'm very excited to have spoken to Mohammad about his stuff</v>
 
 285
 00:59:45.703 --> 00:59:58.026
-<v Gerry>today and just AI in general. And Mohamed, I'm thankful that we met each other and we're friends and we're able to talk this stuff out. Anything else you want to talk about or say, like before we sign off and talk another time?</v>
+<v Gerry>today and just AI in general. And Mohammad, I'm thankful that we met each other and we're friends and we're able to talk this stuff out. Anything else you want to talk about or say, like before we sign off and talk another time?</v>
 
 286
 00:59:58.486 --> 01:00:13.480
-<v Mohammad>Okay. First of all, I should say I didn't realize 75 minutes has gone by and I just felt like a catching up with you and so easy to chat with you and learn from you, Jerry. Thank you again for having me. I, the last thing I</v>
+<v Mohammad>Okay. First of all, I should say I didn't realize 75 minutes has gone by and I just felt like a catching up with you and so easy to chat with you and learn from you, Gerry. Thank you again for having me. I, the last thing I</v>
 
 287
 01:00:13.540 --> 01:00:28.152
@@ -1166,7 +1166,7 @@ you know,
 
 292
 01:01:25.843 --> 01:01:40.611
-<v Gerry>Right. And certainly just being physically present is obviously the best. There's something you can't emulate that even on a Zoom or you just can't emulate that. So I really appreciate your thoughts on that and the drive to move in that direction. Awesome, Mohamed.</v>
+<v Gerry>Right. And certainly just being physically present is obviously the best. There's something you can't emulate that even on a Zoom or you just can't emulate that. So I really appreciate your thoughts on that and the drive to move in that direction. Awesome, Mohammad.</v>
 
 293
 01:01:40.751 --> 01:01:47.274
@@ -1174,11 +1174,11 @@ you know,
 
 294
 01:01:47.495 --> 01:01:49.616
-<v Mohammad>Thank you so much. You have a wonderful day, Jerry.</v>
+<v Mohammad>Thank you so much. You have a wonderful day, Gerry.</v>
 
 295
 01:01:49.836 --> 01:01:51.677
-<v Gerry>Thanks, Mohamed. You too. Catch you later. See you. Bye.</v>
+<v Gerry>Thanks, Mohammad. You too. Catch you later. See you. Bye.</v>
 
 296
 01:01:51.697 --> 01:01:53.815
@@ -1186,7 +1186,7 @@ you know,
 
 297
 01:01:53.835 --> 01:02:08.580
-<v Gerry>sponsored by ODSCAI West, the premier AI builders conference coming up this October 27th to 29th in San Francisco and virtually. Learn more at odsc.ai slash west and use the code podcast for an</v>
+<v Gerry>sponsored by ODSC AI West, the premier AI builders conference coming up this October 27th to 29th in San Francisco and virtually. Learn more at odsc.ai slash west and use the code podcast for an</v>
 
 298
 01:02:08.660 --> 01:02:23.630

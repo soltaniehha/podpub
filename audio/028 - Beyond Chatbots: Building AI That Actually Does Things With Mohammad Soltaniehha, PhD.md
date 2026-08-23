@@ -19,7 +19,7 @@ Mohammad Soltaniehha Memorable Outtakes:
 On the rise of personally built AI tools:
 “The era of personal applications is here.”
 On what he wants AI to enable:
-“I wanna be out in the world, but I want to use these models in a way ts that weren’t possible before.”
+“I wanna be out in the world, but I want to use these models in a way that does things that weren’t possible before.”
 On where AI can have the greatest impact:
 “There are many, many areas, especially in medicine, healthcare, in education, in mental health where AI can be used in a way that previously [was] not possible.”
 
