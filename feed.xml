@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2026 19:59:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 11:59:52 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -550,5 +550,23 @@ Learn more: http://summit.ai</description>
       <pubDate>Sun, 23 Aug 2026 17:32:01 +0000</pubDate>
       <itunes:episode>28</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/028%20-%20Beyond%20Chatbots%3A%20Building%20AI%20That%20Actually%20Does%20Things%20With%20Mohammad%20Soltaniehha%2C%20PhD.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>029 - When The Best Player Is Not The Best Coach</title>
+      <description>When The Best Player Is Not The Best Coach (2024–2026)
+
+In this episode we unpack a new working paper from the Data Innovation and AI Lab at UC Berkeley's Haas School of Business, by Pattaraphon Kenny Wongchamcharoen, Kris Gulati, Min Min Fong and Abhishek Nagaraj, who is also at the NBER, posted to arXiv on 19 August 2026. Almost every benchmark ranks models on how well they do the work. CentaurBench asks the other question: which model best helps someone else do the work? To find out, the authors run ten models through the same seven economically grounded tasks twice, once doing the job end to end, and once writing nothing but guidance for a fixed weaker worker model that produces the deliverable. Holding that worker constant is what turns the second run into a clean measurement of coaching quality rather than of team outcome, and the two rankings turn out to have remarkably little to do with each other.
+
+We walk through the design and then the numbers that matter: a rank correlation of just 0.48 between automating and augmenting, which the authors are careful to say is not distinguishable from zero, and which swings from 0.85 on rule-bound tax preparation down to minus 0.04 on open-ended travel planning. In five of seven tasks the best coach is not the best player, and Claude-Opus-4.8 flips from the strongest automator on market trends analysis to nearly the weakest assistant on the same task. The finding we sit with longest is that the unaided worker, given no guidance at all, ranks first on three of the seven tasks, and that only one of nine frontier models beats silence on average. Haupt and Brynjolfsson's ICML position paper is the call for centaur evaluations that this work answers, and Vaccaro, Almaatouq and Malone's meta-analysis of over a hundred experiments finds human-AI pairs underperforming the better of their parts by almost exactly the same uncomfortable logic. Shao and colleagues' WORKBank survey of 1,500 workers tells us which tasks people actually want kept human, and Marguerit's labor-market estimates explain the stakes, with automation AI cutting employment and wages for low-skilled work while augmentation AI raises them for high-skilled work. We close on the gap underneath the whole augmentation agenda: we have spent years selecting models to be the best player, and we have barely started measuring what makes a good coach.
+
+Reference: Wongchamcharoen, P. K., Gulati, K., Fong, M. M., &amp; Nagaraj, A. (2026). CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks. arXiv:2608.18554. https://arxiv.org/abs/2608.18554
+Reference: Haupt, A., &amp; Brynjolfsson, E. (2025). Position: AI Should Not Be An Imitation Game: Centaur Evaluations. Proceedings of the 42nd International Conference on Machine Learning (ICML), PMLR 267. https://proceedings.mlr.press/v267/haupt25a.html
+Reference: Vaccaro, M., Almaatouq, A., &amp; Malone, T. (2024). When combinations of humans and AI are useful: A systematic review and meta-analysis. Nature Human Behaviour, 8, 2293–2303. https://doi.org/10.1038/s41562-024-02024-1
+Reference: Shao, Y., Zope, H., Jiang, Y., Pei, J., Nguyen, D., Brynjolfsson, E., &amp; Yang, D. (2026). Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce. arXiv:2506.06576. https://arxiv.org/abs/2506.06576
+Reference: Marguerit, D. (2025). Augmenting or Automating Labor? The Effect of AI Development on New Work, Employment, and Wages. arXiv:2503.19159. https://arxiv.org/abs/2503.19159</description>
+      <guid isPermaLink="false">7474bbd09ef116b4af309282230c99dcbbd3c86f</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/029%20-%20When%20The%20Best%20Player%20Is%20Not%20The%20Best%20Coach.m4a" length="31366947" type="audio/mp4" />
+      <pubDate>Mon, 24 Aug 2026 10:57:54 +0000</pubDate>
+      <itunes:episode>29</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/029%20-%20When%20The%20Best%20Player%20Is%20Not%20The%20Best%20Coach.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

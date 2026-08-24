@@ -1,0 +1,529 @@
+WEBVTT
+
+1
+00:00:00.191 --> 00:00:13.155
+<v Daniel>What if the absolute smartest AI in the world, the one that's just currently crushing every single global leaderboard, is actually the worst possible tool to give to your junior employees?</v>
+
+2
+00:00:13.591 --> 00:00:21.034
+<v Maya>I mean, it sounds entirely backwards. Right. But it's actually a known phenomenon. In professional sports, they call it the curse of expertise.</v>
+
+3
+00:00:21.134 --> 00:00:23.715
+<v Daniel>Right. Like when the greatest athletes of all time retire.</v>
+
+4
+00:00:23.975 --> 00:00:32.719
+<v Maya>Exactly. The ones who just see the game on a level the rest of us can't even comprehend. When they try to coach, they're, well, they're frequently terrible at it.</v>
+
+5
+00:00:33.019 --> 00:00:39.162
+<v Daniel>Because they just cannot fathom why a rookie is struggling with a play that feels, you know, as natural as breathing to them.</v>
+
+6
+00:00:39.393 --> 00:00:45.297
+<v Maya>Yeah, the instinct that made them a legendary player completely blinds them to what a beginner actually needs to hear.</v>
+
+7
+00:00:45.657 --> 00:00:55.143
+<v Daniel>And that brings us to the core mission of this deep dive. We are looking into this to find out if the AI models at the very top of the leaderboards are, in fact, the worst ones to use as coaches.</v>
+
+8
+00:00:55.363 --> 00:01:02.648
+<v Maya>And we have the perfect source for this. It's a brand new July 2026 working paper published on Arxiv this past August 19th.</v>
+
+9
+00:01:03.473 --> 00:01:12.078
+<v Daniel>Right. Authored by Wangchum Cheran, Gulati, Fong, and Nagaraj out of UC Berkeley's Haas School of Business and the NBER.</v>
+
+10
+00:01:12.258 --> 00:01:20.883
+<v Maya>And the title is a mouthful. It's called CentaurBench, Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks.</v>
+
+11
+00:01:21.103 --> 00:01:31.889
+<v Daniel>Okay, let's unpack this, because the researchers actually named their code repository Best Player, Not Best Coach. Which, I mean, that tells you almost everything you need to know about their premise right there.</v>
+
+12
+00:01:31.969 --> 00:01:42.093
+<v Maya>It really does. It's a brilliant way to frame it. But before we get into the experiment, we really need to set up why this distinction matters to you. You know, whether you're managing a team or just trying to navigate your own career.</v>
+
+13
+00:01:42.173 --> 00:01:44.114
+<v Daniel>Because the economic stakes here are massive.</v>
+
+14
+00:01:44.394 --> 00:01:57.986
+<v Maya>Absolutely. There's this 2025 paper by an economist named Marguerite from Leiser that lays this out perfectly. He looked at the U.S. labor market from 2015 to 2022 and found that AI impacts the economy in two very distinct ways.</v>
+
+15
+00:01:58.106 --> 00:02:03.031
+<v Daniel>Depending on how it's designed, right? Like he splits it into automation AI and augmentation AI.</v>
+
+16
+00:02:03.309 --> 00:02:14.016
+<v Maya>Yes, exactly. So automation AI is technology designed to substitute for human labor. And Margaret found this actively reduces new work, employment and wages, particularly for low skilled workers.</v>
+
+17
+00:02:14.416 --> 00:02:16.177
+<v Daniel>Which is the big fear everyone has.</v>
+
+18
+00:02:16.397 --> 00:02:28.045
+<v Maya>Right. But then you have augmentation AI. This is technology built to enhance what a worker produces. And that has a complete opposite effect. It generates new work and actually raises wages in high skilled occupations.</v>
+
+19
+00:02:28.145 --> 00:02:36.732
+<v Daniel>So they push the economy in entirely opposite distributional directions. AI could literally widen wage inequality if we aren't careful.</v>
+
+20
+00:02:36.792 --> 00:02:42.380
+<v Maya>Which is exactly why build augmenting AI has become this massive policy slogan everywhere.</v>
+
+21
+00:02:42.440 --> 00:02:48.569
+<v Daniel>Right. The goal isn't supposed to be a machine that steals your desk. It's supposed to be a machine that makes you better at what you do at your desk.</v>
+
+22
+00:02:48.784 --> 00:02:55.608
+<v Maya>But, and here is the glaring disconnect that policy slogan does not match how the tech industry actually evaluates its models.</v>
+
+23
+00:02:55.688 --> 00:02:57.989
+<v Daniel>Yeah, we have to talk about Haupt and Brynjolfsson here.</v>
+
+24
+00:02:58.030 --> 00:03:08.776
+<v Maya>We do. In 2025, they publish an ICML position paper criticizing the AI field's total obsession with the imitation game. Basically, the ghost of the Turing test and ImageNet.</v>
+
+25
+00:03:09.142 --> 00:03:19.487
+<v Daniel>Right. Because for years, the standard way to evaluate a model has just been to, you know, lock it in a digital room, hand it a prompt and see if it can produce a human level output completely alone.</v>
+
+26
+00:03:19.767 --> 00:03:27.211
+<v Maya>Exactly. Haupt and Brynjolfsson argued that if our economic goal is augmentation, evaluating models in isolation is just useless.</v>
+
+27
+00:03:27.451 --> 00:03:38.000
+<v Daniel>I mean, it's like we spent years building a hyper-fast race car, which is automation, when what the economy actually needs is a really good driving instructor.</v>
+
+28
+00:03:38.040 --> 00:03:49.770
+<v Maya>That is a perfect analogy. And so they called for what they named Centaur Evaluations, measuring humans and AI solving tasks together as a team so we can measure things like helpfulness directly.</v>
+
+29
+00:03:50.165 --> 00:04:01.187
+<v Daniel>And the painful irony here is that the moment someone finally built the exact Centaur benchmark that Hoppe and Brynjolfsson asked for this new Berkeley paper, the results were incredibly unflattering.</v>
+
+30
+00:04:01.327 --> 00:04:06.048
+<v Maya>Yeah, to understand exactly how unflattering, we really need to look at how CentaurBench was cleverly designed.</v>
+
+31
+00:04:06.168 --> 00:04:11.849
+<v Daniel>I love the methodology of this paper. So every model is run over the exact same tasks in two different modes.</v>
+
+32
+00:04:12.289 --> 00:04:20.155
+<v Maya>Right. The first track is automation mode. This is your standard benchmark. The model gets the prompt and completes the task end to end.</v>
+
+33
+00:04:20.395 --> 00:04:20.995
+<v Daniel>It does the work.</v>
+
+34
+00:04:21.216 --> 00:04:30.481
+<v Maya>It does the work. But the second track is augmentation mode. And in this mode, the frontier model being evaluated never writes the final deliverable. Not once.</v>
+
+35
+00:04:30.721 --> 00:04:41.288
+<v Daniel>Instead, it has to write an assistance text, basically a coaching guide for a fixed, deliberately weaker worker model. And that worker produces the final output.</v>
+
+36
+00:04:41.488 --> 00:04:49.154
+<v Maya>And that right there is the genius of this paper. The worker is held constant in every single trial as GPT 3.5 turbo.</v>
+
+37
+00:04:49.214 --> 00:04:50.735
+<v Daniel>Which is an older, weaker model.</v>
+
+38
+00:04:50.835 --> 00:05:01.002
+<v Maya>Exactly. By holding the worker fixed, you make this a true measurement of the assistant's guidance rather than just the overall team outcome. The only thing varying across the trials is the quality of the coaching.</v>
+
+39
+00:05:01.062 --> 00:05:11.130
+<v Daniel>But wait, if I'm a hyper-intelligent AI acting as a coach, what stops me from just doing the homework? Like, couldn't the model just write out the final answer and say, hey, GPT 3.5, copy and paste this?</v>
+
+40
+00:05:11.370 --> 00:05:16.677
+<v Maya>The researchers put a hard constraint on that. The assistant's text has to follow a strict three-phase structure.</v>
+
+41
+00:05:16.697 --> 00:05:17.418
+<v Daniel>Okay, what are the phases?</v>
+
+42
+00:05:17.819 --> 00:05:27.952
+<v Maya>First, a requirements check. Second, an execution plan. And third, a final checklist. The assistant is explicitly prohibited from doing the task itself.</v>
+
+43
+00:05:28.276 --> 00:05:33.700
+<v Daniel>So it is forced to actually teach. And they ran this across seven economically grounded tasks.</v>
+
+44
+00:05:33.720 --> 00:05:48.649
+<v Maya>Yeah. They chose tasks that vary a lot in structure and how much human facing judgment they need. So you have structured planning, like menu planning and travel planning from OpenAI's GDPVal. You have market trends analysis and operations research. Then you have more open ended</v>
+
+45
+00:05:48.729 --> 00:05:52.872
+<v Maya>stuff from the Anthropic Economic Index, like counseling and tutoring session planning.</v>
+
+46
+00:05:53.072 --> 00:05:55.533
+<v Daniel>And didn't they also design a custom tax prep task?</v>
+
+47
+00:05:55.573 --> 00:06:03.357
+<v Maya>They did, specifically because tax codes have verifiable rule-based discrepancies. So they have these seven tasks and they test 10 major models. The</v>
+
+48
+00:06:03.397 --> 00:06:09.900
+<v Daniel>heavy hitters. Cloud Opus 4.8, CloudSign 4.6, Gemini 3.1 Pro, DeepSeek v3.1.</v>
+
+49
+00:06:09.980 --> 00:06:16.903
+<v Maya>Plus the OpenAI suite, GPT-5 Mini, GPT-OSS 120B, GPT-04 Mini, GPT-4.1, and GPT-03 Mini.</v>
+
+50
+00:06:17.043 --> 00:06:19.164
+<v Daniel>And GPT-3.5 Turbo as a fixed worker.</v>
+
+51
+00:06:19.585 --> 00:06:31.655
+<v Maya>Right. And to score it, they used blind pairwise comparison from a panel of four LLM judges. They even masked the judges so a model family couldn't grade itself.</v>
+
+52
+00:06:32.235 --> 00:06:35.038
+<v Daniel>Oh, so like a clawed judge couldn't score a clawed output.</v>
+
+53
+00:06:35.178 --> 00:06:41.463
+<v Maya>Exactly. Leave one family out masking. And they ran the whole pipeline across 10 independent runs just to be sure.</v>
+
+54
+00:06:41.763 --> 00:06:48.829
+<v Daniel>Okay, with the stage set, here's where it gets really interesting. Let's look at the actual data because the top performers in automation were in for a rude awakening.</v>
+
+55
+00:06:49.067 --> 00:06:55.329
+<v Maya>They really were. The first big result, automation skill is a weak predictor of augmentation skill.</v>
+
+56
+00:06:55.489 --> 00:06:56.590
+<v Daniel>Like how weak are we talking?</v>
+
+57
+00:06:56.950 --> 00:07:02.592
+<v Maya>Across the nine assistant models, the Spearman rank correlation between the two modes is just 0.48.</v>
+
+58
+00:07:03.012 --> 00:07:03.512
+<v Daniel>Which means?</v>
+
+59
+00:07:03.712 --> 00:07:10.154
+<v Maya>Which means, statistically, it is not distinguishable from zero at conventional levels. The two-sided p-value is 0.187.</v>
+
+60
+00:07:11.858 --> 00:07:18.900
+<v Daniel>Wow. So being a genius at doing the task gives you almost zero guarantee that you'll be any good at teaching it. It's an incomplete proxy.</v>
+
+61
+00:07:19.140 --> 00:07:24.262
+<v Maya>Exactly. But it gets more nuanced because that correlation is wildly task-dependent.</v>
+
+62
+00:07:24.362 --> 00:07:26.963
+<v Daniel>Right. Let's compare the tax prep to travel planning.</v>
+
+63
+00:07:27.303 --> 00:07:33.865
+<v Maya>Okay. So on tax preparation, the correlation is 0.85, highly significant, P equals 0.004.</v>
+
+64
+00:07:35.628 --> 00:07:38.229
+<v Daniel>So if it's great at doing taxes, it's great at coaching taxes.</v>
+
+65
+00:07:38.390 --> 00:07:45.794
+<v Maya>Right. And coaching coincide there. But look at travel planning. The correlation is minus 0.04.</v>
+
+66
+00:07:46.054 --> 00:07:48.855
+<v Daniel>Minus. So literally no relationship at all.</v>
+
+67
+00:07:49.136 --> 00:07:53.618
+<v Maya>None. And counseling was only 0.25. Market trends analysis was 0.10.</v>
+
+68
+00:07:55.179 --> 00:08:10.048
+<v Daniel>So the pattern here is that rule-bound, mathematically verifiable tasks, like tax code, that's where doing and teaching are the same skill. Yes. But the second you move into open-ended, human-facing, judgment-heavy work, those skills completely decouple.</v>
+
+69
+00:08:10.168 --> 00:08:17.312
+<v Maya>They decouple so much that in five of the seven tasks, the best augmenter is a completely different model from the best automator.</v>
+
+70
+00:08:17.612 --> 00:08:20.996
+<v Daniel>Only menu planning and tutoring had the same winner, which was GPT-5 Mini.</v>
+
+71
+00:08:21.296 --> 00:08:29.325
+<v Maya>Right. But take Cloud Opus 4.8. When it analyzes market trends by itself, it's a beast. Mean rank of 2.05 as a solo worker?</v>
+
+72
+00:08:29.365 --> 00:08:30.045
+<v Daniel>But as a coach.</v>
+
+73
+00:08:30.266 --> 00:08:32.949
+<v Maya>Terrible. One of the weakest assistants with a rank of 8.15.</v>
+
+74
+00:08:34.619 --> 00:08:38.402
+<v Daniel>And GPT-4.1 is the exact mirror image in the counseling task.</v>
+
+75
+00:08:38.582 --> 00:08:45.628
+<v Maya>Exactly. It's a weak solo counselor ranked 7.40, but it was the absolute best assistant at 3.80.</v>
+
+76
+00:08:46.289 --> 00:08:56.758
+<v Daniel>The winners are just scattered everywhere. You've got GPT-04, many winning market trends. GPT-OSS-120B, winning operations research. Claude Son at 4.6, taking travel planning.</v>
+
+77
+00:08:57.158 --> 00:09:05.364
+<v Maya>It is a total role reversal. But as fascinating as it is to try and find the best coach, there is a much darker finding lurking in this data.</v>
+
+78
+00:09:05.404 --> 00:09:08.606
+<v Daniel>Yeah, this is the headline of the paper. I want you to really sit with this as you listen.</v>
+
+79
+00:09:08.726 --> 00:09:18.813
+<v Maya>The unaided baseline, which is just the fixed worker, GPT 3.5 Turbo, working completely alone with zero guidance, ranked first in the augmentation comparison on three of the seven tasks.</v>
+
+80
+00:09:18.993 --> 00:09:25.558
+<v Daniel>First, it beat the frontier models on operations research, tax preparation, and travel planning just by working alone.</v>
+
+81
+00:09:25.798 --> 00:09:36.424
+<v Maya>Averaged across all seven tasks, that unaided baseline had a mean rank of 3.79. Out of all the assisted conditions, only GPT-5 mini beat it at 3.66.</v>
+
+82
+00:09:36.725 --> 00:09:47.091
+<v Daniel>That is wild. Nine frontier models were asked to coach, and eight of them literally made the worker worse off than if they had just shut up. Assistance was worse than silence.</v>
+
+83
+00:09:47.831 --> 00:09:55.276
+<v Maya>The authors note that this doesn't mean guidance is futile, but that the value of guidance is heavily task contingent, and yeah, it can be negative.</v>
+
+84
+00:09:55.752 --> 00:10:06.923
+<v Daniel>But I'm slightly skeptical here. Are we really saying that pairing two highly capable entities routinely destroys value? Like why does adding a super smart AI to the mix make the output worse?</v>
+
+85
+00:10:07.422 --> 00:10:17.031
+<v Maya>If we connect this to the bigger picture, it actually makes a lot of sense. There's a 2024 meta-analysis by Vaccaro, Almatuk, and Malone in Nature Human Behavior.</v>
+
+86
+00:10:17.071 --> 00:10:19.453
+<v Daniel>And this wasn't looking at models, right? It was looking at humans.</v>
+
+87
+00:10:19.593 --> 00:10:32.806
+<v Maya>Right. It was a pre-registered systematic review of over 100 human AI experiments, over 300 effect sizes. And they found that on average, human AI combos perform significantly worse than the better of the human alone or the AI alone.</v>
+
+88
+00:10:33.187 --> 00:10:34.647
+<v Daniel>Wait, really? Word.</v>
+
+89
+00:10:34.688 --> 00:10:43.670
+<v Maya>Yes. The hedge's G was negative 0.23. The confidence interval was entirely negative, from minus 0.39 to minus 0.07.</v>
+
+90
+00:10:44.031 --> 00:10:50.733
+<v Daniel>So throwing a human and an AI together usually destroyed value compared to just letting the stronger party work alone.</v>
+
+91
+00:10:50.973 --> 00:11:00.216
+<v Maya>Exactly. And most tellingly, when the human was better than the AI, the combination gained. But when the AI was better than the human, the combination lost.</v>
+
+92
+00:11:00.970 --> 00:11:11.659
+<v Daniel>Wow. So you put Vaccaro's human study right beside center bench, and you have two completely different methods, one with humans, one with model workers landing on the exact same uncomfortable truth.</v>
+
+93
+00:11:12.199 --> 00:11:19.365
+<v Maya>Yeah. But to answer your question about why this happens, the Berkeley authors actually pivoted away from machine learning and went to educational psychology.</v>
+
+94
+00:11:19.565 --> 00:11:20.726
+<v Daniel>Right. They brought up scaffolding.</v>
+
+95
+00:11:20.926 --> 00:11:28.552
+<v Maya>Yes, coined by Wood, Bruner, and Ross in 1976. Scaffolding is temporary support that lets a learner do what they couldn't do alone.</v>
+
+96
+00:11:28.875 --> 00:11:31.617
+<v Daniel>Like the physical scaffold you put around a building under construction.</v>
+
+97
+00:11:31.817 --> 00:11:43.964
+<v Maya>Exactly. And Van de Pol and colleagues in 2010 identified properties of good scaffolds. In a single-shot setting like this benchmark, two apply, contingency and transfer of responsibility.</v>
+
+98
+00:11:44.024 --> 00:11:48.908
+<v Daniel>Contingency meaning the support has to be perfectly calibrated to the learner's actual current level.</v>
+
+99
+00:11:48.948 --> 00:12:00.036
+<v Maya>Right. Right. And transfer of responsibility means the goal is autonomy, not dependence. So when the authors looked at the actual assistance text the AIs wrote, they saw this playing out perfectly.</v>
+
+100
+00:12:00.056 --> 00:12:09.845
+<v Daniel>Yeah, the good scaffolds were really specific, going beyond just repeating the prompt. And they were perfectly calibrated to what the weaker GPT-3.5 model could actually execute.</v>
+
+101
+00:12:09.925 --> 00:12:17.532
+<v Maya>But the bad ones, they were overly complex, poorly matched, or completely miscalibrated. They effectively buried the worker in a plan it couldn't follow.</v>
+
+102
+00:12:17.852 --> 00:12:25.457
+<v Daniel>I mean, in some cases, the advice literally instructed the worker not to finish the task as described. It told the student not to do the assignment.</v>
+
+103
+00:12:25.838 --> 00:12:33.103
+<v Maya>It's the ultimate curse of expertise. The AI is so advanced it can't relate to a junior model that just needs step-by-step instructions.</v>
+
+104
+00:12:33.418 --> 00:12:41.865
+<v Daniel>And this connects perfectly to what human workers actually want. There's that final background source, the Stanford team led by Xiao, that built the WorkBank database.</v>
+
+105
+00:12:42.025 --> 00:12:51.372
+<v Maya>Oh, yes. They interviewed 1,500 real domain workers across 104 occupations, combining that with AI expert assessments.</v>
+
+106
+00:12:51.805 --> 00:12:59.250
+<v Daniel>And they introduced the human agency scale, which is this shared vocabulary for how much human involvement a task should keep.</v>
+
+107
+00:12:59.410 --> 00:13:10.438
+<v Maya>And what did they find? Workers desperately want to keep human involvement in interpersonal, open-ended tasks. They are fine letting go of the rote stuff, but they want agency over the human-facing work.</v>
+
+108
+00:13:11.067 --> 00:13:20.713
+<v Daniel>Which proves exactly why the Centaur bench results matter so much. The human-facing tasks are where the models suck at coaching. That's where doing and coaching diverge the most.</v>
+
+109
+00:13:20.893 --> 00:13:31.339
+<v Maya>It's a natural bridge. The exact tasks where workers want to maintain agency and just use AI for support are the exact tasks where the AI is terrible at giving support.</v>
+
+110
+00:13:31.789 --> 00:13:39.559
+<v Daniel>I mean, all these pieces fit together perfectly. But, and I have to raise a red flag here before we declare this paper gospel, we have to look at the limitations of the study design.</v>
+
+111
+00:13:39.679 --> 00:13:44.124
+<v Maya>Absolutely. The authors treat the mechanism section as observational, and we shouldn't oversell it.</v>
+
+112
+00:13:44.245 --> 00:13:50.653
+<v Daniel>Because my main pushback is on the word centaur. This study is a centaur of model plus model. It's not human plus AI.</v>
+
+113
+00:13:51.182 --> 00:13:55.125
+<v Maya>Right. The worker is GPT 3.5 turbo and the judges are LLMs.</v>
+
+114
+00:13:55.405 --> 00:14:08.555
+<v Daniel>So does a frontier AI bossing around an older AI really tell a manager how an AI will coach a human junior analyst? I mean, a human might react very differently to a bad AI coach than a compliant piece of software does.</v>
+
+115
+00:14:08.887 --> 00:14:21.565
+<v Maya>It's a very fair critique. This is a proxy for human AI collaboration, not a direct measurement of it. And deliberately using a weak, obedient AI absolutely shapes which guidance helps and which causes a failure.</v>
+
+116
+00:14:22.286 --> 00:14:24.549
+<v Daniel>Plus, they only tested nine assistant models.</v>
+
+117
+00:14:25.030 --> 00:14:33.836
+<v Maya>which means the task-level p-values are descriptive. And, you know, it's a single-shot interaction. There's no back-and-forth adaptation like you'd have in a real working session.</v>
+
+118
+00:14:33.976 --> 00:14:39.580
+<v Daniel>Right. If a coach gives me bad advice, I ask a follow-up question. I don't just blindly drive off a cliff like GPT 3.5 does.</v>
+
+119
+00:14:40.645 --> 00:14:46.710
+<v Maya>True, but until real human AI benchmarks scale up, this is arguably the best isolated measurement we have.</v>
+
+120
+00:14:46.950 --> 00:14:55.476
+<v Daniel>I'll concede it's incredibly clever engineering, but I think that friction between a model simulation and real human behavior needs to just sit there unresolved for now.</v>
+
+121
+00:14:55.597 --> 00:15:08.587
+<v Maya>I agree. So to tie this all together for the manager or the curious learner listening to this, from economists like Margaret to computer scientists like Haupt and Brynjolfsson, everyone agrees we want augmenting AI.</v>
+
+122
+00:15:09.434 --> 00:15:13.816
+<v Daniel>But CentaurBench proves we have a massive unsolved engineering problem.</v>
+
+123
+00:15:14.076 --> 00:15:23.900
+<v Maya>Exactly. Augmentation ability is almost completely uncorrelated with the automation ability our leaderboards optimize for. There is no single best coach.</v>
+
+124
+00:15:24.321 --> 00:15:29.943
+<v Daniel>And most frontier models coaching a weaker worker leave it worse off than if they had said nothing at all.</v>
+
+125
+00:15:30.396 --> 00:15:35.257
+<v Maya>And Vaccaro's meta-analysis shows us that human AI teams suffer from the exact same dynamic.</v>
+
+126
+00:15:35.337 --> 00:15:43.079
+<v Daniel>Because we've spent years training models to be the best player on the field, but we have almost no idea how to select one to be a good coach.</v>
+
+127
+00:15:43.199 --> 00:15:45.599
+<v Maya>Because until now, nobody was actually measuring it.</v>
+
+128
+00:15:45.619 --> 00:15:57.722
+<v Daniel>So what does this all mean? I want to leave you with a provocative thought to mull over. If AI currently suffers from the human curse of expertise, maybe the next trillion-dollar breakthrough in tech won't just be artificial general intelligence.</v>
+
+129
+00:15:57.862 --> 00:15:59.862
+<v Maya>The omniscient oracle that knows everything.</v>
+
+130
+00:16:00.318 --> 00:16:09.728
+<v Daniel>Right. Maybe it will be artificial general pedagogy, a model that isn't optimized to just know all the answers, but is dynamically optimized to figure out exactly how you learn.</v>
+
+131
+00:16:09.968 --> 00:16:12.250
+<v Maya>That is exactly what the workforce is waiting for.</v>
+
+132
+00:16:12.611 --> 00:16:13.852
+<v Daniel>Thanks for diving in with us today.</v>
