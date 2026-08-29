@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Aug 2026 07:43:12 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 12:01:43 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -606,5 +606,24 @@ Reference: Schulhoff, S., Ilie, M., Balepur, N., Kahadze, K., Liu, A., et al. (2
       <pubDate>Fri, 28 Aug 2026 06:27:10 +0000</pubDate>
       <itunes:episode>31</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/031%20-%20When%20Everyone%20Adopts%20And%20No%20One%20Improves.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>032 - When One Line Of Prompting Moves The Market</title>
+      <description>Personality Pairing Improves Human-AI Collaboration (August 2026)
+
+In this episode we unpack a paper published in PNAS on 28 August 2026 by Harang Ju of the Johns Hopkins Carey Business School and Sinan Aral of MIT Sloan, who ask a question that almost every productivity experiment has quietly skipped: what if the AI everyone was handed was the wrong AI for them? Nearly every study of generative AI at work gives all participants an identical tool, which means any variation in who benefits gets attributed to the human. Ju and Aral instead randomize the machine. They paired 1,258 people with AI agents prompted to be high or low on each of the Big Five personality traits, had those teams build 7,266 real display ads for a think tank, graded the ads with 1,168 independent raters, and then spent real money running the ads on X. The finding is that the pairing itself carries causal weight, and that a single line of personality prompting, applied before the collaboration even starts, moves both the quality of the work and how it performs in a live market.
+
+We walk through the Pairit platform the pair built, where a GPT-4o agent shares a live workspace with a person for 40 minutes and can chat, rewrite the headline, swap images or call DALL-E 3 on its own initiative, and through the P-squared prompting method they borrow from Jiang and colleagues to induce the traits. The results are specific and often counterintuitive: extraverted humans paired with conscientious AI produced the worst ads in the study, a third of a standard deviation below average, followed by conscientious humans with agreeable AI and neurotic humans with conscientious AI, while in the field neurotic humans paired with neurotic AI earned a 55 percent higher click-through rate. When the authors read the chat logs, the damaging pairings share a signature: the AI questioned its partner less and took direction more, which is to say it got more compliant. We set this against Vaccaro, Almaatouq and Malone's meta-analysis, where human-AI teams on average did worse than the better of human or AI alone; Nass and Moon's founding argument that people apply social rules, including personality matching, to machines that are obviously not people; the authors' own earlier field experiment on the same platform, where directive communication predicted better ads; and Anthropic's persona-vector work, which locates traits like sycophancy as directions inside the model rather than lines in a prompt. We close on what the paper explicitly cannot do, which is tell you in advance which pairing you need.
+
+Reference: Ju, H., &amp; Aral, S. (2026). Personality pairing improves human-AI collaboration. Proceedings of the National Academy of Sciences, 123(35), e2530627123. https://doi.org/10.1073/pnas.2530627123
+Reference: Ju, H., &amp; Aral, S. (2026). Collaborating with AI Agents: A Field Experiment on Teamwork, Productivity, and Performance. arXiv:2503.18238. https://arxiv.org/abs/2503.18238
+Reference: Vaccaro, M., Almaatouq, A., &amp; Malone, T. (2024). When combinations of humans and AI are useful: a systematic review and meta-analysis. Nature Human Behaviour, 8, 2293-2303. https://doi.org/10.1038/s41562-024-02024-1
+Reference: Nass, C., &amp; Moon, Y. (2000). Machines and Mindlessness: Social Responses to Computers. Journal of Social Issues, 56(1), 81-103. https://doi.org/10.1111/0022-4537.00153
+Reference: Jiang, G., Xu, M., Zhu, S.-C., Han, W., Zhang, C., &amp; Zhu, Y. (2023). Evaluating and Inducing Personality in Pre-trained Language Models. arXiv:2206.07550. https://arxiv.org/abs/2206.07550
+Reference: Chen, R., Arditi, A., Sleight, H., Evans, O., &amp; Lindsey, J. (2025). Persona Vectors: Monitoring and Controlling Character Traits in Language Models. arXiv:2507.21509. https://arxiv.org/abs/2507.21509</description>
+      <guid isPermaLink="false">00a3c01bc07e88db9cc6a58e3ee43f9a8810292d</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/032%20-%20When%20One%20Line%20Of%20Prompting%20Moves%20The%20Market.m4a" length="39784499" type="audio/mp4" />
+      <pubDate>Sat, 29 Aug 2026 06:22:28 +0000</pubDate>
+      <itunes:episode>32</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/032%20-%20When%20One%20Line%20Of%20Prompting%20Moves%20The%20Market.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
