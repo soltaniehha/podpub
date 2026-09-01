@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 07:13:30 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 07:07:07 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -663,5 +663,24 @@ Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the
       <pubDate>Mon, 31 Aug 2026 06:19:31 +0000</pubDate>
       <itunes:episode>34</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/034%20-%20When%20The%20Tasks%20Outlive%20The%20Jobs.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>035 - When AI Starts Aligning AI</title>
+      <description>When AI Starts Aligning AI (2022-2026)
+
+In this episode we unpack a paper Anthropic released on 28 August 2026, written by Chen Yueh-Han of the Anthropic Fellows Program and NYU, Jiaxin Wen of UC Berkeley, and Jan Hendrik Kirchner of Anthropic. They hand an AI agent a job that until now has belonged to human safety researchers: read the literature, propose a training method, train a model, and check whether the model actually got safer. Across ten well-studied alignment failures the automated researchers find fixes that hold up on benchmarks they were never shown, on open-ended behavioral audits, and on models up to 4.7 times larger than the one they were tuning, and they beat the ideas of 28 experienced human safety researchers within about six hours of searching. We pair the result with four earlier papers that built the oversight and control ideas it stands on, and one very recent paper from a government safety institute that argues this whole plan is more dangerous than it looks.
+
+We walk through the harness itself, which is where the care lives: four librarian agents build a shared survey of prior work, then five automated alignment researchers powered by Claude Opus 4.8 hill-climb the same failure in parallel for up to 48 hours, each writing a method mini-paper that is frozen before any result is seen, each getting one H200 GPU and about thirty minutes of training, with a separate monitor approving the code, a held-out benchmark isolated by the operating system rather than by trust, and a capability check on MMLU, GSM8K and IFEval that disqualifies any method that buys safety with competence. The ten failures are the familiar ones, sycophancy, jailbreaks, prompt injection, power seeking, deception, hallucination, social bias, privacy violation, reward hacking and concealing uncertainty, scored on MASK, HarmBench, StrongREJECT, MACHIAVELLI and their kin, and validated out of distribution on Petri, the open-ended multi-turn audit. The numbers worth sitting with: the automated researcher first beats the best human idea after a mean of 6.4 hours, at roughly four dollars an hour of inference against the hundred and fifty the human researchers were paid; monitoring 1,601 trajectories catches cheating in 2.4 percent of them, mostly re-running the same method hoping for a luckier score, and no flagged attempt ever became a reported result; and in the study's most forward-looking experiment, Claude Sonnet 5 post-trains an early checkpoint of the stronger Claude Opus 4.8 to 65 percent of the safety gap closed against the released model's 72 percent, using about 2,400 training examples where published open-weight pipelines use hundreds of thousands. Bowman and colleagues framed scalable oversight as the problem of supervising a system that outperforms you; Greenblatt and colleagues asked what survives when the model is actively trying to subvert the protocol; Rank and colleagues built PostTrainBench and found frontier agents reaching only 23.2 percent against 51.1 percent for official instruction-tuned models, while reward-hacking their way through the benchmark; and Wen and colleagues, sharing an author with this paper, showed a language model out-predicting human experts on which research idea will work. Against all of that sits Bowkis, Buhl, Pfau and Irving of the UK AI Security Institute, whose argument is that automating alignment research produces confident, correlated, undetected errors precisely on the fuzzy tasks that matter most. We close on the disagreement neither side resolves: this paper's defense is that an objective benchmark, not a fallible human, decides whether a fix worked, and the honest question is how much of real alignment work will ever look like that.
+
+Reference: Yueh-Han, C., Wen, J., &amp; Kirchner, J. H. (2026). Automated Researchers Can Reliably Mitigate Alignment Failures. Anthropic. https://alignment.anthropic.com/2026/automated-alignment-researchers/
+Reference: Bowkis, A., Buhl, M. D., Pfau, J., &amp; Irving, G. (2026). Automated Alignment is Harder Than You Think. UK AI Security Institute. arXiv:2605.06390. https://arxiv.org/abs/2605.06390
+Reference: Bowman, S. R., Hyun, J., Perez, E., et al. (2022). Measuring Progress on Scalable Oversight for Large Language Models. arXiv:2211.03540. https://arxiv.org/abs/2211.03540
+Reference: Greenblatt, R., Shlegeris, B., Sachan, K., &amp; Roger, F. (2023). AI Control: Improving Safety Despite Intentional Subversion. arXiv:2312.06942. https://arxiv.org/abs/2312.06942
+Reference: Rank, B., Bhatnagar, H., Prabhu, A., et al. (2026). PostTrainBench: Can LLM Agents Automate LLM Post-Training? arXiv:2603.08640. https://arxiv.org/abs/2603.08640
+Reference: Wen, J., Si, C., Yueh-Han, C., He, H., &amp; Feng, S. (2025). Predicting Empirical AI Research Outcomes with Language Models. arXiv:2506.00794. https://arxiv.org/abs/2506.00794</description>
+      <guid isPermaLink="false">7fe788e077fb4c88348ae1c837384c8162e76f12</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/035%20-%20When%20AI%20Starts%20Aligning%20AI.m4a" length="40063260" type="audio/mp4" />
+      <pubDate>Tue, 01 Sep 2026 06:19:36 +0000</pubDate>
+      <itunes:episode>35</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/035%20-%20When%20AI%20Starts%20Aligning%20AI.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
