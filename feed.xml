@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 06:59:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 06:44:14 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -701,5 +701,24 @@ Reference: Wilson, A. G., Hu, Z., Salakhutdinov, R., &amp; Xing, E. P. (2016). D
       <pubDate>Wed, 02 Sep 2026 06:19:44 +0000</pubDate>
       <itunes:episode>36</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/036%20-%20When%20Overconfidence%20Becomes%20The%20Training%20Signal.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>037 - When The Car Explains Itself</title>
+      <description>When The Car Explains Itself (2016-2026)
+
+In this episode we unpack a Nature paper published on 2 September 2026 by Eoin Kenny, Momchil Tomov and Julie Shah, working across MIT's Computer Science and Artificial Intelligence Laboratory, Harvard's Center for Brain Science, and the autonomous vehicle company Motional. Self-driving cars now plan with deep neural networks, which means nobody, including the safety driver sitting behind the wheel, can say why the car just did what it did. Explainable AI has spent years proposing answers to that, but almost entirely in simulators and toy setups, so whether any of it helps a real person in a real vehicle has stayed an open question. This paper closes it. The authors introduce the Concept-Wrapper Network, put it on a working self-driving car, and measure whether the explanations actually improve the human's mental model of the machine. We pair it with the paper whose planner it wraps, the two post-hoc explanation methods it argues are not faithful enough, the concept-bottleneck work it borrows from, and the paper that says the whole approach is a mistake.
+
+We walk through the architecture, where the entire argument lives: CW-Net replaces a pretrained planner's final reward layer with a concept classifier scoring human-readable ideas like CLOSE, ASV for approaching a stopped vehicle, BIKE and PEDESTRIAN, then feeds only those scores to a new reward layer, so the explanation is causally faithful by construction rather than a plausible story told afterwards. The wrapped planner is DriveIRL, trained by inverse reinforcement learning on roughly 80 hours of expert driving, and on the nuPlan benchmark the wrapper costs under one percent across every metric. Then the road tests, which are the heart of it. The car repeatedly stopped near a pickup zone and the driver assumed the zone was the cause, but the CLOSE concept was firing on parked cars, and moving the vehicle away made it drive again. The car braked beside a traffic cone and the driver blamed the cone, but the ASV concept had spiked on a stopped vehicle that did not exist, and removing the cone produced identical braking, making a hallucination visible. Most usefully, the BIKE concept stayed under one percent around a cyclist, exposing that the planner had never been wired to consume cyclist inputs at all and that a separate safety system was doing the braking, which is a case where an inaccurate explanation was the valuable one. In larger studies mental models improved for eight of nine Motional experts and twenty-seven of thirty non-experts, and a hundred-participant study on Las Vegas public roads using the SAGAT situational awareness framework found large effects during surprising events, Cohen's d near 1.29 for perception and 1.00 for comprehension, with no significant change during ordinary driving. Cynthia Rudin argued in 2019 that we should stop explaining black boxes for high-stakes decisions and build interpretable models instead; Ribeiro, Singh and Guestrin's LIME and Lundberg and Lee's SHAP are the post-hoc tradition this work says cannot guarantee faithfulness; Yuksekgonul, Wang and Zou's post-hoc concept bottleneck models are the middle path it takes its motifs from. We close on what is still unsettled: the concepts here were named by humans in advance, and the road's real vocabulary is much larger than any list somebody thought to write down.
+
+Reference: Kenny, E. M., Dharmavaram, A., Lee, S. U., Phan-Minh, T., Rajesh, S., Hu, Y., Major, L., Tomov, M. S., &amp; Shah, J. A. (2026). Explainable deep learning improves human mental models of self-driving cars. Nature, 657, 114-120. https://doi.org/10.1038/s41586-026-10950-5
+Reference: Rudin, C. (2019). Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead. Nature Machine Intelligence, 1, 206-215. arXiv:1811.10154. https://arxiv.org/abs/1811.10154
+Reference: Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016). "Why Should I Trust You?" Explaining the Predictions of Any Classifier. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. arXiv:1602.04938. https://arxiv.org/abs/1602.04938
+Reference: Lundberg, S. M., &amp; Lee, S.-I. (2017). A Unified Approach to Interpreting Model Predictions. Advances in Neural Information Processing Systems, 30, 4768-4777. arXiv:1705.07874. https://arxiv.org/abs/1705.07874
+Reference: Yuksekgonul, M., Wang, M., &amp; Zou, J. (2023). Post-hoc Concept Bottleneck Models. International Conference on Learning Representations. arXiv:2205.15480. https://arxiv.org/abs/2205.15480
+Reference: Phan-Minh, T., Howington, F., Chu, T.-S., et al. (2022). Driving in Real Life with Inverse Reinforcement Learning. arXiv:2206.03004. https://arxiv.org/abs/2206.03004</description>
+      <guid isPermaLink="false">8017a30b5a0fb7e73512ccf0b302ede81a019c43</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/037%20-%20When%20The%20Car%20Explains%20Itself.m4a" length="28556932" type="audio/mp4" />
+      <pubDate>Thu, 03 Sep 2026 06:18:14 +0000</pubDate>
+      <itunes:episode>37</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/037%20-%20When%20The%20Car%20Explains%20Itself.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
