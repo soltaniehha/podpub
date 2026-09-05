@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Sep 2026 07:09:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 07:24:38 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -739,5 +739,24 @@ Reference: Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2
       <pubDate>Fri, 04 Sep 2026 06:23:07 +0000</pubDate>
       <itunes:episode>38</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/038%20-%20When%20Sounding%20Human%20Becomes%20A%20Setting.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>039 - When The Model Becomes The Measurement</title>
+      <description>Leveraging Generative Artificial Intelligence For Causal Inference With Unstructured Data (September 2026)
+
+In this episode we unpack a new PNAS paper by Kosuke Imai and Kentaro Nakamura of Harvard, published on 3 September 2026 and circulated as arXiv:2507.03897. Their framework, GenAI-Powered Inference or GPI, answers a problem that has quietly limited empirical social science for years: when the thing confounding your study is buried in text or images, you do not know which features matter, and adjusting for the raw object is statistically hopeless. Their move is to stop treating a language model as a feature extractor and start using it as a generator. Prompt an open-source model to reproduce the document you already have, keep the internal representation it used, and that representation is guaranteed by construction to contain everything needed to produce the document. No fine-tuning required, which is what makes it cheap enough for ordinary researchers to run.
+
+We walk through the three applications that carry the paper. A reanalysis of Chinese social media censorship, 75,324 Weibo posts run through LLaMA3 and Gemma3 with double machine learning, which reverses the original finding and shows that prior censorship significantly reduces later posting, with a relative bias of 0.084 against 5.350 for the text-matching approach it replaces. More than 9,000 protest images reproduced through Stable Diffusion 1.5 and 2.1, where the apparent effect of a nighttime scene on perceived violence falls by more than half once GPI adjusts for what else the image contains. And a conjoint experiment on political rhetoric, 336 arguments and 13,268 pairwise comparisons, re-fit so that appeal to authority and ad hominem separate cleanly where the original analysis could not resolve them. We set all of this against Egami and colleagues' framework for causal inference with texts, Veitch, Sridhar and Blei's causally sufficient embeddings, Pryzant and colleagues' TextCause, D'Amour and colleagues' proof that overlap collapses in high dimensions, and the DoubleMLDeep estimator, and close on the uncomfortable parts: the guarantee is about reproducing a document rather than understanding it, the deconfounder cannot be interpreted, and a published finding has just been overturned by a method two months old.
+
+Reference: Imai, K., &amp; Nakamura, K. (2026). Leveraging generative AI for causal inference with unstructured data. Proceedings of the National Academy of Sciences, 123(36), e2530532123. https://doi.org/10.1073/pnas.2530532123 (preprint: arXiv:2507.03897, https://arxiv.org/abs/2507.03897)
+Reference: Egami, N., Fong, C. J., Grimmer, J., Roberts, M. E., &amp; Stewart, B. M. (2022). How to make causal inferences using texts. Science Advances, 8(42), eabg2652. https://doi.org/10.1126/sciadv.abg2652
+Reference: Veitch, V., Sridhar, D., &amp; Blei, D. M. (2020). Adapting text embeddings for causal inference. Proceedings of the 36th Conference on Uncertainty in Artificial Intelligence (UAI). arXiv:1905.12741. https://arxiv.org/abs/1905.12741
+Reference: Pryzant, R., Card, D., Jurafsky, D., Veitch, V., &amp; Sridhar, D. (2021). Causal effects of linguistic properties. Proceedings of NAACL-HLT 2021, 4095-4109. arXiv:2010.12919. https://arxiv.org/abs/2010.12919
+Reference: D'Amour, A., Ding, P., Feller, A., Lei, L., &amp; Sekhon, J. (2021). Overlap in observational studies with high-dimensional covariates. Journal of Econometrics, 221(2), 644-654. https://doi.org/10.1016/j.jeconom.2019.10.014
+Reference: Klaassen, S., Teichert-Kluge, J., Bach, P., Chernozhukov, V., Spindler, M., &amp; Vijaykumar, S. (2024). DoubleMLDeep: Estimation of causal effects with multimodal data. arXiv:2402.01785. https://arxiv.org/abs/2402.01785</description>
+      <guid isPermaLink="false">222fc8e598d4703da6934b1848cd20ebdea4fb9b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/039%20-%20When%20The%20Model%20Becomes%20The%20Measurement.m4a" length="41495166" type="audio/mp4" />
+      <pubDate>Sat, 05 Sep 2026 06:17:34 +0000</pubDate>
+      <itunes:episode>39</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/039%20-%20When%20The%20Model%20Becomes%20The%20Measurement.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
