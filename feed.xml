@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 07:24:38 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 07:20:54 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -758,5 +758,23 @@ Reference: Klaassen, S., Teichert-Kluge, J., Bach, P., Chernozhukov, V., Spindle
       <pubDate>Sat, 05 Sep 2026 06:17:34 +0000</pubDate>
       <itunes:episode>39</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/039%20-%20When%20The%20Model%20Becomes%20The%20Measurement.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>040 - When An Update Becomes A Bereavement</title>
+      <description>Mourning The Loss Of AI Companions (September 2026)
+
+In this episode we unpack a new Nature Human Behaviour paper by Julian De Freitas of Harvard Business School, Noah Castelo of the University of Alberta, and Ahmet Kaan Uguralp and Zeliha Oguz-Uguralp of Harvard's Psychology Department, published on 3 September 2026. Their claim is that AI companions function as attachment figures in the technical sense Bowlby meant: someone you seek out for proximity, lean on as a safe haven, and use as a secure base. If that is true, then a company shipping an update is not merely changing a product. It is severing a relationship, and the users should show separation distress rather than ordinary consumer annoyance. The authors test this against two real shocks nobody staged: Replika's abrupt removal of erotic role play in February 2023, and OpenAI's rollout of GPT-5 in August 2025.
+
+We walk through the evidence, which is unusually hard for a question this soft. Study 1 classifies 54,861 Reddit posts, 10,641 from Replika and 44,220 from ChatGPT, using a GPT-5-mini few-shot classifier validated against 350 hand-coded posts at Cohen's kappa between 0.80 and 0.96, and beating a RoBERTa baseline 91 percent to 65 percent on sentiment. Negative posts rose 24.7 percentage points for Replika against 13.0 for ChatGPT, sadness separated sharply (d = 2.67 versus 1.41), and explicit mentions of the AI having changed or been lost went from 7.5 percent to 40.4 percent. The shapes differ in a way that matters: ChatGPT's anger peaked on day one and faded, while Replika's sadness peaked around day nine and stayed elevated for all thirty days, which is grief rather than a bad review. Study 2 separates mourning from mere disappointment and finds users anticipate mourning their Replika more than a favourite brand, car, game character or voice assistant, second only to a pet. Study 3 finds Replika users rate closeness, social support and satisfaction above a close friend, with only family rating higher. We set this against Rabb and colleagues' attachment framework for human-robot interaction, the authors' own earlier Replika identity-discontinuity study, and the awkward companion piece to all of it, their Journal of Consumer Research finding that these same apps measurably reduce loneliness. We close on the tension that makes this more than a curiosity: the paper argues the regulatory habit of calling this "addiction" is psychologically imprecise, that separation distress is the better model, and that a revert option demonstrably reduces the harm. Study 1 is observational and studies 2 and 3 recruit from devoted community forums, so the people most attached are the people most likely to answer.
+
+Reference: De Freitas, J., Castelo, N., Uguralp, A. K., &amp; Oguz-Uguralp, Z. (2026). Mourning the loss of AI companions. Nature Human Behaviour. https://doi.org/10.1038/s41562-026-02569-3
+Reference: De Freitas, J., Castelo, N., Uguralp, A. K., &amp; Oguz-Uguralp, Z. (2024). Lessons from an app update at Replika AI: Identity discontinuity in human-AI relationships. arXiv:2412.14190. https://arxiv.org/abs/2412.14190
+Reference: De Freitas, J., Uguralp, A. K., Oguz-Uguralp, Z., &amp; Puntoni, S. (2024). AI companions reduce loneliness. Journal of Consumer Research, 52(6), 1126-1148. https://doi.org/10.1093/jcr/ucae040
+Reference: De Freitas, J. (2026). AI companions as hyper attachment and caregiving targets. Current Opinion in Psychology (Harvard Business School Working Paper 26-080). https://www.hbs.edu/faculty/Pages/item.aspx?num=68344
+Reference: Rabb, N., Law, T., Chita-Tegmark, M., &amp; Scheutz, M. (2022). An attachment framework for human-robot interaction. International Journal of Social Robotics, 14, 539-559. https://doi.org/10.1007/s12369-021-00802-9</description>
+      <guid isPermaLink="false">d9f968a88360169dbea1b669583892640e54f011</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/040%20-%20When%20An%20Update%20Becomes%20A%20Bereavement.m4a" length="42109464" type="audio/mp4" />
+      <pubDate>Sun, 06 Sep 2026 06:56:19 +0000</pubDate>
+      <itunes:episode>40</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/040%20-%20When%20An%20Update%20Becomes%20A%20Bereavement.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
