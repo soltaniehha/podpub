@@ -1,0 +1,1025 @@
+WEBVTT
+
+1
+00:00:00.071 --> 00:00:08.775
+<v Daniel>You know, when you read a science fiction novel about cloning, it usually involves like some glowing vat of DNA in a sterile underground lab.</v>
+
+2
+00:00:08.895 --> 00:00:10.655
+<v Maya>Oh, yeah, totally. The classic</v>
+
+3
+00:00:10.715 --> 00:00:24.012
+<v Daniel>truth. And the goal is almost always to perfectly replicate a human body. But right now, like. Out here in the real world, startups and social scientists are attempting something arguably much more ambitious.</v>
+
+4
+00:00:24.213 --> 00:00:26.995
+<v Maya>Yeah, they aren't trying to clone your body. They are trying to clone your mind.</v>
+
+5
+00:00:27.135 --> 00:00:29.377
+<v Daniel>Exactly. They're building what are called digital twins.</v>
+
+6
+00:00:29.617 --> 00:00:29.877
+<v Maya>Right.</v>
+
+7
+00:00:29.997 --> 00:00:39.104
+<v Daniel>So these are AI models, specifically large language models, that get fed a massive, highly detailed dossier about a real living person.</v>
+
+8
+00:00:39.565 --> 00:00:39.745
+<v Maya>Mm-hmm.</v>
+
+9
+00:00:40.165 --> 00:00:50.851
+<v Daniel>And the promise is that these A.I. twins will simulate exactly how you yes, you listen to this right now, how you would think, how you would vote, what moral tradeoffs you'd make and even what you would buy.</v>
+
+10
+00:00:51.291 --> 00:00:55.494
+<v Maya>It is an incredibly seductive pitch. I mean, especially for anyone in research or marketing.</v>
+
+11
+00:00:55.534 --> 00:00:56.034
+<v Daniel>Oh, for sure.</v>
+
+12
+00:00:56.274 --> 00:01:07.080
+<v Maya>The core idea is that we can essentially replace expensive, messy, time consuming human research subjects with cheap, instantly available simulated ones.</v>
+
+13
+00:01:07.240 --> 00:01:08.542
+<v Daniel>Just generate them on demand.</v>
+
+14
+00:01:08.682 --> 00:01:23.420
+<v Maya>Exactly. Say you want to know how a specific demographic in the Midwest will react to a new public policy or a new consumer product. Right. Instead of spending months running focus groups, you just spin up thousands of their digital</v>
+
+15
+00:01:23.440 --> 00:01:24.522
+<v Maya>twins and ask them.</v>
+
+16
+00:01:24.702 --> 00:01:29.865
+<v Daniel>But today we're taking a deep dive into our source material to find out if this is actually working.</v>
+
+17
+00:01:30.025 --> 00:01:30.265
+<v Maya>Yeah.</v>
+
+18
+00:01:30.345 --> 00:01:39.309
+<v Daniel>We have a stack of research in front of us. But our absolute north star for this conversation is a massive brand new paper.</v>
+
+19
+00:01:39.369 --> 00:01:40.030
+<v Maya>It's huge.</v>
+
+20
+00:01:40.230 --> 00:01:44.032
+<v Daniel>It was published in the journal Science Advances on September 2, 2026.</v>
+
+21
+00:01:44.392 --> 00:01:44.632
+<v Maya>Right.</v>
+
+22
+00:01:44.772 --> 00:01:50.855
+<v Daniel>The lead author is Tianyi Peng, working with a team of 23 researchers almost entirely based at Columbia University.</v>
+
+23
+00:01:50.875 --> 00:01:52.636
+<v Maya>A very heavy hitting team. Definitely.</v>
+
+24
+00:01:53.136 --> 00:02:00.343
+<v Daniel>And our mission today is to unpack this absolute mega study to see if these digital twins actually work or if we're just fooling ourselves.</v>
+
+25
+00:02:00.563 --> 00:02:05.828
+<v Maya>To really frame the stakes here, you have to picture a backdrop of a vast, slightly distorted cityscape.</v>
+
+26
+00:02:05.988 --> 00:02:06.969
+<v Daniel>Okay, I like that image.</v>
+
+27
+00:02:07.169 --> 00:02:15.356
+<v Maya>Like a funhouse mirror reflection of our own world. Because right now, there are hundreds of millions of dollars riding on this technology.</v>
+
+28
+00:02:15.456 --> 00:02:15.917
+<v Daniel>Real money.</v>
+
+29
+00:02:16.257 --> 00:02:31.153
+<v Maya>Oh, absolutely. There is venture capital flowing, startups launching, and entire academic research pipelines being rebuilt around the assumption that these digital twins are accurate. Yes. So this new science advances study is the ultimate reality</v>
+
+30
+00:02:31.213 --> 00:02:33.616
+<v Maya>check for that entire ecosystem.</v>
+
+31
+00:02:34.075 --> 00:02:39.302
+<v Daniel>OK, let's unpack this, because the central claim of this new paper is a massive wake-up call.</v>
+
+32
+00:02:39.563 --> 00:02:40.083
+<v Maya>It really is.</v>
+
+33
+00:02:40.464 --> 00:02:46.352
+<v Daniel>After running the largest, most rigorous test of digital twins to date, the researchers found that they barely work.</v>
+
+34
+00:02:47.018 --> 00:02:50.279
+<v Maya>I mean, barely might even be generous, depending on how you look at the numbers.</v>
+
+35
+00:02:50.380 --> 00:02:51.020
+<v Daniel>Wow. OK.</v>
+
+36
+00:02:51.220 --> 00:02:55.962
+<v Maya>To give you a sense of why this result matters so much, we have to look at the scale of what they actually did.</v>
+
+37
+00:02:56.122 --> 00:02:57.763
+<v Daniel>Right. Because this wasn't just a small test.</v>
+
+38
+00:02:57.823 --> 00:03:06.927
+<v Maya>No, not at all. This wasn't a small, isolated experiment with like 50 undergrads in a psychology lab. They ran this across 19 pre-registered studies.</v>
+
+39
+00:03:07.353 --> 00:03:14.498
+<v Daniel>Okay, so when you say 19 studies, what are they actually testing? Like what kind of questions are they asking these AI twins?</v>
+
+40
+00:03:14.818 --> 00:03:19.541
+<v Maya>They tested 164 different specific outcomes.</v>
+
+41
+00:03:19.581 --> 00:03:20.082
+<v Daniel>164.</v>
+
+42
+00:03:20.182 --> 00:03:31.330
+<v Maya>Yeah, they are asking questions across the entire spectrum of human behavior. So economic games, moral dilemmas, consumer choices, political preferences, survey questions.</v>
+
+43
+00:03:31.430 --> 00:03:32.490
+<v Daniel>Basically everything.</v>
+
+44
+00:03:32.611 --> 00:03:43.120
+<v Maya>Everything. They gathered 13,506 human responses. Okay. And that was from 1,784 unique human participants.</v>
+
+45
+00:03:43.160 --> 00:03:44.862
+<v Daniel>Wow. So a huge data set.</v>
+
+46
+00:03:45.022 --> 00:03:56.712
+<v Maya>Massive. Then they built digital twins of those exact same people by feeding the AI their personal data. Got it. And they did this using a public data set called Twin2K500.</v>
+
+47
+00:03:57.433 --> 00:03:57.813
+<v Daniel>Okay.</v>
+
+48
+00:03:57.833 --> 00:04:01.955
+<v Maya>So finally, they had the digital twins answer the exact same questions the humans did.</v>
+
+49
+00:04:02.115 --> 00:04:02.855
+<v Daniel>And the results?</v>
+
+50
+00:04:03.175 --> 00:04:09.718
+<v Maya>Well, when they looked at the correlation between a real human's answer and their digital twin's answer, the average correlation was a mere .20.</v>
+
+51
+00:04:11.127 --> 00:04:11.588
+<v Daniel>Oh, wow.</v>
+
+52
+00:04:11.688 --> 00:04:14.110
+<v Maya>Yeah, to be precise, 0.197. That is low. It is. Now, out of</v>
+
+53
+00:04:14.310 --> 00:04:15.331
+<v Daniel>those 164 outcomes,</v>
+
+54
+00:04:15.452 --> 00:04:22.759
+<v Maya>the correlation was technically positive in about 96% of them, like 157 outcomes. Okay. But it was only significantly positive in 59% of them, so just 97 outcomes.</v>
+
+55
+00:04:31.188 --> 00:04:46.016
+<v Daniel>Okay, let me pause you there because a correlation of barely 20% sounds terrible, but I want to make sure we're translating that into real-world impact. Sure. Like if I'm a researcher relying on this, what does a 0.20 correlation actually mean for</v>
+
+56
+00:04:46.056 --> 00:04:46.536
+<v Daniel>my data?</v>
+
+57
+00:04:46.736 --> 00:04:52.798
+<v Maya>It basically means the A.I. is capturing almost none of the actual variation between individual people.</v>
+
+58
+00:04:52.938 --> 00:04:53.418
+<v Daniel>Interesting.</v>
+
+59
+00:04:53.819 --> 00:05:02.962
+<v Maya>If you and your neighbor have completely different views on, say, a local tax law, a point to zero correlation means the A.I. twin is mostly just guessing.</v>
+
+60
+00:05:03.338 --> 00:05:04.758
+<v Daniel>Or giving like a generic answer.</v>
+
+61
+00:05:04.939 --> 00:05:10.140
+<v Maya>Exactly. Rather than accurately reflecting the specific nuanced differences between the two of you.</v>
+
+62
+00:05:10.280 --> 00:05:25.145
+<v Daniel>It's barely moving in tandem with the real humans at all. Which brings us to the finding in the paper that just completely blew my mind. Like this is the anchor finding that I think everything else in this deep dive orbits around. It's the big one. The researchers wanted to see what happens if</v>
+
+63
+00:05:25.185 --> 00:05:28.586
+<v Daniel>you give the AI an absolute mountain of information.</v>
+
+64
+00:05:28.686 --> 00:05:28.946
+<v Maya>Yeah.</v>
+
+65
+00:05:29.546 --> 00:05:36.590
+<v Daniel>So they built a full persona twin. They fed the participants answers to more than 500 personal questions.</v>
+
+66
+00:05:36.910 --> 00:05:43.754
+<v Maya>Which is roughly 128,000 characters of intimate individual detail per person.</v>
+
+67
+00:05:43.834 --> 00:05:45.835
+<v Daniel>That is basically reading someone's diary.</v>
+
+68
+00:05:46.075 --> 00:05:46.675
+<v Maya>Yeah, pretty much.</v>
+
+69
+00:05:46.815 --> 00:05:59.582
+<v Daniel>I mean, a short novel's worth of quirks, preferences, past behaviors and beliefs. Just a massive dossier. And then... They compared that hyper-detailed twin to what they called a demographics-only twin.</v>
+
+70
+00:05:59.942 --> 00:06:00.222
+<v Maya>Right.</v>
+
+71
+00:06:00.282 --> 00:06:04.684
+<v Daniel>And this demographic twin was built using just 14 basic census box variables.</v>
+
+72
+00:06:04.704 --> 00:06:05.545
+<v Maya>Just the basics.</v>
+
+73
+00:06:05.585 --> 00:06:20.194
+<v Daniel>Yeah, we're talking age, sex, race, income, region, political part, just the bare-bones basics. So they pitted the 500-question twin against the 14-checkbox twin. And the individual level accuracy</v>
+
+74
+00:06:20.634 --> 00:06:24.217
+<v Daniel>for the twin fed 500 personal questions was almost 75%.</v>
+
+75
+00:06:24.858 --> 00:06:27.620
+<v Maya>Specifically, 0.748.</v>
+
+76
+00:06:28.060 --> 00:06:33.345
+<v Daniel>Right. And the accuracy for the twin fed only 14 basic demographic variables.</v>
+
+77
+00:06:33.805 --> 00:06:35.266
+<v Maya>It was 0.746.</v>
+
+78
+00:06:35.726 --> 00:06:36.187
+<v Daniel>They tied.</v>
+
+79
+00:06:36.427 --> 00:06:51.418
+<v Maya>Statistically speaking, yes, they tied. That's crazy. The p-value there is 0.37, meaning the difference between those two numbers is just random noise. Wow. 500 deeply personal questions about your life by researchers essentially nothing</v>
+
+80
+00:06:51.598 --> 00:06:53.439
+<v Maya>over knowing your basic census box.</v>
+
+81
+00:06:53.699 --> 00:06:56.000
+<v Daniel>I am having a hard time wrapping my head around that.</v>
+
+82
+00:06:56.060 --> 00:06:57.221
+<v Maya>It's counterintuitive, right?</v>
+
+83
+00:06:57.261 --> 00:07:09.187
+<v Daniel>Totally. It's like writing a 500-page, deeply personal autobiography, handing it to the AI, and the AI just completely ignores it, reads the back cover blurbs, and uses that to decide who you are.</v>
+
+84
+00:07:09.347 --> 00:07:10.448
+<v Maya>That's exactly what it's doing.</v>
+
+85
+00:07:10.628 --> 00:07:20.413
+<v Daniel>But wait, if a massive dossier buys you nothing over a census box, aren't these twins just playing out a demographic stereotype instead of actually simulating an individual mind?</v>
+
+86
+00:07:20.623 --> 00:07:22.688
+<v Maya>That is precisely what the data proves.</v>
+
+87
+00:07:22.748 --> 00:07:23.189
+<v Daniel>It's unbelievable.</v>
+
+88
+00:07:23.269 --> 00:07:28.401
+<v Maya>But to really drive the nail into the coffin here, we have to look at the baselines they established.</v>
+
+89
+00:07:28.602 --> 00:07:29.805
+<v Daniel>OK. What were the baselines?</v>
+
+90
+00:07:30.144 --> 00:07:37.106
+<v Maya>Well, they didn't just test the 500-question twin and the 14-variable twin. They also tested an empty persona.</v>
+
+91
+00:07:37.447 --> 00:07:38.367
+<v Daniel>An empty persona?</v>
+
+92
+00:07:38.407 --> 00:07:45.229
+<v Maya>Yeah, an AI twin given absolutely zero personal information just asked to answer the questions blind.</v>
+
+93
+00:07:45.329 --> 00:07:47.530
+<v Daniel>Wait, let me guess. It probably did terribly, right?</v>
+
+94
+00:07:47.610 --> 00:07:50.911
+<v Maya>Actually, that empty persona still achieved an accuracy of 0.734.</v>
+
+95
+00:07:52.732 --> 00:07:59.593
+<v Daniel>You're kidding. No. So knowing literally nothing about me still gets the AI to over 73% accuracy?</v>
+
+96
+00:07:59.613 --> 00:08:10.896
+<v Maya>Yes. And get this. If the system were just guessing randomly based on the structure of the questions, the accuracy sits at roughly 63%, so 0.629.</v>
+
+97
+00:08:11.036 --> 00:08:25.615
+<v Daniel>Okay. I am a bit confused here. If someone told me an AI was 75% accurate at predicting human behavior, I probably think that was a massive success. But you're saying it's not. Why is 75% accuracy considered a failure in this context?</v>
+
+98
+00:08:25.919 --> 00:08:40.267
+<v Maya>This is a critical point. It proves why looking at raw accuracy is a totally misleading yardstick in this field. Okay. Because if just guessing randomly gets you to 63% and knowing absolutely nothing gets you to 73%,</v>
+
+99
+00:08:40.307 --> 00:08:46.911
+<v Maya>then reaching 75% with 128,000 character dossier isn't impressive at all.</v>
+
+100
+00:08:46.931 --> 00:08:47.512
+<v Daniel>Oh, I see.</v>
+
+101
+00:08:47.812 --> 00:08:51.374
+<v Maya>It shows that the AI is just relying on base rate probabilities.</v>
+
+102
+00:08:51.834 --> 00:08:54.856
+<v Daniel>Like it's just playing the odds of what an average human might do.</v>
+
+103
+00:08:55.308 --> 00:09:03.655
+<v Maya>Exactly. Rather than capturing your unique spark. This is why correlation, that weak point two zero number we mentioned earlier, is the honest metric.</v>
+
+104
+00:09:03.775 --> 00:09:07.798
+<v Daniel>Right. Because correlation actually measures whether the AI moves when you move.</v>
+
+105
+00:09:08.019 --> 00:09:14.644
+<v Maya>Yes. It tests if the AI can predict the unique idiosyncratic ways you differ from the crowd. And it fails.</v>
+
+106
+00:09:14.884 --> 00:09:29.673
+<v Daniel>So if they aren't actually modeling individual minds, what are they doing? This is where the title of the Science Advances paper comes in, and I think it's brilliant. The paper is titled, Digital Twins Are Funhouse Mirrors, Five Systematic Distortions.</v>
+
+107
+00:09:29.833 --> 00:09:30.894
+<v Maya>It's a great title.</v>
+
+108
+00:09:30.934 --> 00:09:35.397
+<v Daniel>They aren't just failing randomly, really. They're failing in highly specific, warped ways.</v>
+
+109
+00:09:36.234 --> 00:09:51.028
+<v Maya>The funhouse mirror analogy is perfect because a funhouse mirror doesn't show you a completely different person. It shows you a recognizable but deeply distorted version of yourself. Right. The researchers categorized five of these systematic distortions.</v>
+
+110
+00:09:51.108 --> 00:09:51.909
+<v Daniel>Let's go through them.</v>
+
+111
+00:09:51.929 --> 00:09:55.472
+<v Maya>The first two are insufficient individuation and stereotyping.</v>
+
+112
+00:09:55.673 --> 00:09:55.933
+<v Daniel>Okay.</v>
+
+113
+00:09:56.533 --> 00:10:11.405
+<v Maya>As we just discussed, the AI doesn't differentiate enough between unique people because it falls back on those 14 demographic checkboxes. It relies heavily on societal stereotypes associated with those groups rather than the person's actual 500 question</v>
+
+114
+00:10:11.425 --> 00:10:11.925
+<v Maya>dossier.</v>
+
+115
+00:10:12.025 --> 00:10:14.087
+<v Daniel>I want to dig into the mechanism of that for a</v>
+
+116
+00:10:14.127 --> 00:10:14.427
+<v Maya>second. Let's</v>
+
+117
+00:10:14.467 --> 00:10:21.032
+<v Daniel>do it. Why does the AI do that? Like, why does it ignore the nuance and default to the stereotype?</v>
+
+118
+00:10:21.260 --> 00:10:35.897
+<v Maya>We can actually look at a background paper in our stack to understand the why. In 2025, Wang, Morgenstern, and Dickerson published a paper in Nature Machine Intelligence that essentially predicted this exact failure. Really?</v>
+
+119
+00:10:35.977 --> 00:10:43.012
+<v Maya>Yeah. They provided the mathematical mechanism. Large language models inherently flatten and misportray identity groups.</v>
+
+120
+00:10:43.353 --> 00:10:44.033
+<v Daniel>Flatten them how?</v>
+
+121
+00:10:44.174 --> 00:10:52.045
+<v Maya>Think about how an LLM is built. Its core architecture is designed to predict the most likely next word based on its training data.</v>
+
+122
+00:10:52.245 --> 00:10:53.466
+<v Daniel>Right. It's just predicting text.</v>
+
+123
+00:10:53.586 --> 00:11:07.371
+<v Maya>Exactly. So if the prompt includes a 45 year old middle class suburban voter, the mathematical probability of its next word is drawn from the massive blended average of every 45 year old middle class suburban voter on the Internet.</v>
+
+124
+00:11:07.811 --> 00:11:08.352
+<v Daniel>Ah, I see.</v>
+
+125
+00:11:08.712 --> 00:11:20.163
+<v Maya>The math fundamentally sands off the edges. So the new science advances findings on insufficient individuation and stereotyping are basically Rang's theory confirmed at an unprecedented empirical scale.</v>
+
+126
+00:11:20.203 --> 00:11:24.987
+<v Daniel>That makes total sense. It's literally programmed to regress to the mean. What are the other distortions?</v>
+
+127
+00:11:25.067 --> 00:11:38.786
+<v Maya>The third is representation bias. The twins actually perform better or are more accurate for certain demographic groups, often those with higher education or more moderate views, while poorly representing marginalized or extreme groups.</v>
+
+128
+00:11:39.067 --> 00:11:40.787
+<v Daniel>Makes sense based on Internet training data.</v>
+
+129
+00:11:41.027 --> 00:11:47.269
+<v Maya>Right. And the fourth is ideological biases. The AI models have their own inherent leanings.</v>
+
+130
+00:11:47.529 --> 00:12:02.472
+<v Daniel>And just a quick note for you listening. To be absolutely clear, when the paper talks about ideological biases like the twins leaning disproportionately pro-social or pro-technology, we aren't talking about left-wing or right-wing political agendas from the researcher.</v>
+
+131
+00:12:02.532 --> 00:12:17.360
+<v Daniel>No, not at all. It's just a mechanical reality. The AI models adopt the average biases of whatever massive scrape of internet data they ingested. It applies a universal slanted filter over the human's actual views, regardless of what those original</v>
+
+132
+00:12:17.400 --> 00:12:22.903
+<v Daniel>views were. We aren't endorsing any specific political side here, just reporting what the models do mechanically.</v>
+
+133
+00:12:22.923 --> 00:12:33.250
+<v Maya>That's exactly right. It's a byproduct of the training data, not some conspiracy. But that brings us to the fifth distortion, which is perhaps the most interesting for anyone trying to understand human nature.</v>
+
+134
+00:12:33.430 --> 00:12:33.670
+<v Daniel>Okay.</v>
+
+135
+00:12:33.990 --> 00:12:35.270
+<v Maya>It's called hyper rationality.</v>
+
+136
+00:12:35.911 --> 00:12:50.814
+<v Daniel>Here's where it gets really interesting, because hold on, I want to push back on this one. Go for it. Shouldn't an AI being relentlessly logical and rational make it a better simulator? Like we want our computers to be smart. Why is being highly rational</v>
+
+137
+00:12:51.215 --> 00:12:52.855
+<v Daniel>a bad thing for a social scientist?</v>
+
+138
+00:12:52.995 --> 00:12:55.436
+<v Maya>Because humans are not hyper rational.</v>
+
+139
+00:12:55.616 --> 00:12:56.416
+<v Daniel>That is very true.</v>
+
+140
+00:12:56.576 --> 00:13:11.461
+<v Maya>Right. If you are a behavioral scientist, the irrationality is exactly what you are trying to study. Think about it like trying to study how people drive in rush hour traffic. But you decide to simulate it using autonomous cars that never speed, never</v>
+
+141
+00:13:11.501 --> 00:13:15.522
+<v Maya>get road rage, never tailgate and never spill hot coffee on their lap.</v>
+
+142
+00:13:15.602 --> 00:13:18.403
+<v Daniel>Right. The traffic jam never happens because the simulation is too perfect.</v>
+
+143
+00:13:18.543 --> 00:13:33.393
+<v Maya>Exactly. The messiness is the point. the AI twins behave like much tidier, relentlessly consistent decision makers. They don't get tired. They don't get distracted by a weirdly worded question. And they don't hold contradictory beliefs in the</v>
+
+144
+00:13:33.434 --> 00:13:35.135
+<v Maya>way real humans constantly do.</v>
+
+145
+00:13:35.295 --> 00:13:36.176
+<v Daniel>And we do that all the time.</v>
+
+146
+00:13:36.336 --> 00:13:42.180
+<v Maya>Exactly. So they wash out the exact messy behavioral effects that social scientists are looking for.</v>
+
+147
+00:13:42.440 --> 00:13:48.865
+<v Daniel>And the paper actually puts a number on this lack of messiness, right? They call the twins under dispersed.</v>
+
+148
+00:13:49.085 --> 00:13:56.871
+<v Maya>Yes. The ratio of the twin standard deviation to the human standard deviation is 0.634. Okay.</v>
+
+149
+00:13:57.091 --> 00:13:58.172
+<v Daniel>Meaning what?</v>
+
+150
+00:13:58.472 --> 00:14:12.582
+<v Maya>In plain English, that means the spread of answers given by the AI twins is much narrower than real life. Got it. The AI twins are simply too similar to each other compared to the wide, chaotic, messy spread of real human opinions.</v>
+
+151
+00:14:12.743 --> 00:14:13.803
+<v Daniel>That's a great way to put it.</v>
+
+152
+00:14:13.903 --> 00:14:22.246
+<v Maya>What's fascinating here is that the researchers actually surveyed human experts in the field, asking them to predict how well the digital twins would perform on these tests.</v>
+
+153
+00:14:22.406 --> 00:14:22.886
+<v Daniel>Oh, really?</v>
+
+154
+00:14:22.906 --> 00:14:29.728
+<v Maya>Yeah. And the experts got it completely wrong. They widely assumed the AI would perfectly capture all that human nuance.</v>
+
+155
+00:14:30.068 --> 00:14:41.279
+<v Daniel>Which brings us to the incredible dramatic tension in this field right now. Oh, yeah. The drama. Because wait a minute. Didn't earlier studies just a few years ago say that digital twins were incredibly accurate?</v>
+
+156
+00:14:41.479 --> 00:14:42.120
+<v Maya>They did.</v>
+
+157
+00:14:42.280 --> 00:14:57.094
+<v Daniel>I'm looking at our sources and there's a major paper from Park and colleagues at Stanford. It's the one titled LLM Agents Grounded in Self-Reports Enable General Purpose Simulation of Individuals. It's the one. They built generative agents, basically</v>
+
+158
+00:14:57.154 --> 00:15:08.002
+<v Daniel>twins. Of over a thousand people from two hour human interviews. Right. And they reported an 85 percent relative accuracy on the general social survey.</v>
+
+159
+00:15:08.022 --> 00:15:09.002
+<v Maya>Yeah. Eighty five percent.</v>
+
+160
+00:15:09.262 --> 00:15:17.728
+<v Daniel>And that specific glowing result birthed a startup called Simile.ai, which went on to raise a hundred million dollars.</v>
+
+161
+00:15:17.868 --> 00:15:20.249
+<v Maya>That is the $100 million tension right there.</v>
+
+162
+00:15:20.429 --> 00:15:20.689
+<v Daniel>Wow.</v>
+
+163
+00:15:20.849 --> 00:15:32.732
+<v Maya>The dominant narrative was that this technology was already solved, highly accurate, and ready for commercialization. But as this new Science Advances paper explicitly points out, Simile.ai's data is not public.</v>
+
+164
+00:15:32.972 --> 00:15:33.292
+<v Daniel>Oh, wow.</v>
+
+165
+00:15:33.552 --> 00:15:39.594
+<v Maya>Yeah. Independent researchers cannot verify those claims. They can't check the underlying code, and they can't replicate the data.</v>
+
+166
+00:15:39.914 --> 00:15:43.575
+<v Daniel>But the Stanford paper isn't even the ultimate plot twist in our deep dive today.</v>
+
+167
+00:15:43.615 --> 00:15:44.235
+<v Maya>No, it gets better.</v>
+
+168
+00:15:44.828 --> 00:15:55.612
+<v Daniel>There was another earlier highly optimistic paper claiming 72% accuracy and 88% relative accuracy. It was based on the twin 2K500 data set.</v>
+
+169
+00:15:55.752 --> 00:15:55.912
+<v Maya>Yep.</v>
+
+170
+00:15:56.672 --> 00:16:01.974
+<v Daniel>The authors of that optimistic paper were Tubia and colleagues. And who is that?</v>
+
+171
+00:16:02.234 --> 00:16:03.294
+<v Maya>It's the same team.</v>
+
+172
+00:16:03.474 --> 00:16:07.275
+<v Daniel>That is the exact same Columbia University team behind today's paper.</v>
+
+173
+00:16:07.495 --> 00:16:08.976
+<v Maya>It's a fascinating dynamic.</v>
+
+174
+00:16:09.323 --> 00:16:17.409
+<v Daniel>So what does this all mean? How does a team of brilliant researchers publicly refute their own prior blockbuster claim?</v>
+
+175
+00:16:17.657 --> 00:16:31.823
+<v Maya>I think we are witnessing a genuinely beautiful, rigorous example of scientific self-correction in real time. Yeah. The Columbia team essentially built a better magnifying glass, looked back at their own previous work, and realized they were looking at a mirage.</v>
+
+176
+00:16:32.143 --> 00:16:32.483
+<v Daniel>Wow.</v>
+
+177
+00:16:32.563 --> 00:16:41.046
+<v Maya>They explain in this new paper that there are two main reasons for the massive discrepancy between those old optimistic numbers and today's sobering reality.</v>
+
+178
+00:16:41.266 --> 00:16:42.947
+<v Daniel>Okay, let's break those down. What's the first reason?</v>
+
+179
+00:16:43.202 --> 00:16:46.084
+<v Maya>The first is the yardstick they were using to measure success.</v>
+
+180
+00:16:46.564 --> 00:16:47.225
+<v Daniel>The yardstick?</v>
+
+181
+00:16:47.365 --> 00:16:53.629
+<v Maya>Yeah. The older studies, including their own, often relied on something called relative accuracy.</v>
+
+182
+00:16:53.849 --> 00:16:54.069
+<v Daniel>Okay.</v>
+
+183
+00:16:54.249 --> 00:16:59.953
+<v Maya>This means they scaled the AI's accuracy against human retest reliability.</v>
+
+184
+00:17:00.053 --> 00:17:12.225
+<v Daniel>Test retest reliability, meaning if I ask a human if they support a tax policy on Tuesday and ask them again on Friday, they might give slightly different answers because, well, they are human and inconsistent.</v>
+
+185
+00:17:12.405 --> 00:17:16.729
+<v Maya>Precisely. The older studies use that human inconsistency as a baseline.</v>
+
+186
+00:17:16.789 --> 00:17:16.989
+<v Daniel>Right.</v>
+
+187
+00:17:17.290 --> 00:17:24.817
+<v Maya>They basically said, look, humans only agree with themselves 80 percent of the time anyway. So if the I get 70 percent, it's relatively amazing.</v>
+
+188
+00:17:25.017 --> 00:17:26.238
+<v Daniel>Oh, I see the logic there.</v>
+
+189
+00:17:26.398 --> 00:17:38.203
+<v Maya>Right. But when you change the yardstick to a stricter standard, like raw individual level correlation across hundreds of new outcomes, that illusion of high performance completely vanishes.</v>
+
+190
+00:17:38.283 --> 00:17:39.123
+<v Daniel>And the second reason?</v>
+
+191
+00:17:39.523 --> 00:17:40.223
+<v Maya>Data leakage.</v>
+
+192
+00:17:40.804 --> 00:17:40.904
+<v Daniel>Ah.</v>
+
+193
+00:17:41.424 --> 00:17:42.865
+<v Maya>Or training contamination.</v>
+
+194
+00:17:42.965 --> 00:17:48.547
+<v Daniel>Okay. Let me try to explain this one. Because it's like a student taking an open book test when they're supposed to be taking it blind, right?</v>
+
+195
+00:17:48.714 --> 00:17:49.936
+<v Maya>That's a perfect analogy.</v>
+
+196
+00:17:50.116 --> 00:18:04.817
+<v Daniel>Earlier tests often used famous, well-established surveys like the General Social Survey or classic behavioral economics games. Right. And those surveys have been written about in thousands of academic papers, which are just ubiquitous on the Internet.</v>
+
+197
+00:18:04.917 --> 00:18:19.571
+<v Maya>Which means they are almost certainly embedded deep within the LLM's massive training data. Right. The AI wasn't necessarily simulating an individual human's mind. It was just regurgitating the statistical patterns it had already memorized from the training data</v>
+
+198
+00:18:19.851 --> 00:18:22.254
+<v Maya>for that specific famous survey.</v>
+
+199
+00:18:22.274 --> 00:18:23.054
+<v Daniel>It had the cheat sheet.</v>
+
+200
+00:18:23.335 --> 00:18:23.855
+<v Maya>Exactly.</v>
+
+201
+00:18:23.875 --> 00:18:24.115
+<v Daniel>Yeah.</v>
+
+202
+00:18:24.396 --> 00:18:29.841
+<v Maya>To put this in perspective, there's a vital background paper in our stack by Ludwig, Mullinathan, and Rambuckan.</v>
+
+203
+00:18:30.161 --> 00:18:32.802
+<v Daniel>Oh, yeah, the NBER framework paper.</v>
+
+204
+00:18:32.922 --> 00:18:37.823
+<v Maya>Right. They ask a meta question. When is an LLM valid as research data at all?</v>
+
+205
+00:18:38.023 --> 00:18:38.723
+<v Daniel>And what did they find?</v>
+
+206
+00:18:39.084 --> 00:18:46.606
+<v Maya>Their primary warnings were about this exact issue of training contamination. They argue there is a desperate need for out-of-sample validation.</v>
+
+207
+00:18:46.746 --> 00:18:54.988
+<v Daniel>Out-of-sample validation. In other words, you have to test the AI on completely new, unseen questions that could not possibly be in its training data.</v>
+
+208
+00:18:55.308 --> 00:19:02.690
+<v Maya>Exactly. And that is why this new Science Advances mega study ran 19 totally new pre-registered studies.</v>
+
+209
+00:19:02.830 --> 00:19:04.290
+<v Daniel>So they completely plugged that hole.</v>
+
+210
+00:19:04.350 --> 00:19:16.393
+<v Maya>Right. They created bespoke questions, new scenarios, and fresh moral dilemmas that the AI had never seen before to plug that methodological hole. And when subjected to a truly blind test, the twins failed.</v>
+
+211
+00:19:16.680 --> 00:19:18.742
+<v Daniel>But this whole trend didn't just start in a vacuum.</v>
+
+212
+00:19:19.023 --> 00:19:19.623
+<v Maya>No, it didn't.</v>
+
+213
+00:19:19.844 --> 00:19:31.296
+<v Daniel>I want to trace it back to the very first paper that kicked off this entire gold rush a few years ago. Our sources include a 2022-2023 paper by Argyle and colleagues called Out of One Many.</v>
+
+214
+00:19:31.476 --> 00:19:32.958
+<v Maya>A classic in this niche. Yeah.</v>
+
+215
+00:19:33.018 --> 00:19:47.766
+<v Daniel>They introduced the concept of algorithmic fidelity, and Argyle showed that GPT-3 could reproduce patterns from U.S. survey data practically perfectly. Right. They faded demographic backstories, and the AI output matched reality. So are we saying Argyle was</v>
+
+216
+00:19:47.806 --> 00:19:49.186
+<v Daniel>completely wrong?</v>
+
+217
+00:19:49.327 --> 00:19:53.449
+<v Maya>If we connect this to the bigger picture, no, and it is vital to understand the scope here.</v>
+
+218
+00:19:53.569 --> 00:19:53.789
+<v Daniel>Okay.</v>
+
+219
+00:19:54.229 --> 00:20:00.936
+<v Maya>The Argyle paper wasn't technically refuted by this new Columbia study. It's more accurate to say the theory just met its absolute limit.</v>
+
+220
+00:20:01.196 --> 00:20:01.616
+<v Daniel>How so?</v>
+
+221
+00:20:01.937 --> 00:20:06.000
+<v Maya>Argyle's claim and their proof was entirely about aggregates.</v>
+
+222
+00:20:06.141 --> 00:20:06.621
+<v Daniel>Aggregates.</v>
+
+223
+00:20:06.901 --> 00:20:11.266
+<v Maya>Yeah. They proved that AI could simulate population level patterns.</v>
+
+224
+00:20:11.546 --> 00:20:14.027
+<v Daniel>Okay. So the crowd. not the individual.</v>
+
+225
+00:20:14.207 --> 00:20:28.032
+<v Maya>Exactly. If you ask it what an average group of a thousand conservative voters might do, it does a decent job mimicking the broad strokes. But this new paper proves that the individual level is exactly where the illusion breaks apart completely.</v>
+
+226
+00:20:28.192 --> 00:20:31.893
+<v Daniel>So it can simulate the crowd, but not the specific face in the crowd.</v>
+
+227
+00:20:31.973 --> 00:20:44.994
+<v Maya>But here's the kicker. This new study shows that even at the aggregate level, the twins aren't entirely safe anymore. Really? Yeah. The Columbia team found that at the aggregate level, twins differ from humans by</v>
+
+228
+00:20:45.114 --> 00:20:49.438
+<v Maya>0.352 standard deviations on average.</v>
+
+229
+00:20:49.578 --> 00:20:50.919
+<v Daniel>That sounds pretty significant.</v>
+
+230
+00:20:50.999 --> 00:20:56.243
+<v Maya>It is. And that difference was statistically significant in 64% of the outcomes tested.</v>
+
+231
+00:20:56.363 --> 00:20:57.604
+<v Daniel>Wait, 64%?</v>
+
+232
+00:20:57.644 --> 00:21:12.511
+<v Maya>Yes. In 105 out of 164 outcomes, the AI's aggregate guess was significantly off from the human aggregate. So while they might capture the broadest of broad strokes, they aren't even a safe substitute for a population average anymore, let</v>
+
+233
+00:21:12.551 --> 00:21:14.732
+<v Maya>alone replacing an individual subject.</v>
+
+234
+00:21:14.972 --> 00:21:20.753
+<v Daniel>Which brings us back to the reality of the technology today. We have to be clear about the stakes here as we wrap this up.</v>
+
+235
+00:21:20.793 --> 00:21:21.253
+<v Maya>Definitely.</v>
+
+236
+00:21:21.293 --> 00:21:26.935
+<v Daniel>The Columbia authors are being very careful. They are serious scientists. They aren't shock jocks.</v>
+
+237
+00:21:27.248 --> 00:21:29.109
+<v Maya>Right. They aren't just burning it all down.</v>
+
+238
+00:21:29.249 --> 00:21:41.517
+<v Daniel>Exactly. They aren't declaring the entire concept of digital twins completely dead and buried forever. They are explicitly testing them as they are available today using the tools we have right now.</v>
+
+239
+00:21:41.737 --> 00:21:42.117
+<v Maya>Yeah.</v>
+
+240
+00:21:42.578 --> 00:21:51.203
+<v Daniel>And importantly, to advance the field, they haven't hidden their work. They have released their full data set and their code as a public testbed.</v>
+
+241
+00:21:51.444 --> 00:21:53.547
+<v Maya>Which is how good science should be done.</v>
+
+242
+00:21:53.848 --> 00:22:01.339
+<v Daniel>Completely. They're inviting anyone to try and build a better model to see if someone out there can fix these five funhouse mirror distortions.</v>
+
+243
+00:22:01.519 --> 00:22:05.425
+<v Maya>But regardless of their caution, this raises an important question for the industry.</v>
+
+244
+00:22:05.605 --> 00:22:06.206
+<v Daniel>It really does.</v>
+
+245
+00:22:06.426 --> 00:22:21.417
+<v Maya>There is real money, massive startup valuations, and entirely new academic research practices currently built on a very shaky foundation. Absolutely. The uncomfortable truth that this paper forces the industry to confront is that feeding an</v>
+
+246
+00:22:21.537 --> 00:22:31.724
+<v Maya>AI 500 deeply personal questions about your life buys researchers absolutely no more accuracy than just ticking 14 basic demographic checkboxes.</v>
+
+247
+00:22:31.844 --> 00:22:32.345
+<v Daniel>It's wild.</v>
+
+248
+00:22:32.705 --> 00:22:39.329
+<v Maya>That is a reality check that is going to echo through the halls of venture capital firms and university research boards for a long time.</v>
+
+249
+00:22:39.609 --> 00:22:54.497
+<v Daniel>It really is. And it leaves you, listening to this, with a lingering provocative thought to mull over today. What would it actually take to build an AI twin that truly individuates? Think about it. If a 128,000-character dossier, a literal book about</v>
+
+250
+00:22:54.557 --> 00:23:02.061
+<v Daniel>your beliefs, your quirks, your past, and your behavior cannot capture your unique spark in a machine, what does that mean?</v>
+
+251
+00:23:03.520 --> 00:23:04.761
+<v Maya>It's a profound question.</v>
+
+252
+00:23:04.861 --> 00:23:18.909
+<v Daniel>Is it possible that individual human variation is just fundamentally unrecoverable from text? Are the messiness, the contradictions, and the essence of who you are simply beyond the reach of a language model, no matter how much data we feed it?</v>
+
+253
+00:23:19.209 --> 00:23:19.829
+<v Maya>Maybe they are.</v>
+
+254
+00:23:19.989 --> 00:23:26.853
+<v Daniel>When we try to build these digital clones in our modern data-driven vats, are we ultimately just chasing a ghost in the machine?</v>
+
+255
+00:23:27.554 --> 00:23:29.735
+<v Maya>That is the question we have to figure out.</v>
+
+256
+00:23:29.975 --> 00:23:32.857
+<v Daniel>Something to think about. Thanks for taking this deep dive with us.</v>
