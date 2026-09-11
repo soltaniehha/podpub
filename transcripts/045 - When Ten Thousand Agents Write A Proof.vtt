@@ -1,0 +1,649 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:09.739
+<v Maya>Imagine waking up tomorrow, you know, you're making your coffee, checking the news, and you see that one of the most famously difficult open problems in the history of mathematics was just solved.</v>
+
+2
+00:00:10.139 --> 00:00:12.381
+<v Daniel>Right. Which is already huge news on its own.</v>
+
+3
+00:00:12.561 --> 00:00:27.273
+<v Maya>Exactly. But the kicker is the solver isn't like a reclusive human genius who's been locked in a dusty office for decades. It's 10,000 AI agents just talking to each other at the speed of light. And they wrap up the whole job over a</v>
+
+4
+00:00:27.393 --> 00:00:28.354
+<v Maya>long weekend.</v>
+
+5
+00:00:28.775 --> 00:00:39.952
+<v Daniel>I mean, it genuinely sounds like the premise of some sci-fi novel, but that is exactly the reality we woke up to. And the implications of this, well, they're going to ripple through basically every single scientific discipline.</v>
+
+6
+00:00:40.197 --> 00:00:51.143
+<v Maya>Yeah. So today we are doing a deep dive into what is honestly an unprecedented event. On September 8th, 2026, OpenAI just drops these two research level mathematics papers.</v>
+
+7
+00:00:51.223 --> 00:00:52.423
+<v Daniel>Out of nowhere, basically.</v>
+
+8
+00:00:52.483 --> 00:01:02.648
+<v Maya>Right. And the titles are pretty heavy. They're called Finite Time Blow Up for Navier-Stokes and Finite Time Blow Up for the Euler Equation. The staggering part isn't even the titles. It's the author line.</v>
+
+9
+00:01:02.728 --> 00:01:03.288
+<v Daniel>Just one word?</v>
+
+10
+00:01:03.548 --> 00:01:18.254
+<v Maya>Yeah. It just says OpenEye. There is no human being named at all. And the mechanics of how they pulled this off are just mind bending. According to our sources, these papers were generated in 88 hours by a swarm of roughly 10,000 coordinating AI</v>
+
+11
+00:01:18.314 --> 00:01:18.654
+<v Maya>agents.</v>
+
+12
+00:01:18.734 --> 00:01:20.695
+<v Daniel>And this was running on an unreleased model, too.</v>
+
+13
+00:01:20.875 --> 00:01:33.039
+<v Maya>Right. Something significantly more capable than, like... GPT-6 Astra. And over those 88 hours, the agents exchanged on the order of 5 million interagent messages.</v>
+
+14
+00:01:33.099 --> 00:01:44.723
+<v Daniel>Five million messages. I mean, just to visualize that for a second, it's not just one giant AI brain thinking 10,000 times faster. It's basically an industrialized assembly line of logic.</v>
+
+15
+00:01:44.903 --> 00:01:46.164
+<v Maya>massive digital factory</v>
+
+16
+00:01:46.244 --> 00:01:56.553
+<v Daniel>exactly you have agents proposing mathematical avenues right and then other agents are aggressively trying to find counter examples to break those avenues and then you have still others translating all that surviving logic into code</v>
+
+17
+00:01:56.813 --> 00:02:03.159
+<v Maya>and then after that 88-hour brainstorm they produced a machine-checked formalization of the math in just a further 17 hours</v>
+
+18
+00:02:03.359 --> 00:02:04.960
+<v Daniel>which is incredibly fast</v>
+
+19
+00:02:05.401 --> 00:02:17.904
+<v Maya>it really is so our mission for this deep dive is to look closely at what this actually means for human knowledge. Because, just to be clear, we aren't here to give you a university lecture on fluid dynamics today.</v>
+
+20
+00:02:18.145 --> 00:02:18.905
+<v Daniel>No, thanks.</v>
+
+21
+00:02:18.925 --> 00:02:33.837
+<v Maya>Right. We'll give you exactly the context you need to understand what was actually achieved so we can separate the genuine historic breakthrough from the marketing hype. And we really want to examine the profound new questions this raises about authorship, credit,</v>
+
+22
+00:02:34.437 --> 00:02:36.379
+<v Maya>and just the future of original research in general.</v>
+
+23
+00:02:36.559 --> 00:02:48.322
+<v Daniel>Because to really understand the impact of this, you have to be incredibly precise about the mathematics involved. The headlines that are flying around out there right now, they are completely missing a massive caveat.</v>
+
+24
+00:02:48.382 --> 00:02:49.363
+<v Maya>Yeah, the asterisk.</v>
+
+25
+00:02:49.403 --> 00:02:57.685
+<v Daniel>The asterisk, exactly. To understand what the AI actually did, you have to look at the official framework laid out by Charles Sufferman. This was for the Clay Mathematics Institute.</v>
+
+26
+00:02:57.905 --> 00:03:01.886
+<v Maya>This is the famous Millennium Prize problem, right? The one with the million-dollar bounty?</v>
+
+27
+00:03:02.237 --> 00:03:12.744
+<v Daniel>That's the one. So the Navier-Stokes equations are essentially the mathematical rules for how fluids move. They govern ocean currents, the weather, air flowing over an airplane wing.</v>
+
+28
+00:03:12.804 --> 00:03:14.285
+<v Maya>The basics of fluid mechanics.</v>
+
+29
+00:03:14.305 --> 00:03:24.612
+<v Daniel>Right. But mathematically, we actually don't know if the equations always work perfectly or if under certain very specific conditions, they just break down and output impossible infinities.</v>
+
+30
+00:03:25.038 --> 00:03:27.780
+<v Maya>Like the equations just mathematically snap.</v>
+
+31
+00:03:28.140 --> 00:03:29.100
+<v Daniel>Yeah, precisely.</v>
+
+32
+00:03:29.300 --> 00:03:29.480
+<v Maya>Yeah.</v>
+
+33
+00:03:29.801 --> 00:03:42.928
+<v Daniel>So Pfefferman lists four specific alternatives that would satisfy the criteria for solving this millennium problem. Alternatives A and B ask you to prove the existence and smoothness of solutions in the unforced case.</v>
+
+34
+00:03:43.028 --> 00:03:45.129
+<v Maya>Okay. Unforced meaning what exactly?</v>
+
+35
+00:03:45.484 --> 00:03:58.202
+<v Daniel>It means you're looking at just the fluid moving under its own internal dynamics. No outside energy is being pumped into the system. And that unforced case is the legendary problem most people mean when they talk about the million-dollar Navier-Stokes Prize.</v>
+
+36
+00:03:58.602 --> 00:04:02.668
+<v Maya>But, and this is the huge asterisk, that is not what the AI solved.</v>
+
+37
+00:04:03.103 --> 00:04:17.495
+<v Daniel>No, it really isn't. The AI established alternatives C and D, and these alternatives ask for breakdown, meaning proving that the equations do fail, but crucially, they permit an external force.</v>
+
+38
+00:04:18.236 --> 00:04:18.336
+<v Maya>Ah.</v>
+
+39
+00:04:18.696 --> 00:04:33.261
+<v Daniel>So what the AI proved, that for every positive viscosity, meaning like a realistic fluid with internal friction, like water, rather than some perfectly frictionless ideal fluid, you can start that fluid from rest, apply a smooth,</v>
+
+40
+00:04:33.481 --> 00:04:39.083
+<v Daniel>compactly supported external force, and cause the velocity to become unbounded in finite time.</v>
+
+41
+00:04:39.243 --> 00:04:47.787
+<v Maya>Okay, let me make sure I'm translating this correctly for you listening, because this is key. Compactly supported external force basically means a force applied only in a specific finite area.</v>
+
+42
+00:04:47.987 --> 00:04:49.808
+<v Daniel>Exactly, a localized area. So it's</v>
+
+43
+00:04:49.828 --> 00:04:59.912
+<v Maya>kind of like proving a highly engineered suspension bridge can collapse, but only if you're allowed to apply a highly specific artificial earthquake to one exact support beam. That's the external forcing term.</v>
+
+44
+00:05:00.052 --> 00:05:01.433
+<v Daniel>Yes, that is a perfect analogy.</v>
+
+45
+00:05:01.653 --> 00:05:06.735
+<v Maya>It's not proving whether the bridge will eventually collapse or just stand forever under its own weight in the natural wind.</v>
+
+46
+00:05:06.955 --> 00:05:20.701
+<v Daniel>Right, which would be the unforced case. And to be totally fair to OpenAI here, they are being completely honest about this gap. The sources note that OpenAI is explicitly not claiming the $1 million prize for this result.</v>
+
+47
+00:05:21.061 --> 00:05:23.382
+<v Maya>Yeah, they aren't trying to pull a fast one there.</v>
+
+48
+00:05:23.462 --> 00:05:28.985
+<v Daniel>No, though we should definitely note that the companion paper they released on the Euler equation is unforced.</v>
+
+49
+00:05:29.245 --> 00:05:30.365
+<v Maya>Oh, interesting.</v>
+
+50
+00:05:30.405 --> 00:05:36.468
+<v Daniel>Yeah, which in some ways makes that second Euler paper mathematically deeper than the flashing Navier-Stokes result.</v>
+
+51
+00:05:36.488 --> 00:05:51.332
+<v Maya>But this introduces a massive tension right out of the gate. I mean, is establishing alternative C and D with a forcing term actually a millennium prize level breakthrough? Or is it, you know, just a highly complex technical footnote dressed up</v>
+
+52
+00:05:51.452 --> 00:05:53.292
+<v Maya>as a historic paradigm shift?</v>
+
+53
+00:05:53.372 --> 00:05:56.973
+<v Daniel>That is the exact debate happening in the mathematics community right now.</v>
+
+54
+00:05:57.093 --> 00:06:04.355
+<v Maya>Because if I use a localized earthquake to knock down a bridge, I haven't really told you much about the structural integrity of the bridge in the real world, you know.</v>
+
+55
+00:06:04.715 --> 00:06:17.917
+<v Daniel>Exactly. It's a genuine resolution of two of the four alternatives Pfefferman explicitly listed. It's deeply complex, very real math. But you're right. It's not the unforced global regularity question everyone dreams of solving.</v>
+
+56
+00:06:18.135 --> 00:06:27.223
+<v Maya>But even accepting that it's a partial resolution, it brings up a really glaring practical question. I mean, we all use AI. We all know these models hallucinate.</v>
+
+57
+00:06:27.584 --> 00:06:28.144
+<v Daniel>All the time.</v>
+
+58
+00:06:28.244 --> 00:06:43.057
+<v Maya>Right. They confidently invent fake citations. They mess up basic arithmetic. They just lose the plot. So if 10,000 AI agents spent 88 hours talking to each other and wrote a fluid dynamics paper, why on earth should anyone trust that the math is actually</v>
+
+59
+00:06:43.218 --> 00:06:43.478
+<v Maya>right?</v>
+
+60
+00:06:43.805 --> 00:06:48.126
+<v Daniel>That is the big question. And the answer is because of those 17 hours that followed the brainstorm.</v>
+
+61
+00:06:48.186 --> 00:06:49.186
+<v Maya>The verification phase.</v>
+
+62
+00:06:49.486 --> 00:07:03.130
+<v Daniel>Exactly. The entire bedrock of this event is a system called Lean 4. Lean is an interactive theorem prover. So if you're listening, you shouldn't think of the AI's output as like a PDF text document full of paragraphs and equations.</v>
+
+63
+00:07:03.210 --> 00:07:04.370
+<v Maya>It's code, essentially.</v>
+
+64
+00:07:04.750 --> 00:07:19.563
+<v Daniel>Yes. It's a specific data structure written in code. Lean acts like a hyper rigid mathematical physics engine. A machine compiler checks the code line by line, all the way from the most basic fundamental axioms of math up to the final</v>
+
+65
+00:07:19.623 --> 00:07:20.284
+<v Daniel>conclusion.</v>
+
+66
+00:07:20.404 --> 00:07:23.246
+<v Maya>So it's like a spell checker, but for pure logic.</v>
+
+67
+00:07:23.326 --> 00:07:24.107
+<v Daniel>That's a great way to put it.</v>
+
+68
+00:07:24.327 --> 00:07:35.777
+<v Maya>Because it's physically impossible to type a grammatically incorrect logical step because the system simply won't compile it. It'll throw an error. So we don't actually have to trust the 10,000 hallucinating agents at all.</v>
+
+69
+00:07:35.897 --> 00:07:50.117
+<v Daniel>Precisely. A machine-checked lean proof can be verified entirely independently of who or what wrote it. If the lean compiler says the proof is valid, the proof is mathematically true, period. And this completely bypasses the</v>
+
+70
+00:07:50.137 --> 00:07:53.839
+<v Daniel>traditional painfully slow bottleneck of human peer review.</v>
+
+71
+00:07:53.959 --> 00:08:03.785
+<v Maya>Which is huge. Our sources reference this paper called Proof to Me by researchers at Columbia and Chicago. And it explains why formalizing math like this has historically been such a massive bottleneck.</v>
+
+72
+00:08:03.805 --> 00:08:04.726
+<v Daniel>Yeah, it's really hard.</v>
+
+73
+00:08:05.220 --> 00:08:19.016
+<v Maya>It is. It requires a really rare dual expertise. Right. To do this as a human, you have to be a top-tier theoretical mathematician to understand the logic and a highly skilled software engineer to understand these incredibly obscure proof languages.</v>
+
+74
+00:08:19.116 --> 00:08:22.940
+<v Daniel>And there are, what, maybe a few dozen people on Earth who can do both at a really high level.</v>
+
+75
+00:08:23.060 --> 00:08:37.910
+<v Maya>Exactly. And AI is just completely smashing that bottleneck. Just look at the wider context of this month. This open AI release happened on September 8th, 2026. Right. But just four days earlier, on September 4th, Anthropic announced that their</v>
+
+76
+00:08:37.930 --> 00:08:52.771
+<v Maya>model, Claude, had autonomously formalized Fermat-Axe's last theorem in lean over 11 days. Yeah. So in the exact same week, you have two frontier AI labs using lean formalization as their ultimate proof of</v>
+
+77
+00:08:52.831 --> 00:08:53.031
+<v Maya>work.</v>
+
+78
+00:08:53.111 --> 00:09:00.475
+<v Daniel>But think about the philosophical shift here for a second. Doesn't this essentially make the lean compiler the ultimate impartial referee of truth?</v>
+
+79
+00:09:00.696 --> 00:09:01.416
+<v Maya>Oh, absolutely.</v>
+
+80
+00:09:01.596 --> 00:09:10.682
+<v Daniel>It shifts the burden of trust entirely away from human peer review, away from the reputation or prestige of the human mathematician, and it places it directly onto the code itself.</v>
+
+81
+00:09:11.150 --> 00:09:25.667
+<v Maya>It separates the discovery of the idea from the verification of the idea. In a way, the scientific method has just never really dealt with before. But, you know, if we accept that the AI successfully discovered and verified this math, we have to ask how an AI even</v>
+
+82
+00:09:25.827 --> 00:09:28.530
+<v Maya>knows how to approach fluid dynamics in the first place.</v>
+
+83
+00:09:29.153 --> 00:09:32.635
+<v Daniel>Right, because this level of reasoning didn't just spawn out of thin air.</v>
+
+84
+00:09:32.855 --> 00:09:43.320
+<v Maya>No. For an AI to tackle a Millennium Prize problem, it had to be trained on a massive foundation of existing logic, which points right back to what Google DeepMind was doing just last year.</v>
+
+85
+00:09:43.680 --> 00:09:52.664
+<v Daniel>Exactly. To see the trajectory here, we only have to go back to November 2025. Google DeepMind published a paper in Nature about a system called AlphaProof.</v>
+
+86
+00:09:52.864 --> 00:09:54.425
+<v Maya>Okay, so what was AlphaProof doing?</v>
+
+87
+00:09:54.745 --> 00:09:59.708
+<v Daniel>AlphaProof was an AlphaZero-style reinforcement learning agent that operated entirely inside the lean environment.</v>
+
+88
+00:09:59.948 --> 00:10:08.693
+<v Maya>And reinforcement learning, Ella, is the mechanism where the AI learns by trial and error, right? Getting digital rewards when it inches closer to a mathematically valid step.</v>
+
+89
+00:10:08.873 --> 00:10:23.364
+<v Daniel>That's it. So they trained it on roughly 80 million auto-formalized mathematical statements, just letting it practice and fail millions of times. And eventually, it scored 28 points at the 2024 International</v>
+
+90
+00:10:23.505 --> 00:10:24.789
+<v Daniel>Mathematical Olympiad.</v>
+
+91
+00:10:25.107 --> 00:10:33.491
+<v Maya>Which is the silver medal standard for human prodigies. Yes. Which is incredible on its own. But I actually have to push back a little on equating these two events.</v>
+
+92
+00:10:33.511 --> 00:10:34.331
+<v Daniel>Okay. How so?</v>
+
+93
+00:10:34.491 --> 00:10:43.455
+<v Maya>Because there is a massive sharp contrast between what AlphaProof did and what OpenAI just did. I mean, AlphaProof solved closed competition problems.</v>
+
+94
+00:10:43.495 --> 00:10:44.596
+<v Daniel>Right. They were known problems.</v>
+
+95
+00:10:44.716 --> 00:10:54.640
+<v Maya>Exactly. They were insanely difficult. Olympiad problems, sure. But they were essentially a maze where a human committee had already determined that an elegant exit existed.</v>
+
+96
+00:10:54.740 --> 00:10:56.020
+<v Daniel>So the AI just had to find the path.</v>
+
+97
+00:10:56.240 --> 00:11:06.703
+<v Maya>Exactly. The Navier-Stokes work, however, tackled an open research problem. Nobody knew if the statement was even true. It's like navigating a dark forest without knowing if an exit exists at all.</v>
+
+98
+00:11:06.843 --> 00:11:08.023
+<v Daniel>That's a vital distinction.</v>
+
+99
+00:11:08.103 --> 00:11:08.303
+<v Maya>Yeah.</v>
+
+100
+00:11:08.504 --> 00:11:14.145
+<v Daniel>Finding a known answer requires a very different type of intelligence than discovering something fundamentally unknown.</v>
+
+101
+00:11:14.379 --> 00:11:28.891
+<v Maya>Which really begs the question, you know, is the leap from alpha proof to this open AI event merely a difference in degree? Like, did they just throw way more compute, millions of dollars and 10,000 agents at a problem instead of one? Or is this a difference in kind?</v>
+
+102
+00:11:29.252 --> 00:11:35.475
+<v Daniel>Meaning, is the AI actually generating genuinely novel mathematical insight that didn't exist before?</v>
+
+103
+00:11:35.535 --> 00:11:35.815
+<v Maya>Right.</v>
+
+104
+00:11:36.175 --> 00:11:51.023
+<v Daniel>Well, to answer that, we actually have to look closely at the introduction section of the AI's own paper because the paper actually doesn't hide its lineage at all. Oh, really? No. The agents didn't invent a new type of math from scratch. They were standing on a very specific</v>
+
+105
+00:11:51.283 --> 00:11:53.304
+<v Daniel>and very recent human staircase.</v>
+
+106
+00:11:53.604 --> 00:11:57.706
+<v Maya>Let's trace that staircase because the human element here is fascinating. Who did they cite?</v>
+
+107
+00:11:57.906 --> 00:12:11.722
+<v Daniel>Well, the AI explicitly credits a chain of human work. It starts with John LeRae's concept of weak solutions back in 1934, which was a way of redefining the equation so they could still make mathematical sense, even if the fluid flow became totally chaotic.</v>
+
+108
+00:12:11.862 --> 00:12:13.103
+<v Maya>Okay, so that's the foundation.</v>
+
+109
+00:12:13.484 --> 00:12:22.813
+<v Daniel>Right. Then it builds to the Caffarelli-Kohn-Nierenberg theorem, Terence Towers' averaged equation. Buckmaster and Avichal's work on non-uniqueness and Albert and Bruce Colombo.</v>
+
+110
+00:12:23.013 --> 00:12:26.735
+<v Maya>So it's synthesizing decades of the absolute brightest human minds.</v>
+
+111
+00:12:26.855 --> 00:12:39.520
+<v Daniel>Yes. But the crucial step, the exact mechanism the AI's construction relies on to actually cross the finish line, is Diego Cordoba and Luis Martinez-Zarroa amplification across scales strategy.</v>
+
+112
+00:12:39.780 --> 00:12:40.920
+<v Maya>Which is very recent.</v>
+
+113
+00:12:40.980 --> 00:12:48.243
+<v Daniel>Very recent. In fact, Charles Pfefferman himself told Quantum Magazine that Cordoba and Martinez-Zarroa are the heroes of this result.</v>
+
+114
+00:12:48.615 --> 00:12:59.180
+<v Maya>Amplification across scales. Okay, so is that essentially like finding a microscopic structural crack in a windshield and then mathematically applying pressure to that specific scale until the entire windshield shatters?</v>
+
+115
+00:12:59.240 --> 00:13:11.746
+<v Daniel>That is a brilliant way to visualize it. You take a tiny instability at a microscopic scale and you mathematically prove how that energy transfers and amplifies up to the microscopic scale until the whole system blows up.</v>
+
+116
+00:13:11.866 --> 00:13:14.028
+<v Maya>Which is the breakdown in alternative C&D.</v>
+
+117
+00:13:14.188 --> 00:13:14.588
+<v Daniel>Exactly.</v>
+
+118
+00:13:14.889 --> 00:13:18.592
+<v Maya>But, you know, this brings up a massive ethical and structural tension.</v>
+
+119
+00:13:18.992 --> 00:13:20.193
+<v Daniel>Yeah, I know where you're going with this. I</v>
+
+120
+00:13:20.233 --> 00:13:30.823
+<v Maya>mean, if the AI just utilized an amplification strategy that human researchers, Cordoba and Martina Zero, only very recently published, what does the AI did it even mean?</v>
+
+121
+00:13:31.163 --> 00:13:32.084
+<v Daniel>It's a great question.</v>
+
+122
+00:13:32.384 --> 00:13:46.917
+<v Maya>It used human techniques, assembled them like puzzle pieces, and the author line just reads, open eye. I really have to question that. Is an unnamed corporate author line an honest reflection of a collective 10,000 agent swarm? Or is it an</v>
+
+123
+00:13:47.157 --> 00:13:54.323
+<v Maya>active erasure of the actual human mathematicians whose specific lifelong work the machine just scraped across the finish line?</v>
+
+124
+00:13:54.663 --> 00:14:04.632
+<v Daniel>And that question of provenance of who really owns the discovery gets incredibly murky when we look at the exact timeline of events, specifically the 12 hours leading up to OpenAI's announcement.</v>
+
+125
+00:14:04.780 --> 00:14:16.466
+<v Maya>The academic drama here is just intense, but the facts alone are stunning. Tristan Buckmaster from NYU and Levent Alpoj announced their own Euler equation results roughly 12 hours before OpenAI's release.</v>
+
+126
+00:14:16.666 --> 00:14:31.614
+<v Daniel>12 hours. I mean, in the slow glacial world of theoretical mathematics, a 12-hour gap is basically a simultaneous photo finish. Right. And OpenAI subsequently conceded priority on the 3D Euler result, acknowledging Buckmaster's team got there first,</v>
+
+127
+00:14:32.075 --> 00:14:34.736
+<v Daniel>but they held their claim on the Navier-Stokes result.</v>
+
+128
+00:14:34.816 --> 00:14:43.382
+<v Maya>But here's the massive red flag that Buckmaster raised. His team's in-progress, unpublished work was being conducted on OpenAI models.</v>
+
+129
+00:14:43.462 --> 00:14:58.450
+<v Daniel>Yes. And this is where the architecture of modern research becomes a massive liability. The question becomes, did those 10,000 open AI agents have access to and benefit from human researchers actively thinking, prompting, and brainstorming</v>
+
+130
+00:14:58.890 --> 00:15:01.131
+<v Daniel>inside their closed ecosystem?</v>
+
+131
+00:15:01.446 --> 00:15:08.832
+<v Maya>That is wild. I mean, if you are a researcher using an AI assistant, you are basically doing your scratchpad thinking inside a corporate black box.</v>
+
+132
+00:15:09.072 --> 00:15:09.693
+<v Daniel>Exactly. And</v>
+
+133
+00:15:09.733 --> 00:15:20.982
+<v Maya>looking at the fallout, you really have to feel for the human researchers. Luis Martinez-Zorro's reaction was incredibly gracious, but you can feel the sting in it. He literally said, I'm very happy for Tristan. It would have been nice to do this ourselves.</v>
+
+134
+00:15:21.102 --> 00:15:21.803
+<v Daniel>Yeah, that's tough.</v>
+
+135
+00:15:22.203 --> 00:15:28.048
+<v Maya>It is. Different parties are telling different versions of this timeline, but the implications are structural, not just gossip.</v>
+
+136
+00:15:28.262 --> 00:15:31.843
+<v Daniel>Absolutely. It highlights a huge structural crisis for modern research.</v>
+
+137
+00:15:32.023 --> 00:15:46.606
+<v Maya>If you do your brainstorming inside a commercial tech lab's AI model, is your work still yours? We just talked about how the machine-checked lean proof flawlessly verifies that the math is true, but it completely and utterly sidesteps the</v>
+
+138
+00:15:46.646 --> 00:15:51.067
+<v Maya>incredibly messy human question of intellectual credit and confidentiality.</v>
+
+139
+00:15:51.740 --> 00:16:06.703
+<v Daniel>Which brings us to how the scientific community is supposed to handle this moving forward. Because this collision of perfectly verifiable math and completely unverifiable human credit, well, it means our old systems of peer review and publication are just fundamentally broken.</v>
+
+140
+00:16:06.913 --> 00:16:15.355
+<v Maya>Right. And our sources highlight a paper that came out from Carnegie Mellon University. And the timing here is almost cinematic. It was published on September 7th, 2026.</v>
+
+141
+00:16:15.395 --> 00:16:17.755
+<v Daniel>Which is exactly one day before the OpenAI release.</v>
+
+142
+00:16:17.915 --> 00:16:29.838
+<v Maya>Yes. The authors are Ning, Zong, Li, and Zhang. And the paper is titled, Scores Alone Do Not Prove Discovery, the Discovery Certification Protocol for Auditing AI Research Agents.</v>
+
+143
+00:16:29.978 --> 00:16:30.598
+<v Daniel>Catchy title.</v>
+
+144
+00:16:30.838 --> 00:16:42.948
+<v Maya>Very. But their core argument is that hitting high scores on automated benchmarks or just dumping a finished paper on the internet with an AI's name on it is no longer evidence that an AI agent actually discovered anything on its own.</v>
+
+145
+00:16:43.088 --> 00:16:47.232
+<v Daniel>Right. They argue that true discovery needs an auditable certification protocol.</v>
+
+146
+00:16:48.132 --> 00:16:54.518
+<v Maya>So if we take the CMU framework and apply it directly to the lean for formalization we've been talking about, what actually</v>
+
+147
+00:16:55.325 --> 00:17:08.821
+<v Daniel>This is where we hit the sharpest insight of the entire deep dive, I think. If you ask the narrow question of truth, like, is this mathematical theorem mathematically correct? The lean formalization is close to an absolute ideal certificate.</v>
+
+148
+00:17:09.022 --> 00:17:11.282
+<v Maya>Right, because it checks every logical step.</v>
+
+149
+00:17:11.442 --> 00:17:26.128
+<v Daniel>Exactly. It is far stronger than any human peer review panel could ever be. But if you ask the questions of attribution, novelty, and provenance, where did this idea come from? Did it peak at unpublished human work? And whose lifetime of research does it rely on?</v>
+
+150
+00:17:26.993 --> 00:17:29.216
+<v Daniel>The lean proof certifies absolutely nothing at all.</v>
+
+151
+00:17:29.477 --> 00:17:44.076
+<v Maya>Nothing at all. It proves the math is right, but it is a complete black box regarding how the math got there in the first place. Yeah. And that leaves us with some incredibly heavy, unresolved tensions for you to think about. I mean, we just witnessed... 88 hours of compute costing</v>
+
+152
+00:17:44.156 --> 00:17:49.579
+<v Maya>millions of dollars, resulting in a mathematically perfect yet highly contested paper.</v>
+
+153
+00:17:49.659 --> 00:17:55.802
+<v Daniel>And that raises a vital question about the future. What does this say about which open problems become tractable moving forward?</v>
+
+154
+00:17:55.862 --> 00:17:56.823
+<v Maya>Oh, that's a great point.</v>
+
+155
+00:17:56.943 --> 00:18:11.931
+<v Daniel>And more importantly, who holds the capital to afford to attack them? I mean, if finding the next breakthrough costs $5 million in server time and requires 10,000 coordinating agents, the independent researcher at a small university is entirely</v>
+
+156
+00:18:11.991 --> 00:18:12.911
+<v Daniel>locked out of the game.</v>
+
+157
+00:18:13.091 --> 00:18:27.599
+<v Maya>Exactly. For thousands of years, mathematics has been a slow, deeply human, collaborative pursuit of truth. But if discovering that truth now requires a multi-million dollar server farm chatting in the dark, does mathematics stop being a human</v>
+
+158
+00:18:27.639 --> 00:18:28.299
+<v Maya>philosophy?</v>
+
+159
+00:18:28.900 --> 00:18:29.260
+<v Daniel>It might.</v>
+
+160
+00:18:29.802 --> 00:18:42.241
+<v Maya>Does it just become another industrial scale extraction industry entirely owned by a few tech monopolies? I mean, you wake up, you drink your coffee and the machine has already solved the universe, but it won't tell you whose ideas are borrowed to do it.</v>
+
+161
+00:18:42.742 --> 00:18:46.768
+<v Daniel>It is a profound shift in how we define human knowledge itself.</v>
+
+162
+00:18:46.968 --> 00:18:53.338
+<v Maya>It really is. Well, thank you for taking this deep dive with us. Keep questioning the source code and we'll catch you on the next one.</v>
