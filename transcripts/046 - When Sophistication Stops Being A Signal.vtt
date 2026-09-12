@@ -1,0 +1,693 @@
+WEBVTT
+
+1
+00:00:00.091 --> 00:00:14.804
+<v Maya>You know, it used to be that global security had this very comforting, almost architectural logic to it. Right. Like if a bank vault gets blown open with military grade explosives, you know, it wasn't just a</v>
+
+2
+00:00:14.864 --> 00:00:17.266
+<v Maya>couple of teenagers with a crowbar, you know.</v>
+
+3
+00:00:17.747 --> 00:00:18.267
+<v Daniel>Exactly.</v>
+
+4
+00:00:18.327 --> 00:00:25.714
+<v Maya>For decades, there was this direct correlation between the complexity of an event and the actual resources of the people who pulled it off.</v>
+
+5
+00:00:26.166 --> 00:00:40.977
+<v Daniel>And in the digital world, I mean, we call this attribution, it basically acted as this incredibly reliable sorting mechanism for us. If an intelligence operation or a cyber attack was highly sophisticated, say, it used custom malware or</v>
+
+6
+00:00:41.117 --> 00:00:44.740
+<v Daniel>massive server infrastructure or complex zero-day exploits.</v>
+
+7
+00:00:44.820 --> 00:00:49.126
+<v Maya>Which are those rare software bugs the manufacturer doesn't even know exist yet.</v>
+
+8
+00:00:49.166 --> 00:00:56.958
+<v Daniel>Right, exactly. If you saw those things, investigators instantly knew that a nation state with incredibly deep pockets was behind it. I mean, it was practically binary.</v>
+
+9
+00:00:57.308 --> 00:01:03.031
+<v Maya>But then you step into the world of artificial intelligence over just the last year and suddenly that entire logic is totally broken.</v>
+
+10
+00:01:03.051 --> 00:01:03.731
+<v Daniel>Completely broken.</v>
+
+11
+00:01:04.132 --> 00:01:14.137
+<v Maya>We are looking at a threat landscape that has completely decoupled capability from resources. So today's deep dive focuses on a brand new, frankly, bombshell document. It</v>
+
+12
+00:01:14.177 --> 00:01:14.777
+<v Daniel>really is.</v>
+
+13
+00:01:14.877 --> 00:01:23.512
+<v Maya>It's Anthropics Threat Intelligence Report. It's titled... Detecting and Countering Misuse of AI. And it was published on September 10th, 2026.</v>
+
+14
+00:01:23.732 --> 00:01:24.332
+<v Daniel>Just recently.</v>
+
+15
+00:01:24.372 --> 00:01:30.797
+<v Maya>Yeah. And it covers activity they detected and disrupted between December 2025 and August 2026.</v>
+
+16
+00:01:31.577 --> 00:01:36.741
+<v Daniel>And to really make sense of what this report is telling us, we're also pulling from a whole stack of supporting research today.</v>
+
+17
+00:01:37.021 --> 00:01:47.428
+<v Maya>Right. We've got a methodology paper from Google DeepMind. We have a biological threat study from RAND. Some baseline research on geolocation and some AI governance frameworks.</v>
+
+18
+00:01:47.548 --> 00:01:52.932
+<v Daniel>Because our mission for this deep dive is to explore exactly how the landscape of threats has fundamentally shifted.</v>
+
+19
+00:01:53.032 --> 00:01:53.332
+<v Maya>Yes.</v>
+
+20
+00:01:53.553 --> 00:02:08.324
+<v Daniel>And to do that, we have to look at the central claim of this anthropic report. The core thesis here is that AI has entirely collapsed the labor and tooling gap that used to separate well-resourced state operations from lone individuals. The report states this directly for threat</v>
+
+21
+00:02:08.344 --> 00:02:16.190
+<v Daniel>intelligence investigators. And it says sophistication has stopped being a reliable signal of who is behind an operation.</v>
+
+22
+00:02:16.593 --> 00:02:20.135
+<v Maya>I mean, that single sentence is the spine of our entire conversation today.</v>
+
+23
+00:02:20.155 --> 00:02:20.995
+<v Daniel>Yeah, it really is.</v>
+
+24
+00:02:21.295 --> 00:02:32.521
+<v Maya>Sophistication has stopped being a reliable signal. OK, let's just unpack this, because to understand how this gap collapsed so incredibly quickly, we have to look at exactly what changed in just one year.</v>
+
+25
+00:02:32.541 --> 00:02:45.688
+<v Daniel>Right. The timeline here is critical, because if we look back at Anthropic's threat report from August 2025, which is just a little over a year ago. Threat actors were using AI mostly for what we would basically call assistance.</v>
+
+26
+00:02:45.908 --> 00:02:46.929
+<v Maya>Like a digital helper.</v>
+
+27
+00:02:47.290 --> 00:02:52.415
+<v Daniel>Exactly. It could, you know, draft a phishing email or maybe help debug a simple script.</v>
+
+28
+00:02:52.595 --> 00:02:55.358
+<v Maya>So it was just a tool, like you still had to swing the hammer yourself.</v>
+
+29
+00:02:55.458 --> 00:03:05.488
+<v Daniel>Yes. But the paradigm in this new September 2026 report has completely shifted to automation. The report describes AI actually running the cyber kill chain.</v>
+
+30
+00:03:05.727 --> 00:03:20.539
+<v Maya>And let's define that really quickly for you. The cyber kill chain is basically the step by step lifecycle of an attack. It goes from reconnaissance to weaponizing the code, delivering it and finally exploiting the target network. The old report had AI helping with maybe one of</v>
+
+31
+00:03:20.579 --> 00:03:24.622
+<v Maya>those steps. But this new report has AI running the whole board.</v>
+
+32
+00:03:25.443 --> 00:03:40.356
+<v Daniel>We aren't talking about a chatbot writing emails anymore. We are talking about AI models running in harnesses, working at machine speed. Yeah. These are agentic workflows where models are parallel processing tasks, reacting to real-time</v>
+
+33
+00:03:40.396 --> 00:03:49.524
+<v Daniel>feedback, and honestly acting as autonomous software engineers. Oh, it's wild. And Anthropic uses a specific term for this throughout the report. They call it uplift.</v>
+
+34
+00:03:49.704 --> 00:03:50.245
+<v Maya>Uplift.</v>
+
+35
+00:03:50.465 --> 00:03:55.786
+<v Daniel>Yeah, they define it specifically as an increase in speed, scale, and depth across that cyber kill chain.</v>
+
+36
+00:03:55.866 --> 00:04:00.067
+<v Maya>And they break this down into seven distinct harm areas where they've disrupted activity, right?</v>
+
+37
+00:04:00.087 --> 00:04:00.927
+<v Daniel>Yes, seven areas.</v>
+
+38
+00:04:01.087 --> 00:04:09.129
+<v Maya>They list cyber operations, influence operations, surveillance, conventional weapons, biological misuse, scams and fraud, and illicit distillation.</v>
+
+39
+00:04:09.329 --> 00:04:15.510
+<v Daniel>Right, and they even categorize the actors behind these using what they call GTG, or generative threat group designators.</v>
+
+40
+00:04:15.916 --> 00:04:30.645
+<v Maya>generative threat group. But let me push back on this term uplift for a second. Is uplift just a polite corporate buzzword for, you know, doing bad things faster? Because when I read this, it sounds like the difference between giving a bank</v>
+
+41
+00:04:30.705 --> 00:04:41.512
+<v Maya>robber a faster getaway car versus giving them a robot that can simultaneously hack the vault, cut the power, forge the blueprints and monitor the police scanners all at once.</v>
+
+42
+00:04:41.732 --> 00:04:45.415
+<v Daniel>The bank robber analogy actually highlights the crucial difference perfectly.</v>
+
+43
+00:04:45.575 --> 00:04:45.775
+<v Maya>Yeah.</v>
+
+44
+00:04:46.276 --> 00:04:50.539
+<v Daniel>It isn't just a speed boost. It fundamentally changes the nature of the operation.</v>
+
+45
+00:04:50.679 --> 00:04:50.900
+<v Maya>Right.</v>
+
+46
+00:04:51.300 --> 00:05:06.232
+<v Daniel>The most dangerous aspect outlined here isn't necessarily the A.I. inventing some completely novel, never before seen cyber weapon. It's that the A.I. is doing the grinding, highly specialized labor that used to require a room full of highly trained humans.</v>
+
+47
+00:05:06.332 --> 00:05:12.640
+<v Daniel>The grunt work. Yeah, reconnaissance, tool development, data processing, exploitation, every single layer is uplifted.</v>
+
+48
+00:05:12.780 --> 00:05:19.930
+<v Maya>And here's where it gets really interesting, I think, because historically, the major bottleneck in mass surveillance has always been human labor.</v>
+
+49
+00:05:20.050 --> 00:05:20.590
+<v Daniel>Oh, absolutely.</v>
+
+50
+00:05:20.691 --> 00:05:24.856
+<v Maya>You can intercept all the data in the world, but somebody actually has to sit there and read it.</v>
+
+51
+00:05:24.976 --> 00:05:25.517
+<v Daniel>Exactly.</v>
+
+52
+00:05:25.697 --> 00:05:36.882
+<v Maya>So let's look at exactly how this headcount collapse changes the real world, starting with a case in the report involving a single consultant working for Malian National Security Authorities.</v>
+
+53
+00:05:37.182 --> 00:05:38.023
+<v Daniel>Right. One person.</v>
+
+54
+00:05:38.223 --> 00:05:45.787
+<v Maya>One person. And they used AI to engineer a mass interception platform across all of the country's mobile operators.</v>
+
+55
+00:05:46.167 --> 00:05:58.933
+<v Daniel>The mechanism there is genuinely terrifying. The AI wasn't just analyzing the intercepted data after the fact. It was used to design and write the underlying software infrastructure that made the interception possible in the first place.</v>
+
+56
+00:05:59.033 --> 00:05:59.914
+<v Maya>Wait, really?</v>
+
+57
+00:05:59.974 --> 00:06:08.183
+<v Daniel>Yeah. Translating complex telecom protocols, writing the writing scripts, tests that usually require a dedicated telecommunications engineering team.</v>
+
+58
+00:06:08.452 --> 00:06:12.394
+<v Maya>And then you have a Peoples Republic of China religious affairs collection unit.</v>
+
+59
+00:06:12.574 --> 00:06:12.835
+<v Daniel>Yes.</v>
+
+60
+00:06:13.095 --> 00:06:18.378
+<v Maya>The report notes that this kind of intelligence work used to require many teams of analysts, like a lot of people.</v>
+
+61
+00:06:18.458 --> 00:06:19.258
+<v Daniel>Dozens of people.</v>
+
+62
+00:06:19.318 --> 00:06:29.304
+<v Maya>But they've now compressed that into a single office, producing thousands of dossiers, investigations, and these situational awareness digests every single month.</v>
+
+63
+00:06:29.484 --> 00:06:31.085
+<v Daniel>And we really should talk about how they did this.</v>
+
+64
+00:06:31.325 --> 00:06:46.311
+<v Maya>Yeah. They fed the AI internal government templates. And the AI structured bulk extracted chatter from all over the Internet into finished intelligence. Right. It identified specific vulnerabilities and leverage points, what they actually call grab handles on</v>
+
+65
+00:06:46.371 --> 00:06:49.054
+<v Maya>religious figures and dissidents across Asia.</v>
+
+66
+00:06:49.214 --> 00:06:52.338
+<v Daniel>It is the complete automation of an intelligent analyst's desk.</v>
+
+67
+00:06:52.378 --> 00:06:52.719
+<v Maya>Yeah.</v>
+
+68
+00:06:53.441 --> 00:07:07.867
+<v Daniel>We also see this in a case involving an Iranian unit. They needed to monitor opposition figures, but instead of having a huge team read through social media all day, they used the Claude model to filter hundreds of thousands of social media posts down to just 39</v>
+
+69
+00:07:07.907 --> 00:07:10.888
+<v Daniel>specific, highly relevant opposition accounts to monitor.</v>
+
+70
+00:07:11.008 --> 00:07:13.069
+<v Maya>Just 39 from hundreds of thousands.</v>
+
+71
+00:07:13.109 --> 00:07:28.012
+<v Daniel>Yes. And the broader pattern we really need to extract from all these surveillance cases is that the targets haven't changed. State actors are still targeting the exact same diaspora and dissident communities they have always targeted. The intent is identical. What has</v>
+
+72
+00:07:28.112 --> 00:07:31.833
+<v Daniel>changed is the massive drop in the headcount required to execute it.</v>
+
+73
+00:07:31.960 --> 00:07:36.421
+<v Maya>But the case that really stopped me in my tracks was GTG 14010.</v>
+
+74
+00:07:36.701 --> 00:07:37.581
+<v Daniel>Oh, the Syrian one.</v>
+
+75
+00:07:37.601 --> 00:07:52.405
+<v Maya>Yeah, this was a PRC-aligned actor running a covert recruitment operation to infiltrate Uyghur targets in Syria. And this actor spoke absolutely no Arabic. None of it. None. Previously, running a human intelligence operation in Syria without speaking the</v>
+
+76
+00:07:52.445 --> 00:08:01.907
+<v Maya>language would be completely impossible. But this single operator used the model to draft outreach messages in regional Arabic dialects and translated the replies in real time.</v>
+
+77
+00:08:02.247 --> 00:08:05.169
+<v Daniel>The mechanics of how the model pulls that off are fascinating,</v>
+
+78
+00:08:05.229 --> 00:08:05.569
+<v Maya>honestly.</v>
+
+79
+00:08:05.949 --> 00:08:10.872
+<v Daniel>Large language models possess deep cultural latent space because of their massive training data.</v>
+
+80
+00:08:11.032 --> 00:08:12.313
+<v Maya>Right. They read everything.</v>
+
+81
+00:08:12.433 --> 00:08:20.978
+<v Daniel>Yeah. They haven't just memorized vocabulary. They've mapped the statistical relationships between words, including regional slang, cultural idioms, and military syntax.</v>
+
+82
+00:08:21.377 --> 00:08:34.966
+<v Maya>Which perfectly explains the craziest part of that case study. The operator actually instructed the AI to role play as an Arabic-speaking cultural and military expert to quality check their own deceptive messaging before they sent it.</v>
+
+83
+00:08:35.226 --> 00:08:36.327
+<v Daniel>Right, grading their own work?</v>
+
+84
+00:08:36.487 --> 00:08:42.511
+<v Maya>Yeah. They used the model's latent cultural knowledge as an expert review panel to make sure their slang was convincing.</v>
+
+85
+00:08:42.691 --> 00:08:43.412
+<v Daniel>It's incredible.</v>
+
+86
+00:08:43.772 --> 00:08:57.061
+<v Maya>Automating translations is one thing, you know, but that labor collapse gets terrifying when you apply it to kinetic weapons. Which brings us to the Yemen-based engineering cell, designated GTG 87001.</v>
+
+87
+00:08:57.221 --> 00:09:00.804
+<v Daniel>According to the report, this cell was running three concurrent weapons programs.</v>
+
+88
+00:09:01.024 --> 00:09:01.444
+<v Maya>Three?</v>
+
+89
+00:09:01.745 --> 00:09:08.689
+<v Daniel>Three at the same time. Program one was a guided rocket utilizing a commodity phone class flight computer with final phase homing.</v>
+
+90
+00:09:08.890 --> 00:09:09.190
+<v Maya>Okay.</v>
+
+91
+00:09:09.510 --> 00:09:14.878
+<v Daniel>Program 2 was a multi-stage ballistic missile with a stated range goal of over 2,000 kilometers.</v>
+
+92
+00:09:14.959 --> 00:09:15.319
+<v Maya>Wow.</v>
+
+93
+00:09:15.700 --> 00:09:20.427
+<v Daniel>And Program 3 was the R-2000 family, which included a hypersonic glide vehicle variant.</v>
+
+94
+00:09:20.631 --> 00:09:31.361
+<v Maya>And again, we have to look at the how here. They used a tool called Clawed Code in place of human software engineers to develop the guidance, navigation, and control software, the GNC software.</v>
+
+95
+00:09:31.421 --> 00:09:31.721
+<v Daniel>Yes.</v>
+
+96
+00:09:32.302 --> 00:09:41.950
+<v Maya>And they didn't just ask a chatbot some questions. They set up an agentic workflow. They ran several Clawed instances at the same time, giving them distinct assigned roles.</v>
+
+97
+00:09:42.210 --> 00:09:43.051
+<v Daniel>Like a whole team.</v>
+
+98
+00:09:43.231 --> 00:09:55.539
+<v Maya>Exactly. One AI instance was writing the actual code. feeding it to a compiler, reading the error logs, and fixing it. Another one was researching the physics. A third was reviewing the first one's code.</v>
+
+99
+00:09:55.779 --> 00:10:10.145
+<v Daniel>They basically built a virtual engineering department that runs continuously. And the most intense detail of this entire case study is that they actually test fired a guided rocket in the real world. Right. It appears to have failed. But within hours, they were back at their terminals,</v>
+
+100
+00:10:10.525 --> 00:10:14.707
+<v Daniel>feeding the telemetry data into Claude, asking it to diagnose the failure loop.</v>
+
+101
+00:10:14.927 --> 00:10:16.208
+<v Maya>That's insane.</v>
+
+102
+00:10:16.288 --> 00:10:24.673
+<v Daniel>That is the exact iterative engineering cycle you would expect from an advanced state military program. But it's executed by a small cell using an AI model.</v>
+
+103
+00:10:24.893 --> 00:10:30.557
+<v Maya>So, I mean, what does this all mean? I really need to pump the brakes here for a second because we have to anchor this in reality.</v>
+
+104
+00:10:30.677 --> 00:10:31.117
+<v Daniel>Good idea.</v>
+
+105
+00:10:31.238 --> 00:10:46.127
+<v Maya>There is vital nuance in the report that we cannot ignore. First, Anthropic explicitly states there is no evidence that this Yemen cell successfully fielded an operational device. There were lab testing and prototyping. Sure. Second, and this cuts the other</v>
+
+106
+00:10:46.167 --> 00:11:01.132
+<v Maya>way, the cell already possessed an offline simulation toolkit that didn't even need Claude to run. So my thought here is, you know, AI might be the ultimate digital engineer, but it cannot physically forge the steel. Right. It can't source the</v>
+
+107
+00:11:01.192 --> 00:11:10.876
+<v Maya>rocket fuel for you. The physical world still has supply chain bottlenecks that an API key, you know, the digital token you plug in to access the model's brain just cannot solve.</v>
+
+108
+00:11:11.314 --> 00:11:17.161
+<v Daniel>That physical bottleneck definitely exists, but we really shouldn't underestimate how AI can optimize navigating it.</v>
+
+109
+00:11:17.321 --> 00:11:17.882
+<v Maya>How so?</v>
+
+110
+00:11:18.162 --> 00:11:30.456
+<v Daniel>Well, an AI can't forge steel, but it can rapidly identify which shell corporations to use to buy the steel without triggering international sanctions, which historically was the hardest part of the supply chain.</v>
+
+111
+00:11:30.616 --> 00:11:32.198
+<v Maya>Oh, wow. Yeah, that makes sense.</v>
+
+112
+00:11:32.498 --> 00:11:47.345
+<v Daniel>However, your point raises a massive structural question for the security community. How do we objectively measure these capabilities? Right. How do we know this isn't just a vendor hyping up the dangerousness of its own product? Because, I mean, saying our</v>
+
+113
+00:11:47.445 --> 00:11:52.808
+<v Daniel>AI is so smart it can build missiles is actually a very effective marketing pitch in some defense circles.</v>
+
+114
+00:11:52.888 --> 00:12:07.784
+<v Maya>That is such a good point. And that brings us directly to the companion evaluations. The same day Anthropic released the threat report, their Frontier Red team released a companion report called Measuring Tactical Intelligence Targeting and Conventional Weapons Capabilities of AI Models.</v>
+
+115
+00:12:07.944 --> 00:12:19.971
+<v Maya>Right. They ran six tactical evaluations, identity correlation and classification, geolocation from photos, geolocation from text, terminal guidance, payload delivery, and navigation without GPS.</v>
+
+116
+00:12:20.171 --> 00:12:20.491
+<v Daniel>Yes.</v>
+
+117
+00:12:20.611 --> 00:12:25.554
+<v Maya>Let's look at the hard numbers on geolocation because it illustrates this leap in capability perfectly.</v>
+
+118
+00:12:25.882 --> 00:12:32.907
+<v Daniel>To understand why these numbers even matter, we have to look at a baseline study by Haas and colleagues called the PIDGEN study.</v>
+
+119
+00:12:33.027 --> 00:12:33.487
+<v Maya>Right, PIDGEN.</v>
+
+120
+00:12:33.647 --> 00:12:46.195
+<v Daniel>PIDGEN stands for Predicting Image Geolocations. It explains why planet-scale geolocation, like looking at a random photo and knowing exactly where on Earth it was taken, is a wildly difficult, highly specialized problem.</v>
+
+121
+00:12:46.215 --> 00:12:47.596
+<v Maya>Because they're looking at what? Dirt.</v>
+
+122
+00:12:47.843 --> 00:13:00.925
+<v Daniel>You have to analyze shadows, flora, architectural styles, weather patterns, everything. And elite human players, people who do this obsessively, have a median error rate of roughly 151 kilometers.</v>
+
+123
+00:13:01.005 --> 00:13:15.748
+<v Maya>Okay. So 151 kilometers is the human baseline. Now compare that 151 kilometer human error to the AI models tested by the Frontier Red team. Great. The Mythos preview model reached a median error of just 37.0 kilometers. Wow. I mean, it is absolutely crushing</v>
+
+124
+00:13:15.808 --> 00:13:30.412
+<v Maya>elite human experts because It has essentially memorized every street sign and pixel of geography in its training data. Right. And the Opus 5 model hit an 80% strike rate on stationary high visibility targets, though it drops to 20% across all difficulty</v>
+
+125
+00:13:30.452 --> 00:13:45.317
+<v Maya>levels. Even open weights models like Kini K3, these are models where the underlying code and parameters are freely downloadable, meaning there's no corporate kill switch. Even they trailed the frontier models, but still showed what Anthropic calls concerning</v>
+
+126
+00:13:45.377 --> 00:13:45.997
+<v Maya>capability.</v>
+
+127
+00:13:46.271 --> 00:13:58.039
+<v Daniel>But here's where we have to ask a very pointed question about the methodology. Okay. We have a paper from Google DeepMind, authored by Foom and colleagues in 2024, titled Evaluating Frontier Models for Dangerous Capabilities.</v>
+
+128
+00:13:58.059 --> 00:13:59.260
+<v Maya>Right. I read that one.</v>
+
+129
+00:13:59.300 --> 00:14:14.131
+<v Daniel>Yeah. This is the direct methodological ancestor of what Anthropic's Red Team is doing here. It defines what a dangerous capability evaluation is actually designed to do. But what happens to the validity of these tests when the company selling the model is the exact same company</v>
+
+130
+00:14:14.191 --> 00:14:15.992
+<v Daniel>designing the test and grading their own homework?</v>
+
+131
+00:14:16.092 --> 00:14:27.191
+<v Maya>Which is exactly where my brain completely broke, because I read the 2024 Iran Red Team study by Mouton, Lucas, and Guest on the operational risks of AI in large-scale biological attacks.</v>
+
+132
+00:14:27.632 --> 00:14:29.135
+<v Daniel>Yes, the biological study.</v>
+
+133
+00:14:29.279 --> 00:14:37.868
+<v Maya>This is our skeptical counterweight. And they found absolutely zero statistically significant uplift from LLM access and biological attack planning.</v>
+
+134
+00:14:37.908 --> 00:14:38.248
+<v Daniel>Zero.</v>
+
+135
+00:14:38.568 --> 00:14:52.122
+<v Maya>None. They put human teams in a controlled environment, gave some of them internet access, and gave others internet plus an AI assistant. The AI did not make them significantly better or faster at planning a bio attack.</v>
+
+136
+00:14:52.262 --> 00:14:53.303
+<v Daniel>That is fascinating.</v>
+
+137
+00:14:53.343 --> 00:15:00.010
+<v Maya>So if the AI is smart enough to build missile guidance systems, why is it basically useless at planning a bio attack?</v>
+
+138
+00:15:00.305 --> 00:15:03.887
+<v Daniel>The discrepancy actually highlights the limits of current AI architecture.</v>
+
+139
+00:15:04.088 --> 00:15:04.608
+<v Maya>How so?</v>
+
+140
+00:15:04.988 --> 00:15:19.738
+<v Daniel>LLMs are incredible at manipulating code in text, which is what the cyber operations and the Yemen GNC software relied on. They have massive amounts of training data in those domains. Right. But planning a novel biological attack in the physical world relies on</v>
+
+141
+00:15:19.958 --> 00:15:25.862
+<v Daniel>highly specific, extremely scarce data that just isn't floating around the open Internet for a model to ingest.</v>
+
+142
+00:15:26.042 --> 00:15:40.470
+<v Maya>I see that. Yeah, but we are holding a massive tension here between the RAND study finding zero uplift and anthropic screaming that the sky is falling regarding cyber and weapons uplift. We are. I just have to wonder about regulatory capture here. Like, Is it possible</v>
+
+143
+00:15:40.610 --> 00:15:45.352
+<v Maya>Anthropic is heavily incentivized to make their model sound like dangerous super weapons?</v>
+
+144
+00:15:45.452 --> 00:15:46.173
+<v Daniel>It's a fair question.</v>
+
+145
+00:15:46.233 --> 00:15:58.418
+<v Maya>Because if they convince lawmakers that these models are essentially digital uranium, governments will regulate them so heavily that it completely freezes out open source competitors who just can't afford massive compliance teams.</v>
+
+146
+00:15:58.738 --> 00:16:13.362
+<v Daniel>It's a vital critique. But we can also look at the methodological differences between the studies. A controlled red team study, like RANDS, takes people who might not be highly motivated terrorists, puts them in a synthetic environment, and asks them to</v>
+
+147
+00:16:13.422 --> 00:16:28.308
+<v Daniel>plan a bio-attack from scratch. They are measuring a hypothetical uplift in a lab setting. Right. Whereas the anthropic report is an observational report. Yeah. They're watching real world, highly motivated, bad actors who already have the intent, who already</v>
+
+148
+00:16:28.348 --> 00:16:36.351
+<v Daniel>have the offline simulation toolkits. And they're watching them use the AI to accelerate their existing deeply technical workflows.</v>
+
+149
+00:16:36.571 --> 00:16:42.373
+<v Maya>That makes total sense. What a lab test can see and what real world telemetry can see are just two totally different things.</v>
+
+150
+00:16:42.863 --> 00:16:53.790
+<v Daniel>Exactly. Both things are true at once. This anthropic report is, without a doubt, the most detailed public evidence the world has of how frontier models are actually being misused.</v>
+
+151
+00:16:53.950 --> 00:16:54.271
+<v Maya>Yes.</v>
+
+152
+00:16:54.571 --> 00:17:05.538
+<v Daniel>But it is a disclosure whose scope, framing, and omissions are entirely the vendor's choice. No outside party can audit these jet logs or check the telemetry.</v>
+
+153
+00:17:05.598 --> 00:17:16.255
+<v Maya>Which perfectly transitions us to the bigger governance picture here. If the best data we have on AI threats comes from the vendors themselves, who should actually be in charge of this disclosure?</v>
+
+154
+00:17:16.533 --> 00:17:31.339
+<v Daniel>This is where we turn to the governance framework outlined by Andrew Jung and colleagues in their paper, Frontier AI Regulation. They argue that self-regulation by AI developers is an important first step, but it simply cannot be the only step. They propose mechanisms for regulatory</v>
+
+155
+00:17:31.379 --> 00:17:40.022
+<v Daniel>visibility, you know, disclosure regimes, monitoring processes, ways for external bodies to actually see inside the black box of frontier AI deployment.</v>
+
+156
+00:17:40.162 --> 00:17:48.568
+<v Maya>Because right now we really have to ask, is voluntary vendor reporting just the floor of what we should expect? Or is it becoming the ceiling of what the public ever gets to know?</v>
+
+157
+00:17:48.929 --> 00:17:51.130
+<v Daniel>That is the critical governance question right now.</v>
+
+158
+00:17:51.571 --> 00:18:01.138
+<v Maya>So what does this mean when you're scrolling through the news tomorrow? For you, the everyday person who isn't a cybersecurity professional, how does this change the way we understand the world?</v>
+
+159
+00:18:01.755 --> 00:18:04.316
+<v Daniel>Well, it basically means the death of attribution as we knew it.</v>
+
+160
+00:18:04.436 --> 00:18:04.636
+<v Maya>Yeah.</v>
+
+161
+00:18:05.037 --> 00:18:19.764
+<v Daniel>If you read a headline tomorrow about a highly sophisticated cyber attack, one that compromised thousands of systems and moved laterally across networks with incredible precision, you can no longer assume it was gated by immense expertise and</v>
+
+162
+00:18:19.824 --> 00:18:34.734
+<v Daniel>expense. Right. The assumption that dangerous work stays expensive is just gone. It might have been a nation state. But it also might have been a small, financially motivated crew who bought some stolen credentials and spun up a fleet of AI agents to do the work of 50</v>
+
+163
+00:18:34.794 --> 00:18:35.275
+<v Daniel>engineers.</v>
+
+164
+00:18:35.535 --> 00:18:39.458
+<v Maya>The labor gap is gone. The intent is what matters now, not the sophistication.</v>
+
+165
+00:18:39.678 --> 00:18:40.139
+<v Daniel>Exactly.</v>
+
+166
+00:18:40.279 --> 00:18:49.967
+<v Maya>I want to leave you with a final thought to really mull over. We started today by talking about how a blown vault used to mean military-grade explosives and expert thieves.</v>
+
+167
+00:18:50.007 --> 00:18:50.928
+<v Daniel>Yeah, the old logic.</v>
+
+168
+00:18:51.228 --> 00:19:06.039
+<v Maya>But now the tools to crack the digital vault are practically free and infinitely reproducible. The next time a massive cyber incident hits the news and you see a Lourdes quickly pointing the finger at a specific nation state based purely on the sophistication of the</v>
+
+169
+00:19:06.079 --> 00:19:07.700
+<v Maya>code, ask yourself this</v>
+
+170
+00:19:07.720 --> 00:19:08.180
+<v Daniel>race.</v>
+
+171
+00:19:08.681 --> 00:19:20.489
+<v Maya>How will global politics adapt? How will diplomacy even function when governments can no longer easily prove if they were attacked by a hostile superpower or just a single person sitting in a basement with an API key?</v>
+
+172
+00:19:20.724 --> 00:19:24.002
+<v Daniel>The entire architecture of deterrence has to be rebuilt from the ground up.</v>
+
+173
+00:19:24.123 --> 00:19:24.791
+<v Maya>It really does.</v>

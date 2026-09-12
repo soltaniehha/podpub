@@ -1,0 +1,17 @@
+When Sophistication Stops Being A Signal (2023-2026)
+
+In this episode we unpack Anthropic's threat intelligence report "Detecting and countering misuse of AI: September 2026", published on 10 September 2026, a 154 page account of operations the company detected and disrupted between December 2025 and August 2026 across seven harm areas: cyber operations, influence operations, surveillance, conventional weapons, biological misuse, scams and fraud, and illicit distillation. Its central finding is stated flatly in the cyber section and it is the line the whole episode turns on: AI has collapsed the labor and tooling gap that used to separate well resourced state operations from lone individuals, so for threat intelligence investigators sophistication has stopped being a reliable signal of who is behind an operation. Alongside it, Anthropic's Frontier Red Team released new evaluations measuring the same capabilities in the lab rather than in the wild.
+
+We walk through the cases the report names. GTG-87001, a Yemen based cell running three weapons programs, which used Claude Code in place of human software engineers to write guidance, navigation and control software, ran several model instances at once with assigned roles, test fired a guided rocket, and came back within hours to work out why it failed. The surveillance operations, where a single consultant built a mass interception platform spanning a country's mobile operators, a Chinese collection unit shrank from many teams of analysts to one office producing thousands of investigations a month, and an actor with no Arabic ran a multiday recruitment operation against Uyghur targets in Syria with the model translating in real time. We cover the six new evaluations, including a 37.0 km median error geolocating photographs against roughly 151 km for elite human players, measured against the PIGEON system that made planet scale geolocation a research problem in the first place, and we set the report against Phuong et al.'s dangerous capability evaluations and RAND's red team study, which found no statistically significant uplift in its own biological attack planning exercise. We close on the thing the report cannot settle about itself, that it is the most detailed public evidence anyone has of how frontier models are actually being misused and also a disclosure whose scope and framing are entirely the vendor's to choose.
+
+Reference: Anthropic. (2026). Detecting and countering misuse of AI: September 2026. https://www.anthropic.com/threat-intelligence-report-september-2026
+
+Reference: Anthropic Frontier Red Team. (2026). Measuring tactical intelligence targeting and conventional weapons capabilities of AI models. https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities
+
+Reference: Phuong, M., Aitchison, M., Catt, E., et al. (2024). Evaluating Frontier Models for Dangerous Capabilities. arXiv:2403.13793. https://arxiv.org/abs/2403.13793
+
+Reference: Mouton, C. A., Lucas, C., & Guest, E. (2024). The Operational Risks of AI in Large-Scale Biological Attacks: Results of a Red-Team Study. RAND Corporation, RR-A2977-2. https://www.rand.org/pubs/research_reports/RRA2977-2.html
+
+Reference: Haas, L., Skreta, M., Alberti, S., & Finn, C. (2024). PIGEON: Predicting Image Geolocations. arXiv:2307.05845. https://arxiv.org/abs/2307.05845
+
+Reference: Anderljung, M., Barnhart, J., Korinek, A., et al. (2023). Frontier AI Regulation: Managing Emerging Risks to Public Safety. arXiv:2307.03718. https://arxiv.org/abs/2307.03718
