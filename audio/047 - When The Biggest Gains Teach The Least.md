@@ -1,0 +1,15 @@
+When The Biggest Gains Teach The Least (2023-2026)
+
+In this episode we unpack "Does AI Assistance Enhance or Erode Expertise?", an NBER working paper released on 7 September 2026 by David Autor of MIT with Tanya Rodchenko, Josh Martin, Zanna Iscenko, Scott Strand, David Pearl and Melissa Ferere of Google. It reports a pre-registered three month randomized controlled trial in which 133 practicing patent lawyers at eleven U.S. intellectual property firms were given a custom AI drafting assistant, and then tested on their professional judgment with the AI taken away. The finding: AI made everyone's patent drafts better, and helped junior lawyers most, but three months later only the senior lawyers had become better at the job without it. The lawyers who gained the most from the tool retained the least.
+
+We walk through the design, Google Labs' unreleased InFlow assistant, the 2:1 randomization stratified by firm and seniority, the drafting tasks at 10 and 90 days scored by blinded patent attorneys on enforceability, accuracy, strategic ambiguity, completeness and clarity, and the unassisted redlining task that separates what lawyers internalized from what the software did for them. We cover the headline effects, 0.34 and 0.38 standard deviations on AI-assisted drafting and 0.32 on unassisted redlining, driven entirely by seniors at 0.45 while juniors bifurcated into more poor and more good scores, along with the Gemini rater, the permutation tests and the NotebookLM audit for suspected AI use. We set it against the leveling results of Noy and Zhang's ChatGPT writing experiment and Brynjolfsson, Li and Raymond's customer support study, and against the learning losses in Bastani et al.'s high school mathematics field experiment and Shen and Tamkin's coding experiment at Anthropic, and close on whether foundational expertise is a prerequisite for learning from AI, what that means for the apprenticeship ladder in law and other professions, and the limits of a small, Google-funded sample observed for only three months.
+
+Reference: Autor, D., Rodchenko, T., Martin, J., Iscenko, Z., Strand, S., Pearl, D., & Ferere, M. (2026). Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting. NBER Working Paper 35720. https://doi.org/10.3386/w35720
+
+Reference: Noy, S., & Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. Science, 381(6654), 187-192. https://doi.org/10.1126/science.adh2586
+
+Reference: Brynjolfsson, E., Li, D., & Raymond, L. (2025). Generative AI at Work. The Quarterly Journal of Economics, 140(2), 889-942. https://doi.org/10.1093/qje/qjae044
+
+Reference: Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122
+
+Reference: Shen, J. H., & Tamkin, A. (2026). How AI Impacts Skill Formation. arXiv:2601.20245. https://arxiv.org/abs/2601.20245
