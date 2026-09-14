@@ -1,0 +1,857 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:12.693
+<v Maya>If you want to save human jobs from the AI revolution, the absolute worst thing you can do is tax the robots. I mean, in fact, taxing a robots might be the fastest way to completely ruin the economy. And today we are going to show you why.</v>
+
+2
+00:00:13.226 --> 00:00:15.687
+<v Daniel>It is like the ultimate counterintuitive truth.</v>
+
+3
+00:00:15.707 --> 00:00:15.967
+<v Maya>Yeah.</v>
+
+4
+00:00:16.267 --> 00:00:31.150
+<v Daniel>Because, you know, whenever we picture the future of work, that anxiety is just so palpable. We imagine like a gleaming metallic arm replacing a factory worker or a glowing chat GPT interface just sliding onto your desk</v>
+
+5
+00:00:31.210 --> 00:00:31.990
+<v Daniel>to do your job.</v>
+
+6
+00:00:32.030 --> 00:00:42.353
+<v Maya>Yeah. And the political battle cry has always been incredibly simple, right? Tax the machine to save the human. Exactly. But what if that is entirely the wrong lever to pull? Welcome to today's deep dive.</v>
+
+7
+00:00:42.513 --> 00:00:43.073
+<v Daniel>Glad to be here.</v>
+
+8
+00:00:43.353 --> 00:00:53.880
+<v Maya>So, our mission today is to unpack a massive stack of heavyweight economic research that radically shifts how we should think about AI, automation, and, well, your paycheck.</v>
+
+9
+00:00:54.701 --> 00:01:00.485
+<v Daniel>We're focusing really heavily on a brand new breakthrough paper. I mean, this just dropped yesterday, September 14th, 2026.</v>
+
+10
+00:01:01.025 --> 00:01:01.866
+<v Maya>Hot off the presses.</v>
+
+11
+00:01:02.366 --> 00:01:12.173
+<v Daniel>Literally. It's called Automation and Optimal Taxation, a Task-Based Theory. And it's by economists Henrik Klavan and Omin Zidar over at Princeton.</v>
+
+12
+00:01:12.478 --> 00:01:19.085
+<v Maya>And we also brought in five foundational economic papers to help explain the groundwork that this new theory stands on.</v>
+
+13
+00:01:19.166 --> 00:01:21.688
+<v Daniel>Right, because we need to establish the spine of this right away.</v>
+
+14
+00:01:21.768 --> 00:01:23.110
+<v Maya>Yeah, let's lay it out.</v>
+
+15
+00:01:23.270 --> 00:01:33.722
+<v Daniel>The public debate has been all about taxing the robots. But Klavan and Zadar argue that the bigger, vastly better lever is actually just the ordinary income tax.</v>
+
+16
+00:01:33.997 --> 00:01:36.319
+<v Maya>Which sounds so boring, but it's huge.</v>
+
+17
+00:01:36.419 --> 00:01:44.224
+<v Daniel>It is. Because what they found is that automation does not change the optimal tax formulas at all. The underlying math actually stays the same.</v>
+
+18
+00:01:44.385 --> 00:01:46.026
+<v Maya>Wait, really? The math doesn't change?</v>
+
+19
+00:01:46.266 --> 00:01:48.988
+<v Daniel>Nope. But it changes the optimal tax rates completely.</v>
+
+20
+00:01:49.346 --> 00:01:50.867
+<v Maya>Okay, so we aren't throwing out the rule book.</v>
+
+21
+00:01:51.007 --> 00:02:05.857
+<v Daniel>Not at all. As the authors themselves put it, automation changes optimal taxation, not by overturning canonical tax rules, but by changing what those rules prescribe. Got it. It pushes us toward a much, much more progressive system. So we are</v>
+
+22
+00:02:05.898 --> 00:02:15.184
+<v Daniel>talking about a far bigger earned income tax credit, the EITC down at the bottom, and higher taxes on workers who are safely sheltered from the machines.</v>
+
+23
+00:02:15.496 --> 00:02:18.160
+<v Maya>And a pretty sizable tax on capital income, too,</v>
+
+24
+00:02:18.220 --> 00:02:20.403
+<v Daniel>right? Oh, yeah. A very sizable one.</v>
+
+25
+00:02:20.673 --> 00:02:26.736
+<v Maya>I'm trying to picture how that works in practice because it feels a lot like baking to me.</v>
+
+26
+00:02:27.016 --> 00:02:27.396
+<v Daniel>Baking.</v>
+
+27
+00:02:27.716 --> 00:02:34.440
+<v Maya>Yeah. Like automation doesn't mean we throw out the recipe book and forget how to make a cake. It doesn't overturn the laws of chemistry.</v>
+
+28
+00:02:34.580 --> 00:02:36.461
+<v Daniel>Right. The fundamental rules of the oven still apply.</v>
+
+29
+00:02:36.501 --> 00:02:49.147
+<v Maya>Exactly. But it's like we've suddenly moved our kitchen to a much higher altitude. The rules of baking are exactly the same. But to get that cake to actually rise in this new environment, you have to drastically change the oven temperature.</v>
+
+30
+00:02:49.367 --> 00:02:50.288
+<v Daniel>That's a great way to put it.</v>
+
+31
+00:02:50.328 --> 00:02:52.790
+<v Maya>You have to completely alter the measurements of the ingredients.</v>
+
+32
+00:02:53.230 --> 00:03:07.102
+<v Daniel>That is actually a brilliant way to frame it. The underlying architecture of how a government should optimally tax its citizens that survives. But the inputs to that math shift dramatically because the machines are changing the core value of human labor.</v>
+
+33
+00:03:07.677 --> 00:03:17.023
+<v Maya>OK, so before we can understand why the tax rates need to change so drastically, we first need to understand how these economists modeled our modern automated economy, right?</v>
+
+34
+00:03:17.223 --> 00:03:20.946
+<v Daniel>We do. We have to look at the virtual economy Cleveland and Zedar built.</v>
+
+35
+00:03:21.218 --> 00:03:25.102
+<v Maya>Like if we are changing the ingredients, what exactly is in the mixing bowl here?</v>
+
+36
+00:03:25.262 --> 00:03:31.128
+<v Daniel>So they imagined an economy where the entire output is made up of 1,000 distinct tasks.</v>
+
+37
+00:03:31.269 --> 00:03:32.610
+<v Maya>Okay, 1,000 tasks.</v>
+
+38
+00:03:32.670 --> 00:03:41.239
+<v Daniel>Right. And think of each task as a specific occupation. And they order these 1,000 tasks from the bottom to the top based entirely on the skill required to perform them.</v>
+
+39
+00:03:41.339 --> 00:03:47.484
+<v Maya>So let's make that concrete for you listening right now. Task number one at the very bottom might be manually sweeping a warehouse floor.</v>
+
+40
+00:03:47.624 --> 00:04:01.695
+<v Daniel>Exactly. And task number 1,000 at the very top is something highly complex like performing neurosurgery or designing a global corporate strategy. Right. Now, the authors draw a threshold somewhere on that</v>
+
+41
+00:04:01.835 --> 00:04:08.541
+<v Daniel>1,000-run ladder. Tasks from the bottom rung up to that threshold are what they call the automatable zone.</v>
+
+42
+00:04:08.927 --> 00:04:10.828
+<v Maya>Meaning a machine could just step in and do it?</v>
+
+43
+00:04:11.108 --> 00:04:20.255
+<v Daniel>Yes, but it is a very specific economic definition. In this zone, a human worker or a machine can do the job, and they are perfect substitutes.</v>
+
+44
+00:04:20.415 --> 00:04:21.395
+<v Maya>Perfect substitutes.</v>
+
+45
+00:04:21.575 --> 00:04:28.260
+<v Daniel>Right. The company does not care which one does it. Right. A robot sweeping the floor and a human sweeping the floor yield the exact same result.</v>
+
+46
+00:04:28.495 --> 00:04:34.003
+<v Maya>But for tax above that threshold, humans are strictly required. Like machines simply can't do them yet.</v>
+
+47
+00:04:34.023 --> 00:04:36.828
+<v Daniel>Right. So your neurosurgeon is safe for now.</v>
+
+48
+00:04:37.108 --> 00:04:37.549
+<v Maya>For now.</v>
+
+49
+00:04:37.709 --> 00:04:48.225
+<v Daniel>Yeah, for now. And here is where the economic mechanics really kick in. In an automatable job, the human's wage is pinned directly to the cost of doing that same job with a machine.</v>
+
+50
+00:04:48.325 --> 00:04:54.287
+<v Maya>Okay, so if tech companies figure out how to build cheaper warehouse robots, the human wage in that occupation just has to go down.</v>
+
+51
+00:04:54.367 --> 00:04:59.670
+<v Daniel>It has to. The firm will just fire the human and buy the machine if the human costs even a penny more.</v>
+
+52
+00:05:00.070 --> 00:05:06.493
+<v Maya>Because they are perfect substitutes. There's no, like, premium for a human touch when you're just moving boxes.</v>
+
+53
+00:05:06.573 --> 00:05:15.234
+<v Daniel>Precisely. But above the threshold, wages clear their own labor markets. They don't have that direct machine competition driving their price down.</v>
+
+54
+00:05:15.315 --> 00:05:15.795
+<v Maya>Makes sense.</v>
+
+55
+00:05:15.855 --> 00:05:24.634
+<v Daniel>And driving all of this is a separate class of people in the model called capitalists. They supply the machines to the economy and they respond purely to after tax returns.</v>
+
+56
+00:05:24.774 --> 00:05:29.175
+<v Maya>Wait, I have to stop you there because I see a massive blind spot in this virtual economy.</v>
+
+57
+00:05:29.535 --> 00:05:29.655
+<v Daniel>Oh.</v>
+
+58
+00:05:29.996 --> 00:05:44.699
+<v Maya>Yeah. You're saying that if a warehouse worker's job gets automated, their wage drops and they basically just drop out of the workforce? Don't they try to learn a new skill? Like if the robots take over the warehouse, doesn't the worker go to night school to</v>
+
+59
+00:05:44.739 --> 00:05:46.640
+<v Maya>become a robot repair technician?</v>
+
+60
+00:05:47.084 --> 00:06:01.810
+<v Daniel>It is the most common pushback you hear because culturally we are obsessed with the idea of retraining. Right. But the authors model this as workers only deciding whether to work in their specific occupation or not work at all. Economists call this the extensive</v>
+
+61
+00:06:01.850 --> 00:06:02.210
+<v Daniel>margin.</v>
+
+62
+00:06:02.230 --> 00:06:03.771
+<v Maya>The extensive margin. OK.</v>
+
+63
+00:06:04.011 --> 00:06:10.814
+<v Daniel>Yeah. And it builds on a famous 2002 paper by Emmanuel Saez, which is one of the background papers in our stack today.</v>
+
+64
+00:06:11.098 --> 00:06:16.625
+<v Maya>But logically, people do pivot. I mean, it feels a bit defeatist to assume everyone just gives up and goes home, doesn't it?</v>
+
+65
+00:06:16.825 --> 00:06:23.694
+<v Daniel>It does feel defeatist. Absolutely. But the authors defend this choice using the empirical engine of another major paper in our stack.</v>
+
+66
+00:06:24.094 --> 00:06:24.635
+<v Maya>Oh, which one?</v>
+
+67
+00:06:24.855 --> 00:06:29.461
+<v Daniel>A massive 2022 study by economists Asimoglu and Restrepo.</v>
+
+68
+00:06:29.781 --> 00:06:35.926
+<v Maya>Let me guess. The real world data shows that people don't actually bounce back and become software engineers overnight.</v>
+
+69
+00:06:36.087 --> 00:06:47.016
+<v Daniel>You hit the nail on the head. Acemoglu and Restrepo looked at the U.S. wage structure since 1980, and they found that automation actually explains 50 to 70 percent of all the changes in that structure.</v>
+
+70
+00:06:47.156 --> 00:06:49.197
+<v Maya>Wow. 50 to 70 percent.</v>
+
+71
+00:06:49.237 --> 00:06:57.699
+<v Daniel>Yeah. And the devastating piece of evidence they provide is that workers who are displaced by robots actually do tend to leave employment rather than move to other jobs.</v>
+
+72
+00:06:57.860 --> 00:06:58.600
+<v Maya>Seriously?</v>
+
+73
+00:06:58.660 --> 00:07:05.222
+<v Daniel>Yeah. The data shows very little evidence of offsetting employment gains in other occupations for those specific displaced workers.</v>
+
+74
+00:07:05.554 --> 00:07:20.548
+<v Maya>That is, I mean, that's really bleak. So mathematically, modeling it as a choice between working your current job or just not working at all this extensive margin is actually a highly realistic approximation of what happens to ordinary people.</v>
+
+75
+00:07:20.628 --> 00:07:34.872
+<v Daniel>Unfortunately, yes. It is a harsh reality. So if displaced workers are simply dropping out of the labor market, the question becomes, How can a government design a tax system to help them</v>
+
+76
+00:07:35.414 --> 00:07:37.402
+<v Daniel>without accidentally destroying the rest of the economy?</v>
+
+77
+00:07:37.670 --> 00:07:52.097
+<v Maya>Because usually if you mess with wages or taxes in one sector, it ripples everywhere and creates unintended consequences. Exactly. Like if you heavily tax the factory owners to pay the displaced workers, maybe the factory owners stop innovating, the whole economy slows down and everyone suffers.</v>
+
+78
+00:07:52.257 --> 00:07:56.079
+<v Daniel>Right. Which brings us to the core theoretical result of Klavan and Zedar's paper.</v>
+
+79
+00:07:56.299 --> 00:07:56.539
+<v Maya>Yeah.</v>
+
+80
+00:07:56.619 --> 00:08:00.441
+<v Daniel>To solve this, they use a methodological tool called a compensated perturbation.</v>
+
+81
+00:08:00.561 --> 00:08:02.842
+<v Maya>Okay. Compensated perturbation. That is a mouthful.</v>
+
+82
+00:08:03.222 --> 00:08:03.302
+<v Daniel>Are</v>
+
+83
+00:08:03.322 --> 00:08:05.543
+<v Maya>they basically just isolating the variables, it sounds like?</v>
+
+84
+00:08:05.797 --> 00:08:18.885
+<v Daniel>It's exactly about isolating variables. They mathematically change the tax rate for one specific occupation and then simultaneously apply compensating adjustments to neutralize all the ripple effects on everyone else's income.</v>
+
+85
+00:08:19.066 --> 00:08:21.067
+<v Maya>Oh, I get it. It's like an audio mixing board.</v>
+
+86
+00:08:21.487 --> 00:08:21.867
+<v Daniel>How do you mean?</v>
+
+87
+00:08:21.907 --> 00:08:36.538
+<v Maya>Like if I'm a music producer, I don't want to set up where turning up the master volume knob boosts the bass but completely blows out the drums. Right. I want an occupation specific tax system that isolates every single track. I can turn up the</v>
+
+88
+00:08:36.558 --> 00:08:38.900
+<v Maya>guitar without it bleeding into the lead vocals.</v>
+
+89
+00:08:39.000 --> 00:08:48.884
+<v Daniel>That is the perfect analogy. Because the government can tax each occupation differently, they can isolate the tracks. And the result of this mathematical mixing board is stunning.</v>
+
+90
+00:08:49.024 --> 00:08:49.525
+<v Maya>What happens?</v>
+
+91
+00:08:49.765 --> 00:09:02.370
+<v Daniel>They find that the optimal tax in every single occupation follows exactly the classic Sieyès 2002 participation tax formula. The formula survives the complex ripples of the broader economy entirely intact.</v>
+
+92
+00:09:02.630 --> 00:09:06.212
+<v Maya>So why does it work out so cleanly? I feel like real life is rarely that neat.</v>
+
+93
+00:09:06.588 --> 00:09:10.972
+<v Daniel>It comes down to a classic economic concept known as the diamond and merely targeting logic.</v>
+
+94
+00:09:11.312 --> 00:09:12.753
+<v Maya>OK. Diamond and merely.</v>
+
+95
+00:09:13.213 --> 00:09:27.205
+<v Daniel>The idea is simple. If the government has the power to tax each occupation separately and the power to tax capital separately, then anything the free market might do to redistribute income, the tax system can just do directly.</v>
+
+96
+00:09:27.425 --> 00:09:29.947
+<v Maya>So the government already has all the dials on your mixing board.</v>
+
+97
+00:09:30.027 --> 00:09:34.451
+<v Daniel>Exactly. They don't need to wait for wages to naturally adjust. They just spin the tax dials.</v>
+
+98
+00:09:34.746 --> 00:09:39.029
+<v Maya>But wait, doesn't this completely contradict the whole trickle down theory of taxation?</v>
+
+99
+00:09:39.149 --> 00:09:39.910
+<v Daniel>Oh, absolutely.</v>
+
+100
+00:09:40.150 --> 00:09:55.081
+<v Maya>Because we have papers in our background, Zach, from economists like Stiglitz, Rothschild and Scheuer, Sachs, Savinsky and Workren. The traditional trickle down argument is that if you tax the rich top earners less, they create more jobs, which naturally</v>
+
+101
+00:09:55.121 --> 00:09:56.962
+<v Maya>raises wages for everyone else at the bottom.</v>
+
+102
+00:09:57.122 --> 00:10:03.267
+<v Daniel>Right. They argue that those broader general equilibrium wage effects justify lower top tax rates.</v>
+
+103
+00:10:03.733 --> 00:10:05.834
+<v Maya>Exactly. So how does this paper get around that?</v>
+
+104
+00:10:06.054 --> 00:10:12.816
+<v Daniel>It completely contradicts that literature. And the reason why is entirely based on the difference between the intensive margin and the extensive margin.</v>
+
+105
+00:10:13.136 --> 00:10:18.178
+<v Maya>Okay, let's break those two margins down because I think that's where people get lost in the academic weeds.</v>
+
+106
+00:10:18.658 --> 00:10:26.321
+<v Daniel>For sure. The trickle-down literature usually models the intensive margin. That means people can choose how many hours they work or how much effort they put in.</v>
+
+107
+00:10:26.581 --> 00:10:33.899
+<v Maya>Like if you were a highly skilled surgeon and taxes go up to 70%, You might just decide to work three days a week instead of five.</v>
+
+108
+00:10:34.159 --> 00:10:46.291
+<v Daniel>Right. You shrink the whole economic pie because earnings based taxes pool different types of workers who might just be working different hours. Compressing pre-tax wages becomes an indirect tool for redistribution.</v>
+
+109
+00:10:46.870 --> 00:10:48.992
+<v Maya>But in this Klavan and Zettar world...</v>
+
+110
+00:10:49.152 --> 00:11:02.203
+<v Daniel>In their model, it is the extensive margin. Remember, you either work your specific occupation or you don't. Because every single occupation has a unique earnings level, taxation is effectively occupation-specific.</v>
+
+111
+00:11:02.383 --> 00:11:04.105
+<v Maya>There's no pooling of different effort levels.</v>
+
+112
+00:11:04.145 --> 00:11:12.852
+<v Daniel>Exactly. Therefore, those general economic spillovers, the trickle-down effects, lose their relevance. The government can just neutralize them with the mixing board.</v>
+
+113
+00:11:13.170 --> 00:11:22.478
+<v Maya>OK, so if the government has this magical audio mixing board to adjust the rates, what do the new rates actually look like when they calibrate this to the real world?</v>
+
+114
+00:11:22.938 --> 00:11:26.601
+<v Daniel>Well, we know the formula survives, but the inputs change dramatically.</v>
+
+115
+00:11:26.821 --> 00:11:30.304
+<v Maya>Right. Who is actually taking the biggest hit from the machines?</v>
+
+116
+00:11:30.633 --> 00:11:45.362
+<v Daniel>So the authors calibrated their model using real U.S. data. And to make sure their virtual economy mirrored our massive real world wealth cap, they used what statisticians call a standard deviation of log wages of 0.92.</v>
+
+117
+00:11:45.582 --> 00:11:52.707
+<v Maya>OK, meaning they made sure the gap between the poorest worker and the richest CEO in the simulation matched the real America.</v>
+
+118
+00:11:52.927 --> 00:12:02.197
+<v Daniel>Exactly. They also pulled data from the Brookings Institution, specifically from Miro and colleagues, showing that about 46 percent of U.S. workers are currently exposed to automation.</v>
+
+119
+00:12:02.417 --> 00:12:03.498
+<v Maya>Wow. Almost half.</v>
+
+120
+00:12:03.738 --> 00:12:07.022
+<v Daniel>Yeah. And they estimate about a quarter of all tasks are currently automatable.</v>
+
+121
+00:12:07.342 --> 00:12:11.326
+<v Maya>So what happens to the folks at the very bottom of the ladder in this calibrated simulation?</v>
+
+122
+00:12:11.747 --> 00:12:24.526
+<v Daniel>They get subsidized on a historic scale. The optimal work subsidy, think of this as a massive, supercharged version of the earned income tax credit, reaches a staggering 77% of earnings at the very bottom.</v>
+
+123
+00:12:24.606 --> 00:12:34.133
+<v Maya>Wait, a 77% subsidy? Meaning, if I earn $10,000 sweeping floors, the government cuts me a check for $7,700 just to keep me working?</v>
+
+124
+00:12:34.313 --> 00:12:34.554
+<v Daniel>Yes.</v>
+
+125
+00:12:35.134 --> 00:12:36.115
+<v Maya>That is wild.</v>
+
+126
+00:12:36.435 --> 00:12:45.285
+<v Daniel>It is. For comparison, in the standard, say, benchmark models from 2002 that didn't factor in this level of automation, that subsidy was only 36%.</v>
+
+127
+00:12:45.565 --> 00:12:47.127
+<v Maya>So it more than doubles.</v>
+
+128
+00:12:47.307 --> 00:12:54.254
+<v Daniel>And with automation, this massive new subsidy covers the bottom quarter of the entire wage distribution rather than just the bottom 7%.</v>
+
+129
+00:12:54.455 --> 00:12:57.498
+<v Maya>And what if the robots get cheaper, like deeper automation?</v>
+
+130
+00:12:57.840 --> 00:13:07.907
+<v Daniel>If automation gets deeper, meaning the machines get cheaper to build and run that subsidy, at the fifth percentile deepens from 32% to 45%, eventually up to 61%.</v>
+
+131
+00:13:08.227 --> 00:13:13.231
+<v Maya>That is just incredible to think about. A quarter of the workforce on massive government life support.</v>
+
+132
+00:13:13.311 --> 00:13:13.511
+<v Daniel>Yeah.</v>
+
+133
+00:13:13.711 --> 00:13:17.874
+<v Maya>But hold on. If the bottom is getting heavily subsidized, what happens to the people just above them?</v>
+
+134
+00:13:18.695 --> 00:13:21.638
+<v Daniel>Ah. That is where the pain is concentrated.</v>
+
+135
+00:13:21.758 --> 00:13:22.339
+<v Maya>Oh, boy.</v>
+
+136
+00:13:22.479 --> 00:13:36.538
+<v Daniel>Just above the automation threshold, which sits just below the median wage participation, tax rates jump to roughly 38 to 47 percent. This is notably higher than the benchmark over most of the upper half of the income distribution.</v>
+
+137
+00:13:36.844 --> 00:13:51.778
+<v Maya>Okay, this is the part that genuinely shocked me when reading this stack of research. Because if you're listening to this on your commute to a mid-level accounting job or like a data analysis gig, this paper is essentially drawing a giant red</v>
+
+138
+00:13:51.858 --> 00:13:52.959
+<v Maya>bullseye on your desk.</v>
+
+139
+00:13:53.059 --> 00:13:53.239
+<v Daniel>Yep.</v>
+
+140
+00:13:53.980 --> 00:13:57.823
+<v Maya>The absolute lowest paid workers are not the ones hurt the most by the machines.</v>
+
+141
+00:13:57.923 --> 00:14:01.907
+<v Daniel>It is the great paradox of this model. The lowest paid jobs stay human.</v>
+
+142
+00:14:02.448 --> 00:14:02.808
+<v Maya>Why?</v>
+
+143
+00:14:03.973 --> 00:14:13.376
+<v Daniel>Because they are populous, the wages are already low. And under this optimal tax system, they are so heavily subsidized by the government that it keeps humans artificially cheaper than the machines.</v>
+
+144
+00:14:13.597 --> 00:14:15.137
+<v Maya>So the hurt peaks right in the middle.</v>
+
+145
+00:14:15.197 --> 00:14:23.060
+<v Daniel>Exactly. According to the paper, the machine intensity peaks around the 41st percentile of wages. That's where machines are doing roughly 56 percent of the work.</v>
+
+146
+00:14:23.308 --> 00:14:38.158
+<v Maya>This ties directly into the anxiety we were talking about at the start of the deep dive. We used to think of automation as replacing low skill manual labor. Great. But this shows AI and automation are threatening white collar middle class jobs far more.</v>
+
+147
+00:14:38.698 --> 00:14:41.760
+<v Maya>It's the literal hollowing out of the middle class.</v>
+
+148
+00:14:41.960 --> 00:14:52.787
+<v Daniel>And if we look at the future projections in the model, this middle class hollowing barely moves even if three quarters of all tasks become automatable. The peak of the pain stays stubbornly anchored in the middle.</v>
+
+149
+00:14:53.025 --> 00:15:00.590
+<v Maya>But what if automation becomes broader? Like what if machines can suddenly do much more complex tasks further up the ladder?</v>
+
+150
+00:15:00.910 --> 00:15:07.934
+<v Daniel>Then that tax threshold slides up. It moves from the middle to the 69th percentile and eventually all the way up to the 86th percentile.</v>
+
+151
+00:15:07.954 --> 00:15:22.864
+<v Maya>Basically chasing the middle class all the way up into the upper middle class. Nobody is safe until you hit the very top. Pretty much. But that raises a massive logistical question. If the middle class is taking a hit... And the bottom quarter is getting a massive</v>
+
+152
+00:15:22.924 --> 00:15:27.287
+<v Maya>77% subsidy from the government. That sounds incredibly expensive.</v>
+
+153
+00:15:27.347 --> 00:15:27.567
+<v Daniel>It is.</v>
+
+154
+00:15:27.807 --> 00:15:35.232
+<v Maya>Where is the government getting the money to pay for this? Which I guess brings us to the capitalists and the ultimate fate of that robot tax.</v>
+
+155
+00:15:35.512 --> 00:15:45.305
+<v Daniel>Right. Remember, the capital tax in this formula is completely unaffected by whether automation exists or not. It follows the Sayes and Stancheva inverse elasticity rule.</v>
+
+156
+00:15:45.566 --> 00:15:54.672
+<v Maya>Inverse elasticity. That's a fancy way of saying tax capital as heavily as you can right up until the point where investors get spooked and pull their money out, right?</v>
+
+157
+00:15:54.732 --> 00:15:58.374
+<v Daniel>There's exactly what it means. You tax them based on how likely they are to flee.</v>
+
+158
+00:15:58.594 --> 00:15:59.035
+<v Maya>Makes sense.</v>
+
+159
+00:15:59.515 --> 00:16:14.208
+<v Daniel>So based on Danish wealth tax estimates by Jacobson, Jacobson, Cleveland, and Zuckman, assuming a middle-of-the-road capital supply elasticity of 1, the optimal capital tax sits at 50%. Wow. Half of their return's gone. Yes. If</v>
+
+160
+00:16:14.268 --> 00:16:28.943
+<v Daniel>capital is less responsive and trapped in the country and elasticity of 2.5, the tax scales up to 67%. Jeez. Now, if capital can easily flee overseas in elasticity 5, the tax drops to 17%. But in all realistic</v>
+
+161
+00:16:28.983 --> 00:16:34.549
+<v Daniel>scenarios, this is an order of magnitude higher than the actual robot taxes you hear proposed by politicians.</v>
+
+162
+00:16:34.849 --> 00:16:41.896
+<v Maya>Let's bring in our background sources here, because there is a massive academic clash over this specific idea of taxing the robots.</v>
+
+163
+00:16:42.037 --> 00:16:43.218
+<v Daniel>Oh, a huge clash.</v>
+
+164
+00:16:43.509 --> 00:16:57.992
+<v Maya>We have a 2022 paper by Guerrero, Rebolo, and Telles arguing that we should have a temporary robot tax only while current routine workers are in the workforce and then drop it to zero. Right. Then we have a 2023 paper by Kostinot and Mourning</v>
+
+165
+00:16:58.192 --> 00:17:08.555
+<v Maya>arguing for a small robot tax of roughly 4% that actually shrinks as automation deepens. Why are Klavan and Zidar saying these highly respected economists are wrong?</v>
+
+166
+00:17:08.926 --> 00:17:15.051
+<v Daniel>Well, Klavan and Zidar argue that those robot taxes are essentially an illusion caused by a missing instrument.</v>
+
+167
+00:17:15.712 --> 00:17:18.014
+<v Maya>What does a missing instrument mean in this context?</v>
+
+168
+00:17:18.394 --> 00:17:26.181
+<v Daniel>It means those older papers assume that the government's income tax could not be conditioned on specific occupations. They assume the government only had a blunt instrument.</v>
+
+169
+00:17:26.562 --> 00:17:27.182
+<v Maya>Oh, I see.</v>
+
+170
+00:17:27.442 --> 00:17:34.609
+<v Daniel>And if you can't tax the occupations directly, then taxing the robots is a clumsy second best way to try and help the displaced workers.</v>
+
+171
+00:17:35.228 --> 00:17:49.631
+<v Maya>Ah, so it's not necessarily a pure mathematical refutation. It's a change of assumptions. Klavan and Zetter are saying, wait, in the real world, occupations roughly correspond to unique earnings levels. So we actually can basically tax the</v>
+
+172
+00:17:49.691 --> 00:17:50.371
+<v Maya>occupations.</v>
+
+173
+00:17:50.631 --> 00:17:57.112
+<v Daniel>Exactly. And once you have that mixing board ability, the entire motive for a robot tax completely disappears.</v>
+
+174
+00:17:57.512 --> 00:17:59.092
+<v Maya>You just use the income tax system.</v>
+
+175
+00:17:59.192 --> 00:18:04.153
+<v Daniel>Right. It is vastly more efficient and it doesn't punish the technological innovation itself.</v>
+
+176
+00:18:04.354 --> 00:18:16.999
+<v Maya>But what about the 2020 paper by Asimoglu, Monera, and Restrepo? Because they show that the current US tax code heavily favors capital over labor, which drives companies to adopt too much automation just for the tax breaks.</v>
+
+177
+00:18:17.250 --> 00:18:20.972
+<v Daniel>Yeah, they said moving to optimal taxes would raise employment by about 4%.</v>
+
+178
+00:18:21.112 --> 00:18:22.852
+<v Maya>Do Klavan and Zidar agree with that?</v>
+
+179
+00:18:22.972 --> 00:18:24.933
+<v Daniel>They partly agree and partly disagree.</v>
+
+180
+00:18:25.113 --> 00:18:25.574
+<v Maya>How so?</v>
+
+181
+00:18:25.614 --> 00:18:38.599
+<v Daniel>They absolutely agree that we need a big capital tax, but their rationale is entirely different. Klavan and Zidar want a high capital tax purely to extract revenue from the capitalists to fund that massive EITC at the bottom.</v>
+
+182
+00:18:38.939 --> 00:18:40.320
+<v Maya>Not to correct excessive automation.</v>
+
+183
+00:18:40.440 --> 00:18:48.275
+<v Daniel>Exactly. To them, automation isn't a disease to be cured. It's just a reality that shifts where the tax revenue needs to flow.</v>
+
+184
+00:18:49.053 --> 00:19:04.020
+<v Maya>OK, I want to play devil's advocate for a second here, because this is a mathematically beautiful solution. The audio mixing board analogy works perfectly on paper, but no economic model perfectly reflects reality. We have to look at the blind spots here before we try to apply</v>
+
+185
+00:19:04.060 --> 00:19:05.060
+<v Maya>this to the real world.</v>
+
+186
+00:19:05.120 --> 00:19:08.182
+<v Daniel>That is a crucial step. We have to discuss the limits, honestly.</v>
+
+187
+00:19:08.382 --> 00:19:08.562
+<v Maya>Yeah.</v>
+
+188
+00:19:08.962 --> 00:19:22.134
+<v Daniel>First, as we pushed back on earlier, the model assumes absolutely nobody retrains. The authors actually point out that under their optimal tax schedule, there was a sharp jump in the tax rate right at the automation threshold.</v>
+
+189
+00:19:22.374 --> 00:19:22.634
+<v Maya>Right.</v>
+
+190
+00:19:22.835 --> 00:19:33.228
+<v Daniel>They argue the sharp jump would beautifully reward workers who could retrain and jump over the threshold to the human-only jobs. But the model itself just doesn't mathematically allow them to do it.</v>
+
+191
+00:19:33.328 --> 00:19:41.340
+<v Maya>Right. It's a closed loop. It's also a theory with a calibration, not newly observed data. And honestly, occupation specific taxes are an idealization.</v>
+
+192
+00:19:41.480 --> 00:19:42.020
+<v Daniel>Very much so.</v>
+
+193
+00:19:42.361 --> 00:19:52.180
+<v Maya>The real world IRS only sees your W-2 earnings. They see you made $60,000. They don't know if your specific daily task is 50% automated or 10% automated.</v>
+
+194
+00:19:52.320 --> 00:19:58.542
+<v Daniel>Exactly. The real tax code is blind to the tasks. Furthermore, the model applies a zero welfare weight on capitalists.</v>
+
+195
+00:19:58.622 --> 00:20:03.845
+<v Maya>Wait, meaning the government mathematically does not care about their happiness at all when maximizing social welfare?</v>
+
+196
+00:20:04.005 --> 00:20:09.887
+<v Daniel>None at all. And it assumes a pure redistribution budget. These are deliberate, subjective choices made by the modelers.</v>
+
+197
+00:20:10.278 --> 00:20:24.867
+<v Maya>Okay, here is my biggest pushback, especially right now. This model puts automation at the bottom of the skill ladder by assumption. It assumes automation starts at the floor sweeper and slowly creeps up to the data entry clerk. But with generative</v>
+
+198
+00:20:24.927 --> 00:20:39.686
+<v Maya>AI like ChatGPT and advanced coding models, we are seeing high skill cognitive tasks potentially being automated first. Yes. We're talking about junior lawyers and software engineers. So I have to ask, what changes in this grand tax</v>
+
+199
+00:20:39.726 --> 00:20:45.672
+<v Maya>theory if the automatable set suddenly drops right into the middle or the very top of the skill ladder?</v>
+
+200
+00:20:46.000 --> 00:21:00.963
+<v Daniel>That is the ultimate wildcard. If we connect this to the broader reality of generative AI, the mathematical logic of the theory actually holds up perfectly, but the burden flips entirely upside down. Wow. If AI automates the top cognitive tasks first,</v>
+
+201
+00:21:01.503 --> 00:21:09.285
+<v Daniel>then the top tier becomes the new automatable zone. The wages of lawyers or coders become pinned to the cost of AI compute.</v>
+
+202
+00:21:09.603 --> 00:21:13.686
+<v Maya>Meaning a lawyer only makes as much as it costs to run a legal AI server for an hour.</v>
+
+203
+00:21:13.806 --> 00:21:27.254
+<v Daniel>Exactly. And consequently, following the model's rules, the government would have to massively subsidize those top earners to keep them employed, while heavily taxing the manual, non-automatable labor at the bottom, like plumbers and electricians, to pay for it.</v>
+
+204
+00:21:27.494 --> 00:21:33.119
+<v Maya>Subsidizing the lawyers by heavily taxing the plumbers. Good luck to any politician trying to sell that on the campaign trail.</v>
+
+205
+00:21:33.319 --> 00:21:40.364
+<v Daniel>Right. It highlights just how sensitive our grand policy prescriptions are to the actual unpredictable capabilities of the technology.</v>
+
+206
+00:21:40.585 --> 00:21:51.934
+<v Maya>Wow. So let's synthesize the big picture for you listening today. If AI keeps getting cheaper and more capable, the mathematically optimal answer from these economists isn't a catchy robot tax.</v>
+
+207
+00:21:52.374 --> 00:21:53.535
+<v Daniel>Right. You don't tax the machine.</v>
+
+208
+00:21:53.773 --> 00:22:03.339
+<v Maya>The answer is a vastly expanded earned income tax credit for the vulnerable, paid for by aggressively taxing capital and heavily taxing the jobs that machines can't do.</v>
+
+209
+00:22:03.919 --> 00:22:15.966
+<v Daniel>And the implication for workers and educators today is profound. This strictly calibrated economic model warns us that it is the middle of the pack, not the bottom, that takes the hardest hit from the machines.</v>
+
+210
+00:22:16.328 --> 00:22:20.575
+<v Maya>The middle class gets hollowed out while the bottom is kept afloat by government life support.</v>
+
+211
+00:22:20.836 --> 00:22:21.236
+<v Daniel>Exactly.</v>
+
+212
+00:22:21.256 --> 00:22:36.162
+<v Maya>Which brings us back to that glowing AI interface sliding into your office chair. If the tax system of the future relies heavily on subsidizing human labor just to keep it artificially cheaper than machine labor, are we really protecting human dignity?</v>
+
+213
+00:22:36.342 --> 00:22:37.584
+<v Daniel>That's the million dollar question.</v>
+
+214
+00:22:37.885 --> 00:22:45.437
+<v Maya>Or are we just artificially pricing ourselves into becoming the machine's absolute cheapest alternative? Let that one mull over until next time.</v>
