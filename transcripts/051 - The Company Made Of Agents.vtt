@@ -1,0 +1,525 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:14.976
+<v Daniel>Imagine a. A pharmaceutical R&D department. Right. A huge one. Right. You've got the chief scientific officer setting the strategy and, you know, data analysts just crunching decades of</v>
+
+2
+00:00:15.016 --> 00:00:15.776
+<v Daniel>clinical trials.</v>
+
+3
+00:00:15.816 --> 00:00:19.777
+<v Maya>Yeah. And the critical reviewers tearing apart flawed pitches and meetings.</v>
+
+4
+00:00:19.817 --> 00:00:29.060
+<v Daniel>Exactly. Now, imagine that entire department exists purely on a server somewhere like it operates at a thousand times human speed. It doesn't sleep.</v>
+
+5
+00:00:29.403 --> 00:00:31.325
+<v Maya>And it costs, what, about 50 bucks a day to run?</v>
+
+6
+00:00:31.365 --> 00:00:33.566
+<v Daniel>Yeah, literally $50 a day. It's wild.</v>
+
+7
+00:00:33.586 --> 00:00:44.555
+<v Maya>Well, and the craziest part is that instead of the system functioning like standard software, you know, just a calculator you punch numbers into, it actually mirrors the corporate structure of a real world company.</v>
+
+8
+00:00:44.655 --> 00:00:58.826
+<v Daniel>Right. And that is the massive paradigm shift we are exploring in today's deep dive. So if you're listening, whether you're prepping for a big biotech strategy meeting or you're just, you know, insanely curious about where the actual frontier of AI is headed, This conversation is custom-built for you.</v>
+
+9
+00:00:58.966 --> 00:00:59.506
+<v Maya>It really is.</v>
+
+10
+00:00:59.766 --> 00:01:06.368
+<v Daniel>We're diving into this groundbreaking new peer-reviewed paper. It was published in Science on September 17, 2026. Yeah,</v>
+
+11
+00:01:07.289 --> 00:01:13.351
+<v Maya>titled The Virtual Biotech, a multi-agent AI framework for therapeutic discovery and development.</v>
+
+12
+00:01:13.531 --> 00:01:16.972
+<v Daniel>That's the one, led by Harrison G. Zhang and his colleagues at Stanford.</v>
+
+13
+00:01:17.652 --> 00:01:25.815
+<v Maya>And, I mean, we'll also draw on a stack of five key background papers just to kind of ground the theory this all stands on, but Zhang's science paper is the star of the show here.</v>
+
+14
+00:01:26.126 --> 00:01:40.887
+<v Daniel>Absolutely. The mission of this deep dive is to extract this really strange reality, right? Like what happens when artificial intelligence in science stops looking like a single massive model and starts looking like an entire</v>
+
+15
+00:01:40.987 --> 00:01:41.328
+<v Daniel>firm?</v>
+
+16
+00:01:41.448 --> 00:01:52.474
+<v Maya>Yeah, an actual corporation. But, you know, to really understand why the virtual biotech is such a leap, I think we have to look at the evolutionary lineage of AI in the lab over really just the last three years. That's</v>
+
+17
+00:01:52.494 --> 00:01:53.255
+<v Daniel>a move so fast.</v>
+
+18
+00:01:53.375 --> 00:02:02.100
+<v Maya>Ridiculously fast. The origin point for this trajectory was back in 2023. Daniel Boyko and colleagues published a paper in Nature about a system called cost scientist.</v>
+
+19
+00:02:02.280 --> 00:02:03.401
+<v Daniel>Oh, right. I remember that one.</v>
+
+20
+00:02:03.721 --> 00:02:18.316
+<v Maya>Yeah. It was a single autonomous AI agent that could Plan and execute real chemistry. You could just give it a prompt to do a cross-coupling reaction. And it would search the internet, write the code, and physically operate</v>
+
+21
+00:02:18.356 --> 00:02:19.777
+<v Maya>robotic liquid handlers.</v>
+
+22
+00:02:20.097 --> 00:02:27.704
+<v Daniel>So CosScientist is basically like the ultimate solo freelancer. You hire them, give them the tools, and they just do the job from start to finish.</v>
+
+23
+00:02:28.004 --> 00:02:35.430
+<v Maya>Exactly. And from there, the same Stanford lab behind today's paper created a system called Virtual Lab. That was sort of the next step.</v>
+
+24
+00:02:35.622 --> 00:02:38.123
+<v Daniel>And that's where they transition from one agent to a team, right?</v>
+
+25
+00:02:38.143 --> 00:02:48.328
+<v Maya>Right. Kyle Swanson, James Zhu, and their colleagues built this small startup team of agents. And they actually designed SARS-CoV-2 nanobodies that got experimentally validated in the real world.</v>
+
+26
+00:02:48.948 --> 00:03:00.133
+<v Daniel>Which makes sense. I mean, going from a solo freelancer to a scrappy startup is intuitive. But in the human business world, scaling from a four-person startup to a massive corporation is usually where everything just falls apart.</v>
+
+27
+00:03:00.193 --> 00:03:03.655
+<v Maya>Oh, completely. You get misaligned incentives, communication breakdowns.</v>
+
+28
+00:03:04.073 --> 00:03:15.875
+<v Daniel>bureaucracy, all of it. So what gets harder for the A.I. at each step? Like, how does this new system avoid the cautionary tale of. The A.I. scientist.</v>
+
+29
+00:03:15.935 --> 00:03:25.477
+<v Maya>Yeah, the A.I. scientist is vital context here. So Chris Liu and his colleagues released that system and it claimed fully automated, open ended scientific discovery.</v>
+
+30
+00:03:25.677 --> 00:03:29.918
+<v Daniel>He was supposed to write code, run experiments and even draft the final manuscript by itself.</v>
+
+31
+00:03:29.998 --> 00:03:44.932
+<v Maya>Yeah. But the problem was the quality. It drew a lot of heavy criticism because it frequently just generated low quality output or it hallucinated bad science. When you ask an AI to do open ended discovery without really strict parameters, it kind of loses</v>
+
+32
+00:03:44.993 --> 00:03:48.215
+<v Maya>the threat. It wanders into statistical noise and presents it as fact.</v>
+
+33
+00:03:48.295 --> 00:03:58.683
+<v Daniel>OK, so that brings us right back to Zhang's new science paper. How does the virtual biotech scale up complex knowledge work without just collapsing into that same hallucinated chaos?</v>
+
+34
+00:03:59.372 --> 00:04:14.361
+<v Maya>Well, the answer to scaling it, and this is the central defining claim of the paper, is that the abstraction they used is a literal corporate org chart. Yeah. The virtual biotech isn't just one massive model talking to itself. It's an AI system explicitly organized like</v>
+
+35
+00:04:14.401 --> 00:04:14.881
+<v Maya>a company.</v>
+
+36
+00:04:15.021 --> 00:04:19.444
+<v Daniel>OK, let's unpack this for the listener. They literally coded an executive suite.</v>
+
+37
+00:04:19.622 --> 00:04:34.179
+<v Maya>They built a very strict hierarchy. At the top, you have a virtual chief scientific officer, the CSO. And the key here is that the CSO doesn't do the math. Oh, really? Nope. When it gets a scientific question, it basically conducts an interview to clarify the intent,</v>
+
+38
+00:04:34.720 --> 00:04:38.965
+<v Maya>breaks that massive question down into sub questions, and then delegates.</v>
+
+39
+00:04:39.420 --> 00:04:44.362
+<v Daniel>Just pure strategic middle management. That is fascinating. Who supports the CSO?</v>
+
+40
+00:04:44.562 --> 00:04:54.185
+<v Maya>It's got a chief of staff agent, which gathers broad context from the biomedical landscape, and a scientific reviewer agent. The reviewer's sole job is quality control and internal critique.</v>
+
+41
+00:04:54.345 --> 00:05:00.047
+<v Daniel>Got it. So if the executive suite is just strategizing and critiquing, who does the granular lab work?</v>
+
+42
+00:05:00.375 --> 00:05:09.759
+<v Maya>Below the CSO, there are four distinct R&D divisions. You've got target identification, target safety, modality selection, and clinical officers.</v>
+
+43
+00:05:09.839 --> 00:05:11.660
+<v Daniel>Okay, that sounds like a real pharma pipeline.</v>
+
+44
+00:05:11.940 --> 00:05:26.928
+<v Maya>Exactly. Across those divisions, there are 11 highly specialized scientist agents. And they aren't just chatting. They are armed with over 100 specific tools and data sources, like real-world genomic</v>
+
+45
+00:05:26.968 --> 00:05:27.608
+<v Maya>databases.</v>
+
+46
+00:05:28.168 --> 00:05:36.576
+<v Daniel>But wait, if we're creating digital corporate hierarchies, do we also accidentally code in digital middle management bottlenecks?</v>
+
+47
+00:05:36.896 --> 00:05:37.337
+<v Maya>What do you mean?</v>
+
+48
+00:05:37.577 --> 00:05:43.543
+<v Daniel>Like if the single cell agent needs data from the clinical trial agent, does it get bogged down in digital red tape?</v>
+
+49
+00:05:44.064 --> 00:05:53.688
+<v Maya>Ah, well, that coordination overhead is actually a known risk in multi-agent systems. But the authors argue the org chart is the right abstraction because the constraint is the feature. The</v>
+
+50
+00:05:53.708 --> 00:05:54.748
+<v Daniel>constraint is the feature.</v>
+
+51
+00:05:54.788 --> 00:06:06.433
+<v Maya>Yeah. By strictly bounding what each agent is allowed to do, you stop the system from hallucinating. The statistical genetics agent isn't allowed to guess about clinical trials. It has to stay in its lane and pass findings up the chain.</v>
+
+52
+00:06:06.811 --> 00:06:21.754
+<v Daniel>OK, that makes sense. So let's actually see this constraint in action, because the paper puts this digital firm through three major demonstrations. And the scale of this first one is just staggering. They tasked the system with analyzing clinical trials to see what makes a drug</v>
+
+53
+00:06:21.794 --> 00:06:22.335
+<v Daniel>successful.</v>
+
+54
+00:06:22.580 --> 00:06:26.744
+<v Maya>And we need to be highly precise here because the media coverage has completely blurred this up.</v>
+
+55
+00:06:26.864 --> 00:06:27.625
+<v Daniel>Yeah, they really did.</v>
+
+56
+00:06:27.905 --> 00:06:34.933
+<v Maya>To analyze this data set, the virtual biotech spawned more than 37,000 clinical trialist agent instances.</v>
+
+57
+00:06:35.173 --> 00:06:35.733
+<v Daniel>Instances.</v>
+
+58
+00:06:35.793 --> 00:06:42.200
+<v Maya>Yes, instances. These are not 37,000 distinct employees sitting on the permanent work chart.</v>
+
+59
+00:06:42.462 --> 00:06:53.589
+<v Daniel>It's more like hiring 37,000 expert digital temps for one single afternoon, having them read every file in the basement and then instantly firing them when the job is done.</v>
+
+60
+00:06:53.689 --> 00:07:02.454
+<v Maya>Exactly. That is the perfect way to visualize it. So these temporary instances curated and annotated outcomes from 55,984 clinical trials from the Open Targets platform.</v>
+
+61
+00:07:04.815 --> 00:07:05.876
+<v Daniel>That's a massive data set.</v>
+
+62
+00:07:06.036 --> 00:07:16.924
+<v Maya>Huge. And they linked the drug targets to multi-omic annotations, including cell type specificity features that the agents actually derived themselves from single cell RNA sequencing analysis.</v>
+
+63
+00:07:17.064 --> 00:07:31.855
+<v Daniel>OK, let's pause and translate multi-omic for anyone not living in a biology lab. Basically, the AI wasn't just looking at the DNA sequence. It was looking at multiple layers, the DNA, the RNA, the proteins, all at the single cell level. So what did this army of</v>
+
+64
+00:07:31.915 --> 00:07:33.296
+<v Daniel>digital temps actually find?</v>
+
+65
+00:07:34.107 --> 00:07:40.774
+<v Maya>They found that drugs whose targets are cell type specific were 40 percent more likely to progress from phase one to phase two.</v>
+
+66
+00:07:41.274 --> 00:07:41.615
+<v Daniel>Wow.</v>
+
+67
+00:07:41.735 --> 00:07:50.304
+<v Maya>They were 48 percent more likely to reach the market in phase store. And they showed 32 percent lower adverse event rates across different organ systems.</v>
+
+68
+00:07:50.504 --> 00:07:56.310
+<v Daniel>The 32 percent lower adverse events. That's massive. And it makes intuitive sense, right? Like specificity equals safety.</v>
+
+69
+00:07:56.410 --> 00:08:04.403
+<v Maya>Precisely. If a drug targets something only active in a specific lung tissue, it won't accidentally trigger a toxic reaction in the liver.</v>
+
+70
+00:08:04.804 --> 00:08:09.886
+<v Daniel>Right. But here's where it gets really interesting, because this clashes with a major theory from one of our background papers.</v>
+
+71
+00:08:09.946 --> 00:08:10.986
+<v Maya>Oh, the Minical paper.</v>
+
+72
+00:08:11.326 --> 00:08:26.110
+<v Daniel>Yeah. Eric Minical and colleagues published a paper in Nature in 2024, and they established that genetic evidence is the gold standard baseline for predicting clinical success. Like if human genetics link the target to the disease, you have a better shot. So</v>
+
+73
+00:08:26.431 --> 00:08:31.112
+<v Daniel>does this new single cell finding dethrone the genetic baseline?</v>
+
+74
+00:08:31.312 --> 00:08:38.376
+<v Maya>No, it doesn't dethrone it. The virtual biotech specifically claims that this single cell evidence is orthogonal to genetic evidence.</v>
+
+75
+00:08:38.436 --> 00:08:40.217
+<v Daniel>Orthogonal meaning completely independent. Right.</v>
+
+76
+00:08:40.337 --> 00:08:47.922
+<v Maya>The cell type specificity advantage replicates even in clinical trials that have absolutely zero genetic support. It's a brand new independent signal of success.</v>
+
+77
+00:08:48.410 --> 00:09:02.760
+<v Daniel>That is just a phenomenal insight for optimizing pharma pipelines. But crunching 55,000 files is still just really fast data sorting. If this AI is a true scientific firm, it needs to construct nuanced scientific arguments from scratch.</v>
+
+78
+00:09:03.881 --> 00:09:05.462
+<v Daniel>Which brings us to the second demonstration.</v>
+
+79
+00:09:05.572 --> 00:09:07.453
+<v Maya>Yeah, the B7H3 case study.</v>
+
+80
+00:09:07.694 --> 00:09:17.521
+<v Daniel>Right. The human users told the system to evaluate this protein, B7H3, also known as CD276, as a target in adenocarcinoma and small cell lung cancer.</v>
+
+81
+00:09:17.902 --> 00:09:26.228
+<v Maya>And the system almost immediately hits a brick wall. The statistical genetics agent evaluates it and finds zero germline genetic support.</v>
+
+82
+00:09:26.801 --> 00:09:36.266
+<v Daniel>Let's clarify germline real quick. That means inherited genetics present in every cell. So the AI found no inherited genetic link connecting this target to lung cancer.</v>
+
+83
+00:09:36.891 --> 00:09:50.635
+<v Maya>Exactly. And by the minical standard, a human researcher might just abandon it right there. But the virtual CSO knows that for cancer targets, somatic, overexpression-like, mutations specific to the tumor itself matter more.</v>
+
+84
+00:09:51.015 --> 00:09:51.676
+<v Daniel>So it pivots.</v>
+
+85
+00:09:51.776 --> 00:10:01.279
+<v Maya>It pivots. It delegates to the single cell agent. And that agent finds that B7H3 is highly expressed, but not in the malignant cells. It's in the cancer-associated fibroblasts.</v>
+
+86
+00:10:01.299 --> 00:10:04.640
+<v Daniel>Those are like the structural cells the tumor hijacks to build a wall around itself,</v>
+
+87
+00:10:04.700 --> 00:10:12.722
+<v Maya>right? You got it. So the agent builds a whole case for an antibody drug conjugate, or ADC, strategy to attack those hijacked cells.</v>
+
+88
+00:10:12.882 --> 00:10:19.785
+<v Daniel>An ADC is basically a microscopic guided missile for anyone wondering. But wait, this is the moment in the paper I love. Enter the scientific reviewer agent.</v>
+
+89
+00:10:20.185 --> 00:10:33.412
+<v Maya>Yes. The reviewer agent actively objects to the findings. It points out that the single cell agent was inferring ligand receptor interactions, how the cells communicate using dissociated single cell data.</v>
+
+90
+00:10:33.833 --> 00:10:35.735
+<v Daniel>Which means it lacked spatial context.</v>
+
+91
+00:10:35.875 --> 00:10:36.075
+<v Maya>Yeah.</v>
+
+92
+00:10:36.155 --> 00:10:42.262
+<v Daniel>It's like putting a city in a blender. You know there are banks and robbers, but you don't know if the robbers are inside the banks.</v>
+
+93
+00:10:42.550 --> 00:10:52.697
+<v Maya>Great analogy. The reviewer agent says, look, you can't prove these hijacked cells are suppressing the immune system if you don't know if they're physically touching the immune cells in the actual lung tissue.</v>
+
+94
+00:10:52.818 --> 00:10:58.722
+<v Daniel>It's an incredible critique. It's like that one brilliant, slightly annoying colleague in a pitch meeting who says, wait, but.</v>
+
+95
+00:10:59.117 --> 00:11:06.943
+<v Maya>Yeah, and that internal friction forces the CSO to order a follow-up. It makes the single-cell agent look at spatial transcriptomics data.</v>
+
+96
+00:11:07.003 --> 00:11:08.123
+<v Daniel>The actual physical map.</v>
+
+97
+00:11:08.283 --> 00:11:17.270
+<v Maya>Right, and that map validated the hypothesis. It proved an immune-excluded niche. The fibroblasts were literally forming a physical barrier keeping immune cells out.</v>
+
+98
+00:11:17.650 --> 00:11:24.455
+<v Daniel>And the AI firm critiqued itself into better science. And the economics are just wild. This whole multimodal analysis took under a day.</v>
+
+99
+00:11:24.815 --> 00:11:26.196
+<v Maya>And it cost just $46 in API fees.</v>
+
+100
+00:11:28.371 --> 00:11:39.892
+<v Daniel>$46. That's insane. Okay, so if it can design a novel drug strategy for lung cancer, can it figure out why human trials fail? Because that's the third demonstration, right? The autopsy.</v>
+
+101
+00:11:40.083 --> 00:11:47.468
+<v Maya>Yeah, the OSMR beta ulcerative colitis case, specifically a terminated phase two trial for a drug called Vixirelimab.</v>
+
+102
+00:11:47.609 --> 00:11:48.789
+<v Daniel>It failed in the real world.</v>
+
+103
+00:11:48.809 --> 00:12:02.960
+<v Maya>Completely failed. So the AI firm analyzes the protocol and infers the failure mechanism. It turns out the human trial enrolled a really broad treatment refractory cohort, but they didn't actually check if the patients had elevated OSMR expression.</v>
+
+104
+00:12:03.120 --> 00:12:10.802
+<v Daniel>Oh, wow. They didn't verify the biological baseline. That's a massive precision medicine gap. It's like running an insulin trial without checking if the patients have diabetes.</v>
+
+105
+00:12:10.922 --> 00:12:15.503
+<v Maya>Exactly. So the AI proposes a revised biomarker guided enrollment strategy to fix it.</v>
+
+106
+00:12:15.603 --> 00:12:18.543
+<v Daniel>And again, the economics. How much did this autopsy cost?</v>
+
+107
+00:12:18.843 --> 00:12:22.364
+<v Maya>Completed in under a day for just $54 in API fees.</v>
+
+108
+00:12:22.704 --> 00:12:32.206
+<v Daniel>If an autopsy costs $54, why wouldn't a biotech company run thousands of these simulated autopsies before ever enrolling a human patient? It completely changes the game.</v>
+
+109
+00:12:32.607 --> 00:12:41.516
+<v Maya>It does. But, you know, as amazing as a $50 breakthrough sounds, science requires skepticism. We have to look at the fine print and the limitations here.</v>
+
+110
+00:12:41.596 --> 00:12:49.323
+<v Daniel>Definitely. Let's bring in Shan Shan Han's paper from our background stack. It catalogs exactly how these multi-agent systems fail.</v>
+
+111
+00:12:49.658 --> 00:13:02.182
+<v Maya>Yeah, Han points out some serious issues. Multi agent systems suffer from error propagation through a hierarchy. If a lower level agent makes a mistake, the CSO might just accept it as fact and build a whole flawed strategy on top of it.</v>
+
+112
+00:13:02.342 --> 00:13:11.405
+<v Daniel>Right. And the lead paper actually concedes this risk. They rely on that reviewer agent to fix it. But is one reviewer agent truly sufficient to safeguard a whole firm?</v>
+
+113
+00:13:11.660 --> 00:13:18.629
+<v Maya>It's a huge open question. Plus, we have to look at the study limitations, the 55,000 trial analysis, that that's purely observational, not causal.</v>
+
+114
+00:13:18.869 --> 00:13:20.231
+<v Daniel>So there are compounders they can't eliminate.</v>
+
+115
+00:13:20.452 --> 00:13:28.382
+<v Maya>Exactly. And the B7H3 and OSMR beta findings, those are just hypotheses. They have not been experimentally validated in a wet lab.</v>
+
+116
+00:13:28.856 --> 00:13:34.559
+<v Daniel>Right. And what about information leakage? How do we know the AI didn't just know the answer from its training data?</v>
+
+117
+00:13:34.859 --> 00:13:46.524
+<v Maya>That's always a risk. But the authors mitigated it pretty cleverly. The model's knowledge cutoff was January 2025, so they specifically looked at clinical trial readouts that happened after that date.</v>
+
+118
+00:13:46.624 --> 00:13:47.204
+<v Daniel>Oh, what's smart.</v>
+
+119
+00:13:47.324 --> 00:13:55.688
+<v Maya>Yeah, like an August 2025 breakthrough designation for an ADC in small cell lung cancer that matched the AI's exact hypothesis.</v>
+
+120
+00:13:55.908 --> 00:14:10.421
+<v Daniel>OK, so it genuinely couldn't have known. But so what does this all mean? I want to push back fiercely on one claim they make. The authors argue the virtual biotech is more objective than human teams because it lacks organizational</v>
+
+121
+00:14:10.461 --> 00:14:11.021
+<v Daniel>politics.</v>
+
+122
+00:14:11.081 --> 00:14:11.822
+<v Maya>I think you slamed that.</v>
+
+123
+00:14:12.062 --> 00:14:22.987
+<v Daniel>But if a system inherits the biases of its human-created training data, and the specific humans who wrote its prompts claiming it's unbiased by sociological influences is a highly dangerous assumption.</v>
+
+124
+00:14:23.247 --> 00:14:34.473
+<v Maya>I completely agree. You cannot scrub historical data of its inherent human biases. But, you know, bringing this all full circle, the authors themselves gesture at the biggest implication here. This is a brand new model of scientific organization.</v>
+
+125
+00:14:34.820 --> 00:14:42.571
+<v Daniel>That's the ultimate takeaway for the listener, right? We have to consider what exactly is being automated here. We aren't just automating pipettes or data entry anymore.</v>
+
+126
+00:14:42.692 --> 00:14:48.660
+<v Maya>No, we are automating the management layer. We are automating the strategic synthesis of science. That's</v>
+
+127
+00:14:48.680 --> 00:14:55.771
+<v Daniel>incredible. Well, thank you for joining us on this deep dive into the virtual biotech. We'll leave you with one final thought to mull over.</v>
+
+128
+00:14:55.971 --> 00:14:56.232
+<v Maya>Yeah.</v>
+
+129
+00:14:56.772 --> 00:15:11.634
+<v Daniel>If an AI can now successfully simulate an entire R&D department for $50 a day, what happens tomorrow when these digital firms start independently forming their own partnerships, negotiating with each other, and literally merging in the</v>
+
+130
+00:15:11.675 --> 00:15:12.035
+<v Daniel>cloud?</v>
+
+131
+00:15:12.095 --> 00:15:13.057
+<v Maya>That's going to be a wild ride.</v>
