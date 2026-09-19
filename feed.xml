@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 10:54:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 07:02:32 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1005,5 +1005,24 @@ Reference: Minikel, E. V., Painter, J. L., Dong, C. C., &amp; Nelson, M. R. (202
       <pubDate>Fri, 18 Sep 2026 06:18:44 +0000</pubDate>
       <itunes:episode>51</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/051%20-%20The%20Company%20Made%20Of%20Agents.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>052 - When The Model Becomes The Engineer</title>
+      <description>Accelerating Open-Source Biomolecular Models With Claude (September 2026)
+
+In this episode we unpack a technical report Anthropic released on 17 September 2026, whose first author is listed as "Claude Science" and whose human co-authors are Richard Shuai, Rohil Badkundri, Vincent Fan, Kilian Fatras, Lukas Jarosch and Amir Shanehsazzadeh, working across Anthropic, Biohub and Columbia. The experiment is simple to state and hard to sit with. They pointed a frontier model at more than thirty open-source biology models written by other people, and asked it to make that software faster. Supervised by two scientists who knew biomolecular modelling but had never done inference optimization or kernel engineering, Claude delivered optimized packages for 36 model implementations in just under four weeks. The report notes, without much ceremony, that this work normally takes an experienced engineering team weeks per model and rarely transfers between models.
+
+We walk through what came back. Each package ships up to three modes: Exact, which reproduces the original outputs bit for bit and ran 1.6 times faster across 14 structure prediction models; Fast, which trades a little precision and averaged 4.1 times faster, from 2.3 times on OpenDDE to 6.4 times on Chai-1; and Big, which cuts memory. Claude also wrote FlashPairformer v1, its own GPU kernels for the triangle attention and triangle multiplication operations inherited from AlphaFold2, beating NVIDIA's field-standard cuEquivariance kernels by 2.7 to 2.9 times and 1.7 to 3.2 times depending on pair width. The accuracy audit is what makes the speed mean anything: pooled over 13 model configurations and 1,925 model-target pairs, the share of acceptably predicted interfaces moved by less than one percentage point in every mode. Big mode predicted molecular machines above 10,000 tokens on a single node, including the E. coli 70S ribosome, and then collapsed entirely on 70,000-residue viral capsids, which the authors report plainly: Big mode extends what can be computed, not what the models have learned. One Claude model on one H200 GPU for 24 hours then designed binders matching campaigns that had been allowed 100 times the GPU budget, taking a target from roughly ten thousand dollars to about a hundred and fifty. We set all of this against the lineage it stands on, from Jumper's AlphaFold2 and Abramson's AlphaFold3, which invented the triangle operations that are now the bottleneck, through Dao's FlashAttention, which invented the kernel craft being delegated here, to Pacesa's BindCraft and Anthropic's own binder-design report from one month earlier. We close on the parts worth arguing with: the designs are in silico scores and no protein was made, the 100x mixes better models with a simpler protocol, the baseline was chosen by the same people who beat it, and a model is first author of the paper describing what the model did.
+
+Reference: Claude Science, Shuai, R., Badkundri, R., Fan, V., Fatras, K., Jarosch, L., &amp; Shanehsazzadeh, A. (2026). Accelerating open-source biomolecular models with Claude. Anthropic technical report. https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling
+Reference: Jumper, J., Evans, R., Pritzel, A., et al. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 596, 583-589. https://doi.org/10.1038/s41586-021-03819-2
+Reference: Abramson, J., Adler, J., Dunger, J., et al. (2024). Accurate structure prediction of biomolecular interactions with AlphaFold 3. Nature, 630, 493-500. https://doi.org/10.1038/s41586-024-07487-w
+Reference: Dao, T., Fu, D. Y., Ermon, S., Rudra, A., &amp; Re, C. (2022). FlashAttention: Fast and memory-efficient exact attention with IO-awareness. Advances in Neural Information Processing Systems (NeurIPS). arXiv:2205.14135. https://arxiv.org/abs/2205.14135
+Reference: Pacesa, M., Nickel, L., Schellhaas, C., et al. (2025). One-shot design of functional protein binders with BindCraft. Nature, 646, 483-492. https://doi.org/10.1038/s41586-025-09429-6
+Reference: Claude Science, &amp; Shanehsazzadeh, A. (2026). Autonomous de novo protein binder design with Claude. Anthropic technical report. https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf</description>
+      <guid isPermaLink="false">57a2c6334a8e55bf44558f5a3c71b03b6689c190</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/052%20-%20When%20The%20Model%20Becomes%20The%20Engineer.m4a" length="43418739" type="audio/mp4" />
+      <pubDate>Sat, 19 Sep 2026 06:18:08 +0000</pubDate>
+      <itunes:episode>52</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/052%20-%20When%20The%20Model%20Becomes%20The%20Engineer.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
