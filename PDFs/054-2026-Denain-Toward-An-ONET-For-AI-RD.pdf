@@ -1,0 +1,334 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 5 /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 4247 >>
+stream
+BT /F1 10 Tf 12 TL 54 738 Td
+(Toward an O*NET for AI R&D: Proposing a new way to track AI research automation) Tj T*
+(Jean-Stanislas Denain, Joe Kwon and Anson Ho, Epoch AI Gradient Updates, 17 June 2026) Tj T*
+(Source: https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd) Tj T*
+() Tj T*
+(Toward an O*NET for AI R&D) Tj T*
+(Newsletter) Tj T*
+(Jun. 17, 2026) Tj T*
+(Toward an O*NET for AI R&D) Tj T*
+(Proposing a new way to track AI research automation) Tj T*
+(Cite) Tj T*
+(By Jean-Stanislas Denain, Joe Kwon, and Anson Ho) Tj T*
+(Gradient Updates shares more opinionated or informal takes on big questions in AI progress.) Tj T*
+(These posts solely represent the views of the authors, and do not necessarily reflect the views) Tj T*
+(of Epoch AI as a whole.) Tj T*
+(What trends are we extrapolating?) Tj T*
+(A common way that experts forecast AI timelines is so simple it's hard to believe: trend) Tj T*
+(extrapolation. Sure, they also use numerical models that bake in things like runaway feedback) Tj T*
+(loops, but the bread and butter of AI forecasting is to draw a line on a graph and extend it as) Tj T*
+(far as you dare. Somehow this works well enough to be a state-of-the-art approach. However, the) Tj T*
+(trends they extrapolate share a common weakness: they lean heavily on easy-to-measure things,) Tj T*
+(not what we directly care about  -  how close AI is to doing AI research itself.) Tj T*
+(Many experts want to know when we'll fully automate AI research, because this would massively) Tj T*
+(speed up AI progress, kicking off an "intelligence explosion".1 If that's right, it's hugely) Tj T*
+(important to know how close we are. But historically, there haven't been many points of direct) Tj T*
+(evidence to point to, because full automation of AI R&D has been so hard to measure. Instead,) Tj T*
+(researchers have been forced to rely on proxies.) Tj T*
+(One such proxy is in key AI inputs like compute, data, and energy. Take Situational Awareness,) Tj T*
+(which extends "effective compute" five years into the future until AI research gets automated:) Tj T*
+(But these inputs are only rough proxies for capabilities and you need to go on "vibes" to say) Tj T*
+(how much compute you need to match the world's top AI researchers.) Tj T*
+(A second approach is to track the length of tasks that AIs can complete, where "length" is how) Tj T*
+(long a skilled human takes. This is what METR did with their "time horizon" metric, which was) Tj T*
+(then extrapolated in the famous AI 2027 scenario to forecast when AIs would become "superhuman) Tj T*
+(coders", before automating AI R&D.) Tj T*
+(But the benchmarks used to construct METR's time horizon miss out on many of the tasks and) Tj T*
+(complexities of research. It's one thing to be able to finetune a small GPT-2 model, and) Tj T*
+(another to be able to coordinate five projects at the same time, dealing with a million lines) Tj T*
+(of code, without a clear criterion for success or failure.) Tj T*
+(So it would be nice to know everything that AI R&D actually consists of. Otherwise we'll always) Tj T*
+(be at risk of streetlighting \(extrapolating whatever happens to be easiest to measure\). We can) Tj T*
+(better avoid this if we have a list of the tasks involved in AI R&D, to track what we're aware) Tj T*
+(of and what we're not investigating.) Tj T*
+(Armed with such a list, we could better interpret the extrapolations we already have: when a) Tj T*
+(benchmark score climbs, a task list tells us which parts of the job that improvement covers,) Tj T*
+(and which parts it doesn't touch. And we could build new trends to extrapolate, like the) Tj T*
+(fraction of tasks that are automated, or how much uplift researchers get on each one.) Tj T*
+(In this post, we present a first version of such a taxonomy with six categories spanning a) Tj T*
+(frontier AI company's research workflow, based on literature review and brainstorming. The) Tj T*
+(categories are broken into over sixty tasks, each rated from 0 to 5 on how much we think) Tj T*
+(current AIs automate it. The full taxonomy lives in a companion doc, which is the main artifact) Tj T*
+(of this work.) Tj T*
+(We think of it as our best first attempt at developing a comprehensive taxonomy of tasks) Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 4488 >>
+stream
+BT /F1 10 Tf 12 TL 54 738 Td
+(contributing to AI R&D, in order to more robustly understand and predict AI R&D automation. If) Tj T*
+(we described tasks incorrectly, or missed some entirely, we'd love to hear about it and receive) Tj T*
+(feedback.) Tj T*
+(Get the latest from Epoch AISubscribe) Tj T*
+(An O*NET for AI R&D) Tj T*
+(We're not the first to want a task list like this; breaking jobs down into tasks is how) Tj T*
+(economists usually track automation in the economy. The standard tool here is O*NET, which) Tj T*
+(describes about 1,000 jobs in the US economy as well as the tasks and skills that people need) Tj T*
+(to do them.) Tj T*
+(Armed with O*NET, economists can then do a bunch of empirical work and forecasts about AI's) Tj T*
+(economic impacts, such as:) Tj T*
+(Look at the fraction of American workers whose jobs might be heavily impacted by LLMs) Tj T*
+(Estimate how AI might impact GDP growth over the next decade \(however accurately or) Tj T*
+(inaccurately\)) Tj T*
+(Design AI benchmarks to cover a wide range of knowledge work) Tj T*
+(Taxonomize how people use frontier AI models) Tj T*
+(Predict the consequences of automating remote work) Tj T*
+(But while O*NET is a widely used source, it doesn't help us track AI research automation very) Tj T*
+(well  -  the tasks in the dataset are just way too broad and high-level. Consider the job) Tj T*
+("Computer and Information Research Scientists", which is probably about as close as you can get) Tj T*
+(to "frontier lab AI researcher" within O*NET. In this case the work tasks look like this:) Tj T*
+(The first listed task is to "Analyze problems to develop solutions involving computer hardware) Tj T*
+(and software". But that's really vague  -  what kinds of problems or solutions? What exactly) Tj T*
+(does or doesn't count as "involving computer hardware and software"? You could make the case) Tj T*
+(that almost everything about an AI engineer's job involves computer software, so it's not a) Tj T*
+(very granular description to say the least. And yet this is the most granular task description) Tj T*
+(you can find in O*NET, and the same issue applies to pretty much every other task.) Tj T*
+(Part of the issue here is practical feasibility: O*NET was designed for the ambitious endeavor) Tj T*
+(of mapping out the tasks in the entire US economy, before the days of LLMs. So it's probably) Tj T*
+(too much to ask for these tasks to be so granular for everything as new and niche as "frontier) Tj T*
+(lab AI research".) Tj T*
+(That's why our proposal is to build an O*NET for AI R&D specifically. If we keep our focus) Tj T*
+(narrow, we're in a much better position to come up with a fine-grained decomposition of an AI) Tj T*
+(researcher's job. If this works well, we could look at the fraction of tasks that are automated) Tj T*
+(over time. It could also help us interpret benchmark results and how significant they are.) Tj T*
+(There's a long-standing phenomenon where AI benchmarks haven't fully reflected the complexities) Tj T*
+(of the real world, and so it's important to juxtapose benchmark results with what's happening) Tj T*
+(on the ground.) Tj T*
+(It could also serve as a framework for additional studies about AI's impact. This could mean) Tj T*
+(surveying AI researchers on the uplift they get on different work tasks. It could also mean) Tj T*
+(classifying internal AI usage logs into different use cases, like "writing experiment code" or) Tj T*
+("deciding what experiment to run next". This is similar to how Anthropic's Clio system helps) Tj T*
+(study real-world AI usage while preserving people's privacy.) Tj T*
+(More generally, an O*NET for AI R&D would help establish a common vocabulary between) Tj T*
+(researchers, such as in frontier labs' model cards. This could help model developers summarize) Tj T*
+(where AI does or doesn't help in finer detail, and help standardize information across) Tj T*
+(different sources, like in METR's most recent Frontier Risk Report.) Tj T*
+(This being said, we're not saying that an "O*NET for AI R&D is all you need" to monitor and) Tj T*
+(forecast progress to automation. Even if we're armed with a perfectly comprehensive dataset of) Tj T*
+(tasks, we'd still need to measure how AI performs on each task, for example. But even still,) Tj T*
+(having a task dataset would help ground the debate about AI's actual impacts on AI research,) Tj T*
+(and give us "situational awareness" about how close we might be to an intelligence explosion,) Tj T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 4323 >>
+stream
+BT /F1 10 Tf 12 TL 54 738 Td
+(supporting evidence from other sources.) Tj T*
+(A first proposal) Tj T*
+(So what would this "O*NET for AI R&D" actually look like? This is of course not trivial to) Tj T*
+(answer  -  AI R&D is very messy and changes fast. But we figured we'd have an initial attempt) Tj T*
+(at it and let you readers bombard us with feedback. To that end, we compiled over sixty) Tj T*
+(representative tasks at frontier AI labs, accompanied by descriptions and concrete examples  -) Tj T*
+(see the full writeup here.) Tj T*
+(The first step was to make a big list of all the tasks currently involved in AI R&D, which we) Tj T*
+(grouped into six categories, inspired by some earlier work.2 These categories correspond to) Tj T*
+(different parts of the AI research cycle:) Tj T*
+(Each category has its own inputs and outputs. For example, consider Category 4 \("Run"\), which) Tj T*
+(as the name suggests is about "running" stuff  -  think executing training runs or deploying AI) Tj T*
+(systems to the public. So the input could look something like a benchmark with all supporting) Tj T*
+(scaffolds and related infrastructure, and the output could be a set of final results.) Tj T*
+(Each category is then split into several subcategories. Category 4 is split into three, each) Tj T*
+(with its own inputs and outputs:) Tj T*
+(4.1 Monitoring runs: watch training, RL, and eval runs in flight; catch problems as they) Tj T*
+(emerge; restore the run to a healthy trajectory) Tj T*
+(4.2 Hardware infrastructure operations: keep large clusters healthy, well-utilized, and quickly) Tj T*
+(recoverable) Tj T*
+(4.3 Inference reliability engineering: keep production serving stable, performant, and) Tj T*
+(recoverable) Tj T*
+(And finally the subcategories contain a thorough list of different tasks. For example, here are) Tj T*
+(the tasks for "4.1 Monitoring runs":) Tj T*
+(So you can see that this is way more granular than developing "solutions involving computer) Tj T*
+(hardware and software"  -  our task descriptions get to the level of monitoring runs, and) Tj T*
+(catching potential issues when they arise.) Tj T*
+(One thing you'll notice about each task is that it includes a number next to it  -  that) Tj T*
+(reflects our initial approach to estimating automation impact across tasks. Specifically, we) Tj T*
+(rate how much we think current AIs automate each task on a scale of 0 to 5, based on the) Tj T*
+(following rubric:) Tj T*
+(RatingAI's automation0Not used, AI adds nothing1Marginal, occasionally convenient for lookups,) Tj T*
+(brainstorming, or polishing writeups, but doesn't change how the work is done or who is doing) Tj T*
+(it2Assists, with meaningful speed ups or improvements to parts of the task; human mostly drives) Tj T*
+(and reviews everything3Collaborates, with AI doing large chunks under close human direction;) Tj T*
+(human still makes calls and stitches things together4Leads, completing most of the task end to) Tj T*
+(end from a high-level ask; human supervises, course-corrects, and approves outputs.5Autonomous,) Tj T*
+(end to end with little or no human involvement) Tj T*
+(We provide examples of each of these in the full proposal.) Tj T*
+(This is of course quite subjective and there's a ton of room for people to develop better ways) Tj T*
+(to evaluate this, such as through internal benchmarks. Optimistically, an improved version of) Tj T*
+(this could be used to construct a metric that we can extrapolate over time. This could be quite) Tj T*
+(tricky, because we'd need to know which tasks need to be automated to kick off an intelligence) Tj T*
+(explosion, and there might be new tasks. For example, perhaps AIs don't need to "write a memo) Tj T*
+(summarizing key takeaways" \(unlike human researchers\), if they have other ways of communicating) Tj T*
+(with other AIs.) Tj T*
+(But our overall hope is simply that our full collection of tasks gives us an additional signal) Tj T*
+(about what AI can and can't automate at any point in time, supporting existing evidence we have) Tj T*
+(from benchmarks and things like METR's time horizons.) Tj T*
+(What's next?) Tj T*
+(It goes without saying, but just to be excessively clear, this was an initial attempt at an) Tj T*
+(O*NET for AI research. The most natural next step is to build on what's here and add tasks we) Tj T*
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 4091 >>
+stream
+BT /F1 10 Tf 12 TL 54 738 Td
+(missed, sharpen descriptions to be more precise and accurate, taxonomize to be more mutually) Tj T*
+(exclusive and collectively exhaustive, and re-rate the list as AI improves.) Tj T*
+(A step further would be to find other ways of organizing the taxonomy. For example, we thought) Tj T*
+(about organizing all the tasks around the usual stages of model development, namely pre-) Tj T*
+(training, post-training, and inference. We opted against it because it runs into several) Tj T*
+(problems: \(1\) many tasks like "writing code for experiments" would be repeated across multiple) Tj T*
+(stages, and \(2\) some tasks won't fit naturally in these categories, not least because the) Tj T*
+(training process can look super complex in practice. But just because we decided against this) Tj T*
+(categorization doesn't mean that it's not workable.) Tj T*
+(Training isn't just a matter of "pre-training + post-training"  -  it's way more complicated) Tj T*
+(than that.) Tj T*
+(And we can say similar things about how we split up tasks: we'd ask if a task could be split) Tj T*
+(into subtasks that would plausibly be automated at very different times  -  if we could, we'd) Tj T*
+(split it up. We also tried to be more granular around tasks that require some amount of "taste") Tj T*
+(\(such as whether to scale up a particular post-training recipe\), since people seem to disagree) Tj T*
+(about this. But you could choose different levels of granularity for sure.) Tj T*
+(In general, we'd be very excited about collaborating with people to improve on our initial) Tj T*
+(attempt. If you're an AI researcher and think that we've messed up something in our) Tj T*
+(classification or task descriptions, please share feedback or reach out! Or if you're somebody) Tj T*
+(who'd use something like an O*NET for AI R&D in your work, we'd love to talk to you and) Tj T*
+(understand how we can improve things to suit your needs.) Tj T*
+(If this project goes well, we hope that it'll serve as a stepping stone toward more directly) Tj T*
+(tracking AI R&D automation, helping AI forecasters extrapolate trendlines further forward  -) Tj T*
+(and hopefully also tell us if the intelligence explosion is upon us.) Tj T*
+(We'd like to thank David Owen, Stefania Guerra, Robert Sandler, and Elliot Stewart for their) Tj T*
+(feedback and support.) Tj T*
+(Please also see our initial attempt and the accompanying feedback form. For direct corrections) Tj T*
+(or specific inquiries, you can email js@epoch.ai.) Tj T*
+(Notes) Tj T*
+(Depending on how you define it, an intelligence explosion could "start" well before fully) Tj T*
+(automating AI research, because AIs would likely provide substantial uplift prior to that.) Tj T*
+(It's possible that future AI systems make progress through routes that just really do not) Tj T*
+(resemble current human AI R&D. If so, a task list based on current human workflows would) Tj T*
+(completely miss the action, and our ontology would need to be updated at the very least.) Tj T*
+(About the authors) Tj T*
+(Jean-Stanislas Denain) Tj T*
+(Jean-Stanislas Denain is a senior researcher at Epoch AI, where he leads the Insights team.) Tj T*
+(Joe Kwon) Tj T*
+(Joe Kwon is a researcher working on threat modeling and strategy to reduce catastrophic risks) Tj T*
+(from AI. Previously, he worked on multilingual LLMs at LG AI Research and computational) Tj T*
+(cognitive science at MIT.) Tj T*
+(Anson Ho) Tj T*
+(Anson Ho is a senior researcher at Epoch AI. He is interested in helping develop a more) Tj T*
+(rigorous understanding of future developments in AI and its societal impacts.) Tj T*
+(Related topics) Tj T*
+(R&DFuture of AIEconomic impact) Tj T*
+(Cite) Tj T*
+(Epoch AI's work is free to use, distribute, and reproduce provided the source and authors are) Tj T*
+(credited under the Creative Commons Attribution license.) Tj T*
+(Citation) Tj T*
+(Jean-Stanislas Denain, Joe Kwon and Anson Ho \(2026\), "Toward an O*NET for AI R&D". Published) Tj T*
+(online at epoch.ai. Retrieved from 'https://epoch.ai/gradient-updates/toward-an-onet-for-ai-) Tj T*
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 1425 >>
+stream
+BT /F1 10 Tf 12 TL 54 738 Td
+(rnd' [online resource]. Accessed 21 Sept 2026.) Tj T*
+(BibTeX Citation) Tj T*
+(@misc{epoch2026towardanonetforairnd,) Tj T*
+(title={Toward an O*NET for AI R&D},) Tj T*
+(author={Jean-Stanislas Denain and Joe Kwon and Anson Ho},) Tj T*
+(year={2026},) Tj T*
+(url={https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd},) Tj T*
+(note={Accessed: 2026-09-21}}) Tj T*
+(Investigating the trajectory of AI for the benefit of society) Tj T*
+(Get the latest from Epoch AI in your inboxSubscribe) Tj T*
+(Our Work) Tj T*
+(Latest) Tj T*
+(AI Trends & Statistics) Tj T*
+(Publications) Tj T*
+(Data Insights) Tj T*
+(Newsletter: Gradient Updates) Tj T*
+(Podcast) Tj T*
+(Data on AI) Tj T*
+(Models) Tj T*
+(AI Data Centers) Tj T*
+(Hardware) Tj T*
+(Companies) Tj T*
+(Chip Sales) Tj T*
+(Polling) Tj T*
+(Benchmarking) Tj T*
+(Capabilities & Benchmarking) Tj T*
+(FrontierMath) Tj T*
+(Company) Tj T*
+(About) Tj T*
+(Team) Tj T*
+(Consultations) Tj T*
+(Transparency) Tj T*
+(Donate) Tj T*
+(Careers) Tj T*
+(? 2026 Epoch AIPrivacy PolicyCookie PolicyDesigned by And - Now) Tj T*
+(Feedback) Tj T*
+(Feedback) Tj T*
+(Have a question? Noticed something wrong? Let us know.) Tj T*
+(Message) Tj T*
+(If you would like a reply, please include your name and email address.) Tj T*
+(Name) Tj T*
+(Email address) Tj T*
+(CancelSubmit) Tj T*
+(Toward an O*NET for AI R&D) Tj T*
+(Proposing a new way to track AI research automation) Tj T*
+ET
+endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000364 00000 n 
+0000004663 00000 n 
+0000004789 00000 n 
+0000009329 00000 n 
+0000009455 00000 n 
+0000013830 00000 n 
+0000013958 00000 n 
+0000018102 00000 n 
+0000018230 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+19708
+%%EOF
