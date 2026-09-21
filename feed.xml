@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Sep 2026 06:44:20 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 06:52:52 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1048,5 +1048,24 @@ Reference: Bloom, N., Jones, C. I., Van Reenen, J., &amp; Webb, M. (2020). Are I
       <pubDate>Sun, 20 Sep 2026 06:17:02 +0000</pubDate>
       <itunes:episode>53</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/053%20-%20The%20Loop%20That%20Hasnt%20Closed%20Yet.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>054 - The Lab That Grades Its Own Homework</title>
+      <description>The Lab That Grades Its Own Homework (2023-2026)
+
+In this episode we unpack Anthropic's "Measurements for understanding the pace of AI development inside frontier labs," published by the Anthropic Institute on 17 September 2026, and read alongside the measurement tradition it draws on. Anthropic did something no frontier lab had done before: it built a prototype index of how much of its own AI research and development is now performed by its own model, and published the number. As of August 2026, Claude "leads" 26 percent of Anthropic's AI R&amp;D work, up from under one percent in February 2026, with more than 90 percent of that work at or above the level where AI "collaborates" and nothing yet fully autonomous. Two companion measurements arrive with it: an oversight figure covering more than a billion agent decisions, and a compute figure saying what share of research compute goes to safety.
+
+We walk through how the Anthropic R&amp;D Automation Index is actually constructed, because the method is the argument: a 20 percent weekly staff sample across July 2026, roughly 15,000 tasks harvested from Slack and internal documentation, a frozen tree of 542 nodes with 378 leaves, a Claude research agent gathering evidence per node and an independent Claude judge scoring it on the AL0 to AL5 automation scale proposed in Denain, Kwon and Ho's Epoch AI taxonomy, and person-time as the weighting. We name the validation numbers, including the 59 percent model-human exact agreement against 35 percent human-human agreement, and the frozen-basket caveat the appendix raises against itself. We set the index against Wijk et al's RE-Bench, which measures AI R&amp;D capability against human experts on fixed tasks instead of internal records, against Becker, Rush, Barnes and Rein's randomized trial in which experienced developers believed AI made them faster and were measurably slower, against Bommasani and Klyman's Foundation Model Transparency Index and its long-running gap between self-reported and verified disclosure, and against Korbak et al's case that chain-of-thought monitorability is a real but fragile form of oversight. We close on the question the post invites: whether a lab grading its own homework with its own models can ever be a governance instrument, and what a third party would need to reproduce any of it.
+
+Reference: Anthropic (2026). Measurements for understanding the pace of AI development inside frontier labs. Anthropic Institute, 17 September 2026. https://www.anthropic.com/institute/measuring-pace-of-ai-development
+Reference: Denain, J.-S., Kwon, J., &amp; Ho, A. (2026). Toward an O*NET for AI R&amp;D. Epoch AI Gradient Updates, 17 June 2026. https://epoch.ai/gradient-updates/toward-an-onet-for-ai-rnd
+Reference: Wijk, H., Lin, T., Becker, J., Jawhar, S., Parikh, N., Broadley, T., et al. (2024). RE-Bench: Evaluating frontier AI R&amp;D capabilities of language model agents against human experts. arXiv:2411.15114. https://arxiv.org/abs/2411.15114
+Reference: Becker, J., Rush, N., Barnes, B., &amp; Rein, D. (2025). Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity. arXiv:2507.09089. https://arxiv.org/abs/2507.09089
+Reference: Bommasani, R., Klyman, K., Longpre, S., Kapoor, S., Maslej, N., Xiong, B., Zhang, D., &amp; Liang, P. (2023). The Foundation Model Transparency Index. arXiv:2310.12941. https://arxiv.org/abs/2310.12941
+Reference: Korbak, T., Balesni, M., Barnes, E., Bengio, Y., Benton, J., Bloom, J., et al. (2025). Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety. arXiv:2507.11473. https://arxiv.org/abs/2507.11473</description>
+      <guid isPermaLink="false">c2931f059ffe9c8989918c7cfc655f3fd704cc3a</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/054%20-%20The%20Lab%20That%20Grades%20Its%20Own%20Homework.m4a" length="43673479" type="audio/mp4" />
+      <pubDate>Mon, 21 Sep 2026 06:18:34 +0000</pubDate>
+      <itunes:episode>54</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/054%20-%20The%20Lab%20That%20Grades%20Its%20Own%20Homework.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
