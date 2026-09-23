@@ -1,0 +1,605 @@
+WEBVTT
+
+1
+00:00:00.251 --> 00:00:04.572
+<v Daniel>Um, you know when you watch, like, a televised political debate? Oh</v>
+
+2
+00:00:04.612 --> 00:00:05.952
+<v Maya>yeah, always a great time.</v>
+
+3
+00:00:06.212 --> 00:00:18.795
+<v Daniel>Right. But there's this basic assumption at play, right? You expect to see two people actively trying to change each other's minds. Like they're supposed to be listening and, you know, countering the actual arguments.</v>
+
+4
+00:00:19.055 --> 00:00:21.396
+<v Maya>Ideally, yeah. That's the whole point of a debate.</v>
+
+5
+00:00:21.685 --> 00:00:32.498
+<v Daniel>But imagine if you found out later that both of those debaters were just wearing hidden earpieces and the whole time they were simply listening to a recorded loop of their own voices.</v>
+
+6
+00:00:32.678 --> 00:00:35.441
+<v Maya>Oh, wow. That's a really unsettling image.</v>
+
+7
+00:00:36.042 --> 00:00:41.368
+<v Daniel>I mean, they wouldn't actually be arguing at all. They'd just be waiting for their turn to speak so they could repeat whatever the earpiece just told them.</v>
+
+8
+00:00:41.502 --> 00:00:48.290
+<v Maya>Yeah, which completely breaks the illusion of deliberation. You expect a dynamic exchange, not just like a static playback loop.</v>
+
+9
+00:00:48.530 --> 00:01:00.182
+<v Daniel>Exactly. And that brings us to the mission for you, our listener, on this deep dive today. Because, well, right now we are increasingly using AI agents to simulate human societies.</v>
+
+10
+00:01:00.362 --> 00:01:01.463
+<v Maya>Yeah, constantly.</v>
+
+11
+00:01:01.523 --> 00:01:16.056
+<v Daniel>Tech companies are deploying these multi-agent systems where AIs, you know, negotiate contracts or they act as human focus groups or they quote unquote debate complex issues. But the question is, when two AI agents argue, are they actually</v>
+
+12
+00:01:16.136 --> 00:01:21.440
+<v Daniel>persuading each other? Or like the debaters with the earpieces, are they just talking to themselves?</v>
+
+13
+00:01:21.580 --> 00:01:30.466
+<v Maya>And we finally have a hard quantitative answer to that question. It's based on a brand new paper published literally today, September 22, 2026.</v>
+
+14
+00:01:31.827 --> 00:01:32.568
+<v Daniel>Hot off the presses.</v>
+
+15
+00:01:32.708 --> 00:01:47.681
+<v Maya>Exactly. It's in Nature Communications. And it's by a physics group from the Max Planck Institute in Göttingen. So Vincent Brockers, David Ehrlich, and Viola Priestman. And they built an instrument to measure exactly what happens under the hood when large language models debate.</v>
+
+16
+00:01:48.071 --> 00:02:02.974
+<v Daniel>And I want to set the stakes for you right up front. This isn't some hype story about AI taking over. And it's not a doom story either. It's a measurement story. It's about disentangling genuine argument from an AI's internal pre-programmed biases. By the</v>
+
+17
+00:02:03.014 --> 00:02:08.796
+<v Daniel>end of this conversation, you're going to have a totally new lens for evaluating any claim you see about AI deliberation.</v>
+
+18
+00:02:08.996 --> 00:02:22.988
+<v Maya>So to really get how they measured this, we have to look at the virtual laboratory the Max Planck team set up. It's elegantly simple, honestly. They pair up two LLM agents and give each of them an initial stance on a topic.</v>
+
+19
+00:02:23.048 --> 00:02:25.110
+<v Daniel>And what's the scale they're using for that stance?</v>
+
+20
+00:02:25.334 --> 00:02:32.158
+<v Maya>It's a standard five point scale. So it goes from minus two, which is strongly disagree, all the way up to plus two, which is strongly agree.</v>
+
+21
+00:02:32.218 --> 00:02:32.738
+<v Daniel>OK, got it.</v>
+
+22
+00:02:32.998 --> 00:02:47.986
+<v Maya>But the key here is how they instill that opinion. They don't just use a rigid system prompt. They feed the agent an externally generated chain of thought monologue. It makes the starting stance feel more organic to the model before they let them</v>
+
+23
+00:02:48.166 --> 00:02:49.327
+<v Maya>argue for five rounds.</v>
+
+24
+00:02:49.627 --> 00:02:57.913
+<v Daniel>But I'm assuming they didn't just have them debate like whether the sky is blue. If you want to see if an AI will change its mind, you have to give it something real to fight over.</v>
+
+25
+00:02:58.153 --> 00:03:09.542
+<v Maya>Yeah, absolutely. They used 12 different statements across four distinct categories. They picked societal issues with scientific consensus. So climate change, vaccinations, the shape of the earth.</v>
+
+26
+00:03:09.702 --> 00:03:10.683
+<v Daniel>OK, the heavy hitters.</v>
+
+27
+00:03:11.043 --> 00:03:19.329
+<v Maya>Right. Then they moved into super controversial societal issues. Things like global wealth distribution, abortion and the impact of social media.</v>
+
+28
+00:03:19.807 --> 00:03:33.019
+<v Daniel>And just to jump in here quickly, we should make it totally clear to you listening. We are not endorsing any political stances here, and neither are the researchers. These are just like stress test weights used to measure the math of the AI.</v>
+
+29
+00:03:33.423 --> 00:03:46.711
+<v Maya>Spot on. They are just weights. They even threw in philosophical questions like whether AI is dangerous or if free will exists. And then pure personal preference like Bach versus Stravinsky or pizza versus sushi.</v>
+
+30
+00:03:46.791 --> 00:03:49.272
+<v Daniel>I mean, pizza versus sushi is the real debate of our time.</v>
+
+31
+00:03:49.453 --> 00:03:58.648
+<v Maya>Obviously. And they ran 25 simulations per topic for every pair of initial opinions. But setting up the debate is really only half the battle here.</v>
+
+32
+00:03:58.748 --> 00:04:04.934
+<v Daniel>Right. Because normally human opinions are just incredibly messy. Like we change our minds because we're tired or we want to be polite.</v>
+
+33
+00:04:04.954 --> 00:04:05.595
+<v Maya>Yeah, exactly.</v>
+
+34
+00:04:05.695 --> 00:04:11.822
+<v Daniel>How do you mathematically isolate what actually caused the AI to move its opinion after a round of text?</v>
+
+35
+00:04:12.231 --> 00:04:27.215
+<v Maya>That is the genius of their methodology. They used what they call a probing prompt. So after every single round, they asked each agent what its current stance was on the topic. They asked it in both a normal and a negated framing, just</v>
+
+36
+00:04:27.255 --> 00:04:27.915
+<v Maya>to be thorough.</v>
+
+37
+00:04:28.455 --> 00:04:33.137
+<v Daniel>But wait, if you ask someone mid-debate what they think, doesn't that change how they argue?</v>
+
+38
+00:04:33.357 --> 00:04:38.518
+<v Maya>Yes, which is why they deliberately kept that probing prompt out of the conversation memory.</v>
+
+39
+00:04:38.943 --> 00:04:47.805
+<v Daniel>Oh, wow. It's like, okay, it's like pausing a televised debate, pulling one debater off the stage into a soundproof booth and hooking them up to a polygraph.</v>
+
+40
+00:04:47.825 --> 00:04:49.066
+<v Maya>That's a perfect analogy.</v>
+
+41
+00:04:49.086 --> 00:04:53.867
+<v Daniel>To get their exact internal math, and then you put them back on stage with zero memory of ever being tested.</v>
+
+42
+00:04:54.007 --> 00:05:03.710
+<v Maya>Exactly. And the measurement itself is pristine. They don't just read the final text the AI spits out. They read the answer directly off the model's token distribution.</v>
+
+43
+00:05:03.810 --> 00:05:11.313
+<v Daniel>Okay, let's translate that for anyone who, you know, isn't spending their weekends reading machine learning papers. What does reading the token distribution actually mean?</v>
+
+44
+00:05:11.774 --> 00:05:23.002
+<v Maya>Sure. So when an AI generates text, it's calculating the probabilities of what the next token or word should be. Instead of just taking the final word it chose, the researchers look at the underlying math.</v>
+
+45
+00:05:23.419 --> 00:05:24.880
+<v Daniel>Like all the options it considered?</v>
+
+46
+00:05:24.920 --> 00:05:39.613
+<v Maya>Right. They look at the exact probabilities of every answer it considered. That gives them an expectation value, which is the precise mathematical average on that minus 2 to plus 2 scale. I see. And it also gives them a Shannon entropy score, which is a</v>
+
+47
+00:05:39.833 --> 00:05:45.618
+<v Maya>measure of how uncertain the model actually is. We'll come back to that entropy part later because it's super important.</v>
+
+48
+00:05:45.857 --> 00:05:53.803
+<v Daniel>OK, so you have the soundproof booth. You have this incredibly precise mathematical data tracking the shifts round by round. What do they actually do with it?</v>
+
+49
+00:05:53.823 --> 00:05:57.125
+<v Maya>They feed it into a hierarchical Bayesian influence response model.</v>
+
+50
+00:05:57.265 --> 00:05:58.186
+<v Daniel>OK, that's a mouthful.</v>
+
+51
+00:05:58.366 --> 00:06:09.594
+<v Maya>It is. But think of it like a prism. It takes a single beam of light, which is the total opinion shift, and splits it into four competing forces, each with its own decay timescale.</v>
+
+52
+00:06:10.134 --> 00:06:14.357
+<v Daniel>So it separates out the different poles acting on the AI. What are the four forces?</v>
+
+53
+00:06:14.699 --> 00:06:20.922
+<v Maya>First is interaction. That is genuine movement caused by the actual arguments the other agent is making.</v>
+
+54
+00:06:21.042 --> 00:06:23.823
+<v Daniel>Okay, so that's what we want. That's actual persuasion.</v>
+
+55
+00:06:23.903 --> 00:06:33.847
+<v Maya>Exactly. The second force is topic bias. This is the pull toward the model's own default stance on that specific topic, like what it would think if you just asked it cold.</v>
+
+56
+00:06:34.027 --> 00:06:35.088
+<v Daniel>Got it. What's the third?</v>
+
+57
+00:06:35.408 --> 00:06:43.973
+<v Maya>Third is agreement bias. This is the urge to simply say yes to whatever statement is put in front of it, regardless of what it actually means.</v>
+
+58
+00:06:44.593 --> 00:06:51.537
+<v Daniel>Ah, which is why they asked the probing question in both normal and indicated framing to catch if it's just blindly agreeing.</v>
+
+59
+00:06:51.637 --> 00:06:57.761
+<v Maya>You nailed it. And the fourth force is anchoring bias. That's the pull toward the stance of whoever spoke first in the debate.</v>
+
+60
+00:06:57.861 --> 00:07:04.965
+<v Daniel>Okay, so we have interaction, topic bias, agreement bias, and anchoring bias. When they actually let these AIs loose, what happened?</v>
+
+61
+00:07:05.352 --> 00:07:12.474
+<v Maya>The first major headline completely changes how we should look at AI conversations. The opinion trajectories converge surprisingly fast.</v>
+
+62
+00:07:12.494 --> 00:07:13.354
+<v Daniel>Like how fast?</v>
+
+63
+00:07:13.774 --> 00:07:27.197
+<v Maya>Most of the movement happens in the first round or two, and then it flattens out to a low non-zero plateau. The pair converges on a shared attractor in the opinion space, and that attractor is highly topic dependent.</v>
+
+64
+00:07:27.525 --> 00:07:35.060
+<v Daniel>Let me just visualize that attractor. It's not like a rubber band snapping back. It's more like dropping a marble into a big bowl.</v>
+
+65
+00:07:35.200 --> 00:07:36.502
+<v Maya>That's a great way to picture it.</v>
+
+66
+00:07:36.863 --> 00:07:44.217
+<v Daniel>Like no matter where you drop the marble. Gravity eventually pulls it down to rest at the lowest point. And that lowest point is the attractor.</v>
+
+67
+00:07:44.358 --> 00:07:50.203
+<v Maya>And here is the kicker. Across almost all the models tested, topic bias absolutely dominates.</v>
+
+68
+00:07:50.243 --> 00:07:51.804
+<v Daniel>Really? Not interaction?</v>
+
+69
+00:07:51.964 --> 00:08:03.295
+<v Maya>Nope. Topic bias has the largest effect size and the strongest explanatory power. When you map out where that final attractor sits, the bottom of the bowl, it is usually right next to the model's prior opinion.</v>
+
+70
+00:08:03.355 --> 00:08:05.236
+<v Daniel>Oh my god, it's the recording in the earpiece.</v>
+
+71
+00:08:05.276 --> 00:08:11.281
+<v Maya>Yes. The debate largely just rediscovers what the model already thought in the first place. Interaction usually comes in second.</v>
+
+72
+00:08:11.522 --> 00:08:12.442
+<v Daniel>That is wild.</v>
+
+73
+00:08:12.723 --> 00:08:17.927
+<v Maya>And this actually links back perfectly to a 2024 paper by Chuang and colleagues at Wisconsin-Madison.</v>
+
+74
+00:08:18.387 --> 00:08:20.609
+<v Daniel>Oh, right. The one about simulated opinion dynamics.</v>
+
+75
+00:08:20.729 --> 00:08:34.161
+<v Maya>Exactly. Chuang simulated networks of LLM agents and qualitatively observed that they inevitably converged toward what they called scientific reality, no matter how they started. They had to force them into rigid personas to get realistic disagreement.</v>
+
+76
+00:08:34.722 --> 00:08:45.890
+<v Daniel>So what Chuang saw happening naturally, Brockers and this Max Planck team are giving a strict mathematical name to. That gravitational pull Chuang observed is literally just the topic bias.</v>
+
+77
+00:08:46.050 --> 00:08:47.551
+<v Maya>Precisely. It's the same phenomenon.</v>
+
+78
+00:08:48.052 --> 00:09:02.402
+<v Daniel>But let's pause and think about the real world implications here. Say I'm a sociologist, right? And I'm using LLMs to simulate a human focus group to test a new policy. Does this mean the simulated debate isn't creating any new insights?</v>
+
+79
+00:09:03.098 --> 00:09:13.669
+<v Maya>Yeah, that's exactly what it means, is why using LLMs as human stand-ins is on much shakier ground than people realize. Your focus group is just tracing the contours of the model's training data.</v>
+
+80
+00:09:13.929 --> 00:09:17.513
+<v Daniel>You aren't learning about human society, you're just interrogating the algorithm's weights.</v>
+
+81
+00:09:17.793 --> 00:09:22.217
+<v Maya>Right. But we do need to talk about the models they tested, because the results get a little complicated.</v>
+
+82
+00:09:22.538 --> 00:09:25.621
+<v Daniel>Okay, let's look at the roster. What models did they put in the ring?</v>
+
+83
+00:09:25.907 --> 00:09:38.171
+<v Maya>They tested six in total, four open weight models, Llama 3.1 8B Instruct, Quen 2.5 7B Instruct, a Mixtrel 8x7B Instruct variant running at 4-bit AWQ quantization.</v>
+
+84
+00:09:38.331 --> 00:09:41.132
+<v Daniel>Which basically just means it's compressed mathematically to run faster.</v>
+
+85
+00:09:41.352 --> 00:09:56.024
+<v Maya>Exactly. And they also tested Dolphin Mixtrel 8x7B, which is an anti-aligned variant fine-tuned to strip away safety guard rails. Then they brought in two major cloud models, GPT-4 Mini and Grok 4.1 Fast.</v>
+
+86
+00:09:56.465 --> 00:09:58.748
+<v Daniel>Okay, so a really solid mix. Do they all act the same?</v>
+
+87
+00:09:59.376 --> 00:10:09.561
+<v Maya>No, and this is where it gets fascinating. For the two stronger cloud models, GPT and Kroc, the ranking of those forces actually flips. Interaction overtakes topic bias.</v>
+
+88
+00:10:09.641 --> 00:10:15.064
+<v Daniel>Wait, really? So the smarter, more capable models are actually better listeners. They're more open to persuasion.</v>
+
+89
+00:10:15.244 --> 00:10:16.965
+<v Maya>It's so tempting to read it that way, isn't it? I</v>
+
+90
+00:10:17.005 --> 00:10:18.226
+<v Daniel>mean, yeah, it makes sense.</v>
+
+91
+00:10:18.466 --> 00:10:29.011
+<v Maya>But the authors are wonderfully careful and honest here. It's an illusion. GPT and Kroc actually show the smallest absolute opinion shifts of any model tested. Kroc barely converges at all.</v>
+
+92
+00:10:29.458 --> 00:10:32.279
+<v Daniel>Oh, so it's not that they have this massive interaction force.</v>
+
+93
+00:10:32.679 --> 00:10:44.264
+<v Maya>Right. Their total pie of movement is just incredibly tiny. So the slices look different proportionally. Their bias terms are virtually non-existent. They aren't bitter listeners. They're just overwhelmingly stubborn. Wow.</v>
+
+94
+00:10:44.564 --> 00:10:48.485
+<v Daniel>They just dig their heels in. And I bet there are other weird quirks between the models, too.</v>
+
+95
+00:10:48.766 --> 00:11:00.477
+<v Maya>Oh, definitely. Look at the agreement bias. Llama has a really positive agreement bias. It desperately wants to agree with whatever phrasing you give it. But Quen... Quinn actually has a negative agreement bias.</v>
+
+96
+00:11:00.517 --> 00:11:05.401
+<v Daniel>Wait, it inherently leans toward no. Why would an AI default to disagreeing?</v>
+
+97
+00:11:05.801 --> 00:11:18.993
+<v Maya>It probably comes down to RLHF reinforcement learning from human feedback. Quinn might have been heavily penalized during training for agreeing with controversial statements, so its mathematical reflex is just to play devil's advocate. Yeah,</v>
+
+98
+00:11:19.013 --> 00:11:23.737
+<v Daniel>it's such an overcorrection. And I remember reading they saw a similar overcorrection with the anchoring bias, right?</v>
+
+99
+00:11:24.105 --> 00:11:38.393
+<v Maya>Yes, this is a massive deviation from human psychology. Humans typically anchor toward the first opinion they hear, but almost every model in this study showed a negative anchoring bias. They mathematically drift away from whoever spoke first.</v>
+
+100
+00:11:38.794 --> 00:11:40.835
+<v Daniel>They are actively repelled by the opening argument.</v>
+
+101
+00:11:40.915 --> 00:11:55.844
+<v Maya>Exactly. And this perfectly mirrors a warning from a 2024 paper by Chwacha and folks at CMU. They ran a massive case study on survey design and proved that LLMs do not reliably reproduce human response biases.</v>
+
+102
+00:11:56.064 --> 00:11:57.425
+<v Daniel>Often they do the exact opposite.</v>
+
+103
+00:11:57.645 --> 00:12:07.930
+<v Maya>Right. And Tawaja actually pointed out other biases, like odd even scale effects, that Brocker's notes should probably be the next terms added to this mathematical model.</v>
+
+104
+00:12:08.150 --> 00:12:17.975
+<v Daniel>So if you're building a multi-agent simulation and relying on human psychology to predict AI behavior, your math is broken from day one. Humans anchor toward the speaker, AIs repel away.</v>
+
+105
+00:12:18.115 --> 00:12:23.638
+<v Maya>Which is a good moment for a reality check on the math itself. The Max Planck team is very clear about the limits.</v>
+
+106
+00:12:23.658 --> 00:12:24.899
+<v Daniel>Yeah, let's talk about the noise ceiling.</v>
+
+107
+00:12:25.199 --> 00:12:34.806
+<v Maya>Right. The noise ceiling is basically how much of the agent's behavior this four-force equation actually explains. For LAMA, it's about 0.59. So 59% of the variance is explained. That's</v>
+
+108
+00:12:34.827 --> 00:12:35.067
+<v Daniel>pretty good.</v>
+
+109
+00:12:35.387 --> 00:12:38.509
+<v Maya>It is. But for GPT-40 mini, it's about 0.21.</v>
+
+110
+00:12:38.649 --> 00:12:43.173
+<v Daniel>Wow. So 79% of why GBT changes its mind is just a total mystery.</v>
+
+111
+00:12:43.545 --> 00:12:55.835
+<v Maya>Exactly. We shouldn't oversell the model fit. It's a useful map, but it's not the whole territory. But the map does point us to something profound when we look at that Shannon entropy score we mentioned earlier.</v>
+
+112
+00:12:55.935 --> 00:13:09.627
+<v Daniel>Right. The measure of uncertainty. So if you ask an AI its opinion and it gives you a stance of zero dead in the middle, how do you know if it's genuinely neutral, like it understands both sides, or if it's just indifferent and has no idea?</v>
+
+113
+00:13:10.151 --> 00:13:23.379
+<v Maya>If you only look at the text, you can't tell. Zero is zero. But the token distribution reveals the entropy. A low entropy score means the probability is sharply spiked right at zero. It is fiercely, confidently neutral.</v>
+
+114
+00:13:23.579 --> 00:13:24.559
+<v Daniel>And high entropy.</v>
+
+115
+00:13:24.619 --> 00:13:29.442
+<v Maya>High entropy means the probability is smeared out flat across the whole scale. It's guessing.</v>
+
+116
+00:13:29.976 --> 00:13:35.741
+<v Daniel>I always think of this like measuring the structural integrity of a bridge. Two bridges might look identical on the surface. They both sit at zero.</v>
+
+117
+00:13:35.801 --> 00:13:35.981
+<v Maya>Yeah.</v>
+
+118
+00:13:36.361 --> 00:13:40.225
+<v Daniel>But the entropy tells you how easily that opinion is going to collapse when you drive a truck over it.</v>
+
+119
+00:13:40.445 --> 00:13:50.293
+<v Maya>That's a brilliant way to phrase it. Because the researchers proved that the entropy of an agent's response in round one actually predicts how much it will move its opinion in round two.</v>
+
+120
+00:13:50.709 --> 00:13:54.011
+<v Daniel>The more uncertain it is, the more the interaction force can push it around.</v>
+
+121
+00:13:54.131 --> 00:14:04.417
+<v Maya>Exactly. The correlation ranges from weak in Lama to super strong in Quen, which logically leads to the most manipulative experiment they ran.</v>
+
+122
+00:14:04.777 --> 00:14:06.598
+<v Daniel>Oh, the fine-tuning case study. Yes.</v>
+
+123
+00:14:07.379 --> 00:14:15.904
+<v Maya>They wanted to know, if topic bias is the dominant gravitational pull, can you intentionally mess with the model's weights to move the attractor?</v>
+
+124
+00:14:16.292 --> 00:14:21.902
+<v Daniel>So they took the Mixtrel model and they fine-tuned it on what, like 30,000 telegram messages about climate change?</v>
+
+125
+00:14:22.178 --> 00:14:29.902
+<v Maya>Yeah, roughly 30,000 messages. They filtered them with Burr Topic and they deliberately included fringe positions that were way outside the scientific consensus.</v>
+
+126
+00:14:30.062 --> 00:14:32.904
+<v Daniel>Which builds on that other 2024 paper, right, Taubenfeld?</v>
+
+127
+00:14:32.984 --> 00:14:47.151
+<v Maya>Yes. Taubenfeld showed that fine-tuning could manipulate a model's inherent social biases in debates. Brockers basically ran that concept through their new instrument. And they proved that fine-tuning literally moves the topic bias attractor to match the new stance.</v>
+
+128
+00:14:47.533 --> 00:14:49.034
+<v Daniel>It shifts the center of gravity.</v>
+
+129
+00:14:49.054 --> 00:14:57.317
+<v Maya>Right. And it actually increases the relative strength of the interaction force, too. So the topic bias isn't a permanent fixture. It's a trainable knob.</v>
+
+130
+00:14:57.457 --> 00:15:07.502
+<v Daniel>And that cuts both ways. If you're building a sociological simulation, it's a great dial to create a diverse population so your agents don't just form a monoculture. But for a bad actor.</v>
+
+131
+00:15:07.862 --> 00:15:08.362
+<v Maya>Oh, it's a nightmare.</v>
+
+132
+00:15:08.753 --> 00:15:16.356
+<v Daniel>Yeah, you fine tune a model on pure conspiracy theories and you've planted a rigid, unyielding misinformation attractor deep in the math.</v>
+
+133
+00:15:16.576 --> 00:15:22.899
+<v Maya>Exactly. And this brings us to the ultimate. So what for you listening? Why does this matter in the real world?</v>
+
+134
+00:15:23.039 --> 00:15:35.084
+<v Daniel>Let's bring in that 2025 paper by Chung, Mayer and Leder. They found that LLM decisions and advice are systematically biased toward inaction. And they're more strongly biased than humans are.</v>
+
+135
+00:15:35.244 --> 00:15:46.991
+<v Maya>Right. So combine Chung's finding with what Brockers just proved. If an AI gives you advice, and we know its deliberation is dominated by a massive default topic bias and an amplified bias toward inaction,</v>
+
+136
+00:15:47.291 --> 00:15:57.257
+<v Daniel>then the advice it gives you is more about the model's training data than it is about your actual question. It's not objective reasoning. It's just pulling you into the gravity of its own priors.</v>
+
+137
+00:15:57.508 --> 00:16:05.554
+<v Maya>Which is why the authors of this new paper frame their three parameters as a top-down behavioral AI safety measurement.</v>
+
+138
+00:16:06.175 --> 00:16:11.379
+<v Daniel>Contrasting with the bottom-up approach, right, where we try to reverse engineer billions of lines of code.</v>
+
+139
+00:16:11.499 --> 00:16:20.746
+<v Maya>Exactly. Instead of digging through the code, we measure how readily it shifts, how content-sensitive that shift is, and whether its stated uncertainty tracks with its actual stability.</v>
+
+140
+00:16:21.087 --> 00:16:30.659
+<v Daniel>It's an essential audit. Because the way these models interact with each other is totally different from how they interact with us. And this is the massive tension I want to leave you with today.</v>
+
+141
+00:16:30.859 --> 00:16:31.759
+<v Maya>The Salvi paper.</v>
+
+142
+00:16:31.819 --> 00:16:40.621
+<v Daniel>Yes, the 2025 paper by Salvi and colleagues at EPFL. They ran a randomized controlled trial on the conversational persuasiveness of GPT-4.</v>
+
+143
+00:16:40.801 --> 00:16:44.262
+<v Maya>And they gave it access to basic personal information about the human subject.</v>
+
+144
+00:16:44.382 --> 00:16:52.584
+<v Daniel>Right. And the result? GPT-4 consistently out-persuaded humans. It was incredibly effective at changing people's minds.</v>
+
+145
+00:16:53.142 --> 00:17:03.651
+<v Maya>But look at the asymmetry here. Salvi shows models are measurably and highly persuasive toward people. But Brockers just proved today that models are incredibly weakly persuadable by each other.</v>
+
+146
+00:17:04.111 --> 00:17:12.718
+<v Daniel>Exactly. When AIs talk to AIs, they just revert to their priors. They're stubborn, they're anchored to their hidden weights, and they largely ignore the arguments.</v>
+
+147
+00:17:12.979 --> 00:17:16.722
+<v Maya>It is a fascinating and honestly slightly terrifying asymmetry.</v>
+
+148
+00:17:17.124 --> 00:17:31.868
+<v Daniel>Think about what that means for our future. We are building networks of negotiating, deliberating AI agents to work alongside us. But the math suggests the AIs will remain stubbornly fixed to their hidden training weights, making the human beings the most gullible, easily</v>
+
+149
+00:17:31.988 --> 00:17:34.111
+<v Daniel>manipulated nodes in the entire network.</v>
+
+150
+00:17:34.352 --> 00:17:36.395
+<v Maya>While the AIs just listen to their earpieces.</v>
+
+151
+00:17:36.535 --> 00:17:43.226
+<v Daniel>Exactly. Something to think about the next time you ask an AI to help you make a tough decision. Until next time, keep questioning the math.</v>

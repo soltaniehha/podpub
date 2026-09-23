@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 06:44:28 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 06:44:54 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1085,5 +1085,24 @@ Reference: Berger, J., Analytis, P. P., Satopää, V., &amp; Kurvers, R. H. J. M
       <pubDate>Tue, 22 Sep 2026 06:14:57 +0000</pubDate>
       <itunes:episode>55</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/055%20-%20When%20The%20Human%20Never%20Gets%20Feedback.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>056 - When Agreement Is Not Persuasion</title>
+      <description>Disentangling Interaction And Bias Effects In Opinion Dynamics Of Large Language Models (September 2026)
+
+In this episode we unpack a Nature Communications paper from Vincent Brockers, David Ehrlich and Viola Priesemann at the Max Planck Institute for Dynamics and Self-Organization in Gottingen, published on 22 September 2026. When two language model agents argue and end up agreeing, we tend to read that as persuasion. The authors built a measuring instrument to check, and across six models the largest share of the movement turns out to be the model drifting back toward the opinion it already held before the conversation started.
+
+We walk through their hierarchical Bayesian influence-response model, which splits every opinion shift into four competing terms with their own decay timescales: genuine interaction, a topic bias toward the model's default stance, an agreement bias toward whatever statement was put in front of it, and an anchoring bias toward whoever spoke first. We cover the setup that makes the decomposition possible, with opinions read off the token distribution in both normal and negated framing across twelve statements from climate change and vaccination to Bach versus Stravinsky, run on Llama-3.1-8B, Qwen2.5-7B, Mixtral-8x7B, the anti-aligned DolphinMixtral, GPT-4o-mini and Grok-4.1-fast. We get into the sharp differences between models, the negative anchoring bias that runs opposite to the human intuition, the honest wrinkle that the two strongest models look interaction-dominated partly because their bias terms are so small, the fine-tuning case study that moves the attractor onto a planted stance, and the response-distribution entropy that predicts how far an agent will move next. We set it against Chuang's finding that agents converge on scientific consensus, Taubenfeld's systematic biases in simulated debates, Tjuatja's evidence that models do not reproduce human response biases at all, Cheung, Maier and Lieder's PNAS result that models amplify moral biases beyond human levels, and Salvi's randomized trial showing GPT-4 out-persuading people, and we close on what it means for using models as stand-ins for human subjects and for multi-agent systems built to deliberate.
+
+Reference: Brockers, V. C., Ehrlich, D. A., &amp; Priesemann, V. (2026). Disentangling interaction and bias effects in opinion dynamics of large language models. Nature Communications, 17, 10077. https://doi.org/10.1038/s41467-026-77340-3
+Reference: Chuang, Y.-S., Goyal, A., Harlalka, N., Suresh, S., Hawkins, R., Yang, S., Shah, D., Hu, J., &amp; Rogers, T. T. (2024). Simulating Opinion Dynamics with Networks of LLM-based Agents. Findings of the Association for Computational Linguistics: NAACL 2024, 3326-3346. https://arxiv.org/abs/2311.09618
+Reference: Taubenfeld, A., Dover, Y., Reichart, R., &amp; Goldstein, A. (2024). Systematic Biases in LLM Simulations of Debates. Proceedings of EMNLP 2024, 251-267. https://arxiv.org/abs/2402.04049
+Reference: Tjuatja, L., Chen, V., Wu, S. T., Talwalkar, A., &amp; Neubig, G. (2024). Do LLMs exhibit human-like response biases? A case study in survey design. Transactions of the ACL, 12, 1011-1026. https://arxiv.org/abs/2311.04076
+Reference: Cheung, V., Maier, M., &amp; Lieder, F. (2025). Large language models show amplified cognitive biases in moral decision-making. PNAS, 122(25), e2412015122. https://doi.org/10.1073/pnas.2412015122
+Reference: Salvi, F., Horta Ribeiro, M., Gallotti, R., &amp; West, R. (2025). On the conversational persuasiveness of GPT-4. Nature Human Behaviour, 9, 1645-1653. https://arxiv.org/abs/2403.14380</description>
+      <guid isPermaLink="false">f6dea2b89a4361d5b048f0c9129d90537958684c</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/056%20-%20When%20Agreement%20Is%20Not%20Persuasion.m4a" length="34225307" type="audio/mp4" />
+      <pubDate>Wed, 23 Sep 2026 06:17:15 +0000</pubDate>
+      <itunes:episode>56</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/056%20-%20When%20Agreement%20Is%20Not%20Persuasion.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
