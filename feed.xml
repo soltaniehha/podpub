@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 06:44:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 06:32:53 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1104,5 +1104,24 @@ Reference: Salvi, F., Horta Ribeiro, M., Gallotti, R., &amp; West, R. (2025). On
       <pubDate>Wed, 23 Sep 2026 06:17:15 +0000</pubDate>
       <itunes:episode>56</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/056%20-%20When%20Agreement%20Is%20Not%20Persuasion.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>057 - When The AI Tutor Matches The Human One</title>
+      <description>StudentBench: AI and Human Tutoring Yield Equivalent GRE Learning Gains (September 2026)
+
+In this episode we unpack a new study from Curtis Northcutt, Jonas Mueller and colleagues at Handshake AI Research, posted to arXiv on 23 September 2026. They randomly assigned 2,383 students to an hour with one of thirteen AI tutors, an hour with a live expert human tutor, or no tutoring at all, and tested them before and after on newly written GRE questions. The claim: AI tutoring and human tutoring produced statistically equivalent learning gains, and the cheapest AI tutor got there at a tiny fraction of the cost.
+
+We walk through the equivalence test at the heart of the result, the tutors behind it (from Opus 4.8, GPT-5.5 Pro and Gemini 3.1 Pro down to the open-weight Gemma 4 31B), the finding that Gemma matched the human tutor at 918 times lower cost per percentage point of learning gain, and why equivalence held for Quantitative but not for Verbal. We cover the three StudentBench leaderboards for lesson planning, practice-problem design and conversational pedagogy, the way teaching style clusters by model family, and the surprising role of reply latency in driving engagement, practice and learning. We set it against Pardos and Bhandari on ChatGPT-written hints, Kestin's Harvard physics tutor, Stanford's Tutor CoPilot, the LearnLM and Eedi classroom trial, and Contractor and Reyes on whether AI-assisted learning lasts, and close on what the study cannot yet show: retention beyond one hour, and whether an AI tutor beats simply doing more practice.
+
+Reference: Northcutt, C., Hasmani, I., Feng, K., Khangi, T., Plesner, A., &amp; Mueller, J. (2026). StudentBench: AI and human tutoring yield equivalent GRE learning gains. arXiv:2609.28470. https://arxiv.org/abs/2609.28470
+Reference: Pardos, Z. A., &amp; Bhandari, S. (2024). ChatGPT-generated help produces learning gains equivalent to human tutor-authored help on mathematics skills. PLOS ONE, 19(5), e0304013. https://doi.org/10.1371/journal.pone.0304013
+Reference: Kestin, G., Miller, K., Klales, A., Milbourne, T., &amp; Ponti, G. (2025). AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458. https://doi.org/10.1038/s41598-025-97652-6
+Reference: Wang, R. E., Ribeiro, A. T., Robinson, C. D., Loeb, S., &amp; Demszky, D. (2025). Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise. arXiv:2410.03017. https://arxiv.org/abs/2410.03017
+Reference: LearnLM Team, Google &amp; Eedi. (2025). AI tutoring can safely and effectively support students: An exploratory RCT in UK classrooms. arXiv:2512.23633. https://arxiv.org/abs/2512.23633
+Reference: Contractor, Z., &amp; Reyes, G. (2026). Experimental Evidence on the Learning Impact of Generative AI. arXiv:2607.08849. https://arxiv.org/abs/2607.08849</description>
+      <guid isPermaLink="false">f9d7fc55866dd69bcc6f8185fc84ad55b2b7f31b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/057%20-%20When%20The%20AI%20Tutor%20Matches%20The%20Human%20One.m4a" length="30576989" type="audio/mp4" />
+      <pubDate>Thu, 24 Sep 2026 06:15:02 +0000</pubDate>
+      <itunes:episode>57</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/057%20-%20When%20The%20AI%20Tutor%20Matches%20The%20Human%20One.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

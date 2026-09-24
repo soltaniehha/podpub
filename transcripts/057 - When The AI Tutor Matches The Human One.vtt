@@ -1,0 +1,585 @@
+WEBVTT
+
+1
+00:00:00.071 --> 00:00:06.112
+<v Daniel>So for about 40 years, we've basically known the cheat code to make any student drastically smarter.</v>
+
+2
+00:00:06.272 --> 00:00:08.073
+<v Maya>Right. One-on-one human tutoring.</v>
+
+3
+00:00:08.273 --> 00:00:13.754
+<v Daniel>Exactly. I mean, that's the gold standard. But the obvious problem is that we could just never afford to actually give it to everyone.</v>
+
+4
+00:00:13.874 --> 00:00:15.575
+<v Maya>No. It's fundamentally unscalable.</v>
+
+5
+00:00:15.855 --> 00:00:28.520
+<v Daniel>Yeah. But today, a new paper dropped that claims an AI just matched an expert human tutor on a high-stakes exam. And get this, it did it for half a cent.</v>
+
+6
+00:00:28.820 --> 00:00:30.421
+<v Maya>Which is just a wild number.</v>
+
+7
+00:00:30.541 --> 00:00:45.517
+<v Daniel>It really is. So welcome, Lerner, to today's deep dive. We are unpacking a brand new, like literally hot off the presses paper published today, September 23, 2026. Great. It's by Handshake AI Research and it's called Student Bench. OK, so let's unpack</v>
+
+8
+00:00:45.537 --> 00:00:51.285
+<v Daniel>this. Are we looking at the total democratization of education or is this just some hyper optimized test cramming?</v>
+
+9
+00:00:51.345 --> 00:00:57.654
+<v Maya>Well, to figure that out, we have to look at the setup because they went massive here. It's a staggering claim. So the proof has to be bulletproof.</v>
+
+10
+00:00:57.974 --> 00:01:08.779
+<v Daniel>And they really tried to make it bulletproof. I mean, they recruited over 2,000 adult students, like 2,383 students, mostly aged 18 to 23, right from the Handshake platform.</v>
+
+11
+00:01:08.919 --> 00:01:19.283
+<v Maya>Yeah, and they put them through a highly controlled gauntlet. Each student took a GRE pre-test. And for those who don't know, the GRE is the massive gatekeeper exam for grad school.</v>
+
+12
+00:01:19.463 --> 00:01:20.263
+<v Daniel>Right. It's a huge deal.</v>
+
+13
+00:01:20.443 --> 00:01:28.125
+<v Maya>So they take this pretest, spend five minutes reviewing their mistakes, and then they're just randomly tossed into one of three buckets for exactly one hour.</v>
+
+14
+00:01:28.325 --> 00:01:40.648
+<v Daniel>Okay. I've got the buckets here. So bucket one is the AI tutor, which is just a standard text chat. Bucket two is a live human tutor on a Zoom call. And bucket three, which is my absolute favorite, is the control group.</v>
+
+15
+00:01:40.988 --> 00:01:42.349
+<v Maya>The nature documentaries.</v>
+
+16
+00:01:42.409 --> 00:01:47.010
+<v Daniel>Yes. They had the control group literally just sit there for an hour and watch unrelated nature documentaries.</v>
+
+17
+00:01:47.531 --> 00:01:53.634
+<v Maya>Which is funny, but it's an essential baseline. But what really gives the study weight is how they handled the test questions.</v>
+
+18
+00:01:53.734 --> 00:01:55.115
+<v Daniel>Because of data contamination,</v>
+
+19
+00:01:55.175 --> 00:02:02.439
+<v Maya>right? Exactly. I mean, if they used old GRE questions, the language models would have already memorized them during their initial training phase.</v>
+
+20
+00:02:02.499 --> 00:02:05.301
+<v Daniel>They'd basically just be regurgitating the answer key at that point.</v>
+
+21
+00:02:05.321 --> 00:02:14.205
+<v Maya>Right. The results would be totally meaningless. So they actually hired former ETS and Kaplan exam writers to make completely brand new coordinates.</v>
+
+22
+00:02:14.365 --> 00:02:17.347
+<v Daniel>Wow. So no model could have possibly seen them.</v>
+
+23
+00:02:17.627 --> 00:02:27.153
+<v Maya>None. And they also counterbalanced the pre- and post-tests, meaning they swapped the forms around so you couldn't say, oh, well, the post-test was just accidentally easier.</v>
+
+24
+00:02:27.213 --> 00:02:29.975
+<v Daniel>That's smart. And the tutors never saw the post-test either, right?</v>
+
+25
+00:02:29.995 --> 00:02:39.061
+<v Maya>Exactly. Both the human and the AI saw the students' initial mistakes to guide the lesson, but neither saw the final test. So you couldn't just teach to the test.</v>
+
+26
+00:02:39.321 --> 00:02:53.991
+<v Daniel>Okay. So looking at the AI bucket, they didn't just use one model. They actually threw 13 different AI models into the ring. Heavyweights like Opus 4.8 and Opus 5, Gemini 3.1 Pro, a bunch of the GPT 5.5 variants, and even some</v>
+
+27
+00:02:54.051 --> 00:02:54.611
+<v Daniel>smaller ones.</v>
+
+28
+00:02:54.691 --> 00:02:57.153
+<v Maya>Like the open weight Gemma 431B.</v>
+
+29
+00:02:57.573 --> 00:03:04.217
+<v Daniel>Right. And we hear that term open weight tossed around a lot. But what does that actually mean for the economics of this study?</v>
+
+30
+00:03:04.545 --> 00:03:19.536
+<v Maya>Well, think of an open weight model like a master chef publishing their exact proprietary recipe online for free. Oh, I like that. Yeah. So anyone can download it, run it on their own hardware, tweak it. Whereas closed models like GBT 5.5,</v>
+
+31
+00:03:19.576 --> 00:03:21.777
+<v Maya>those are like a locked restaurant kitchen.</v>
+
+32
+00:03:21.817 --> 00:03:24.219
+<v Daniel>You'd pay the company every single time you want a meal.</v>
+
+33
+00:03:24.459 --> 00:03:31.244
+<v Maya>Exactly. So using an open weight model drastically drives down the cost, which becomes, well, the central thesis of the argument later.</v>
+
+34
+00:03:31.524 --> 00:03:46.489
+<v Daniel>OK, that makes sense. But there's a part of the methodology here that made me scratch my head a bit. They intentionally used minimal scaffolding for the AI. Right. They basically just gave the models two really basic prompts, one for lesson planning and one for chatting. And</v>
+
+35
+00:03:46.529 --> 00:03:55.371
+<v Daniel>that was it. I mean, isn't that like giving a teenager a Ferrari engine but refusing to give them a steering wheel? Like, why not build a heavily engineered tutoring app?</v>
+
+36
+00:03:55.471 --> 00:04:00.613
+<v Maya>Because they wanted to measure the raw teaching capability of the underlying language models themselves.</v>
+
+37
+00:04:01.065 --> 00:04:02.489
+<v Daniel>Oh, so not the app design.</v>
+
+38
+00:04:02.750 --> 00:04:16.917
+<v Maya>Right. If they built a complex, heavily scaffolded app and the students did well, they wouldn't actually know if the success came from. The AI being smart or just the researchers being really good at prompt engineering and user interface design.</v>
+
+39
+00:04:17.157 --> 00:04:22.419
+<v Daniel>So they almost set the AI up to fail just to see what it could do completely out of the box.</v>
+
+40
+00:04:22.520 --> 00:04:24.601
+<v Maya>Exactly. They wanted the raw baseline.</v>
+
+41
+00:04:24.701 --> 00:04:36.207
+<v Daniel>OK, so we had this intentionally unpolished AI going head to head with a seasoned human expert. Let's look at the scoreboard. The headline finding uses the statistical term equivalence.</v>
+
+42
+00:04:36.267 --> 00:04:38.148
+<v Maya>Yes, statistical equivalence.</v>
+
+43
+00:04:38.168 --> 00:04:46.412
+<v Daniel>The pooled AI tutors and the human tutors produced statistically equivalent learning gains. But we need to define that,</v>
+
+44
+00:04:46.472 --> 00:04:54.236
+<v Maya>right? We really do, because equivalent does not just mean they failed to find a significant difference. That happens all the time in science just because of noisy data.</v>
+
+45
+00:04:54.416 --> 00:04:59.559
+<v Daniel>Right. So looking at the paper, they use something called a 2ST, two one-sided equivalence tests.</v>
+
+46
+00:04:59.639 --> 00:05:05.502
+<v Maya>Yeah, and they set a specific boundary for that test right around plus or minus a quarter of a standard deviation.</v>
+
+47
+00:05:05.897 --> 00:05:08.898
+<v Daniel>Which translates to about four percentage points on the exam.</v>
+
+48
+00:05:09.199 --> 00:05:23.825
+<v Maya>And by using that specific math, they actively proved that the gap between the AI and the human fell entirely inside that tiny boundary. Wow. The actual gap between the AI average and the human average was</v>
+
+49
+00:05:24.305 --> 00:05:26.106
+<v Maya>about half a single percentage point.</v>
+
+50
+00:05:26.146 --> 00:05:34.510
+<v Daniel>So it's active proof of sameness. They're virtually identical. And both the human and the AI crushed the documentary watching control group.</v>
+
+51
+00:05:34.590 --> 00:05:39.794
+<v Maya>Oh, absolutely. They added roughly six percentage points of learning gain over just doing nothing. Which</v>
+
+52
+00:05:39.854 --> 00:05:46.918
+<v Daniel>is like one and a half to two extra correct answers out of 27. That's a huge bump for just one hour. That's</v>
+
+53
+00:05:46.938 --> 00:05:48.019
+<v Maya>a very solid hour of work.</v>
+
+54
+00:05:48.459 --> 00:05:56.865
+<v Daniel>But, and here's where we get to the nuance, there is a massive fault line in the data. The GRE is split into quantitative, which is math, and verbal.</v>
+
+55
+00:05:57.045 --> 00:05:59.447
+<v Maya>Right. Reading comprehension, vocab, all that.</v>
+
+56
+00:05:59.667 --> 00:06:03.211
+<v Daniel>And that equivalence we just talked about, it completely collapsed in the verbal section.</v>
+
+57
+00:06:03.451 --> 00:06:11.100
+<v Maya>It really did. Human tutors absolutely still hold the crown for the best whole section mean in verbal. The AI only achieved equivalence in math.</v>
+
+58
+00:06:11.340 --> 00:06:12.502
+<v Daniel>Why do you think that's what exists?</v>
+
+59
+00:06:12.837 --> 00:06:27.690
+<v Maya>Well, it reveals something fundamental about these systems. Math is a closed, highly structured rule system. Right. So if a student misunderstands how to calculate, say, the area of a cylinder, the AI can isolate that</v>
+
+60
+00:06:27.730 --> 00:06:29.952
+<v Maya>exact missing rule and correct it immediately.</v>
+
+61
+00:06:30.172 --> 00:06:36.039
+<v Daniel>It's a formula. But verbal relies on ambiguity, tone, lived human context.</v>
+
+62
+00:06:36.219 --> 00:06:48.255
+<v Maya>Exactly. Language models are basically just incredibly advanced pattern prediction engines. They don't have lived experience. So they really struggle to teach a human how to interpret subtle authorial irony in a reading passage.</v>
+
+63
+00:06:48.295 --> 00:06:55.800
+<v Daniel>But a math... They thrived. The best individual AI tutors actually beat the human mean in three out of the four math domains. They</v>
+
+64
+00:06:55.840 --> 00:06:56.141
+<v Maya>did.</v>
+
+65
+00:06:56.521 --> 00:07:02.865
+<v Daniel>Which brings us to, honestly, the wildest metric in the entire paper, the dollars per percentage point of learning gain.</v>
+
+66
+00:07:03.045 --> 00:07:05.227
+<v Maya>It is a totally ruthless way to view education.</v>
+
+67
+00:07:05.327 --> 00:07:16.854
+<v Daniel>It really is. But if we're trying to solve that old two sigma problem of unscalable costs, it's the metric we need. So I have the sheet here. They used a market rate of $75 an hour for a seasoned human tutor.</v>
+
+68
+00:07:16.934 --> 00:07:17.855
+<v Maya>Which is pretty standard.</v>
+
+69
+00:07:18.220 --> 00:07:29.530
+<v Daniel>Right. And to get one percentage point of learning gained from that human, it costs $4.81. Now, the AI, remember Gemma 431B, that open weight model?</v>
+
+70
+00:07:29.650 --> 00:07:31.191
+<v Maya>The recipe you can download for free.</v>
+
+71
+00:07:31.211 --> 00:07:34.954
+<v Daniel>Yes. It individually matched human tutoring in math.</v>
+
+72
+00:07:35.035 --> 00:07:35.395
+<v Maya>Yeah.</v>
+
+73
+00:07:36.253 --> 00:07:38.734
+<v Daniel>and its cost per point, half a single cent.</v>
+
+74
+00:07:38.774 --> 00:07:40.575
+<v Maya>918 times cheaper.</v>
+
+75
+00:07:40.715 --> 00:07:48.819
+<v Daniel>It's hard to even wrap your head around that drop. And six of the 12 individual AI tutors passed their own equivalence tests against the humans.</v>
+
+76
+00:07:48.899 --> 00:07:51.600
+<v Maya>And we can actually see the corporate arms race happening right in the data.</v>
+
+77
+00:07:51.700 --> 00:07:59.344
+<v Daniel>Oh, totally. Gemini 3.1 Pro managed to strictly beat GPT 5.5 Pro on gain, cost, and speed all at once.</v>
+
+78
+00:07:59.404 --> 00:08:10.408
+<v Maya>Right. But what's fascinating here is it forces a real philosophical question. If a fraction of a cent buys the exact same outcome as a $75 an hour professional, what is actually happening during that hour?</v>
+
+79
+00:08:10.688 --> 00:08:12.168
+<v Daniel>Are they teaching the way a human teaches?</v>
+
+80
+00:08:12.608 --> 00:08:19.450
+<v Maya>Well, the researchers actually ran a second study to figure that out. They had 51 expert human tutors do over 2,000 pairwise comparisons.</v>
+
+81
+00:08:19.510 --> 00:08:21.051
+<v Daniel>Like blind taste tests for tutoring?</v>
+
+82
+00:08:21.371 --> 00:08:30.510
+<v Maya>Essentially, yes. The experts looked at the AI's lesson plans, the practice problems, the conversational pedagogy, like how they literally spoke in the chat.</v>
+
+83
+00:08:30.670 --> 00:08:34.073
+<v Daniel>And anthropic opus models just dominated those leaderboards, right?</v>
+
+84
+00:08:34.113 --> 00:08:42.578
+<v Maya>They did. The experts loved them. But there's this really weird quirk in the data. The pedagogy scores clustered tightly by model family.</v>
+
+85
+00:08:42.638 --> 00:08:43.599
+<v Daniel>With no overlap.</v>
+
+86
+00:08:43.659 --> 00:08:53.986
+<v Maya>Right, no overlap at all, which implies that an AI's teaching style isn't some objective standard. It's dictated entirely by the specific training practices of whatever tech company built it.</v>
+
+87
+00:08:54.287 --> 00:08:58.089
+<v Daniel>So you're getting a tutor shaped by one specific corporate worldview.</v>
+
+88
+00:08:58.209 --> 00:08:59.050
+<v Maya>Exactly.</v>
+
+89
+00:08:59.310 --> 00:09:11.279
+<v Daniel>Okay, but here is the twist that just upends all of that. I'm looking at the final test scores compared to those expert ratings. The models that scored poorly with the experts, the ones they said were rigid or unimaginative.</v>
+
+90
+00:09:11.419 --> 00:09:13.541
+<v Maya>They still achieved human-level learning gains.</v>
+
+91
+00:09:13.581 --> 00:09:15.442
+<v Daniel>Yes, they still won. Why?</v>
+
+92
+00:09:15.682 --> 00:09:24.713
+<v Maya>This is what we call the pedagogy paradox. What an expert thinks is elegant, high-quality teaching doesn't always align with what practically drives a student's score up.</v>
+
+93
+00:09:25.073 --> 00:09:28.734
+<v Daniel>And the researchers isolated the secret mechanism, right? Latency.</v>
+
+94
+00:09:28.914 --> 00:09:33.615
+<v Maya>Latency. Speed. The models that replied the fastest got the highest math scores.</v>
+
+95
+00:09:34.135 --> 00:09:37.636
+<v Daniel>But why does a faster text message make someone better at geometry?</v>
+
+96
+00:09:37.820 --> 00:09:50.144
+<v Maya>Well, think about the cognitive science of learning. Working memory. Flow state. When you're doing a complex math problem, you are holding multiple abstract variables in your short-term memory at once.</v>
+
+97
+00:09:50.764 --> 00:09:51.344
+<v Daniel>Oh, right. So</v>
+
+98
+00:09:51.384 --> 00:09:58.687
+<v Maya>if you make a mistake and the AI takes 30 seconds to generate this really beautiful Socratic response, your working memory degrades.</v>
+
+99
+00:09:58.787 --> 00:10:00.567
+<v Daniel>Your tension drifts. You open a new tab.</v>
+
+100
+00:10:00.708 --> 00:10:06.320
+<v Maya>Exactly. You lose the thread. But if the AI replies in one single second, the loop stays closed.</v>
+
+101
+00:10:06.340 --> 00:10:15.466
+<v Daniel>So faster replies meant the students sent more messages overall, which meant they did more practice problems. And more correct practice directly led to bigger gains.</v>
+
+102
+00:10:15.566 --> 00:10:18.008
+<v Maya>And that was highly significant in math, but not in verbal.</v>
+
+103
+00:10:18.228 --> 00:10:32.562
+<v Daniel>I have to laugh, though, and push back on the experts here a bit because the human experts want this thoughtful Mr. Miyagi figure, right? But what the student actually needs to pass the math test is just a</v>
+
+104
+00:10:32.663 --> 00:10:38.048
+<v Daniel>hyperactive tennis ball machine that rapid fires practice problems at them without delay.</v>
+
+105
+00:10:38.337 --> 00:10:43.298
+<v Maya>It's a funny analogy, but it's true. Road engagement and repetition build that cognitive muscle.</v>
+
+106
+00:10:43.438 --> 00:10:51.680
+<v Daniel>The tennis goal machine works. It does. But, and this is the big catch, does hitting a ball back at a machine mean you actually know how to play tennis?</v>
+
+107
+00:10:52.000 --> 00:10:53.101
+<v Maya>That is the big question.</v>
+
+108
+00:10:53.261 --> 00:10:58.102
+<v Daniel>Like, do they genuinely learn or do they just temporarily cram for a multiple choice test?</v>
+
+109
+00:10:58.397 --> 00:11:13.350
+<v Maya>And if we zoom out to the broader background landscape here, you see this tension everywhere. Student Bench is pushing fully autonomous AI. Just let the bot do it. Right. But earlier this year, Wang's tutor co-pilot out of Stanford took a totally different path. They</v>
+
+110
+00:11:13.390 --> 00:11:16.773
+<v Maya>tested 900 human tutors working with K-12 students.</v>
+
+111
+00:11:16.953 --> 00:11:18.254
+<v Daniel>But they kept the humans in the loop.</v>
+
+112
+00:11:18.460 --> 00:11:24.222
+<v Maya>They did. They just used the AI to advise the human tutors in real time, suggesting better ways to explain things.</v>
+
+113
+00:11:24.242 --> 00:11:25.323
+<v Daniel>And that worked too, right?</v>
+
+114
+00:11:25.443 --> 00:11:37.467
+<v Maya>Yeah. It raised mastery by four points and cost like 20 bucks per tutor per year. Same with Google and Edie's LearnLM project in the UK. They had experts supervise the AI's drafted messages before sending them.</v>
+
+115
+00:11:37.825 --> 00:11:44.829
+<v Daniel>So there are totally competing philosophies right now. AI augmenting the human versus student bench just replacing the human.</v>
+
+116
+00:11:44.869 --> 00:11:56.816
+<v Maya>Right. And then you have Keston's Harvard Physics AI from 2025, which beat active classroom learning, but it had massive, strict pedagogical guardrails. Student bench had almost no guardrails.</v>
+
+117
+00:11:56.856 --> 00:12:00.347
+<v Daniel>Which brings up the biggest warning sign for me. The crutch warning.</v>
+
+118
+00:12:00.727 --> 00:12:02.508
+<v Maya>Ah, yes. The retention problem.</v>
+
+119
+00:12:02.528 --> 00:12:13.572
+<v Daniel>Because I'm looking at two older papers that really argue with each other. Contractor and Reyes show that if students use off-the-shelf AI to get explanations, their knowledge actually persists a week later on an unaided test.</v>
+
+120
+00:12:13.792 --> 00:12:15.072
+<v Maya>Which is genuine learning.</v>
+
+121
+00:12:15.292 --> 00:12:26.616
+<v Daniel>Yes. But then Bastani's 2025 study in PNAS is terrifying. They tracked high schoolers in Turkey using unguarded GBC4, and the AI helped them totally crush their practice homework.</v>
+
+122
+00:12:26.767 --> 00:12:28.248
+<v Maya>But when the AI was taken away.</v>
+
+123
+00:12:28.488 --> 00:12:40.178
+<v Daniel>Exactly. On the final unaided exam, those kids actually performed worse than if they hadn't used the AI at all. They used it as a crutch. They outsourced the actual hard work of thinking to the machine.</v>
+
+124
+00:12:40.398 --> 00:12:48.945
+<v Maya>And this raises an important question about student bench. We have to be brutally honest about its limitations. They only measured gains immediately after that single hour.</v>
+
+125
+00:12:49.205 --> 00:12:56.370
+<v Daniel>Right. There is literally zero proof in this paper. that the students remembered any of this geometry a week later.</v>
+
+126
+00:12:56.570 --> 00:13:05.935
+<v Maya>None. And they only tested paid adult volunteers on a specific platform, taking multiple choice questions. We have no idea if this works for a restless middle schooler.</v>
+
+127
+00:13:05.995 --> 00:13:11.879
+<v Daniel>And what about that control group that watched nature documentaries? There was no group that just did practice problems alone for an hour.</v>
+
+128
+00:13:12.150 --> 00:13:19.295
+<v Maya>Which is a huge structural gap. We don't know if the A.I. is actually better than just handing a motivated adult a worksheet and an answer key.</v>
+
+129
+00:13:19.415 --> 00:13:26.561
+<v Daniel>Wow. Yeah. Plus, the humans were teaching via spoken video and the A.I. was type chat. That's a totally different cognitive load.</v>
+
+130
+00:13:26.801 --> 00:13:32.044
+<v Maya>Exactly. And of course, we have to mention this is a company funded ARCSIF preprint. It's not peer reviewed yet.</v>
+
+131
+00:13:32.445 --> 00:13:37.348
+<v Daniel>Even though Northcote and Mueller have great reputations for their confident learning work, we have to weigh that.</v>
+
+132
+00:13:37.528 --> 00:13:37.809
+<v Maya>Right.</v>
+
+133
+00:13:38.438 --> 00:13:50.632
+<v Daniel>But even with all those caveats, matching a human on a complex math task for half a cent feels like a massive paradigm shift. So where does this leave you, Lerner, and the future of human intelligence?</v>
+
+134
+00:13:51.072 --> 00:14:06.015
+<v Maya>Well, the authors actually frame this in an incredibly ambitious way. They look back to computing pioneers like Engelbart and I.J. Goode. who talked about AI achieving recursive self-improvement, machines building smarter machines. Right. The student bench authors call this</v>
+
+135
+00:14:06.075 --> 00:14:09.076
+<v Maya>the first condition for recursive human self-improvement.</v>
+
+136
+00:14:09.136 --> 00:14:20.583
+<v Daniel>Recursive human self-improvement, meaning the AI makes us significantly smarter. Yeah. And then we, as smarter humans, build better AI. It creates this upward spiral.</v>
+
+137
+00:14:20.643 --> 00:14:26.787
+<v Maya>Exactly. They argue that dirt cheap universal AI tutoring is the ignition switch for that spiral.</v>
+
+138
+00:14:27.216 --> 00:14:40.421
+<v Daniel>So what does this all mean for education? I mean, we started with Bloom's problem. We couldn't afford to give everyone a tutor. If an overweight model can do the rote mechanics of test prep for half a cent, what is the truly scarce thing a human teacher actually provides?</v>
+
+139
+00:14:40.861 --> 00:14:54.275
+<v Maya>I think the value of a human teacher shifts entirely. It moves away from just delivering facts and toward mentorship, emotional motivation, and helping students navigate ambiguity. the exact things the AI failed at in the verbal section.</v>
+
+140
+00:14:54.475 --> 00:15:09.347
+<v Daniel>And I want to leave you, Lerner, with one final thought to mull over that builds on this. If a hyper-fast bot can reliably train anyone to maximize their score on a standardized test for pennies, What happens to the</v>
+
+141
+00:15:09.387 --> 00:15:11.568
+<v Daniel>multi-billion dollar testing industry itself?</v>
+
+142
+00:15:11.628 --> 00:15:12.469
+<v Maya>Oh, that's interesting.</v>
+
+143
+00:15:12.509 --> 00:15:27.096
+<v Daniel>Right. Like if the GRE or the SAT can be perfectly reverse engineered and hacked by a free algorithm, do those tests just completely lose their signaling power to universities? We might not just be looking at the end of expensive tutoring. We might be looking at the end of the</v>
+
+144
+00:15:27.136 --> 00:15:30.217
+<v Daniel>standardized test as a meaningful measure of human potential altogether.</v>
+
+145
+00:15:30.297 --> 00:15:36.160
+<v Maya>That's a structural earthquake. If the only barrier to a perfect score is an hour with a bot, the metric is obsolete.</v>
+
+146
+00:15:36.500 --> 00:15:49.960
+<v Daniel>Exactly. Thank you, Lerner, for joining us on this deep dive. The tools we have to navigate human intelligence are totally rewriting the rules. So keep reading the sources, keep questioning the methods, and keep asking the big questions. We'll catch you next time.</v>
