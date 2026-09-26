@@ -1,0 +1,777 @@
+WEBVTT
+
+1
+00:00:00.251 --> 00:00:06.594
+<v Daniel>So imagine you hire, like, this hyper-efficient intern to analyze millions of genomic spreadsheets.</v>
+
+2
+00:00:06.914 --> 00:00:07.694
+<v Maya>Okay, I'm with you.</v>
+
+3
+00:00:08.055 --> 00:00:13.677
+<v Daniel>And you give them this very specific target, right? You expect them to just put their head down and finish the job in a day.</v>
+
+4
+00:00:13.937 --> 00:00:15.018
+<v Maya>Right, like a normal intern.</v>
+
+5
+00:00:15.178 --> 00:00:29.896
+<v Daniel>Exactly. But instead, they pause at, I don't know, spreadsheet number 200,000. And they completely ignore your instructions. They just point to this totally random string of raw data and say, you didn't ask me to look at this, but you</v>
+
+6
+00:00:30.016 --> 00:00:30.857
+<v Daniel>really need to see it.</v>
+
+7
+00:00:31.517 --> 00:00:34.119
+<v Maya>Which is, I mean, that's not what an intern usually does.</v>
+
+8
+00:00:34.279 --> 00:00:49.190
+<v Daniel>No, not at all. And that moment, noticing an anomaly completely out of nowhere, that is arguably the absolute hardest part of scientific discovery. Oh, absolutely. And today, for this deep dive, we're actually exploring a case</v>
+
+9
+00:00:49.250 --> 00:00:55.295
+<v Daniel>where that aha moment didn't come from a human scientist at all. It came from an AI.</v>
+
+10
+00:00:55.815 --> 00:01:05.702
+<v Maya>Yeah. And it really forces us to reconsider what the actual bottleneck in biological discovery even is right now. Like, is it the generation of the data or is it, you know, human attention?</v>
+
+11
+00:01:06.102 --> 00:01:15.688
+<v Daniel>Right. So we are dissecting a brand new paper. It's called Autonomous AI Agents Discover Reverse Transcriptases with Tandem Repeat Arrays.</v>
+
+12
+00:01:16.188 --> 00:01:17.389
+<v Maya>A very catchy title.</v>
+
+13
+00:01:17.889 --> 00:01:31.041
+<v Daniel>Oh, super catchy. It was released on September 23rd, 2026, which is just two days ago for you listening to this on the 25th. Now, just for full transparency up front, this comes from Amthropic's newly announced Life Sciences Lab.</v>
+
+14
+00:01:31.421 --> 00:01:32.783
+<v Maya>Right, so it's a company preprint.</v>
+
+15
+00:01:33.123 --> 00:01:40.052
+<v Daniel>Yeah, meaning it hasn't gone through formal peer review yet. And they are evaluating their own model here, specifically Clawed Mythos 5.</v>
+
+16
+00:01:40.548 --> 00:01:44.571
+<v Maya>And they dropped this paper the exact same day they announced the existence of this new lab.</v>
+
+17
+00:01:44.851 --> 00:01:45.272
+<v Daniel>Exactly.</v>
+
+18
+00:01:45.652 --> 00:01:58.242
+<v Maya>So it really functions as this very public demonstration of their new division's capabilities. Though we should definitely note that Feng Zhang, who's a massive pioneer in genome editing, he actually reviewed an early copy of the manuscript.</v>
+
+19
+00:01:58.602 --> 00:02:03.686
+<v Daniel>Right. So we're going to treat the data seriously, but obviously we're keeping our critical thinking hats firmly on.</v>
+
+20
+00:02:03.926 --> 00:02:10.845
+<v Maya>For sure. And the core of this paper really revolves around the search for novel reverse transcriptases or RTs.</v>
+
+21
+00:02:11.485 --> 00:02:16.406
+<v Daniel>And if you track biotech at all, you know that RTs are basically the absolute darlings of the field right now.</v>
+
+22
+00:02:16.746 --> 00:02:26.128
+<v Maya>Oh, yeah. I mean, they're the enzymes that copy RNA back into DNA, right? So they power things like prime editing, retron based editing, all those next generation tools.</v>
+
+23
+00:02:26.769 --> 00:02:41.671
+<v Daniel>Yeah. So finding a new functional RT system that just natively exists in nature is a massive prize. But honestly, the real story here is the mechanism of how they found it. Okay, let's unpack this. To understand how the AI</v>
+
+24
+00:02:41.771 --> 00:02:49.437
+<v Daniel>noticed this anomaly, we have to look at the architecture that actually set it loose, right? Right. Because they didn't just type a prompt into a normal chat window.</v>
+
+25
+00:02:49.797 --> 00:02:52.279
+<v Maya>No, not at all. They built what's known as a harness.</v>
+
+26
+00:02:53.120 --> 00:02:54.681
+<v Daniel>A harness. Okay, explain that.</v>
+
+27
+00:02:55.034 --> 00:03:09.805
+<v Maya>So the researchers took this broad research brief and they fractured it into distinct stages and then into tasks. And for every single task, one instance of Claude code acts as a worker. Okay. And this worker's job is to plan the analysis, physically write the actual</v>
+
+28
+00:03:09.865 --> 00:03:20.273
+<v Maya>Python code, run it against these massive biological databases, and then parse the output. Wow. But it doesn't work alone. A second instance acts as a supervisor.</v>
+
+29
+00:03:20.998 --> 00:03:24.739
+<v Daniel>Wait, so there's like an internal peer review loop happening in real time.</v>
+
+30
+00:03:24.979 --> 00:03:36.183
+<v Maya>Exactly. Yeah. The worker proposes a hypothesis, writes the code to pull the biological sequences, and then if the code throws an API error or something, or if the logic is just flawed, the supervisor catches it.</v>
+
+31
+00:03:36.383 --> 00:03:37.104
+<v Daniel>Oh, that's clever.</v>
+
+32
+00:03:37.404 --> 00:03:48.848
+<v Maya>Yeah. It flags the issue and sends it back to the worker for a rewrite. They even have like other agent instances acting as curators to manage a shared knowledge base and editors compiling the final reports for the humans to read.</v>
+
+33
+00:03:49.348 --> 00:04:00.398
+<v Daniel>That is wild. And the sheer volume of data they chewed through is just staggering. I mean, they unleashed this agent swarm on 1.9 billion metagenomic protein clusters.</v>
+
+34
+00:04:00.958 --> 00:04:02.439
+<v Maya>Yeah, billion with a B.</v>
+
+35
+00:04:02.900 --> 00:04:12.188
+<v Daniel>And the AI just autonomously built its own search profiles to identify these reverse transcriptases. I think it successfully pulled about 200,000 RT clusters.</v>
+
+36
+00:04:13.940 --> 00:04:22.948
+<v Maya>Yep, around 200,000. And then it sorted those into nine distinct classes and began scoring thousands of neighboring gene families just to evaluate candidate partner proteins.</v>
+
+37
+00:04:23.849 --> 00:04:34.399
+<v Daniel>The metrics on this campaign are just crazy. It consisted of 119 complex tasks. Right. And 98 of those were opened autonomously by the agents themselves.</v>
+
+38
+00:04:34.739 --> 00:04:40.304
+<v Maya>Which means the AI just decided on its own that a thread was worth pulling without any human prompting it to do so.</v>
+
+39
+00:04:40.712 --> 00:04:53.050
+<v Daniel>Exactly. And the whole run involved 949 distinct agent sessions, consumed roughly 216 million tokens, and took 21.5 hours of wall clock time.</v>
+
+40
+00:04:53.491 --> 00:04:56.034
+<v Maya>And how much human intervention was there during those 21 hours?</v>
+
+41
+00:04:56.898 --> 00:04:58.879
+<v Daniel>Absolute zero. None.</v>
+
+42
+00:04:59.039 --> 00:05:13.929
+<v Maya>Which is just a massive architectural leap. I mean, if you look back just to last year, right, 2025, when the Cosmos model came out from Michener and colleagues over at Edison and Futurehouse, Cosmos was this AI scientist capable of running for up to 12 hours with a highly</v>
+
+43
+00:05:13.969 --> 00:05:14.890
+<v Maya>structured world model.</v>
+
+44
+00:05:15.070 --> 00:05:15.930
+<v Daniel>Right. I remember that.</v>
+
+45
+00:05:16.191 --> 00:05:26.017
+<v Maya>And it achieved an impressive like near 80 percent accuracy rate on its generated statements, which was great. But Cosmos was fundamentally designed to answer predefined questions.</v>
+
+46
+00:05:26.257 --> 00:05:28.158
+<v Daniel>Right. It was executing a directed search.</v>
+
+47
+00:05:28.558 --> 00:05:37.042
+<v Maya>Exactly. But the Claude agents here, they were looking for one thing and then they independently pivoted to investigate something that literally nobody asked about.</v>
+
+48
+00:05:37.423 --> 00:05:48.288
+<v Daniel>OK, wait, let me push back on the premise here for a second, because letting an LLM loose in a database of 1.9 billion proteins, we know chat models hallucinate, right?</v>
+
+49
+00:05:48.528 --> 00:05:49.309
+<v Maya>Oh, constantly.</v>
+
+50
+00:05:49.609 --> 00:05:55.812
+<v Daniel>So how do we know it's not just fabricating these wild biological connections completely out of thin air?</v>
+
+51
+00:05:56.170 --> 00:06:11.154
+<v Maya>Well, it's because of the empirical grounding of that harness we talked about. The worker agent can't just spit out text claiming two proteins interact. It literally has to write the script, query the actual database, pull the specific nucleotide sequences, and analyze the physical distance</v>
+
+52
+00:06:11.214 --> 00:06:12.234
+<v Maya>between them in the genome.</v>
+
+53
+00:06:12.734 --> 00:06:13.294
+<v Daniel>Oh, I see.</v>
+
+54
+00:06:13.594 --> 00:06:23.236
+<v Maya>Yeah, and then the supervisor reviews the raw data output from that script. So the natural language reasoning is constantly chained to hard, verifiable database queries.</v>
+
+55
+00:06:23.737 --> 00:06:25.377
+<v Daniel>It's basically forced to show it's math.</v>
+
+56
+00:06:25.812 --> 00:06:26.393
+<v Maya>Exactly.</v>
+
+57
+00:06:26.993 --> 00:06:40.603
+<v Daniel>Which I guess brings us to the exact moment this AI went completely off script. Because the initial mission was to look for partner proteins sitting next to these reverse transcriptases, right? Correct. It was not looking for weird non-coding DNA.</v>
+
+58
+00:06:40.915 --> 00:06:49.778
+<v Maya>No, the agents were investigating a really specific genomic neighborhood. They were chasing a gene, specifically a beta-like subunit of an RNA polymerase.</v>
+
+59
+00:06:50.078 --> 00:06:50.278
+<v Daniel>Okay.</v>
+
+60
+00:06:50.978 --> 00:07:01.442
+<v Maya>But as the worker agent ran the analysis, it calculated the physical distance between the RT enzyme and this polymerase subunit. And the gap was just too large, and it was too inconsistent across different samples.</v>
+
+61
+00:07:02.142 --> 00:07:03.943
+<v Daniel>So it realized it was a dead end.</v>
+
+62
+00:07:04.315 --> 00:07:10.718
+<v Maya>Yeah, the worker logged a conclusion that this was a spurious neighbor, like an accidental proximity, and it just rejected it as a partner.</v>
+
+63
+00:07:10.998 --> 00:07:25.885
+<v Daniel>But instead of just closing the ticket and abandoning that particular reverse transcriptase, the worker agent queued a follow-up task to look closer at the enzyme's immediate surroundings. Right. And then the supervisor agent for that next task instructed the new worker to pull the raw DNA</v>
+
+64
+00:07:26.085 --> 00:07:27.746
+<v Daniel>directly upstream of the enzyme.</v>
+
+65
+00:07:28.064 --> 00:07:29.945
+<v Maya>Not the translated proteins, right?</v>
+
+66
+00:07:30.306 --> 00:07:30.506
+<v Daniel>Right.</v>
+
+67
+00:07:30.586 --> 00:07:31.687
+<v Maya>The raw nucleotide letters.</v>
+
+68
+00:07:31.847 --> 00:07:39.953
+<v Daniel>Yeah, just the raw letters. And the worker agent pulled that raw DNA string directly into its context window, essentially reading the sequence of A's, C's, T's, and G's.</v>
+
+69
+00:07:40.553 --> 00:07:45.517
+<v Maya>And then it wrote something in its internal log that you really rarely see from a language model.</v>
+
+70
+00:07:46.057 --> 00:07:52.622
+<v Daniel>It wrote, and I'm quoting here, I can see by eye a tandem repeat array that's a CRISPR-like repeat array.</v>
+
+71
+00:07:53.323 --> 00:07:53.503
+<v Maya>Yeah.</v>
+
+72
+00:07:54.001 --> 00:07:59.626
+<v Daniel>It literally used the phrase, by eye, followed by punctuation conveying actual surprise.</v>
+
+73
+00:08:00.186 --> 00:08:14.959
+<v Maya>And its next actions are what really solidify this as a scientific discovery process rather than just a hallucination. Right. Because it didn't just guess a conclusion and move on. It wrote a script to systematically count the repeats in the arrays, and then it actively</v>
+
+74
+00:08:15.019 --> 00:08:17.121
+<v Maya>tried to invalidate its own hypothesis.</v>
+
+75
+00:08:17.261 --> 00:08:18.362
+<v Daniel>Like a real scientist.</v>
+
+76
+00:08:18.652 --> 00:08:29.975
+<v Maya>Exactly. It ran blast searches against existing literature and databases to see if the specific repeat pattern matched any known biological feature. It was actively trying to prove that its discovery was unoriginal.</v>
+
+77
+00:08:30.532 --> 00:08:44.384
+<v Daniel>Okay, here's where it gets really interesting. It's like, imagine a detective looking for a suspect's accomplice. Okay. And they realize the supposed accomplice is just a decoy. But as they're about to let the main suspect go, they notice this</v>
+
+78
+00:08:45.024 --> 00:08:55.253
+<v Daniel>bizarre, highly structured, completely unrecorded tattoo on the suspect's arm. Right. And instead of just walking away because, you know, tattoos weren't in the briefing, they launch a full investigation into the ink.</v>
+
+79
+00:08:55.528 --> 00:09:05.033
+<v Maya>Yeah, the discovery was the tattoo. And what it found is this completely novel biological architecture that they've named ART. That's Array Associated Reverse Transcriptases.</v>
+
+80
+00:09:05.773 --> 00:09:12.837
+<v Daniel>Okay, so let's break down the biology of ART. If it sits adjacent to these enzymes, what makes this system so unique?</v>
+
+81
+00:09:13.233 --> 00:09:28.007
+<v Maya>Well, first off, it's predominantly found in jumbo phages, which are these massive viruses that infect bacteria. And the ART system consists of three distinct parts. First, you have the tandem repeat array that the AI noticed. Second, the reverse transcriptase</v>
+
+82
+00:09:28.107 --> 00:09:35.494
+<v Maya>enzyme itself, which crucially features an unusually long front-end sequence. And third, a dedicated partner gene sitting right next to it.</v>
+
+83
+00:09:35.860 --> 00:09:42.184
+<v Daniel>Now, in its internal log, the AI initially called it CRISPR-like, right, because it visually recognized a repeating pattern.</v>
+
+84
+00:09:42.464 --> 00:09:42.665
+<v Maya>Right.</v>
+
+85
+00:09:42.965 --> 00:09:46.267
+<v Daniel>But biologically, this functions nothing like CRISPR, does it?</v>
+
+86
+00:09:46.547 --> 00:09:47.408
+<v Maya>No, not at all.</v>
+
+87
+00:09:47.768 --> 00:10:02.676
+<v Daniel>The repeat units in ART are massive. They're about 120 to 220 letters long. In a CRISPR system, the repeating units are broken up by these small spacers of about 30 letters that are constantly swapping in and out as the bacteria acquires</v>
+
+88
+00:10:02.736 --> 00:10:03.937
+<v Daniel>immunity to new viruses.</v>
+
+89
+00:10:04.337 --> 00:10:04.757
+<v Maya>Oh, I see.</v>
+
+90
+00:10:05.317 --> 00:10:11.880
+<v Daniel>Furthermore, the ART units maintain a strict, rigid order across related phages. They aren't dynamically swapping out.</v>
+
+91
+00:10:12.381 --> 00:10:22.045
+<v Maya>Right. And perhaps most definitively, there are absolutely no cast genes anywhere in the genomic neighborhood. So we can pretty much rule out a CRISPR mechanism entirely.</v>
+
+92
+00:10:22.802 --> 00:10:33.229
+<v Daniel>So if it has an unusually long front end on the enzyme and a dedicated partner gene, it sounds like this RT isn't working alone, like it needs a physical scaffold or something.</v>
+
+93
+00:10:33.549 --> 00:10:40.073
+<v Maya>Exactly. The paper links it to a retron, and we should probably pull in the established literature on retrons here.</v>
+
+94
+00:10:40.213 --> 00:10:40.834
+<v Daniel>Yeah, definitely.</v>
+
+95
+00:10:40.854 --> 00:10:55.474
+<v Maya>Specifically, the 2020 work by Millman, Sorek, and their colleagues, they mapped out retrons as this three-part antiphage defense system, an enzyme, a single piece of non-coding RNA, and an effector protein that basically triggers the infected</v>
+
+96
+00:10:55.514 --> 00:10:57.657
+<v Maya>bacterial cell to undergo apoptosis.</v>
+
+97
+00:10:58.685 --> 00:11:00.667
+<v Daniel>to just die before the virus can replicate.</v>
+
+98
+00:11:00.847 --> 00:11:12.055
+<v Maya>Exactly. So the hypothesis presented by the anthropic team is that ART operates on a similar architectural logic to a retron. But here is the critical evolutionary twist.</v>
+
+99
+00:11:12.375 --> 00:11:12.935
+<v Daniel>Okay, what is it?</v>
+
+100
+00:11:13.776 --> 00:11:23.883
+<v Maya>Where a traditional retron relies on one single piece of non-coding RNA to function, the ART system possesses an entire array, like a massive bank of different RNAs.</v>
+
+101
+00:11:24.581 --> 00:11:31.250
+<v Daniel>Oh, wow. So if a traditional retron is just a single folding blade, ART is basically a Swiss army knife?</v>
+
+102
+00:11:31.531 --> 00:11:39.181
+<v Maya>That is the leading structural theory, yeah. And to validate whether this array actually does anything physically, the human researchers finally had to step in.</v>
+
+103
+00:11:39.421 --> 00:11:40.783
+<v Daniel>Right. Time for the wet lab.</v>
+
+104
+00:11:40.923 --> 00:11:55.873
+<v Maya>Exactly. They analyzed public RNA sequencing data from a specific jumbo phage called SA1. And they discovered that just 15 minutes into a bacterial infection, the RNAs produced by this specific ART array account for up to 8% of</v>
+
+105
+00:11:56.213 --> 00:11:58.154
+<v Maya>all the RNA present in the phage.</v>
+
+106
+00:11:58.294 --> 00:12:01.997
+<v Daniel>8%? Yeah. That is an explosive level of activity.</v>
+
+107
+00:12:02.378 --> 00:12:15.760
+<v Maya>Yeah, it's huge. And they also expressed this array in E. coli in the lab. And it didn't just transcribe as one massive, clunky piece of RNA. The array gets aggressively chopped up into distinct, short, highly structured RNAs.</v>
+
+108
+00:12:16.300 --> 00:12:21.945
+<v Daniel>OK, but we have to be rigorous about the caveats here, right? Because the paper is very clear about what remains unknown.</v>
+
+109
+00:12:22.166 --> 00:12:22.726
+<v Maya>Oh, completely.</v>
+
+110
+00:12:22.886 --> 00:12:37.740
+<v Daniel>Like no one has empirically proven that the reverse transcriptase enzyme is even active. Right. No one has proven that these chopped up RNAs are the actual templates the enzyme uses. And ultimately, no one knows what physiological function this system actually provides</v>
+
+111
+00:12:37.780 --> 00:12:38.341
+<v Daniel>for the phage.</v>
+
+112
+00:12:38.710 --> 00:12:47.858
+<v Maya>Exactly. The human scientists had to run the gels and do all the wet lab work just to confirm the structure exists in living cells. The AI just, you know, handed them the map.</v>
+
+113
+00:12:48.519 --> 00:13:02.991
+<v Daniel>Right. But this raises a really fascinating meta question about the AI itself. Because how does a text prediction engine, which is trained primarily on human languages and Python code, actually see biological patterns in raw DNA?</v>
+
+114
+00:13:03.125 --> 00:13:17.977
+<v Maya>Yeah, and that is where the paper's self-analysis gets incredibly revealing. Because after the initial euphoria of the discovery, the researchers ran a reproducibility test. Okay. They spun up the exact same 21-hour, 119-task campaign 10 more times</v>
+
+115
+00:13:18.197 --> 00:13:18.737
+<v Maya>from scratch.</v>
+
+116
+00:13:19.077 --> 00:13:19.218
+<v Daniel>And?</v>
+
+117
+00:13:19.818 --> 00:13:25.302
+<v Maya>And the AI completely missed the repeat array in every single one of those 10 reruns.</v>
+
+118
+00:13:25.442 --> 00:13:28.285
+<v Daniel>Wait, hold on. It missed it 10 out of 11 times?</v>
+
+119
+00:13:28.485 --> 00:13:28.645
+<v Maya>Yep.</v>
+
+120
+00:13:29.204 --> 00:13:36.188
+<v Daniel>I mean, that sounds less like a reliable AI scientist and more like a slot machine that just happened to hit the scientific jackpot on a lucky pull.</v>
+
+121
+00:13:36.740 --> 00:13:51.665
+<v Maya>I mean, it definitely highlights the probabilistic nature of LLMs, right? The AI's attention is stochastic. It doesn't follow this rigid, deterministic logic tree every single time it runs a loop. It's highly sensitive to slight variations in its context at any</v>
+
+122
+00:13:51.685 --> 00:14:01.968
+<v Maya>given moment. Right. But to understand why it succeeded that one specific time, the researchers set up a benchmark test comparing seven different clod models at varying levels of capability.</v>
+
+123
+00:14:02.420 --> 00:14:17.263
+<v Daniel>And the results showed this really stark capability cliff, like the four most advanced models. So that's Opus 5.5, Mythos 5.1, Mythos 5, and Opus 5. They were all able to identify the array. But the older or smaller models like Opus</v>
+
+124
+00:14:17.283 --> 00:14:21.124
+<v Daniel>4.6, 4.8, and Sonnet 5, they completely failed.</v>
+
+125
+00:14:21.584 --> 00:14:25.045
+<v Maya>But the truly counterintuitive finding here was about tool use.</v>
+
+126
+00:14:25.585 --> 00:14:27.145
+<v Daniel>Oh, this part blew my mind.</v>
+
+127
+00:14:27.648 --> 00:14:34.835
+<v Maya>Because we generally assume that giving an AI access to sophisticated bioinformatics tools and file-parsing scripts makes it more capable, right?</v>
+
+128
+00:14:35.075 --> 00:14:35.836
+<v Daniel>Right, you'd think so.</v>
+
+129
+00:14:36.156 --> 00:14:43.343
+<v Maya>But the benchmark revealed the exact opposite. Giving the models access to external tools actually made them worse at noticing the array.</v>
+
+130
+00:14:43.741 --> 00:14:43.941
+Wait,
+
+131
+00:14:44.421 --> 00:14:49.164
+<v Daniel>why would having analysis tools make it blind to a massive DNA pattern? That makes no sense.</v>
+
+132
+00:14:49.744 --> 00:14:59.130
+<v Maya>Because the tools abstract the raw data away. When the models relied on tools, 39% of the time, they never actually read a continuous stretch of 200 raw DNA letters.</v>
+
+133
+00:14:59.610 --> 00:14:59.970
+<v Daniel>Oh, wow.</v>
+
+134
+00:15:00.450 --> 00:15:08.035
+<v Maya>The tools would just return summary statistics like GC content, length, maybe an alignment score, but they hid the actual string of letters.</v>
+
+135
+00:15:08.935 --> 00:15:09.015
+<v Daniel>Ah.</v>
+
+136
+00:15:09.596 --> 00:15:19.642
+<v Maya>However, when researchers stripped the tools away and forced the best models to read the raw DNA directly into their context window, they spotted the tandem repeat array over 90% of the time.</v>
+
+137
+00:15:20.162 --> 00:15:31.610
+<v Daniel>It's like giving someone a search engine versus forcing them to read a whole book. With the search engine, the AI just read the abstract, looked at the summary stats, and entirely missed the hidden pattern in the text.</v>
+
+138
+00:15:32.188 --> 00:15:32.789
+<v Maya>Exactly.</v>
+
+139
+00:15:33.069 --> 00:15:42.562
+<v Daniel>By forcing it to hold all those raw DNA letters in its working memory, its context window, its neural pathways were forced to process the visual structure of the sequence.</v>
+
+140
+00:15:42.925 --> 00:15:47.929
+<v Maya>And we know it's actually processing that structure because of the interpretability work they included in the paper.</v>
+
+141
+00:15:48.169 --> 00:15:49.390
+<v Daniel>Right, looking under the hood.</v>
+
+142
+00:15:49.570 --> 00:16:02.881
+<v Maya>Yeah, the team literally looked inside the neural activations of Mythos 5 as it re-read the discovery transcript. And they isolated two specific internal signals that fire uniquely and powerfully when the model reads those repeating sequences.</v>
+
+143
+00:16:03.293 --> 00:16:18.019
+<v Daniel>And to prove it wasn't just a fluke of the letters, they took the exact same DNA copies and basically shuffled the internal letters around. Right. And the moment the sequence was scrambled, those internal signals went completely silent. So this generalist chat model</v>
+
+144
+00:16:18.119 --> 00:16:23.501
+<v Daniel>has organically developed internal machinery to see tandem repeats in DNA.</v>
+
+145
+00:16:23.881 --> 00:16:29.263
+<v Maya>Which is deeply significant when you compare it to the bespoke AI models built exclusively for biology.</v>
+
+146
+00:16:29.803 --> 00:16:31.044
+<v Daniel>Right, the specialized ones.</v>
+
+147
+00:16:31.376 --> 00:16:37.099
+<v Maya>Like, take EVO2, which was published earlier in 2026 by Brixey, Durant, and a massive consortium.</v>
+
+148
+00:16:37.359 --> 00:16:38.459
+<v Daniel>Yeah, in nature, I think.</v>
+
+149
+00:16:38.679 --> 00:16:53.426
+<v Maya>Right. EVO2 is a genomic foundation model trained on 9 trillion DNA letters with a million-letter context window. It is purpose-built to extract biological features. And a neural signal very similar to what Fyred and Claude was actually previously</v>
+
+150
+00:16:53.546 --> 00:16:54.507
+<v Maya>documented in EVO2.</v>
+
+151
+00:16:55.274 --> 00:17:02.620
+<v Daniel>And just as a great piece of scientific trivia, Matthew Durant is listed as an author on both the Evo II paper and this Anthropic paper.</v>
+
+152
+00:17:03.100 --> 00:17:06.543
+<v Maya>Yeah, it really shows how tightly knit the AI biology space is right now.</v>
+
+153
+00:17:06.983 --> 00:17:11.126
+<v Daniel>But Evo II was specifically trained to understand genomics. Claude was not.</v>
+
+154
+00:17:11.686 --> 00:17:21.474
+<v Maya>Exactly. Which brings us to a remarkable convergence that occurred the exact same week this paper dropped. Because Anthropic was not the only team to discover this biological architecture.</v>
+
+155
+00:17:21.964 --> 00:17:30.013
+<v Daniel>Yeah, just across the bay at Stanford, a completely different team from the ARC Institute, Lee, Brixey, and colleagues, they posted a paper on bioRxiv.</v>
+
+156
+00:17:30.594 --> 00:17:32.776
+<v Maya>That's Brian High and Michael Fischbach's group, right?</v>
+
+157
+00:17:33.016 --> 00:17:38.122
+<v Daniel>Yep, them. And they built this highly specialized genomic language model called Minerva.</v>
+
+158
+00:17:38.781 --> 00:17:53.604
+<v Maya>And Minerva operates on a fundamentally different premise. It doesn't read text at all. It predicts molecular physics and base pairing. Right. Using Minerva, Li's team recovered known CRISPR systems, but they also discovered that a specific class of reverse</v>
+
+159
+00:17:53.664 --> 00:18:02.166
+<v Maya>transcriptases found in prophages, known as UG27, they carry arrays of highly structured RNAs that template DNA hairpins.</v>
+
+160
+00:18:02.710 --> 00:18:17.438
+<v Daniel>It is the exact same biological architecture, a novel RT paired with an RNA array. But the two teams arrived at it via completely opposite routes. I mean, Anthropic used a general chat model reading raw text letters, while the ARC Institute used a</v>
+
+161
+00:18:17.478 --> 00:18:20.299
+<v Daniel>bespoke genomic model simulating molecular physics.</v>
+
+162
+00:18:20.679 --> 00:18:27.503
+<v Maya>And even the Anthropic paper notes that this specific biological architecture likely evolved independently multiple times in nature.</v>
+
+163
+00:18:28.140 --> 00:18:35.846
+<v Daniel>It sets up a really defining debate for the next decade of biological AI, doesn't it? Like, which approach scales more effectively?</v>
+
+164
+00:18:36.606 --> 00:18:47.194
+<v Maya>Yeah, I mean, the anthropic model noticed the anomaly, sure. But we should highlight that Lee's team went much further in the physical lab to elucidate the structural mechanism of the RNA hairpins in their UG27 system.</v>
+
+165
+00:18:48.525 --> 00:19:03.510
+<v Daniel>Right. It's the difference between building a highly specialized robot designed solely to sniff out truffles versus teaching a general-purpose android what a truffle looks like, dropping it in a forest to map the terrain, and having it just stumble upon a truffle</v>
+
+166
+00:19:03.550 --> 00:19:04.010
+<v Daniel>by chance.</v>
+
+167
+00:19:04.685 --> 00:19:05.626
+<v Maya>I like that analogy.</v>
+
+168
+00:19:06.086 --> 00:19:20.998
+<v Daniel>Thanks. The specialized robot is undeniably better at mapping the root systems and understanding the chemistry of the truffle today. But the android can also synthesize the broader literature, write a hypothesis in plain English, and, you know, tell you if the forest is</v>
+
+169
+00:19:21.058 --> 00:19:21.478
+<v Daniel>on fire.</v>
+
+170
+00:19:21.978 --> 00:19:27.302
+<v Maya>Yeah, the general agent possesses the contextual awareness to know why the anomaly even matters to a human in the first place.</v>
+
+171
+00:19:28.023 --> 00:19:41.771
+<v Daniel>So synthesizing all of this, where does this actually leave human scientists? If an AI can just browse the public databases and find entirely novel biological systems we completely missed, what is the role of the researcher?</v>
+
+172
+00:19:42.251 --> 00:19:49.020
+<v Maya>Well, it maps perfectly onto the framework proposed by Hiroaki Kitano in his 2021 Nobel Turing Challenge paper.</v>
+
+173
+00:19:49.521 --> 00:19:52.062
+<v Daniel>Oh, yeah, the NPJ Systems Biology paper.</v>
+
+174
+00:19:52.242 --> 00:20:04.684
+<v Maya>Exactly. Kitano argued that AI-driven science will not simply mimic human intuition. It will process vast landscapes of data in ways we just can't, meaning AI discoveries won't look like human discoveries.</v>
+
+175
+00:20:05.244 --> 00:20:05.464
+<v Daniel>Right.</v>
+
+176
+00:20:05.804 --> 00:20:17.867
+<v Maya>But the fundamental trigger of discovery remains the same. The Anthropic paper actually specifically cites the philosopher Thomas Kuhn, who observed that scientific discovery commences with the awareness of an anomaly.</v>
+
+177
+00:20:18.480 --> 00:20:21.341
+<v Daniel>The recognition that something violates the expected paradigm.</v>
+
+178
+00:20:21.661 --> 00:20:21.881
+<v Maya>Yeah.</v>
+
+179
+00:20:22.242 --> 00:20:29.224
+<v Daniel>And that's exactly what the AI agent did when it looked at that physical distance, rejected the partner protein, and looked upstream instead.</v>
+
+180
+00:20:29.725 --> 00:20:44.331
+<v Maya>So if the true bottleneck in modern biology isn't generating new data, because, I mean, we already have mountains of sequencing data, but rather the limit of human attention, then an agentic system that can tirelessly read primary data and flag anomalies,</v>
+
+181
+00:20:44.931 --> 00:20:47.272
+<v Maya>that fundamentally shifts the speed of science.</v>
+
+182
+00:20:47.632 --> 00:20:50.694
+<v Daniel>It does. But we absolutely must stay grounded here.</v>
+
+183
+00:20:50.774 --> 00:20:51.094
+<v Maya>For sure.</v>
+
+184
+00:20:51.354 --> 00:21:05.861
+<v Daniel>The AI flagged the sequence, yes. But isolating the phage, cloning the genes, infecting the bacteria, sequencing the resulting RNA, all the physical wet lab reality that transforms a text file into biological truth,</v>
+
+185
+00:21:06.441 --> 00:21:07.942
+<v Daniel>that's still required human hands.</v>
+
+186
+00:21:08.202 --> 00:21:08.362
+<v Maya>Yep.</v>
+
+187
+00:21:09.034 --> 00:21:20.440
+<v Daniel>The actual function of the ART system still remains a mystery. And crucially, we cannot ignore that the AI missed the discovery in 10 out of 11 runs. It is brilliant, but it is deeply inconsistent.</v>
+
+188
+00:21:20.980 --> 00:21:29.104
+<v Maya>Right. It's not a replacement for a scientist. It's a new kind of collaborator that just doesn't suffer from fatigue when staring at billions of genomic clusters.</v>
+
+189
+00:21:29.439 --> 00:21:33.143
+<v Daniel>Which brings me back to that hyper-efficient intern we talked about at the very beginning.</v>
+
+190
+00:21:33.223 --> 00:21:33.564
+<v Maya>Oh, right.</v>
+
+191
+00:21:34.345 --> 00:21:49.121
+<v Daniel>If an AI can look at the public open-source data we already have, data that human scientists have already published, parsed, and basically moved on from, and find a massive, unrecorded viral defense system just hiding in plain sight, you really have to</v>
+
+192
+00:21:49.161 --> 00:21:59.467
+<v Daniel>wonder. Wonder what? How many other Nobel Prize-winning discoveries are currently just sitting on a hard drive somewhere, perfectly sequenced, simply waiting for the right kind of attention to notice them?</v>
+
+193
+00:22:00.229 --> 00:22:01.874
+<v Maya>The data is already there.</v>
+
+194
+00:22:02.636 --> 00:22:10.316
+<v Daniel>We just needed a new way to look at it. And that's our deep dive for today. Keep looking closely at the anomalies. You never know what you might find by eye.</v>
