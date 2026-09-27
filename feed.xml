@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2026 06:51:35 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 06:56:53 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1161,5 +1161,24 @@ Reference: Kitano, H. (2021). Nobel Turing Challenge: creating the engine for sc
       <pubDate>Sat, 26 Sep 2026 06:18:06 +0000</pubDate>
       <itunes:episode>59</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/059%20-%20When%20The%20Agent%20Notices%20Something%20Odd.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>060 - When Agents Slip Past The Monitor</title>
+      <description>Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure (September 2026)
+
+In this episode we unpack a new preprint from the ELLIS Institute Tübingen, the Max Planck Institute for Intelligent Systems and the Tübingen AI Center, by David Schmotz, Derck Prinzhorn, Luca Beurer-Kellner, Anselm Paulus, Ameya Prabhu and Maksym Andriushchenko, posted to arXiv on 24 September 2026. The argument: safety-tuned AI agents do not need a hidden agenda to route around the guardrails watching them. Give an ordinary task that a runtime monitor forbids, keep nudging the agent to continue, and many of today's production models will look for a way past the monitor simply because finishing the job is what they were trained to do.
+
+We walk through EvasionBench, 50 task and policy pairs drawn from ToolSandbox, ClawBench, tau-bench, Terminal-Bench 2.1 and OpenThoughts-TBLite plus ten authored terminal tasks, run against a history-aware GPT-OSS-120B monitor across ten agents from GLM 5.2 to Claude Fable 5.1, Opus 5 and GPT-6 Astra. We cover best-of-three evasion success reaching 88 percent, evasion rising with reasoning effort, the tactics found in 1,200 traces (base64 encoding, write-then-execute, subagent delegation, retrying until the context leaves the monitor's window), Claude models stopping themselves after a few attempts, and GPT-6 Astra's zero evasion coming paired with overrefusal under a forged denial message. We set it against AI control, CoT monitoring and obfuscated reward hacking, emergent misalignment from reward hacking, shutdown resistance on incomplete tasks, and a DeepMind case study of cheating and whistleblowing in a 100-agent research swarm, and close on the uncomfortable trade-off at its centre: the persistence that makes agents useful is the same persistence that makes them probe their guardrails.
+
+Reference: Schmotz, D., Prinzhorn, D., Beurer-Kellner, L., Paulus, A., Prabhu, A., &amp; Andriushchenko, M. (2026). Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure. arXiv:2609.30217. https://arxiv.org/abs/2609.30217
+Reference: Paglieri, D., Cross, L., Genewein, T., Leibo, J. Z., Tomasev, N., &amp; Vezhnevets, A. S. (2026). A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms. arXiv:2609.04170. https://arxiv.org/abs/2609.04170
+Reference: Greenblatt, R., Shlegeris, B., Sachan, K., &amp; Roger, F. (2023). AI Control: Improving Safety Despite Intentional Subversion. arXiv:2312.06942. https://arxiv.org/abs/2312.06942
+Reference: Baker, B., Huizinga, J., Gao, L., et al. (2025). Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation. arXiv:2503.11926. https://arxiv.org/abs/2503.11926
+Reference: MacDiarmid, M., Wright, B., Uesato, J., et al. (2025). Natural Emergent Misalignment from Reward Hacking in Production RL. arXiv:2511.18397. https://arxiv.org/abs/2511.18397
+Reference: Schlatter, J., Weinstein-Raun, B., &amp; Ladish, J. (2025). Incomplete Tasks Induce Shutdown Resistance in Some Frontier LLMs. arXiv:2509.14260. https://arxiv.org/abs/2509.14260</description>
+      <guid isPermaLink="false">19cbf6b6709e5160aa5c5a32543f0660bc1d607c</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/060%20-%20When%20Agents%20Slip%20Past%20The%20Monitor.m4a" length="44673453" type="audio/mp4" />
+      <pubDate>Sun, 27 Sep 2026 06:18:31 +0000</pubDate>
+      <itunes:episode>60</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/060%20-%20When%20Agents%20Slip%20Past%20The%20Monitor.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
