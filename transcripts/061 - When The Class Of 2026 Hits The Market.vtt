@@ -1,0 +1,597 @@
+WEBVTT
+
+1
+00:00:00.311 --> 00:00:15.124
+<v Maya>If you are the parent of a recent college graduate or, you know, maybe you are a 2026 grad yourself and you're currently sending your 500th resume into the digital void, you probably feel like you're playing a game of musical chairs where someone just permanently removed all the chairs.</v>
+
+2
+00:00:15.284 --> 00:00:19.108
+<v Daniel>Oh, absolutely. It's just a massive source of anxiety right now.</v>
+
+3
+00:00:19.439 --> 00:00:34.055
+<v Maya>Right, because the prevailing narrative in the culture is that artificial intelligence has just completely broken the entry-level job market. People are saying the class of 2026, which is like the first cohort to graduate into an economy where generative AI is fully operational, well,</v>
+
+4
+00:00:34.475 --> 00:00:35.557
+<v Maya>they just got locked out.</v>
+
+5
+00:00:36.150 --> 00:00:51.067
+<v Daniel>Yeah, the assumption is basically that those entry-level white-collar tasks, I mean, the exact things you would give to a 22-year-old on their first day, are now just being done by software. So the core question is, did an entire generation just hit a concrete wall?</v>
+
+6
+00:00:51.756 --> 00:01:06.603
+<v Maya>But the data we are looking at today tells this incredibly nuanced story that kind of completely flips that narrative on its head. So welcome to this deep dive. Today, we are focusing on a brand new, highly anticipated working paper by Robert Fairley and Jane Wu.</v>
+
+7
+00:01:06.903 --> 00:01:08.564
+<v Daniel>Right. And it just dropped in September 2026.</v>
+
+8
+00:01:09.714 --> 00:01:21.081
+<v Maya>Yeah, and a quick disclaimer for you listening. This is a working paper, so it hasn't gone through formal peer review yet. But the sheer scale of the data they analyzed is already sparking intense debate in the economics world.</v>
+
+9
+00:01:21.421 --> 00:01:21.922
+<v Daniel>It really is.</v>
+
+10
+00:01:22.482 --> 00:01:34.630
+<v Maya>We are also pulling from five other background papers to help explain the underlying mechanics of this whole transition. And really to explain the massive collision in the data that Fairley and Wu are trying to solve. Okay, let's unpack this.</v>
+
+11
+00:01:35.215 --> 00:01:46.982
+<v Daniel>So measuring the labor market impact of a general purpose technology in real time is, well, it's notoriously difficult. The U.S. economy is just a constantly churning machine.</v>
+
+12
+00:01:47.462 --> 00:01:50.864
+<v Maya>Right. People retire, they quit, they change careers every single day.</v>
+
+13
+00:01:51.044 --> 00:01:59.389
+<v Daniel>Exactly. If you want to isolate the impact of AI, you can't just look at the whole picture. You have to know precisely where and when to look.</v>
+
+14
+00:01:59.939 --> 00:02:09.843
+<v Maya>Which brings us directly to the summer of 2026. But I guess before we look for the damage, we have to actually prove that AI is being used in the real world, right? Like it can't just be Silicon Valley hype.</v>
+
+15
+00:02:10.283 --> 00:02:18.306
+<v Daniel>Oh, we definitely have concrete evidence of adoption. The background data confirms that 2026 is, without a doubt, the ultimate test year.</v>
+
+16
+00:02:18.746 --> 00:02:19.946
+<v Maya>What kind of data are we talking about?</v>
+
+17
+00:02:20.507 --> 00:02:31.715
+<v Daniel>Well, take the corporate spend management platform, Ramp. Their internal data shows that corporate software spending per employee more than doubled between December 2025 and July 2026. Wow,</v>
+
+18
+00:02:32.456 --> 00:02:33.997
+<v Maya>just in that short window.</v>
+
+19
+00:02:34.257 --> 00:02:48.831
+<v Daniel>Yeah. And furthermore, the Census Bureau runs something called the Business Trends and Outlook Survey. According to that data, the share of firms explicitly reporting that they are replacing human tasks with AI nearly tripled in that exact same window.</v>
+
+20
+00:02:49.545 --> 00:02:54.286
+<v Maya>So the technology has officially moved out of the testing phase and onto the corporate credit card.</v>
+
+21
+00:02:54.586 --> 00:02:56.566
+<v Daniel>Exactly. It's in the budgets now.</v>
+
+22
+00:02:57.146 --> 00:03:11.989
+<v Maya>So if companies are buying the software, the next logical step is to see if they stopped hiring humans. And Fairley and Wu decided to focus their microscope specifically on the summer of 2026. They looked at young adults aged 22 to 25 who hold a bachelor's degree</v>
+
+23
+00:03:12.149 --> 00:03:15.750
+<v Maya>and are no longer enrolled in school. But why just the summer?</v>
+
+24
+00:03:16.111 --> 00:03:23.572
+<v Daniel>You really have to factor in the academic calendar for this demographic. The vast majority of college finals wrap up between mid-May and mid-June.</v>
+
+25
+00:03:23.853 --> 00:03:25.633
+<v Maya>Right, so everybody graduates at the same time.</v>
+
+26
+00:03:25.993 --> 00:03:40.876
+<v Daniel>Yeah, and that creates a massive, sudden influx of new job seekers hitting the market all at once. Because of that structural bottleneck, the baseline unemployment rate for young graduates is historically about two percentage points higher from June to August than it is during the rest of the</v>
+
+27
+00:03:40.916 --> 00:03:41.076
+<v Daniel>year.</v>
+
+28
+00:03:41.833 --> 00:03:49.304
+<v Maya>Oh, I see. So if we compare the unemployment rate of July 2026 to, say, March 2026, it's always going to look like a disaster.</v>
+
+29
+00:03:49.545 --> 00:03:57.637
+<v Daniel>Exactly. It's just the normal graduation spike. To actually find an AI effect, we have to compare this summer strictly to previous summers.</v>
+
+30
+00:03:58.504 --> 00:04:10.868
+<v Maya>Okay, so Fairley and Wu pull current population survey microdata, and they specifically isolate the reference weeks of June 7 to 13, July 12 to 18, and August 9 to 15. So what did they actually find?</v>
+
+31
+00:04:11.068 --> 00:04:17.950
+<v Daniel>Let's look at the raw numbers. For the summer of 2026, the raw unemployment rate for these recent grads averaged 7.3%.</v>
+
+32
+00:04:19.763 --> 00:04:27.605
+<v Maya>Now, I mean, if you are listening to this and you've been struggling to find work, 7.3% might feel like a lie. It probably feels a lot more like 50% to you.</v>
+
+33
+00:04:27.905 --> 00:04:30.366
+<v Daniel>Oh, for sure. The job hunt is brutal.</v>
+
+34
+00:04:30.766 --> 00:04:39.548
+<v Maya>But we have to compare that 7.3% to the baseline of previous summers. So in 2022, it was 7.1%. In 2023, it dipped to 6.3%. Right. But then in 2024, it was actually 7.8%. And in 2025, 7.2%.</v>
+
+35
+00:04:49.037 --> 00:04:55.680
+<v Maya>So that puts 2026 firmly inside the normal historical range. Like you said, 2024 was actually worse.</v>
+
+36
+00:04:56.261 --> 00:04:56.581
+<v Daniel>It was.</v>
+
+37
+00:04:57.321 --> 00:05:12.168
+<v Maya>I am kind of struggling to square that circle, honestly. It's like looking for a tsunami and finding a regular tide. If corporate AI adoption tripled, why is the class of 2026 doing mathematically fine in the raw data? Are they just</v>
+
+38
+00:05:12.188 --> 00:05:12.569
+<v Maya>giving up?</v>
+
+39
+00:05:13.849 --> 00:05:15.510
+<v Daniel>That is a very real possibility.</v>
+
+40
+00:05:16.183 --> 00:05:20.325
+<v Maya>Because if you just stop looking for work entirely, you vanish from that 7.3%, right?</v>
+
+41
+00:05:21.125 --> 00:05:30.550
+<v Daniel>That is the exact blind spot Fairley and Wu wanted to address. Because the official government definition of unemployment requires you to have actively searched for a job in the last four weeks.</v>
+
+42
+00:05:31.050 --> 00:05:32.571
+<v Maya>Right. You have to be sending out resumes.</v>
+
+43
+00:05:33.031 --> 00:05:45.777
+<v Daniel>Yeah. If you get demoralized and just stop looking, you're technically classified as out of the labor force. So to fix this, Fairley and Wu created an expanded measure they call sidelined unemployment.</v>
+
+44
+00:05:46.558 --> 00:05:47.618
+<v Maya>Okay, what does that include?</v>
+
+45
+00:05:48.359 --> 00:05:56.761
+<v Daniel>This includes all those graduates who are out of the labor force, but they explicitly tell surveyors they want a job. They just haven't actively searched recently.</v>
+
+46
+00:05:57.221 --> 00:06:02.522
+<v Maya>So we add the demoralized grads back into the math. What does the summer of 2026 look like then?</v>
+
+47
+00:06:03.142 --> 00:06:08.964
+<v Daniel>The sidelined rate hits 10.4%, and that is the highest of the five summers they tracked.</v>
+
+48
+00:06:09.664 --> 00:06:13.267
+<v Maya>But wait, how much higher? Because context is everything here.</v>
+
+49
+00:06:13.868 --> 00:06:21.375
+<v Daniel>It's really not much. It is only 0.3 percentage points above the previous high, which was 10.1 percent back in 2024.</v>
+
+50
+00:06:21.975 --> 00:06:32.625
+<v Maya>OK, so we are looking at a tiny 0.3 percent bump. I mean, as someone analyzing this, do you see that as the first faint tremor of an earthquake or is that just statistical noise?</v>
+
+51
+00:06:33.205 --> 00:06:40.791
+<v Daniel>Well, to determine if that bump was noise, they ran a series of regression analyses, specifically a difference in differences approach.</v>
+
+52
+00:06:41.411 --> 00:06:42.212
+<v Maya>Break that down for us.</v>
+
+53
+00:06:42.552 --> 00:06:55.042
+<v Daniel>Sure. They took 2022 as their pre-ChatGPT baseline year, and they compared the trajectory of our young college grads against two different control groups to see if the young grads were uniquely suffering.</v>
+
+54
+00:06:55.602 --> 00:06:58.945
+<v Maya>Okay, walk me through the mechanics of that. Who is the first control group?</v>
+
+55
+00:06:59.519 --> 00:07:08.943
+<v Daniel>Older college graduates aged 30 to 49. The logic here is that older workers have established careers, so they are less vulnerable to entry-level task displacement.</v>
+
+56
+00:07:09.503 --> 00:07:17.966
+<v Maya>So if AI is locking out entry-level grads, the gap between the young and the old should violently widen in 2026. Did it?</v>
+
+57
+00:07:18.266 --> 00:07:28.790
+<v Daniel>No. It remained incredibly stable. The unemployment gap between the young and older grads sat right at 4.5 percentage points, which is completely consistent with historical norms.</v>
+
+58
+00:07:29.515 --> 00:07:33.397
+<v Maya>So young people always face slightly higher friction entering the workforce.</v>
+
+59
+00:07:33.698 --> 00:07:36.119
+<v Daniel>Exactly. And that friction didn't increase.</v>
+
+60
+00:07:36.840 --> 00:07:51.769
+<v Maya>But hold on. Comparing a 22-year-old to a 40-year-old director of marketing seems a bit apples to oranges. What if we compare these 22-year-old grads to kids their exact same age who skipped college entirely? Shouldn't a four-year degree offer some massive</v>
+
+61
+00:07:51.849 --> 00:07:53.390
+<v Maya>structural armor in the data?</v>
+
+62
+00:07:53.670 --> 00:08:07.902
+<v Daniel>You would think so, but this comparison is where the data gets incredibly tricky. College grads actually went from having a 0.3 percentage point advantage over non-college youth in the summer of 2025 to a 0.5 percentage point</v>
+
+63
+00:08:08.102 --> 00:08:10.224
+<v Daniel>disadvantage in the summer of 2026. Wait,</v>
+
+64
+00:08:10.864 --> 00:08:11.144
+<v Maya>really?</v>
+
+65
+00:08:11.385 --> 00:08:15.408
+<v Daniel>So the college kids actually did worse than the non-college kids.</v>
+
+66
+00:08:16.044 --> 00:08:23.610
+<v Maya>They did? That feels like the smoking gun. I mean, that tells me the desk jobs are disappearing while the service and trade jobs are totally fine.</v>
+
+67
+00:08:23.970 --> 00:08:38.628
+<v Daniel>It definitely looks like a smoking gun. until you isolate the variables. That shift wasn't caused by a massive spike in college graduate unemployment. It was primarily driven by the fact that non-college unemployment actually fell over that period.</v>
+
+68
+00:08:39.128 --> 00:08:39.448
+<v Maya>Oh, I see.</v>
+
+69
+00:08:39.668 --> 00:08:53.933
+<v Daniel>Yeah. When Fairley and Wu run the full statistical models controlling for everything, the summer 2026 coefficient is about negative 0.008 on the standard measure and positive 0.001 on the expanded sidelined measure.</v>
+
+70
+00:08:54.266 --> 00:09:04.737
+<v Maya>Let's pause for a second. For those of us who don't dream in the statistical models, what does a coefficient of negative 0.008 actually translate to in the real world?</v>
+
+71
+00:09:05.197 --> 00:09:07.760
+<v Daniel>It translates to zero statistical significance.</v>
+
+72
+00:09:07.800 --> 00:09:07.980
+<v Maya>OK.</v>
+
+73
+00:09:08.261 --> 00:09:14.347
+<v Daniel>I mean, the change is so vanishingly small that mathematically there is no detectable break from the historical trend whatsoever.</v>
+
+74
+00:09:14.766 --> 00:09:29.717
+<v Maya>Okay, so Fairley and Wu are looking at this massive government survey, checking multiple angles and finding absolutely no evidence of an AI-driven hiring apocalypse. The class of 2026 is employed. But, and this is a big but,</v>
+
+75
+00:09:30.497 --> 00:09:40.024
+<v Maya>here is the massive tension at the center of this deep dive. Right. There is another major working paper that dropped around the exact same time that screams the exact opposite.</v>
+
+76
+00:09:40.424 --> 00:09:55.354
+<v Daniel>Yes, we definitely need to bring in the research by Eric Brynjolfsson, Bharat Shander, and Ru Yu Chen. In August 2026, they updated a working paper provocatively titled Canaries in the Coal Mine. And they didn't use household survey data like</v>
+
+77
+00:09:55.394 --> 00:09:55.934
+<v Daniel>the census.</v>
+
+78
+00:09:56.234 --> 00:09:56.775
+<v Maya>What did they use?</v>
+
+79
+00:09:57.495 --> 00:10:04.860
+<v Daniel>They used back-end administrative payroll data from ADP. We're talking about millions of actual employer pay stubs.</v>
+
+80
+00:10:05.447 --> 00:10:16.071
+<v Maya>And what ADP shows is terrifying for a new grad. Brynjolfsson's team found that employment for 22 to 25-year-olds in AI-exposed occupations is 19% below</v>
+
+81
+00:10:16.111 --> 00:10:17.932
+<v Daniel>trend. 19%.</v>
+
+82
+00:10:18.292 --> 00:10:32.898
+<v Maya>It's a huge drop. And that gap is actively widening. Crucially, they found this isn't happening through mass layoffs. It's happening entirely through reduced hiring. Like, a junior copywriter quits and the company just never replaces them.</v>
+
+83
+00:10:33.379 --> 00:10:46.224
+<v Daniel>Which leaves us with a profound contradiction. The payroll data shows hiring in exposed desk jobs falling off a cliff. But the survey data shows the unemployment rate for that exact same demographic staying completely normal.</v>
+
+84
+00:10:46.924 --> 00:10:52.206
+<v Maya>How can both of those things be completely true at the same time? Are they just studying two entirely different economies?</v>
+
+85
+00:10:52.928 --> 00:11:07.740
+<v Daniel>Well, they are studying two different mechanisms of the economy. The resolution to this paradox really comes down to how data is collected. Brynjolfsson is looking at employers' payroll records, tracking specific jobs. Fairley and Wu are looking at individuals</v>
+
+86
+00:11:07.800 --> 00:11:09.582
+<v Daniel>filling out a survey, tracking people.</v>
+
+87
+00:11:10.219 --> 00:11:23.529
+<v Maya>Right. And Brynjolfsson is looking exclusively at AI-exposed occupations, software development, data analysis, copywriting. But Fairley and Wu are looking at the entire population of college graduates, regardless of what industry they end up in.</v>
+
+88
+00:11:23.709 --> 00:11:38.019
+<v Daniel>And that exposes a massive blind spot in how we measure unemployment. Fairley and Wu note this fascinating quirk in their own data. Between 16 to 36 percent of unemployed new grads report absolutely no occupation when they fill out the survey.</v>
+
+89
+00:11:38.338 --> 00:11:39.598
+<v Maya>Wait, they just leave it blank?</v>
+
+90
+00:11:39.798 --> 00:11:40.179
+<v Daniel>Pretty much.</v>
+
+91
+00:11:40.719 --> 00:11:55.523
+<v Maya>I want to highlight the real-world mechanics of this because it explains so much. Imagine a tech company initiates a quiet hiring freeze in their marketing department. Brynjolfsson's ADP data sees that immediately. A marketing job just disappeared. But when a 22-year-old grad who</v>
+
+92
+00:11:55.583 --> 00:12:02.945
+<v Maya>wanted that marketing job gets called by a government surveyor, they don't say, I am an unemployed marketing associate. They just say, I'm unemployed.</v>
+
+93
+00:12:03.286 --> 00:12:08.067
+<v Daniel>Exactly. So they completely fall out of the occupation-specific data that Brynjolfsson is looking at.</v>
+
+94
+00:12:08.430 --> 00:12:16.372
+<v Maya>It's wild. It's like trying to track a hiring freeze in a specific department, but the person just identifies as generically jobless.</v>
+
+95
+00:12:16.792 --> 00:12:29.134
+<v Daniel>And it gets even more complex when that 22-year-old actually gets a job. Let's go back to your musical chairs analogy. AI didn't take away the chairs. It just moved the chairs to a different room.</v>
+
+96
+00:12:29.955 --> 00:12:31.975
+<v Maya>Unpack that. Where did the grads go?</v>
+
+97
+00:12:32.457 --> 00:12:44.388
+<v Daniel>Well, if the tech and marketing firms aren't hiring, these young adults still have to pay rent. So they shift their search. They end up taking jobs in retail management, hospitality, high-end sales, or logistics.</v>
+
+98
+00:12:45.068 --> 00:12:49.332
+<v Maya>Jobs that often require a degree but aren't the specialized desk jobs they majored in.</v>
+
+99
+00:12:49.852 --> 00:12:50.333
+<v Daniel>Precisely.</v>
+
+100
+00:12:51.024 --> 00:13:04.133
+<v Maya>And there it is. In the ADP payroll data, that shift registers as a catastrophic 19% drop in hiring for AI-exposed roles. But in the household survey data, that 22-year-old just checks the box that says employed.</v>
+
+101
+00:13:04.393 --> 00:13:08.876
+<v Daniel>Yep. The macro unemployment rate stays perfectly stable at 7.3%.</v>
+
+102
+00:13:09.576 --> 00:13:15.160
+<v Maya>So the students aren't locked out of the economy. They are just being quietly redirected into entirely different sectors.</v>
+
+103
+00:13:15.838 --> 00:13:22.644
+<v Daniel>The aggregate employment holds up, yes. But the underlying composition of human capital is fundamentally shifting beneath the surface.</v>
+
+104
+00:13:23.025 --> 00:13:36.237
+<v Maya>Now, if Brynjolfsson is right that exposed jobs are getting frozen, we need to understand what exposure actually means. And we have to ask if AI is even the real culprit here, because looking at the background papers, there are some massive confounders muddying the waters.</v>
+
+105
+00:13:36.777 --> 00:13:50.908
+<v Daniel>Definitely. We have to differentiate between theoretical exposure and observed exposure. A background paper by Alondu and colleagues outlines theoretical exposure, meaning they looked at what tasks a large language model could do on paper.</v>
+
+106
+00:13:51.088 --> 00:13:52.669
+<v Maya>Okay, so that's the theoretical side.</v>
+
+107
+00:13:52.950 --> 00:14:02.932
+<v Daniel>But another paper by Massinkoff and McCrory looks at observed exposure. They tracked what tasks people are actually using an AI like Anthropix Clawed to do in real time.</v>
+
+108
+00:14:03.232 --> 00:14:13.375
+<v Maya>And there is a huge gulf between the two. I mean, just because ChatGPT can theoretically write a legal brief doesn't mean a law firm has integrated it securely enough to stop hiring junior paralegals.</v>
+
+109
+00:14:13.675 --> 00:14:14.115
+<v Daniel>Exactly.</v>
+
+110
+00:14:14.536 --> 00:14:29.348
+<v Maya>But here's where it gets really interesting. Fairley and Wu tested their unemployment data against these AI exposure metrics, and the results were completely statistically insignificant. However, they tested a completely different metric, teleworkability. Right. This comes from</v>
+
+111
+00:14:29.388 --> 00:14:37.715
+<v Maya>researchers Dingle and Nieman, who basically calculate whether a job can be done 100% remotely. And that result was positive and significant.</v>
+
+112
+00:14:38.225 --> 00:14:47.308
+<v Daniel>This is the ultimate confounder. AI exposure and remote work correlate heavily. The correlation is somewhere between 0.58 and 0.66.</v>
+
+113
+00:14:47.968 --> 00:14:48.628
+<v Maya>That's massive.</v>
+
+114
+00:14:48.968 --> 00:14:57.871
+<v Daniel>Think about it. If your job is entirely manipulating text or data on a screen, it is highly exposed to AI, but it is also highly teleworkable.</v>
+
+115
+00:14:58.300 --> 00:15:11.073
+<v Maya>So I have to challenge the core assumption here. Are young people failing to get hired because a bot took their job? Or are they failing to get hired because a fully remote company simply refuses to mentor a 22-year-old through a Zoom screen?</v>
+
+116
+00:15:11.682 --> 00:15:23.845
+<v Daniel>The friction of remote onboarding really cannot be overstated. If a company's senior staff is fully remote, bringing on a junior employee who needs constant informal mentoring is a massive logistical burden.</v>
+
+117
+00:15:24.145 --> 00:15:24.706
+<v Maya>Oh, totally.</v>
+
+118
+00:15:25.186 --> 00:15:36.269
+<v Daniel>It is often much easier for management to just buy an enterprise AI license to make their senior remote staff 20% more productive than it is to hire and train a remote junior employee from scratch.</v>
+
+119
+00:15:36.669 --> 00:15:40.950
+<v Maya>And if we look at the timeline, the blame AI narrative gets even shakier.</v>
+
+120
+00:15:41.257 --> 00:15:50.883
+<v Daniel>Yeah. Take the research by Frank and colleagues. They found that job risk in these highly exposed teleworkable sectors actually started deteriorating in early 2022.</v>
+
+121
+00:15:51.344 --> 00:15:55.466
+<v Maya>Early 2022. That is months before ChatGPT even launched to the public.</v>
+
+122
+00:15:55.546 --> 00:16:08.695
+<v Daniel>Right. The white-collar tech sector was already experiencing a massive post-pandemic hangover. Interest rates were shifting. Companies were recalibrating. The hiring slowdown began well before generative AI became a household name.</v>
+
+123
+00:16:09.482 --> 00:16:15.924
+<v Maya>So we might be pinning a hiring freeze on AI when the actual culprit is Jerome Powell and interest rates.</v>
+
+124
+00:16:16.284 --> 00:16:16.424
+It's
+
+125
+00:16:16.464 --> 00:16:26.707
+<v Daniel>very possible. And we have one final piece of evidence that perfectly encapsulates this entire puzzle. Hyman and Von Wachter tracked unemployment insurance claims in California.</v>
+
+126
+00:16:27.027 --> 00:16:36.070
+<v Maya>Which is arguably the epicenter of both the tech industry and AI adoption. So if the apocalypse is happening anywhere, it should be in California. What did they find?</v>
+
+127
+00:16:36.603 --> 00:16:40.824
+<v Daniel>Statewide, they found absolutely no rise in unemployment claims for college graduates.</v>
+
+128
+00:16:41.205 --> 00:16:41.625
+<v Maya>None at all.</v>
+
+129
+00:16:41.905 --> 00:16:56.810
+<v Daniel>None. The macro economy was perfectly fine. But when they drilled down geographically and occupationally, they found a distinct, localized rise in claims for young graduates, specifically in high-exposure jobs, strictly concentrated</v>
+
+130
+00:16:56.910 --> 00:16:57.550
+<v Daniel>in the Bay Area.</v>
+
+131
+00:16:58.055 --> 00:17:10.099
+<v Maya>Wow. That is the perfect microcosm of everything we've discussed today. If you look at the whole state, you see a normal tide. If you zoom into the specific geographic heart of the tech world, you see the wave crashing.</v>
+
+132
+00:17:10.559 --> 00:17:13.820
+<v Daniel>It really highlights why the macro and micro data look so different.</v>
+
+133
+00:17:14.340 --> 00:17:27.825
+<v Maya>So what does this all mean for you listening? Let's synthesize this massive stack of research. What would it actually take to see an undeniable economy-wide AI effect in the macro data fairly and we were looking at?</v>
+
+134
+00:17:28.495 --> 00:17:42.443
+<v Daniel>Honestly, the labor market's ability to absorb workers is immense. For AI to spike the aggregate unemployment rate of an entire graduating class, it would require a catastrophic failure across multiple industries simultaneously.</v>
+
+135
+00:17:42.783 --> 00:17:43.804
+<v Maya>So it wouldn't just be tech?</v>
+
+136
+00:17:44.104 --> 00:17:56.972
+<v Daniel>No. It would mean that graduates aren't just being diverted away from tech and marketing, but that retail, logistics, healthcare administration, and sales also completely stop hiring. And the survey data emphatically shows that is not happening.</v>
+
+137
+00:17:57.512 --> 00:18:12.119
+<v Maya>So here is how you should navigate these conflicting headlines. If you want to understand the micro shifts, you know, the quiet hiring freezes and specific desk jobs and the narrowing of traditional career paths, you trust the payroll data from Brynjolfsson. The canaries in the coal mine are</v>
+
+138
+00:18:12.319 --> 00:18:13.099
+<v Maya>definitely coughing.</v>
+
+139
+00:18:13.399 --> 00:18:13.759
+<v Daniel>They are.</v>
+
+140
+00:18:14.120 --> 00:18:26.265
+<v Maya>But if you want to know if a whole generation is actually out on the street, locked out of the economy, you look at the survey data from Fairley and Wu. And the definitive answer is no. They are adapting. They are finding work.</v>
+
+141
+00:18:26.450 --> 00:18:41.341
+<v Daniel>The practical takeaway for a student graduating in 2027, or the professors advising them, is that the sky is not falling, but the map has changed. The traditional frictionless path into an entry-level desk job is becoming a severe</v>
+
+142
+00:18:41.401 --> 00:18:41.942
+<v Daniel>bottleneck.</v>
+
+143
+00:18:42.582 --> 00:18:43.463
+<v Maya>So they need to pivot.</v>
+
+144
+00:18:43.903 --> 00:18:50.088
+<v Daniel>Yeah, you are going to have to step onto the career ladder from a different angle, perhaps in an industry you didn't initially consider.</v>
+
+145
+00:18:50.827 --> 00:19:02.663
+<v Maya>It's not a tsunami that washes everyone away. It's more like a tide that is silently carving a completely new shoreline. Which leaves me with a final provocative thought for you to mull over.</v>
+
+146
+00:19:03.063 --> 00:19:03.444
+<v Daniel>Go for it.</v>
+
+147
+00:19:04.265 --> 00:19:19.065
+<v Maya>If AI is quietly shifting recent grads out of their intended careers, redirecting them into entirely different sectors without ever spiking the overall unemployment rate, what happens to the U.S. economy in a decade? Like, what does innovation look like when an entire</v>
+
+148
+00:19:19.125 --> 00:19:22.270
+<v Maya>generation is working in fields they didn't actually study for?</v>
+
+149
+00:19:22.991 --> 00:19:31.703
+<v Daniel>If we connect this to the bigger picture, we aren't just tracking a temporary hiring freeze. We might be watching the real-time rewiring of human capital itself.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2026 06:56:53 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 07:11:37 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1180,5 +1180,24 @@ Reference: Schlatter, J., Weinstein-Raun, B., &amp; Ladish, J. (2025). Incomplet
       <pubDate>Sun, 27 Sep 2026 06:18:31 +0000</pubDate>
       <itunes:episode>60</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/060%20-%20When%20Agents%20Slip%20Past%20The%20Monitor.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>061 - When The Class Of 2026 Hits The Market</title>
+      <description>When The Class Of 2026 Hits The Market (2024–2026)
+
+In this episode we unpack a new working paper by Robert Fairlie and Jane Wu of UCLA, "The Early Impacts of AI on Employment among Recent College Graduates", released by NBER on 28 September 2026 after circulating as a CESifo working paper earlier in the month. The class of 2026 was supposed to be the first cohort shut out by AI, graduating into a labor market where firms had finally moved from experimenting with AI to using it intensively. Using Current Population Survey microdata through August 2026, Fairlie and Wu find no such break: unemployment among 22 to 25 year old bachelor's graduates rose over the summer exactly as it does every summer, and stayed inside the range of the last four years.
+
+We walk through why the summer months are the real test, the raw rates (7.3 percent in summer 2026 against 7.8 percent in 2024), and their new "sidelined unemployment" measure, which adds graduates who want a job but are not searching and reaches its highest summer yet, though only by 0.3 points. We cover the trend and event-study regressions, the difference-in-differences comparisons against older graduates and against young workers without a degree, and the occupation tests using the Anthropic Economic Index and Eloundou et al.'s GPT-4 exposure scores, where AI exposure shows nothing significant but remote-work exposure does. We set the result against Brynjolfsson, Chandar and Chen's "Canaries in the Coal Mine?", whose ADP payroll data put young workers in AI-exposed jobs 19 percent below trend, against Frank et al.'s evidence that AI-exposed jobs deteriorated before ChatGPT, against the California Policy Lab's unemployment-insurance tracker, and against Massenkoff and McCrory's observed-exposure measure from Anthropic. We close on how payroll and survey data can both be right, what a real AI hiring shock would have to look like to show up, and what it means for students graduating next year.
+
+Reference: Fairlie, R. W., &amp; Wu, J. (2026). The Early Impacts of AI on Employment among Recent College Graduates. NBER Working Paper 35796; CESifo Working Paper No. 12994. https://www.nber.org/papers/w35796
+Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence. Stanford Digital Economy Lab Working Paper. https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
+Reference: Frank, M. R., Javadian Sabet, A., Simon, L., Bana, S. H., &amp; Yu, R. (2026). AI-exposed jobs deteriorated before ChatGPT. arXiv:2601.02554. https://arxiv.org/abs/2601.02554
+Reference: Hyman, B., von Wachter, T., Herrera, D., et al. (2026). Tracking AI-Related Job Loss Using Unemployment Insurance Claims Data in California. California Policy Lab. https://capolicylab.org/wp-content/uploads/2026/06/Tracking-AI-Related-Job-Loss-Using-Unemployment-Insurance-Claims-Data-in-California.pdf
+Reference: Massenkoff, M., &amp; McCrory, P. (2026). Labor market impacts of AI: A new measure and early evidence. Anthropic. https://www.anthropic.com/research/labor-market-impacts
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of LLMs. Science, 384(6702), 1306–1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130</description>
+      <guid isPermaLink="false">884c66a4ca3821c7d016a855b6fe3fca3ae4abf6</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/061%20-%20When%20The%20Class%20Of%202026%20Hits%20The%20Market.m4a" length="37718988" type="audio/mp4" />
+      <pubDate>Mon, 28 Sep 2026 06:19:28 +0000</pubDate>
+      <itunes:episode>61</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/061%20-%20When%20The%20Class%20Of%202026%20Hits%20The%20Market.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
