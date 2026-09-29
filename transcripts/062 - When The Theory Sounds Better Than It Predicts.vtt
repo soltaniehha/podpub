@@ -1,0 +1,725 @@
+WEBVTT
+
+1
+00:00:00.111 --> 00:00:05.694
+<v Daniel>So when you picture, like, the absolute pinnacle of human intellectual achievement, what usually comes to mind?</v>
+
+2
+00:00:06.394 --> 00:00:12.457
+<v Maya>Oh, I mean, it almost always looks like that lone genius, right? Like having a sudden, inexplicable flash of insight.</v>
+
+3
+00:00:12.757 --> 00:00:22.062
+<v Daniel>Right, exactly. When we think of Isaac Newton sitting under the apple tree, or, you know, Albert Einstein just staring at a chalkboard until the fabric of space-time suddenly makes sense.</v>
+
+4
+00:00:22.427 --> 00:00:30.017
+<v Maya>Yeah, building a scientific theory just feels like this messy, brilliant, fundamentally human spark at the very core of our knowledge.</v>
+
+5
+00:00:30.277 --> 00:00:41.471
+<v Daniel>It really does. It's taking this chaotic, random universe, spotting some hidden pattern, and then building a narrative that actually explains the invisible gears turning underneath it all.</v>
+
+6
+00:00:41.843 --> 00:00:55.487
+<v Maya>It is, I'd say it's the ultimate creative engine because like a statistician can easily tell you that two things are correlated, sure. But a theorist, a theorist has to construct the architecture of why they are correlated.</v>
+
+7
+00:00:55.887 --> 00:01:07.830
+<v Daniel>Yeah. And we've always just assumed that that particular leap, you know, moving from raw data to a conceptual framework requires a human mind, a mind with lived experience and, well, intuition.</v>
+
+8
+00:01:08.522 --> 00:01:11.325
+<v Maya>But what if that assumption is just completely wrong?</v>
+
+9
+00:01:11.785 --> 00:01:18.211
+<v Daniel>Right. What if we are at the point where we can just hand that core creative engine over to an artificial intelligence?</v>
+
+10
+00:01:18.971 --> 00:01:30.602
+<v Maya>I mean, if a large language model can do the messy work of building a scientific theory, predicting the data, and then revising its worldview when it gets things wrong, that completely redefines what human scientists are actually for.</v>
+
+11
+00:01:31.498 --> 00:01:42.100
+<v Daniel>And that is exactly the tension we are diving into today. This isn't science fiction anymore. We are looking at a massive head-to-head collision between human experts and AI models.</v>
+
+12
+00:01:42.488 --> 00:01:48.013
+<v Maya>Yeah, and this all comes from a brand new preprint. It was posted to Archive on September 26, 2026.</v>
+
+13
+00:01:48.454 --> 00:01:49.314
+<v Daniel>Hot up the presses.</v>
+
+14
+00:01:49.555 --> 00:02:03.488
+<v Maya>Literally. By Keeley, Spiros, Zumpolis, and this absolutely huge team of collaborators. And, you know, because it is so fresh, I should mention, it hasn't gone through formal peer review yet, but the data they released is already sending shockwaves through the academic community.</v>
+
+15
+00:02:04.426 --> 00:02:15.270
+<v Daniel>To really understand why this specific paper is such a big deal, we kind of have to look at the breadcrumbs that got us here. Because AI has been creeping into the scientific method for a while now.</v>
+
+16
+00:02:15.637 --> 00:02:26.245
+<v Maya>Oh, absolutely. It has been this steady march up the cognitive ladder. So, for instance, earlier in 2026, Ashok Kumar and a team published this fascinating paper in Nature.</v>
+
+17
+00:02:26.265 --> 00:02:27.506
+<v Daniel>Right, the forecasting one.</v>
+
+18
+00:02:27.746 --> 00:02:42.077
+<v Maya>Exactly. They showed that GPT-4 could predict the results of survey experiments just about as well as a whole pooled crowd of human forecasters. The AI proved it could look at an experiment's design across like 70 pre-registered surveys and just</v>
+
+19
+00:02:42.457 --> 00:02:44.879
+<v Maya>guess the outcome with incredible accuracy.</v>
+
+20
+00:02:45.227 --> 00:02:50.670
+<v Daniel>But, I mean, predicting a survey result is essentially just high-level pattern matching, right? It's forecasting.</v>
+
+21
+00:02:50.970 --> 00:02:51.951
+<v Maya>Yeah, exactly.</v>
+
+22
+00:02:51.971 --> 00:02:54.212
+<v Daniel>But then you had projects like AutoCog.</v>
+
+23
+00:02:54.552 --> 00:02:55.172
+<v Maya>Oh, wow, yeah.</v>
+
+24
+00:02:55.512 --> 00:02:56.633
+<v Daniel>AutoCog was wild.</v>
+
+25
+00:02:56.873 --> 00:03:06.158
+<v Maya>Right. Developed by Jaggedish and colleagues, and that pushed things so much further. AutoCog literally ran a fully autonomous loop of discovery in cognitive science.</v>
+
+26
+00:03:06.728 --> 00:03:08.770
+<v Daniel>With no humans in charge at all, right?</v>
+
+27
+00:03:09.070 --> 00:03:19.701
+<v Maya>None. It generated a theory about how people make decisions based on multiple cues. It pre-registered that theory itself, ran the actual experiments, and confirmed its own hypothesis.</v>
+
+28
+00:03:20.181 --> 00:03:29.330
+<v Daniel>Which is just an incredible technical achievement. But, and this is the big but, it left a massive, glaring, counterfactual unanswered.</v>
+
+29
+00:03:29.737 --> 00:03:39.166
+<v Maya>Yeah. Autocog operated completely in a vacuum. It never stopped to ask, well, what would have happened if a team of human scientists had been given the exact same resources to tackle the exact same problem?</v>
+
+30
+00:03:39.867 --> 00:03:51.258
+<v Daniel>Great. Because Ashok Kumar looked at predicting results without really building the underlying theory. And Autocog built a theory but had absolutely no human baseline to compare it against.</v>
+
+31
+00:03:51.900 --> 00:04:00.324
+<v Maya>And that is exactly where Key Lee and this massive 2026 preprint step in. They basically set up the ultimate battle of the brains to answer that counterfactual.</v>
+
+32
+00:04:01.024 --> 00:04:06.467
+<v Daniel>OK, so let's break down the contestants. In the human corner, they assembled 73 people, right?</v>
+
+33
+00:04:06.887 --> 00:04:08.228
+<v Maya>Yep, 73 humans.</v>
+
+34
+00:04:08.568 --> 00:04:08.848
+<v Daniel>OK. And</v>
+
+35
+00:04:09.248 --> 00:04:14.131
+<v Maya>we are talking about 13 senior social scientists and 60 doctoral students.</v>
+
+36
+00:04:14.927 --> 00:04:24.292
+<v Daniel>And importantly, 17 of these individuals were considered actual established topic experts, meaning they had published papers in the specific field they were analyzing.</v>
+
+37
+00:04:24.712 --> 00:04:25.112
+<v Maya>Exactly.</v>
+
+38
+00:04:25.652 --> 00:04:31.815
+<v Daniel>And then in the machine corner, they unleashed 25 different large language model configurations.</v>
+
+39
+00:04:31.895 --> 00:04:32.176
+<v Maya>25.</v>
+
+40
+00:04:32.836 --> 00:04:34.877
+<v Daniel>Wow. So who was on the roster?</v>
+
+41
+00:04:35.308 --> 00:04:50.215
+<v Maya>Oh, they brought in the absolute heavy hitters. We're talking Claude Opus 4.7 and 4.8, GPT 5.2 all the way through 5.6, Gemini 3.X, Quen, DeepSeek v4, Grok 4, Mistral, and even a custom-tuned GPT agent they</v>
+
+42
+00:04:50.315 --> 00:04:52.096
+<v Maya>actually named Theorista.</v>
+
+43
+00:04:52.676 --> 00:04:53.376
+<v Daniel>Theorista.</v>
+
+44
+00:04:53.696 --> 00:04:54.136
+<v Maya>I love that.</v>
+
+45
+00:04:54.597 --> 00:05:01.920
+<v Daniel>So the arena is set. And the test they chose is fascinating because it relies on a massive, messy, real-world data set.</v>
+
+46
+00:05:02.350 --> 00:05:07.151
+<v Maya>Yeah, they pulled a huge corpus from Semantic Scholar, papers published between 2005 and 2021. And we were</v>
+
+47
+00:05:07.451 --> 00:05:15.352
+<v Daniel>talking about, what, 80,000 published papers discussing racial inequality and another 95,000 discussing gender inequality.</v>
+
+48
+00:05:15.452 --> 00:05:28.355
+<v Maya>Right. And the contestants, both humans and AIs, were given a list of variables from these papers, things like the gender or race of a paper's authors, whether it was published in a sociology journal versus an economics journal, the time period, things like that.</v>
+
+49
+00:05:28.962 --> 00:05:39.672
+<v Daniel>And the challenge was to predict which of those individual features and which pairwise interactions between those features would accurately predict whether a given paper discussed racial or gender inequality.</v>
+
+50
+00:05:40.072 --> 00:05:45.998
+<v Maya>Right. But what makes this task brilliant from a design perspective is that it completely bypasses the political charge of these topics.</v>
+
+51
+00:05:46.568 --> 00:05:59.473
+<v Daniel>Yeah, I want to emphasize that for you listening. The researchers aren't asking the AI to take a philosophical or political stance on societal issues. We aren't either. They just established a strict algorithmic ground truth.</v>
+
+52
+00:05:59.834 --> 00:06:10.318
+<v Maya>Exactly. They ran a random forest plus logistic regression model over the data. This model just looks at the cold numbers and asks statistically what correlates with what.</v>
+
+53
+00:06:11.388 --> 00:06:16.911
+<v Daniel>And the authors are very clear that this ground truth is explicitly correlational, not causal, right?</v>
+
+54
+00:06:17.191 --> 00:06:22.393
+<v Maya>Yes, strictly correlational. The human and AI contestants basically had to predict those correlations.</v>
+
+55
+00:06:22.993 --> 00:06:26.355
+<v Daniel>But they couldn't just guess the numbers, like just spitting out stats.</v>
+
+56
+00:06:26.605 --> 00:06:41.442
+<v Maya>No, it was much harder than that. They had to draw a formal causal diagram mapping out the relationships, then write out a full textual theory explaining the mechanics of why these features interacted the way they did. Then they got to review the actual ground truth data and finally</v>
+
+57
+00:06:41.622 --> 00:06:43.384
+<v Maya>revise their theories based on what they learned.</v>
+
+58
+00:06:44.082 --> 00:06:48.047
+<v Daniel>It kind of reminds me of fantasy football versus actually managing the team.</v>
+
+59
+00:06:48.327 --> 00:06:48.808
+<v Maya>Oh, how so?</v>
+
+60
+00:06:49.148 --> 00:07:02.505
+<v Daniel>Well, I mean, it's one thing to look at stats and predict who scores, like the Ashok Kumar paper did, but it's entirely different to draw up the playbook explaining why the defense left the receiver open in the first place. That's theory building.</v>
+
+61
+00:07:02.894 --> 00:07:04.115
+<v Maya>That is a great way to look at it.</v>
+
+62
+00:07:04.536 --> 00:07:17.307
+<v Daniel>And my initial assumption going into this was that predicting human behavior in social science is fundamentally too messy for an AI. Like, surely it requires some lived human context, right?</v>
+
+63
+00:07:17.527 --> 00:07:24.293
+<v Maya>You would think so. But the numbers tell a very different story. The AI didn't just hold its own. I mean, in several domains, it dominated.</v>
+
+64
+00:07:24.533 --> 00:07:29.778
+<v Daniel>OK. Let's hear the stats. How did individual AIs stack up against individual humans?</v>
+
+65
+00:07:30.023 --> 00:07:43.909
+<v Maya>Well, if we look at the main effects, which is just predicting how a single variable, like an author's field of study, impacts the outcome, the AI and humans were basically neck and neck on the race papers. The AI scored a 0.416 accuracy and humans scored 0.411. Okay,</v>
+
+66
+00:07:44.489 --> 00:07:45.830
+<v Daniel>so basically a tie on race.</v>
+
+67
+00:07:46.050 --> 00:07:53.473
+<v Maya>Yeah. But on the gender papers, the AI actually pulled ahead, scoring 0.624 against the humans 0.578. Okay, a</v>
+
+68
+00:07:54.073 --> 00:07:55.854
+<v Daniel>solid win, but not a total blowout.</v>
+
+69
+00:07:55.934 --> 00:08:02.437
+<v Maya>Right. But then we hit the pairwise interactions, and this is where the architecture of the two competitors really diverges.</v>
+
+70
+00:08:02.957 --> 00:08:06.438
+<v Daniel>This is predicting how two different variables combine to create an effect?</v>
+
+71
+00:08:06.878 --> 00:08:19.081
+<v Maya>Exactly. And on the race data, the AI practically obliterated the human baseline. The AI hit a 0.400 accuracy while the humans crashed all the way down to 0.128.</v>
+
+72
+00:08:19.681 --> 00:08:26.003
+<v Daniel>Wait, 0.400 versus 0.128. The AI roughly tripled human accuracy?</v>
+
+73
+00:08:26.432 --> 00:08:35.099
+<v Maya>It did. Now, I should note, both sides struggled on the gender interactions, hovering near chance, though the human topic experts did edge out the machines there.</v>
+
+74
+00:08:35.760 --> 00:08:44.967
+<v Daniel>Okay, but that tripling of accuracy on race interactions, that reveals something profound, doesn't it, about how neural networks operate versus human cognition?</v>
+
+75
+00:08:45.622 --> 00:09:00.236
+<v Maya>Absolutely, because human working memory is incredibly constrained. We like straight linear narratives, you know, A causes B. But a language model doesn't think in linear narratives. Its entire architecture is built to weigh thousands of multidimensional relationships</v>
+
+76
+00:09:00.256 --> 00:09:01.017
+<v Maya>simultaneously.</v>
+
+77
+00:09:01.677 --> 00:09:09.945
+<v Daniel>So finding hidden nodes where two variables interact is just native to its design. It is essentially a superhuman interaction detector.</v>
+
+78
+00:09:10.566 --> 00:09:18.390
+<v Maya>Exactly. But finding the statistical interaction is only half the job. Like we said, a statistician finds the pattern. A scientist has to explain it.</v>
+
+79
+00:09:18.570 --> 00:09:30.956
+<v Daniel>Right? The theory building part? And this is where the paper gets wild. The researchers had independent blind raters evaluate the written theories. And they used both human judges and a GPT 5.5 judge.</v>
+
+80
+00:09:31.216 --> 00:09:36.138
+<v Maya>And those judges agreed with each other with a massive 0.82 correlation, which is huge.</v>
+
+81
+00:09:36.389 --> 00:09:45.777
+<v Daniel>Yeah. And both the human and AI judges rated the AI theories as significantly higher quality than the human ones. They loved the AI's output.</v>
+
+82
+00:09:46.057 --> 00:09:46.918
+<v Maya>They really did.</v>
+
+83
+00:09:47.578 --> 00:09:59.008
+<v Daniel>But when we look at the structure of those highly rated AI theories, we uncover this massive illusion of depth. The AI theories were rated higher, sure, but they were also drastically more complex.</v>
+
+84
+00:09:59.511 --> 00:10:07.074
+<v Maya>When you say complex, are we talking about the sheer volume of text or the underlying math of the theory, like a whiteboard covered in red string?</v>
+
+85
+00:10:07.375 --> 00:10:08.135
+<v Daniel>Basically both.</v>
+
+86
+00:10:08.675 --> 00:10:19.280
+<v Maya>The A.I.' 's written explanations were two to three times longer than the human theories. But structurally, the A.I.' 's causal diagrams had an average of about seven causal paths and five latent variables.</v>
+
+87
+00:10:19.974 --> 00:10:30.939
+<v Daniel>Let me just jump in quickly for anyone wondering. Latent variables being those invisible underlying factors you can't measure directly, right? Like cultural zeitgeist or institutional inertia.</v>
+
+88
+00:10:31.513 --> 00:10:40.678
+<v Maya>Precisely. You can't just put a number on them directly. Now, the humans, on the other hand, averaged about five paths and only two latent variables.</v>
+
+89
+00:10:40.898 --> 00:10:42.919
+<v Daniel>So the human theories were way leaner.</v>
+
+90
+00:10:43.359 --> 00:10:53.105
+<v Maya>Much leaner. And the real kicker is what happened after the AI saw the evidence. Its theories got even more complex. It just kept adding paths and variables.</v>
+
+91
+00:10:53.805 --> 00:11:03.463
+<v Daniel>Wait, so the AI is basically just throwing a massive word salad of academic jargon and hidden variables at the wall and the judges are giving it an A plus just because it sounds smart?</v>
+
+92
+00:11:03.809 --> 00:11:12.473
+<v Maya>Pretty much, because the researchers found that all that extra complexity did not predict accuracy at all. They actually termed this ornamental complexity.</v>
+
+93
+00:11:12.853 --> 00:11:14.013
+<v Daniel>Ornamental complexity.</v>
+
+94
+00:11:14.153 --> 00:11:15.114
+<v Maya>Yeah, I love that term.</v>
+
+95
+00:11:15.314 --> 00:11:15.914
+<v Daniel>I love that term.</v>
+
+96
+00:11:16.354 --> 00:11:30.881
+<v Maya>Yeah. The AI was essentially bedazzling its theories with extra nodes that looked really impressive to the judges, but added zero predictive power. In fact, humans achieved more predictive accuracy per unit of complexity on every</v>
+
+97
+00:11:31.181 --> 00:11:31.861
+<v Maya>single measure.</v>
+
+98
+00:11:32.334 --> 00:11:37.956
+<v Daniel>So the human theories were just highly efficient. They explained more truth with less fluff.</v>
+
+99
+00:11:38.556 --> 00:11:48.379
+<v Maya>Exactly, which is a huge red flag for the entire system of academic peer review. But, well, we will get to that in a moment, because there is a second major twist in the study.</v>
+
+100
+00:11:48.939 --> 00:11:56.741
+<v Daniel>Oh, right, the crowd dynamics. Because science isn't just about individual geniuses working alone. It is a collective enterprise.</v>
+
+101
+00:11:57.318 --> 00:12:07.226
+<v Maya>Right. So the researchers asked, what happens if you take all the predictions from the humans and aggregate them into a crowd and then do the exact same thing for the 25 AI models?</v>
+
+102
+00:12:07.766 --> 00:12:12.830
+<v Daniel>And when you move from the individual to the group, the narrative completely flips, doesn't it?</v>
+
+103
+00:12:13.330 --> 00:12:23.318
+<v Maya>It completely flips. The aggregated human crowd actually beat the AI crowd on the race main effects, scoring 0.584 to the AI's 0.475.</v>
+
+104
+00:12:23.979 --> 00:12:26.961
+<v Daniel>Even though the humans were losing or tying individually?</v>
+
+105
+00:12:27.437 --> 00:12:35.505
+<v Maya>Exactly. And the researchers controlled for the size of the crowd, too, even when comparing an equal number of humans to AIs, the human collective won.</v>
+
+106
+00:12:35.926 --> 00:12:44.875
+<v Daniel>So mathematically, if the humans are losing individually, the only way they can win as a group is if they are making entirely different kinds of mistakes, right?</v>
+
+107
+00:12:45.483 --> 00:12:57.712
+<v Maya>Right. If everyone makes the exact same error, averaging their answers doesn't help at all. But if everyone makes a different error, those errors cancel each other out when you aggregate them, and the underlying truth just rises to the surface.</v>
+
+108
+00:12:58.112 --> 00:13:00.814
+<v Daniel>So the secret sauce here is cognitive diversity.</v>
+
+109
+00:13:01.254 --> 00:13:08.960
+<v Maya>Bingo. The human predictions in this study were about 86% more diverse than the AI predictions, and diversity drives aggregation gains.</v>
+
+110
+00:13:09.585 --> 00:13:15.209
+<v Daniel>This maps so perfectly onto that 2024 paper in Science Advances, the one by Doshin Hauser.</v>
+
+111
+00:13:15.589 --> 00:13:17.530
+<v Maya>Oh, the creative writing one. Yeah. Yes.</v>
+
+112
+00:13:17.911 --> 00:13:32.460
+<v Daniel>They studied human writers using AI for creative story generation. And they found that giving a writer an AI tool made their individual story better and more creative. But when you looked at the entire batch of stories produced by the group, they all started to</v>
+
+113
+00:13:32.520 --> 00:13:34.061
+<v Daniel>sound exactly the same.</v>
+
+114
+00:13:34.461 --> 00:13:38.244
+<v Maya>Right. Individual performance went up, but collective diversity collapsed.</v>
+
+115
+00:13:38.588 --> 00:13:51.856
+<v Daniel>And we are seeing that exact same shape here, but in scientific theory building, which brings us directly into one of the most intense, high-stakes debates happening in computer science right now, the artificial hive mind.</v>
+
+116
+00:13:52.268 --> 00:14:04.535
+<v Maya>It is a phenomenal phrase and a very real concern. In 2025, Zhang and colleagues presented a paper warning that as language models are optimized and aligned, they are all converging on the exact same worldview.</v>
+
+117
+00:14:04.836 --> 00:14:11.920
+<v Daniel>Right. They argued that different LLMs essentially form an artificial hive mind, giving strikingly similar answers to open-ended prompts.</v>
+
+118
+00:14:12.492 --> 00:14:24.088
+<v Maya>But the hive mind theory has some really fierce critics. Literally a day after this Key Lee preprint dropped on September 27th, 2026, a team from Stanford led by Schaefer published a sharp rebuttal to Zhang.</v>
+
+119
+00:14:24.668 --> 00:14:26.670
+<v Daniel>Oh wow, the timing on that is crazy.</v>
+
+120
+00:14:26.930 --> 00:14:41.845
+<v Maya>I know, right? Schaefer argued that the evidence for a hive mind was actually incredibly weak. They pointed out that Zhang used an undemanding null hypothesis, meaning even if you take two genuinely different ideas, they often share enough vocabulary to look identical to a</v>
+
+121
+00:14:41.905 --> 00:14:49.012
+<v Maya>clustering algorithm. Between 20 and 32% of genuinely different idea pairs already cross their similarity threshold.</v>
+
+122
+00:14:49.498 --> 00:14:55.124
+<v Daniel>But Schaefer's most devastating critique, if I remember correctly, was that Zhang's study had no human baseline.</v>
+
+123
+00:14:55.305 --> 00:15:03.774
+<v Maya>Exactly. You cannot claim that AI is uniquely homogeneous if you don't actually know how homogeneous a group of humans would be when answering the exact same prompt.</v>
+
+124
+00:15:04.435 --> 00:15:16.548
+<v Daniel>But that is exactly what makes the Key Lee paper so crucial right now. It is the missing puzzle piece. It provides the rigorous human baseline that Schaefer demanded on a highly complex, open-ended scientific task.</v>
+
+125
+00:15:16.669 --> 00:15:24.436
+<v Maya>Yes. So when the Keeley team mapped out the semantic diversity of the theories, they could finally compare the geometry of human thought against the machines.</v>
+
+126
+00:15:24.996 --> 00:15:26.878
+<v Daniel>And what did that geometry look like?</v>
+
+127
+00:15:27.098 --> 00:15:35.386
+<v Maya>The disparity is actually staggering. The human theories spread out about 2.4 times farther from their semantic center point than the AI theories did.</v>
+
+128
+00:15:36.119 --> 00:15:37.219
+<v Daniel>Wow, 2.4 times.</v>
+
+129
+00:15:37.259 --> 00:15:47.962
+<v Maya>Yeah. When you look at the clustering, between 92% and 100% of all the AI theories were tightly packed into a single, dense semantic cluster. They all fundamentally agreed on the core mechanism.</v>
+
+130
+00:15:48.443 --> 00:15:49.143
+<v Daniel>And for the humans?</v>
+
+131
+00:15:49.583 --> 00:15:53.224
+<v Maya>Only 10% to 32% of their theories sat in that central core.</v>
+
+132
+00:15:53.515 --> 00:16:08.401
+<v Daniel>So if we imagine this as a massive music festival, right? The AIs have 25 different stages, but every single band is covering the exact same top 40 pop song. Like one might play it on a synthesizer, another on an acoustic guitar, but it</v>
+
+133
+00:16:08.461 --> 00:16:12.343
+<v Daniel>is the same underlying track. That is your dense semantic cluster.</v>
+
+134
+00:16:12.658 --> 00:16:23.486
+<v Maya>That's a great analogy. And the humans, meanwhile, have a few bands playing the pop song in the main tent. But the vast majority of them are scattered all across the woods playing experimental jazz, punk rock, and folk music.</v>
+
+135
+00:16:23.626 --> 00:16:38.316
+<v Daniel>Exactly. The researchers actually describe the human distribution as a sparse core plus a long tail of weird, unique ideas. Well, the AIs just have a concentrated core. Right. But I have to ask, does this completely validate the hive mind fear?</v>
+
+136
+00:16:38.756 --> 00:16:53.624
+<v Daniel>Because Schaefer also pointed out that simple prompting raises diversity. Like, is the AI's lack of diversity a fundamental flaw or just a result of how we prompt them? If we explicitly told the 25 models, hey, your goal is to completely disagree with the</v>
+
+137
+00:16:53.664 --> 00:16:56.786
+<v Daniel>other models, wouldn't that semantic cluster spread out?</v>
+
+138
+00:16:57.635 --> 00:17:12.242
+<v Maya>That is the critical variable, for sure. Prompting for extreme divergence would undoubtedly force the models out of that dense core. But the underlying finding remains deeply consequential, I think. When given a neutral, open-ended mandate to solve a complex scientific problem, the</v>
+
+139
+00:17:12.342 --> 00:17:20.046
+<v Maya>default behavioral physics of an LLM is to converge on a consensus view, while the default behavior of a human crowd is to diverge.</v>
+
+140
+00:17:20.330 --> 00:17:27.613
+<v Daniel>Because humans diverge natively. We all have different egos, different blind spots, different lived experiences shaping our mental models.</v>
+
+141
+00:17:28.154 --> 00:17:35.437
+<v Maya>Exactly. Which brings up the final and maybe most fascinating part of this experiment. What happens when you shatter those mental models?</v>
+
+142
+00:17:35.997 --> 00:17:44.021
+<v Daniel>Oh, right. The updating phase. When the contestants were finally shown the actual ground truth data, how did they react to being wrong?</v>
+
+143
+00:17:44.732 --> 00:17:55.222
+<v Maya>Well, you might expect humans to be stubborn, right? Clinging to their pet theories. But the AI actually revised its theories 42% more than the humans did.</v>
+
+144
+00:17:56.043 --> 00:17:59.327
+<v Daniel>So the AI is less ego-driven and more flexible.</v>
+
+145
+00:17:59.787 --> 00:18:11.083
+<v Maya>It is far more active, yes. But the researchers noticed something really strange. The AI's revisions were completely uncorrelated with how inaccurate its initial predictions had been.</v>
+
+146
+00:18:11.743 --> 00:18:12.483
+<v Daniel>Wait, really?</v>
+
+147
+00:18:12.644 --> 00:18:27.470
+<v Maya>Yeah, it just changed things up aggressively, regardless of whether it was close to the mark or wildly off. The humans behaved entirely differently. Humans revised their theories heavily when they had been wrong, and they barely touched them when they had been</v>
+
+148
+00:18:27.510 --> 00:18:27.730
+<v Maya>right.</v>
+
+149
+00:18:28.475 --> 00:18:40.318
+<v Daniel>That is such a fascinating insight. The researchers suspect that AIs don't really update their beliefs the way we do, right? They called AIs active refiners, but humans are sensitive refiners.</v>
+
+150
+00:18:40.759 --> 00:18:52.482
+<v Maya>Exactly. Because a language model doesn't feel the sting of failure. When you give an LLM new data, it just takes the new context window and regenerates a fresh statistical distribution of words.</v>
+
+151
+00:18:52.842 --> 00:19:07.486
+<v Daniel>But humans actually feel cognitive dissonance. When our internal model of the world clashes with hard data, it causes psychological discomfort. So we don't just throw out the whole theory and regenerate a new one. We go in with a scalpel. We surgically update the</v>
+
+152
+00:19:07.566 --> 00:19:12.207
+<v Daniel>specific part of our mental framework that failed while preserving the parts that worked.</v>
+
+153
+00:19:12.607 --> 00:19:19.349
+<v Maya>And that sensitivity to error, born out of cognitive friction, is a massive advantage in the long-term scientific process.</v>
+
+154
+00:19:20.062 --> 00:19:33.391
+<v Daniel>Okay, bringing all these threads together, what is the practical proposal here? If you are a listener, maybe a PhD student designing a study, or a knowledge worker trying to integrate these massive models into your workflow, what's the takeaway?</v>
+
+155
+00:19:34.012 --> 00:19:41.417
+<v Maya>Based on the Cayley team's proposals, the future is not about AI replacing human scientists. It is about strategic routing.</v>
+
+156
+00:19:41.877 --> 00:19:42.838
+<v Daniel>Strategic routing.</v>
+
+157
+00:19:43.231 --> 00:19:58.001
+<v Maya>Yeah, you route the easier predictions, the heavy statistical lifting and finding those complex variable interactions to non-experts who are paired with an AI. They will handle the main effects brilliantly. But you intentionally save your human experts for the</v>
+
+158
+00:19:58.081 --> 00:20:00.042
+<v Maya>hardest, most ambiguous edge cases.</v>
+
+159
+00:20:00.460 --> 00:20:15.309
+<v Daniel>I really love their organizational concept of the one AI, many humans team. Right now, the trend is one human managing a swarm of AI agents. But to protect collective diversity, you want the exact opposite. You want a diverse</v>
+
+160
+00:20:15.329 --> 00:20:18.251
+<v Daniel>team of humans utilizing a shared AI resource.</v>
+
+161
+00:20:18.911 --> 00:20:25.275
+<v Maya>Exactly. You leverage the AI's processing power without sacrificing the long tail of weird human perspectives.</v>
+
+162
+00:20:25.898 --> 00:20:30.899
+<v Daniel>They also brought up this brilliant idea of an accuracy-weighted inverse beauty contest.</v>
+
+163
+00:20:31.359 --> 00:20:33.020
+<v Maya>Oh, yeah, that is a great concept.</v>
+
+164
+00:20:33.480 --> 00:20:47.523
+<v Daniel>Because in a regular economic beauty contest, you win by picking the face you think everyone else will find prettiest. But here, you are explicitly rewarding the scientist who picks the face nobody else is looking at, as long as it's accurate.</v>
+
+165
+00:20:48.027 --> 00:21:02.748
+<v Maya>Right. In science, consensus is often the enemy of breakthroughs. We need institutional mechanisms like funding, publication criteria, tenure tracks that reward scientists not just for being accurate, but for being demonstrably different from the AI-generated consensus.</v>
+
+166
+00:21:03.208 --> 00:21:04.931
+<v Maya>We have to subsidize the long tail.</v>
+
+167
+00:21:05.487 --> 00:21:20.099
+<v Daniel>Because if we don't, we fall straight into the peer review trap we touched on earlier. If blind judges, both human and algorithmic, are consistently seduced by that ornamental complexity, you know, looking at a theory with seven paths and five latent</v>
+
+168
+00:21:20.119 --> 00:21:25.523
+<v Daniel>variables and saying, wow, this looks so rigorous, we are going to drown in bloated, inefficient science.</v>
+
+169
+00:21:26.265 --> 00:21:39.448
+<v Maya>It is a grave risk. We could inadvertently optimize the entire academic ecosystem to produce jargon-heavy word salads that impress reviewers but fail to advance actual knowledge. And this is especially dangerous in social science.</v>
+
+170
+00:21:39.748 --> 00:21:40.649
+<v Daniel>Because it's so messy.</v>
+
+171
+00:21:41.149 --> 00:21:54.852
+<v Maya>Exactly. The authors describe social science as a rugged, multi-peaked landscape. In simple math, there is one smooth slope to a single peak of truth. But human behavior is a sprawling mountain range with many valid peaks and deep valleys.</v>
+
+172
+00:21:55.582 --> 00:22:05.006
+<v Daniel>And if everyone starts their climb from the exact same central base camp, that concentrated semantic core of an AI, they are all going to end up on the exact same local hill.</v>
+
+173
+00:22:05.686 --> 00:22:20.432
+<v Maya>Right. You fundamentally need heterogeneity. You need the weird humans starting in random, isolated valleys to discover the actual Everest. AI, at least in its current consensus-driven form, struggles to provide that exploratory spread.</v>
+
+174
+00:22:20.810 --> 00:22:35.662
+<v Daniel>As we wrap up this deep dive, there is a core philosophy here that extends far beyond academic social science, I think. If artificial intelligence models are trained on the entirety of human output, they represent our collective average. They are the</v>
+
+175
+00:22:35.762 --> 00:22:38.383
+<v Daniel>ultimate, highly compressed center of the bell curve.</v>
+
+176
+00:22:38.824 --> 00:22:39.384
+<v Maya>Yeah, that's true.</v>
+
+177
+00:22:39.664 --> 00:22:54.053
+<v Daniel>But major scientific breakthroughs, the theories that fundamentally rewire how we understand the universe, they almost never come from the average. They come from the extreme, diverse, weird outliers. They come from the people playing experimental jazz in the woods</v>
+
+178
+00:22:54.694 --> 00:22:56.495
+<v Daniel>while everyone else is in the main tent.</v>
+
+179
+00:22:56.976 --> 00:23:00.082
+<v Maya>A vital point for anyone who wants to create something genuinely new.</v>
+
+180
+00:23:00.643 --> 00:23:15.551
+<v Daniel>So as you integrate AI into your daily workflows, the challenge is clear. How do you ensure you're using it to raise your baseline without letting it trim away your own weird, brilliant edges? Something to mull over. Thanks for exploring</v>
+
+181
+00:23:15.571 --> 00:23:19.258
+<v Daniel>the edges with us on this deep dive. Keep questioning the consensus.</v>
