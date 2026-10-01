@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 07:05:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 06:50:35 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1237,5 +1237,24 @@ Reference: Kapoor, S., Bommasani, R., Klyman, K., et al. (2024). On the Societal
       <pubDate>Wed, 30 Sep 2026 06:22:28 +0000</pubDate>
       <itunes:episode>63</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/063%20-%20When%20The%20Exploit%20Costs%20Twenty%20Dollars.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>064 - When The Robot Costs More Than The Worker</title>
+      <description>What Work Can Robots Do? (September 2026)
+
+In this episode we unpack a new study from Anthropic's economics team, Russell Legate-Yang and Maxim Massenkoff, that asks a question the AI-and-jobs debate has mostly skipped: what can physical robots actually do today, and at what price? Their answer is that robots can already perform about three quarters of the physical tasks in the US economy, a third of all working hours, but are cheaper than the people doing that work for just 0.3 percent of tasks.
+
+We walk through their robot exposure index, built by having Claude search for real deployed robots across 7,594 physical O*NET tasks and rate each on a four-tier environmental-control rubric (E0 to E3), why taxi drivers top the index while nurses and mechanics barely register, how packers and packagers became the largest job where robots already win on cost, and the 1977 backtest linking exposure to later wage and employment declines. We set it against Frey and Osborne's 47 percent forecast, Autor's argument about why there are still so many jobs, Acemoglu and Restrepo's evidence from industrial robots, and the LLM exposure measures of Eloundou et al. and Massenkoff and McCrory, and close on the 40-year cost runway, whether an LLM can be trusted to judge robots, and why AI's cognitive and physical waves land on almost opposite groups of workers.
+
+Reference: Legate-Yang, R., &amp; Massenkoff, M. (2026). What work can robots do? Anthropic. https://www.anthropic.com/research/what-work-can-robots-do
+Reference: Acemoglu, D., &amp; Restrepo, P. (2020). Robots and Jobs: Evidence from US Labor Markets. Journal of Political Economy, 128(6), 2188-2244. https://doi.org/10.1086/705716
+Reference: Autor, D. H. (2015). Why Are There Still So Many Jobs? The History and Future of Workplace Automation. Journal of Economic Perspectives, 29(3), 3-30. https://doi.org/10.1257/jep.29.3.3
+Reference: Frey, C. B., &amp; Osborne, M. A. (2017). The Future of Employment: How Susceptible Are Jobs to Computerisation? Technological Forecasting and Social Change, 114, 254-280. https://doi.org/10.1016/j.techfore.2016.08.019
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306-1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130
+Reference: Massenkoff, M., &amp; McCrory, P. (2026). Labor market impacts of AI: A new measure and early evidence. Anthropic. https://www.anthropic.com/research/labor-market-impacts</description>
+      <guid isPermaLink="false">04b8887a05c19300e2a04bd920858dd2478f5779</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/064%20-%20When%20The%20Robot%20Costs%20More%20Than%20The%20Worker.m4a" length="46180722" type="audio/mp4" />
+      <pubDate>Thu, 01 Oct 2026 06:17:33 +0000</pubDate>
+      <itunes:episode>64</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/064%20-%20When%20The%20Robot%20Costs%20More%20Than%20The%20Worker.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
