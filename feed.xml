@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2026 06:50:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 07:10:29 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1256,5 +1256,24 @@ Reference: Massenkoff, M., &amp; McCrory, P. (2026). Labor market impacts of AI:
       <pubDate>Thu, 01 Oct 2026 06:17:33 +0000</pubDate>
       <itunes:episode>64</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/064%20-%20When%20The%20Robot%20Costs%20More%20Than%20The%20Worker.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>065 - Finding The Problems AI Was Built For</title>
+      <description>Finding The Problems AI Was Built For (2023–2026)
+
+In this episode we unpack "Claude-shaped science," a new essay from Harvard physicist Matthew Schwartz on Anthropic's science blog, and the companion paper introducing BootLoops, both released October 1, 2026. His argument: today's language models are good at science but are not scientists, so the payoff comes from finding problems that fit what they do best, carrying a method from one field to a question in another that almost no single human knows both sides of.
+
+We walk through BootLoops, an open-source, model-agnostic harness of deterministic tools (Kira reduction, auxiliary-mass flow, PSLQ integer-relation fitting, Arb ball arithmetic) in which the model never supplies a number, and its results: 30 Feynman integrals bootstrapped, 15 of them new, and 36 manuscripts across 18 fields in three months. We dig into the Barro Colorado Island forest model built with ecologist James O'Dwyer, where an expert redirected a technically correct but unremarkable result into real science, and set it against Schwartz's earlier Vibe Physics experiment, Dell'Acqua et al.'s jagged technological frontier, and Li et al.'s evidence that AI and human scientists bring complementary strengths to theory building. We close on what humans still supply (taste, direction, judgment of what is interesting), the conflict of interest in a lab-funded study, and what this means for training graduate students and assigning credit.
+
+Reference: Schwartz, M. D. (2026). Claude-shaped science. Anthropic Science Blog. https://www.anthropic.com/research/claude-shaped-science
+Reference: Schwartz, M. D. (2026). BootLoops: an LLM-driven toolkit for exact quantitative science. https://bootloops.ai/BootLoops.pdf
+Reference: Schwartz, M. D., &amp; O'Dwyer, J. P. (2026). A minimal model of a forest after neutral theory. Preliminary manuscript. https://bootloops.ai/afterneutral.pdf
+Reference: Schwartz, M. D. (2026). Vibe physics: The AI grad student. Anthropic Science Blog. https://www.anthropic.com/research/vibe-physics
+Reference: Dell'Acqua, F., McFowland III, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K. C., et al. (2023). Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality. Harvard Business School Working Paper 24-013. https://doi.org/10.2139/ssrn.4573321
+Reference: Li, K., Zoumpoulis, S. I., Puranam, P., Parker, P., et al. (2026). Artificial intelligences and human scientists exhibit complementary strengths in theory building. arXiv:2609.32562. https://arxiv.org/abs/2609.32562</description>
+      <guid isPermaLink="false">79cc07758f81914b14142fce8f326a94d14b2d61</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/065%20-%20Finding%20The%20Problems%20AI%20Was%20Built%20For.m4a" length="44003786" type="audio/mp4" />
+      <pubDate>Fri, 02 Oct 2026 06:16:49 +0000</pubDate>
+      <itunes:episode>65</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/065%20-%20Finding%20The%20Problems%20AI%20Was%20Built%20For.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
