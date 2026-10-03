@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Oct 2026 07:10:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 11:19:24 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1275,5 +1275,24 @@ Reference: Li, K., Zoumpoulis, S. I., Puranam, P., Parker, P., et al. (2026). Ar
       <pubDate>Fri, 02 Oct 2026 06:16:49 +0000</pubDate>
       <itunes:episode>65</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/065%20-%20Finding%20The%20Problems%20AI%20Was%20Built%20For.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>066 - When Better Writing Changes Nothing</title>
+      <description>Introducing AI to an Online Petition Platform Changed Outputs but Not Outcomes (September 2026)
+
+In this episode we unpack a new Nature Human Behaviour paper from Isabel Corpus, Eric Gilbert, Allison Koenecke and Mor Naaman of Cornell Tech and the University of Michigan, which turns a quirk of a product launch into a causal experiment. When Change.org gave its "write with AI" drafting tool to the United States, Great Britain and Canada eleven weeks before Australia, it accidentally created a control group. Across 1.5 million petitions, the authors find that AI access changed the writing in every way that used to predict success, and did not improve a single outcome.
+
+We walk through the preregistered difference-in-differences design behind that claim (the Callaway and Sant'Anna estimator, Australia as control, a synthetic control check adding New Zealand and India), the measured shifts in lexical diversity, Flesch-Kincaid grade level and length, and the homogenization result that petitions became more similar to one another. We dig into the outcome side, where reaching ten signatures actually fell and repeat writers saw roughly 25 percent lower odds of success on their second petition, and into the finding that unsettles the rest: after AI arrived, writing quality stopped predicting which petitions won. We set it against Noy and Zhang's experimental productivity gains, Doshi and Hauser's trade of individual creativity for collective diversity, Agarwal and colleagues' evidence that AI suggestions flatten toward Western styles, Hao and Evans's finding that AI expands scientists' impact while contracting science's focus, and Vaccaro, Almaatouq and Malone's meta-analysis of when human-AI teams actually help. We close on what it means for any competitive process judged on prose, and on why an A/B test of a tool like this would have called it a success.
+
+Reference: Corpus, I., Gilbert, E., Koenecke, A., &amp; Naaman, M. (2026). Introducing AI to an online petition platform changed outputs but not outcomes. Nature Human Behaviour. https://doi.org/10.1038/s41562-026-02580-8
+Reference: Noy, S., &amp; Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. Science, 381(6654), 187-192. https://doi.org/10.1126/science.adh2586
+Reference: Doshi, A. R., &amp; Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. Science Advances, 10(28), eadn5290. https://doi.org/10.1126/sciadv.adn5290
+Reference: Agarwal, D., Naaman, M., &amp; Vashistha, A. (2025). AI suggestions homogenize writing toward Western styles and diminish cultural nuances. Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems. arXiv:2409.11360. https://arxiv.org/abs/2409.11360
+Reference: Hao, Q., Xu, F., Li, Y., &amp; Evans, J. (2026). Artificial intelligence tools expand scientists' impact but contract science's focus. Nature, 649(8099), 1237-1243. https://doi.org/10.1038/s41586-025-09922-y
+Reference: Vaccaro, M., Almaatouq, A., &amp; Malone, T. (2024). When combinations of humans and AI are useful: A systematic review and meta-analysis. Nature Human Behaviour, 8(12), 2293-2303. https://doi.org/10.1038/s41562-024-02024-1</description>
+      <guid isPermaLink="false">692b6977ae641156d00239b27248965c75413fa3</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/066%20-%20When%20Better%20Writing%20Changes%20Nothing.m4a" length="35402357" type="audio/mp4" />
+      <pubDate>Sat, 03 Oct 2026 10:51:54 +0000</pubDate>
+      <itunes:episode>66</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/066%20-%20When%20Better%20Writing%20Changes%20Nothing.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

@@ -1,0 +1,601 @@
+WEBVTT
+
+1
+00:00:00.351 --> 00:00:08.235
+<v Maya>You know, you've probably done it just this week. You sit down to write an email, maybe a report for your boss, or, I don't know, even a sensitive message to a friend.</v>
+
+2
+00:00:08.915 --> 00:00:11.196
+<v Daniel>Right. And you just feel a little stuck.</v>
+
+3
+00:00:11.496 --> 00:00:20.820
+<v Maya>Exactly. You feel stuck. So you open up an AI writing assistant. You punch in a few bullet points, and boom, it spits out this beautifully polished, articulate prose.</v>
+
+4
+00:00:21.232 --> 00:00:23.414
+<v Daniel>Oh yeah, it feels like an absolute superpower.</v>
+
+5
+00:00:23.574 --> 00:00:30.038
+<v Maya>It really does. It saves you time, it makes you sound incredibly smart, and, you know, it is just completely frictionless.</v>
+
+6
+00:00:30.639 --> 00:00:38.204
+<v Daniel>Suddenly you have a world-class editor, right? Just living in your browser, working for free, instantly correcting every awkward phrase.</v>
+
+7
+00:00:39.065 --> 00:00:49.913
+<v Maya>But here is the massive question we are tackling today. Welcome to our deep dive. We have a custom-tailored mission just for you. We are looking at a fascinating paradox at the heart of this new AI revolution.</v>
+
+8
+00:00:50.378 --> 00:00:51.679
+<v Daniel>And it really is a paradox.</v>
+
+9
+00:00:52.019 --> 00:01:05.805
+<v Maya>Right. What happens to a system, like a platform, an ecosystem, a competitive market, when every single person competing for attention gets that exact same superpower? Does everyone win or does the whole game fundamentally break?</v>
+
+10
+00:01:06.420 --> 00:01:16.904
+<v Daniel>That is the perfect way to frame it, honestly. Today isn't really about, you know, a neat new piece of software. We're exploring the fundamental economics of human attention.</v>
+
+11
+00:01:16.924 --> 00:01:18.004
+<v Maya>Right, the economics of it.</v>
+
+12
+00:01:18.184 --> 00:01:26.527
+<v Daniel>Yeah. We're looking at what happens to human communication when the cost of producing, quote-unquote, perfect pros crops to absolute zero.</v>
+
+13
+00:01:27.058 --> 00:01:41.631
+<v Maya>And to figure that out, we have an incredibly fresh stack of research to guide us. Our primary source is a brand new paper published just days ago on September 30, 2026. Very fresh. Super fresh. It's in the journal Nature Human Behavior. It's by Isabel</v>
+
+14
+00:01:41.691 --> 00:01:56.613
+<v Maya>Korpis, Eric Gilbert, Alison Kinnett, and Moore Naiman. And the title is a bit of a spoiler, honestly. It is, yeah. It's called Introducing AI to an Online Petition Platform Changed Outputs But Not Outcomes. And we've also got a stack of five older background papers</v>
+
+15
+00:01:56.653 --> 00:01:58.656
+<v Maya>to help us sort of connect the dots here.</v>
+
+16
+00:01:59.242 --> 00:02:06.824
+<v Daniel>Because to really understand the systemic impact of AI, we can't just look at people playing with a chatbot in like an isolated lab setting.</v>
+
+17
+00:02:06.944 --> 00:02:08.004
+<v Maya>Right, that doesn't tell us enough.</v>
+
+18
+00:02:08.244 --> 00:02:20.046
+<v Daniel>No, we need to see it deployed at scale in the messy real world where people are desperately trying to persuade other humans to care about a cause. And that brings us to the unique setup of this new change.org study.</v>
+
+19
+00:02:20.246 --> 00:02:27.588
+<v Maya>Okay, so if you aren't familiar, change.org is a massive social advocacy platform. Anyone can write a petition to try and rally support.</v>
+
+20
+00:02:28.203 --> 00:02:31.345
+<v Daniel>Yeah, maybe you want your city to fix a dangerous intersection or something.</v>
+
+21
+00:02:31.705 --> 00:02:46.612
+<v Maya>Exactly. Or you want a corporation to change a policy. So in 2023, Change.org integrated a write with AI drafting tool built on an open AI model directly into their platform. You just type a short description of what you want and it generates a polished petition</v>
+
+22
+00:02:46.652 --> 00:02:46.972
+<v Maya>for you.</v>
+
+23
+00:02:47.773 --> 00:02:52.795
+<v Daniel>And the beautiful part for researchers is how they rolled it out. They did a staggered launch.</v>
+
+24
+00:02:53.439 --> 00:02:54.100
+<v Maya>Oh, nice.</v>
+
+25
+00:02:54.400 --> 00:02:59.485
+<v Daniel>Yeah. The United States, Great Britain, and Canada got this AI tool 11 weeks before Australia did.</v>
+
+26
+00:03:00.066 --> 00:03:02.728
+<v Maya>Which gives us a perfect natural experiment.</v>
+
+27
+00:03:03.049 --> 00:03:15.641
+<v Daniel>Precisely. The authors collected 1.5 million petitions written between 2022 and 2024. Because of that staggered rollout, they could run a pre-registered difference-in-differences analysis.</v>
+
+28
+00:03:16.470 --> 00:03:18.551
+<v Maya>Using Australia as the control group, right?</v>
+
+29
+00:03:18.891 --> 00:03:24.073
+<v Daniel>Right. Australia was the control. And then they ran a synthetic control check, adding New Zealand and India.</v>
+
+30
+00:03:24.513 --> 00:03:39.478
+<v Maya>OK, let's unpack this for a second, because we're throwing around some pretty heavy statistical terms. Fair enough, yeah. For those of us who aren't data scientists, what does a difference in differences analysis actually mean in this context? And what on earth is</v>
+
+31
+00:03:39.518 --> 00:03:40.999
+<v Maya>a synthetic control check?</v>
+
+32
+00:03:41.690 --> 00:03:52.999
+<v Daniel>Totally fair question. Think of difference in differences like tracking two runners. If we want to know if a new brand of running shoes makes you faster, we don't just look at your time after you buy them.</v>
+
+33
+00:03:53.540 --> 00:03:55.621
+<v Maya>Right, because maybe you just got better at running.</v>
+
+34
+00:03:56.282 --> 00:04:11.254
+<v Daniel>Exactly. We look at the gap between your time and a friend's time who didn't buy the shoes, both before and after you get them. So here, the researchers looked at the gap in petition success between the U.S. and Australia before the AI tool, and then compared it to the</v>
+
+35
+00:04:11.294 --> 00:04:14.355
+<v Daniel>gap after the U.S. got the tool, but Australia didn't.</v>
+
+36
+00:04:14.955 --> 00:04:18.316
+<v Maya>Got it. Okay, that makes sense. And the synthetic control?</v>
+
+37
+00:04:18.816 --> 00:04:31.058
+<v Daniel>That is basically building a mathematically cloned fake Australia out of data from similar countries like New Zealand and India, just to double check that the real Australia's behavior wasn't a weird fluke during those 11 weeks.</v>
+
+38
+00:04:32.018 --> 00:04:32.398
+<v Maya>Ah, okay.</v>
+
+39
+00:04:33.010 --> 00:04:40.543
+<v Daniel>Yeah, they even used a highly rigorous statistical model called a Callaway and Santana estimator to make sure the math was just ironclad.</v>
+
+40
+00:04:41.444 --> 00:04:56.199
+<v Maya>Okay, so the math is bulletproof. But there's one design choice in this paper that, well, it really threw me. They measured the impact of AI access, not detected AI use. If we are just measuring who had access to the tool,</v>
+
+41
+00:04:56.279 --> 00:05:03.441
+<v Maya>isn't that like trying to figure out if a new gym makes people stronger by just looking at who owns a membership card rather than who actually lifts the weights?</v>
+
+42
+00:05:03.821 --> 00:05:18.791
+<v Daniel>I see why you'd think that, definitely. But measuring access is actually the most intellectually honest way to study a platform-wide shift. Why is that? First of all, AI detectors are notoriously flawed. They generate massive false positives and false negatives. In fact,</v>
+
+43
+00:05:19.111 --> 00:05:26.739
+<v Daniel>the researchers built their own classifier and estimated that over half of the petitions written by people with access to the tool were AI generated.</v>
+
+44
+00:05:27.160 --> 00:05:28.161
+<v Maya>Over half?</v>
+
+45
+00:05:28.281 --> 00:05:34.407
+<v Daniel>Yeah. Wow. So if we rely on detectors, we are building our study on a really shaky foundation.</v>
+
+46
+00:05:34.891 --> 00:05:40.093
+<v Maya>So we avoid guessing who actually clicked the button, but doesn't that sort of water down the data?</v>
+
+47
+00:05:40.493 --> 00:05:48.976
+<v Daniel>It actually captures reality better. Because in a complex ecosystem, the mere presence of a tool changes the entire baseline of behavior.</v>
+
+48
+00:05:49.436 --> 00:05:50.056
+<v Maya>Like how so?</v>
+
+49
+00:05:50.556 --> 00:06:01.760
+<v Daniel>Well, maybe seeing an AI button demoralizes some people from writing entirely. Or maybe people generate an AI draft, hate it, and rewrite it themselves, but they are still influenced by what they read.</v>
+
+50
+00:06:02.375 --> 00:06:02.836
+<v Maya>Oh, I see.</v>
+
+51
+00:06:03.356 --> 00:06:17.788
+<v Daniel>Right. When you want to see how the equilibrium of a whole platform shifts, you have to measure systemic access. Plus, studying an in-platform tool is incredibly clean. It is one single model, one back-end prompt, and one interface.</v>
+
+52
+00:06:18.389 --> 00:06:22.272
+<v Daniel>You aren't guessing how people are secretly copy-pasting from five different apps in the wild.</v>
+
+53
+00:06:22.632 --> 00:06:34.524
+<v Maya>That makes perfect sense. We are looking at the health of the entire forest, not just the trees that use the fertilizer. So millions of users get access to this tool. What actually happened to the heavy lifting of writing?</v>
+
+54
+00:06:34.544 --> 00:06:45.856
+<v Daniel>Well, the text fundamentally transformed. Once the AI tool was introduced, the petitions got noticeably longer. Okay, by how much? The median length increased by about 54 words.</v>
+
+55
+00:06:46.975 --> 00:06:52.096
+<v Maya>Which is huge when you consider the median petition pre-AI was pretty short to begin with.</v>
+
+56
+00:06:52.477 --> 00:07:00.479
+<v Daniel>Exactly. And it goes further than just word count. Lexical diversity, which they measured using something called MATTER, rose by about .049.</v>
+
+57
+00:07:00.839 --> 00:07:02.239
+<v Maya>Okay, translate MATTER for us.</v>
+
+58
+00:07:02.619 --> 00:07:17.196
+<v Daniel>It stands for Measure of Textual Lexical Diversity. Basically, it calculates how many unique, varied words are being used, rather than just repeating the same words over and over. Great. And on top of that, the reading grade level, measured by the Flesch-Kincaid scale,</v>
+
+59
+00:07:17.476 --> 00:07:19.878
+<v Daniel>shot up by about 1.49 grades.</v>
+
+60
+00:07:20.378 --> 00:07:30.165
+<v Maya>Meaning the writing became significantly more complex. We aren't just seeing stop the bad thing. We are seeing implement comprehensive policies to rectify this ongoing systemic issue.</v>
+
+61
+00:07:30.546 --> 00:07:35.189
+<v Daniel>Yes, exactly. The writing became decidedly more sophisticated across the board.</v>
+
+62
+00:07:35.935 --> 00:07:50.907
+<v Maya>And this is the part that is so wild to me. Before AI came along, if you looked at all the data on change.org, those exact statistical features, being a bit longer, having a varied vocabulary, writing at a higher reading level, those were the strongest predictors of whether</v>
+
+63
+00:07:50.947 --> 00:07:52.388
+<v Maya>a petition would be successful.</v>
+
+64
+00:07:52.968 --> 00:08:00.625
+<v Daniel>And this brings to mind a famous 2023 study in science by Noyan Zhang. They established the experimental baseline in a lab setting.</v>
+
+65
+00:08:00.785 --> 00:08:01.646
+<v Maya>Right, the lab baseline.</v>
+
+66
+00:08:01.846 --> 00:08:07.869
+<v Daniel>Yeah, proving that generative AI raises both writing productivity and quality for mid-level professional tasks.</v>
+
+67
+00:08:08.690 --> 00:08:08.750
+It
+
+68
+00:08:08.970 --> 00:08:12.472
+<v Daniel>essentially takes average writers and pushes them up to a high level of confidence.</v>
+
+69
+00:08:12.968 --> 00:08:24.361
+<v Maya>So the AI on change.org is doing exactly what Ngo and Zhang promised. It plumped up the vocabulary, it raised the reading level, and hit all the metrics of a quote-unquote good petition.</v>
+
+70
+00:08:24.562 --> 00:08:25.403
+<v Daniel>On paper, yes.</v>
+
+71
+00:08:25.923 --> 00:08:31.770
+<v Maya>So by all traditional measurements, giving everyone this master class editor is an absolute triumph, right?</v>
+
+72
+00:08:31.890 --> 00:08:45.945
+<v Daniel>Well, this is where we hit the massive gap between a controlled lab and a real-world platform. In a lab, individual quality goes up and you get a gold star. But on a platform like change.org, where everyone's quality goes up</v>
+
+73
+00:08:46.005 --> 00:08:49.870
+<v Daniel>simultaneously, we run into a major systemic side effect.</v>
+
+74
+00:08:50.550 --> 00:08:51.011
+<v Maya>Which is?</v>
+
+75
+00:08:51.852 --> 00:08:52.673
+<v Daniel>Homogenization.</v>
+
+76
+00:08:53.148 --> 00:08:55.450
+<v Maya>Meaning everything starts to sound exactly the same.</v>
+
+77
+00:08:55.730 --> 00:09:08.221
+<v Daniel>Correct. The Corpus paper found that post-AI, the petitions became measurably more similar to each other. We actually saw this tradeoff predicted in a 2024 experiment with short fiction stories by Doshi and Hauser.</v>
+
+78
+00:09:08.653 --> 00:09:10.134
+<v Maya>Oh, right, in Science Advances.</v>
+
+79
+00:09:10.294 --> 00:09:22.683
+<v Daniel>Yes. They found that while giving people AI ideas raised individual creativity scores, it actively reduced the collective diversity of the stories. The plot lines all basically converged.</v>
+
+80
+00:09:23.063 --> 00:09:23.363
+<v Maya>Wow.</v>
+
+81
+00:09:23.704 --> 00:09:30.909
+<v Daniel>Yeah. The Change.org paper is showing us that same convergence, but with real-world political and social stakes instead of short fiction.</v>
+
+82
+00:09:31.629 --> 00:09:38.094
+<v Maya>But, you know, why does the AI do that mechanically? I mean, if I give it a unique prompt, shouldn't it give me a unique output?</v>
+
+83
+00:09:38.630 --> 00:09:47.213
+<v Daniel>you have to look at how these models are trained. They rely on vast normative data sets and something called reinforcement learning from human feedback.</v>
+
+84
+00:09:47.754 --> 00:09:49.054
+<v Maya>OK, RLHF?</v>
+
+85
+00:09:49.554 --> 00:10:04.440
+<v Daniel>Exactly. They are mathematically optimized to aim for an inoffensive, polished, highly conventional middle ground. A 2025 CHI paper by Agrawal, Nauman, and Vashista. And notably, Nauman is also a senior author on our main</v>
+
+86
+00:10:04.480 --> 00:10:07.161
+<v Daniel>change.org paper. They prove this mechanism.</v>
+
+87
+00:10:08.063 --> 00:10:08.763
+<v Maya>And what did they find?</v>
+
+88
+00:10:09.584 --> 00:10:18.529
+<v Daniel>They showed that AI writing suggestions forcibly homogenize text toward Western corporate styles and actively flatten out cultural nuances.</v>
+
+89
+00:10:19.369 --> 00:10:30.635
+<v Maya>OK, I want to push back on this a little bit, though. If the writing is being homogenized into a polished, westernized professional style, doesn't that just mean it sounds like a standardized legal document?</v>
+
+90
+00:10:31.455 --> 00:10:32.496
+<v Daniel>Basically, yes.</v>
+
+91
+00:10:33.052 --> 00:10:45.278
+<v Maya>Well, if I'm signing a petition to change a city zoning law, maybe I want it to sound like a lawyer wrote it, rather than an angry neighbor typing in all caps. Isn't professionalism a good thing when you're dealing with bureaucracy?</v>
+
+92
+00:10:45.958 --> 00:10:54.622
+<v Daniel>You would assume that. But advocacy isn't corporate law. Grassroots advocacy relies entirely on emotional resonance and authenticity.</v>
+
+93
+00:10:55.383 --> 00:10:55.783
+<v Maya>Oh, I see.</v>
+
+94
+00:10:56.306 --> 00:11:11.222
+<v Daniel>Right. When you strip away a person's local slang, their cultural nuance, their raw personal voice, you sanitize the anger and the passion out of the text. When the AI corrects a passionate, messy local complaint into standard corporate English,</v>
+
+95
+00:11:11.863 --> 00:11:15.847
+<v Daniel>it loses the very spark that persuades a human reader to actually care.</v>
+
+96
+00:11:16.326 --> 00:11:27.030
+<v Maya>Okay, that brings us to the million-dollar question then. We have longer, more sophisticated, but highly homogenized petitions. Did this standardized, perfect prose actually help these users get more signatures?</v>
+
+97
+00:11:27.410 --> 00:11:32.552
+<v Daniel>It did not. The outcomes completely flatlined.</v>
+
+98
+00:11:33.173 --> 00:11:33.673
+<v Maya>Completely?</v>
+
+99
+00:11:34.133 --> 00:11:44.217
+<v Daniel>Yes. The share of petitions reaching just one comment in 30 days did not improve at all. And the share of petitions reaching 10 signatures actually went down.</v>
+
+100
+00:11:44.946 --> 00:11:56.710
+<v Maya>Wait, if the outcomes dropped, couldn't that just be because the AI tool attracted a bunch of lazy users who didn't care as much? Like a flood of new people clicking the button as a joke, which ruined the average stats?</v>
+
+101
+00:11:57.370 --> 00:12:06.113
+<v Daniel>A completely logical hypothesis, but the data rules it out. Overall user participation did not change. The volume of users stayed consistent.</v>
+
+102
+00:12:06.728 --> 00:12:10.429
+<v Maya>Okay, so it wasn't a composition story about new users arriving.</v>
+
+103
+00:12:10.689 --> 00:12:18.051
+<v Daniel>No, not at all. And here is where the researchers did something brilliant to prove it. They isolated repeat writers.</v>
+
+104
+00:12:18.571 --> 00:12:21.992
+<v Maya>You mean people who had written multiple petitions on the platform over time?</v>
+
+105
+00:12:22.192 --> 00:12:36.795
+<v Daniel>Yes. They looked at users whose first petition was written before the AI tool existed. but their second petition was written after they had AI access. Oh, that's smart. For those specific users, their odds of a positive outcome on that second</v>
+
+106
+00:12:36.835 --> 00:12:39.878
+<v Daniel>petition dropped by about 25%. 25%?</v>
+
+107
+00:12:39.938 --> 00:12:43.741
+<v Maya>25%. That is a huge drop for the exact same person.</v>
+
+108
+00:12:43.901 --> 00:12:52.709
+<v Daniel>Exactly. Meanwhile, repeat writers in the control group who never had access to the AI tool showed no significant difference between their first and second attempts.</v>
+
+109
+00:12:53.483 --> 00:13:02.169
+<v Maya>That is just staggering. You know, I read that finding and immediately thought of the difference between receiving a Hallmark greeting card and a handwritten letter.</v>
+
+110
+00:13:02.989 --> 00:13:04.130
+<v Daniel>That's a good comparison.</v>
+
+111
+00:13:04.593 --> 00:13:17.996
+<v Maya>Right. The Hallmark card has perfect grammar, a beautiful font, and a professionally written poem. The handwritten letter might have crossed out words, messy handwriting, and weird phrasing. But the Hallmark card means nothing because it requires zero effort.</v>
+
+112
+00:13:18.016 --> 00:13:18.877
+<v Daniel>Right. You just bought it.</v>
+
+113
+00:13:19.417 --> 00:13:28.039
+<v Maya>Exactly. The handwritten letter proves the person actually spent 20 minutes thinking about you. The value isn't in the words themselves. It's in the proof of effort.</v>
+
+114
+00:13:28.515 --> 00:13:43.324
+<v Daniel>That is a phenomenal analogy. It gets to the heart of what human connection actually requires. And we see this limitation of AI broadly. A 2024 meta-analysis in Nature Human Behavior by Vaccaro, Omotok, and Malone looked at</v>
+
+115
+00:13:43.424 --> 00:13:46.306
+<v Daniel>human-AI combinations across various tasks.</v>
+
+116
+00:13:46.826 --> 00:13:47.907
+<v Maya>And what did they find?</v>
+
+117
+00:13:48.747 --> 00:13:58.253
+<v Daniel>They found that human-AI teams often underperform the better of the two alone. It frames exactly when AI assistance helps and when it doesn't.</v>
+
+118
+00:13:58.481 --> 00:13:59.642
+<v Maya>Right. So when does it help?</v>
+
+119
+00:14:00.542 --> 00:14:10.526
+<v Daniel>AI helps when the task is purely technical, like writing code or formatting data. But it actively hurts when the task requires genuine human connection, empathy, and persuasion.</v>
+
+120
+00:14:11.246 --> 00:14:18.289
+<v Maya>Which leads us to the grand theory of this entire deep dive. Why did technically better writing suddenly result in worse outcomes?</v>
+
+121
+00:14:19.150 --> 00:14:25.653
+<v Daniel>Because the definition of what makes writing good fundamentally broke. This is the most profound finding of the corpus favor.</v>
+
+122
+00:14:25.713 --> 00:14:26.353
+<v Maya>It really is.</v>
+
+123
+00:14:27.422 --> 00:14:33.885
+<v Daniel>After AI access was introduced, writing quality and persuasiveness became weaker predictors of outcomes than they were before.</v>
+
+124
+00:14:34.525 --> 00:14:38.567
+<v Maya>If everyone writes well effortlessly, writing well stops being a signal.</v>
+
+125
+00:14:39.998 --> 00:14:51.048
+<v Daniel>Think about the ecosystem before AI. If you read a petition that was long, articulate and well-structured, it unconsciously signaled to you, the reader, that the author cared deeply.</v>
+
+126
+00:14:51.529 --> 00:14:52.509
+<v Maya>Because it was hard to do.</v>
+
+127
+00:14:52.790 --> 00:15:06.062
+<v Daniel>Exactly. They spent hours researching, drafting and editing. The artifact itself was proof of their dedication. When the cost of producing that artifact drops to zero, the artifact loses its value as a competitive signal.</v>
+
+128
+00:15:06.667 --> 00:15:08.768
+<v Maya>It's like extreme grade inflation.</v>
+
+129
+00:15:09.008 --> 00:15:18.392
+<v Daniel>If a teacher gives every single student an A+, regardless of effort, the grade A-plus immediately becomes meaningless to colleges. The signal is dead.</v>
+
+130
+00:15:19.072 --> 00:15:28.236
+<v Maya>And we are seeing this signal collapse in completely different domains, too. Look at a 2026 study in Nature by Hao, Xu, Li, and Evans. They examined the scientific community.</v>
+
+131
+00:15:28.557 --> 00:15:43.282
+<v Daniel>Oh, I saw this one. They found that AI tools expand an individual scientist's output, but they actively contract the collective focus of science. Because AI summarizes the same top-tier papers for everyone, researchers start</v>
+
+132
+00:15:43.382 --> 00:15:47.385
+<v Daniel>citing the same things, exploring the same middle-of-the-road ideas.</v>
+
+133
+00:15:47.842 --> 00:15:50.644
+<v Maya>So we lose the weird serendipitous discoveries.</v>
+
+134
+00:15:50.884 --> 00:16:00.852
+<v Daniel>Precisely. The identical shape of this finding in a totally different field proves this isn't just a quirk of change.org. It is a general, universal phenomenon.</v>
+
+135
+00:16:01.116 --> 00:16:15.642
+<v Maya>The tension we are left with here is just massive. A single technological tool can take every individual artifact, every petition, every story, every scientific paper, and make it objectively better. And yet, by doing so, it leaves</v>
+
+136
+00:16:15.982 --> 00:16:17.783
+<v Maya>everyone collectively worse off.</v>
+
+137
+00:16:18.483 --> 00:16:33.149
+<v Daniel>Because on any platform or in any market, outcomes are relative. You are competing for attention. And human attention is a fixed, scarce resource. You can't artificially generate more of it just because the reading material got a little</v>
+
+138
+00:16:33.189 --> 00:16:33.629
+<v Daniel>fancier.</v>
+
+139
+00:16:34.143 --> 00:16:49.072
+<v Maya>This leaves us with some huge questions moving forward. Like, think about the signaling question. If I'm a college admissions officer or a hiring manager looking at cover letters, how do I know who I'm actually reading when the cost of excellent prose is zero? It</v>
+
+140
+00:16:49.172 --> 00:16:51.474
+<v Maya>completely breaks competitive written applications.</v>
+
+141
+00:16:52.194 --> 00:17:06.820
+<v Daniel>It does. And that flows right into a deeply concerning democratic question. How does grassroots advocacy survive when every local movement sounds exactly the same? If the language of protest becomes a homogenized, frictionless AI output,</v>
+
+142
+00:17:07.460 --> 00:17:09.981
+<v Daniel>do decision makers just stop listening entirely?</v>
+
+143
+00:17:10.141 --> 00:17:23.094
+<v Maya>which is terrifying to think about. And then there's the measurement question, which completely fascinates me. If change.org had just run a simple A-B test on this AI tool over a couple of weeks, it would have looked like a massive blinding success.</v>
+
+144
+00:17:23.334 --> 00:17:23.794
+<v Daniel>Oh, totally.</v>
+
+145
+00:17:23.934 --> 00:17:29.460
+<v Maya>Word counts were up. Vocabulary scores were up. Reading levels were up. Because those things are easy to measure.</v>
+
+146
+00:17:29.932 --> 00:17:44.811
+<v Daniel>that is the ultimate trap of data. We measure what is easy to measure, and we assume it means we are succeeding. But a shifted, worsened equilibrium, where the actual soul of the platform decays over time, is almost impossible to spot</v>
+
+147
+00:17:44.851 --> 00:17:47.755
+<v Daniel>without the kind of deep causal analysis this paper did.</v>
+
+148
+00:17:48.562 --> 00:18:03.171
+<v Maya>Mitch leaves me with one final provocative thought for you to mull over. If perfect, persuasive prose is now cheap, frictionless, and entirely artificial, will society soon start to value typos? Will grammatical</v>
+
+149
+00:18:03.291 --> 00:18:18.253
+<v Maya>errors, awkward phrasing, and weird regional slang become the ultimate premium proof of genuine human authenticity? Next time you write an email to a friend, maybe that little typo is the only thing proving it actually came from you. Thanks for joining us</v>
+
+150
+00:18:18.313 --> 00:18:19.756
+<v Maya>on this deep dive. We'll catch you next time.</v>
