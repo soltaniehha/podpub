@@ -1,0 +1,629 @@
+WEBVTT
+
+1
+00:00:00.051 --> 00:00:07.936
+<v Daniel>Think about the last time you tried to learn something genuinely difficult, like really frustratingly difficult.</v>
+
+2
+00:00:08.676 --> 00:00:11.018
+<v Maya>Right. Something that just breaks your brain a little bit.</v>
+
+3
+00:00:11.118 --> 00:00:25.401
+<v Daniel>Yeah, exactly. Maybe you were, you know, dropped into this chaotic new city where the street signs just they make zero sense to you. Or you're trying to master a highly technical sport like tennis. There's this agonizing,</v>
+
+4
+00:00:25.682 --> 00:00:29.304
+<v Daniel>incredibly frustrating period where you're just lost in the struggle.</v>
+
+5
+00:00:30.485 --> 00:00:32.726
+<v Maya>Absolutely. You were just hitting the ball into the net</v>
+
+6
+00:00:33.086 --> 00:00:33.307
+<v Daniel>over</v>
+
+7
+00:00:33.447 --> 00:00:33.807
+<v Maya>and over</v>
+
+8
+00:00:33.887 --> 00:00:48.598
+<v Daniel>again. Right. You're making wrong turns. You look foolish. But, I mean, that struggle is the actual underlying mechanism of learning. It's quite literally how your brain builds the map. So the question is, what happens to human</v>
+
+9
+00:00:48.658 --> 00:00:53.543
+<v Daniel>expertise when a new tool comes along and just, well, it just removes that struggle entirely?</v>
+
+10
+00:00:54.024 --> 00:00:54.985
+<v Maya>It's a huge question.</v>
+
+11
+00:00:55.185 --> 00:00:55.365
+<v Daniel>Yeah.</v>
+
+12
+00:00:55.705 --> 00:01:04.054
+<v Maya>Because, you know, we often treat friction as this bug in a system, right? Like something we need to optimize away for the sake of efficiency.</v>
+
+13
+00:01:04.154 --> 00:01:05.175
+<v Daniel>Yeah, just get it done faster.</v>
+
+14
+00:01:05.456 --> 00:01:20.084
+<v Maya>Exactly. But in cognitive development... Friction is the feature. It's the resistance that actually builds the muscle. So if you take that resistance away, we have to sit down and figure out what else we're accidentally stripping out of the</v>
+
+15
+00:01:20.104 --> 00:01:20.544
+<v Maya>process.</v>
+
+16
+00:01:21.084 --> 00:01:34.589
+<v Daniel>Which brings us to the mission of today's Deep Dive. We are looking at a brand new working paper. It just dropped in October 2026 by Daniel P. Gross, George Faudrin, and Hanson Zhang out of the National Bureau of Economic Research.</v>
+
+17
+00:01:34.969 --> 00:01:36.410
+<v Maya>Yeah, the NBER paper.</v>
+
+18
+00:01:36.885 --> 00:01:50.872
+<v Daniel>Right. It's titled, How Heavily Are PhD Students Offloading Their Scientific Writing to AI? Evidence from U.S. STEM PhD Dissertations. And we are aiming our lens squarely at the pipeline of future experts here.</v>
+
+19
+00:01:51.212 --> 00:01:52.713
+<v Maya>Which is what makes this so critical.</v>
+
+20
+00:01:53.213 --> 00:02:02.238
+<v Daniel>I mean, these are the people who are going to be discovering targeted cancer therapies or designing physical infrastructure or just writing the algorithms of tomorrow.</v>
+
+21
+00:02:02.722 --> 00:02:17.631
+<v Maya>Yeah, the stakes here are completely structural. I mean, this paper really forces anyone who is invested in science or education to ask a deeply uncomfortable question. Are our elite research institutions currently training the next generation of scientists or are</v>
+
+22
+00:02:17.671 --> 00:02:20.153
+<v Maya>they, you know, merely credentialing them?</v>
+
+23
+00:02:20.533 --> 00:02:28.818
+<v Daniel>Right. Let's really unpack that premise because we aren't just talking about like undergrads churning out a history essay at two in the morning to pass a gen ed class.</v>
+
+24
+00:02:29.018 --> 00:02:29.759
+<v Maya>No, not at all.</v>
+
+25
+00:02:30.239 --> 00:02:45.039
+<v Daniel>We are talking about the absolute peak of academic rigor. And the underlying tension we're exploring today is really this fine line between writing as simply packaging a finished thought versus writing as the actual process of thinking.</v>
+
+26
+00:02:45.325 --> 00:02:51.827
+<v Maya>Because historically, in the scientific method, the writing phase is where the logic of an experiment is actually tested. It's the crucible,</v>
+
+27
+00:02:52.147 --> 00:03:06.971
+<v Daniel>you know? Yeah. But before we get too deep into the philosophy of AI and research, I feel like we really need to establish the empirical scale of what Gross and his team actually uncovered here. Because the data set they assembled is, well, it's just staggering. It really</v>
+
+28
+00:03:07.071 --> 00:03:18.402
+<v Daniel>is. It's massive. They essentially pulled a near-census of about 226,000 U.S. STEM PhD graduates. And this covers from 2019 all the way through May 2026.</v>
+
+29
+00:03:18.682 --> 00:03:31.175
+<v Maya>Right. And they aggregated this huge corpus from ProQuest and various individual university repositories. And then, to be really thorough, they benchmarked those numbers against the National Science Foundation's Survey of Earned Doctorates.</v>
+
+30
+00:03:31.435 --> 00:03:32.896
+<v Daniel>Just to make sure they weren't missing anything.</v>
+
+31
+00:03:33.036 --> 00:03:46.542
+<v Maya>Exactly. Just to ensure there weren't hidden pockets of students left out of the data. And to evaluate whether these dissertations were heavily assisted by AI, they ran every single abstract through an AI detection tool called Pangram 3.3.2. Okay,</v>
+
+32
+00:03:47.162 --> 00:03:55.486
+<v Daniel>but stop right there. Because anyone listening who has followed this space closely knows that AI detectors are, well, they're notoriously unreliable.</v>
+
+33
+00:03:56.350 --> 00:03:58.333
+<v Maya>Oh, historically. Yeah. Right. Very messy.</v>
+
+34
+00:03:58.574 --> 00:04:10.253
+<v Daniel>Right. They're prone to false positives and sometimes they honestly just feel like random number generators. So how did Gross and his team get around the fact that most detectors simply can't be trusted as an academic benchmark?</v>
+
+35
+00:04:10.817 --> 00:04:25.329
+<v Maya>Well, they anticipated that exact skepticism, which is why their validation methodology is just so crucial to understand here. So first, to prove that an abstract is even a reliable proxy for an entire 150-page dissertation, they manually</v>
+
+36
+00:04:25.389 --> 00:04:30.614
+<v Maya>validated the detector against a stratified sample of 340 full-text dissertations.</v>
+
+37
+00:04:30.814 --> 00:04:34.137
+<v Daniel>Okay, so they checked the whole paper to make sure the abstract matches up.</v>
+
+38
+00:04:34.477 --> 00:04:47.027
+<v Maya>Exactly. But the real proof of the detector's validity comes from their control group, because they took Pangram and ran it on roughly 126,000 dissertations that were published between 2019 and 2022.</v>
+
+39
+00:04:47.347 --> 00:04:54.013
+<v Daniel>Meaning the pre-chat GPT era? Like before these large language models were even commercially available to graduate students?</v>
+
+40
+00:04:54.253 --> 00:05:00.558
+<v Maya>Precisely. And out of those 126,000 human written abstracts, guess how many the detector flagged?</v>
+
+41
+00:05:01.038 --> 00:05:03.340
+<v Daniel>I mean, I know the number, but it's still wild.</v>
+
+42
+00:05:03.797 --> 00:05:18.544
+<v Maya>It flagged a total of six. Six papers out of 126,000. That translates to a false positive rate of under 0.01%. Wow. Yeah, so it establishes this immense confidence that when Pangram</v>
+
+43
+00:05:18.584 --> 00:05:25.347
+<v Maya>flags a document in 2025 or 2026, it is not hallucinating. It is finding a definitive statistical signature of AI.</v>
+
+44
+00:05:26.079 --> 00:05:40.915
+<v Daniel>Okay, so with that baseline locked in, the adoption curve they found is just jarring. I mean, let's walk through it. In 2023, AI use in these dissertations sat at 1.7%. So, you know, just early</v>
+
+45
+00:05:40.955 --> 00:05:41.896
+<v Daniel>adopters tinkering.</v>
+
+46
+00:05:42.176 --> 00:05:43.798
+<v Maya>Right, just the tech enthusiasts.</v>
+
+47
+00:05:44.233 --> 00:05:53.456
+<v Daniel>But then in 2024, it crept up to 5.5%. And then in 2025, the adoption jumped to 18.8%. A</v>
+
+48
+00:05:53.516 --> 00:05:54.156
+<v Maya>huge spike.</v>
+
+49
+00:05:54.456 --> 00:06:07.700
+<v Daniel>And by May 2026, it was sitting at a massive 29.4%. At this trajectory, the authors actually project that AI-assisted writing will be the majority of all STEM dissertations by 2028.</v>
+
+50
+00:06:08.888 --> 00:06:19.461
+<v Maya>Which is just, I mean, nearly one in three STEM dissertations right now contain significant AI-generated text. That represents a foundational shift in how knowledge is being produced at the graduate level.</v>
+
+51
+00:06:20.362 --> 00:06:31.301
+<v Daniel>Yeah, instead of the usual metaphor of like a tsunami washing over academia. This feels so much more like the moment Texas Instruments calculators hit math classrooms in the 70s.</v>
+
+52
+00:06:31.501 --> 00:06:32.961
+<v Maya>Oh, that's a great comparison.</v>
+
+53
+00:06:33.401 --> 00:06:48.364
+<v Daniel>It's just sudden and irreversible. But I do have a significant question about the timeline here, based on our background sources. Because Leong and Kusumegi both published papers in 2025, analyzing the broader published peer-reviewed</v>
+
+54
+00:06:48.404 --> 00:06:49.284
+<v Daniel>scientific literature.</v>
+
+55
+00:06:49.484 --> 00:06:51.925
+<v Maya>Right, the stuff written by actual working scientists.</v>
+
+56
+00:06:52.285 --> 00:07:06.663
+<v Daniel>Yeah. And they found that in fields like computer science and biomedicine, AI usage was already hitting like 13 to 22 percent back in 2024. So why are the younger, presumably more tech-savvy PhD students</v>
+
+57
+00:07:07.324 --> 00:07:10.268
+<v Daniel>lagging one to two years behind the established older scientists?</v>
+
+58
+00:07:10.802 --> 00:07:22.011
+<v Maya>Well, you really have to look at the unique friction of the PhD environment itself. I mean, a tenured professor or a postdoc turning out a Standard Journal article, they have a relatively streamlined path to publication.</v>
+
+59
+00:07:22.332 --> 00:07:23.152
+<v Daniel>Comparatively, sure.</v>
+
+60
+00:07:23.512 --> 00:07:34.842
+<v Maya>But the dissertation process is incredibly rigid. It involves navigating strict committee approvals, these archaic institutional formatting rules, and most importantly, an in-person live defense.</v>
+
+61
+00:07:35.182 --> 00:07:41.244
+<v Daniel>Right. You literally cannot send a language model into a room to defend your thesis in front of five hostile professors.</v>
+
+62
+00:07:41.444 --> 00:07:56.049
+<v Maya>Exactly. The institutional risk for a Ph.D. student was just simply much higher in the early days of this technology. So they were understandably cautious. But, you know, the 2026 data shows that the perceived risk has totally plummeted. The norm has</v>
+
+63
+00:07:56.530 --> 00:07:57.490
+<v Maya>officially shifted.</v>
+
+64
+00:07:58.505 --> 00:08:10.489
+<v Daniel>But even though the adoption is massive, it's incredibly uneven. The demographics of, you know, who is actually offloading this work tell a really fascinating story about where friction lives in different disciplines.</v>
+
+65
+00:08:11.229 --> 00:08:11.670
+<v Maya>Very true.</v>
+
+66
+00:08:12.290 --> 00:08:23.334
+<v Daniel>Like, when Gross breaks down the 2026 numbers by field, computer science is at 48%. Civil engineering is at 51%. Meanwhile, mathematics is sitting way down at 17%.</v>
+
+67
+00:08:24.974 --> 00:08:34.216
+<v Maya>Yeah, and mathematics naturally resists this kind of automation because it relies so heavily on hyper-specific notation, complex formulas, and rigid proofs.</v>
+
+68
+00:08:34.376 --> 00:08:35.596
+<v Daniel>Stuffing I messes up a lot.</v>
+
+69
+00:08:35.836 --> 00:08:50.278
+<v Maya>Exactly. Those are areas where language models still struggle to be consistently reliable without introducing subtle but fatal logical errors. Whereas in civil engineering or computer science, you often have these extensive literature reviews and standard</v>
+
+70
+00:08:50.318 --> 00:08:53.739
+<v Maya>explanatory prose that can just be easily outsourced to a machine.</v>
+
+71
+00:08:53.939 --> 00:09:08.569
+<v Daniel>It makes sense. And we also see a really clear gradient when looking at the rank of the university program. Let's define the top tier here for a second. These are R1 institutions, meaning universities classified as having very high research activity, the big,</v>
+
+72
+00:09:08.809 --> 00:09:10.811
+<v Daniel>well-funded engines of American science.</v>
+
+73
+00:09:11.191 --> 00:09:12.232
+<v Maya>Right, the elite schools.</v>
+
+74
+00:09:12.808 --> 00:09:27.080
+<v Daniel>So among those top 10 PhD programs, AI usage is hovering around 15%. MIT's at 9%. Caltech is 10. Princeton's 13. But if you move down to programs ranked 90 to 100, that number jumps to</v>
+
+75
+00:09:27.240 --> 00:09:27.941
+<v Daniel>26%.</v>
+
+76
+00:09:28.441 --> 00:09:29.762
+<v Maya>It's a very noticeable jump.</v>
+
+77
+00:09:30.323 --> 00:09:41.132
+<v Daniel>And the data shows intense peer clustering, too. Like, if your advisor's previous graduate students used AI to write their dissertations, you are statistically highly likely to do the exact same thing.</v>
+
+78
+00:09:41.697 --> 00:09:56.566
+<v Maya>Yeah, we're basically tracking the diffusion of a new cultural norm, moving through very specific academic networks. But honestly, the most striking demographic divide in the entire paper, the data point that generates the most friction, is the gap between native and non-native English</v>
+
+79
+00:09:56.586 --> 00:09:56.986
+<v Maya>speakers.</v>
+
+80
+00:09:57.146 --> 00:09:57.947
+<v Daniel>Yeah, this is huge.</v>
+
+81
+00:09:58.767 --> 00:10:04.891
+<v Maya>So students from non-English speaking countries are using AI at a rate of 41% compared to just 23% for U.S. origin students.</v>
+
+82
+00:10:07.520 --> 00:10:15.866
+<v Daniel>But, OK, I have to urgently push back on this 41 percent figure using another background paper we have, which is by Liang from 2023. Oh, the</v>
+
+83
+00:10:16.486 --> 00:10:17.167
+<v Maya>bias paper.</v>
+
+84
+00:10:17.467 --> 00:10:29.095
+<v Daniel>Right. The title of that paper is literally GPT detectors are biased against non-native English writers. And for anyone listening who doesn't know how these detectors work, they often measure something called perplexity.</v>
+
+85
+00:10:29.450 --> 00:10:38.056
+<v Maya>Right. And perplexity is essentially a measure of predictability because a language model operates by predicting the most statistically probable next word in a sequence.</v>
+
+86
+00:10:38.376 --> 00:10:53.287
+<v Daniel>Exactly. And because non-native speakers often learn English from formalized textbooks, they naturally rely on standardized, highly predictable grammatical structures, right? They don't use the weird idiosyncratic idioms that native speakers use all the time.</v>
+
+87
+00:10:53.598 --> 00:10:56.541
+<v Maya>their writing has mathematically low perplexity.</v>
+
+88
+00:10:56.641 --> 00:11:10.992
+<v Daniel>Yes. So Liang showed that older detectors falsely flagged non-native prose simply because it was predictable, effectively punishing international students for just writing simply. So, I mean, how do we know Gross isn't just capturing</v>
+
+89
+00:11:11.173 --> 00:11:13.935
+<v Daniel>algorithmic bias against international students here?</v>
+
+90
+00:11:14.591 --> 00:11:29.242
+<v Maya>It's a great question, and it is the sharpest methodological tension in the paper, because if the detector is biased, that entire demographic finding falls apart completely. Right. But Gross and his team tackled this critique head-on by going back to that pre-2023 baseline we</v>
+
+91
+00:11:29.282 --> 00:11:43.032
+<v Maya>discussed earlier. In that pre-chat GPT era, their data set contained about 18,000 graduates a year from non-English-speaking countries. And when they ran pangram over those specific non-native abstracts, the flag rate was literally 0%.</v>
+
+92
+00:11:44.167 --> 00:11:48.571
+<v Daniel>Wait. Zero false positives among 18,000 non-native writers.</v>
+
+93
+00:11:49.072 --> 00:12:02.785
+<v Maya>Zero. Which tells us pangram is not merely measuring low perplexity or simple English. It is successfully identifying the deeper statistical watermarks of a modern language model. So the 41% adoption rate? It's robust.</v>
+
+94
+00:12:03.926 --> 00:12:04.927
+<v Daniel>Wow. Okay.</v>
+
+95
+00:12:05.745 --> 00:12:16.153
+<v Maya>But it opens up this massive philosophical debate. Because is this high adoption rate evidence that AI is acting as a brilliant equalizer for global science?</v>
+
+96
+00:12:16.653 --> 00:12:29.422
+<v Daniel>Yeah, because Kusumigi's 2025 paper noted a really similar trend in the published literature. Like AI is drastically lowering the communication barrier for brilliant scientists who simply don't speak English as their first language.</v>
+
+97
+00:12:29.882 --> 00:12:31.804
+<v Maya>Exactly. They can just do the science.</v>
+
+98
+00:12:32.331 --> 00:12:37.375
+<v Daniel>Right. They could finally share their findings without the agonizing friction of translation holding them back.</v>
+
+99
+00:12:37.856 --> 00:12:52.788
+<v Maya>It undeniably levels the playing field for dissemination, which is incredible. The counter-argument, however, asks whether relying on that equalizer causes students to skip a fundamental stage of cognitive training. Like, are we depriving these</v>
+
+100
+00:12:52.848 --> 00:12:58.132
+<v Maya>students of the intellectual benefits that come from actually wrestling with scientific communication?</v>
+
+101
+00:12:58.785 --> 00:13:09.391
+<v Daniel>Which brings us to what actually happens to these students after they leave the university. Like, does an AI-assisted dissertation help them launch their careers? Or does it carry some sort of penalty?</v>
+
+102
+00:13:09.892 --> 00:13:12.673
+<v Maya>The career outcomes data is really telling here.</v>
+
+103
+00:13:13.414 --> 00:13:27.042
+<v Daniel>Yeah. So Gross and his co-authors linked these ProQuest graduates to their subsequent LinkedIn career profiles using an analytics platform called Revelio Labs. And the outcomes they found are stark.</v>
+
+104
+00:13:27.394 --> 00:13:42.265
+<v Maya>Very stark. So let's isolate the U.S.-origin graduates from those high-tier R1 research universities just to keep the variables tight. Okay. For those specific domestic students, writing an AI-assisted dissertation correlates with a</v>
+
+105
+00:13:42.485 --> 00:13:55.554
+<v Maya>7.4-point drop in academic employment and an 8.0-point jump in industry employment. And even those who do manage to stay in academia, they end up landing in far more non-tenure-track roles.</v>
+
+106
+00:13:55.935 --> 00:14:08.943
+<v Daniel>Wow. And the paper notes that the penalty is attenuated, so much weaker for foreign origin graduates, probably because they face a completely different, highly restrictive visa and labor market reality.</v>
+
+107
+00:14:09.244 --> 00:14:11.145
+<v Maya>Right. The visa issues skew their choices.</v>
+
+108
+00:14:11.765 --> 00:14:26.571
+<v Daniel>But for domestic students, the trend is glaring. AI use heavily correlates with leaving academic research. But OK, for anyone listening right now who manages talent or hires out of these programs, We have a classic correlation</v>
+
+109
+00:14:26.651 --> 00:14:28.291
+<v Daniel>versus causation problem here.</v>
+
+110
+00:14:28.571 --> 00:14:34.293
+<v Maya>We do. Because Gross is looking at these career correlations and framing it as a potential training deficit.</v>
+
+111
+00:14:34.913 --> 00:14:46.996
+<v Daniel>But consider reverse causality, right? Imagine a student in, say, year six of their PhD. They are totally burned out. They've already decided they're going to leave academia and take a high-paying tech job in industry.</v>
+
+112
+00:14:47.436 --> 00:14:48.357
+<v Maya>Which happens a lot.</v>
+
+113
+00:14:48.697 --> 00:15:03.193
+<v Daniel>Exactly. Aren't they exactly the kind of person who would just have a language model write their dissertation so they can get the credential over with? I mean, the AI isn't causing them to miss out on academic jobs. Their decision to leave academia is causing them to use AI.</v>
+
+114
+00:15:03.753 --> 00:15:16.242
+<v Maya>It's a very fair point. And the authors explicitly name reverse causality as a primary caveat in their research. But there is a specific detail in their data that complicates the idea that these students are just checking out.</v>
+
+115
+00:15:16.602 --> 00:15:17.543
+<v Daniel>Oh, what's that?</v>
+
+116
+00:15:17.878 --> 00:15:23.142
+<v Maya>The overall length of the dissertations does not differ between the AI users and the non-AI users.</v>
+
+117
+00:15:23.722 --> 00:15:25.063
+<v Daniel>Oh, wait, really?</v>
+
+118
+00:15:25.504 --> 00:15:35.931
+<v Maya>Yeah. So they aren't just phoning it in with a 20-page summary to rush for the exit. If they were entirely disengaged, you would expect significantly shorter, thinner dissertations.</v>
+
+119
+00:15:36.311 --> 00:15:37.152
+<v Daniel>That makes total sense.</v>
+
+120
+00:15:37.609 --> 00:15:51.541
+<v Maya>But they're producing the exact same volume of work, often 150 to 200 pages. They aren't writing less. They are just outsourcing the sheer effort of the packaging, which loops us right back to the cognitive fear at the heart of the gross paper.</v>
+
+121
+00:15:52.061 --> 00:16:03.471
+<v Daniel>Right. If you outsource the effort of the writing, do you also offshore the cognitive process of the learning? I keep thinking of it like using GPS to navigate a new city.</v>
+
+122
+00:16:03.791 --> 00:16:04.632
+<v Maya>That's a great analogy.</v>
+
+123
+00:16:05.357 --> 00:16:19.849
+<v Daniel>You absolutely get to your destination faster and with far less stress. But if your phone dies three weeks later, you realize you have zero mental map of the streets. You offloaded the spatial mapping to the machine, so your brain just never built the neural</v>
+
+124
+00:16:19.869 --> 00:16:20.410
+<v Daniel>pathways.</v>
+
+125
+00:16:20.930 --> 00:16:31.719
+<v Maya>The GPS analogy maps perfectly onto cognitive offloading in academia. But to really understand why this matters for the rigor of future science, we have to pull in some causal evidence from outside the gross paper.</v>
+
+126
+00:16:32.313 --> 00:16:34.654
+<v Daniel>Right, because Gross' stuff is just correlational.</v>
+
+127
+00:16:34.914 --> 00:16:47.241
+<v Maya>Exactly. Gross actually leans on two major background studies to build his theory. First, there's a 2025 paper by Bastani et al. that ran a massive experiment with Turkish high school students learning math with an AI tutor.</v>
+
+128
+00:16:47.261 --> 00:16:47.881
+<v Daniel>Okay.</v>
+
+129
+00:16:48.641 --> 00:16:55.865
+<v Maya>And second, a 2026 paper by Otter et al. that conducted a field experiment with working professionals who were drafting complex patents.</v>
+
+130
+00:16:56.765 --> 00:17:02.706
+<v Daniel>So how did those experiments isolate the actual mechanism of learning versus just, you know, producing content?</v>
+
+131
+00:17:03.367 --> 00:17:13.389
+<v Maya>Well, both studies proved causally that AI assistance massively raises short-term output. The students completed their math assignments much faster, and the professionals drafted patents at a record pace.</v>
+
+132
+00:17:13.449 --> 00:17:14.549
+<v Daniel>Right, the efficiency game.</v>
+
+133
+00:17:15.029 --> 00:17:29.745
+<v Maya>But simultaneously, the AI eroded their underlying expertise. When the researchers eventually took the AI tools away, the users actually performed worse than the control groups who had never used AI in the first place. Yeah. Otter describes it as a falling</v>
+
+134
+00:17:29.765 --> 00:17:30.966
+<v Maya>asleep at the wheel effect.</v>
+
+135
+00:17:31.366 --> 00:17:38.950
+<v Daniel>Because you stop paying attention to the road, since the machine is doing the steering. But, I mean, I still have to challenge the Gross paper on this specific leap.</v>
+
+136
+00:17:39.110 --> 00:17:39.710
+<v Maya>Okay, go ahead.</v>
+
+137
+00:17:40.010 --> 00:17:55.001
+<v Daniel>Gross looks at career correlations, like the shift from academia to industry, and infers a training deficit based on the theories of Bastani and Otter. Given that Gross' evidence on the PhDs is strictly correlational, is it actually strong enough</v>
+
+138
+00:17:55.021 --> 00:17:59.888
+<v Daniel>to claim these graduate students didn't learn their science just because they outsourced their grammar?</v>
+
+139
+00:18:00.415 --> 00:18:15.164
+<v Maya>It is a significant inferential leap, yes. But you have to ask what the act of writing actually does in a research context. Writing is not merely packaging a pristine thought that already exists fully formed in your head. As we mentioned at the start, writing is the crucible. It is the</v>
+
+140
+00:18:15.224 --> 00:18:24.389
+<v Maya>specific process where a scientist attempts to explain their methodology, realizes there's a logical leap they can't quite justify, and discovers a hidden flaw in their own experiment.</v>
+
+141
+00:18:24.672 --> 00:18:30.118
+<v Daniel>The act of translating the abstraction into concrete sentences is what reveals the holes.</v>
+
+142
+00:18:30.438 --> 00:18:43.973
+<v Maya>Exactly. So if you bypass that crucible by letting a language model smooth over your rough ideas with, you know, perfectly polished, incredibly confident prose, you might never realize that your underlying logic is completely broken.</v>
+
+143
+00:18:44.465 --> 00:18:48.248
+<v Daniel>The AI will just make a mediocre idea sound brilliant. Exactly.</v>
+
+144
+00:18:48.689 --> 00:18:57.577
+<v Maya>And bypassing that stage might mean the next generation of scientists produces a much higher volume of papers, but vastly less rigorous science.</v>
+
+145
+00:18:58.147 --> 00:19:11.676
+<v Daniel>Synthesizing the landscape of this deep dive. I mean, the data Gross and his team have pulled together is definitive. AI is rewriting the U.S. STEM PhD pipeline. And the diffusion is happening at literal lightning speed.</v>
+
+146
+00:19:11.977 --> 00:19:12.517
+<v Maya>It really is.</v>
+
+147
+00:19:13.057 --> 00:19:24.165
+<v Daniel>And it is operating as a profound, historically unprecedented equalizer for non-native English speakers, allowing them to participate in global science without the massive friction of a language barrier.</v>
+
+148
+00:19:24.561 --> 00:19:38.572
+<v Maya>But the tension we are left with is whether that equalization comes at the cost of automating away the necessary struggle of scientific training. The very friction that historically forged deep critical thinking is just disappearing.</v>
+
+149
+00:19:38.863 --> 00:19:53.852
+<v Daniel>So for anyone listening who manages entry-level talent in a tech firm right now or, you know, for professors currently advising graduate students, how do you adapt to a landscape where the written word is no longer a reliable signal of competence?</v>
+
+150
+00:19:54.652 --> 00:20:00.116
+<v Daniel>Gross and his colleagues ask an incredibly sobering question at the very end of their paper.</v>
+
+151
+00:20:00.516 --> 00:20:01.036
+<v Maya>Yeah, they do.</v>
+
+152
+00:20:01.136 --> 00:20:15.622
+<v Daniel>They ask, is the live in-person dissertation defense the only verification institution we have left? Which is wild to think about. We may be entering an era where we have to rely almost entirely on real time, unassisted human</v>
+
+153
+00:20:15.702 --> 00:20:20.645
+<v Daniel>interrogation just to determine if someone actually possesses the expertise they claim to have on paper.</v>
+
+154
+00:20:21.335 --> 00:20:36.254
+<v Maya>Which leaves us with a final thought to mull over. If AI completely removes the friction and the struggle of writing across all disciplines, not just in STEM, right, but in law, humanities, business, what other invisible, tacit skills are we</v>
+
+155
+00:20:36.434 --> 00:20:38.357
+<v Maya>accidentally automating away?</v>
+
+156
+00:20:38.797 --> 00:20:53.176
+<v Daniel>Yeah, what's getting lost? We are talking about the patience to just sit with a difficult problem, the structural logic required to build a long-form argument, and the self-awareness to spot your own flaws. Are we going to wake up a</v>
+
+157
+00:20:53.336 --> 00:21:00.304
+<v Daniel>generation from now and realize we used our cognitive GPS so much that we completely forgot how to navigate the intellectual world?</v>
