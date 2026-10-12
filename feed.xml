@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Oct 2026 11:34:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 07:20:59 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1408,5 +1408,23 @@ Reference: Larooij, M., &amp; Törnberg, P. (2025). Do Large Language Models Sol
       <pubDate>Sun, 11 Oct 2026 10:53:28 +0000</pubDate>
       <itunes:episode>72</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/072%20-%20When%20AI%20Agents%20Pick%20Sides.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>073 - When AI Proves Faster Than Mathematicians Can Read</title>
+      <description>OpenAI Research Catalog: 372 Result Families in 719 Manuscripts (October 2026)
+
+In this episode we unpack OpenAI's October 6 release of mathematical manuscripts produced by an unreleased internal model, posted to GitHub with no journal or preprint server in between. OpenAI says the model was posed roughly 4,000 open research problems at about three hours of ChatGPT Pro thinking compute each, and the catalog groups what came out into 372 result families claiming progress on problems mathematicians have chased for decades, with about 42 percent of the top-line results formalized in Lean so far.
+
+We walk through the headline claims, including the Unique Games Conjecture, L = BPL, cases of the Birch–Swinnerton-Dyer formula, a quasi-Riemann zero-free half plane, the irrationality exponent of pi, and counterexamples to Kaplansky's zero-divisor and Baum–Connes conjectures, along with the three manuscripts withdrawn a day later over a sign error and the released reasoning summary behind the pi result. We set the release against the Association for Human Mathematics statement calling it "a demonstration of power," Thomas Hales's account of what a Lean kernel check does and does not guarantee, and Terence Tao's Math 2.0 lecture on the shift from proof scarcity to proof abundance, and close on what happens to a field when verification rather than discovery becomes the bottleneck.
+
+Reference: OpenAI. (2026). OpenAI Research Catalog: 372 result families in 719 manuscripts. GitHub, openai/math. https://github.com/openai/math
+Reference: OpenAI. (2026). Summarized chain of thought: The irrationality exponent of π is 2. GitHub, openai/math. https://github.com/openai/math/blob/main/reasoning_traces/irrationality-exponent-of-pi.pdf
+Reference: Association for Human Mathematics Communications Working Group. (2026). AHM statement on OpenAI's October 6 release of mathematical documents. Guest post, What's new (T. Tao). https://terrytao.wordpress.com/2026/10/07/ahm-statement-on-openais-october-6-release-of-mathematical-documents/
+Reference: Hales, T. (2026). What mathematicians should know about the Lean Theorem Prover: Questions of reliability and AI. Guest post, What's new (T. Tao). https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/
+Reference: Tao, T. (2026). Math 2.0. Public lecture slides, Caltech. https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf</description>
+      <guid isPermaLink="false">64a8d99b678338d88a2778a997aa341b275afbd9</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/073%20-%20When%20AI%20Proves%20Faster%20Than%20Mathematicians%20Can%20Read.m4a" length="42371674" type="audio/mp4" />
+      <pubDate>Mon, 12 Oct 2026 06:24:54 +0000</pubDate>
+      <itunes:episode>73</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/073%20-%20When%20AI%20Proves%20Faster%20Than%20Mathematicians%20Can%20Read.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
