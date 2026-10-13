@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Oct 2026 07:20:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 06:59:59 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1426,5 +1426,24 @@ Reference: Tao, T. (2026). Math 2.0. Public lecture slides, Caltech. https://teo
       <pubDate>Mon, 12 Oct 2026 06:24:54 +0000</pubDate>
       <itunes:episode>73</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/073%20-%20When%20AI%20Proves%20Faster%20Than%20Mathematicians%20Can%20Read.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>074 - When Language Models Stand In For People</title>
+      <description>Simulated Responses From Large Language Models Are Weak Proxies For Human Economic Preferences Across 74 Countries (October 2026) + AI-Generated Language Remains Systematically Distinguishable From Human Communication (October 2026)
+
+In this episode we unpack two papers published on the same day that ask whether a language model can stand in for real people in social science research. In Nature Human Behaviour, Fadong Chen, Qijun Wang and Lei Wang of Zhejiang University, with Sudeep Bhatia of the University of Pennsylvania, rerun the Global Preference Survey with machines in place of its human respondents. In PNAS, Nicolò Pagan, Petter Törnberg, Christopher Bail and Christopher Barrie test whether AI-written social media replies can pass for the people they imitate (the published version of a November 2025 preprint). The answer from both directions is the same: the models get the broad strokes right and miss the person.
+
+We walk through the virtual Global Preference Survey, which matches 67,201 real respondents in 74 countries with personas answered by 12 model configurations from OpenAI, Google and DeepSeek. The models recover gender, age and cognitive-ability gradients 77.8 percent of the time but cultural differences only 48.1 percent of the time, explain just 1.3 percent of individual-level variance, do worse in poorer and less connected countries, and agree with each other far more than with people. We then turn to the computational Turing test, which pits nine open-weight models and five calibration strategies, from persona prompts to fine-tuning, against real users on X, Bluesky and Reddit. A classifier still spots the AI reply 70 to 80 percent of the time, emotional tone is the stubborn tell, instruction-tuned models are easier to spot than base models, and sounding more human comes at the cost of saying what the human actually said. Along the way we revisit the silicon samples of Argyle and colleagues, the optimistic Nature result of Ashokkumar and colleagues, the Global Preference Survey itself and Larooij and Törnberg's critique of generative social simulation, and close on what it would take before synthetic respondents can replace real ones in surveys, market research and policy evaluation.
+
+Reference: Chen, F., Wang, Q., Wang, L., &amp; Bhatia, S. (2026). Simulated responses from large language models are weak proxies for human economic preferences across 74 countries. Nature Human Behaviour. https://doi.org/10.1038/s41562-026-02611-4
+Reference: Pagan, N., Törnberg, P., Bail, C. A., &amp; Barrie, C. (2026). AI-generated language remains systematically distinguishable from human communication. Proceedings of the National Academy of Sciences. https://doi.org/10.1073/pnas.2531748123 (preprint: arXiv:2511.04195. https://arxiv.org/abs/2511.04195)
+Reference: Argyle, L. P., Busby, E. C., Fulda, N., Gubler, J., Rytting, C., &amp; Wingate, D. (2023). Out of one, many: Using language models to simulate human samples. Political Analysis, 31(3), 337-351. arXiv:2209.06899. https://arxiv.org/abs/2209.06899
+Reference: Ashokkumar, A., Hewitt, L., Ghezae, I., &amp; Willer, R. (2026). Large language models can predict the results of social science experiments. Nature. https://doi.org/10.1038/s41586-026-10742-x
+Reference: Falk, A., Becker, A., Dohmen, T., Enke, B., Huffman, D., &amp; Sunde, U. (2015). The nature and predictive power of preferences: Global evidence. IZA Discussion Paper No. 9504 (published as Global evidence on economic preferences, Quarterly Journal of Economics, 2018). https://docs.iza.org/dp9504.pdf
+Reference: Larooij, M., &amp; Törnberg, P. (2025). Do large language models solve the problems of agent-based modeling? A critical review of generative social simulations. arXiv:2504.03274. https://arxiv.org/abs/2504.03274</description>
+      <guid isPermaLink="false">be0c94edb5438b9d921472d0d43d9819b2d923f5</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/074%20-%20When%20Language%20Models%20Stand%20In%20For%20People.m4a" length="41953217" type="audio/mp4" />
+      <pubDate>Tue, 13 Oct 2026 06:20:55 +0000</pubDate>
+      <itunes:episode>74</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/074%20-%20When%20Language%20Models%20Stand%20In%20For%20People.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

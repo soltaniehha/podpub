@@ -1,0 +1,705 @@
+WEBVTT
+
+1
+00:00:00.311 --> 00:00:10.855
+<v Daniel>Imagine for a second that you are prepping this massive marketing campaign, or maybe you're writing a new sweeping public policy, or designing a really complex sociology experiment.</v>
+
+2
+00:00:11.395 --> 00:00:13.416
+<v Maya>Right, something that takes months of work.</v>
+
+3
+00:00:13.676 --> 00:00:28.621
+<v Daniel>Exactly. You're staring down the barrel observing thousands of real people. And then somebody leans over and suggests this shortcut. They say, hey, why bother surveying thousands of actual humans? Just ask an AI</v>
+
+4
+00:00:28.641 --> 00:00:29.301
+<v Daniel>to simulate them.</v>
+
+5
+00:00:30.176 --> 00:00:36.281
+<v Maya>Which, I mean, it sounds completely like science fiction, right? But you have to admit, it is incredibly tempting.</v>
+
+6
+00:00:36.541 --> 00:00:37.342
+<v Daniel>Oh, absolutely.</v>
+
+7
+00:00:37.482 --> 00:00:39.223
+<v Maya>It's the ultimate efficiency hack, you know?</v>
+
+8
+00:00:39.583 --> 00:00:51.673
+<v Daniel>Yeah. You essentially replace the messy, expensive, time-consuming reality of human respondents with an algorithm. One that just spits out an entire population's worth of answers in, like, a matter of seconds.</v>
+
+9
+00:00:52.110 --> 00:01:07.059
+<v Maya>But the big question is, is it actually a shortcut or is it just a really convincing mirage? So today is Monday, October 12th, 2026. And our mission in this deep dive is to answer a massive question. Can a large language model</v>
+
+10
+00:01:07.199 --> 00:01:22.150
+<v Maya>truly stand in for real people in social science research? And, you know, the stakes here go way beyond just academic curiosity, because if we get this wrong, I mean, we are going to be basing new products, public policies and and even scientific theories on this</v>
+
+11
+00:01:22.530 --> 00:01:23.451
+<v Maya>synthetic illusion.</v>
+
+12
+00:01:23.651 --> 00:01:34.179
+<v Daniel>Yeah, which is terrifying. So to figure this out, we have a really fascinating stack of sources to unpack today. The main story revolves around two brand new papers published literally today.</v>
+
+13
+00:01:34.199 --> 00:01:35.180
+<v Maya>Hot off the presses.</v>
+
+14
+00:01:35.240 --> 00:01:50.152
+<v Daniel>Right. One is in Nature Human Behavior and one is in PNAS. And we also have four older background papers that kind of help set the stage, showing where this dream of AI respondents even came from and exactly how we measure their success. So, OK,</v>
+
+15
+00:01:50.252 --> 00:01:54.535
+<v Daniel>let's unpack this. We really need to start with the premise of the silicon sample.</v>
+
+16
+00:01:54.999 --> 00:02:04.205
+<v Maya>Right. Because before we can understand why today's two new papers are so, you know, disruptive, we really have to understand the optimistic dream that they are putting to the test.</v>
+
+17
+00:02:04.385 --> 00:02:05.826
+<v Daniel>The dream of the silicon sample.</v>
+
+18
+00:02:06.006 --> 00:02:16.192
+<v Maya>Exactly. And that dream really took shape in a 2023 paper by Argyle and colleagues. They actually coined the terms silicon samples and algorithmic fidelity.</v>
+
+19
+00:02:16.793 --> 00:02:23.737
+<v Daniel>OK. Algorithmic fidelity. That sounds highly technical. But what does it actually mean in practice for you or me?</v>
+
+20
+00:02:24.207 --> 00:02:30.173
+<v Maya>It's basically the idea that if you give a model like GPT-3 a really detailed demographic backstory.</v>
+
+21
+00:02:30.353 --> 00:02:31.394
+<v Daniel>Like a character prompt?</v>
+
+22
+00:02:31.574 --> 00:02:46.508
+<v Maya>Yeah, exactly. So say you tell it to act like a 45-year-old female nurse from Ohio who votes independent. The model won't just give you a generic robotic response. It will supposedly reproduce the statistical survey responses of that specific human</v>
+
+23
+00:02:46.548 --> 00:02:47.008
+<v Maya>subgroup.</v>
+
+24
+00:02:47.328 --> 00:02:48.950
+<v Daniel>Because it's read so much of the Internet.</v>
+
+25
+00:02:49.218 --> 00:02:57.004
+<v Maya>Right. The argument was that the training data is just so vast that it is kind of internalized the viewpoints of almost every demographic.</v>
+
+26
+00:02:57.605 --> 00:03:04.850
+<v Daniel>And I mean, people really bought into this, right? The optimism around replacing human surveys with AI got pretty intense over the last couple of years.</v>
+
+27
+00:03:05.050 --> 00:03:16.739
+<v Maya>Oh, it reached a massive peak recently. There was a paper from Asha Kumar and colleagues published in Nature earlier this year, so in 2026, and they made the absolute strongest optimistic case yet.</v>
+
+28
+00:03:17.159 --> 00:03:17.680
+<v Daniel>What did they find?</v>
+
+29
+00:03:18.240 --> 00:03:30.308
+<v Maya>Well, they took 70 pre-registered U.S. survey experiments, fed them to GPT-4, and found that the model could predict the aggregate treatment effects about as well as a pooled group of human forecasters.</v>
+
+30
+00:03:30.528 --> 00:03:31.088
+<v Daniel>Wait, really?</v>
+
+31
+00:03:31.328 --> 00:03:31.508
+<v Maya>Yeah.</v>
+
+32
+00:03:32.049 --> 00:03:39.313
+<v Daniel>So the AI essentially matched the crowd wisdom of human experts who were predicting how Americans would react to different survey interventions.</v>
+
+33
+00:03:39.473 --> 00:03:45.317
+<v Maya>Yes. Though there was one notable caveat. The AI systematically overestimated the effect sizes.</v>
+
+34
+00:03:45.917 --> 00:03:46.938
+<v Daniel>Oh, so it exaggerated.</v>
+
+35
+00:03:47.403 --> 00:03:57.185
+<v Maya>Exactly. It constantly thought the interventions would work better or cause a bigger reaction than they actually did in reality. But the directional correlation was still incredibly strong.</v>
+
+36
+00:03:57.725 --> 00:04:12.227
+<v Daniel>OK, but predicting a broad general trend across the entire United States is one thing. That's highly represented in the AI's training data. But my pushback here is about the individual. Can an AI actually replicate the nuances of a specific</v>
+
+37
+00:04:12.467 --> 00:04:15.348
+<v Daniel>complex person living in a totally different culture?</v>
+
+38
+00:04:16.091 --> 00:04:29.355
+<v Maya>Right. And if we connect this to the bigger picture, that is the exact leap we need to examine today. Because to thoroughly test this, we can't just look at U.S. averages. We need a brutal testing ground. We need the Global Preference Survey, or GPS.</v>
+
+39
+00:04:29.775 --> 00:04:30.176
+<v Daniel>Ah, okay.</v>
+
+40
+00:04:30.656 --> 00:04:36.538
+<v Maya>This was originally published by Falk and colleagues in 2018, and it's based on the 2012 Gallup World Poll.</v>
+
+41
+00:04:37.178 --> 00:04:44.180
+<v Daniel>So this is our human benchmark for the day. Tell me why this specific survey is so highly regarded. Like, why use this one?</v>
+
+42
+00:04:44.648 --> 00:04:58.752
+<v Maya>Well, the GPS is just an incredibly rigorous data set. It's 80,000 real people across 76 different countries. And they didn't just ask them vague hypothetical questions. They actually validated their survey items using real financial stakes.</v>
+
+43
+00:04:59.032 --> 00:05:02.073
+<v Daniel>Wow. Okay. So there's actual money on the line for these answers.</v>
+
+44
+00:05:02.213 --> 00:05:13.396
+<v Maya>Exactly. And they measured six fundamental economic preferences. Risk-taking, patience, positive reciprocity, negative reciprocity, altruism, and trust.</v>
+
+45
+00:05:13.963 --> 00:05:19.807
+<v Daniel>So basically, if an AI is going to prove it can actually mimic humanity, it has to be able to mimic this data set.</v>
+
+46
+00:05:20.247 --> 00:05:23.489
+<v Maya>Which brings us directly to the first of today's brand new papers.</v>
+
+47
+00:05:23.809 --> 00:05:24.009
+<v Daniel>Yes.</v>
+
+48
+00:05:24.189 --> 00:05:31.334
+<v Maya>The title is Simulated Responses from Large Language Models Are Weak Proxies for Human Economic Preferences Across 74 Countries.</v>
+
+49
+00:05:32.610 --> 00:05:33.130
+<v Daniel>quite the title.</v>
+
+50
+00:05:33.251 --> 00:05:44.519
+<v Maya>It is. It's by Fadong Chen, Kijun Wang, Lei Wang from Zhejiang University, and Sadiq Badia from the University of Pennsylvania. And it was published online today in Nature Human Behavior.</v>
+
+51
+00:05:45.060 --> 00:05:52.946
+<v Daniel>Okay. Let's talk about the sheer scale of what this team did. It is staggering. I mean, they basically built a virtual global preference survey.</v>
+
+52
+00:05:53.246 --> 00:05:54.207
+<v Maya>Yeah, that's a good way to put it.</v>
+
+53
+00:05:54.642 --> 00:06:09.194
+<v Daniel>They took 67,201 real respondents from 74 countries in the original GPS data. Then for every single one of those real humans, they built a matched AI persona based on their gender, age, cognitive ability and country.</v>
+
+54
+00:06:09.615 --> 00:06:17.622
+<v Maya>Right. And then they just unleashed the models. They asked 12 different large language model configurations to take the survey as those personas.</v>
+
+55
+00:06:18.022 --> 00:06:19.163
+<v Daniel>12 different models.</v>
+
+56
+00:06:19.387 --> 00:06:34.179
+<v Maya>Yeah, we are talking about OpenAI's GPT-3.5 Turbo all the way up through GPT-5.4, Google's Gemini 2.0 and 2.5 Flash, and DeepSeek V3. And crucially, they had the AI answer the survey in the</v>
+
+57
+00:06:34.219 --> 00:06:37.081
+<v Maya>respondent's own local language and local currency.</v>
+
+58
+00:06:37.456 --> 00:06:45.178
+<v Daniel>Which generated something like 27.8 million individual answers in total. That is a massive synthetic population.</v>
+
+59
+00:06:45.638 --> 00:06:46.179
+<v Maya>It's huge.</v>
+
+60
+00:06:46.799 --> 00:06:58.322
+<v Daniel>But looking at the data, I am seeing a bizarre contradiction here. On one hand, the researchers found that 87.5% of the individual level correlations were positive and significant.</v>
+
+61
+00:06:58.762 --> 00:06:58.982
+<v Maya>Right.</v>
+
+62
+00:06:59.102 --> 00:07:03.083
+<v Daniel>Which sounds like a massive victory for the AI. Like, they nailed it.</v>
+
+63
+00:07:03.624 --> 00:07:15.293
+<v Maya>It completely looks like a victory. Until you look at the second metric. So the models get the direction right, meaning if the human data showed a trend going up, the AI data generally went up too.</v>
+
+64
+00:07:15.313 --> 00:07:15.893
+<v Daniel>Okay.</v>
+
+65
+00:07:16.433 --> 00:07:22.137
+<v Maya>But when the researchers looked at how much of the actual individual human variation the AI could explain.</v>
+
+66
+00:07:22.497 --> 00:07:23.317
+<v Daniel>Right, the nuance.</v>
+
+67
+00:07:24.058 --> 00:07:32.843
+<v Maya>The LLM predictions explained a dismal 1.3% of the individual level variance and only 4.2% of the country level variance.</v>
+
+68
+00:07:33.292 --> 00:07:41.895
+<v Daniel>Only 1.3%. I mean, I need an analogy here. It feels like predicting the weather, you know? Like, I can confidently say that summer is generally hotter than winter.</v>
+
+69
+00:07:42.115 --> 00:07:43.255
+<v Maya>Right, that's the correlation.</v>
+
+70
+00:07:43.435 --> 00:07:52.978
+<v Daniel>Exactly. And the AI gets that right. But the variance is trying to predict whether it will be 82 degrees or 95 degrees next Tuesday in my specific zip code.</v>
+
+71
+00:07:53.462 --> 00:08:05.064
+<v Maya>That is a brilliant way to frame it. The models are capturing the absolute broadest strokes, but they are entirely missing the actual person. They get the correlation, but they fail completely at the magnitude and the nuance.</v>
+
+72
+00:08:05.524 --> 00:08:12.785
+<v Daniel>So let's look at how the models handle basic demographics versus deep cultural differences, because there is a huge split there in the paper.</v>
+
+73
+00:08:13.265 --> 00:08:28.254
+<v Maya>Oh, yeah. The models do recover demographic gradients, so differences based on age, gender, or cognitive ability, about 77.8% of the time. Which is pretty good. Yeah. And for patients and risk-taking, they hit 100%. But</v>
+
+74
+00:08:28.394 --> 00:08:35.036
+<v Maya>when you ask the model to mimic cultural differences, it just falls off a cliff. They are only right 48.1% of the time.</v>
+
+75
+00:08:35.476 --> 00:08:38.657
+<v Daniel>Wait, 48%. That is worse than a coin flip.</v>
+
+76
+00:08:38.957 --> 00:08:48.121
+<v Maya>Literally coin flip territory. If you want to know how a respondent in Japan differs from a respondent in Kenya on an economic issue, the AI is essentially just guessing.</v>
+
+77
+00:08:48.461 --> 00:08:54.288
+<v Daniel>So to figure out why the AI was failing so badly at this, The researchers did an ablation test, right?</v>
+
+78
+00:08:54.728 --> 00:09:08.113
+<v Maya>Yes. They systematically stripped away different parts of the prompt to see what was actually driving the AI's behavior. And they found that the demographic cues, so telling the AI the person's age or gender, do all the heavy lifting for the alignment.</v>
+
+79
+00:09:08.774 --> 00:09:11.215
+<v Daniel>And when they added the country label to the prompt...</v>
+
+80
+00:09:11.655 --> 00:09:12.955
+<v Maya>It barely changed the output at all.</v>
+
+81
+00:09:13.576 --> 00:09:13.776
+<v Daniel>Wow.</v>
+
+82
+00:09:13.836 --> 00:09:21.839
+<v Maya>Yeah. The AI simply lacks a deep internal representation of what it means to be from these specific countries, at least when it comes to economic preferences.</v>
+
+83
+00:09:22.572 --> 00:09:32.130
+<v Daniel>Which leads to something the paper calls a machine consensus. I found this fascinating. The models actually agree with each other far more than they agree with humanity.</v>
+
+84
+00:09:32.770 --> 00:09:33.491
+<v Maya>Exactly.</v>
+
+85
+00:09:33.771 --> 00:09:45.241
+<v Daniel>Despite being built by completely different companies with different architectures, they share this weird synthetic regularity because, you know, real people are wonderfully frustratingly messy.</v>
+
+86
+00:09:45.701 --> 00:09:46.862
+<v Maya>Yeah, we're all over the place.</v>
+
+87
+00:09:47.042 --> 00:09:52.447
+<v Daniel>Right. But the AI responses just collapse into this homogenized machine average.</v>
+
+88
+00:09:53.186 --> 00:10:07.989
+<v Maya>And we see the real-world consequence of that machine consensus when the researchers tried to replicate published findings. There were 35 published country-level findings from the original GPS data. The very best model they tested only got 16 of them right, with the</v>
+
+89
+00:10:08.069 --> 00:10:09.770
+<v Maya>same direction and significance.</v>
+
+90
+00:10:10.250 --> 00:10:11.770
+<v Daniel>So it failed more than half the time.</v>
+
+91
+00:10:12.330 --> 00:10:12.690
+<v Maya>It did.</v>
+
+92
+00:10:13.270 --> 00:10:21.512
+<v Daniel>And when a model smooths everything out into a homogenized average, my immediate question is, who is getting smoothed over? Who's being erased?</v>
+
+93
+00:10:22.050 --> 00:10:27.552
+<v Maya>And the paper actually points this out. The errors are distinctly worse in poorer, less digitally connected countries.</v>
+
+94
+00:10:28.013 --> 00:10:35.636
+<v Daniel>Right, because the error rate is predicted by a country's GDP and their ICT development index, which basically measures digital infrastructure.</v>
+
+95
+00:10:35.976 --> 00:10:46.240
+<v Maya>Exactly. It is not predicted by sheer population size or raw internet user counts. The models just have this Western, wealthy, digitized bias simply because of their training data.</v>
+
+96
+00:10:46.861 --> 00:10:49.562
+<v Daniel>And didn't they also find an issue with gender stereotypes?</v>
+
+97
+00:10:49.950 --> 00:10:58.052
+<v Maya>Yes, the models artificially overestimate women's pro-social preferences, especially in countries that have strong traditional gender stereotypes.</v>
+
+98
+00:10:58.673 --> 00:11:04.214
+<v Daniel>So the AI is leaning into a caricature rather than reflecting the messy reality of the actual individual.</v>
+
+99
+00:11:04.654 --> 00:11:05.314
+<v Maya>Exactly.</v>
+
+100
+00:11:05.915 --> 00:11:13.017
+<v Daniel>But wait, we have all these new massive models. I'm assuming GPT-5.4 must have fixed this compared to the older GPT-3.5, right?</v>
+
+101
+00:11:14.563 --> 00:11:28.933
+<v Maya>Actually, that is the most surprising finding in the paper. Newer models did not beat the older models. GPT 5.4 was not fundamentally better at this than GPT 3.5. That is wild. We are so conditioned to believe that the next software update just</v>
+
+102
+00:11:29.073 --> 00:11:43.600
+<v Maya>automatically solves the previous version's flaws. Now, the authors did flag one caveat. The GPS data is from 2012, so it might have been in the model's training data. But they actually ran paraphrase tests to check for memorization and found no</v>
+
+103
+00:11:43.720 --> 00:11:46.781
+<v Maya>evidence that the models were just regurgitating memorized answers.</v>
+
+104
+00:11:47.301 --> 00:11:48.622
+<v Daniel>Okay, so the failure is real.</v>
+
+105
+00:11:49.088 --> 00:12:03.460
+<v Maya>Yeah. Ultimately, Chen and his team conclude that LLMs are great for hypothesis generation or maybe pilot testing a survey to see if your cross-cultural translation makes sense. But they are absolutely not a substitute for macro-level inference or policy evaluation.</v>
+
+106
+00:12:04.060 --> 00:12:04.240
+Well,
+
+107
+00:12:04.701 --> 00:12:16.350
+<v Daniel>OK, if an AI fails at grand global economic theory, surely it can at least handle a simple everyday task, right? Like, can it at least sound exactly like us when replying to a post on social media?</v>
+
+108
+00:12:16.752 --> 00:12:31.579
+<v Maya>You would think so. Historically, researchers validated AI social simulations simply by asking human judges if the generated text looked believable. LaRue and Thornburg actually wrote a critical review about this in 2025. Right. They pointed out that human judges are incredibly</v>
+
+109
+00:12:31.639 --> 00:12:37.422
+<v Maya>blunt instruments. We see a coherent sentence with, you know, a couple of emojis and we just think, oh, a human wrote that.</v>
+
+110
+00:12:37.958 --> 00:12:49.143
+<v Daniel>We are very easily fooled. Which brings us to today's second new paper, which attacks this exact blind spot. It's titled, AI-Generated Language Remains Systematically Distinguishable from Human Communication.</v>
+
+111
+00:12:49.363 --> 00:12:49.603
+<v Maya>Yes.</v>
+
+112
+00:12:50.324 --> 00:13:03.410
+<v Daniel>It's by Niccolo Pagan, Peter Thornburg, Christopher Bale, and Christopher Berry. It's published today in PNAS. And just a quick note for you listening, this is the official published version of the famous computational Turing test preprint from last year.</v>
+
+113
+00:13:04.289 --> 00:13:05.490
+<v Maya>Oh, right, from 2025.</v>
+
+114
+00:13:05.771 --> 00:13:11.197
+<v Daniel>Exactly, which adds Aniko Hunnock to the author list. So how did they test this?</v>
+
+115
+00:13:11.855 --> 00:13:23.104
+<v Maya>What this team did was basically throw out the easily fooled human judges entirely. Instead, they built a computational Turing test using three really rigorous measures. First, a BERT classifier.</v>
+
+116
+00:13:23.564 --> 00:13:23.885
+<v Daniel>BERT.</v>
+
+117
+00:13:24.205 --> 00:13:36.595
+<v Maya>Yeah, it stands for Bidirectional Encoder Representations from Transformers. It's an AI model designed to look at the deep statistical relationships between words, catching those subtle structural patterns that are totally invisible to the human eye.</v>
+
+118
+00:13:37.142 --> 00:13:42.767
+<v Daniel>Okay, so they have an AI acting as the detective to catch the AI. What were the other two measures?</v>
+
+119
+00:13:43.167 --> 00:13:53.476
+<v Maya>Semantic similarity, meaning how close an actual meaning is the AI's generated reply to the text the real human originally posted. And finally, they used interpretable features.</v>
+
+120
+00:13:53.796 --> 00:13:54.136
+<v Daniel>Like what?</v>
+
+121
+00:13:54.436 --> 00:14:05.686
+<v Maya>So they counted emojis and hashtags, measured word length, analyzed toxicity levels, and used the empath library, which is a tool that categorizes the exact emotions being expressed in the text.</v>
+
+122
+00:14:06.061 --> 00:14:21.056
+<v Daniel>Wow. Okay. So they really dug into the structure of the posts and they put nine different open weight models to the test. Open weight meaning, you know, the researchers can actually see the underlying math and architecture of the models, unlike those closed systems from OpenAI or Google.</v>
+
+123
+00:14:21.436 --> 00:14:22.798
+<v Maya>Right. Complete transparency.</v>
+
+124
+00:14:23.213 --> 00:14:37.948
+<v Daniel>Yeah. They used Lama 3.1, 8B, and 70B, Mistral 7B, QN 2.5 7B, Gemma 3 4B, DeepSeek R1 Distill, and Apertus. And they had these models try to imitate real</v>
+
+125
+00:14:38.108 --> 00:14:41.171
+<v Daniel>users replying to posts on X, BlueSky, and Reddit.</v>
+
+126
+00:14:41.745 --> 00:14:56.569
+<v Maya>And they gave the AI every possible advantage. They used five different calibration strategies. They started with plain prompts, then added persona descriptions, provided stylistic examples of the user's past posts, used context retrieval, and even fine-tuned the</v>
+
+127
+00:14:56.609 --> 00:14:56.909
+<v Maya>models.</v>
+
+128
+00:14:57.229 --> 00:14:57.869
+<v Daniel>That's a lot of help.</v>
+
+129
+00:14:58.450 --> 00:15:07.432
+<v Maya>It is. They even used a best-of-20 selection strategy, where they generated 20 replies and algorithmically picked the one most likely to fool the detector.</v>
+
+130
+00:15:08.053 --> 00:15:17.437
+<v Daniel>Okay, so with all that help, even after all of that intense calibration, the BERT classifier still spotted the AI's reply 70 to 80% of the time?</v>
+
+131
+00:15:17.717 --> 00:15:18.277
+<v Maya>It's incredible.</v>
+
+132
+00:15:18.977 --> 00:15:22.439
+<v Daniel>What is the tell? Like, how is the machine continually giving itself away?</v>
+
+133
+00:15:22.979 --> 00:15:35.404
+<v Maya>The stubborn tell is emotional and effective tone. Plus, toxicity levels remain a top discriminator. The AI simply cannot replicate raw human emotion and genuine human toxicity accurately.</v>
+
+134
+00:15:36.077 --> 00:15:47.144
+<v Daniel>Wait, hold on. This actually leads to a finding in the paper that genuinely confuses me. They found that instruction-tuned models are more detectable as AI than their raw base versions.</v>
+
+135
+00:15:47.404 --> 00:15:47.624
+<v Maya>Yes.</v>
+
+136
+00:15:48.425 --> 00:15:59.212
+<v Daniel>But intuitively, if I give a model specific instructions and training to, quote-unquote, act like a human, it should be better at it. Why does the data show the exact opposite?</v>
+
+137
+00:15:59.640 --> 00:16:14.490
+<v Maya>It comes down to how these models are instruction-tuned in the first place. We use a process called reinforcement learning from human feedback, or RLHF. We train the models to be helpful, polite, and harmless. That alignment training fundamentally irons out the</v>
+
+138
+00:16:14.730 --> 00:16:25.698
+<v Maya>weird, idiosyncratic, sometimes toxic wrinkles of genuine human speech. It forces the text to sound like a polite machine, which just makes it much easier for the BERT classifier to spot.</v>
+
+139
+00:16:26.067 --> 00:16:34.353
+<v Daniel>Okay, that makes sense. But does model size fix this? We saw in the Chen paper that the GPT-5.4 didn't beat the older version.</v>
+
+140
+00:16:34.954 --> 00:16:46.563
+<v Maya>Same story here. The massive 70 billion parameter LAMA model is not more human-like than the much smaller 8 billion parameter version. Throwing more parameters at the problem just does not generate more humanity.</v>
+
+141
+00:16:47.171 --> 00:17:01.858
+<v Daniel>The paper also reveals that standard persona descriptions, you know, the exact thing that the silicon sample dream from 2023 was built on, barely help at all. Sometimes they even hurt the model's performance. So what calibration strategy actually works?</v>
+
+142
+00:17:02.419 --> 00:17:16.586
+<v Maya>Concrete examples of the user's past posts and retrieved context help the most. But employing those strategies leads to a massive central tension that the authors uncover. A tension between style and substance. I love this part.</v>
+
+143
+00:17:17.135 --> 00:17:22.867
+<v Daniel>It's like hiring an actor who does such a flawless impression of my voice and mimics my mannerisms perfectly.</v>
+
+144
+00:17:23.088 --> 00:17:23.308
+<v Maya>Right.</v>
+
+145
+00:17:23.449 --> 00:17:25.834
+<v Daniel>But they completely forget the lines I actually wrote for them to say.</v>
+
+146
+00:17:26.178 --> 00:17:37.548
+<v Maya>Exactly. The researchers measured this using that semantic similarity score. They found that making the text sound more human stylistically actually makes it say less of what the human originally meant.</v>
+
+147
+00:17:37.708 --> 00:17:37.908
+<v Daniel>Wow.</v>
+
+148
+00:17:38.268 --> 00:17:48.077
+<v Maya>Yeah. On Blue Sky, when they optimized the model to sound as human-like as possible, the median semantic similarity to the real human's actual post fell from 0.34 down to 0.28.</v>
+
+149
+00:17:50.307 --> 00:17:54.871
+<v Daniel>So human likeness and semantic fidelity are basically competing goals.</v>
+
+150
+00:17:55.131 --> 00:17:55.411
+<v Maya>Yes.</v>
+
+151
+00:17:55.992 --> 00:18:06.080
+<v Daniel>You can have an AI that sounds like a real person, but it won't convey the meaning that person intended. Or you can have it convey the right meaning, but it will sound undeniably like a robot.</v>
+
+152
+00:18:06.307 --> 00:18:20.672
+<v Maya>Exactly. And bringing both of today's papers together, we see them testing the exact same underlying assumption from two completely different angles. The assumption is that if you condition a model on a person's description, it will say what that person would say.</v>
+
+153
+00:18:21.172 --> 00:18:26.634
+<v Daniel>And the verdict from both the global economics paper and the social media paper is a resounding no.</v>
+
+154
+00:18:26.915 --> 00:18:27.995
+<v Maya>A very loud no.</v>
+
+155
+00:18:28.640 --> 00:18:43.352
+<v Daniel>The models get the broad strokes, but they miss the actual person. They give you the correct direction, but the wrong magnitude. They flatten culture, they flatten emotion, and they just offer this synthetic machine consensus with far less variety than</v>
+
+156
+00:18:43.712 --> 00:18:44.453
+<v Daniel>real humanity.</v>
+
+157
+00:18:45.147 --> 00:18:49.209
+<v Maya>But we do need to resolve the tension with the Ashok Kumar paper from earlier this year.</v>
+
+158
+00:18:49.429 --> 00:18:49.649
+<v Daniel>No,</v>
+
+159
+00:18:49.709 --> 00:19:00.994
+<v Maya>right. Because how can GPT-4 be so good at predicting U.S. survey experiments while simultaneously failing so completely at global individual preferences and social media mimicking?</v>
+
+160
+00:19:01.214 --> 00:19:11.458
+<v Daniel>They can both be true, can't they? Yeah, because Ashok Kumar was looking at predicting aggregate treatment effects, so averages, in a highly sampled population like the United States.</v>
+
+161
+00:19:11.768 --> 00:19:26.514
+<v Maya>Exactly. The Internet is dominated by U.S. data. The models have deeply internalized what the average American sounds like. Averages are easy for LLMs to mimic, but Chen and Pagan are asking the models to do something infinitely harder. Right. Chen is asking for</v>
+
+162
+00:19:26.714 --> 00:19:40.820
+<v Maya>individual human variants across 74 different countries. Pagan is asking for the specific semantic and emotional intent of an individual social media user. LLMs can mimic the crowd, but they cannot simulate the individual.</v>
+
+163
+00:19:41.490 --> 00:19:56.359
+<v Daniel>We have to make sure you, the listener, feel the difference here between correlated with humans and a substitute for humans. Because if you are prepping that marketing campaign or sociology experiment we talked about at the very beginning, and you are tempted to replace</v>
+
+164
+00:19:56.419 --> 00:20:04.184
+<v Daniel>your survey panels, your focus groups, or your customer research with synthetic respondents, what are you actually getting?</v>
+
+165
+00:20:05.005 --> 00:20:10.248
+<v Maya>You are trading human reality for a smoothed out, homogenized machine average.</v>
+
+166
+00:20:10.818 --> 00:20:25.459
+<v Daniel>And think about who gets erased when the model fills in the gaps with its Western-centric machine consensus. It's the underrepresented, the less digitally connected global populations, the people whose voices are already marginalized. They just disappear</v>
+
+167
+00:20:25.499 --> 00:20:25.940
+<v Daniel>completely.</v>
+
+168
+00:20:26.566 --> 00:20:41.456
+<v Maya>And both of today's papers agree on the current utility of these models. They are fantastic tools for pilot testing, for generating hypotheses, or for flagging where a cross-cultural survey might fail before you spend money on it. But they are absolutely not</v>
+
+169
+00:20:41.576 --> 00:20:45.639
+<v Maya>a substitute for human beings in macro-level inference or policy evaluation.</v>
+
+170
+00:20:46.379 --> 00:21:01.251
+<v Daniel>They augment the work. They don't replace the humans doing it. Which brings us to an open question to leave you with today. These models keep getting better at passing standardized benchmarks. But in both of today's studies, the newer, larger models</v>
+
+171
+00:21:01.311 --> 00:21:02.532
+<v Daniel>did not close the gap.</v>
+
+172
+00:21:03.052 --> 00:21:09.534
+<v Maya>Right. GPT 5.4 didn't beat 3.5. LAMA 70B didn't beat 8B.</v>
+
+173
+00:21:10.494 --> 00:21:20.637
+<v Daniel>So if scaling up model size and throwing mountains of more data at the problem isn't making AI any more human, what fundamental ingredient of the human experience is the algorithm missing?</v>
+
+174
+00:21:21.497 --> 00:21:22.938
+<v Maya>That is the million-dollar question.</v>
+
+175
+00:21:23.539 --> 00:21:38.349
+<v Daniel>It really is. What would it actually take for synthetic respondents to be trustworthy? And until we figure that out, who should be the human in the loop checking the AI's work? Because you definitely don't want to launch a global product based on the advice of a digital stunt</v>
+
+176
+00:21:38.369 --> 00:21:43.340
+<v Daniel>double who doesn't even know the script. Thanks so much for joining us for this deep dive. See you next time.</v>
