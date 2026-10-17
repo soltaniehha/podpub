@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2026 06:59:59 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 06:50:11 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1445,5 +1445,24 @@ Reference: Larooij, M., &amp; Törnberg, P. (2025). Do large language models sol
       <pubDate>Tue, 13 Oct 2026 06:20:55 +0000</pubDate>
       <itunes:episode>74</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/074%20-%20When%20Language%20Models%20Stand%20In%20For%20People.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>075 - When AI Science Needs A Referee</title>
+      <description>Discovering State-Of-The-Art Quantum Circuits With Large Language Models (October 2026) + Into The Unknown: Benchmarking AI Agents On Open Scientific Research Problems (October 2026)
+
+In this episode we unpack two papers posted two days apart that ask when an AI system can actually do science. From Harvard, Andi Gu, Alek Kemeny of Anthropic, Susanne Yelin and Mikhail Lukin show a language model designing quantum circuits that beat the published state of the art, with an independent evaluator checking every candidate. From Carnegie Mellon, Seungone Kim, Graham Neubig, Sean Welleck and colleagues, working with scientists at US Department of Energy national laboratories, ask nine frontier agents to write real follow-up papers and find that none clears the bar. Put side by side, the two papers make one argument: AI does well at science when someone independent holds the ground truth, and poorly when it has to grade its own work.
+
+We walk through the Harvard evolutionary search, in which Claude Mythos 5 writes circuit-generating programs scored by Toffoli count and qubit count. In seven of eight tasks the discovered circuits are cheaper on both, including a Reed-Solomon decoder about 12 times cheaper and an HHL rotation routine about 32 times cheaper. In the eighth, modular inversion, the search finds a new reversible architecture built on divsteps, and the machine keeps rediscovering three design principles: conditional routing, decoding a computation's history from its current state, and spending a failure budget on rare inputs. We then turn to Into the Unknown, where 10 national-lab scientists turned 15 of their own papers into follow-up tasks with integrity and success rubrics. Of 135 submissions from agents including Claude Opus 5.5, GPT-6-Astra, DeepSeek-V4-Pro and Kimi-K3, 114 fail the integrity check, most often by claiming work that was never done or reporting numbers their own logs contradict, and the authors trace this to lenient self-verification, insufficient backtracking and quiet scope reduction. Along the way we revisit FunSearch, AlphaEvolve, the AI Scientist and PaperBench, and close on where an outside referee can be built for science and what happens where it cannot.
+
+Reference: Gu, A., Kemeny, A. H., Yelin, S. F., &amp; Lukin, M. D. (2026). Discovering state-of-the-art quantum circuits with large language models. arXiv:2610.22367. https://arxiv.org/abs/2610.22367
+Reference: Kim, S., Geng, J., Lee, Y.-J., et al. (2026). Into the Unknown: Benchmarking AI agents on open scientific research problems. arXiv:2610.19159. https://arxiv.org/abs/2610.19159
+Reference: Romera-Paredes, B., Barekatain, M., Novikov, A., et al. (2024). Mathematical discoveries from program search with large language models. Nature, 625, 468-475. https://doi.org/10.1038/s41586-023-06924-6
+Reference: Novikov, A., Vũ, N., Eisenberger, M., et al. (2025). AlphaEvolve: A coding agent for scientific and algorithmic discovery. arXiv:2506.13131. https://arxiv.org/abs/2506.13131
+Reference: Lu, C., Lu, C., Lange, R. T., Foerster, J., Clune, J., &amp; Ha, D. (2024). The AI Scientist: Towards fully automated open-ended scientific discovery. arXiv:2408.06292. https://arxiv.org/abs/2408.06292
+Reference: Starace, G., Jaffe, O., Sherburn, D., et al. (2025). PaperBench: Evaluating AI's ability to replicate AI research. arXiv:2504.01848. https://arxiv.org/abs/2504.01848</description>
+      <guid isPermaLink="false">c44176af809e210becd9c0ca84b89a8d3c98d50e</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/075%20-%20When%20AI%20Science%20Needs%20A%20Referee.m4a" length="38115782" type="audio/mp4" />
+      <pubDate>Sat, 17 Oct 2026 06:25:01 +0000</pubDate>
+      <itunes:episode>75</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/075%20-%20When%20AI%20Science%20Needs%20A%20Referee.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
