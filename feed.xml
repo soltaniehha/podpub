@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Oct 2026 06:50:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 06:47:28 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1464,5 +1464,23 @@ Reference: Starace, G., Jaffe, O., Sherburn, D., et al. (2025). PaperBench: Eval
       <pubDate>Sat, 17 Oct 2026 06:25:01 +0000</pubDate>
       <itunes:episode>75</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/075%20-%20When%20AI%20Science%20Needs%20A%20Referee.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>076 - When Agents Outnumber Employees</title>
+      <description>How Employment is Changing at Anthropic (October 2026) + The AI Expectations Gap (October 2026)
+
+In this episode we unpack two reports the Anthropic Institute released together, both co-authored by Peter McCrory. In the first, Nathan Wilmers, Regina Catipon, Maxim Massenkoff and McCrory use internal data to show how work has changed at a company where AI agents now log six hours for every hour its people work. In the second, Szymon Sacher, Tess Cotter, Charles I. Jones, Anton Korinek and McCrory survey US adults and Anthropic staff and find that the two groups agree on what AI can do today but expect very different futures. Together they ask whether a frontier lab is a preview of the wider economy or an outlier.
+
+We walk through the drop in junior technical hiring from 27% to 9% of hires, the within-person adoption estimates for 192 engineers that show output rising with no measurable loss in code quality, the sales and legal productivity gains, and the finding that human attention is now the bottleneck, as "meta-work" managing agents rose from 10% to 22% of sessions. From the survey of 10,980 US adults and 1,334 staff, we cover the 75% versus 28% gap in how much of their own work people expect AI to do by 2030, the shared link between own-job exposure and forecast unemployment, and the model-implied 2030 GDP growth of 5.4% for the public against 17.1% for staff. We bring in Acemoglu and Restrepo's task framework, the Canaries in the Coal Mine payroll evidence on young workers, and the Economic Scenarios for Transformative AI model, and close on what employers owe workers who are never hired.
+
+Reference: Wilmers, N., Catipon, R., Massenkoff, M., &amp; McCrory, P. (2026). How Employment is Changing at Anthropic. The Anthropic Institute. https://www.anthropic.com/research/employment-at-anthropic
+Reference: Sacher, S., Cotter, T., Jones, C. I., Korinek, A., &amp; McCrory, P. (2026). The AI Expectations Gap: Public and Frontier Lab Views on AI's Impact on Work. The Anthropic Institute. https://www.anthropic.com/research/ai-expectations-gap
+Reference: Korinek, A., Jones, C. I., Sacher, S., Cotter, T., &amp; McCrory, P. (2026). Economic Scenarios for Transformative AI. The Anthropic Institute Working Paper No. 2026-02. https://www.anthropic.com/institute/econ-scenarios
+Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence. Stanford Digital Economy Lab. https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
+Reference: Acemoglu, D., &amp; Restrepo, P. (2019). Automation and New Tasks: How Technology Displaces and Reinstates Labor. Journal of Economic Perspectives, 33(2), 3–30. https://doi.org/10.1257/jep.33.2.3</description>
+      <guid isPermaLink="false">6a7160eb7a15e0cc0343f594ffd8d2e7567afc82</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/076%20-%20When%20Agents%20Outnumber%20Employees.m4a" length="37602430" type="audio/mp4" />
+      <pubDate>Sun, 18 Oct 2026 06:20:54 +0000</pubDate>
+      <itunes:episode>76</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/076%20-%20When%20Agents%20Outnumber%20Employees.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
