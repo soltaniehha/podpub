@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2026 06:48:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 06:43:30 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1500,5 +1500,23 @@ Reference: Liu, J., Salvi, F., Schoenegger, P., et al. (2025). When Large Langua
       <pubDate>Mon, 19 Oct 2026 06:17:19 +0000</pubDate>
       <itunes:episode>77</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/077%20-%20When%20A%20Chatbot%20Gets%20You%20To%20Act.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>078 - When Creative Work Stops Being Safe</title>
+      <description>AI-Driven Human Task Substitution: Evidence from Google Translate and ChatGPT (October 2026)
+
+In this episode we unpack a new Management Science paper by Erdem Dogukan Yilmaz, Ivana Naumovska and Vikas A. Aggarwal of INSEAD. It uses two natural experiments in one of the largest online labor markets for translation to ask whether the jobs that survived the last wave of AI survive this one. The answer is no. Google's neural machine translation cut demand for ordinary translation but left creative transcreation work untouched, while ChatGPT cut both, by more than 20 and nearly 30 percent. The old idea that creative and intuitive work is a safe harbor from automation does not carry over from predictive AI to generative AI.
+
+We walk through the design: the staggered 2016 to 2017 rollout of Google Neural Machine Translation (GNMT) across language pairs, a difference-in-differences comparison of pure translation jobs against bundled jobs after ChatGPT's release in November 2022, Poisson pseudo-maximum-likelihood models on 38,573 and 82,277 transactions, and robustness checks from coarsened exact matching and placebo dates to a BERT classifier and freelancer-level panels. We also cover the split between general and technical translation, where ChatGPT crossed the domain-knowledge barrier that GNMT did not. We set the paper against Autor, Levy and Murnane's routine versus nonroutine task framework, Frey and Osborne's creative and social intelligence bottlenecks, Frey and Llanos-Paredes on Google Translate and US translator employment, and Hui, Reshef and Zhou on ChatGPT and freelancer earnings. We close on what managers and workers should do when the automation boundary keeps moving, and what happens to language learning when anything can be translated instantly.
+
+Reference: Yilmaz, E. D., Naumovska, I., &amp; Aggarwal, V. A. (2026). AI-Driven Human Task Substitution: Evidence from Google Translate and ChatGPT. Management Science, Articles in Advance. https://doi.org/10.1287/mnsc.2024.06740
+Reference: Frey, C. B., &amp; Llanos-Paredes, P. (2025). Lost in Translation: Artificial Intelligence and the Demand for Foreign Language Skills. Oxford Martin School Working Paper. https://www.oxfordmartin.ox.ac.uk/publications/lost-in-translation-ais-impact-on-translators-and-foreign-language-skills
+Reference: Hui, X., Reshef, O., &amp; Zhou, L. (2024). The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market. Organization Science, 35(6), 1977-1989. https://doi.org/10.1287/orsc.2023.18441
+Reference: Autor, D. H., Levy, F., &amp; Murnane, R. J. (2003). The Skill Content of Recent Technological Change: An Empirical Exploration. The Quarterly Journal of Economics, 118(4), 1279-1333. https://doi.org/10.1162/003355303322552801
+Reference: Frey, C. B., &amp; Osborne, M. A. (2017). The future of employment: How susceptible are jobs to computerisation? Technological Forecasting and Social Change, 114, 254-280. https://doi.org/10.1016/j.techfore.2016.08.019</description>
+      <guid isPermaLink="false">99f87573e243175fa261582f59cc0518ddee8b4f</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/078%20-%20When%20Creative%20Work%20Stops%20Being%20Safe.m4a" length="36878969" type="audio/mp4" />
+      <pubDate>Tue, 20 Oct 2026 06:21:54 +0000</pubDate>
+      <itunes:episode>78</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/078%20-%20When%20Creative%20Work%20Stops%20Being%20Safe.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
