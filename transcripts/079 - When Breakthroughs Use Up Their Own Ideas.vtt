@@ -1,0 +1,701 @@
+WEBVTT
+
+1
+00:00:00.211 --> 00:00:06.313
+<v Daniel>You know, if you look at the whole landscape right now, it feels like, well, basically an unstoppable rocket ship.</v>
+
+2
+00:00:06.593 --> 00:00:07.213
+<v Maya>Oh, definitely.</v>
+
+3
+00:00:07.994 --> 00:00:21.198
+<v Daniel>I mean, we are living in this era of just unprecedented investment. There has never been more money or, you know, more raw compute power or more brilliant researchers just pouring into the field.</v>
+
+4
+00:00:21.398 --> 00:00:22.839
+<v Maya>Right. It's a massive gold rush.</v>
+
+5
+00:00:23.159 --> 00:00:29.981
+<v Daniel>Exactly. And the overarching assumption everyone has is pretty simple. More fuel equals more discovery.</v>
+
+6
+00:00:30.705 --> 00:00:32.626
+<v Maya>Which is what you'd intuitively expect, yeah.</v>
+
+7
+00:00:32.906 --> 00:00:46.712
+<v Daniel>Right. But today's deep dive is going to explore this really stunning, totally counterintuitive puzzle. What if the sheer scale of the AI boom is actually accelerating the exhaustion of its own breakthroughs?</v>
+
+8
+00:00:47.572 --> 00:00:49.273
+<v Maya>It's a really terrifying thought, honestly.</v>
+
+9
+00:00:49.493 --> 00:00:58.457
+<v Daniel>It is. And we are unpacking a really fascinating stack of research today to look into this. But we are anchoring the whole conversation on one brand new paper.</v>
+
+10
+00:00:59.157 --> 00:01:00.877
+<v Maya>Yeah, a really fantastic piece of work.</v>
+
+11
+00:01:01.518 --> 00:01:16.501
+<v Daniel>It's titled Stronger Artificial Intelligence Breakthroughs Hasten Their Own Exhaustion. And it's by Bei-Chen Liu, Honglin Bao, Qi Huang, Qingguo Meng, and James A. Evans. They're from Tsinghua University, the UChicago</v>
+
+12
+00:01:16.641 --> 00:01:20.702
+<v Daniel>Knowledge Lab, and the Santa Fe Institute. And this was just posted on October 19th, 2026.</v>
+
+13
+00:01:21.962 --> 00:01:22.722
+<v Maya>It's very fresh.</v>
+
+14
+00:01:23.202 --> 00:01:35.307
+<v Daniel>Super fresh. Now, quick disclosure right at the top. So everyone knows this is a preprint, so it hasn't been peer reviewed yet. And as the paper itself states, the senior author, James Evans, is affiliated with Google.</v>
+
+15
+00:01:35.667 --> 00:01:36.787
+<v Maya>Important context for sure.</v>
+
+16
+00:01:37.187 --> 00:01:44.450
+<v Daniel>Always. So how do we even begin to measure if an entire scientific field is exhausting itself?</v>
+
+17
+00:01:44.750 --> 00:01:50.972
+<v Maya>Well, we really have to start by looking at the theory of how ideas grow. So traditionally, if you look at growth theory,</v>
+
+18
+00:01:51.412 --> 00:01:52.653
+<v Daniel>Like the economic stuff.</v>
+
+19
+00:01:52.914 --> 00:02:07.589
+<v Maya>Exactly. Like Schumpeter's idea of creative destruction or even the models from Aguillon and Howitt who, you know, they just won the 2025 Economics Nobel for this kind of work. Right. The standard assumption there is that as fields mature, the actual space of</v>
+
+20
+00:02:07.729 --> 00:02:09.311
+<v Maya>ideas just gets harder to mine.</v>
+
+21
+00:02:09.491 --> 00:02:11.013
+<v Daniel>Like picking all the low hanging fruit.</v>
+
+22
+00:02:11.233 --> 00:02:21.443
+<v Maya>Precisely. And there's this great 2020 paper by Bloom and his colleagues called Our Ideas Getting Harder to Find, which points out that global research productivity is just steadily falling.</v>
+
+23
+00:02:21.824 --> 00:02:22.184
+<v Daniel>Oh, really?</v>
+
+24
+00:02:22.344 --> 00:02:37.138
+<v Maya>Yeah. Like, take Moore's Law for computer chips. Right now, it takes over 18 times as many researchers just to keep chip density doubling compared to a few decades ago. Wow. 18 times. That's insane. Yeah. So the ideas themselves are just</v>
+
+25
+00:02:37.238 --> 00:02:48.009
+<v Maya>harder to get to. But the authors of our main paper today argue that's only half the story. They argue that breakthroughs also require diverse attention. And that's what we're running out of.</v>
+
+26
+00:02:48.608 --> 00:02:53.249
+<v Daniel>And this leads right into this incredible analogy they use in the paper, the Tasmania analogy.</v>
+
+27
+00:02:53.369 --> 00:02:54.270
+<v Maya>Oh, I love this part.</v>
+
+28
+00:02:54.350 --> 00:03:09.013
+<v Daniel>It's so good. Okay, let's unpack this. In cultural evolution, when Tasmania was cut off from the mainland and their population shrank, they actually lost their complex tools. They stopped making bone needles and stuff because a smaller, isolated crowd</v>
+
+29
+00:03:09.374 --> 00:03:12.034
+<v Daniel>just couldn't sustain that level of technological complexity.</v>
+
+30
+00:03:12.254 --> 00:03:14.575
+<v Maya>Right, the population couldn't support the knowledge.</v>
+
+31
+00:03:15.237 --> 00:03:21.045
+<v Daniel>But I have to play devil's advocate here because modern AI is literally the exact opposite of a shrinking island.</v>
+
+32
+00:03:21.265 --> 00:03:21.786
+<v Maya>Definitely.</v>
+
+33
+00:03:21.886 --> 00:03:30.598
+<v Daniel>It is massive. It's hyper-connected. We have billions of dollars and tens of thousands of people. So why on earth would we be losing the diversity of our tools?</v>
+
+34
+00:03:30.826 --> 00:03:42.773
+<v Maya>Well, that's the core thesis of the paper. It's about how the crowd behaves. Having 10,000 brilliant researchers is great, but if they are all converging on the exact same paradigm, they aren't searching in 10,000 different directions.</v>
+
+35
+00:03:42.953 --> 00:03:43.353
+<v Daniel>Oh, I see.</v>
+
+36
+00:03:43.433 --> 00:03:52.518
+<v Maya>They're all staring at the exact same spot. So we aren't just running out of ideas out there in the ether. The human searchers are artificially narrowing their own vision.</v>
+
+37
+00:03:52.939 --> 00:03:58.962
+<v Daniel>Man, that is wild. So if the crowd is all staring at the same thing, what does that actually look like in the real world?</v>
+
+38
+00:03:59.234 --> 00:04:01.816
+<v Maya>Well, this is where the data set they used comes in.</v>
+
+39
+00:04:01.996 --> 00:04:15.428
+<v Daniel>Yeah, we have to talk about the scale of this data pool. They didn't just look at a few journals. They took an open Alex snapshot covering 1990 to 2025. That is 7.18 million computer science papers.</v>
+
+40
+00:04:15.868 --> 00:04:17.049
+<v Maya>It's a massive undertaking.</v>
+
+41
+00:04:17.344 --> 00:04:30.009
+<v Daniel>plus 73,000 peer reviews. And they tracked over 3.7 million researcher migrations. Just incredible scale. And from this, they found three specific signatures of exhaustion.</v>
+
+42
+00:04:30.709 --> 00:04:33.871
+<v Maya>Right. Let's start with signature one, which is that attention narrows.</v>
+
+43
+00:04:34.051 --> 00:04:35.071
+<v Daniel>OK, break that down for us.</v>
+
+44
+00:04:35.551 --> 00:04:38.492
+<v Maya>So they measured this by looking at the Gini coefficient of keywords.</v>
+
+45
+00:04:38.752 --> 00:04:40.053
+<v Daniel>Wait, the Gini coefficient?</v>
+
+46
+00:04:40.391 --> 00:04:55.325
+<v Maya>Exactly the same math, but applied to scientific attention. They looked at the top TF-IDF keywords in paper abstracts, which basically just means the core unique concepts of paper is actually about filtering out the generic words. Got it. And what they found was that through the</v>
+
+47
+00:04:55.405 --> 00:05:06.115
+<v Maya>so-called AI winter and the dawn of the web and smartphones and even through the huge 2012 deep learning boom with AlexNet, keyword diversity was flat and totally healthy.</v>
+
+48
+00:05:06.524 --> 00:05:09.069
+<v Daniel>People were exploring lots of different things. Right.</v>
+
+49
+00:05:09.711 --> 00:05:11.214
+<v Maya>But then came 2017. 2017.</v>
+
+50
+00:05:11.234 --> 00:05:13.118
+<v Daniel>Exactly. The</v>
+
+51
+00:05:13.138 --> 00:05:14.120
+<v Maya>year</v>
+
+52
+00:05:14.361 --> 00:05:16.405
+<v Daniel>Google dropped the transformer architecture.</v>
+
+53
+00:05:16.763 --> 00:05:30.994
+<v Maya>Exactly. The birth of what would become LLMs. In 2017, the Gini coefficient broke sharply upward. Wow. Yeah, it went from 0.26 up to 0.33 in just eight years. Citation inequality spiked to a peak of</v>
+
+54
+00:05:31.574 --> 00:05:35.637
+<v Maya>0.69. Basically, AI just swallowed computer science.</v>
+
+55
+00:05:35.737 --> 00:05:36.478
+<v Daniel>Like a black hole.</v>
+
+56
+00:05:36.798 --> 00:05:45.825
+<v Maya>Pretty much. It grew from 40% of computer science publications to over 55%, and it actively shrank the footprint of systems and theory research.</v>
+
+57
+00:05:46.346 --> 00:05:49.949
+<v Daniel>That perfectly aligns with that 2021 paper by Chu and Evans, right?</v>
+
+58
+00:05:49.969 --> 00:05:51.009
+<v Maya>Yes, exactly.</v>
+
+59
+00:05:51.049 --> 00:06:02.217
+<v Daniel>Where they explain that when a field publishes way too fast, new ideas just can't get any oxygen. So researchers get overwhelmed and citations just flow defensively to the already well-known canon.</v>
+
+60
+00:06:02.638 --> 00:06:08.482
+<v Maya>Right. The canon ossifies. No one has time to read the weird new stuff, so they just cite what everyone else is citing.</v>
+
+61
+00:06:08.998 --> 00:06:18.164
+<v Daniel>Which brings us to signature two. And here's where it gets really interesting. The brain drain. Or who exactly is migrating into AI?</v>
+
+62
+00:06:18.564 --> 00:06:19.505
+<v Maya>This part blew my mind.</v>
+
+63
+00:06:20.186 --> 00:06:31.333
+<v Daniel>So over 53% of all field switches in computer science right now end up in AI. But if you're listening, you might just assume, oh, that's just young grad students picking a hot topic.</v>
+
+64
+00:06:31.602 --> 00:06:33.223
+<v Maya>Which would make sense, but it's totally wrong.</v>
+
+65
+00:06:33.423 --> 00:06:44.209
+<v Daniel>Right. The data shows the probability of moving to AI peaks at an academic age of 31.8. Yeah. And it peaks at the 82nd percentile of prior status.</v>
+
+66
+00:06:44.469 --> 00:06:53.373
+<v Maya>Which is just staggering. Early career people actually tend to stay where they trained. And the super senior folks don't bother to retool.</v>
+
+67
+00:06:53.774 --> 00:07:00.117
+<v Daniel>So it's these established mid-career researchers who are abandoning the highly specialized work that literally made their names.</v>
+
+68
+00:07:00.731 --> 00:07:05.094
+<v Maya>Yeah, they are willingly paying what sociologists call a pivot penalty.</v>
+
+69
+00:07:05.754 --> 00:07:08.255
+<v Daniel>Drop in citations because they're starting over in a new space.</v>
+
+70
+00:07:08.555 --> 00:07:12.898
+<v Maya>Exactly. Right. But they do it anyway, just to chase the gravity well of AI.</v>
+
+71
+00:07:13.358 --> 00:07:18.101
+<v Daniel>And when everyone crowds into that one room, you get signature three. The evaluation system breaks.</v>
+
+72
+00:07:18.841 --> 00:07:19.582
+<v Maya>Oh, it really breaks.</v>
+
+73
+00:07:20.022 --> 00:07:21.503
+<v Daniel>Tell us about the reviewer confidence.</v>
+
+74
+00:07:22.027 --> 00:07:32.692
+<v Maya>So looking at 45 different open review venues, venue normalized reviewer confidence plummeted. On a scale of 0 to 5, it dropped from a 3.9 down to a 2.9.</v>
+
+75
+00:07:33.112 --> 00:07:33.812
+<v Daniel>Entire point.</v>
+
+76
+00:07:34.072 --> 00:07:40.035
+<v Maya>Yeah. And not just in AI venues, but non-AI venues, too, because the whole system was just flooded.</v>
+
+77
+00:07:40.335 --> 00:07:42.016
+<v Daniel>And the reviews got meaner, too, didn't they?</v>
+
+78
+00:07:42.323 --> 00:07:47.325
+<v Maya>Much meaner. They used a classifier called ParaDetox to measure review toxicity.</v>
+
+79
+00:07:47.525 --> 00:07:49.105
+<v Daniel>To catch the condescending language.</v>
+
+80
+00:07:49.345 --> 00:07:57.828
+<v Maya>Right. And toxicity spiked after 2017. Now, it did dip briefly in 2021 when NeurIPS moved to open review and made the reviews public.</v>
+
+81
+00:07:58.108 --> 00:07:59.389
+<v Daniel>Sunlight is the best disinfectant.</v>
+
+82
+00:07:59.449 --> 00:08:08.832
+<v Maya>Exactly. Everyone behaved for a minute, but then it just rebounded right back up. The authors bluntly state that getting a paper accepted now increasingly resembles a coin flip.</v>
+
+83
+00:08:09.402 --> 00:08:17.565
+<v Daniel>A literal coin flip. And there's that famous 2021 derivatives consistency experiment by Bagelsheimer and colleagues that proves this is just an exaggeration.</v>
+
+84
+00:08:17.905 --> 00:08:19.866
+<v Maya>Oh, yeah. The A-B test of peer review.</v>
+
+85
+00:08:20.266 --> 00:08:27.009
+<v Daniel>They had two completely independent committees review the exact same batch of papers. And they disagreed on 23% of them.</v>
+
+86
+00:08:27.149 --> 00:08:33.131
+<v Maya>Right. They figured out that if you just re-ran the review process, about half of the accepted papers would change.</v>
+
+87
+00:08:33.271 --> 00:08:34.092
+<v Daniel>Which is wild.</v>
+
+88
+00:08:34.312 --> 00:08:34.612
+<v Maya>Mm-hmm.</v>
+
+89
+00:08:35.240 --> 00:08:38.341
+<v Daniel>Inside a crowded field, reviews really do just become highly arbitrary.</v>
+
+90
+00:08:38.441 --> 00:08:38.921
+<v Maya>Completely.</v>
+
+91
+00:08:38.941 --> 00:08:50.305
+<v Daniel>Okay. So the humans are crowding together. They're abandoning their old fields and they're breaking the peer review system. But how is this impacting the actual literal concepts like the birth and death of ideas?</v>
+
+92
+00:08:50.725 --> 00:08:54.526
+<v Maya>This is where we get to the core mechanism. They call cyclical exhaustion.</v>
+
+93
+00:08:54.906 --> 00:08:58.547
+<v Daniel>I am so fascinated by the methodology here. How do you even measure an idea?</v>
+
+94
+00:08:58.933 --> 00:09:13.826
+<v Maya>It's clever. They decided to treat every stable noun in a paper's abstract as a living organism. Wow. Yeah. So an idea is born the first time it shows up. It dies if it goes unused for three years. And it can be resurrected</v>
+
+95
+00:09:13.886 --> 00:09:14.886
+<v Maya>if someone brings it back.</v>
+
+96
+00:09:15.307 --> 00:09:18.990
+<v Daniel>So they're tracking the lifespan of vocabulary. What did they find?</v>
+
+97
+00:09:19.437 --> 00:09:30.744
+<v Maya>They found these massive boom and bust cycles. New idea rates spike immediately after huge breakthroughs. So we saw a spike after AlexNet in 2012 and an even bigger one after the transformer in 2017.</v>
+
+98
+00:09:31.225 --> 00:09:33.506
+<v Daniel>OK. So breakthroughs do create new ideas.</v>
+
+99
+00:09:33.926 --> 00:09:34.907
+<v Maya>They do initially.</v>
+
+100
+00:09:35.327 --> 00:09:37.308
+<v Daniel>But then the rate rapidly decays.</v>
+
+101
+00:09:37.949 --> 00:09:44.393
+<v Maya>Because breakthroughs don't just birth ideas. They ruthlessly bury older ones. There's just a slight lag.</v>
+
+102
+00:09:44.985 --> 00:09:52.810
+<v Daniel>Even the original breakthrough papers themselves follow this, right? Like the citation shares of the AlexNet and Transformer papers peak and then just fall.</v>
+
+103
+00:09:53.450 --> 00:09:59.174
+<v Maya>Exactly. And to explain this, the authors use the concept of carrying capacity from ecology.</v>
+
+104
+00:09:59.314 --> 00:10:01.195
+<v Daniel>Like how many wolves a forest can support.</v>
+
+105
+00:10:01.776 --> 00:10:08.100
+<v Maya>Right. Each technological breakthrough raises the ceiling for how many active ideas the scientific ecosystem can support.</v>
+
+106
+00:10:08.500 --> 00:10:09.841
+<v Daniel>Okay. That sounds like a good thing.</v>
+
+107
+00:10:10.310 --> 00:10:18.315
+<v Maya>It is, but here is the giant red flag. After the initial boom, the field doesn't just settle at the new ceiling. It crashes below it.</v>
+
+108
+00:10:18.715 --> 00:10:19.055
+<v Daniel>Oh, wow.</v>
+
+109
+00:10:19.275 --> 00:10:24.638
+<v Maya>Yeah. The drop was pretty modest after AlexNet, but it was severe after the transformer.</v>
+
+110
+00:10:25.039 --> 00:10:27.860
+<v Daniel>And what about now with all the large language models?</v>
+
+111
+00:10:28.421 --> 00:10:32.403
+<v Maya>In the post-2022 LLM era, the curve is already bending down.</v>
+
+112
+00:10:33.322 --> 00:10:47.662
+<v Daniel>Now, I want to be totally honest with you, the listener, right now. The LLM data window is thin. We're only in 2026, and the authors admit they need more years of data to lock that in. But the trend absolutely points to the cycle compressing.</v>
+
+113
+00:10:48.323 --> 00:10:49.825
+<v Daniel>Paradigms are just burning out faster.</v>
+
+114
+00:10:50.670 --> 00:11:05.637
+<v Maya>And this isn't just a quirk of AI algorithms either. They checked for generality and saw the exact same cycle in structural biology. Oh, really? Yeah, after the cryo-EM resolution revolution, and then again after AlphaFold. Big spike, then a severe exhaustion</v>
+
+115
+00:11:05.657 --> 00:11:06.578
+<v Maya>of the idea space.</v>
+
+116
+00:11:07.598 --> 00:11:15.282
+<v Daniel>And this all ties back to a broader research program, actually. Because James Evans was the senior author on another Nature paper earlier in 2026, led by Howe.</v>
+
+117
+00:11:17.483 --> 00:11:20.125
+<v Maya>Oh, right, the one about AI as a tool in other sciences?</v>
+
+118
+00:11:20.325 --> 00:11:31.691
+<v Daniel>Exactly. Yeah. They looked at 41 million papers and found that when scientists use AI in other fields, like physics or whatever, they publish over three times as much and get almost five times as many citations.</v>
+
+119
+00:11:32.171 --> 00:11:33.132
+<v Maya>Sounds great on paper.</v>
+
+120
+00:11:33.172 --> 00:11:42.957
+<v Daniel>It does. But the actual volume of topics they study shrinks by 4.6%. And their direct engagement with other scientists drops by 22%.</v>
+
+121
+00:11:44.406 --> 00:11:48.647
+<v Maya>So AI basically automates the established fields instead of exploring new ones.</v>
+
+122
+00:11:48.907 --> 00:11:56.649
+<v Daniel>Yes. It narrows the other sciences. And today's main paper is proving that AI is doing the exact same thing to itself.</v>
+
+123
+00:11:57.489 --> 00:11:58.689
+<v Maya>It's eating its own tail.</v>
+
+124
+00:11:59.189 --> 00:12:06.331
+<v Daniel>OK. So if we are cannibalizing our own idea space, shouldn't our academic institutions, I don't know, fix it?</v>
+
+125
+00:12:06.891 --> 00:12:08.831
+<v Maya>Well, they're trying.</v>
+
+126
+00:12:08.851 --> 00:12:09.251
+<v Daniel>OK.</v>
+
+127
+00:12:09.631 --> 00:12:12.392
+<v Maya>But the fixes might actually be making it worse.</v>
+
+128
+00:12:13.129 --> 00:12:14.610
+<v Daniel>Let's talk about policy backfires.</v>
+
+129
+00:12:15.371 --> 00:12:23.377
+<v Maya>So there's this policy called reciprocal reviewing. It's used by major conferences now like ICLR, ICML, AI Stats, ARR.</v>
+
+130
+00:12:23.497 --> 00:12:23.677
+<v Daniel>Sure.</v>
+
+131
+00:12:24.117 --> 00:12:28.120
+<v Maya>The idea is your review load is tied to how many papers you submit.</v>
+
+132
+00:12:28.540 --> 00:12:30.482
+<v Daniel>Which, I mean, sounds completely fair.</v>
+
+133
+00:12:30.642 --> 00:12:32.183
+<v Maya>You make a mess, you help clean it up.</v>
+
+134
+00:12:32.423 --> 00:12:32.803
+<v Daniel>Exactly.</v>
+
+135
+00:12:33.164 --> 00:12:41.830
+<v Maya>But the authors build an agent based computer model to test it. They simulated 100 scientists over 120 rounds and they made five of those scientists super prolific.</v>
+
+136
+00:12:42.155 --> 00:12:42.936
+<v Daniel>Okay, what happened?</v>
+
+137
+00:12:43.537 --> 00:12:53.131
+<v Maya>The model proves that this policy accidentally hands almost all the evaluative power to those most prolific authors. Because they submit the most, they review the most.</v>
+
+138
+00:12:53.816 --> 00:12:54.757
+<v Daniel>Oh, I see where this is going.</v>
+
+139
+00:12:55.257 --> 00:13:05.885
+<v Maya>Yeah. And human nature is what it is. Reviewers favor papers that look like their own work. So the accepted topics rapidly narrow to match the specific tastes of that prolific minority.</v>
+
+140
+00:13:06.105 --> 00:13:16.593
+<v Daniel>Wow. Now, we should note they present this as an illustrative existence proof, not a causal estimate, just because the policy timing happened right as the LLM boom hit. But the logic is pretty undeniable.</v>
+
+141
+00:13:16.934 --> 00:13:17.474
+<v Maya>Absolutely.</v>
+
+142
+00:13:18.074 --> 00:13:27.174
+<v Daniel>Okay. I want to pause here because I feel like we need to ask some hard questions. Let's play devil's advocate. I have three massive disagreements with this whole framing.</v>
+
+143
+00:13:27.575 --> 00:13:28.035
+<v Maya>Let's hear them.</v>
+
+144
+00:13:28.515 --> 00:13:38.981
+<v Daniel>First, isn't this just Kuhnian normal science working exactly how it's supposed to? I mean, Thomas Kuhn said science converges on a paradigm to solve puzzles efficiently. Convergence is good.</v>
+
+145
+00:13:39.741 --> 00:13:40.442
+<v Maya>That's a fair point.</v>
+
+146
+00:13:41.242 --> 00:13:47.506
+<v Daniel>Second, can we really measure the magic of human ideas just by counting nouns and doing TF-IDF math?</v>
+
+147
+00:13:48.186 --> 00:13:49.207
+<v Maya>Also a valid question.</v>
+
+148
+00:13:49.905 --> 00:14:04.179
+<v Daniel>And third, maybe most importantly, the entire scaling view of AI, the reason we even have LLMs, argues that concentrating thousands of researchers and billions of dollars onto one paradigm, the transformer, is exactly why it worked.</v>
+
+149
+00:14:04.860 --> 00:14:07.042
+<v Daniel>So doesn't concentration literally work?</v>
+
+150
+00:14:07.489 --> 00:14:22.393
+<v Maya>Okay, so the authors actually address this tension directly. And to answer your points, we really have to pull in this 2023 Nature paper by Park, Leahy, and Funk. Okay. They analyzed 45 million papers and millions of patents, and they found a steady, decades-long decline</v>
+
+151
+00:14:22.433 --> 00:14:27.795
+<v Maya>in disruptive science. And they linked it directly to scientists using a narrower slice of prior knowledge.</v>
+
+152
+00:14:28.035 --> 00:14:28.315
+<v Daniel>Right.</v>
+
+153
+00:14:28.815 --> 00:14:42.826
+<v Maya>The loo paper we're talking about today is basically showing a sharp cyclical version of that exact same decline. So yes, to your scaling point, concentration totally works for exploiting an existing paradigm. It squeezed the absolute juice out of the transformer.</v>
+
+154
+00:14:43.007 --> 00:14:43.687
+<v Daniel>But at what cost?</v>
+
+155
+00:14:44.208 --> 00:14:52.795
+<v Maya>Exactly. The cost is that bigger breakthroughs capture the field's attention so completely that they destroy the diverse ecosystem of weird alternative fringe ideas.</v>
+
+156
+00:14:53.275 --> 00:14:55.757
+<v Daniel>And we need those fringe ideas for the next big leap.</v>
+
+157
+00:14:56.150 --> 00:15:01.977
+<v Maya>Precisely. The next breakthrough will almost certainly be drawn from those fringes. We are literally eating our seed corn.</v>
+
+158
+00:15:02.437 --> 00:15:07.363
+<v Daniel>That is such a vivid way to put it. We're optimizing for today, but bankrupting tomorrow.</v>
+
+159
+00:15:07.703 --> 00:15:10.086
+<v Maya>Yeah. And that leads to the prescriptions for how to fix it.</v>
+
+160
+00:15:10.306 --> 00:15:11.067
+<v Daniel>What do they suggest?</v>
+
+161
+00:15:11.520 --> 00:15:26.129
+<v Maya>They argue institutions must actively protect diverse attention. We actually need to tax concentration rather than reward it. And we need to shift evaluative authority away from just the most prolific publishers and give it to people who are</v>
+
+162
+00:15:26.169 --> 00:15:28.330
+<v Maya>exploring novel, unusual avenues.</v>
+
+163
+00:15:28.790 --> 00:15:31.532
+<v Daniel>Which is the exact opposite of what Venture Capital is doing right now.</v>
+
+164
+00:15:32.012 --> 00:15:39.356
+<v Maya>Totally. And the authors actually close their paper with this incredibly chilling line. They say, a singularity has no successor.</v>
+
+165
+00:15:39.376 --> 00:15:44.561
+<v Daniel>Wow. Singularity has no successor because it consumes everything around it.</v>
+
+166
+00:15:44.881 --> 00:15:45.342
+<v Maya>Exactly.</v>
+
+167
+00:15:45.762 --> 00:16:00.233
+<v Daniel>That is heavy. And I think that brings us all back to you, the listener, because whether you are a researcher picking your next topic or maybe a program chair designing review policies or a funder writing massive checks, no one can predict</v>
+
+168
+00:16:00.373 --> 00:16:02.435
+<v Daniel>exactly where the next big breakthrough is hiding.</v>
+
+169
+00:16:03.035 --> 00:16:03.656
+<v Maya>You really can't.</v>
+
+170
+00:16:04.457 --> 00:16:12.883
+<v Daniel>And that absolute uncertainty is the exact reason we have to keep multiple diverse directions alive right now, even if they don't look as shiny as an LLM.</v>
+
+171
+00:16:13.444 --> 00:16:15.265
+<v Maya>We have to protect the weird ideas.</v>
+
+172
+00:16:16.546 --> 00:16:31.377
+<v Daniel>So we'll leave you with this final provocative thought. If our greatest technological breakthroughs are literally designed to consume the very diversity that created them, what abandoned, forgotten app from five years ago actually holds the key to the next epic of</v>
+
+173
+00:16:31.417 --> 00:16:31.797
+<v Daniel>computing?</v>
+
+174
+00:16:32.477 --> 00:16:33.298
+<v Maya>It's out there somewhere.</v>
+
+175
+00:16:33.847 --> 00:16:36.734
+<v Daniel>It is. Just waiting for someone to finally look away from the crowd.</v>

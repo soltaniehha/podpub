@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Oct 2026 06:43:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 06:43:44 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1518,5 +1518,24 @@ Reference: Frey, C. B., &amp; Osborne, M. A. (2017). The future of employment: H
       <pubDate>Tue, 20 Oct 2026 06:21:54 +0000</pubDate>
       <itunes:episode>78</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/078%20-%20When%20Creative%20Work%20Stops%20Being%20Safe.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>079 - When Breakthroughs Use Up Their Own Ideas</title>
+      <description>Stronger Artificial Intelligence Breakthroughs Hasten Their Own Exhaustion (October 2026)
+
+In this episode we unpack a new preprint from Beichen Lu, Honglin Bao, Qi Huang, Qingguo Meng and James A. Evans of Tsinghua University, the University of Chicago's Knowledge Lab and the Santa Fe Institute, posted to arXiv on 19 October 2026. The usual assumption is that AI progress scales with effort: more researchers, more papers and more money should mean more discovery. The authors argue that breakthroughs depend on diverse attention, and that each AI breakthrough, from AlexNet to the Transformer to large language models, pulls the field toward itself so completely that it uses up the variety of ideas its successor would have to be built from.
+
+We walk through the evidence from 36 years of computer science: 7.2 million OpenAlex papers, 73,089 OpenReview peer reviews and 3.7 million researchers with 918,862 documented topic migrations. Attention inequality, measured as a Gini coefficient over TF-IDF keywords, sat flat for decades and broke upward in 2017. AI grew from 40 to over 55 percent of computer science publications, more than half of all field-switchers moved into AI (most of them mid-career researchers), and reviewer confidence fell from 3.9 to 2.9 on a five-point scale. We cover the paper's idea life-cycle model, where each breakthrough raises a logistic carrying capacity for ideas and is followed by a steeper exhaustion, the same cycle in structural biology after cryo-EM and AlphaFold, and an agent-based simulation showing how reciprocal reviewing at ICLR, ICML, AISTATS and ARR can narrow what a field accepts. We set it against Hao and colleagues on AI tools contracting science's focus, Bloom and colleagues on ideas getting harder to find, Park, Leahey and Funk on declining disruptiveness, Chu and Evans on slowed canonical progress in large fields, and the NeurIPS 2021 consistency experiment on review randomness, and close on the authors' call for institutions that protect diverse attention rather than reward the winning paradigm.
+
+Reference: Lu, B., Bao, H., Huang, Q., Meng, Q., &amp; Evans, J. A. (2026). Stronger artificial intelligence breakthroughs hasten their own exhaustion. arXiv:2610.27296. https://arxiv.org/abs/2610.27296
+Reference: Hao, Q., Xu, F., Li, Y., &amp; Evans, J. (2026). Artificial intelligence tools expand scientists' impact but contract science's focus. Nature, 649(8099), 1237-1243. https://doi.org/10.1038/s41586-025-09922-y
+Reference: Bloom, N., Jones, C. I., Van Reenen, J., &amp; Webb, M. (2020). Are Ideas Getting Harder to Find? American Economic Review, 110(4), 1104-1144. https://doi.org/10.1257/aer.20180338
+Reference: Park, M., Leahey, E., &amp; Funk, R. J. (2023). Papers and patents are becoming less disruptive over time. Nature, 613, 138-144. https://doi.org/10.1038/s41586-022-05543-x
+Reference: Chu, J. S. G., &amp; Evans, J. A. (2021). Slowed canonical progress in large fields of science. Proceedings of the National Academy of Sciences, 118(41), e2021636118. https://doi.org/10.1073/pnas.2021636118
+Reference: Beygelzimer, A., Dauphin, Y. N., Liang, P., &amp; Wortman Vaughan, J. (2023). Has the Machine Learning Review Process Become More Arbitrary as the Field Has Grown? The NeurIPS 2021 Consistency Experiment. arXiv:2306.03262. https://arxiv.org/abs/2306.03262</description>
+      <guid isPermaLink="false">773e0053529c372bb042e8c0297087a531b3f176</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/079%20-%20When%20Breakthroughs%20Use%20Up%20Their%20Own%20Ideas.m4a" length="32092447" type="audio/mp4" />
+      <pubDate>Wed, 21 Oct 2026 06:21:40 +0000</pubDate>
+      <itunes:episode>79</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/079%20-%20When%20Breakthroughs%20Use%20Up%20Their%20Own%20Ideas.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
