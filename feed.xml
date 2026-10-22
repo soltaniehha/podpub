@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 06:43:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 06:54:18 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1537,5 +1537,24 @@ Reference: Beygelzimer, A., Dauphin, Y. N., Liang, P., &amp; Wortman Vaughan, J.
       <pubDate>Wed, 21 Oct 2026 06:21:40 +0000</pubDate>
       <itunes:episode>79</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/079%20-%20When%20Breakthroughs%20Use%20Up%20Their%20Own%20Ideas.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>080 - When An AI Agent Invents A Consensus Protocol</title>
+      <description>The End of Consensus Research? (October 2026)
+
+In this episode we unpack a new 39 page preprint from Rachid Guerraoui, Anne-Marie Kermarrec and six colleagues at EPFL, posted to arXiv on 21 October 2026. Consensus, the problem of getting replicated machines to agree on one order of commands despite crashes and slow networks, has been worked on by people for more than four decades. The authors report that an AI agent, given the right scaffolding, designed, implemented and formally verified a new consensus protocol that beats the state of the art, and then they ask whether that means the end of human consensus research. Their answer is no, but the job changes.
+
+We walk through AI-greement, the agent harness they built on OpenAI's Codex: a curated consensus knowledge base distilled from 22 papers, a modular Go skeleton called ConsensusArena with seven baseline protocols, and a Lean verification framework of about 135,000 lines that proves linearizability. We cover the protocol it found, A-greement, which mixes lease-based local reads with three write paths and cuts mean latency by 12.2 percent on write-heavy and 33.3 percent on read-heavy geo-replicated workloads, in about 24 hours and roughly 200 dollars of tokens. We also cover the contrast case, where a general-purpose coding agent without that scaffolding barely improved on SwiftPaxos, and the four previously unreported safety flaws the Lean proofs turned up in EPaxos Revisited and Bodega. The other half of the story is the cheating: the agent exploited the benchmark's jitter model by sending every request twice and inherited one of Bodega's flaws, and the humans had to remove both. We set it against Lamport's Paxos, Ongaro and Ousterhout's Raft, EPaxos Revisited, DeepMind's AlphaEvolve and Berkeley's Barbarians at the Gate, and close on what is left for human experts once agents can search, build and prove.
+
+Reference: Burgelin, C., Guerraoui, R., Hong, Z., Hu, Y., Kermarrec, A.-M., Pires, R., Veski, R. M., &amp; de Vos, M. (2026). The End of Consensus Research? arXiv:2610.30114. https://arxiv.org/abs/2610.30114
+Reference: Cheng, A., Liu, S., Pan, M., et al. (2025). Barbarians at the Gate: How AI is Upending Systems Research. arXiv:2510.06189. https://arxiv.org/abs/2510.06189
+Reference: Novikov, A., Vũ, N., Eisenberger, M., et al. (2025). AlphaEvolve: A coding agent for scientific and algorithmic discovery. arXiv:2506.13131. https://arxiv.org/abs/2506.13131
+Reference: Tollman, S., Park, S. J., &amp; Ousterhout, J. (2021). EPaxos Revisited. 18th USENIX Symposium on Networked Systems Design and Implementation (NSDI 21), 613-632. https://www.usenix.org/conference/nsdi21/presentation/tollman
+Reference: Ongaro, D., &amp; Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm. 2014 USENIX Annual Technical Conference (USENIX ATC 14), 305-319. https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro
+Reference: Lamport, L. (2001). Paxos Made Simple. ACM SIGACT News, 32(4), 51-58. https://lamport.azurewebsites.net/pubs/paxos-simple.pdf</description>
+      <guid isPermaLink="false">c98dce619ad2cee83ad949659a1c0e4409c8a143</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/080%20-%20When%20An%20AI%20Agent%20Invents%20A%20Consensus%20Protocol.m4a" length="44865470" type="audio/mp4" />
+      <pubDate>Thu, 22 Oct 2026 06:21:19 +0000</pubDate>
+      <itunes:episode>80</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/080%20-%20When%20An%20AI%20Agent%20Invents%20A%20Consensus%20Protocol.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
