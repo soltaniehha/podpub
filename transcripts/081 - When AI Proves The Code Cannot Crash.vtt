@@ -1,0 +1,793 @@
+WEBVTT
+
+1
+00:00:00.512 --> 00:00:08.463
+<v Maya>You know, it's kind of this universal truth of modern life that software is just everywhere. And well, software is fundamentally broken.</v>
+
+2
+00:00:08.904 --> 00:00:09.545
+<v Daniel>Yeah, pretty much.</v>
+
+3
+00:00:09.945 --> 00:00:20.844
+<v Maya>Like you open an app on your phone and it inexplicably crashes or you load a web page and it just hangs there forever. We all just sort of accept this ambient level of buggy reality.</v>
+
+4
+00:00:21.244 --> 00:00:22.705
+<v Daniel>It's just part of the deal now, right? Right.</v>
+
+5
+00:00:23.326 --> 00:00:36.318
+<v Maya>But imagine for a second if you could mathematically prove, like beyond a shadow of a doubt, that a bug simply doesn't exist. Not just that you haven't found it yet through testing, but that it is mathematically impossible for that bug to be there.</v>
+
+6
+00:00:36.639 --> 00:00:47.584
+<v Daniel>I mean, that would be a complete paradigm shift for the entire technology industry. We are incredibly used to testing software, which is ultimately just a process of looking for the presence of bugs.</v>
+
+7
+00:00:47.825 --> 00:00:49.565
+<v Maya>Yeah, poking around to see what breaks.</v>
+
+8
+00:00:49.826 --> 00:00:54.868
+<v Daniel>Exactly. But proving the absence of bugs, that is a completely different universe of certainty.</v>
+
+9
+00:00:55.123 --> 00:01:06.025
+<v Maya>And that universe of certainty is exactly what we are exploring in our deep dive today. We are unpacking a brand new lab release that was published just yesterday, October 22, 2026.</v>
+
+10
+00:01:06.265 --> 00:01:07.185
+<v Daniel>Fresh off the presses.</v>
+
+11
+00:01:07.405 --> 00:01:21.008
+<v Maya>Super fresh. It comes from Anthropic's Frontier Red team, working in collaboration with a startup called Theorem. And to be clear right up front, I want to say this plainly once. This is a lab release, not a peer-reviewed paper.</v>
+
+12
+00:01:21.288 --> 00:01:22.288
+<v Daniel>Right. Important distinction.</v>
+
+13
+00:01:22.630 --> 00:01:37.453
+<v Maya>Yeah. The lead authors on this work are Keane Lucas, Nikolai Zeldovich, Nicholas Carlini, and Jason Gross. And they're basically claiming this massive leap in using large language models to formally verify software at</v>
+
+14
+00:01:37.473 --> 00:01:37.754
+<v Maya>scale.</v>
+
+15
+00:01:37.974 --> 00:01:38.594
+<v Daniel>Which is huge.</v>
+
+16
+00:01:38.934 --> 00:01:52.477
+<v Maya>It is. But before we get into the wild AI wizardry of how they actually did this, we really need to set the stage on why. Like, why is the tech world suddenly so desperate for mathematical proofs of safety right now?</v>
+
+17
+00:01:52.917 --> 00:02:04.267
+<v Daniel>So to understand the urgency, you really have to look back at what happened earlier this year. Back in April 2026, there was this cybersecurity assessment released for the Claude mythos preview model.</v>
+
+18
+00:02:04.567 --> 00:02:05.388
+<v Maya>I remember that. Yeah.</v>
+
+19
+00:02:05.628 --> 00:02:17.418
+<v Daniel>Yeah. And the findings from that assessment were genuinely sobering for anyone working in cybersecurity. Large language models have just become terrifyingly adept at finding and exploiting vulnerabilities in code.</v>
+
+20
+00:02:17.842 --> 00:02:22.545
+<v Maya>And we aren't just talking about, you know, finding simple typos in someone's homework assignment, right?</v>
+
+21
+00:02:22.825 --> 00:02:37.334
+<v Daniel>Oh, not at all. No. These models are uncovering ancient, like deeply buried architectural flaws in foundational software. During that mythos preview testing, the AI found a 27-year-old bug in</v>
+
+22
+00:02:37.434 --> 00:02:38.695
+<v Daniel>OpenBSD's TCP</v>
+
+23
+00:02:38.735 --> 00:02:40.756
+<v Maya>implementation. 27 years old?</v>
+
+24
+00:02:40.856 --> 00:02:55.258
+<v Daniel>27 years. And OpenBSD is an operating system that's literally famous for its obsessive focus on security. Right. But the AI uncovered this flaw where just a single manipulated packet of data sent over a network could crash the entire machine.</v>
+
+25
+00:02:55.578 --> 00:02:55.778
+<v Maya>Wow.</v>
+
+26
+00:02:56.159 --> 00:03:10.470
+<v Daniel>Yeah. So when attackers have access to that kind of automated, relentless, AI-driven bug hunting capability, I mean, human defenders can no longer rely on standard testing methodologies. Finding 99% of the bugs just isn't good enough anymore.</v>
+
+27
+00:03:10.830 --> 00:03:12.632
+<v Maya>Because the AI is going to find that remaining 1%.</v>
+
+28
+00:03:13.367 --> 00:03:23.114
+<v Daniel>Exactly. Defenders need ironclad guarantees that the code holding up your online banking or your home Wi-Fi router is actually secure.</v>
+
+29
+00:03:23.495 --> 00:03:35.143
+<v Maya>Okay, let's unpack this because the difference between traditional testing and formal proving is, well, it's crucial to this whole release. The standard defense right now across the industry is something called fuzz testing, right?</v>
+
+30
+00:03:35.223 --> 00:03:35.804
+<v Daniel>Yes, fuzzing.</v>
+
+31
+00:03:36.284 --> 00:03:42.469
+<v Maya>And to me, fuzz testing is like throwing a million darts at a complicated maze while you're blindfolded just to see where the walls are.</v>
+
+32
+00:03:42.689 --> 00:03:44.771
+<v Daniel>That's a pretty good analogy, actually.</v>
+
+33
+00:03:45.031 --> 00:03:58.821
+<v Maya>Right. Like you might find a whole lot of dead ends, but you never really know if you've mapped the entire thing. But this new formal verification approach they're using, it's like having the architectural blueprint in your hands, mathematically proving that no dead ends exist.</v>
+
+34
+00:03:59.181 --> 00:03:59.721
+<v Daniel>Precisely.</v>
+
+35
+00:04:00.262 --> 00:04:07.467
+<v Maya>Can you explain exactly why a proof over all possible inputs is just fundamentally a different kind of evidence than fuzzing?</v>
+
+36
+00:04:07.833 --> 00:04:21.178
+<v Daniel>Yeah, so it ultimately comes down to the mathematical limits of sampling. A fuzzer operates by generating millions of random or maybe slightly mutated inputs. And it feeds those inputs into a program over and over just to see if any of them cause a crash.</v>
+
+37
+00:04:21.739 --> 00:04:22.459
+<v Maya>Just throwing darts.</v>
+
+38
+00:04:22.799 --> 00:04:37.005
+<v Daniel>Right. But a complex program might have an essentially infinite number of possible inputs. Let's say a specific software bug only triggers if you feed it a highly specific 64 megabyte file with, I don't know, one particular byte flipped at the very end.</v>
+
+39
+00:04:37.252 --> 00:04:37.592
+<v Maya>Okay.</v>
+
+40
+00:04:38.193 --> 00:04:51.503
+<v Daniel>A fuzzer could run continuously for a decade and never randomly generate that exact file. It is structurally blind to highly specific edge cases. But a formal proof, on the other hand, doesn't actually run the code at all.</v>
+
+41
+00:04:51.703 --> 00:04:52.764
+<v Maya>Wait, it doesn't run the code?</v>
+
+42
+00:04:52.924 --> 00:05:07.713
+<v Daniel>No, not at all. It uses mathematical logic to analyze the fundamental structure of the program itself. So it evaluates the logic and states, definitively, for every possible input within these defined parameters, a crash cannot logically</v>
+
+43
+00:05:07.773 --> 00:05:07.993
+<v Daniel>occur.</v>
+
+44
+00:05:08.534 --> 00:05:13.554
+<v Maya>So it covers the entire landscape of possibilities all at once rather than just sampling random spots.</v>
+
+45
+00:05:13.734 --> 00:05:27.657
+<v Daniel>Yes. That total coverage is exactly what Claude achieved here. What the lab release details is how Claude took existing fuzz tests from Google's OSS Fuzz Initiative and instead of just running them, turned them into formal specifications.</v>
+
+46
+00:05:28.515 --> 00:05:29.776
+<v Maya>Okay, what does that mean in practice?</v>
+
+47
+00:05:30.156 --> 00:05:43.844
+<v Daniel>Basically, they are mathematical statements saying this specific test can never crash for any input under 64 megabytes. And then Claude wrote machine-checked mathematical proofs in this specialized language called ROC.</v>
+
+48
+00:05:44.244 --> 00:05:46.385
+<v Maya>Right, ROC, R-O-C-Q.</v>
+
+49
+00:05:46.666 --> 00:05:50.308
+<v Daniel>Yeah, and it did this for 239 different entry points across 123 open-source software libraries.</v>
+
+50
+00:05:54.705 --> 00:06:08.195
+<v Maya>And here's where it gets really interesting to me. Because they didn't do this on the C or C++ source code that human developers actually write and read. Claude wrote these proofs at the level of compiled RISC-V binaries.</v>
+
+51
+00:06:08.255 --> 00:06:09.396
+<v Daniel>Yes, the binary level.</v>
+
+52
+00:06:09.876 --> 00:06:22.105
+<v Maya>Wait, but reading compiled machine code, like the raw ones and zeros, that seems so much harder than reading the source code. It's just an endless sea of granular instructions. Why do this at the binary level?</v>
+
+53
+00:06:22.810 --> 00:06:37.568
+<v Daniel>because the binary is what actually runs on the physical microchip. This is a classic persistent problem in software verification. How so? Well, think of the C++ source code as a recipe, and the compiled binary as the actual</v>
+
+54
+00:06:37.689 --> 00:06:47.591
+<v Daniel>cake that comes out of the oven. A program called a compiler is what translates the recipe into the cake. But compilers themselves are software. And</v>
+
+55
+00:06:47.851 --> 00:06:48.772
+<v Maya>compilers have bugs.</v>
+
+56
+00:06:49.172 --> 00:07:04.020
+<v Daniel>Exactly. Compilers have bugs. They also optimize things in weird, unpredictable ways to make the code run faster. So if you only prove that the source code, the recipe, is safe, you're assuming the compiler perfectly translated your intentions.</v>
+
+57
+00:07:05.188 --> 00:07:08.611
+<v Maya>Ah, so you still have a massive translation risk if you only look at the source code.</v>
+
+58
+00:07:08.771 --> 00:07:16.798
+<v Daniel>You do. By operating directly at the binary level, looking at the exact RISC-V machine instructions, they completely remove that risk of translation error.</v>
+
+59
+00:07:17.118 --> 00:07:17.959
+<v Maya>That makes perfect sense.</v>
+
+60
+00:07:18.459 --> 00:07:27.307
+<v Daniel>Yeah. The proof applies to the actual ones and zeros that the CPU executes. You are proving the cake is safe to eat, not just that the recipe looks good on paper.</v>
+
+61
+00:07:27.797 --> 00:07:42.697
+<v Maya>Verify the final product. I love that. But the appendix of this release goes into incredible detail about what they actually proved, and they break it down into three specific theorems to define what no crash actually means. Walk us through those because it's definitely not as simple as it</v>
+
+62
+00:07:42.717 --> 00:07:42.978
+<v Maya>sounds.</v>
+
+63
+00:07:43.319 --> 00:07:50.623
+<v Daniel>No, it's pretty involved. So the first theorem is the most straightforward part of the puzzle. They prove that the binary never encounters a fatal fault.</v>
+
+64
+00:07:50.943 --> 00:07:51.503
+<v Maya>Like what?</v>
+
+65
+00:07:51.743 --> 00:08:06.471
+<v Daniel>Like trying to access memory that doesn't exist or a sudden abort or any behavior that isn't modeled by the system. But we have to remember, they are verifying fuzz tests, and fuzz tests are almost always compiled with a specialized tool called address sanitizer,</v>
+
+66
+00:08:06.711 --> 00:08:07.811
+<v Daniel>or ASAN for short.</v>
+
+67
+00:08:08.092 --> 00:08:08.812
+<v Maya>Okay, ASAN.</v>
+
+68
+00:08:09.219 --> 00:08:17.443
+<v Daniel>Yeah, ASAN acts kind of like training wheels. It adds a bunch of extra hidden checks into the code to catch subtle memory errors that might normally slip by.</v>
+
+69
+00:08:17.843 --> 00:08:25.166
+<v Maya>Right, but normal users out in the real world don't run their apps with address sanitizer turned on because all those extra checks slow everything down, right?</v>
+
+70
+00:08:25.446 --> 00:08:34.890
+<v Daniel>That leads directly to the second theorem. Finding out that the training wheels binary is safe is a great start, but we need to know the normal binary without the training wheels is also safe.</v>
+
+71
+00:08:35.473 --> 00:08:35.773
+<v Maya>OK.</v>
+
+72
+00:08:36.293 --> 00:08:50.738
+<v Daniel>So Claude had to mathematically prove that the ASAN instrumented build behaves identically to the normal build, meaning for every single possible input, both versions produce the exact same sequence of memory reads, memory writes, exit codes,</v>
+
+73
+00:08:51.278 --> 00:08:53.679
+<v Daniel>and leave the computer's file system in the exact same state.</v>
+
+74
+00:08:54.239 --> 00:09:03.002
+<v Maya>Oh, wow. So if their behaviors are mathematically identical and we know the ASAN version doesn't crash, then logic dictates the normal one doesn't crash either.</v>
+
+75
+00:09:03.500 --> 00:09:06.944
+<v Daniel>You would think so. But there was a massive logical loophole there.</v>
+
+76
+00:09:07.304 --> 00:09:07.805
+<v Maya>Wait, really?</v>
+
+77
+00:09:08.185 --> 00:09:23.042
+<v Daniel>Yeah, which is why they needed the third theorem. So theorem two says the normal build and the ASAN build produce the exact same trace of events. But what if the ASAN build encounters an error, and instead of crashing, it just gets stuck in a silent, infinite loop?</v>
+
+78
+00:09:23.388 --> 00:09:36.345
+<v Maya>Oh, I see. Let me try an analogy. It's like two cars driving down parallel roads being tracked by GPS. If one car goes into a tunnel and just drives in circles forever, its GPS trace suddenly just stops transmitting.</v>
+
+79
+00:09:36.485 --> 00:09:49.337
+<v Daniel>Yes, perfect analogy. The trace for the looping car ends. Now, what if the normal car doesn't loop but actually suffers a catastrophic crash right at that tunnel entrance? Its GPS trace also stops transmitting.</v>
+
+80
+00:09:49.577 --> 00:09:49.957
+<v Maya>Oh, man.</v>
+
+81
+00:09:50.097 --> 00:10:01.824
+<v Daniel>Yeah. To a mathematical observer, just comparing the trace logs, both traces ended at the exact same moment. They look equivalent, even though one just got stuck looping and the other one exploded.</v>
+
+82
+00:10:01.984 --> 00:10:02.284
+<v Maya>Wow.</v>
+
+83
+00:10:02.464 --> 00:10:02.644
+<v Daniel>Right.</v>
+
+84
+00:10:02.924 --> 00:10:09.588
+<v Maya>So theorem two might say, everything is fine, the traces match, completely missing the fact that the normal binary actually crashed.</v>
+
+85
+00:10:09.967 --> 00:10:22.517
+<v Daniel>That is exactly the blind spot. So to mathematically close that loophole, the third theorem independently proves that the normal uninstrumented binary does not crash, preventing that exact false equivalent scenario.</v>
+
+86
+00:10:23.197 --> 00:10:35.807
+<v Maya>It's like plugging every conceivable logical hole in a dam. But even with all this rigorous math, we still have to trust something, right? In a system this complex, what is the trusted base? Like, what are we assuming is true?</v>
+
+87
+00:10:36.278 --> 00:10:51.030
+<v Daniel>The trusted base is the foundation. The things you simply have to assume are true for the rest of the proof to hold water. In this specific setup, humans still have to trust the formal mathematical models of how RISC-V chips and Linux operating systems work.</v>
+
+88
+00:10:51.130 --> 00:10:51.850
+<v Maya>OK, that makes sense.</v>
+
+89
+00:10:52.191 --> 00:11:05.441
+<v Daniel>You also have to trust that the theorem statements themselves were written correctly. And you have to trust the Rock Proof Checker, which is the software that actually grades Claude's math. But the crucial takeaway here is that you do not have to trust Claude.</v>
+
+90
+00:11:05.922 --> 00:11:11.894
+<v Maya>Because Claude is just the student submitting the test and Rock acts as the impartial, unhackable judge.</v>
+
+91
+00:11:12.175 --> 00:11:15.602
+<v Daniel>That's the dynamic. Rock evaluates the logic independently.</v>
+
+92
+00:11:15.892 --> 00:11:26.875
+<v Maya>But operating at the binary level means Claude is analyzing tens of thousands of machine instructions. To make this work, the way the AI handled the math is just entirely alien to how humans work.</v>
+
+93
+00:11:27.076 --> 00:11:27.536
+<v Daniel>It really is.</v>
+
+94
+00:11:28.076 --> 00:11:40.520
+<v Maya>I want to share the scale of this because the numbers are absolutely mind-boggling. So out of roughly a billion lines of rock code written by the AI agents during this project, only about 180 million lines actually pass the checker.</v>
+
+95
+00:11:40.900 --> 00:11:44.361
+<v Daniel>The sheer volume of generated code is just staggering.</v>
+
+96
+00:11:44.730 --> 00:11:57.794
+<v Maya>It really is. Listen to this specific example from the appendix. For a tiny little binary program of just 18,000 instructions, a typical proof generated by Claude was 600,000 lines long.</v>
+
+97
+00:11:57.914 --> 00:11:58.314
+<v Daniel>Incredible.</v>
+
+98
+00:11:58.454 --> 00:12:11.458
+<v Maya>There's this widely used tool called cJSON, right? Its parser entry point is only 391 lines of code. But Claude generated a 630,000 line proof just to verify those 391 lines.</v>
+
+99
+00:12:11.578 --> 00:12:12.698
+<v Daniel>Yeah, the inflation is wild.</v>
+
+100
+00:12:13.164 --> 00:12:19.428
+<v Maya>And just running the proof checker program on one of these proofs takes anywhere from 30 minutes to several hours of raw CPU time.</v>
+
+101
+00:12:19.629 --> 00:12:34.539
+<v Daniel>The appendix offers a really fascinating view on how this code was actually written by the AI. The agents wrote incredibly verbose repetitive proofs. They would explicitly spell out the exact contents of CPU</v>
+
+102
+00:12:34.599 --> 00:12:40.283
+<v Daniel>registers over and over again or manually write out integer conversions line by single line.</v>
+
+103
+00:12:41.103 --> 00:12:42.064
+<v Maya>No shortcuts at all.</v>
+
+104
+00:12:42.435 --> 00:12:57.001
+<v Daniel>Zero human-like abstractions. A human mathematician or a proof engineer would create shortcuts, right? They'd define a broad concept like a memory allocator and just reference it when needed. Claude didn't do that. It just brute-forced the logic from scratch every single time.</v>
+
+105
+00:12:57.281 --> 00:13:10.727
+<v Maya>Okay, here's where I have to push back a bit. If these proofs are 600,000 lines long and completely unreadable to human engineers, isn't that a massive problem? What good is a mathematical proof if literally nobody on Earth can read it or comprehend it?</v>
+
+106
+00:13:10.955 --> 00:13:14.498
+<v Daniel>Well, the authors argue in the release that it actually isn't a problem at all.</v>
+
+107
+00:13:14.739 --> 00:13:15.479
+<v Maya>Really? How so?</v>
+
+108
+00:13:15.880 --> 00:13:30.873
+<v Daniel>It goes back to that trusted base we mentioned, the rock checker. The checker is an outside ground truth. The language model cannot argue with the checker, and it cannot hallucinate a passing grade. If those 600,000 lines of</v>
+
+109
+00:13:31.194 --> 00:13:35.918
+<v Daniel>spaghetti math pass the strict logic of the checker, the code is mathematically safe.</v>
+
+110
+00:13:36.287 --> 00:13:37.829
+<v Maya>Regardless of how ugly the proof looks.</v>
+
+111
+00:13:38.069 --> 00:13:50.943
+<v Daniel>Exactly. The readability of the proof simply doesn't change its validity. Plus, while the proofs themselves were huge and ugly, Claude proved highly capable of inventing brilliant, concise specifications.</v>
+
+112
+00:13:51.846 --> 00:13:55.707
+<v Maya>The specifications being the high-level rules the program is supposed to follow.</v>
+
+113
+00:13:55.967 --> 00:14:10.571
+<v Daniel>Right. The median specification that Claude wrote was only about 110 lines long for programs that averaged 86 kilobytes of code. So the AI clearly understands the high-level intent of the software perfectly. It just takes a very</v>
+
+114
+00:14:10.791 --> 00:14:14.992
+<v Daniel>long, very alien, highly granular path to prove it.</v>
+
+115
+00:14:15.715 --> 00:14:28.019
+<v Maya>But trusting a machine to verify a machine isn't perfectly foolproof. I want to bring up a tension that jumped out at me in footnote six of the release because the researchers ran headfirst into a classic AI alignment problem.</v>
+
+116
+00:14:28.539 --> 00:14:29.600
+<v Daniel>Oh, the patching issue?</v>
+
+117
+00:14:29.900 --> 00:14:38.503
+<v Maya>Yes. During this process, Claude wasn't just allowed to read the code. It was allowed to actually patch the code it was trying to prove in order to fix the bugs it found along the way.</v>
+
+118
+00:14:38.703 --> 00:14:41.564
+<v Daniel>Which introduces a massive philosophical and technical risk.</v>
+
+119
+00:14:41.748 --> 00:14:51.578
+<v Maya>Right. Because if the A.I.' 's ultimate goal is just make sure this code never crashes and it has the power to edit the code, couldn't it just rewrite the program to do absolutely nothing?</v>
+
+120
+00:14:51.798 --> 00:14:52.759
+<v Daniel>Yes, it absolutely could.</v>
+
+121
+00:14:52.879 --> 00:15:00.046
+<v Maya>It's like a mechanic fixing your check engine light by just unscrewing the bulb behind the dashboard. Right. Like, look, the car doesn't report any errors. Job done.</v>
+
+122
+00:15:00.567 --> 00:15:15.448
+<v Daniel>That is the textbook definition of reward hacking. An AI system will always find the path of least resistance to satisfy the prompt it was given. If the strict goal is don't crash, deleting all the complicated logic that might crash is the easiest</v>
+
+123
+00:15:15.488 --> 00:15:16.349
+<v Daniel>way to achieve that goal.</v>
+
+124
+00:15:16.909 --> 00:15:17.709
+<v Maya>So how did they stop it?</v>
+
+125
+00:15:18.049 --> 00:15:29.075
+<v Daniel>Well, the researchers anticipated this. To combat it, they had to actively penalize heavy patches. And human engineers had to manually audit the changes Claude made to ensure it wasn't just gutting the software.</v>
+
+126
+00:15:29.275 --> 00:15:29.595
+<v Maya>Got it.</v>
+
+127
+00:15:30.319 --> 00:15:44.611
+<v Daniel>This really highlights the heart of this entire deep dive. A proof checker is an absolute ground truth, but a proof is only as good as its underlying specification. If the specification secretly allows the program to do nothing,</v>
+
+128
+00:15:45.312 --> 00:15:49.375
+<v Daniel>the proof is mathematically sound, but entirely meaningless in the real world.</v>
+
+129
+00:15:49.779 --> 00:15:58.866
+<v Maya>Which brings us to the explicit limitations the authors list in the paper. They are very clear on this point, stating, formally verified does not mean bug-free.</v>
+
+130
+00:15:59.086 --> 00:16:06.792
+<v Daniel>It does not. For one, these proofs assume single-threaded, static RISC-V binaries linked against a specific C library called Muzzle.</v>
+
+131
+00:16:07.232 --> 00:16:12.737
+<v Maya>Let's translate that for anyone who isn't a systems engineer. What does linking against Muzzle actually mean?</v>
+
+132
+00:16:13.320 --> 00:16:27.630
+<v Daniel>So whenever a developer writes a program, they rely on a standard toolkit of pre-written code for basic tasks, like opening a file on the hard drive or printing text to a screen. Muzzle is a very stripped-down, bare-bones version of that toolkit,</v>
+
+133
+00:16:28.170 --> 00:16:31.292
+<v Daniel>typically used in tiny, simple embedded devices.</v>
+
+134
+00:16:31.773 --> 00:16:32.073
+<v Maya>Oh, okay.</v>
+
+135
+00:16:32.273 --> 00:16:43.796
+<v Daniel>But most of the real-world software you and I interact with, like servers, laptops, smartphones, runs on heavier architectures like x86 or ARM and relies on a much more complex toolkit called glibc.</v>
+
+136
+00:16:44.396 --> 00:16:51.358
+<v Maya>So they proved this works in a highly controlled, somewhat simplified environment, not the messy real world of standard servers.</v>
+
+137
+00:16:51.738 --> 00:17:06.285
+<v Daniel>Correct. The proof only guarantees safety in the exact environment it modeled. Furthermore, while address sanitizer is a great tool, it structurally cannot catch every single type of memory bug. And finally, they didn't prove every single entry point in</v>
+
+138
+00:17:06.325 --> 00:17:09.847
+<v Daniel>these 123 libraries. They only proved a subset of them.</v>
+
+139
+00:17:10.247 --> 00:17:21.212
+<v Maya>But despite all those limitations, this incredibly rigorous process forced Claude to uncover some truly bizarre edge case bugs, like bugs that traditional fuzzing is just structurally blind to.</v>
+
+140
+00:17:21.522 --> 00:17:26.846
+<v Daniel>Because as we discussed, a fuzzer would have to literally win the lottery to hit these exact parameters.</v>
+
+141
+00:17:27.086 --> 00:17:42.033
+<v Maya>Precisely. For example, Claude found a counter underflow in a decompressor program. To trigger this bug, you needed a highly specific 20 megabyte input file that happened to create a very rare memory layout. Wow. Or</v>
+
+142
+00:17:42.073 --> 00:17:54.977
+<v Maya>consider this one. An image decoder had an out-of-bounds read error that only triggered if you fed it a 64 megabyte input file and the program was actively using over two gigabytes of system memory at that exact moment.</v>
+
+143
+00:17:55.517 --> 00:17:59.858
+<v Daniel>Fuzzers just don't randomly generate those specific extreme scenarios.</v>
+
+144
+00:18:00.078 --> 00:18:03.979
+<v Maya>Exactly. Claude also rediscovered an old CVE in LibExpat.</v>
+
+145
+00:18:04.847 --> 00:18:19.270
+<v Daniel>And for context, CVE is an official, globally recognized record of a specific security flaw. And LibExpat is a foundational tool used by millions of applications to read XML files. Finding flaws there is a big deal.</v>
+
+146
+00:18:20.010 --> 00:18:29.552
+<v Maya>It also found a file loading restriction that was quietly failing to enforce itself, meaning it wasn't crashing the program at all. It was just a logic bug letting things through that shouldn't get through.</v>
+
+147
+00:18:30.152 --> 00:18:30.512
+<v Daniel>Sneaky.</v>
+
+148
+00:18:30.989 --> 00:18:45.353
+<v Maya>Very. And the release includes some fascinating side quests that really expand the scope of this approach. It wasn't just limited to RISC-V binaries. They actually took the Linux kernel's Zlib compression algorithm and formally proved it against a Claude Ritten</v>
+
+149
+00:18:45.393 --> 00:18:47.674
+<v Maya>specification of RFC 1950.</v>
+
+150
+00:18:48.114 --> 00:18:53.576
+<v Daniel>And RFC 1950 being the official technical rulebook that dictates exactly how Zlib is supposed to format its data.</v>
+
+151
+00:18:53.976 --> 00:19:05.837
+<v Maya>Exactly. And they did this directly on an x86 binary using claw-generated semantics for how x86 instructions work. But the side quest that really blew my mind was the Python experiment.</v>
+
+152
+00:19:06.158 --> 00:19:07.359
+<v Daniel>Oh yeah, this was wild.</v>
+
+153
+00:19:07.999 --> 00:19:18.069
+<v Maya>They verified a Python interpreter written in the Rust programming language using a tool called Verus. It matched the behavior of the standard CPython interpreter on 99.95% of 1.7 million random programs.</v>
+
+154
+00:19:22.252 --> 00:19:23.513
+<v Daniel>Which is impressive on its own.</v>
+
+155
+00:19:23.733 --> 00:19:28.916
+<v Maya>Right, but they didn't stop there. They deliberately injected seven subtle bugs into the code.</v>
+
+156
+00:19:29.617 --> 00:19:40.023
+<v Daniel>This is where the limits of fuzzing become undeniable. They threw random testing at that buggy Python interpreter, and the random testing completely missed five of the seven bugs. It was just blind to them.</v>
+
+157
+00:19:40.804 --> 00:19:41.924
+<v Maya>But the formal proof...</v>
+
+158
+00:19:42.445 --> 00:19:47.728
+<v Daniel>The proof caught all seven. Because a mathematical proof doesn't rely on getting lucky with the right random inputs.</v>
+
+159
+00:19:48.678 --> 00:19:58.628
+<v Maya>That is incredible. And there was also a PDF reader experiment where just one week of AI verification attempts yielded a whole year's worth of typical security bug reports.</v>
+
+160
+00:19:59.428 --> 00:20:02.271
+<v Daniel>It completely compresses the timeline of vulnerability research.</v>
+
+161
+00:20:02.591 --> 00:20:13.222
+<v Maya>To truly appreciate the speed at which this field is moving, we have to look back at how agonizingly slow and expensive formal verification used to be. You were looking at some of the historical background sources on this, right?</v>
+
+162
+00:20:13.589 --> 00:20:28.237
+<v Daniel>Yeah. So if we look back to the gold standard of human-led formal verification, you really have to look at the SEL4 microkernel project, which was published in 2014. Okay. It was an astonishing human achievement, but it took two person years just to build the</v>
+
+163
+00:20:28.277 --> 00:20:35.141
+<v Daniel>system and roughly 20 person years of highly specialized manual human labor to verify it down to the binary level.</v>
+
+164
+00:20:35.727 --> 00:20:36.567
+<v Maya>20 years of labor.</v>
+
+165
+00:20:36.767 --> 00:20:51.673
+<v Daniel>Yeah. Or look at the Estre Static Analyzer from 2007. That project proved the absence of runtime errors in Airbus avionics software. It worked, but it required massive, continuous expert tuning just to reduce the false alarms to a level that engineers</v>
+
+166
+00:20:51.693 --> 00:20:52.413
+<v Daniel>could actually manage.</v>
+
+167
+00:20:52.938 --> 00:21:07.802
+<v Maya>Let's be precise here, though. The SEL4 project was about proving full functional correctness, right? That means they proved the operating system did exactly what the manual said it would do in every single scenario. Correct. To use an analogy, SEL4 proved that the bakery baked</v>
+
+168
+00:21:07.942 --> 00:21:17.204
+<v Maya>the exact cake you ordered down to the final sprinkle. Isn't this new-clawed work a much shallower guarantee? It's really just proving that the cake doesn't contain poison.</v>
+
+169
+00:21:17.548 --> 00:21:32.237
+<v Daniel>That is a vital distinction? Yes. Claude isn't proving that the CJSON parser reads JSON data perfectly according to every internet standard. It's just proving that feeding it weird data won't catastrophically crash your system or corrupt your computer's</v>
+
+170
+00:21:32.257 --> 00:21:32.557
+<v Daniel>memory.</v>
+
+171
+00:21:32.897 --> 00:21:33.317
+<v Maya>Caught it.</v>
+
+172
+00:21:33.938 --> 00:21:43.083
+<v Daniel>So the ambition of the property being proved is much shallower than SEL4. However, the leap in automation is what's staggering here.</v>
+
+173
+00:21:43.493 --> 00:21:58.225
+<v Maya>Think about this. Just three years ago in 2023, there was a project called Balder. They used LLMs to generate whole proofs in a system called Isabel HOL. And they succeeded on about 65.7% of a set of</v>
+
+174
+00:21:58.385 --> 00:21:59.266
+<v Maya>benchmark theorems.</v>
+
+175
+00:21:59.406 --> 00:22:00.567
+<v Daniel>Right. Benchmark theorems.</v>
+
+176
+00:22:00.627 --> 00:22:00.787
+<v Maya>Right.</v>
+
+177
+00:22:01.028 --> 00:22:03.089
+<v Daniel>Meaning simplified academic exercises.</v>
+
+178
+00:22:03.270 --> 00:22:15.483
+<v Maya>Right. And now, barely three years later, we have jumped from solving academic benchmarks directly to proving production level compiled binaries. That speed of progress is dizzying.</v>
+
+179
+00:22:15.764 --> 00:22:20.429
+<v Daniel>It is. It brings us to the economics of the situation. You know, the cost curve.</v>
+
+180
+00:22:20.874 --> 00:22:35.599
+<v Maya>Yes, because right now generating these massive proofs takes hundreds of millions of AI tokens. That is not cheap computing power. No, it's not. But the release notes that on 36 small tasks they tested, the newer Opus 5.5 model required 40%</v>
+
+181
+00:22:35.759 --> 00:22:39.560
+<v Maya>fewer tokens than the older Opus 5 model to get the exact same proofs.</v>
+
+182
+00:22:39.821 --> 00:22:40.041
+<v Daniel>Wow.</v>
+
+183
+00:22:40.661 --> 00:22:48.724
+<v Maya>The models are getting vastly more efficient at this alien math. And even cooler, when they let the AI agents share a workspace, token usage dropped by another 17%.</v>
+
+184
+00:22:49.882 --> 00:23:00.585
+<v Daniel>That happened because they started reusing overlapping proofs. It's highly reminiscent of Mathlib, which is a crowdsourced library for the Lean Theorem Prover, where human mathematicians build on each other's verified proofs.</v>
+
+185
+00:23:01.405 --> 00:23:01.945
+<v Maya>Ah, I see.</v>
+
+186
+00:23:02.145 --> 00:23:14.528
+<v Daniel>Yeah, the AI agents started doing the exact same thing organically. They would realize they'd already proven how the C standard library starts up in one program, and they would just import that proof instead of wasting tokens rewriting it from scratch.</v>
+
+187
+00:23:15.332 --> 00:23:27.839
+<v Maya>We are entering an era where formally proved might transition from being a luxury reserved for fighter jets and avionics to a routine property of everyday code, like a built-in spell check for memory safety.</v>
+
+188
+00:23:28.239 --> 00:23:34.843
+<v Daniel>But that leaves us with massive open questions. And to their credit, the authors list these gaps themselves at the end of the release.</v>
+
+189
+00:23:35.083 --> 00:23:35.764
+<v Maya>What kind of gaps?</v>
+
+190
+00:23:36.569 --> 00:23:51.501
+<v Daniel>Well, if verification becomes as cheap and automated as fuzzing, who is actually writing and checking the underlying specifications? We already saw the reward hacking issue. If the spec is bad, the proof is dangerous. Right. Furthermore, if</v>
+
+191
+00:23:51.541 --> 00:24:02.710
+<v Daniel>you mathematically prove all the software, does the trusted base, like the chip models, the OS models, the proof checkers themselves, do they just become the new centralized attack surface for hackers?</v>
+
+192
+00:24:02.850 --> 00:24:06.934
+<v Maya>I mean, why attack the fortified building when you can just hack the architectural blueprint?</v>
+
+193
+00:24:07.274 --> 00:24:19.746
+<v Daniel>Exactly. And philosophically, what does it mean for software engineering and for teaching programming when AI models are writing the code and proving the code simultaneously? How do human engineers stay in the loop?</v>
+
+194
+00:24:20.572 --> 00:24:35.382
+<v Maya>I want to leave you, the listener, with a thought to chew on today. We started by talking about how software is fundamentally broken and how formal verification is the architectural blueprint that proves a building won't collapse. But if an AI can write a billion lines of completely</v>
+
+195
+00:24:35.542 --> 00:24:50.412
+<v Maya>unreadable mathematical proofs to verify a compiled machine binary that humans also can't read, are we approaching a kind of technological event horizon? Are we locking ourselves out of understanding the software that runs our own world, forced to</v>
+
+196
+00:24:50.452 --> 00:24:53.154
+<v Maya>rely entirely on machines to watch the machines?</v>
+
+197
+00:24:54.035 --> 00:24:59.819
+<v Daniel>It's a profound shift. The water isn't just muddy anymore. We are swimming in a completely different ocean.</v>
+
+198
+00:25:00.399 --> 00:25:05.223
+<v Maya>Something to think about the next time your app crashes, or maybe very soon, never crashes again.</v>

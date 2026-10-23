@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Oct 2026 06:54:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 07:33:40 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1556,5 +1556,23 @@ Reference: Lamport, L. (2001). Paxos Made Simple. ACM SIGACT News, 32(4), 51-58.
       <pubDate>Thu, 22 Oct 2026 06:21:19 +0000</pubDate>
       <itunes:episode>80</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/080%20-%20When%20An%20AI%20Agent%20Invents%20A%20Consensus%20Protocol.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>081 - When AI Proves The Code Cannot Crash</title>
+      <description>LLMs Are Making Formal Software Verification Feasible at a Much Larger Scale (October 2026)
+
+In this episode we unpack a new release from Anthropic's Frontier Red Team, written with the formal methods startup Theorem by Keane Lucas, Nickolai Zeldovich, Nicholas Carlini, Jason Gross and twelve colleagues and published on October 22, 2026, with a six page technical appendix. The claim: formal verification, which has historically taken years of expert effort and been reserved for things like operating system kernels and avionics, can now be done by an AI model at scale. Claude turned the existing fuzz tests of open source libraries into mathematical specifications and then wrote machine-checked proofs that the compiled programs can never crash on any input under 64 MB.
+
+We walk through how the pipeline works on compiled RISC-V binaries using Theorem's RISC-V and Linux process semantics and the Rocq proof checker, and the headline numbers: 239 entry points proved across 123 libraries from Google's OSS-Fuzz, about 180 million lines of checked proof, and a typical proof of roughly 600,000 lines. We cover the bugs it found that fuzzing missed for years, including a decompressor underflow that needed a 20 MB input and a rediscovered libexpat CVE, the side experiments on the Linux kernel's zlib and a Verus-verified Python interpreter in Rust, the reward hacking risk of letting the model patch the code it proves, and the cost curve as newer models need about 40 percent fewer tokens. We set it against the seL4 microkernel proof, Airbus's use of the Astrée analyser, the Baldur LLM proof generator from 2023 and Anthropic's own Mythos Preview cyber assessment, and close on the limits the authors spell out: a proof is only as good as its specification and its model of the machine.
+
+Reference: Lucas, K., Lynch, A., Tong, L., Champine, L., Straznickas, Z., Distefano, D., Agrawal, H., Ben Asher, E., Howell, A., Jawhar, S., Rohlf, C., Zeldovich, N., Carlini, N., Agrawal, R., &amp; Gross, J. (2026). LLMs are making formal software verification feasible at a much larger scale. Anthropic Frontier Red Team. https://www.anthropic.com/research/formal-verification
+Reference: Klein, G., Andronick, J., Elphinstone, K., Murray, T., Sewell, T., Kolanski, R., &amp; Heiser, G. (2014). Comprehensive Formal Verification of an OS Microkernel. ACM Transactions on Computer Systems, 32(1), Article 2. https://doi.org/10.1145/2560537
+Reference: Delmas, D., &amp; Souyris, J. (2007). Astrée: From Research to Industry. Static Analysis Symposium (SAS 2007), LNCS 4634, 437-451. https://doi.org/10.1007/978-3-540-74061-2_27
+Reference: First, E., Rabe, M. N., Ringer, T., &amp; Brun, Y. (2023). Baldur: Whole-Proof Generation and Repair with Large Language Models. ESEC/FSE 2023. arXiv:2303.04910. https://arxiv.org/abs/2303.04910
+Reference: Carlini, N., Cheng, N., Lucas, K., Moore, M., Nasr, M., Prabhushankar, V., Xiao, W., et al. (2026). Assessing Claude Mythos Preview's cybersecurity capabilities. Anthropic Frontier Red Team. https://red.anthropic.com/2026/mythos-preview</description>
+      <guid isPermaLink="false">769d0555b00983b5e45b1657a7d5f156d5106e63</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/081%20-%20When%20AI%20Proves%20The%20Code%20Cannot%20Crash.m4a" length="48472135" type="audio/mp4" />
+      <pubDate>Fri, 23 Oct 2026 06:23:17 +0000</pubDate>
+      <itunes:episode>81</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/081%20-%20When%20AI%20Proves%20The%20Code%20Cannot%20Crash.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
