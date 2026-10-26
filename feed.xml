@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2026 06:48:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 06:47:59 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1611,5 +1611,23 @@ Reference: Baker, B., Huizinga, J., Gao, L., Dou, Z., Guan, M. Y., Madry, A., Za
       <pubDate>Sun, 25 Oct 2026 06:26:37 +0000</pubDate>
       <itunes:episode>83</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/083%20-%20When%20The%20Agent%20Switches%20Off%20Its%20Own%20Monitor.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>084 - When AI Makes Office Work More Social</title>
+      <description>The Effects of Generative AI on Collaboration and Social Networks Among Knowledge Workers (October 2026)
+
+In this episode we unpack a new working paper from Bocconi University by Giuseppe Soda, Alessandro Iorio and Leonardo Rizzo, posted to arXiv on October 23, 2026. A common fear is that generative AI will make knowledge work lonelier, because people can ask the assistant instead of asking a colleague. The paper tests that idea on passively collected behavioral data from more than 12,000 employees of a large consumer products multinational, followed for 13 months while the company rolled out Microsoft Copilot in stages. Its answer is the opposite: the workers who adopted Copilot started spending more time with colleagues, not less.
+
+We walk through the design, which pairs a Callaway and Sant'Anna staggered difference-in-differences comparison of 1,992 adopters against 9,876 never-adopters with a shift-share instrumental variable built from Microsoft's own Copilot release notes and each worker's early exposure to Copilot users, all measured through Microsoft Viva Insights. We cover the main findings: about 1.4 more self-initiated collaboration hours a month in the first three months, two to three more distinct collaborators, less clustered networks, and at the same time more weight on colleagues with long shared histories. We also cover the authors' explanation, which borrows the idea of epistemic debt: AI makes outputs cheap to produce but hard to trust, so people turn to peers to check and legitimise them. We set the result against Microsoft's 2021 study showing remote work left collaboration networks more siloed, Microsoft's randomized M365 Copilot experiment across 56 firms, the jagged frontier field experiment at Boston Consulting Group, and the Vaccaro, Almaatouq and Malone meta-analysis of human and AI teams. We close on what the data cannot see, namely what people actually discuss, whether trusted colleagues check AI-assisted work or just wave it through, and whether the effect outlasts the first few months.
+
+Reference: Soda, G., Iorio, A., &amp; Rizzo, L. (2026). The Effects of Generative AI on Collaboration and Social Networks Among Knowledge Workers. arXiv:2610.32461. https://arxiv.org/abs/2610.32461
+Reference: Yang, L., Holtz, D., Jaffe, S., Suri, S., Sinha, S., Weston, J., Joyce, C., Shah, N., Sherman, K., Hecht, B., &amp; Teevan, J. (2022). The effects of remote work on collaboration among information workers. Nature Human Behaviour, 6, 43-54. https://doi.org/10.1038/s41562-021-01196-4
+Reference: Dillon, E. W., Jaffe, S., Peng, S., &amp; Cambon, A. (2025). Early Impacts of M365 Copilot. arXiv:2504.11443. https://arxiv.org/abs/2504.11443
+Reference: Dell'Acqua, F., McFowland III, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K. C., et al. (2023). Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality. Harvard Business School Working Paper 24-013. https://doi.org/10.2139/ssrn.4573321
+Reference: Vaccaro, M., Almaatouq, A., &amp; Malone, T. (2024). When combinations of humans and AI are useful: A systematic review and meta-analysis. Nature Human Behaviour, 8, 2293-2303. https://doi.org/10.1038/s41562-024-02024-1</description>
+      <guid isPermaLink="false">fb7ab9a497b1fff4ca93060e20b8e3589c33b541</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/084%20-%20When%20AI%20Makes%20Office%20Work%20More%20Social.m4a" length="37988219" type="audio/mp4" />
+      <pubDate>Mon, 26 Oct 2026 06:26:19 +0000</pubDate>
+      <itunes:episode>84</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/084%20-%20When%20AI%20Makes%20Office%20Work%20More%20Social.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
