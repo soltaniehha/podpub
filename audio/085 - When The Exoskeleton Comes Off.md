@@ -1,0 +1,15 @@
+When The Exoskeleton Comes Off (2023–2026)
+
+In this episode we unpack "Generative AI and the temporary upskilling of knowledge workers", a new Nature Human Behaviour paper by Emma Wiles of Boston University with Lisa Krayer and colleagues at the BCG Henderson Institute and Pamela Mishkin of OpenAI, published on 26 October 2026. The argument: generative AI works like an exoskeleton. It lets non-technical knowledge workers do real data science well beyond their training, but the new ability lasts only as long as they keep using the tool, and none of the knowledge stays behind when it comes off.
+
+We walk through the preregistered randomized controlled trial on 487 BCG consultants, run in spring 2024 with GPT-4, in which a ChatGPT-trained group and a Stack Overflow-trained control attempted 90-minute Python coding, statistical understanding and predictive modeling tasks built so ChatGPT cannot solve them alone, benchmarked against 44 BCG data scientists. Treated consultants scored 49, 20 and 17 percentage points higher, and those with some coding background matched the data scientists on coding and statistics, yet on an unassisted quiz afterwards they knew no more than the control group and had grown more overconfident about what ChatGPT can do. We set this against Dell'Acqua et al.'s jagged frontier experiment at BCG, Autor et al.'s patent-lawyer trial where only seniors gained unassisted skill, Bastani et al.'s finding that unguarded GPT-4 harms learning in high school mathematics, and Agarwal et al.'s radiologists who underweight AI rather than trust it too much, and close on what this means for upskilling policy, team design, and teaching technical skills to students who will work with these tools.
+
+Reference: Wiles, E., Krayer, L., Abbadi, M., Awasthi, U., Kennedy, R., Mishkin, P., Sack, D., & Candelon, F. (2026). Generative AI and the temporary upskilling of knowledge workers. Nature Human Behaviour. https://doi.org/10.1038/s41562-026-02566-6
+
+Reference: Dell'Acqua, F., McFowland III, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K. C., et al. (2023). Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality. Harvard Business School Working Paper 24-013. https://doi.org/10.2139/ssrn.4573321
+
+Reference: Autor, D., Rodchenko, T., Martin, J., Iscenko, Z., Strand, S., Pearl, D., & Ferere, M. (2026). Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting. NBER Working Paper 35720. https://doi.org/10.3386/w35720
+
+Reference: Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122
+
+Reference: Agarwal, N., Moehring, A., Rajpurkar, P., & Salz, T. (2023). Combining Human Expertise with Artificial Intelligence: Experimental Evidence from Radiology. NBER Working Paper 31422. https://doi.org/10.3386/w31422

@@ -1,0 +1,753 @@
+WEBVTT
+
+1
+00:00:00.171 --> 00:00:13.359
+<v Maya>If you had an AI that could instantly write complex code for you or just build predictive models out of thin air, would you actually become a data scientist or are you, you know, just wearing a digital costume?</v>
+
+2
+00:00:13.439 --> 00:00:22.364
+<v Daniel>I mean, that really is the ultimate question of the AI era, right? Are we actually getting smarter as human beings or are we just sort of renting a very smart machine for a few hours at a time?</v>
+
+3
+00:00:22.825 --> 00:00:34.711
+<v Maya>Yeah, exactly. I'm so glad we're tackling this today. Welcome to the Deep Dive. We are thrilled to have you with us. Today, our core focus for you is a brand new peer-reviewed paper that literally just dropped this week.</v>
+
+4
+00:00:34.831 --> 00:00:35.812
+<v Daniel>Yeah, October 26th.</v>
+
+5
+00:00:36.252 --> 00:00:44.536
+<v Maya>Right, October 26th, 2026, and it's in Nature Human Behavior. It's called Generative AI and the Temporary Upskilling of Knowledge Workers.</v>
+
+6
+00:00:45.752 --> 00:00:58.635
+<v Daniel>And this is a really heavyweight collaboration. The lead author is Emma Wiles from Boston University, and she's working alongside Lisa Krayer and a team at the BCG Henderson Institute, plus Pamela Mishkin from OpenAI's Economic Impacts Research Team.</v>
+
+7
+00:00:58.995 --> 00:01:00.275
+<v Maya>That's a powerhouse group.</v>
+
+8
+00:01:00.595 --> 00:01:15.038
+<v Daniel>It really is. And our mission today is to unpack this specific paper while also pulling in four older foundational studies to understand the mechanics of what's happening in our brains when we use these tools. Does generative AI actually upskill us or just temporarily loan us</v>
+
+9
+00:01:15.058 --> 00:01:15.618
+<v Daniel>capabilities?</v>
+
+10
+00:01:16.251 --> 00:01:28.377
+<v Maya>Okay, let's unpack this. Because to really understand the impact of AI on upskilling, we first need to visualize what Wiles and her team actually did. I mean, this wasn't just sending out a survey to see how people felt about ChatGPT.</v>
+
+11
+00:01:28.837 --> 00:01:39.862
+<v Daniel>Oh, not at all. It was a rigorous, pre-registered, randomized control trial, and it was conducted back in March and April of 2024. They recruited management consultants at Boston Consulting Group.</v>
+
+12
+00:01:40.258 --> 00:01:41.419
+<v Maya>So BCG consultants.</v>
+
+13
+00:01:41.459 --> 00:01:48.704
+<v Daniel>Right. And think about the demographic here. These are highly educated strategy professionals. They are wizards at PowerPoint and Excel.</v>
+
+14
+00:01:48.924 --> 00:01:49.404
+<v Maya>Oh, for sure.</v>
+
+15
+00:01:49.704 --> 00:01:53.807
+<v Daniel>But crucially, the vast majority of them had absolutely no coding experience.</v>
+
+16
+00:01:54.007 --> 00:01:58.490
+<v Maya>Right. So if you asked them to write a Python script, they would just stare at you blankly.</v>
+
+17
+00:01:58.770 --> 00:02:10.038
+<v Daniel>Completely blank. So from an initial pool of 573 who started the trial, and I think it was 986 who were randomized, the final analysis zeroed in on 487</v>
+
+18
+00:02:10.058 --> 00:02:12.599
+<v Maya>consultants. Okay, 487 people in the final data.</v>
+
+19
+00:02:12.680 --> 00:02:27.589
+<v Daniel>Yeah. And they split them into two groups. The control group received 20 minutes of training on how to use Stack Overflow and, you know, the standard public resources that data scientists normally use. And the treatment group got 20 minutes of training on how to use</v>
+
+20
+00:02:27.629 --> 00:02:29.970
+<v Daniel>GPT-4 within ChatGPT.</v>
+
+21
+00:02:30.242 --> 00:02:36.303
+<v Maya>I just have to say, 20 minutes on Stack Overflow for someone who has never coded is basically just enough time to panic.</v>
+
+22
+00:02:36.803 --> 00:02:49.546
+<v Daniel>It's definitely throwing them into the deep end without a floaty. Then both groups had to tackle two out of three 90-minute data science tasks. And we should spend a second on what these tasks actually look like.</v>
+
+23
+00:02:49.706 --> 00:02:50.126
+<v Maya>Please do.</v>
+
+24
+00:02:50.146 --> 00:02:58.148
+<v Daniel>Because they were carefully designed by BCG data scientists working with OpenAI so that chat GPT couldn't just spit out the answer in one go.</v>
+
+25
+00:02:58.733 --> 00:03:02.195
+<v Maya>Right, you couldn't just type, do the task and hit enter. You had to work for it.</v>
+
+26
+00:03:02.396 --> 00:03:07.399
+<v Daniel>Far from it. For example, there was a Python coding task in Google Colab.</v>
+
+27
+00:03:08.040 --> 00:03:15.705
+<v Maya>Which for anyone listening who's unfamiliar, Colab is basically a live web-based coding notebook where you write and run code right in your browser.</v>
+
+28
+00:03:16.025 --> 00:03:26.893
+<v Daniel>Exactly. So the consultants had to clean, merge, and filter two really messy data sets of customers and orders. And they were graded across 10 very specific steps.</v>
+
+29
+00:03:27.923 --> 00:03:29.104
+<v Maya>Okay, that's one task.</v>
+
+30
+00:03:29.845 --> 00:03:43.181
+<v Daniel>Then there was a statistical understanding task where they had to spot modeling errors, interpret complex plots, compute probabilities. And finally, a prediction task where they had to build and assess a predictive model from scratch.</v>
+
+31
+00:03:43.580 --> 00:03:58.125
+<v Maya>So imagine you are one of these consultants listening to this. You are a business strategist, and someone hands you a toolbox you've barely used and says, build a suspension bridge. Right. You have to orchestrate the AI. You have to tell it what the columns and the data set are,</v>
+
+32
+00:03:58.645 --> 00:04:08.328
+<v Maya>ask it for the code, paste that code into Colab, watch it inevitably throw an error, and then, this is the hard part, explain that error back to the AI to fix it.</v>
+
+33
+00:04:08.741 --> 00:04:17.408
+<v Daniel>And that orchestration takes real cognitive effort. It's not passive. And to know if our business strategists were actually building a sturdy bridge, the researchers needed a benchmark.</v>
+
+34
+00:04:17.648 --> 00:04:18.409
+<v Maya>A gold standard.</v>
+
+35
+00:04:18.629 --> 00:04:32.120
+<v Daniel>Yeah. So they had 44 actual professional BCG data scientists do the exact same tasks without AI. They normalized the expert data scientist score to zero. In this context, zero is the standard of professional performance.</v>
+
+36
+00:04:32.420 --> 00:04:37.865
+<v Maya>Okay. So the ultimate question, how did our total novices deal with their new AI toolboxes?</v>
+
+37
+00:04:38.697 --> 00:04:40.139
+<v Daniel>The capability leap was staggering.</v>
+
+38
+00:04:40.419 --> 00:04:53.494
+<v Maya>The treated consultants, the ones using GPT-4, scored 49 percentage points higher than the control group on the coding task. Whoa. They scored 20 points higher on statistics and 17 points higher on prediction.</v>
+
+39
+00:04:53.983 --> 00:04:58.744
+<v Daniel>Let's put some context around that 49-point jump in coding because that number is huge.</v>
+
+40
+00:04:58.905 --> 00:04:59.525
+<v Maya>It's massive.</v>
+
+41
+00:04:59.805 --> 00:05:08.567
+<v Daniel>On that coding task, the control group, the ones fumbling around on stack overflow, were sitting 63 points below the expert data scientists. They were failing.</v>
+
+42
+00:05:08.587 --> 00:05:09.268
+<v Maya>Just drowning.</v>
+
+43
+00:05:09.648 --> 00:05:10.988
+<v Daniel>But the AI-assisted group,</v>
+
+44
+00:05:11.608 --> 00:05:11.768
+they
+
+45
+00:05:11.828 --> 00:05:14.769
+<v Daniel>closed that gap to just 14 points below the experts.</v>
+
+46
+00:05:15.089 --> 00:05:22.632
+<v Maya>They went from completely lost to nipping at the heels of the professionals in a single afternoon. That is wild.</v>
+
+47
+00:05:23.112 --> 00:05:34.834
+<v Daniel>It is. And for a specific subset, it gets even wilder. If you looked at the treated consultants who already had some prior coding experience, maybe they took a single class in college.</v>
+
+48
+00:05:34.874 --> 00:05:36.255
+<v Maya>Like they knew the absolute basics.</v>
+
+49
+00:05:36.495 --> 00:05:43.039
+<v Daniel>Right. Their performance became statistically indistinguishable from the actual data scientists on coding and statistics.</v>
+
+50
+00:05:43.760 --> 00:05:45.280
+<v Maya>Wait, indistinguishable?</v>
+
+51
+00:05:45.561 --> 00:05:52.925
+<v Daniel>Indistinguishable. The AI effectively erased the gap between a competent amateur and a seasoned professional.</v>
+
+52
+00:05:53.987 --> 00:06:01.769
+<v Maya>Though it's worth noting they didn't catch up completely across the board, right? Like a large gap still remained on that prediction task for everyone.</v>
+
+53
+00:06:02.077 --> 00:06:12.446
+<v Daniel>Yes, because the prediction task required a level of overarching conceptual logic that the AI couldn't just patch together step by step for them. You needed the big picture.</v>
+
+54
+00:06:12.626 --> 00:06:22.094
+<v Maya>Okay, so the AI allowed people with no expertise to perform like seasoned pros on the mechanics of coding and statistics. But here is where it gets really interesting.</v>
+
+55
+00:06:22.335 --> 00:06:22.795
+<v Daniel>The twist.</v>
+
+56
+00:06:23.155 --> 00:06:28.340
+<v Maya>Yeah, the million dollar question. What happened when the researchers took the AI away?</v>
+
+57
+00:06:28.803 --> 00:06:43.514
+<v Daniel>This is literally the twist that gives the paper its name. Immediately after these stressful 90-minute tasks, the laptops were essentially closed. The consultants were handed a five-question technical quiz covering the exact same data science topics they had just spent hours actively</v>
+
+58
+00:06:43.554 --> 00:06:43.994
+<v Daniel>working on.</v>
+
+59
+00:06:44.415 --> 00:06:46.496
+<v Maya>But this time, no AI.</v>
+
+60
+00:06:46.716 --> 00:06:48.838
+<v Daniel>No chat GPT, just them and their brains.</v>
+
+61
+00:06:49.719 --> 00:06:51.180
+<v Maya>The ultimate test of upskilling.</v>
+
+62
+00:06:51.360 --> 00:06:54.342
+<v Daniel>I mean, did they actually learn the material they were just manipulating?</v>
+
+63
+00:06:54.802 --> 00:06:55.443
+<v Maya>They did not.</v>
+
+64
+00:06:55.868 --> 00:07:02.130
+<v Daniel>The treated group, who had just performed like junior data scientists, did absolutely no better on this quiz than the control group.</v>
+
+65
+00:07:02.430 --> 00:07:03.670
+<v Maya>Wait, no better at all?</v>
+
+66
+00:07:03.850 --> 00:07:04.070
+<v Daniel>None.</v>
+
+67
+00:07:04.090 --> 00:07:04.431
+<v Maya>Zero.</v>
+
+68
+00:07:05.071 --> 00:07:12.253
+<v Daniel>The researchers ran a joint statistical test and got a p-value of 0.53, with Bayes' factors heavily favoring no difference.</v>
+
+69
+00:07:13.353 --> 00:07:15.534
+<v Maya>So what does that actually mean in plain English?</v>
+
+70
+00:07:16.357 --> 00:07:31.151
+<v Daniel>To strip away the jargon, the statistical models didn't just show a lack of evidence for learning. They provided strong evidence that absolutely zero learning occurred. The AI group retained nothing more than the group that was just randomly clicking</v>
+
+71
+00:07:31.191 --> 00:07:32.332
+<v Daniel>around stack overflow.</v>
+
+72
+00:07:33.373 --> 00:07:39.919
+<v Maya>Which leads us to the central metaphor of the whole paper. Generative AI acts as an exoskeleton.</v>
+
+73
+00:07:40.339 --> 00:07:41.861
+<v Daniel>Right, the exoskeleton effect.</v>
+
+74
+00:07:42.385 --> 00:07:57.129
+<v Maya>If you step into a robotic exoskeleton, you can suddenly lift a car over your head. You possess super strength. But while you're wearing it, your own biological muscles aren't growing at all. The moment you step out of the suit, you are exactly as strong or as</v>
+
+75
+00:07:57.189 --> 00:07:58.329
+<v Maya>weak as you were before.</v>
+
+76
+00:07:59.369 --> 00:08:09.252
+<v Daniel>The AI extended their capabilities outward, but nothing internalized when it came off. It is the difference between renting a capability and owning a skill.</v>
+
+77
+00:08:10.256 --> 00:08:19.041
+<v Maya>Hold on. This feels awfully familiar. A while back, we did a deep dive on a 2026 study by David Otto and his team involving patent lawyers.</v>
+
+78
+00:08:19.802 --> 00:08:22.023
+<v Daniel>Oh, yes. Right. Patent drafting study.</v>
+
+79
+00:08:22.203 --> 00:08:36.252
+<v Maya>Right. In that study, the lawyers used AI to write patent drafts. The AI improved the drafts for everybody. But when the AI was taken away, only the senior lawyers had actually improved their unassisted judgment. The junior lawyers learned nothing.</v>
+
+80
+00:08:36.332 --> 00:08:36.732
+<v Daniel>Exactly.</v>
+
+81
+00:08:37.549 --> 00:08:51.655
+<v Maya>So does this new Wiles paper basically confirm that Otter pattern, the idea that people with a foundational baseline, like the competent coders you mentioned earlier, gain the most, while total novices gain raw capability but zero actual knowledge?</v>
+
+82
+00:08:52.095 --> 00:09:05.240
+<v Daniel>It confirms the underlying pattern beautifully, yes. But it adds a fascinating wrinkle regarding the time horizon. In Otter's patent law study, they tested those lawyers after three solid months of integrating AI into their daily professional workflow.</v>
+
+83
+00:09:05.500 --> 00:09:06.441
+<v Maya>Which is a long time.</v>
+
+84
+00:09:06.601 --> 00:09:14.585
+<v Daniel>Three months is a very long time to absorb information. But the Wiles study tested these consultants immediately after a single concentrated session.</v>
+
+85
+00:09:14.945 --> 00:09:16.986
+<v Maya>Wow. So the timeline is completely different.</v>
+
+86
+00:09:17.086 --> 00:09:28.352
+<v Daniel>Totally different. But the conclusion is identical. The AI provides output, but it does not automatically provide understanding unless the foundational architecture is already built in your brain.</v>
+
+87
+00:09:28.926 --> 00:09:40.190
+<v Maya>So if you don't know the basic principles of patent law or how data structures work in Python, the AI's output is just magic to you. You can't critically engage with it. You just forward it along.</v>
+
+88
+00:09:40.791 --> 00:09:42.191
+<v Daniel>You're just a messenger for the machine.</v>
+
+89
+00:09:42.511 --> 00:09:56.877
+<v Maya>But that brings up a really scary side effect. Think about your own job for a second, listener. Think about the last time you used AI to draft an email or write a report in the subject you weren't fully comfortable with. Did you catch its mistakes or did you just assume it knew better than you?</v>
+
+90
+00:09:57.197 --> 00:09:57.917
+<v Daniel>And that's the danger.</v>
+
+91
+00:09:58.540 --> 00:10:03.564
+<v Maya>Because if the exoskeleton doesn't build your muscles, does it at least make you aware of your own limitations?</v>
+
+92
+00:10:04.004 --> 00:10:10.709
+<v Daniel>You would certainly hope so. I mean, if you're lifting a car with a robot suit, you presumably still know that you, the human, cannot lift a car.</v>
+
+93
+00:10:11.610 --> 00:10:13.071
+<v Maya>Right. I know I'm weak.</v>
+
+94
+00:10:13.311 --> 00:10:20.797
+<v Daniel>But the Wiles paper found the exact opposite. And this brings us to an exploratory finding. It wasn't pre-registered, but it basically screamed out from the data.</v>
+
+95
+00:10:20.977 --> 00:10:21.558
+<v Maya>What did they find?</v>
+
+96
+00:10:22.167 --> 00:10:33.891
+<v Daniel>After using ChatGPT, the treated workers became more confident that the AI could solve problems that it actually couldn't. And simultaneously, they became worse at judging which problems were actually within its reach.</v>
+
+97
+00:10:34.491 --> 00:10:37.052
+<v Maya>So they became totally blind to the machine's boundaries.</v>
+
+98
+00:10:37.292 --> 00:10:46.394
+<v Daniel>Completely uncalibrated. And we can view this through the lens of a 2023 paper by Delacqua and colleagues, the famous Jagged Technological Frontier Study.</v>
+
+99
+00:10:46.614 --> 00:10:48.095
+<v Maya>Oh, we've talked about that one before.</v>
+
+100
+00:10:48.594 --> 00:10:58.416
+<v Daniel>Yeah, that study was also done with BCG consultants, actually. But it looked at tasks inside a consultant's typical skill set, like brainstorming business strategies and writing memos.</v>
+
+101
+00:10:58.536 --> 00:10:59.436
+<v Maya>Stuff they do every day.</v>
+
+102
+00:10:59.816 --> 00:11:14.479
+<v Daniel>Right. And Delacqua found that when consultants used AI inside their wheelhouse, they got faster and better. But Wiles pushes this into entirely new territory. She asks what happens when the tasks are entirely outside their skills.</v>
+
+103
+00:11:15.079 --> 00:11:18.180
+<v Maya>And the answer is users become dangerously overconfident.</v>
+
+104
+00:11:18.446 --> 00:11:33.137
+<v Daniel>Precisely. They trust the AI too much because they lack the domain expertise to spot its subtle failures. They experience this massive, unearned success on the coding task, and that success bleeds into an unjustified confidence in the tool's absolute competence</v>
+
+105
+00:11:33.398 --> 00:11:34.118
+<v Daniel>across the board.</v>
+
+106
+00:11:34.558 --> 00:11:40.623
+<v Maya>Wait, this immediately reminds me of another study, the 2023 radiology experiment by Agarwal and colleagues.</v>
+
+107
+00:11:40.823 --> 00:11:41.684
+<v Daniel>The chest x-ray one?</v>
+
+108
+00:11:42.054 --> 00:11:54.784
+<v Maya>Yes. In that one, expert radiologists were given AI predictions to help them read chest x-rays. But the experts actually underweighted the AI predictions compared to their own judgment, even when the AI was highly accurate.</v>
+
+109
+00:11:55.044 --> 00:11:55.725
+<v Daniel>They didn't trust it.</v>
+
+110
+00:11:55.985 --> 00:12:04.672
+<v Maya>Right. Why did the doctors ignore the AI, but these consultants blindly trusted it? Is it just because expertise flips the direction of the calibration error?</v>
+
+111
+00:12:05.088 --> 00:12:19.973
+<v Daniel>That is the exact tension at play here. Expertise fundamentally alters how you calibrate to the machine. The Agarwal radiologists had deep, hard-earned internal models of what a lung anomaly looks like. When the AI</v>
+
+112
+00:12:20.013 --> 00:12:23.654
+<v Daniel>disagreed with them, their expertise caused them to anchor on their own judgment.</v>
+
+113
+00:12:24.615 --> 00:12:25.975
+<v Maya>Sometimes to their detriment, right?</v>
+
+114
+00:12:26.695 --> 00:12:27.696
+<v Daniel>Because they were too skeptical.</v>
+
+115
+00:12:27.916 --> 00:12:28.776
+<v Maya>Yes, exactly.</v>
+
+116
+00:12:29.388 --> 00:12:43.401
+<v Daniel>But Wiles' consultants had no internal model of Python coding. They literally didn't know what they didn't know. So when the AI gave them an answer, they had no friction, no basis for skepticism. They just accepted it.</v>
+
+117
+00:12:44.122 --> 00:12:54.331
+<v Maya>Which brings us to the core mechanism of learning itself. I mean, why did these smart, highly educated consultants fail to retain any knowledge after wrestling with this code for hours?</v>
+
+118
+00:12:54.351 --> 00:12:55.032
+<v Daniel>That's a great question.</v>
+
+119
+00:12:55.470 --> 00:13:00.253
+<v Maya>Is this a fundamental flaw in the human brain or is it a flaw in how the AI was designed?</v>
+
+120
+00:13:01.173 --> 00:13:13.920
+<v Daniel>To answer that, we have to look at the cognitive science of learning. And this was beautifully demonstrated in a 2025 paper by Bastani and colleagues. They ran a massive field experiment with nearly a thousand high school math students in Turkey.</v>
+
+121
+00:13:14.147 --> 00:13:17.269
+<v Maya>High school math. The ultimate battleground for learning.</v>
+
+122
+00:13:17.329 --> 00:13:31.876
+<v Daniel>It really is. They gave one group of students unrestricted access to GPT-4 while doing practice problems. Just like standard chat GPT, it helpfully gave them the answers and the steps. Which students love. Of course. And not surprisingly, their practice</v>
+
+123
+00:13:31.936 --> 00:13:45.724
+<v Daniel>performance shot up by 48%. But... When they took a subsequent unassisted exam, no AI allowed, they actually performed 17% worse than the control group who never had AI access at all.</v>
+
+124
+00:13:46.225 --> 00:13:49.467
+<v Maya>Wait, they did worse than if they had just studied normally with a textbook?</v>
+
+125
+00:13:49.847 --> 00:14:04.829
+<v Daniel>Yes, because they used the AI as a crutch. They cognitively offloaded the struggle of problem solving. But here is the crucial mechanism. Bastani also tested a modified version of GPT-4, engineered specifically</v>
+
+126
+00:14:04.969 --> 00:14:06.130
+<v Daniel>as a tutor.</v>
+
+127
+00:14:07.291 --> 00:14:08.893
+<v Maya>Okay, how is the tutor different?</v>
+
+128
+00:14:09.413 --> 00:14:24.047
+<v Daniel>This version had strict guardrails. It refused to give direct answers. Instead, it gave hints, forcing the students to do the mental heavy lifting themselves. And with the tutor version, the harm to their unassisted exam performance was largely</v>
+
+129
+00:14:24.087 --> 00:14:24.467
+<v Daniel>avoided.</v>
+
+130
+00:14:25.160 --> 00:14:40.105
+<v Maya>Okay, let's flesh out this analogy because it's vital. Right now, for most people in the workplace, GPT-4 is an exoskeleton. It does the heavy lifting for you. Right. But what if it was designed as a personal trainer instead? I mean, if you go to the gym and a personal trainer just</v>
+
+131
+00:14:40.185 --> 00:14:45.407
+<v Maya>lifts the 50-pound dumbbell for you, your muscles don't tear and they don't rebuild. You get zero benefit.</v>
+
+132
+00:14:45.827 --> 00:14:46.007
+<v Daniel>None.</v>
+
+133
+00:14:46.707 --> 00:14:53.770
+<v Maya>Cognitive friction works the exact same way. If the AI doesn't force your brain to struggle, the neural pathways simply do not form.</v>
+
+134
+00:14:54.070 --> 00:15:06.273
+<v Daniel>That is known in cognitive psychology as the generation effect. You remember things infinitely better if you actively generate the answer yourself rather than just passively reading it.</v>
+
+135
+00:15:06.893 --> 00:15:16.015
+<v Maya>So what would a guard railed learning oriented version of this BCG training have actually looked like for these consultants? How do we build a personal trainer AI?</v>
+
+136
+00:15:16.816 --> 00:15:26.699
+<v Daniel>Well, if we apply the Bastani mechanism to the Wiles experiment, a personal trainer AI wouldn't have just spit out the Python code to merge those customer data sets.</v>
+
+137
+00:15:26.899 --> 00:15:28.040
+<v Maya>It wouldn't just say, here's the code.</v>
+
+138
+00:15:28.400 --> 00:15:43.338
+<v Daniel>No, it would have introduced forced friction. It would have used Socratic questioning. If the consultant asked, how do I clean this data? The AI might have responded, well, to clean the data, you first need to identify the missing values. What specific</v>
+
+139
+00:15:43.398 --> 00:15:46.159
+<v Daniel>pandas function do you think you'd use to check for empty rows?</v>
+
+140
+00:15:46.519 --> 00:15:51.221
+<v Maya>Oh, I see. It forces the human to generate the thought. It forces the muscle to tear.</v>
+
+141
+00:15:51.502 --> 00:16:03.227
+<v Daniel>Yes. Because Wiles' consultants were using an unrestricted, maximally helpful version of ChatGPT, they were just passive reviewers of code. They copy-pasted. They didn't generate it, so they didn't retain it.</v>
+
+142
+00:16:03.670 --> 00:16:10.991
+<v Maya>Okay, before we completely rewrite our corporate training manuals and tell everyone that upskilling is dead, we have to look at the boundaries of this specific study.</v>
+
+143
+00:16:11.311 --> 00:16:11.772
+<v Daniel>Absolutely.</v>
+
+144
+00:16:11.872 --> 00:16:18.353
+<v Maya>So what does this all mean for you, the listener? How do we apply this to the real world, knowing the limits of the research? Let's start with the limitations.</v>
+
+145
+00:16:18.993 --> 00:16:33.984
+<v Daniel>We definitely need to name the constraints. First, the knowledge test Wiles used was very short, just five questions, and it was administered immediately after a single, highly stressful 90-minute task. Right. The authors themselves are very transparent that this cannot speak</v>
+
+146
+00:16:34.004 --> 00:16:36.887
+<v Daniel>to the effects of using an AI tool every day for six months.</v>
+
+147
+00:16:36.907 --> 00:16:42.352
+<v Maya>Yeah, as we said, you don't get muscle from one day at the gym, even if you do use the personal trainer instead of the exoskeleton.</v>
+
+148
+00:16:42.553 --> 00:16:52.502
+<v Daniel>Exactly. Second, the open-ended parts of the tasks, the ones without a single mathematical right answer, were graded by GPT-4 Turbo, which was then validated by a human data scientist.</v>
+
+149
+00:16:52.522 --> 00:16:54.104
+<v Maya>Pretty standard, but worth noting.</v>
+
+150
+00:16:54.775 --> 00:17:06.323
+<v Daniel>Third, this is a very elite, highly educated sample at one specific strategy for him. We can't necessarily generalize how a BCG consultant learns to the entire global workforce.</v>
+
+151
+00:17:06.995 --> 00:17:21.049
+<v Maya>And importantly, this experiment was run in March and April of 2024 using an early version of GPT-4. Here we are in late 2026. The models we use today are far, far stronger. I mean, they can reason better. They hold more context.</v>
+
+152
+00:17:21.229 --> 00:17:22.570
+<v Daniel>They're a different beast entirely.</v>
+
+153
+00:17:22.810 --> 00:17:28.416
+<v Maya>So does a stronger model fix this learning problem or does it just make the capability gap wider?</v>
+
+154
+00:17:28.802 --> 00:17:37.508
+<v Daniel>Well, based on the cognitive mechanisms we just discussed, a stronger model might actually make the knowledge retention issue much worse, assuming it isn't specifically designed as a tutor.</v>
+
+155
+00:17:37.668 --> 00:17:38.729
+<v Maya>Because it's too helpful?</v>
+
+156
+00:17:39.069 --> 00:17:49.877
+<v Daniel>Exactly. If the AI gets so incredibly good that it never makes a syntax error and requires even less prompting from the user, the human experiences even less friction. You don't even have to troubleshoot anymore.</v>
+
+157
+00:17:50.297 --> 00:17:51.258
+<v Maya>So you learn even less.</v>
+
+158
+00:17:51.618 --> 00:17:57.823
+<v Daniel>The capability gap between what you can do with the tool versus what you can do without it would turn into an absolute chasm.</v>
+
+159
+00:17:58.330 --> 00:18:09.115
+<v Maya>Which brings us to the real world implications of all this. Let's start with labor market policy. You hear politicians and executives constantly talking about upskilling workers whose jobs are threatened by automation.</v>
+
+160
+00:18:09.495 --> 00:18:10.255
+<v Daniel>You hear it all the time.</v>
+
+161
+00:18:10.495 --> 00:18:17.118
+<v Maya>But based on this paper, is handing a worker an AI tool a true long term upskilling policy or is it just a temporary fix?</v>
+
+162
+00:18:17.587 --> 00:18:29.474
+<v Daniel>It looks much more like a temporary fix, a capability rental. If a government or a corporation wants true upskilling, they can't just buy everyone a chat GPT enterprise license and consider the job done.</v>
+
+163
+00:18:29.514 --> 00:18:30.814
+<v Maya>Check the box. We're upskilled.</v>
+
+164
+00:18:31.014 --> 00:18:45.981
+<v Daniel>Right. That doesn't work. They have to invest in foundational knowledge building. Because otherwise, the moment that subscription ends or the Internet goes down or more realistically, the company needs an unassisted human to make a critical, nuanced judgment call</v>
+
+165
+00:18:46.381 --> 00:18:49.962
+<v Daniel>that the AI is failing at. That worker is right back to square one.</v>
+
+166
+00:18:50.383 --> 00:19:01.687
+<v Maya>OK, what about team design? If I am a manager listening to this right now, how do I actually structure a team knowing that my juniors have raw capability but zero foundational knowledge?</v>
+
+167
+00:19:02.492 --> 00:19:12.077
+<v Daniel>The authors suggest a fascinating shift in how we hire and build teams. Historically, you might hire a pyramid of mid-level coders supervised by a senior developer.</v>
+
+168
+00:19:12.097 --> 00:19:13.198
+<v Maya>Right, the classic structure.</v>
+
+169
+00:19:13.718 --> 00:19:28.666
+<v Daniel>But now you might pair several AI-enabled generalists, people like the consultants in this study, who can punch way above their weight class using the tool, to generate the bulk of the raw code. And you supervise them with one deep foundational expert.</v>
+
+170
+00:19:29.498 --> 00:19:36.122
+<v Maya>OK, let's break down how that actually functions day to day. What is the expert doing in that scenario?</v>
+
+171
+00:19:36.522 --> 00:19:50.270
+<v Daniel>The expert isn't writing the code anymore. Their job is entirely supervisory and critical. They are reading the AI generated code to look for landmines. They spot the subtle hallucinations and they provide the calibration that the generalists lack.</v>
+
+172
+00:19:51.047 --> 00:19:56.389
+<v Maya>It's like having a construction crew where everyone is wearing an exoskeleton, wildly throwing steel beams around.</v>
+
+173
+00:19:56.409 --> 00:19:57.089
+<v Daniel>Yeah, pretty much.</v>
+
+174
+00:19:57.269 --> 00:20:04.971
+<v Maya>You absolutely need one master engineer on site without a suit, just watching to make sure they don't accidentally pull the entire building down.</v>
+
+175
+00:20:05.172 --> 00:20:17.916
+<v Daniel>That is the exact dynamic. And finally, think about the implications for education, for universities teaching technical skills right now. Is mere capability with a tool a valid skill to teach in grade?</v>
+
+176
+00:20:18.356 --> 00:20:19.076
+<v Maya>That's a tough one.</v>
+
+177
+00:20:19.752 --> 00:20:31.878
+<v Daniel>If a student can orchestrate an AI to solve a complex predictive model, do they get an A? Or is that just a rental? And the university's true job is to force them to take the exoskeleton off and do the actual math.</v>
+
+178
+00:20:32.458 --> 00:20:40.085
+<v Maya>It forces a massive philosophical shift in what a degree even means. Okay, let's bring this all together. We went deep today.</v>
+
+179
+00:20:40.286 --> 00:20:40.806
+<v Daniel>We really did.</v>
+
+180
+00:20:41.266 --> 00:20:55.954
+<v Maya>We started with Emma Wiles' brand new paper showing that management consultants could perform like junior data scientists when given generative AI, closing a massive 63-point skill gap. But the moment the AI was removed, their knowledge simply vanished.</v>
+
+181
+00:20:56.715 --> 00:21:11.656
+<v Daniel>And we saw how this perfectly aligns with the Otter Patent Lawyer Study, confirming that true expertise takes time and foundations to build. We explored how operating entirely outside your skill set causes a dangerous overconfidence, flipping the script on the</v>
+
+182
+00:21:11.756 --> 00:21:15.202
+<v Daniel>expert skepticism we saw in Agarwal's radiology study.</v>
+
+183
+00:21:15.939 --> 00:21:30.845
+<v Maya>And we broke down the learning mechanism with the Bastani high school math study. We realized that to actually learn from AI, it needs to act as a personal trainer that introduces cognitive friction, not a crutch that just carries you across the finish line. Generative</v>
+
+184
+00:21:30.965 --> 00:21:44.390
+<v Maya>AI is an incredible tool that allows non-experts to punch vastly above their weight class. But we cannot confuse enhanced output with genuine human learning. It is an exoskeleton, not a muscle builder.</v>
+
+185
+00:21:44.984 --> 00:21:51.483
+<v Daniel>Understanding the difference between renting a capability and owning a skill will really define the successful knowledge worker of the next decade.</v>
+
+186
+00:21:52.187 --> 00:22:06.976
+<v Maya>Which leaves you, our listener, with a final thought to mull over. If we are entering an era where hard technical skills like Python coding or statistical modeling can be successfully and cheaply rented just by putting on an AI exoskeleton,</v>
+
+187
+00:22:07.657 --> 00:22:22.410
+<v Maya>perhaps the most valuable human skill of the future isn't technical proficiency at all. Perhaps the ultimate skill is simply calibration, the wisdom to know exactly what you don't know so you never blindly trust the machine. So the next time you put on the</v>
+
+188
+00:22:22.451 --> 00:22:29.301
+<v Maya>digital costume, just make sure you know who is actually doing the lifting. Thanks for joining us on the deep dive and keep learning.</v>
