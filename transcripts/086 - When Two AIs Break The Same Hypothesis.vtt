@@ -1,0 +1,613 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:07.675
+<v Maya>Imagine waking up to find out that physicists just proved gravity actually pushes things apart instead of pulling them together.</v>
+
+2
+00:00:08.175 --> 00:00:10.696
+<v Daniel>Right. Yeah, it would be completely reality breaking.</v>
+
+3
+00:00:10.836 --> 00:00:25.403
+<v Maya>Exactly. Well, yesterday, theoretical computer science kind of had its own gravity pushes moment. I mean, within hours of each other, two independent AI models, like not human mathematicians, but actual AI models, claimed to have solved a math problem that we</v>
+
+4
+00:00:25.843 --> 00:00:29.645
+<v Maya>literally built entire fields of science around, assuming it was impossible.</v>
+
+5
+00:00:30.944 --> 00:00:38.835
+<v Daniel>It really is the kind of foundational earthquake you just don't see in modern mathematics. I mean, we are talking about an absolute paradigm shift here, assuming it holds up.</v>
+
+6
+00:00:39.551 --> 00:00:54.483
+<v Maya>And that is exactly what we are going to explore today. So today is Tuesday, October 27, 2026. And we're looking at two brand new lead papers that dropped yesterday, October 26. First, we have a paper from OpenAI titled</v>
+
+7
+00:00:54.824 --> 00:01:01.009
+<v Maya>The Exponential Time Hypothesis is False, which they just posted straight to their math GitHub repository.</v>
+
+8
+00:01:01.330 --> 00:01:10.415
+<v Daniel>Right. And then, you know, right on its heels, we have Anthropix paper. And this one is titled A 2 to the little o of end time algorithm for 3SAT.</v>
+
+9
+00:01:10.635 --> 00:01:11.275
+<v Maya>Wow. OK.</v>
+
+10
+00:01:11.475 --> 00:01:26.222
+<v Daniel>Yeah. And it's credited directly to the AI model Claude posted on the Hexagon preprint server. So both of these papers, they make the exact same staggering claim. They say an AI model found a deterministic algorithm that counts the satisfying</v>
+
+11
+00:01:26.262 --> 00:01:31.384
+<v Daniel>assignments of any KCNF formula in sub-exponential time.</v>
+
+12
+00:01:31.724 --> 00:01:41.788
+<v Maya>Okay. Let's unpack this because if you're listening to this and wondering like, great, an AI solved a math problem. How does this actually affect anything? We need to step back a bit.</v>
+
+13
+00:01:41.908 --> 00:01:42.168
+<v Daniel>Definitely.</v>
+
+14
+00:01:42.568 --> 00:01:57.093
+<v Maya>The mission of this deep dive is to figure out how these two papers claim to refute something called the exponential time hypothesis, how their methods are completely different. And of course, the massive undeniable elephant in the room, the fact that artificial intelligence</v>
+
+15
+00:01:57.213 --> 00:01:59.573
+<v Maya>generated these proofs entirely on its own.</v>
+
+16
+00:01:59.753 --> 00:02:00.854
+<v Daniel>Yeah, that's the wild part.</v>
+
+17
+00:02:01.074 --> 00:02:04.435
+<v Maya>But before we get to the AI, we have to talk about the rule they just broke, right?</v>
+
+18
+00:02:04.595 --> 00:02:19.124
+<v Daniel>Right. So to understand the stakes here, we need to go back to a landmark 2001 paper by human researchers Impogliazzo and Pettori. They were studying a really classic problem in computer science called 3SAT. Now, 3SAT is</v>
+
+19
+00:02:19.764 --> 00:02:34.648
+<v Daniel>essentially a giant logic puzzle. You're given a massive formula made up of clauses, so think of them as rules, where each rule has up to three variables. And you have to find a combination of true and false assignments that satisfies the entire set of rules at once.</v>
+
+20
+00:02:35.054 --> 00:02:47.583
+<v Maya>And just to clarify for everyone, checking if an answer works is super easy. But actually finding that answer from scratch, that is the hard part. I always think of it like a giant cryptographic combination lock.</v>
+
+21
+00:02:47.963 --> 00:02:48.744
+<v Daniel>Oh, it's a good way to put it.</v>
+
+22
+00:02:48.944 --> 00:03:03.594
+<v Maya>Right? Like if I give you the combination, you can instantly see if it opens the lock. But if you have to guess it, there's no clever trick. You basically just have to sit there and spin the dials, trying almost every single</v>
+
+23
+00:03:03.614 --> 00:03:14.283
+<v Maya>combination. And as the lot gets bigger, as you add more variables to the three-set formula, the time it takes to brute force your way to the answer just grows exponentially.</v>
+
+24
+00:03:14.758 --> 00:03:29.349
+<v Daniel>That is exactly the core of it. Yeah. And in Pagliasso and Peturi, they formalize this reality as the exponential time hypothesis or ETH. Okay. ETH simply states that solving three sets strictly requires exponential time. Like there is no</v>
+
+25
+00:03:29.429 --> 00:03:39.757
+<v Daniel>massive shortcut. To get a bit technical for a second, it says it requires two to the power of delta times n time for some constant delta greater than zero.</v>
+
+26
+00:03:40.222 --> 00:03:47.513
+<v Maya>Now wait, I want to make sure we don't confuse this with another really famous math problem. This is not the same thing as P versus NP, right?</v>
+
+27
+00:03:47.977 --> 00:03:57.467
+<v Daniel>I'm really glad you brought that up because people conflate them all the time. Refuting ETH is actually a stronger claim than P versus NP, but they are not the same thing.</v>
+
+28
+00:03:57.647 --> 00:03:57.927
+<v Maya>Right.</v>
+
+29
+00:03:58.407 --> 00:04:10.900
+<v Daniel>Both OpenAI and Anthropic are very, very clear in their papers that refuting ETH does not settle P versus NP. And it definitely doesn't mean they've handed us some practical algorithm we can just run on our laptop today.</v>
+
+30
+00:04:11.468 --> 00:04:25.942
+<v Maya>But refuting ETH is arguably more destructive to everyday computer science, right? Because ETH wasn't just some niche theory. It became the bedrock for an entire branch of computer science known as a parametrized and fine-grained complexity.</v>
+
+31
+00:04:26.162 --> 00:04:26.783
+<v Daniel>It really did.</v>
+
+32
+00:04:26.843 --> 00:04:36.072
+<v Maya>Yeah. I was looking at the survey by Lokstinov, Marks, and Sarab, and they outlined how ETH became this foundational load-bearing pillar for everything.</v>
+
+33
+00:04:36.172 --> 00:04:45.654
+<v Daniel>Yeah, hundreds of lower bounds. And by that, I mean mathematical proofs that say you absolutely cannot compute this faster than X. We're built on the assumption that ETH is true.</v>
+
+34
+00:04:45.994 --> 00:04:46.254
+<v Maya>Wow.</v>
+
+35
+00:04:46.975 --> 00:05:01.658
+<v Daniel>We are talking about algorithms for the K-click problem, which is basically finding groups of deeply connected nodes in a network like a social network. It underpins algorithms based on tree width, which measures how tree-like a network is. It even dictates the limits of</v>
+
+36
+00:05:01.698 --> 00:05:05.959
+<v Daniel>computing edit distance, which is literally how we compare DNA sequences.</v>
+
+37
+00:05:06.530 --> 00:05:21.257
+<v Maya>And Anthropix Claude actually did a literature search and found more than 800 published papers that prove their results only if ETH or its stronger cousin SETH is true. So if ETH is false, 800 papers just had their</v>
+
+38
+00:05:21.297 --> 00:05:23.138
+<v Maya>foundations completely yanked out from under them.</v>
+
+39
+00:05:23.396 --> 00:05:37.761
+<v Daniel>What's fascinating here is how deeply the human experts believe that was never going to happen. If you look at Ryan Williams' 2019 essay, Some Estimated Likelihoods for Computational Complexity, he actually surveyed how much the top experts believe these</v>
+
+40
+00:05:37.821 --> 00:05:38.461
+<v Daniel>hypotheses.</v>
+
+41
+00:05:39.021 --> 00:05:39.922
+<v Maya>Okay, and what did they say?</v>
+
+42
+00:05:40.202 --> 00:05:52.206
+<v Daniel>Well, he put the probability of ETH being true at 70% and SETH at 25%. The brightest human minds largely agree that ETH was just an unbreakable law of computation.</v>
+
+43
+00:05:52.714 --> 00:06:07.487
+<v Maya>Which brings us to the actual papers, because if human experts were 70% sure this was mathematically impossible, how on earth did OpenAI's model do it? Right. And let's keep these completely separate, because they did not use the same method at all. Let's look exclusively at the OpenAI</v>
+
+44
+00:06:07.527 --> 00:06:08.047
+<v Maya>paper first.</v>
+
+45
+00:06:08.308 --> 00:06:19.217
+<v Daniel>Sounds good. So the OpenAI approach is purely algebraic. They didn't treat 3-set like a logic puzzle. They essentially translated it into a massive system of polynomial equations.</v>
+
+46
+00:06:19.417 --> 00:06:19.617
+<v Maya>OK.</v>
+
+47
+00:06:20.450 --> 00:06:32.244
+<v Daniel>They start with a technique called sparsification, which basically simplifies the formula so that no single variable appears in too many clauses. Then they build parity tests using what are called tanner and expander codes.</v>
+
+48
+00:06:32.583 --> 00:06:47.348
+<v Maya>OK, wait, I have to interrupt you there because I'm looking at my notes on their method and they say they use these shared linear measurements to factor the sum into independent groups. Right. But hold on. If you're adding all these parity checks and measurements, aren't you just moving the</v>
+
+49
+00:06:47.368 --> 00:06:56.871
+<v Maya>goalposts? Like instead of guessing all the variables, now the computer has to guess all the measurements. That seems like the exact same exponential bottleneck, just wearing a different hat.</v>
+
+50
+00:06:57.375 --> 00:07:09.105
+<v Daniel>You've just hit on the exact reason why human mathematicians thought an algebraic approach like this was doomed to fail. That's the trap. But here is the mechanism for how OpenAI's model bypasses that exact bottleneck.</v>
+
+51
+00:07:09.586 --> 00:07:10.346
+<v Maya>Okay, I'm listening.</v>
+
+52
+00:07:10.867 --> 00:07:24.799
+<v Daniel>The AI constructs what the paper calls low-degree replacement forms. By using a really cleverly designed auxiliary matrix, it maps the problem into a space where it can use something called polynomial Hermite interpolation.</v>
+
+53
+00:07:25.462 --> 00:07:29.644
+<v Maya>Hermite interpolation. Okay, you are going to have to translate that for me.</v>
+
+54
+00:07:30.024 --> 00:07:42.391
+<v Daniel>Yeah, fair enough. Think of it this way. Instead of evaluating the sum across all those possible measurements directly, which, as you pointed out, would take an impossible amount of time, it interpolates the polynomial algebraically.</v>
+
+55
+00:07:43.051 --> 00:07:43.292
+<v Maya>Right.</v>
+
+56
+00:07:43.772 --> 00:07:53.477
+<v Daniel>The auxiliary matrix acts like a sort of mathematical sorting hat, grouping the combinations together so you can measure the property of the group as a whole without checking the individuals inside it.</v>
+
+57
+00:07:54.724 --> 00:08:04.529
+<v Maya>Okay, let me see if I have this right. It's like, imagine you have a massive glass jar completely filled with thousands of mixed coins. And you need to know exactly how much money is in there.</v>
+
+58
+00:08:04.549 --> 00:08:05.630
+<v Daniel>Okay, I'm tracking.</v>
+
+59
+00:08:06.290 --> 00:08:13.313
+<v Maya>Brute force, the way we used to solve 3SAT, is dumping the jar out and counting every single coin one by one.</v>
+
+60
+00:08:13.633 --> 00:08:13.853
+<v Daniel>Yes.</v>
+
+61
+00:08:14.734 --> 00:08:29.458
+<v Maya>But this hermit interpolation... It's like finding the total value by weighing the entire jar, subtracting the exact weight of the glass and using higher level algebra to deduce the total value based on the density of the metals. You never actually</v>
+
+62
+00:08:29.578 --> 00:08:35.841
+<v Maya>looked at the individual coins, but you used a higher level property, the weight, to skip the counting entirely.</v>
+
+63
+00:08:36.301 --> 00:08:49.102
+<v Daniel>That is a brilliant way to visualize it. Yeah. By taking that algebraic shortcut, they entirely bypass the need to check every combination. And the exact running time they achieve by doing this is staggering.</v>
+
+64
+00:08:49.583 --> 00:08:49.923
+<v Maya>What is it?</v>
+
+65
+00:08:50.503 --> 00:09:05.032
+<v Daniel>The paper claims a time bound of a polynomial factor of n plus m multiplied by 2 to the power of big O of n times log log n divided by the square root of log n. And they do all of this using only</v>
+
+66
+00:09:05.112 --> 00:09:06.033
+<v Daniel>polynomial space.</v>
+
+67
+00:09:06.685 --> 00:09:11.088
+<v Maya>Oh, wow. Okay. So that fraction in the exponent is the real magic trick, isn't it?</v>
+
+68
+00:09:11.348 --> 00:09:22.216
+<v Daniel>It really is. Because that exponent grows strictly slower than any linear function of n. It is sub-exponential. And OpenAI doesn't just stop at breaking ETH.</v>
+
+69
+00:09:22.516 --> 00:09:22.776
+<v Maya>Right.</v>
+
+70
+00:09:23.196 --> 00:09:36.955
+<v Daniel>They claim this algebraic demolition refutes the strong exponential time hypothesis, set, as well as gap ETH. non-deterministic set, and even the counting version of the hypothesis known as hash ETH.</v>
+
+71
+00:09:37.335 --> 00:09:38.496
+<v Maya>That is wild.</v>
+
+72
+00:09:38.977 --> 00:09:47.383
+<v Daniel>As a bonus, it gives sub-exponential counting algorithms for graph colorings and perfect matchings, plus a huge circuit lower bound for the class E to the NP.</v>
+
+73
+00:09:47.820 --> 00:10:01.863
+<v Maya>So OpenAI essentially vaporized the problem with heavy algebra. But as we mentioned, Anthropics' Claude took a completely different route. So let's leave the algebra behind and pivot to Anthropic. They treated this entirely like a geometry problem, didn't they?</v>
+
+74
+00:10:02.003 --> 00:10:06.844
+<v Daniel>They did. Anthropics' model views the 3SAT formula as a tensor network.</v>
+
+75
+00:10:07.564 --> 00:10:07.704
+<v Maya>Think</v>
+
+76
+00:10:07.724 --> 00:10:19.874
+<v Daniel>of it as a massive, complex graph where the formula is represented as a sum of products. The algorithm's goal is to repeatedly merge and cut parts of this graph to isolate sections and solve them recursively.</v>
+
+77
+00:10:20.094 --> 00:10:20.314
+<v Maya>Right.</v>
+
+78
+00:10:20.934 --> 00:10:35.238
+<v Daniel>The main enemy in this approach is the edge bits. These are the variables that cross over the boundary between the different sections of the graph you're trying to cut. If you have too many edge bits crossing your cuts, the recursion gets bogged down and you are right back to exponential time.</v>
+
+79
+00:10:35.583 --> 00:10:43.544
+<v Maya>Here's where it gets really interesting. Because you can think of Anthropic's edge-cutting method like trying to reorganize a massive, highly inefficient corporate org chart.</v>
+
+80
+00:10:43.804 --> 00:10:44.545
+<v Daniel>OK, I like this.</v>
+
+81
+00:10:44.885 --> 00:10:56.727
+<v Maya>So if you just draw a line down the middle of the company and split it in half, but you let every department on the left side keep talking directly to every single department on the right side, you still have millions of active lines of communication. Nothing speeds up.</v>
+
+82
+00:10:56.867 --> 00:10:57.287
+<v Daniel>Exactly.</v>
+
+83
+00:10:57.547 --> 00:11:12.136
+<v Maya>But if you creatively reorganize the department so that only a few key managers pass information across the divide, you drastically cut down those communication lines, the edge bits. Suddenly, the two halves of the company can operate exponentially</v>
+
+84
+00:11:12.196 --> 00:11:14.638
+<v Maya>faster because they aren't bogged down in cross chatter.</v>
+
+85
+00:11:14.779 --> 00:11:25.830
+<v Daniel>That's exactly it. You want to minimize the communication across the cuts. But how Claude actually achieved that reorganization is easily the most bizarre and, frankly, fascinating part of the entire paper.</v>
+
+86
+00:11:25.990 --> 00:11:26.811
+<v Maya>Yeah, the wild card.</v>
+
+87
+00:11:27.052 --> 00:11:41.680
+<v Daniel>Yeah. To rewrite those pairs of edges crossing the cut, the AI didn't invent some new modern theorem. It reached back over two centuries and started from a classical algebraic identity first discovered by Dagan in 1818 and later Graves in</v>
+
+88
+00:11:41.700 --> 00:11:44.502
+<v Daniel>1843, which is tied to something called Hurwitz problem.</v>
+
+89
+00:11:45.182 --> 00:11:52.466
+<v Maya>Wait, 1818? We are talking about math from before the light bulb was invented being used by an AI in 2026.</v>
+
+90
+00:11:52.566 --> 00:12:01.679
+<v Daniel>Yes. It uses a binary version of the classical eight square identity. The eight square identity writes the product of two sums of eight squares as another sum of eight squares.</v>
+
+91
+00:12:01.839 --> 00:12:02.159
+<v Maya>OK.</v>
+
+92
+00:12:02.640 --> 00:12:13.006
+<v Daniel>Claude uses this to decompose the equality tests on the edges of the tensor network into a linear combination of parity checks, essentially creating hyper edges that can take on negative values.</v>
+
+93
+00:12:13.646 --> 00:12:16.148
+<v Maya>And why does taking negative values matter so much?</v>
+
+94
+00:12:17.070 --> 00:12:31.884
+<v Daniel>because it allows the algorithm to sit entirely outside the standard tensor network model. Previous human researchers, specifically Austrian, Caskey, and Kubjus, had actually published a paper proving a strict mathematical lower bound, showing you absolutely</v>
+
+95
+00:12:31.964 --> 00:12:34.547
+<v Daniel>cannot beat exponential time using tensor networks.</v>
+
+96
+00:12:35.580 --> 00:12:50.333
+<v Maya>Ah. So the humans proved the tensor network was a dead end, but the AI realized that the human proof only applied if you stayed within certain boundaries. Right. So it just used a 200-year-old identity to step completely outside those boundaries and bypass the roadblock. That's</v>
+
+97
+00:12:50.373 --> 00:12:50.874
+<v Maya>incredible.</v>
+
+98
+00:12:51.254 --> 00:13:05.999
+<v Daniel>Precisely. It is an incredibly creative circumvention. And the time-bound anthropic claims here is 2 to the power of big O of the minimum between two terms, k squared times n times log log n over the square root of log n, and k times</v>
+
+99
+00:13:06.279 --> 00:13:08.019
+<v Daniel>m over the square root of log m.</v>
+
+100
+00:13:08.339 --> 00:13:16.642
+<v Maya>But they do note one major survivor in the fallout, right? Anthropic explicitly says this method does not refute the orthogonal vectors hypothesis.</v>
+
+101
+00:13:17.263 --> 00:13:29.355
+<v Daniel>which is a really vital caveat because a lot of fine-grained complexity bounds actually rest on orthogonal vectors rather than just ETH. So some of that architectural bedrock does actually survive this earthquake.</v>
+
+102
+00:13:30.040 --> 00:13:44.303
+<v Maya>Okay, so we have two independent, mind-bending refutations of ETH. We have the algebra from OpenAI and the tensor networks from Anthropic. But before you start worrying about someone using these algorithms to instantly hack your bank's encryption,</v>
+
+103
+00:13:45.084 --> 00:13:47.044
+<v Maya>we really need to address the reality check here.</v>
+
+104
+00:13:47.204 --> 00:13:47.484
+<v Daniel>We do.</v>
+
+105
+00:13:47.624 --> 00:13:50.765
+<v Maya>Because these algorithms are absurdly theoretical, right?</v>
+
+106
+00:13:51.005 --> 00:14:05.674
+<v Daniel>They are completely impractical for the real world. Anthropic actually computed the math on when their algorithm would become faster than just basic brute force guessing. For general formulas, their algorithm only beats brute force when you have more than 10 to the 10th</v>
+
+107
+00:14:05.734 --> 00:14:06.575
+<v Daniel>power variables.</v>
+
+108
+00:14:06.875 --> 00:14:08.576
+<v Maya>That's 10 billion variables.</v>
+
+109
+00:14:09.180 --> 00:14:16.848
+<v Daniel>Yes, and it gets worse. For formulas with 5n clauses, it requires 10 to the 10,000th power variables to be faster.</v>
+
+110
+00:14:17.269 --> 00:14:17.769
+<v Maya>Oh my god.</v>
+
+111
+00:14:18.090 --> 00:14:30.063
+<v Daniel>To put that in perspective, there aren't 10 to the 10,000th power atoms in the observable universe. So if you try to run this on a normal-sized problem, the overhead of the math makes it vastly slower than just guessing.</v>
+
+112
+00:14:30.267 --> 00:14:41.109
+<v Maya>Right, because brute force is already impractical at just 100 variables, let alone 10 billion. So if we can't ever actually run it, why does the computer science world care so much?</v>
+
+113
+00:14:41.389 --> 00:14:53.551
+<v Daniel>Well, if we connect this to the bigger picture, we have to look at another pivotal paper by Ryan Williams from 2013 called Improving Exhaustive Search Implies Super-Polynomial Lower Bounds.</v>
+
+114
+00:14:54.351 --> 00:14:56.132
+<v Maya>Ah, this is where the ripple effect happens.</v>
+
+115
+00:14:56.352 --> 00:15:10.973
+<v Daniel>Exactly. Williams mathematically proved that any algorithm for SAT that beats brute force, even by a tiny, fractional, completely impractical amount like we see here, automatically implies profound circuit lower bounds.</v>
+
+116
+00:15:11.534 --> 00:15:11.634
+<v Maya>OK.</v>
+
+117
+00:15:12.536 --> 00:15:27.331
+<v Daniel>Because both open AI and anthropics algorithms beat brute force in that asymptotic theoretical limit, both papers can use Williams's theorem to mathematically derive that the complexity class known as E to the NP lacks</v>
+
+118
+00:15:27.631 --> 00:15:28.673
+<v Daniel>linear size circuits.</v>
+
+119
+00:15:29.754 --> 00:15:44.550
+<v Maya>Let me translate that. Basically, they prove that you absolutely cannot build a small, efficient computer circuit to solve these highly complex problems. The fact that the algorithm merely exists shatters our assumptions about circuit complexity,</v>
+
+120
+00:15:44.630 --> 00:15:48.351
+<v Maya>regardless of whether we can ever build a silicon chip big enough to actually run it.</v>
+
+121
+00:15:48.791 --> 00:15:53.473
+<v Daniel>That is the perfect way to summarize it. It's the theoretical existence that changes the math.</v>
+
+122
+00:15:53.765 --> 00:16:06.594
+<v Maya>All right, so we have the methods and we have the math, but now we have to talk about provenance and trust. We need to talk about who or rather what actually wrote these papers because this is the AI story of the decade.</v>
+
+123
+00:16:06.934 --> 00:16:17.402
+<v Daniel>You really cannot separate this result from how it was created. Anthropic states plainly in their paper that the core algorithm was found on October 16 by an internal quad research model.</v>
+
+124
+00:16:17.835 --> 00:16:18.015
+<v Maya>Right.</v>
+
+125
+00:16:18.696 --> 00:16:24.179
+<v Daniel>He used 14 million output tokens and had strictly zero human input. Zero.</v>
+
+126
+00:16:25.119 --> 00:16:35.525
+<v Maya>But AI models hallucinate. I mean, they confidently make up math all the time. So how do we know they didn't just string together 14 million tokens of very convincing sounding gibberish?</v>
+
+127
+00:16:36.118 --> 00:16:48.884
+<v Daniel>That's where formal verification comes in. Anthropic formalized their main results at Lean 4, which is a rigorous machine-checked math language. The development is massive, like 1,050 modules of Lean code.</v>
+
+128
+00:16:49.344 --> 00:16:49.624
+<v Maya>Wow.</v>
+
+129
+00:16:50.064 --> 00:17:00.649
+<v Daniel>Yeah. And Anthropic reports that this code was successfully accepted by Lean's core kernel, by an independent checker called Lean Checker, and by another independent kernel called Nonoda.</v>
+
+130
+00:17:01.248 --> 00:17:16.071
+<v Maya>Okay, but wait, this is what trips me up. The lean code was written by the AI, right? Right. And Anthropix says it was reviewed by other instances of the same AI models. No human being has actually sat down and checked this yet. So how do we know the lean statements actually translate</v>
+
+131
+00:17:16.391 --> 00:17:27.673
+<v Maya>to the real world math they claim to? I mean, an AI could write a perfectly valid, mathematically sound lean proof that proves one plus one equals two and simply title the document ETH is false.</v>
+
+132
+00:17:28.346 --> 00:17:40.493
+<v Daniel>That is the exact verification dilemma facing the theoretical computer science community right now. Lean is incredible at verifying that logical steps within the code are sound, but it doesn't understand context.</v>
+
+133
+00:17:40.633 --> 00:17:41.073
+<v Maya>Exactly.</v>
+
+134
+00:17:41.714 --> 00:17:54.799
+<v Daniel>A human being still has to read the definitions to ensure that the code accurately represents 3SAT and the actual ETH hypothesis. And remember, that's just anthropic. Opening Eye's paper doesn't even describe a lean check at all.</v>
+
+135
+00:17:55.340 --> 00:17:55.780
+<v Maya>Wait, really?</v>
+
+136
+00:17:56.020 --> 00:18:00.961
+<v Daniel>Yeah. Their algebraic proof is just sitting there in raw text waiting for human peer review.</v>
+
+137
+00:18:01.902 --> 00:18:16.106
+<v Maya>I was reading press reports that the human legends of this field, Impagliazzo, Peturi, and Williams themselves are currently organizing an outside review of both papers. But they have explicitly stated to the press that their involvement is not a certification of the results.</v>
+
+138
+00:18:16.555 --> 00:18:31.185
+<v Daniel>They are basically acting as a reading group. They're not stamping this with a seal of approval yet. Because of the density of the math, it is going to take human mathematicians months, maybe much longer, to pick apart OpenAI's algebra and Anthropic's lean code to ensure</v>
+
+139
+00:18:31.205 --> 00:18:36.709
+<v Daniel>no subtle logical sleight of hand occurred somewhere in those 14 million tokens.</v>
+
+140
+00:18:36.909 --> 00:18:51.681
+<v Maya>So what does this all mean? I need to state this incredibly plainly to you. As of this week, both of these claims are entirely unverified. We are reporting the claims made in these two papers, but neither should be treated as established human verified</v>
+
+141
+00:18:51.721 --> 00:18:54.482
+<v Maya>fact yet. It is the bleeding edge of discovery.</v>
+
+142
+00:18:54.802 --> 00:19:06.325
+<v Daniel>It's history in motion. To see two independent AI labs publish two distinct sub-exponential algorithms refuting ETH, all within hours of each other, is unprecedented.</v>
+
+143
+00:19:06.980 --> 00:19:20.785
+<v Maya>The scale of it is just staggering. You might remember back in Deep Dive 073, we covered OpenAI's broader math catalog and their general capabilities. But this is a brand new, highly specific targeted result that seemingly just came out of nowhere.</v>
+
+144
+00:19:21.365 --> 00:19:31.149
+<v Daniel>This raises an important question, one that the computer science community is going to be grappling with long after the proofs are checked. Are these two algorithms truly independent?</v>
+
+145
+00:19:31.329 --> 00:19:32.389
+<v Maya>Right. That's the big question.</v>
+
+146
+00:19:33.197 --> 00:19:43.965
+<v Daniel>Is the highly complex algebraic method of open AI and the geometric tensor network method of anthropic actually the exact same underlying mathematical idea, just dressed in different clothes?</v>
+
+147
+00:19:44.326 --> 00:19:52.952
+<v Maya>Did two massive neural networks independently hit the exact same fundamental mathematical truth from two totally different angles in the exact same week?</v>
+
+148
+00:19:53.372 --> 00:19:54.073
+<v Daniel>We don't know yet.</v>
+
+149
+00:19:55.047 --> 00:20:09.480
+<v Maya>And on a more philosophical level, for you to ponder on your own, what is a mathematical proof actually worth today if the logic was discovered by AI, translated into code by AI, and formally verified by an AI checker?</v>
+
+150
+00:20:10.120 --> 00:20:12.763
+<v Maya>At what point does human understanding become secondary?</v>
+
+151
+00:20:12.783 --> 00:20:21.871
+<v Daniel>Yeah. If the math is flawlessly true, but no human mind is capable of holding the complete architecture of the proof in their head at once, is it still human science?</v>
+
+152
+00:20:22.516 --> 00:20:37.264
+<v Maya>It's the ultimate locked combination safe. The AI just handed us a piece of paper that says it knows how to open it, and we are holding the combination, but we don't even know if our hands are strong enough to turn the dials. Thank you for joining us on this deep dive into the bleeding edge of</v>
+
+153
+00:20:37.324 --> 00:20:39.725
+<v Maya>theoretical computer science. Until next time.</v>
