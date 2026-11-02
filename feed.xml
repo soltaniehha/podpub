@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 12:14:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 08:29:06 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1752,5 +1752,41 @@ Reference: Chollet, F. (2019). On the measure of intelligence. arXiv:1911.01547.
       <pubDate>Sun, 01 Nov 2026 11:52:02 +0000</pubDate>
       <itunes:episode>90</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/090%20-%20When%20The%20Machine%20Passes%20For%20Human.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>091 - When AI Spreads Wide But Runs Shallow</title>
+      <description>What Work Does Generative AI Do? (August 2026)
+
+In this episode we unpack a new working paper from Alexander Bick of the St. Louis Fed, Adam Blandin and Tyler Schumacher of Vanderbilt, and David Deming of Harvard, circulated through NBER and the St. Louis Fed. Instead of predicting which jobs AI could touch, they ask a nationally representative sample of American workers which of their own tasks they actually use generative AI for. The answer is that adoption is wide but shallow: generative AI reaches most occupations, yet within most of them fewer than half of workers use it.
+
+We walk through the Real-Time Population Survey and its task module, fielded in four waves from August 2025 to May 2026, which shows each worker the ten most important O*NET work activities for their occupation and builds the first task-level adoption indexes, with data analysis, report writing and modeling at the top and patient care, driving and equipment work at the bottom. We cover how much of real use the standard exposure scores from Eloundou, Felten, Webb and Brynjolfsson actually predict (between 5 and 53 percent of the variation across occupations), why clerical work is more exposed than it is used, and why the chat-log task measures built from Claude, ChatGPT and Copilot conversations line up so weakly with the survey, drawing on the authors' earlier The Rapid Adoption of Generative AI, Tomlinson and colleagues' Working with AI, Handa and colleagues' study of Claude conversations and Eloundou and colleagues' GPTs are GPTs. We close on the paper's argument that who adopts may matter as much as which tasks AI can do, and what that means for how workers learn to use it.
+
+Reference: Bick, A., Blandin, A., Deming, D. J., &amp; Schumacher, T. (2026). What Work Does Generative AI Do? NBER Working Paper 35677; Federal Reserve Bank of St. Louis Working Paper 2026-017. https://doi.org/10.20955/wp.2026.017
+Reference: Bick, A., Blandin, A., &amp; Deming, D. J. (2026). The Rapid Adoption of Generative AI. Management Science. Federal Reserve Bank of St. Louis Working Paper 2024-027. https://doi.org/10.20955/wp.2024.027
+Reference: Tomlinson, K., Jaffe, S., Wang, W., Counts, S., &amp; Suri, S. (2025). Working with AI: Measuring the Applicability of Generative AI to Occupations. arXiv:2507.07935. https://arxiv.org/abs/2507.07935
+Reference: Handa, K., Tamkin, A., McCain, M., Huang, S., Durmus, E., et al. (2025). Which Economic Tasks Are Performed with AI? Evidence from Millions of Claude Conversations. arXiv:2503.04761. https://arxiv.org/abs/2503.04761
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306-1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130</description>
+      <guid isPermaLink="false">dea117cb2bfa9fb3ad41aec3be67de65283b69b0</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/091%20-%20When%20AI%20Spreads%20Wide%20But%20Runs%20Shallow.m4a" length="43761927" type="audio/mp4" />
+      <pubDate>Mon, 02 Nov 2026 07:21:23 +0000</pubDate>
+      <itunes:episode>91</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/091%20-%20When%20AI%20Spreads%20Wide%20But%20Runs%20Shallow.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>092 - When The Automation Forecast Meets The Data</title>
+      <description>Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24 (July 2026)
+
+In this episode we unpack a Federal Reserve Bank of Chicago working paper by Kristen Broady and Caleb Dunson of the Chicago Fed with Anthony Barr of the National Bankers Association, which goes back to the most famous jobs-at-risk forecast of the last decade and checks it against what happened. They set Frey and Osborne's 2017 automation probabilities and Microsoft's 2025 AI applicability scores against US employment and wage data for 2019 to 2024, and conclude that exposure scores are better read as signs that an occupation will be restructured than as forecasts that it will disappear.
+
+We walk through the paper's revisit of Frey and Osborne's three engineering bottlenecks (perception and manipulation, creative intelligence, social intelligence) in light of generative AI and modern robotics, and its comparison of 70 matched occupations, where high-risk jobs lost about 3 percent of employment, moderate-risk jobs about 6 percent, low-risk jobs grew, and wages rose in every group, with telemarketers falling by half and models more than doubling inside the same high-risk category. We set it against Frey and Osborne's original forecast that 47 percent of US jobs were at high risk, Tomlinson and colleagues' Copilot-based applicability scores, Eloundou and colleagues' language-model exposure measure, and Hernæs and Kostøl's tracking of all private-sector employment in Norway, which finds almost no gap between the most and least exposed occupations since ChatGPT. We close on what the evidence does and does not show about forecasting, and on why the strongest claims about early-career workers still need better data.
+
+Reference: Broady, K., Dunson, C., &amp; Barr, A. (2026). Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24. Federal Reserve Bank of Chicago Working Paper 2026-12. https://doi.org/10.21033/wp-2026-12
+Reference: Frey, C. B., &amp; Osborne, M. A. (2017). The Future of Employment: How Susceptible Are Jobs to Computerisation? Technological Forecasting and Social Change, 114, 254-280. https://doi.org/10.1016/j.techfore.2016.08.019
+Reference: Tomlinson, K., Jaffe, S., Wang, W., Counts, S., &amp; Suri, S. (2025). Working with AI: Measuring the Applicability of Generative AI to Occupations. arXiv:2507.07935. https://arxiv.org/abs/2507.07935
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306-1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130
+Reference: Hernæs, Ø., &amp; Kostøl, A. R. (2026). Has AI Widened Employment Gaps? Tracking Early-Career Employment by Occupational Exposure in Norway. IZA Discussion Paper 18767. https://docs.iza.org/dp18767.pdf</description>
+      <guid isPermaLink="false">ecb8aee1c99c338107d803fc1ba494b90c9047f0</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/092%20-%20When%20The%20Automation%20Forecast%20Meets%20The%20Data.m4a" length="46050918" type="audio/mp4" />
+      <pubDate>Mon, 02 Nov 2026 07:30:58 +0000</pubDate>
+      <itunes:episode>92</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/092%20-%20When%20The%20Automation%20Forecast%20Meets%20The%20Data.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
