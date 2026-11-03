@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 08:29:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 08:56:01 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1788,5 +1788,42 @@ Reference: Hernæs, Ø., &amp; Kostøl, A. R. (2026). Has AI Widened Employment 
       <pubDate>Mon, 02 Nov 2026 07:30:58 +0000</pubDate>
       <itunes:episode>92</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/092%20-%20When%20The%20Automation%20Forecast%20Meets%20The%20Data.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>093 - When New Work Pays For Being New</title>
+      <description>What Makes New Work Different from More Work? (March 2026)
+
+In this episode we unpack a March 2026 NBER working paper by David Autor and Caroline Chin of MIT, Anna Salomons of Tilburg and Utrecht, and Bryan Seegmiller of Northwestern's Kellogg School, which asks what actually happens when technology creates new kinds of jobs. The argument: new work offsets automation not just by adding more jobs but by creating new domains of human expertise that are scarce at first and pay a premium, which is why economies that keep inventing new work, and keep training people for it, hold on to labor's share of income.
+
+We walk through the data, person-level job write-ins from the 1940 and 1950 Census Complete Count files and the confidential American Community Survey for 2011 to 2023, matched to new titles in the Census occupation index, which show that 18.3 percent of recent workers hold job titles introduced since 1970. We cover who gets new work (younger and more educated workers, even inside the same occupation), the wage premium it carries (largest for technology-linked titles, about 9 log points for those added between 2000 and 2018) and how that premium fades as titles age, and the World War II plant-building program that seeded new work where it was sited. We set it against Lin's original measure of new work, Atalay and colleagues' job-ad evidence on how tasks change inside job titles, Feigenbaum and Gross on what happened to telephone operators when AT&amp;T automated switching, and Humlum and Vestergaard's 2026 Danish evidence that chatbot users are already taking on new tasks in content generation, AI oversight and AI integration with no measurable change yet in earnings or hours. We close on whether generative AI will generate its own wave of expertise-demanding new work, and who will be positioned to do it.
+
+Reference: Autor, D., Chin, C., Salomons, A., &amp; Seegmiller, B. (2026). What Makes New Work Different from More Work? NBER Working Paper 34986. IZA Discussion Paper 18504. https://doi.org/10.3386/w34986
+Reference: Humlum, A., &amp; Vestergaard, E. (2026). Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI. RFBerlin Discussion Paper 078/26. https://www.rfberlin.com/discussion-papers
+Reference: Lin, J. (2011). Technological Adaptation, Cities, and New Work. Review of Economics and Statistics, 93(2), 554-574. https://doi.org/10.1162/REST_a_00079
+Reference: Atalay, E., Phongthiengtham, P., Sotelo, S., &amp; Tannenbaum, D. (2020). The Evolution of Work in the United States. American Economic Journal: Applied Economics, 12(2), 1-34. https://doi.org/10.1257/app.20190070
+Reference: Feigenbaum, J., &amp; Gross, D. P. (2024). Answering the Call of Automation: How the Labor Market Adjusted to Mechanizing Telephone Operation. Quarterly Journal of Economics, 139(3), 1879-1939. https://doi.org/10.1093/qje/qjae005</description>
+      <guid isPermaLink="false">2043e7361c18afe969d339cc921ff3f1e4cda42d</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/093%20-%20When%20New%20Work%20Pays%20For%20Being%20New.m4a" length="46833299" type="audio/mp4" />
+      <pubDate>Tue, 03 Nov 2026 07:27:33 +0000</pubDate>
+      <itunes:episode>93</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/093%20-%20When%20New%20Work%20Pays%20For%20Being%20New.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>094 - When Half The Jobs Were Supposed To Vanish</title>
+      <description>The Future of Employment: How Susceptible Are Jobs to Computerisation? (September 2013; published January 2017)
+
+In this episode we unpack the most quoted number in the future of work debate: Carl Benedikt Frey and Michael Osborne's estimate, from the Oxford Martin School, that 47 percent of US employment was at high risk of computerisation, first circulated as a 2013 working paper and published in Technological Forecasting and Social Change in 2017. The argument: machine learning and mobile robotics let computers move beyond routine, rule-based work, so the limit on automation is no longer routineness but three engineering bottlenecks, perception and manipulation, creative intelligence and social intelligence.
+
+We walk through how the estimate was built, from 70 occupations hand-labelled as automatable or not at an Oxford engineering workshop, to nine O*NET variables that stand in for the three bottlenecks, to a Gaussian process classifier that scores 702 occupations, along with the predicted two waves of computerisation, the strong negative link between automation risk and both wages and education, and the authors' own caveat that they estimate what is technically possible, not how many jobs will go. We then test how it held up: Arntz, Gregory and Zierahn's task-level reanalysis that cuts the share to about 9 percent across 21 OECD countries, Autor's case for why there are still so many jobs, Eloundou and colleagues' finding that language models reach higher-wage cognitive work, Frey and Osborne's own 2023 reappraisal for the generative AI era, and the Chicago Fed's 2026 check of the forecast against what happened to jobs and wages. We close on what a decade of hindsight teaches about forecasting and why risk scores are better read as signs of restructuring than as countdowns.
+
+Reference: Frey, C. B., &amp; Osborne, M. A. (2017). The Future of Employment: How Susceptible Are Jobs to Computerisation? Technological Forecasting and Social Change, 114, 254-280. https://doi.org/10.1016/j.techfore.2016.08.019
+Reference: Arntz, M., Gregory, T., &amp; Zierahn, U. (2016). The Risk of Automation for Jobs in OECD Countries: A Comparative Analysis. OECD Social, Employment and Migration Working Papers No. 189. https://doi.org/10.1787/5jlz9h56dvq7-en
+Reference: Autor, D. H. (2015). Why Are There Still So Many Jobs? The History and Future of Workplace Automation. Journal of Economic Perspectives, 29(3), 3-30. https://doi.org/10.1257/jep.29.3.3
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306-1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130
+Reference: Frey, C. B., &amp; Osborne, M. A. (2023). Generative AI and the Future of Work: A Reappraisal. Brown Journal of World Affairs, 30(1). https://ora.ox.ac.uk/objects/uuid:f52030f5-23eb-4481-a7f1-8006685edbae
+Reference: Broady, K., Dunson, C., &amp; Barr, A. (2026). Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24. Federal Reserve Bank of Chicago Working Paper 2026-12. https://doi.org/10.21033/wp-2026-12</description>
+      <guid isPermaLink="false">9fc78bbe1f592409322d9694c45d562c30bbc891</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/094%20-%20When%20Half%20The%20Jobs%20Were%20Supposed%20To%20Vanish.m4a" length="43788820" type="audio/mp4" />
+      <pubDate>Tue, 03 Nov 2026 07:38:03 +0000</pubDate>
+      <itunes:episode>94</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/094%20-%20When%20Half%20The%20Jobs%20Were%20Supposed%20To%20Vanish.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

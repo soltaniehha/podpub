@@ -1,0 +1,793 @@
+WEBVTT
+
+1
+00:00:00.191 --> 00:00:11.220
+<v Daniel>Imagine waking up tomorrow, pouring your coffee and opening your phone to a headline that says there is a coin flip chance your exact job will be entirely eliminated by a computer within the next decade.</v>
+
+2
+00:00:11.549 --> 00:00:15.411
+<v Maya>Right. I mean, you wouldn't just be stressed. You'd want to see the math immediately.</v>
+
+3
+00:00:15.691 --> 00:00:23.756
+<v Daniel>Exactly. You would want to know exactly what the researchers were looking at to make a claim like that. Well, back in 2013, that headline was very real.</v>
+
+4
+00:00:24.036 --> 00:00:24.676
+<v Maya>It was everywhere.</v>
+
+5
+00:00:24.916 --> 00:00:25.197
+<v Daniel>It was.</v>
+
+6
+00:00:25.537 --> 00:00:31.220
+<v Maya>The number was 47 percent, like nearly half of all U.S. jobs supposedly headed for the scrap heap.</v>
+
+7
+00:00:31.462 --> 00:00:41.729
+<v Daniel>And it caused an absolute panic. So welcome to a brand new deep dive. If you're listening to this on your commute, maybe heading to a desk job, this one is fundamentally about you and your future.</v>
+
+8
+00:00:42.349 --> 00:00:49.154
+<v Maya>Yeah, today we are exploring the future of work by deconstructing the single most famous statistic in the entire automation debate.</v>
+
+9
+00:00:49.454 --> 00:00:57.079
+<v Daniel>We are going to arm you with the exact evidence, the arguments, and the data points you need to clearly explain the reality of AI and the labor market.</v>
+
+10
+00:00:57.398 --> 00:01:07.305
+<v Maya>And to do that, we're looking at a stack of incredibly influential research. We have to start with the 2013 working paper out of the Oxford Martin School by Carl Benedict Frey and Michael Osborne.</v>
+
+11
+00:01:07.705 --> 00:01:10.828
+<v Daniel>Because that is the origin of the 47 percent number, right?</v>
+
+12
+00:01:10.868 --> 00:01:19.073
+<v Maya>Exactly. But we are going to test that classic paper against five subsequent studies to see how that prediction actually holds up today, sitting here in 2026.</v>
+
+13
+00:01:20.042 --> 00:01:29.788
+<v Daniel>Right. We'll be pulling from a 2016 rebuttal from the OECD and David Autry's famous 2015 work out of MIT on why there are still so many jobs.</v>
+
+14
+00:01:30.289 --> 00:01:41.696
+<v Maya>Plus a massive 2024 reality check from OpenAI on Generative AI, a brand new 2026 scorecard from the Chicago Fed, and a 2023 reappraisal from Frey and Osborne themselves.</v>
+
+15
+00:01:42.246 --> 00:01:52.308
+<v Daniel>We're going to track how a heavily caveated academic forecast morphed into like an absolute prophecy and why the arrival of generative AI flipped those original predictions completely upside down.</v>
+
+16
+00:01:52.649 --> 00:01:59.290
+<v Maya>And ultimately, how systems like higher education have to adapt to a world where the technological goalposts are just constantly moving.</v>
+
+17
+00:01:59.870 --> 00:02:05.772
+<v Daniel>So before we can figure out where the automation frontier is today, we really have to look under the hood of that bombshell 2013 paper.</v>
+
+18
+00:02:06.940 --> 00:02:19.148
+<v Maya>Yeah, because to understand why 47% was so shocking, you have to understand the rule it was breaking. Up until that point, labor economics had a very specific idea about what computers could and couldn't do.</v>
+
+19
+00:02:19.168 --> 00:02:21.989
+<v Daniel>Right, that was the Otter, Levy, Murnane rule, wasn't it?</v>
+
+20
+00:02:22.109 --> 00:02:32.616
+<v Maya>That's the one. The accepted wisdom was that computers only took over routine codifiable work. To get a computer to do something, a human programmer had to write down the instructions step by step.</v>
+
+21
+00:02:32.827 --> 00:02:40.511
+<v Daniel>So if a task could be codified like that, say, basic data entry or repetitive assembly line motion, a machine could do it.</v>
+
+22
+00:02:40.831 --> 00:02:47.094
+<v Maya>Exactly. But if the task required flexibility or reacting to unexpected changes, a human had to do it.</v>
+
+23
+00:02:47.314 --> 00:02:53.117
+<v Daniel>But Frey and Osborne looked at the trajectory of machine learning in mobile robotics and realized that role was outdated.</v>
+
+24
+00:02:53.777 --> 00:02:59.640
+<v Maya>Their core claim was that machine learning allows computers to substitute for human labor in non-routine tasks, too.</v>
+
+25
+00:03:00.141 --> 00:03:02.623
+<v Daniel>But they didn't say machines could do absolutely everything, did they?</v>
+
+26
+00:03:03.103 --> 00:03:10.729
+<v Maya>No, they identified three specific engineering bottlenecks. These were essentially the technological walls holding automation back.</v>
+
+27
+00:03:11.150 --> 00:03:14.232
+<v Daniel>Let's walk through those because they really form the lens for this entire discussion.</v>
+
+28
+00:03:14.712 --> 00:03:22.478
+<v Maya>Sure. So the first bottleneck was perception and manipulation. That's the ability to navigate complex, unstructured physical spaces.</v>
+
+29
+00:03:22.899 --> 00:03:29.724
+<v Daniel>Like the difference between a robot moving a box on a totally flat factory floor versus trying to clean a teenager's messy bedroom.</v>
+
+30
+00:03:29.993 --> 00:03:42.859
+<v Maya>Great example. The bedroom is just full of unpredictable variables. The second bottleneck was creative intelligence. A machine might remix things, but making an original cross-disciplinary conceptual leap was out of reach.</v>
+
+31
+00:03:43.279 --> 00:03:44.520
+<v Daniel>Right. And the third?</v>
+
+32
+00:03:44.980 --> 00:03:51.423
+<v Maya>The third was social intelligence. That means real-time empathy, complex negotiation, and human persuasion.</v>
+
+33
+00:03:51.903 --> 00:03:59.407
+<v Daniel>So if a job required a lot of navigating messy rooms, making conceptual leaps, or deep human empathy, it was considered safe.</v>
+
+34
+00:03:59.748 --> 00:04:00.188
+<v Maya>Exactly.</v>
+
+35
+00:04:00.788 --> 00:04:08.490
+<v Daniel>But how on earth do you turn those three abstract bottlenecks into a hard statistic that 47% of the U.S. workforce is doomed?</v>
+
+36
+00:04:08.910 --> 00:04:23.852
+<v Maya>They used a really clever step-by-step methodology. First, they held a workshop at the Oxford Engineering Department with machine learning researchers. They took 70 specific occupations and asked these experts to hand-label them with a 1 or a 0. A 1</v>
+
+37
+00:04:23.912 --> 00:04:28.013
+<v Maya>meant the tasks could be completely specified for state-of-the-art computer-controlled equipment.</v>
+
+38
+00:04:28.474 --> 00:04:30.156
+<v Daniel>And at zero, they couldn't, obviously.</v>
+
+39
+00:04:30.256 --> 00:04:38.062
+<v Maya>Right. But that just gave them a baseline of 70 jobs based on expert opinion. And there are hundreds and hundreds of different occupations in the economy.</v>
+
+40
+00:04:38.282 --> 00:04:40.004
+<v Daniel>Right. So how do they score the rest of them?</v>
+
+41
+00:04:40.544 --> 00:04:47.010
+<v Maya>To score the rest, they turn to a database called O-Net, which tracks the specific skills and physical requirements for U.S. jobs.</v>
+
+42
+00:04:47.570 --> 00:04:48.171
+<v Daniel>Oh, I know O-Net.</v>
+
+43
+00:04:48.671 --> 00:04:54.016
+<v Maya>Yeah. So they picked nine variables from that database to act as proxies for those three engineering bottlenecks.</v>
+
+44
+00:04:54.735 --> 00:04:58.758
+<v Daniel>How does a database variable act as a proxy for an engineering bottleneck?</v>
+
+45
+00:04:59.278 --> 00:05:09.524
+<v Maya>Well, let's take the bottleneck of perception and manipulation, you know, navigating messy spaces. In the database, they looked at variables like finger dexterity, manual dexterity, and cramped workspace.</v>
+
+46
+00:05:09.864 --> 00:05:16.768
+<v Daniel>Oh, I see. So if a job scores highly on cramped workspace, like a plumber fixing pipes under a sink...</v>
+
+47
+00:05:16.973 --> 00:05:29.582
+<v Maya>Right. That serves as a proxy indicating the job hits a major robotics bottleneck. For social and creative bottlenecks, they used variables like originality, fine arts, social perceptiveness, persuasion, and caring for others.</v>
+
+48
+00:05:30.102 --> 00:05:37.147
+<v Daniel>Okay, I'm following. So they have the 70 hand-labeled jobs, and they have the nine proxy variables. How do they actually combine them?</v>
+
+49
+00:05:37.687 --> 00:05:44.572
+<v Maya>They fed all of that into a Gaussian process classifier. You can basically think of this as a highly advanced sorting algorithm.</v>
+
+50
+00:05:45.249 --> 00:05:47.430
+<v Daniel>I'd actually compare it to a spam filter for jobs.</v>
+
+51
+00:05:47.830 --> 00:05:49.330
+<v Maya>Oh, that's a good way to put it. How so?</v>
+
+52
+00:05:49.771 --> 00:05:56.473
+<v Daniel>Well, when you flag a few emails as spam, the filter looks at the DNA of those emails, you know, the weird links, the specific keywords.</v>
+
+53
+00:05:56.753 --> 00:05:56.993
+<v Maya>Right.</v>
+
+54
+00:05:57.333 --> 00:06:10.678
+<v Daniel>And then it hunts for that exact same DNA across your entire inbox. So Frey and Osborne fed the algorithm the DNA of the 70 jobs they knew were automatable. And the model hunted for that same DNA across 702 other occupations.</v>
+
+55
+00:06:12.722 --> 00:06:22.410
+<v Maya>That is a brilliant way to visualize it. And when they unleashed that model on those 702 occupations, it placed 47 percent of U.S. employment in the high risk category.</v>
+
+56
+00:06:22.831 --> 00:06:27.075
+<v Daniel>Meaning the model gave those jobs a probability of automation above point seven.</v>
+
+57
+00:06:27.535 --> 00:06:34.301
+<v Maya>Exactly. And they predicted this would unfold over a decade or two, which would fundamentally change the landscape of the middle class.</v>
+
+58
+00:06:34.707 --> 00:06:43.251
+<v Daniel>Because for years, we had job polarization. The middle-skilled jobs were hollowed out, but the high-wage cognitive jobs and the low-wage physical jobs were safe.</v>
+
+59
+00:06:43.891 --> 00:06:55.257
+<v Maya>But this people predicted that the next massive wave of automation was aiming squarely at low-wage, low-skill work. We're talking transport, logistics, and surprisingly, services and sales.</v>
+
+60
+00:06:55.777 --> 00:06:57.618
+<v Daniel>People like cashiers and telemarketers.</v>
+
+61
+00:06:58.027 --> 00:07:04.990
+<v Maya>Exactly. But here is the crucial context that the press entirely ignored when they were writing those apocalyptic headlines.</v>
+
+62
+00:07:05.350 --> 00:07:06.210
+<v Daniel>There's always a catch.</v>
+
+63
+00:07:06.470 --> 00:07:15.454
+<v Maya>Always. The authors explicitly stated they were estimating technical feasibility. They were not making a forecast of actual job losses.</v>
+
+64
+00:07:15.794 --> 00:07:21.156
+<v Daniel>Oh, wow. So they made no attempt to factor in the cost of the technology or the price of human labor.</v>
+
+65
+00:07:21.436 --> 00:07:27.298
+<v Maya>Nope. They ignored wages, capital prices, government regulations, and public pushback entirely.</v>
+
+66
+00:07:27.802 --> 00:07:32.444
+<v Daniel>So the media basically took a theoretical exercise and presented it as an economic certainty.</v>
+
+67
+00:07:32.884 --> 00:07:43.489
+<v Maya>Exactly. It's a classic case of threat detection. When you put a risk probability on a slide or in a headline, human psychology instantly converts that into an inevitable reality.</v>
+
+68
+00:07:43.569 --> 00:07:51.833
+<v Daniel>That makes sense. But beyond the media spin, there's also a massive structural assumption in their methodology that just seems, I don't know, flawed.</v>
+
+69
+00:07:52.692 --> 00:07:57.316
+<v Maya>You mean how they treated an entire occupation as a single, automatable unit?</v>
+
+70
+00:07:57.536 --> 00:08:08.124
+<v Daniel>Yes. Because if I look at my own job, I don't just do broadcasting or do research. I write emails. I brainstorm strategies. I navigate weird software interfaces.</v>
+
+71
+00:08:08.444 --> 00:08:09.725
+<v Maya>You negotiate with producers.</v>
+
+72
+00:08:10.005 --> 00:08:20.193
+<v Daniel>Right. A robot might be able to summarize an article for me, but it can't run a live interview. So judging my whole occupation as a one or a zero feels incredibly clumsy.</v>
+
+73
+00:08:20.583 --> 00:08:26.988
+<v Maya>Well, you've just articulated the exact central thesis of the 2016 OECD paper by Arntz, Gregory, and Zyran.</v>
+
+74
+00:08:27.268 --> 00:08:27.628
+<v Daniel>Oh, really?</v>
+
+75
+00:08:27.789 --> 00:08:34.013
+<v Maya>Yeah. They looked at the Oxford methodology and pointed out that occupations are not the unit that gets automated. Tasks are.</v>
+
+76
+00:08:35.014 --> 00:08:41.339
+<v Daniel>Because almost every job is just a bundle of different tasks, right? Some are automatable and some hit those engineering bottlenecks.</v>
+
+77
+00:08:41.857 --> 00:08:50.771
+<v Maya>Exactly. The OECD researchers tested this by using a different data set called PIAC, which looks at worker-level task data across 21 countries.</v>
+
+78
+00:08:51.132 --> 00:08:55.900
+<v Daniel>So instead of looking at a broad job title, they looked at what people actually did hour by hour.</v>
+
+79
+00:08:56.331 --> 00:09:06.859
+<v Maya>Right. And when they broke jobs down into tasks, they found that on average, only about 9% of jobs in the U.S. and across the OECD had tasks that were fully automatable.</v>
+
+80
+00:09:07.019 --> 00:09:14.144
+<v Daniel>Wow. That is a staggering difference. We went from a 47% apocalypse to a 9% restructuring.</v>
+
+81
+00:09:14.385 --> 00:09:15.265
+<v Maya>It's a massive drop.</v>
+
+82
+00:09:15.666 --> 00:09:23.982
+<v Daniel>But I want to push back on that 9% figure for a second. Let's say my job is a bundle of tasks and I suddenly automate 60 percent of those tasks.</v>
+
+83
+00:09:24.382 --> 00:09:24.642
+<v Maya>OK.</v>
+
+84
+00:09:24.863 --> 00:09:33.686
+<v Daniel>It makes me vastly more efficient. But my employer doesn't just pat me on the back. They fire half my team because they only need half the people to do the same amount of work.</v>
+
+85
+00:09:33.826 --> 00:09:35.387
+<v Maya>That's the logical assumption.</v>
+
+86
+00:09:35.567 --> 00:09:39.469
+<v Daniel>Right. So automating tasks eventually translates to eliminating jobs, doesn't it?</v>
+
+87
+00:09:40.358 --> 00:09:50.211
+<v Maya>It feels like basic math, but historically that assumption usually fails. To understand why, we really have to look at David Otter's 2015 paper, Why Are There Still So Many Jobs?</v>
+
+88
+00:09:50.631 --> 00:09:51.492
+<v Daniel>Okay, what did he find?</v>
+
+89
+00:09:52.333 --> 00:09:56.338
+<v Maya>First, he leans on Polanyi's paradox, which is the concept that we know more than we can tell.</v>
+
+90
+00:09:56.579 --> 00:09:59.102
+<v Daniel>Now, how does that apply to writing code or building robots?</v>
+
+91
+00:09:59.755 --> 00:10:07.200
+<v Maya>Think about riding a bicycle. You know how to do it, but you cannot easily write down the exact physics and micro adjustments your body makes to stay balanced.</v>
+
+92
+00:10:07.420 --> 00:10:13.825
+<v Daniel>Oh, I see. Because you can't explicitly explain it, a programmer can't write a step-by-step rule for a computer to replicate it.</v>
+
+93
+00:10:13.925 --> 00:10:23.091
+<v Maya>Exactly. That protects a vast amount of human labor. But Otter's bigger point is that automation complements labor just as much as it substitutes for it.</v>
+
+94
+00:10:23.852 --> 00:10:26.734
+<v Daniel>The classic example here is the automated telemachine, right? The ATM.</v>
+
+95
+00:10:27.284 --> 00:10:37.010
+<v Maya>Yes. In the 1970s, ATMs rolled out and everyone assumed bank tellers would be completely wiped out. But teller employment actually grew over the next few decades.</v>
+
+96
+00:10:37.690 --> 00:10:40.872
+<v Daniel>Because the mechanism of automation changed the economics of the business.</v>
+
+97
+00:10:41.312 --> 00:10:48.176
+<v Maya>Precisely. The ATM made it significantly cheaper to operate a bank branch, so banks opened thousands of new branches.</v>
+
+98
+00:10:48.796 --> 00:10:51.938
+<v Daniel>But they still needed tellers to staff them. The task just shifted.</v>
+
+99
+00:10:52.363 --> 00:10:59.505
+<v Maya>Right. Tellers stopped just dispensing cash, which the machine did, and started doing relationship banking. They were selling credit cards and loans.</v>
+
+100
+00:11:00.245 --> 00:11:02.906
+<v Daniel>Which required the social intelligence that the machine lacked.</v>
+
+101
+00:11:03.306 --> 00:11:09.548
+<v Maya>Exactly. Automation didn't destroy the job. It restructured the tasks and changed what the human was valued for.</v>
+
+102
+00:11:10.308 --> 00:11:17.830
+<v Daniel>So by the late 2010s, the academic dust had largely settled. We understood it was about tasks, not whole jobs.</v>
+
+103
+00:11:18.277 --> 00:11:25.221
+<v Maya>And we understood humans were still protected by Plany's paradox and the need for social and cognitive intelligence.</v>
+
+104
+00:11:26.702 --> 00:11:31.164
+<v Daniel>And then generative AI arrived and blew all those comforting assumptions to pieces.</v>
+
+105
+00:11:31.825 --> 00:11:41.310
+<v Maya>It really did. The arrival of large language models is the great plot twist in the story. It completely flipped the original 2013 predictions upside down.</v>
+
+106
+00:11:42.091 --> 00:11:50.235
+<v Daniel>Let's bring in the 2024 paper published in Science by Alondu, Manning, Mishkin, and Rock. These are researchers from OpenAI and elsewhere.</v>
+
+107
+00:11:50.756 --> 00:11:58.179
+<v Maya>Yeah. They took a hard look at how these massive language models map onto the U.S. labor market, and their findings were a profound reality check.</v>
+
+108
+00:11:58.460 --> 00:11:59.060
+<v Daniel>What did they find?</v>
+
+109
+00:11:59.638 --> 00:12:14.588
+<v Maya>They found that about 80 percent of U.S. workers have at least 10 percent of their tasks exposed to language models. Wow. Furthermore, about 19 percent of workers have at least half of their tasks exposed. And exposure here means the technology can reduce the time required to do the task</v>
+
+110
+00:12:14.628 --> 00:12:17.149
+<v Maya>by at least half without dropping the quality.</v>
+
+111
+00:12:17.370 --> 00:12:22.693
+<v Daniel>But the real shocker isn't just the sheer volume of exposure, is it? It's the wage flip.</v>
+
+112
+00:12:23.390 --> 00:12:32.496
+<v Maya>Yes. Frey and Osborne's original model predicted that the next wave of automation would come for the low wage, low skill physical and service jobs.</v>
+
+113
+00:12:32.536 --> 00:12:32.776
+<v Daniel>Right.</v>
+
+114
+00:12:33.497 --> 00:12:42.443
+<v Maya>But the open AI researchers found the exact opposite with generative AI. Exposure to large language models actually rises with wages.</v>
+
+115
+00:12:43.252 --> 00:12:54.823
+<v Daniel>So the 2013 paper warned the warehouse worker and the telemarketer. But the 2024 reality is that the programmers, the corporate lawyers and the financial analysts, are the ones in the crosshairs.</v>
+
+116
+00:12:55.483 --> 00:13:01.689
+<v Maya>Generative AI bypassed the physical bottlenecks entirely and came straight for high-wage cognitive work.</v>
+
+117
+00:13:02.129 --> 00:13:08.095
+<v Daniel>And to their immense credit, Carl Benedict Frey and Michael Osborne did not just hide from this new data.</v>
+
+118
+00:13:08.520 --> 00:13:16.783
+<v Maya>Not at all. In 2023, they published a reappraisal in the Brown Journal of World Affairs, acknowledging exactly how the landscape had shifted.</v>
+
+119
+00:13:17.303 --> 00:13:20.704
+<v Daniel>Did their original three engineering bottlenecks hold up to ChatGPT?</v>
+
+120
+00:13:21.244 --> 00:13:28.427
+<v Maya>Partially, but with a massive caveat. They admitted that generative AI effectively breaks the social intelligence bottleneck.</v>
+
+121
+00:13:28.827 --> 00:13:31.808
+<v Daniel>Wait, really? Machines have social intelligence now.</v>
+
+122
+00:13:32.363 --> 00:13:41.777
+<v Maya>Well, specifically for virtual or transactional interactions, if you are interacting with someone via an interface like an email or a customer service chat.</v>
+
+123
+00:13:42.098 --> 00:13:43.600
+<v Daniel>Or even a structured remote meeting.</v>
+
+124
+00:13:43.870 --> 00:13:56.954
+<v Maya>Right. And AI can simulate empathy, persuasion and active listening incredibly well. In fact, their new rule of thumb is quite striking. They said if a task can be done remotely, it can potentially be automated.</v>
+
+125
+00:13:57.354 --> 00:14:01.656
+<v Daniel>Oh, man, that is a chilling sentence for anyone who fought for the right to work from home.</v>
+
+126
+00:14:02.076 --> 00:14:02.576
+<v Maya>It really is.</v>
+
+127
+00:14:03.036 --> 00:14:08.498
+<v Daniel>Because if you are just a voice on a screen and a series of emails, you're essentially competing with an algorithm.</v>
+
+128
+00:14:09.008 --> 00:14:17.012
+<v Maya>Exactly. However, they did note where Gen AI still falls short. It is exceptional at creative recombination.</v>
+
+129
+00:14:17.573 --> 00:14:21.215
+<v Daniel>Meaning it can write a fantastic sequel by mashing up existing tropes and formats.</v>
+
+130
+00:14:21.315 --> 00:14:27.898
+<v Maya>Right. But it struggles to make genuine cross-disciplinary conceptual leaps to create entirely new paradigms.</v>
+
+131
+00:14:28.559 --> 00:14:31.740
+<v Daniel>And the physical perception bottleneck remains totally intact, doesn't it?</v>
+
+132
+00:14:31.941 --> 00:14:37.984
+<v Maya>Yes. High stakes physical tasks in messy environments like plumbing, emergency medicine or construction are safer than ever.</v>
+
+133
+00:14:38.479 --> 00:14:48.407
+<v Daniel>There was also a fascinating dynamic regarding who benefits from this technology within a specific job. Frey and Osborne point out that Gen AI tends to help novices the most.</v>
+
+134
+00:14:48.867 --> 00:14:51.629
+<v Maya>Yep, bringing their performance up to average very quickly.</v>
+
+135
+00:14:52.390 --> 00:14:58.034
+<v Daniel>It's like GPS for cab drivers. It used to take a London cab driver years of studying to memorize the streets.</v>
+
+136
+00:14:58.174 --> 00:14:58.895
+<v Maya>The knowledge, right?</v>
+
+137
+00:14:59.155 --> 00:15:13.628
+<v Daniel>Exactly. And they commanded a premium wage for that expertise. Today, anyone with a smartphone can navigate London on day one. Jenny and I does that to cognitive work. It crushes the wage premium that experienced incumbents used to enjoy.</v>
+
+138
+00:15:14.088 --> 00:15:21.494
+<v Maya>And we actually have hard data on how this is playing out in the real world now. We don't have to just theorize about 2013 probabilities anymore.</v>
+
+139
+00:15:21.734 --> 00:15:30.101
+<v Daniel>Because sitting here in 2026, we can see what actually happened. We did a full deep dive on this specific paper a little while ago, so we'll just hit the highlights.</v>
+
+140
+00:15:30.521 --> 00:15:35.305
+<v Maya>Right. The 2026 paper by Brody, Dunson and Barr from the Chicago Fed.</v>
+
+141
+00:15:35.523 --> 00:15:46.245
+<v Daniel>Yeah. They took Frey and Osborne's 2017 risk probabilities and mapped them against actual employment outcomes between 2019 and 2024 across 70 matched occupations.</v>
+
+142
+00:15:46.765 --> 00:15:51.626
+<v Maya>And if the 47% prophecy was true, we should have seen a bloodbath in the high-risk category.</v>
+
+143
+00:15:51.666 --> 00:15:52.146
+<v Daniel>But we didn't.</v>
+
+144
+00:15:52.406 --> 00:16:00.908
+<v Maya>No. High-risk jobs lost only about 3% of employment overall. Moderate-risk jobs lost about 6%, and low-risk jobs actually grew.</v>
+
+145
+00:16:01.408 --> 00:16:04.509
+<v Daniel>And most tellingly, wages rose in every single group.</v>
+
+146
+00:16:04.976 --> 00:16:09.960
+<v Maya>Yes. And the internal variance inside that high risk group was totally wild.</v>
+
+147
+00:16:10.380 --> 00:16:20.928
+<v Daniel>Right. Because telemarketers saw their employment cut in half, just as predicted. But runway models, which were also flagged as highly automatable because the tasks involved repetitive walking and wearing clothes.</v>
+
+148
+00:16:21.448 --> 00:16:22.809
+<v Maya>They more than doubled in employment.</v>
+
+149
+00:16:23.249 --> 00:16:28.053
+<v Daniel>The market reacted completely differently to the exact same technological exposure.</v>
+
+150
+00:16:28.648 --> 00:16:34.854
+<v Maya>It tells us that high exposure to AI is less like a diagnosis of a terminal illness and much more like a weather forecast.</v>
+
+151
+00:16:35.175 --> 00:16:35.655
+<v Daniel>Oh, I like that.</v>
+
+152
+00:16:36.015 --> 00:16:43.643
+<v Maya>It means you are going to get rained on, you'll need an umbrella, and your daily routine is going to change significantly, but you aren't going to wash away.</v>
+
+153
+00:16:43.763 --> 00:16:45.144
+<v Daniel>That is exactly the takeaway.</v>
+
+154
+00:16:45.545 --> 00:16:50.630
+<v Maya>Exposure signals that a job is going to be restructured around new technology, not that it will vanish.</v>
+
+155
+00:16:51.025 --> 00:16:58.891
+<v Daniel>So if jobs are constantly restructuring around these moving engineering bottlenecks, how do we prepare people for the future of work?</v>
+
+156
+00:16:59.592 --> 00:17:04.856
+<v Maya>That is the ultimate question for anyone shaping education today, especially university faculty and administration.</v>
+
+157
+00:17:05.236 --> 00:17:17.927
+<v Daniel>It really is the defining challenge for higher education. To build a curriculum for this environment, universities have to clearly separate what the classic 2013 paper got right from what the 2026 evidence overturned.</v>
+
+158
+00:17:18.347 --> 00:17:27.187
+<v Maya>Well, the classic got a lot right. The frontier of automation absolutely moved beyond physical routine work. Occupations like telemarketing and data entry did shrink.</v>
+
+159
+00:17:27.668 --> 00:17:32.229
+<v Daniel>And using engineering bottlenecks as a lens to view the labor market remains brilliant.</v>
+
+160
+00:17:32.829 --> 00:17:37.691
+<v Maya>But the 47% number was never a true job loss prophecy. And it didn't happen.</v>
+
+161
+00:17:38.051 --> 00:17:43.393
+<v Daniel>Right. The task level exposure is much smaller, that 9% figure from the OECD.</v>
+
+162
+00:17:44.063 --> 00:17:53.850
+<v Maya>And crucially, the wage gradient flipped. AI is heavily hitting higher wage cognitive work and social and creative tasks proved at least partially automatable online.</v>
+
+163
+00:17:54.290 --> 00:18:07.019
+<v Daniel>So the organizing principle that survives all this research is this. You have to constantly ask which tasks are hitting current engineering bottlenecks and expect jobs to restructure around whatever those bottlenecks are.</v>
+
+164
+00:18:07.639 --> 00:18:11.742
+<v Maya>Which means universities must teach exactly what machines still cannot do.</v>
+
+165
+00:18:12.063 --> 00:18:21.193
+<v Daniel>But what does that actually look like in a classroom? I mean, we've established AI can write the essay, it can code the software, it can synthesize the research. What is left to teach?</v>
+
+166
+00:18:22.013 --> 00:18:24.576
+<v Maya>Judgment in high stakes, ambiguous settings.</v>
+
+167
+00:18:24.736 --> 00:18:26.638
+<v Daniel>In-person trust and relationship building.</v>
+
+168
+00:18:27.419 --> 00:18:42.288
+<v Maya>And the ability to make original cross-disciplinary conceptual leaps rather than just recombining old ideas. Exactly. If an AI can generate a perfectly structured block of code or a marketing plan, the human value shifts entirely to deciding which problem is</v>
+
+169
+00:18:42.348 --> 00:18:43.649
+<v Maya>worth solving in the first place.</v>
+
+170
+00:18:43.950 --> 00:18:48.213
+<v Daniel>And then convincing a room full of actual humans to trust your specific solution.</v>
+
+171
+00:18:48.953 --> 00:18:56.899
+<v Maya>That requires a massive shift in how we credential people. A degree that just trains someone for a specific job title is incredibly fragile today.</v>
+
+172
+00:18:57.179 --> 00:19:00.682
+<v Daniel>Because that job title might be entirely restructured in five years.</v>
+
+173
+00:19:01.620 --> 00:19:10.689
+<v Maya>Universities need to credential underlying skills and partner closely with employers to understand how task level changes are happening in real time.</v>
+
+174
+00:19:11.270 --> 00:19:21.420
+<v Daniel>We also have to look closely at who is most vulnerable in this transition. If you look at massive urban university systems, take a mobility engine like CUNY, for example.</v>
+
+175
+00:19:22.188 --> 00:19:28.271
+<v Maya>You are looking at student bodies made up of early career workers, adult learners, and first-generation college students.</v>
+
+176
+00:19:28.511 --> 00:19:34.153
+<v Daniel>And the entry-level jobs that these students rely on to break into the knowledge economy are highly exposed right now.</v>
+
+177
+00:19:34.794 --> 00:19:38.856
+<v Maya>The junior copywriting, the basic data analysis, the routine coding.</v>
+
+178
+00:19:39.136 --> 00:19:46.159
+<v Daniel>The administrative remote work. These are exactly the virtual transactional tasks that large language models excel at.</v>
+
+179
+00:19:46.566 --> 00:19:52.549
+<v Maya>This is a profound structural issue. We are talking about the apprenticeship model of white collar work.</v>
+
+180
+00:19:53.289 --> 00:19:58.632
+<v Daniel>Think about how a junior employee actually learns that high stakes judgment we just talked about. They don't learn it from a textbook.</v>
+
+181
+00:19:59.072 --> 00:20:07.336
+<v Maya>No, they learn it by being in the room. They sit in on the meeting. They take the notes. They write the first slightly flawed draft of the memo.</v>
+
+182
+00:20:07.556 --> 00:20:15.720
+<v Daniel>They absorb the office culture and watch how senior leaders make decisions. They learn by doing the grunt work. It's the training wheels of the labor market.</v>
+
+183
+00:20:16.063 --> 00:20:24.968
+<v Maya>But if generative AI is suddenly doing all those transactional, entry-level tasks faster and cheaper, how do first-generation students get their foot in the door?</v>
+
+184
+00:20:25.388 --> 00:20:36.474
+<v Daniel>Exactly. You can't just expect someone to magically acquire senior-level judgment without giving them a sandbox to learn in. If AI takes away the training wheels, how do people learn to ride the bike?</v>
+
+185
+00:20:36.874 --> 00:20:44.078
+<v Maya>If the junior tasks are absorbed by algorithms, employers and universities have to collaborate to invent entirely new apprenticeship models.</v>
+
+186
+00:20:44.467 --> 00:20:51.911
+<v Daniel>We have to find new ways to put junior workers in the room where decisions are made, even if they aren't the ones drafting the initial documents anymore.</v>
+
+187
+00:20:52.551 --> 00:20:55.273
+<v Maya>Absolutely. We really have to rethink the whole pipeline.</v>
+
+188
+00:20:55.713 --> 00:21:04.138
+<v Daniel>We have covered a massive amount of ground today. Let me try to deliver the two most vital findings plainly, the kind of facts you can put right on a presentation slide.</v>
+
+189
+00:21:04.738 --> 00:21:06.059
+<v Maya>The headline versus reality.</v>
+
+190
+00:21:06.475 --> 00:21:19.281
+<v Daniel>First, 47% of occupations were deemed technically automatable back in 2013. But when you break those jobs down by actual daily activities, only about 9% of jobs actually have fully automatable tasks.</v>
+
+191
+00:21:20.161 --> 00:21:33.867
+<v Maya>And second, generative AI flipped the script on who is at risk. Today, 80% of workers have some AI exposure, but unlike past waves of automation that went after physical labor, this technology hits high-wage cognitive work the hardest.</v>
+
+192
+00:21:34.538 --> 00:21:42.243
+<v Daniel>Before we wrap up, I want to leave you with one final thought to mull over, building on that idea of the social intelligence bottleneck breaking down online.</v>
+
+193
+00:21:42.523 --> 00:21:49.328
+<v Maya>Oh, right. We mentioned that AI is becoming incredibly good at simulating empathy and active listening in virtual spaces.</v>
+
+194
+00:21:49.968 --> 00:22:04.138
+<v Daniel>It's a fascinating and honestly slightly unsettling area of research. If generative AI can simulate endless patience, perfect recall of your past conversations, and tailored empathetic responses, what happens to human psychology?</v>
+
+195
+00:22:04.775 --> 00:22:07.897
+<v Maya>When our standard for a perfect listener becomes a machine.</v>
+
+196
+00:22:08.618 --> 00:22:20.886
+<v Daniel>Exactly. When an AI is infinitely better at making you feel heard than your actual human boss, your colleague, or even your friend, how will that change our baseline expectations of human-to-human trust in the workplace?</v>
+
+197
+00:22:21.446 --> 00:22:25.969
+<v Maya>It is going to drastically change the emotional landscape of how we work together.</v>
+
+198
+00:22:26.169 --> 00:22:39.789
+<v Daniel>It really is. Thank you for joining us on this deep dive today. Remember to always check the fine print, look for the mechanisms behind the statistics, and keep questioning those apocalyptic headlines. We'll catch you next time.</v>
