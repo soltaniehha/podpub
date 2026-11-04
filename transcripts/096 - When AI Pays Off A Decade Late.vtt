@@ -1,0 +1,673 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:05.433
+<v Daniel>Right now, I mean, you can go online and watch an AI code an entire functional website in like 10 seconds. Oh,</v>
+
+2
+00:00:05.453 --> 00:00:06.714
+<v Maya>yeah. Easily.</v>
+
+3
+00:00:06.934 --> 00:00:14.797
+<v Daniel>You can have an AI draft a legal brief, design a marketing campaign, synthesize a 100-page financial report all before you've even finished your morning coffee.</v>
+
+4
+00:00:14.957 --> 00:00:17.598
+<v Maya>Right. It feels like the economy is just moving at light speed.</v>
+
+5
+00:00:17.919 --> 00:00:24.581
+<v Daniel>Exactly. But if you actually look at the national productivity statistics right now, it's a flat line. Nothing. Zero.</v>
+
+6
+00:00:24.761 --> 00:00:28.463
+<v Maya>Yeah. It really is the defining economic contradiction of this decade, I think.</v>
+
+7
+00:00:28.829 --> 00:00:43.822
+<v Daniel>Totally. So today we are going right into the heart of that puzzle. If you were looking for the hard evidence, you know, the kind of concrete data you can put straight onto a slide when you were standing in front of university faculty and staff to explain the true future of work. Well, this is the</v>
+
+8
+00:00:43.842 --> 00:00:44.582
+<v Daniel>deep dive for you.</v>
+
+9
+00:00:44.963 --> 00:00:45.423
+<v Maya>Absolutely.</v>
+
+10
+00:00:45.783 --> 00:01:00.720
+<v Daniel>We're going to answer one massive question. Is AI actually making companies more productive? And to do that, we are anchoring our conversation on a brand new August 2026 working paper. It's by researchers Babina, He, and Zhang, and it's called Canaries</v>
+
+11
+00:01:00.800 --> 00:01:01.480
+<v Daniel>in the Gold Mine.</v>
+
+12
+00:01:01.860 --> 00:01:14.266
+<v Maya>It is an incredibly revealing paper. And, you know, just to give us the full macroeconomic picture, we're also going to weave in some theoretical foundation from Eric Brynjolfsson's 2021 work on the productivity J-curve.</v>
+
+13
+00:01:14.587 --> 00:01:15.327
+<v Daniel>Oh, right, the J-curve.</v>
+
+14
+00:01:15.789 --> 00:01:29.077
+<v Maya>Yeah. Plus, we'll bring in two major reality checks from 2026. There's a U.S. Census Bureau report by Bonnie and colleagues and an executive survey out of the Fed Systems and Duke by Baslanze and colleagues.</v>
+
+15
+00:01:29.738 --> 00:01:40.324
+<v Daniel>Perfect. So let's start with that gap right between this highly visible technology and the completely invisible productivity. This isn't actually a new phenomenon.</v>
+
+16
+00:01:41.105 --> 00:01:41.765
+<v Maya>No, not at all.</v>
+
+17
+00:01:42.107 --> 00:01:51.092
+<v Daniel>It reminds me of the economist Robert Solow in the late 80s. He had this famous quip like, you can see the computer age everywhere, but in the productivity statistics.</v>
+
+18
+00:01:51.793 --> 00:01:53.033
+<v Maya>Right. The Solow paradox.</v>
+
+19
+00:01:53.073 --> 00:01:53.234
+<v Daniel>Yeah.</v>
+
+20
+00:01:53.634 --> 00:02:08.582
+<v Maya>And we are pretty much living through it all over again. Yeah. To really understand this new data on AI, we first have to understand why this delay happens with like almost every major technological leap. And that brings us to that Brynjolfsson, Rock and Syverson paper from 2021 on the</v>
+
+21
+00:02:08.622 --> 00:02:09.543
+<v Maya>productivity J curve.</v>
+
+22
+00:02:10.133 --> 00:02:21.860
+<v Daniel>Right, because they explain that general purpose technologies or GPTs, you know, things like electricity, the personal computer and now AI, they don't just plug into the wall and instantly make a company more profitable. Exactly.</v>
+
+23
+00:02:22.381 --> 00:02:30.226
+<v Maya>They require massive, intangible, complementary investments, things that our national economic accounts simply do not know how to measure.</v>
+
+24
+00:02:30.666 --> 00:02:33.608
+<v Daniel>So measured productivity actually looks worse at first.</v>
+
+25
+00:02:34.072 --> 00:02:48.946
+<v Maya>Yeah, it's understated early on because a company's resources are being diverted away from current production just to build these unmeasured assets. Wow. And then it's overstated later once those hidden investments finally start paying off. So if you map that out on a</v>
+
+26
+00:02:48.986 --> 00:02:55.312
+<v Maya>graph, it creates a curve shaped like a J, you know, a long initial dip followed by a steep exponential rise.</v>
+
+27
+00:02:55.832 --> 00:02:58.395
+<v Daniel>I always think of it like renovating a busy restaurant kitchen.</v>
+
+28
+00:02:58.760 --> 00:02:59.722
+<v Maya>Oh, that's a good way to look at it.</v>
+
+29
+00:03:00.042 --> 00:03:10.842
+<v Daniel>Right? Because if you close your doors for a month to completely tear out the old equipment, install state-of-the-art ovens, and retrain your entire staff on a new menu, your current output plummets.</v>
+
+30
+00:03:11.298 --> 00:03:12.578
+<v Maya>Because you aren't serving any meals.</v>
+
+31
+00:03:12.778 --> 00:03:27.401
+<v Daniel>Exactly. That's the dip in the J curve. But later you reopen and produce twice as much food with the exact same staff. But, I mean, here is the problem with that analogy. Physical ovens are easy to see and touch, right? A company investing in</v>
+
+32
+00:03:27.761 --> 00:03:35.283
+<v Daniel>an intangible asset like AI know-how is basically invisible. So how on earth do you actually measure an investment you can't see?</v>
+
+33
+00:03:35.626 --> 00:03:41.628
+<v Maya>Well, that is the massive methodological hurdle that this 2026 Babina paper finally clears.</v>
+
+34
+00:03:41.928 --> 00:03:42.169
+<v Daniel>Okay.</v>
+
+35
+00:03:42.709 --> 00:03:54.553
+<v Maya>The researchers realized you can't just look at companies buying, you know, off-the-shelf software subscriptions or tracking IT spending. Instead, they measured in-house AI investment by proxying it through AI-skilled employment.</v>
+
+36
+00:03:54.794 --> 00:03:57.875
+<v Daniel>So they looked at the actual humans building the internal systems.</v>
+
+37
+00:03:58.015 --> 00:04:00.976
+<v Maya>Precisely. And the scale of how they did this is just wild.</v>
+
+38
+00:04:01.276 --> 00:04:03.457
+<v Daniel>Yeah, I was reading this, and the data set is huge.</v>
+
+39
+00:04:04.170 --> 00:04:16.736
+<v Maya>It is. They took the near universe of U.S. job postings from a database called Lightcast and cross-referenced it with resume data from Revelio, which, by the way, covers about two-thirds of the entire U.S. workforce.</v>
+
+40
+00:04:17.256 --> 00:04:18.877
+<v Daniel>Two-thirds? That's incredible.</v>
+
+41
+00:04:19.437 --> 00:04:24.419
+<v Maya>And then they tied all of those actual human beings to U.S. public firms from 2010 all the way to 2024.</v>
+
+42
+00:04:26.041 --> 00:04:34.223
+<v Daniel>And their definition of AI skills was incredibly comprehensive, right? Because they didn't just use a static list of keywords that some researcher made up in a vacuum.</v>
+
+43
+00:04:34.847 --> 00:04:45.454
+<v Maya>Right. The AI skill vocabulary was learned dynamically from the data itself. It covers everything from early machine learning models a decade ago all the way through to the recent boom in generative and agentic AI.</v>
+
+44
+00:04:45.574 --> 00:04:50.277
+<v Daniel>Let's actually pause and define that just in case someone in the audience asks during a presentation.</v>
+
+45
+00:04:50.458 --> 00:04:50.838
+<v Maya>Good idea.</v>
+
+46
+00:04:51.318 --> 00:05:06.047
+<v Daniel>Generative AI generates text or images like a chatbot. But agentic systems are AI models that can actually take autonomous actions. Like an AI that doesn't just draft an email, but navigates to your CRM, updates a client</v>
+
+47
+00:05:06.067 --> 00:05:07.828
+<v Daniel>file, and hits send all on its own.</v>
+
+48
+00:05:08.168 --> 00:05:17.693
+<v Maya>Yeah, and the researchers found that those agentic systems scored a massive 0.98 on their AI relatedness scale. It is truly the bleeding edge of the technology.</v>
+
+49
+00:05:18.313 --> 00:05:26.037
+<v Daniel>And the footprint they found across these companies is just staggering. By 2024, public firms employ over 300,000 AI skilled workers.</v>
+
+50
+00:05:26.383 --> 00:05:30.105
+<v Maya>Right, which represents 2.1% of their entire US workforce.</v>
+
+51
+00:05:30.365 --> 00:05:38.629
+<v Daniel>Yeah. And interestingly, firms outside of this public set, like the private, often smaller companies, they're investing at only half that rate.</v>
+
+52
+00:05:38.970 --> 00:05:40.010
+<v Maya>Yeah, which makes sense.</v>
+
+53
+00:05:40.470 --> 00:05:55.338
+<v Daniel>So we have this incredible data set capturing the hidden intangible investment. Let's get to the actual results. If these massive companies were vacuuming up AI talent starting back in 2010, they must have seen immediate spikes in revenue, right?</v>
+
+54
+00:05:55.805 --> 00:06:03.933
+<v Maya>Actually, no. From 2010 to 2018, there was absolutely no link between AI investment and productivity growth. Zero.</v>
+
+55
+00:06:03.993 --> 00:06:07.777
+<v Daniel>Wow. So that's the flatline of the jaker. They were closed for renovations.</v>
+
+56
+00:06:07.957 --> 00:06:16.786
+<v Maya>Exactly. But then we look at the second major finding. From 2018 to 2024, a strongly positive link suddenly exploded into view.</v>
+
+57
+00:06:17.046 --> 00:06:18.127
+<v Daniel>Okay, there's the upswing.</v>
+
+58
+00:06:18.472 --> 00:06:31.732
+<v Maya>Right. And crucially, these gains come from both earlier and later AI waves alike, not just the recent generative AI hype cycle. And the timeline is undeniable. The AI hiring happens before the productivity gains, not after.</v>
+
+59
+00:06:32.355 --> 00:06:39.077
+<v Daniel>OK, but any academic in the audience is going to immediately raise their hand and say, hold on. Correlation does not equal causation.</v>
+
+60
+00:06:39.177 --> 00:06:39.637
+<v Maya>Oh, for sure.</v>
+
+61
+00:06:39.917 --> 00:06:50.900
+<v Daniel>Right. Like maybe highly successful cash rich companies just decided to hire a bunch of AI workers because they could afford them. How do we know the AI hiring actually caused the productivity?</v>
+
+62
+00:06:51.400 --> 00:06:58.262
+<v Maya>Well, the researchers anticipated that exact critique and they used a really brilliant econometric instrument to prove causality.</v>
+
+63
+00:06:58.282 --> 00:07:00.082
+<v Daniel>Oh, right. The university ties.</v>
+
+64
+00:07:00.332 --> 00:07:07.477
+<v Maya>Yeah, they looked at a firm's historical hiring ties to specific universities that were strong in AI research from before 2010.</v>
+
+65
+00:07:08.097 --> 00:07:13.321
+<v Daniel>Break down how that proves causation for us, though. Why does a pre-2010 university tie matter so much?</v>
+
+66
+00:07:13.455 --> 00:07:28.040
+<v Maya>Because it's essentially an accidental head start. You see, before 2010, the modern AI boom hadn't started yet. The big breakthrough in deep learning didn't really happen until 2012. OK. So if a company happened to have a geographical or historical</v>
+
+67
+00:07:28.080 --> 00:07:42.967
+<v Maya>relationship with the university that just so happened to be an early pioneer in AI, say they regularly hired their engineering grads for just normal software roles, That company accidentally had a pipeline to the exact talent that would soon become the most valuable</v>
+
+68
+00:07:43.047 --> 00:07:43.607
+<v Maya>in the world.</v>
+
+69
+00:07:43.827 --> 00:07:51.272
+<v Daniel>Right. And because that geographical tie is basically random relative to the company's 2024 business strategy, it acts as a natural experiment.</v>
+
+70
+00:07:51.412 --> 00:08:00.018
+<v Maya>Exactly. It proves that the talent pipeline actually caused the later productivity gains rather than, you know, a successful company just deciding to go shopping for AI workers.</v>
+
+71
+00:08:00.472 --> 00:08:08.688
+<v Daniel>That is a phenomenal piece of evidence, especially for a higher ed audience, right? It proves that university talent pipelines directly drive macroeconomic growth.</v>
+
+72
+00:08:08.929 --> 00:08:09.489
+<v Maya>It really does.</v>
+
+73
+00:08:10.130 --> 00:08:24.976
+<v Daniel>And I actually want to give you a quote straight from the paper, because if you need a single statistic to put on your slide to prove this is real, look at this. Quote, between 2018 and 2024, one standard deviation more AI share growth goes with 6.2 points more sales per worker growth</v>
+
+74
+00:08:25.636 --> 00:08:33.939
+<v Daniel>and 7.5 points more revenue TFP growth over six years. That's roughly one point a year in pure productivity gains, end quote.</v>
+
+75
+00:08:34.140 --> 00:08:41.538
+<v Maya>Which is huge. A 1% gain per year in pure productivity is a seismic shift at a macroeconomic scale.</v>
+
+76
+00:08:41.678 --> 00:08:51.382
+<v Daniel>Yeah. But before we move on, tell me exactly how to explain TFP, if someone asks. I mean, sales per worker makes sense, but total factor productivity? It's a bit wonky.</v>
+
+77
+00:08:51.606 --> 00:08:58.050
+<v Maya>Yeah, it's a bit technical. Total factor productivity is essentially the dark matter of economic growth.</v>
+
+78
+00:08:58.090 --> 00:08:58.691
+<v Daniel>The dark matter.</v>
+
+79
+00:08:59.271 --> 00:09:08.557
+<v Maya>It's the true measure of innovation and efficiency. Like if a company doubles its output by just doubling its number of workers and machines, that's not TFP.</v>
+
+80
+00:09:08.842 --> 00:09:10.423
+<v Daniel>Right, because you just bought more stuff.</v>
+
+81
+00:09:10.643 --> 00:09:25.268
+<v Maya>Exactly. But if a company produces more output using the exact same amount of workers and capital, that magic efficiency multiplier, that is total factor productivity. And these AI investing firms are seeing it jump by 7.5 points.</v>
+
+82
+00:09:26.602 --> 00:09:33.267
+<v Daniel>Okay, but this entire data set is just looking at giant public tech firms building their own proprietary models in-house, right?</v>
+
+83
+00:09:33.567 --> 00:09:33.787
+<v Maya>Yes.</v>
+
+84
+00:09:34.187 --> 00:09:44.495
+<v Daniel>What about like a local manufacturing firm or a mid-sized accounting firm that just buys a generic chat GPT enterprise subscription? This data doesn't capture them at all.</v>
+
+85
+00:09:44.975 --> 00:09:57.100
+<v Maya>That is the primary limitation of this paper. Absolutely. They are only looking at public firms using private online resume data, not administrative IRS records. They completely miss the mom and pop shops and the standard tool users.</v>
+
+86
+00:09:57.740 --> 00:10:09.865
+<v Daniel>And that brings us to a major tension in our understanding of the economy right now. If these massive public firms are seeing a 1% gain per year, why does the rest of the economy feel so slow?</v>
+
+87
+00:10:10.521 --> 00:10:14.262
+<v Maya>Well, let's bring in that October 2026 Census Bureau report we mentioned.</v>
+
+88
+00:10:14.362 --> 00:10:16.963
+<v Daniel>The Business Trends and Outlook Survey by Bonnie and colleagues.</v>
+
+89
+00:10:17.423 --> 00:10:29.407
+<v Maya>Right. It is a nationally representative look at how AI is actually diffusing. And they found that 18 percent of firms used AI in a business function, which actually rises to 32 percent if you weight it by employment.</v>
+
+90
+00:10:30.287 --> 00:10:32.008
+<v Daniel>Which sounds like a lot of adoption.</v>
+
+91
+00:10:32.667 --> 00:10:42.949
+<v Maya>It does. But when you look closer, 57% of those users apply it to three or fewer functions. And a full 66% use it only to augment isolated tasks.</v>
+
+92
+00:10:44.550 --> 00:10:47.752
+<v Daniel>So the diffusion is wide, but it is incredibly shallow.</v>
+
+93
+00:10:48.052 --> 00:11:02.761
+<v Maya>Extremely shallow. And we see the exact same thing in the March 2026 survey by Bas Lanzay and colleagues out of the Fed systems. Right. They surveyed nearly 750 executives and found tiny measured labor productivity gains across the broader economy. It was</v>
+
+94
+00:11:02.801 --> 00:11:10.225
+<v Maya>about 0.8 percent in high skill services and a minuscule 0.4 percent in low skill services, manufacturing and construction.</v>
+
+95
+00:11:10.385 --> 00:11:13.267
+<v Daniel>And the researchers actually call it a productivity paradox, don't they?</v>
+
+96
+00:11:13.690 --> 00:11:20.977
+<v Maya>Yeah, because the executives in the survey perceive massive gains internally, but the measured revenue arrives with a severe delay.</v>
+
+97
+00:11:21.137 --> 00:11:35.650
+<v Daniel>So let's state the tension plainly. The executive survey and the census evidence say the gains are small, shallow, and mostly ahead of us. But the new Babina paper says early investors are already a point a year ahead. How can both realities coexist?</v>
+
+98
+00:11:36.545 --> 00:11:51.491
+<v Maya>It really comes down to how these successful firms are using the technology. The massive gains only materialize when firms build deep, systemic organizational know-how around AI. Right. And the shallow adopters, the ones just buying an off-the-shelf subscription to help write</v>
+
+99
+00:11:51.611 --> 00:11:54.032
+<v Maya>marketing emails, they just aren't doing that yet.</v>
+
+100
+00:11:54.413 --> 00:11:59.495
+<v Daniel>You've hit on the secret sauce of this entire phenomenon. Economists call it organization capital, or OC.</v>
+
+101
+00:12:00.302 --> 00:12:12.791
+<v Maya>Yes. Organization capital is durable, firm-specific know-how. It is built strictly by learning by doing. Think of organization capital like the muscle memory of a company.</v>
+
+102
+00:12:13.331 --> 00:12:28.141
+<v Daniel>Oh, I love that. Muscle memory. Because you can't just buy muscle memory, right? You can buy the most expensive, state-of-the-art gym equipment in the world, and that's the AI software. But the equipment doesn't make you stronger. You have to actually go to the gym and put the reps in.</v>
+
+103
+00:12:28.453 --> 00:12:38.876
+<v Maya>Exactly. The companies seeing the productivity gains are the ones whose workers have spent years actually doing the reps to train the system on their specific, messy internal data.</v>
+
+104
+00:12:39.556 --> 00:12:46.478
+<v Daniel>And AI is uniquely suited to this, isn't it? Because it is a learning technology designed to codify what a firm already does.</v>
+
+105
+00:12:47.038 --> 00:12:50.640
+<v Maya>It is. Let's make that concrete with some of the case studies mentioned in the paper.</v>
+
+106
+00:12:50.800 --> 00:12:51.840
+<v Daniel>Yeah, those were fascinating.</v>
+
+107
+00:12:52.423 --> 00:13:07.348
+<v Maya>Like Morgan Stanley, they didn't just buy a generic chat bot. They took decades of highly specific, unstructured PDF notes from their top wealth advisors, combined it with their internal market research, and forced the AI to learn their specific culture</v>
+
+108
+00:13:07.388 --> 00:13:08.308
+<v Maya>of wealth management.</v>
+
+109
+00:13:08.608 --> 00:13:15.991
+<v Daniel>Right. And Procter & Gamble built a literal digital twin of their manufacturing plants using their own operational telemetry.</v>
+
+110
+00:13:16.166 --> 00:13:30.050
+<v Maya>Yes. Expedia did the same thing. They turned their chaotic internal IT incident histories into streamlined agentic workflows. They took their invisible institutional knowledge, their muscle memory, and turned it into an active automated system.</v>
+
+111
+00:13:30.445 --> 00:13:36.049
+<v Daniel>And to track this on a macro scale, the researchers actually created a totally new measure based on job descriptions.</v>
+
+112
+00:13:36.229 --> 00:13:48.937
+<v Maya>Right. They scanned the actual tasks these AI workers were hired to do. And they found that AI jobs are nearly twice as likely to build organization capital compared to non-AI jobs. It was 58% versus 31%.</v>
+
+113
+00:13:49.597 --> 00:13:50.918
+<v Daniel>And this share is rising fast.</v>
+
+114
+00:13:51.378 --> 00:13:56.641
+<v Maya>It went from about half of AI jobs in 2010 to almost two-thirds by 2024. Yeah,</v>
+
+115
+00:13:56.661 --> 00:13:59.063
+<v Daniel>which brings us to our second major quotable finding.</v>
+
+116
+00:13:59.460 --> 00:14:14.414
+<v Maya>Oh, right. Let me read this one. Quote, 66% of generative and agentic AI jobs are dedicated to building organization capital compared to 57% of older machine learning jobs. Only the AI jobs that build organization capital actually predict</v>
+
+117
+00:14:14.474 --> 00:14:15.915
+<v Maya>productivity growth. End quote.</v>
+
+118
+00:14:16.250 --> 00:14:30.372
+<v Daniel>We really need to underline that last sentence. Only the AI jobs that build organization capital predict the growth. Just having AI engineers on staff doesn't boost revenue if they aren't actively codifying the company's internal knowledge. I do have to point out, though, I mean,</v>
+
+119
+00:14:30.893 --> 00:14:33.433
+<v Daniel>organization capital is an invisible construct.</v>
+
+120
+00:14:34.313 --> 00:14:34.553
+<v Maya>True.</v>
+
+121
+00:14:35.433 --> 00:14:45.335
+<v Daniel>The researchers are inferring it from job descriptions and SG&A, you know, selling general and administrative expenses. It's a proxy. You can't perfectly audit it on a balance sheet.</v>
+
+122
+00:14:45.886 --> 00:14:56.713
+<v Maya>It is a proxy, yeah, but it's one that beautifully resolves the economic models. The paper actually extends a famous model by Atkison and Keeley to explain the J-curve lag perfectly.</v>
+
+123
+00:14:57.033 --> 00:14:57.334
+<v Daniel>How so?</v>
+
+124
+00:14:58.134 --> 00:15:11.483
+<v Maya>Well, in their model, AI changes the flow of learning into a permanent stock of knowledge. Muscle memory builds slowly. And crucially, they found that the gains are significantly larger for firms that started with very little organization capital to begin with.</v>
+
+125
+00:15:12.153 --> 00:15:16.914
+<v Daniel>Ah, because they have so much un-codified, messy knowledge just waiting to be captured and streamlined.</v>
+
+126
+00:15:17.174 --> 00:15:17.654
+<v Maya>Exactly.</v>
+
+127
+00:15:18.654 --> 00:15:23.275
+<v Daniel>Okay, so if AI is codifying human knowledge, what happens to the actual humans?</v>
+
+128
+00:15:23.715 --> 00:15:24.435
+<v Maya>The big question.</v>
+
+129
+00:15:24.895 --> 00:15:37.918
+<v Daniel>Right, because we've established how AI boosts sales and productivity, but what does it do to the workers? When you are standing in front of university faculty, the first question they are going to ask is about jobs. Are these technologies just replacing human beings?</v>
+
+130
+00:15:38.625 --> 00:15:46.007
+<v Maya>Well, first, we need to reject a couple of popular myths that the paper explicitly tests for. The massive revenue gains are not driven by price increases.</v>
+
+131
+00:15:46.307 --> 00:15:51.129
+<v Daniel>OK, so AI intensive industries are just using tech to justify jacking up prices.</v>
+
+132
+00:15:51.669 --> 00:15:54.930
+<v Maya>Right. And the gains are also not driven by labor replacement.</v>
+
+133
+00:15:55.390 --> 00:16:04.173
+<v Daniel>Really? Over the 2018 to 2024 period, AI investment predicts sales growth with no overall employment growth, but also no overall employment losses.</v>
+
+134
+00:16:04.678 --> 00:16:19.276
+<v Maya>Exactly. And the Census Bureau survey actually backed this up. They found that AI-related employment decreases occurred in only about 2% of firms, small expected employment effects under 0.4% in 2026. The firms are building intangibles. They are</v>
+
+135
+00:16:19.456 --> 00:16:20.958
+<v Maya>not firing people to save money.</v>
+
+136
+00:16:21.477 --> 00:16:27.380
+<v Daniel>However, while the total headcount stays the same, the composition of those workers changes drastically.</v>
+
+137
+00:16:27.620 --> 00:16:31.402
+<v Maya>Right. The routine clerical roles decline and other areas grow.</v>
+
+138
+00:16:31.743 --> 00:16:46.711
+<v Daniel>Which brings us to our third and final quotable finding for your slide deck. Quote, while overall employment remains unchanged, the workforce inside AI investing firms shifts drastically toward advanced degrees and senior roles, while the share of non-college</v>
+
+139
+00:16:46.811 --> 00:16:48.892
+<v Daniel>and junior roles falls. End quote.</v>
+
+140
+00:16:49.860 --> 00:17:01.877
+<v Maya>And, you know, some might argue that this is just observational data, right? Like maybe these frontier public firms were already aging and just shifting their hiring strategies towards senior talent independent of AI.</v>
+
+141
+00:17:02.418 --> 00:17:04.882
+<v Daniel>No, that's a fair objection. How do they address that?</v>
+
+142
+00:17:05.089 --> 00:17:14.975
+<v Maya>Well, again, the paper's reliance on that pre-2010 university pipeline instrument strongly proves that the AI investment is directly driving this structural shift in who gets hired.</v>
+
+143
+00:17:15.015 --> 00:17:24.300
+<v Daniel>Wow. Okay. And this is the absolute climax of our deep dive for anyone in higher education. We have to talk about the philosophical gap this creates.</v>
+
+144
+00:17:25.160 --> 00:17:26.221
+<v Maya>Yeah, it's a big deal.</v>
+
+145
+00:17:26.507 --> 00:17:40.211
+<v Daniel>Because if AI only pays off when firms build organization capital, you know, when they codify their internal muscle memory, then you need senior domain experts who actually possess that knowledge to train the systems in the first place.</v>
+
+146
+00:17:40.551 --> 00:17:55.478
+<v Maya>Exactly. The AI needs the raw material of human experience. Right. And doing that requires a very specific blended skill set, domain expertise plus AI fluency. You have to deeply understand the business problem, whether that's</v>
+
+147
+00:17:55.658 --> 00:18:01.560
+<v Maya>wealth management, manufacturing, law, whatever, to know what knowledge is actually worth codifying into the AI.</v>
+
+148
+00:18:02.300 --> 00:18:08.463
+<v Daniel>But think about what this means for junior workers. Historically, junior workers learned the domain by doing the grunt work.</v>
+
+149
+00:18:08.743 --> 00:18:09.443
+<v Maya>Oh, absolutely.</v>
+
+150
+00:18:09.811 --> 00:18:24.804
+<v Daniel>They summarize the PDFs. They pull the telemetry data. They wrote the incident reports. That is how they built their own mental muscle memory to eventually become senior experts. Right. If the AI is now doing the grunt work and companies are drastically reducing</v>
+
+151
+00:18:24.844 --> 00:18:29.648
+<v Daniel>their junior roles, how does a 22-year-old graduate ever become a senior expert?</v>
+
+152
+00:18:30.069 --> 00:18:41.907
+<v Maya>That is the flashing warning light for the future of work. The falling share of junior and non-college jobs at these frontier firms is a direct threat to early career workers, adult learners and first generation students.</v>
+
+153
+00:18:42.187 --> 00:18:45.688
+<v Daniel>Which is exactly the student body that many public university systems serve.</v>
+
+154
+00:18:45.728 --> 00:18:58.471
+<v Maya>Yes. The traditional apprenticeship model of entering the workforce is breaking down. Universities can no longer just teach students how to do the baseline tasks. They have to teach students how to be editors, auditors and system builders from day one.</v>
+
+155
+00:18:58.811 --> 00:19:02.712
+<v Daniel>So it can't just be like a computer science degree over here and a business degree over there.</v>
+
+156
+00:19:03.041 --> 00:19:14.484
+<v Maya>No, it has to be integrated. It also means universities must aggressively partner with employers. Because remember, the paper's entire proof of causality relied on talent pipelines between specific universities and firms.</v>
+
+157
+00:19:14.704 --> 00:19:14.924
+<v Daniel>Right.</v>
+
+158
+00:19:15.264 --> 00:19:27.247
+<v Maya>Higher education institutions need to rethink how they credential this blended skill set and build direct bridges into these AI investing companies. Because those companies desperately need domain experts who know how to build organization capital.</v>
+
+159
+00:19:27.647 --> 00:19:37.989
+<v Daniel>Wow. Let's bring it all together. Our journey today showed us that AI productivity is incredibly real, but it has been hidden behind the long dip of the productivity J curve.</v>
+
+160
+00:19:38.409 --> 00:19:38.869
+<v Maya>Exactly.</v>
+
+161
+00:19:39.470 --> 00:19:48.376
+<v Daniel>And those massive 1% a year gains strictly belong to the firms that use human talent to build deep, firm-specific organization capital.</v>
+
+162
+00:19:48.736 --> 00:19:51.678
+<v Maya>I want to leave you with one final thought to really mull over.</v>
+
+163
+00:19:51.978 --> 00:19:52.679
+<v Daniel>Okay, let's hear it.</v>
+
+164
+00:19:53.197 --> 00:20:05.663
+<v Maya>If AI's true, proven value is codifying a firm's unique internal knowledge, then the proliferation of generic, off-the-shelf AI tools won't actually give companies a lasting competitive advantage.</v>
+
+165
+00:20:06.183 --> 00:20:10.205
+<v Daniel>Because eventually everyone will have access to the exact same generic AI.</v>
+
+166
+00:20:10.445 --> 00:20:25.091
+<v Maya>Exactly. Instead, this technological revolution actually makes highly specific human domain expertise more valuable because that messy, uncodified human experience is the only raw material left that the AI</v>
+
+167
+00:20:25.191 --> 00:20:28.834
+<v Maya>actually needs to build the next generation of organization capital.</v>
+
+168
+00:20:29.215 --> 00:20:40.306
+<v Daniel>A phenomenal thought to end on. Thank you for joining us on this deep dive. We hope this gives you exactly the evidence, the mechanisms, and the insight you need to explain the real future of work.</v>

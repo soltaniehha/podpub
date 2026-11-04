@@ -1,0 +1,781 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:06.518
+<v Daniel>Welcome to this deep dive. We know exactly why you're here. You are trying to map out the future of work.</v>
+
+2
+00:00:06.738 --> 00:00:06.898
+<v Maya>Right.</v>
+
+3
+00:00:07.339 --> 00:00:18.150
+<v Daniel>And your mission is to understand how artificial intelligence is, you know, shifting the tectonic plates of human capital and education and like what a degree even means anymore.</v>
+
+4
+00:00:18.290 --> 00:00:20.353
+<v Maya>It's the defining tension right now.</v>
+
+5
+00:00:20.593 --> 00:00:31.294
+<v Daniel>It really is. Because the narrative out there is incredibly tangled. On one hand, you hear that AI is the great equalizer, right? This rising tide that helps novices the most.</v>
+
+6
+00:00:31.414 --> 00:00:32.777
+<v Maya>Yeah, that's the popular story.</v>
+
+7
+00:00:33.055 --> 00:00:39.497
+<v Daniel>But then on the other hand, we hear it's just a camouflage. Like it just hides a lack of real skill.</v>
+
+8
+00:00:39.617 --> 00:00:46.198
+<v Maya>And frankly, it is confusing because both of those things appear to be happening at the exact same time. It just depends on where you look.</v>
+
+9
+00:00:46.418 --> 00:00:47.358
+<v Daniel>Which is wild to me.</v>
+
+10
+00:00:47.598 --> 00:00:47.838
+<v Maya>Right.</v>
+
+11
+00:00:48.019 --> 00:00:56.300
+<v Daniel>Like we have a single technology that is simultaneously the ultimate democratizer of skill and an engine for widening the inequality gap.</v>
+
+12
+00:00:56.721 --> 00:00:56.941
+<v Maya>Yeah.</v>
+
+13
+00:00:57.221 --> 00:01:04.365
+<v Daniel>We have to know which one is true. I mean, usually when you talk about measuring professional skill, there's an expectation of precision, like an X-ray.</v>
+
+14
+00:01:04.685 --> 00:01:11.829
+<v Maya>Exactly. You give someone a coding test or ask them to write a memo, and it's visible. You either have the capability or you don't.</v>
+
+15
+00:01:12.129 --> 00:01:20.875
+<v Daniel>The bones are either broken or they're whole. But then you drop generative AI into the workplace, and suddenly that X-ray machine is completely broken.</v>
+
+16
+00:01:21.435 --> 00:01:24.157
+<v Maya>Right. The diagnostic landscape is totally murky now.</v>
+
+17
+00:01:24.564 --> 00:01:31.785
+<v Daniel>Yeah, we can't tell if we're measuring the person or the machine they're holding. So today to help you cut through that mud, we're synthesizing a stack of sources.</v>
+
+18
+00:01:32.363 --> 00:01:38.507
+<v Maya>And we are focusing heavily on a brand new October 2026 working paper by Cruises and colleagues. Yes.</v>
+
+19
+00:01:38.887 --> 00:01:47.852
+<v Daniel>This paper finally puts the whole AI leveling debate to a rigorous, randomized test. And it does it outside the filtered bubble of corporate hiring, which is huge.</v>
+
+20
+00:01:48.072 --> 00:01:49.113
+<v Maya>It's a massive breakthrough.</v>
+
+21
+00:01:49.313 --> 00:01:49.513
+<v Daniel>It is.</v>
+
+22
+00:01:49.793 --> 00:01:54.136
+<v Maya>But to appreciate it, we first have to understand the contradiction it's trying to resolve, you know?</v>
+
+23
+00:01:54.156 --> 00:01:55.616
+<v Daniel>Right. The conflicting background data.</v>
+
+24
+00:01:55.897 --> 00:02:01.560
+<v Maya>Because the specific type of work you are doing entirely dictates who actually benefits from these tools.</v>
+
+25
+00:02:01.945 --> 00:02:09.173
+<v Daniel>Let's start with the leveling story then, because this is the one that gets all the headlines. I was looking at this 2026 management science paper by Cui and colleagues.</v>
+
+26
+00:02:09.680 --> 00:02:11.541
+<v Maya>Oh, yeah. The scale of that one is massive.</v>
+
+27
+00:02:11.801 --> 00:02:25.147
+<v Daniel>It is. They looked at 4,867 developers across Microsoft, Accenture, and a Fortune 100 firm. And the top line finding is that when they used generative AI, completed tasks shot up by over 26%.</v>
+
+28
+00:02:25.287 --> 00:02:27.948
+<v Maya>Which is just a massive productivity bump in any industry.</v>
+
+29
+00:02:28.248 --> 00:02:38.373
+<v Daniel>Right. But the kicker, the reason everyone cites this paper, is who got the biggest bump? The less experienced developers adopted the AI more, and they gained the most from it.</v>
+
+30
+00:02:38.848 --> 00:02:41.470
+<v Maya>So the gap between the junior and senior coders shrank.</v>
+
+31
+00:02:41.750 --> 00:02:46.274
+<v Daniel>Exactly. It's the ultimate field version of the narrative that AI levels the playing field.</v>
+
+32
+00:02:46.794 --> 00:02:54.020
+<v Maya>It paints a really optimistic picture, right? If you're a junior employee, you just plug into the AI and suddenly you're performing like a senior employee.</v>
+
+33
+00:02:54.801 --> 00:03:01.506
+<v Daniel>But wait. Then I read this other 2026 science paper by Danny Adi and colleagues, and it completely throws a wrench in that.</v>
+
+34
+00:03:02.127 --> 00:03:03.248
+<v Maya>Yeah, the GitHub study.</v>
+
+35
+00:03:03.703 --> 00:03:10.225
+<v Daniel>Right, GitHub, where millions of developers build software. They trained a classifier on more than 30 million real-world commits.</v>
+
+36
+00:03:10.605 --> 00:03:12.825
+<v Maya>From like 170,000 developers, yeah.</v>
+
+37
+00:03:13.026 --> 00:03:21.428
+<v Daniel>It's a huge sample. And they found AI is writing an estimated 29% of U.S. Python functions now. Output rose by 3.6% across the board.</v>
+
+38
+00:03:22.602 --> 00:03:28.967
+<v Maya>But here is the amplifying counterpoint on that one. The experienced programmers captured nearly all of those gains.</v>
+
+39
+00:03:29.047 --> 00:03:36.852
+<v Daniel>Right. So in the Microsoft study, the novices catch up. But in the GitHub study, the novices stay flat and the experts just pull further ahead.</v>
+
+40
+00:03:37.092 --> 00:03:37.573
+<v Maya>Exactly.</v>
+
+41
+00:03:37.753 --> 00:03:43.097
+<v Daniel>So I'm trying to make sense of this. Is it just because the GitHub novices don't know how to prompt the AI as well?</v>
+
+42
+00:03:43.477 --> 00:03:49.241
+<v Maya>No, actually, it has nothing to do with prompting skills. It comes down to the underlying architecture of the work itself.</v>
+
+43
+00:03:49.541 --> 00:03:50.202
+<v Daniel>Okay, what do you mean?</v>
+
+44
+00:03:50.771 --> 00:04:01.754
+<v Maya>Think about what a GitHub commit actually is. It's not answering a simple, isolated question. It's open-ended. You are integrating a new piece of code into a massive, complex system.</v>
+
+45
+00:04:01.974 --> 00:04:02.575
+<v Daniel>Oh, I see.</v>
+
+46
+00:04:03.135 --> 00:04:13.098
+<v Maya>So if you're a novice, the AI can write a brilliant function for you, but if you don't understand the broader architecture, you don't know where to put it, or you don't realize it's going to break something downstream.</v>
+
+47
+00:04:13.517 --> 00:04:19.763
+<v Daniel>So it's the difference between being told exactly what to build versus having to figure out what needs building in the first place.</v>
+
+48
+00:04:20.043 --> 00:04:25.247
+<v Maya>Exactly. And there's another 2026 paper by Shen and Tamkin that sharpens this perfectly.</v>
+
+49
+00:04:25.328 --> 00:04:26.148
+<v Daniel>Right, the library one.</v>
+
+50
+00:04:26.328 --> 00:04:41.201
+<v Maya>Yeah. They ran randomized experiments on people learning a completely new programming library. And they found that if you fully delegated the work to the AI, you got the job done faster. Sure. But it deeply impaired your conceptual understanding. It actually</v>
+
+51
+00:04:41.241 --> 00:04:44.964
+<v Maya>hurt your ability to read code and your debugging skills just tanked.</v>
+
+52
+00:04:45.704 --> 00:04:50.567
+<v Daniel>So the people moving the fastest were actually learning the least. They fell into a delegation trap.</v>
+
+53
+00:04:50.727 --> 00:05:05.517
+<v Maya>They did. So to state this disagreement plainly for you, inside a fixed assigned task, like the corporate bug fixes at Microsoft, AI levels the playing field. But in open-ended, self-directed work, like real-world GitHub architecture,</v>
+
+54
+00:05:06.077 --> 00:05:09.099
+<v Maya>your underlying experience decides who actually benefits.</v>
+
+55
+00:05:09.471 --> 00:05:12.633
+<v Daniel>You know, I like to think of this like using a GPS.</v>
+
+56
+00:05:13.033 --> 00:05:13.654
+<v Maya>Okay, how so?</v>
+
+57
+00:05:14.194 --> 00:05:23.060
+<v Daniel>If you give a novice driver and a local cab driver a very specific fixed destination, the GPS makes the novice just as efficient as the local. It levels the output.</v>
+
+58
+00:05:23.400 --> 00:05:23.600
+<v Maya>Right.</v>
+
+59
+00:05:24.181 --> 00:05:33.287
+<v Daniel>But if the goal is open-ended, like find the most scenic route that avoids school zones, the local's underlying knowledge of the city still wins. The GPS just amplifies the expert.</v>
+
+60
+00:05:33.607 --> 00:05:37.690
+<v Maya>That is a brilliant analogy. And it really exposes the flaw in how we've been studying this.</v>
+
+61
+00:05:37.930 --> 00:05:38.270
+<v Daniel>How so?</v>
+
+62
+00:05:38.837 --> 00:05:48.386
+<v Maya>Well, if fixed tasks level the output, but open-ended tasks require deep experience, how do we actually measure the raw, naked impact of formal education?</v>
+
+63
+00:05:48.626 --> 00:05:54.171
+<v Daniel>Oh, I see. Because if you're studying software engineers at Microsoft, you're really measuring the general population.</v>
+
+64
+00:05:54.351 --> 00:05:54.771
+<v Maya>Exactly.</v>
+
+65
+00:05:55.112 --> 00:06:04.320
+<v Daniel>HR has already aggressively filtered those people. They compress the educational differences before the study even began. Like, a novice at Microsoft is still an elite programmer.</v>
+
+66
+00:06:06.145 --> 00:06:12.689
+<v Maya>And that transition brings us to the breakthrough in our main source today, the new NBER working paper by Kruse's and colleagues.</v>
+
+67
+00:06:13.249 --> 00:06:17.672
+<v Daniel>Yes. Does generative AI narrow education-based productivity gaps?</v>
+
+68
+00:06:18.246 --> 00:06:27.851
+<v Maya>Right. This is, by the author's account, the very first study to compare AI-assisted performance on the exact same task across raw education groups in the wild.</v>
+
+69
+00:06:27.971 --> 00:06:35.054
+<v Daniel>So they aren't looking at pre-filtered corporate employees. They're looking at the actual gap between education groups in society.</v>
+
+70
+00:06:35.254 --> 00:06:43.078
+<v Maya>Exactly. They want to know what happens when everyday people with vastly different educational backgrounds are handed the same AI tool to do the same job.</v>
+
+71
+00:06:43.465 --> 00:06:52.391
+<v Daniel>But wait, measuring education is notoriously tricky, right? Like a college dropout in one country might have the exact same actual skills as a graduate in another.</v>
+
+72
+00:06:52.431 --> 00:06:53.092
+<v Maya>Oh, definitely.</v>
+
+73
+00:06:53.372 --> 00:06:55.393
+<v Daniel>So how do they control for that messiness?</v>
+
+74
+00:06:56.034 --> 00:07:01.918
+<v Maya>It's a great question, and it's why their experimental design is so clever. First, they pre-registered this online experiment.</v>
+
+75
+00:07:01.998 --> 00:07:04.820
+<v Daniel>Real quick, explain why pre-registration matters here.</v>
+
+76
+00:07:05.189 --> 00:07:16.158
+<v Maya>It's a massive guardrail for scientific integrity. It means the researchers publicly declared their hypothesis, their exact methodology, and how they would analyze the data before they ever ran the test.</v>
+
+77
+00:07:16.499 --> 00:07:19.281
+<v Daniel>So they couldn't just go fishing for data that looked good later.</v>
+
+78
+00:07:19.301 --> 00:07:20.342
+<v Maya>Right. They tied their own hands.</v>
+
+79
+00:07:20.662 --> 00:07:28.569
+<v Daniel>Got it. So they ran this highly strict experiment in Argentina between September and November of 2025 with 1,174 adults aged 25 to 45. Why Argentina?</v>
+
+80
+00:07:34.417 --> 00:07:41.581
+<v Maya>Because of how their education system works. In Argentina, the tertiary university system is tuition-free and open admission.</v>
+
+81
+00:07:41.881 --> 00:07:42.942
+<v Daniel>Oh, wow. Okay.</v>
+
+82
+00:07:43.162 --> 00:07:49.605
+<v Maya>Yeah, so because there's no financial barrier, a huge number of people start college, but life gets in the way and they do not finish.</v>
+
+83
+00:07:49.926 --> 00:07:53.007
+<v Daniel>Which honestly reflects the reality of so many adult learners everywhere.</v>
+
+84
+00:07:53.287 --> 00:08:01.872
+<v Maya>It does. So to draw a clean line, they defined low education as having a high school diploma or having completed less than half of a post-secondary program.</v>
+
+85
+00:08:02.373 --> 00:08:03.113
+<v Daniel>And high education?</v>
+
+86
+00:08:03.391 --> 00:08:06.734
+<v Maya>That meant you had completed at least half of a post-secondary degree.</v>
+
+87
+00:08:07.274 --> 00:08:13.140
+<v Daniel>Okay. So we have our two distinct groups representing a very real-world demographic divide. What did they actually make them do?</v>
+
+88
+00:08:13.880 --> 00:08:19.906
+<v Maya>They gave them an incentivized 21-minute workplace scenario. It's a very standard knowledge worker task.</v>
+
+89
+00:08:20.106 --> 00:08:21.367
+<v Daniel>Like reading an email or something.</v>
+
+90
+00:08:21.703 --> 00:08:33.505
+<v Maya>Exactly. You read an email from a boss, then you analyze a report with text, a figure, and a table. You have to diagnose a business problem based on that data. And finally, draft a reply proposing a fix.</v>
+
+91
+00:08:34.205 --> 00:08:40.406
+<v Daniel>And treated participants got an embedded GPT 4.1 assistant to help them, while the control group had to do it totally low.</v>
+
+92
+00:08:40.586 --> 00:08:49.048
+<v Maya>Correct. But here is the genius of the design, the twist. Right after they hit submit on that task, the AI completely vanishes.</v>
+
+93
+00:08:49.522 --> 00:08:54.245
+<v Daniel>Oh, the no AI follow up module. I love this part. Suddenly the training wheels are off.</v>
+
+94
+00:08:54.285 --> 00:08:55.026
+<v Maya>Completely off.</v>
+
+95
+00:08:55.266 --> 00:09:05.653
+<v Daniel>They're told they have to explain the root cause of the problem to a boss who didn't read the email, plus answer questions about the figure and a hidden detail from the text, all with zero AI assistance.</v>
+
+96
+00:09:06.254 --> 00:09:14.480
+<v Maya>This is how they separate the illusion of competence from actual learning. You might generate a perfect email with AI, but do you actually understand what you just said?</v>
+
+97
+00:09:14.920 --> 00:09:21.809
+<v Daniel>OK, let's get into the results of the main task first. Did the AI act as an equalizer when the training wheels were still on?</v>
+
+98
+00:09:22.169 --> 00:09:35.380
+<v Maya>It absolutely did. The gains were staggering. For the low education group, using AI raised their scores by 1.242 standard deviations. Wow. And for the high education group, it raised scores by 0.834 standard deviations.</v>
+
+99
+00:09:35.760 --> 00:09:45.889
+<v Daniel>Okay, hold on. The standard deviations are great for statisticians, but if I'm visualizing this, what does a jump of 1.2 standard deviations actually feel like in the real world?</v>
+
+100
+00:09:46.339 --> 00:09:58.788
+<v Maya>Think of it like jumping two full letter grades. If you were squarely in the bottom 50th percentile, totally average or below, a 1.2 standard deviation bump rockets you up to performing like someone in the top 15 or 20 percent.</v>
+
+101
+00:09:59.209 --> 00:10:06.514
+<v Daniel>That is insane. OK, so if you want to pull a specific stat out to sound incredibly well-informed, remember this quotable finding.</v>
+
+102
+00:10:06.714 --> 00:10:07.255
+<v Maya>Yeah, laid out.</v>
+
+103
+00:10:07.813 --> 00:10:21.136
+<v Daniel>Without AI, the high education group leads by roughly half a standard deviation. With AI, that gap falls to 0.139 standard deviations. The AI closed three quarters of the raw education gap.</v>
+
+104
+00:10:21.896 --> 00:10:32.799
+<v Maya>Closing 75% of the output gap is just a seismic shift in productivity. But as rigorous consumers of data, we have to look at the strongest scientific objection to this number.</v>
+
+105
+00:10:33.199 --> 00:10:33.559
+<v Daniel>Bring it on.</v>
+
+106
+00:10:34.031 --> 00:10:40.175
+<v Maya>The strongest objection is that this was a short, 21-minute online test. Are we just seeing a ceiling effect?</v>
+
+107
+00:10:40.775 --> 00:10:44.077
+<v Daniel>Meaning the task was simply too easy for GPT-4.1?</v>
+
+108
+00:10:44.338 --> 00:10:49.741
+<v Maya>Exactly. Did it mechanically force everyone's scores to bunch up at the very top, creating an artificial tie?</v>
+
+109
+00:10:50.141 --> 00:11:04.831
+<v Daniel>Oh, that makes sense. But, you know, that ceiling effect argument actually leads me to a deduction. If the gap closed by 75 percent... Why didn't it close by 100 percent? Why did the high education group still maintain a slight edge?</v>
+
+110
+00:11:05.111 --> 00:11:06.572
+<v Maya>That's the million dollar question.</v>
+
+111
+00:11:07.012 --> 00:11:14.854
+<v Daniel>I mean, I'd assume the lower education group just didn't know how to prompt the AI correctly. Did they just type shorter sentences or ask fewer questions?</v>
+
+112
+00:11:15.614 --> 00:11:25.996
+<v Maya>That is exactly what you would assume. But the authors looked under the hood at the actual chat logs and the data tells a completely different story. The difference wasn't quantity at all.</v>
+
+113
+00:11:26.451 --> 00:11:26.731
+<v Daniel>Really?</v>
+
+114
+00:11:26.911 --> 00:11:36.174
+<v Maya>Yeah. Both groups used the AI the exact same amount. Both sent about three messages on average. Both groups asked for help on about 61% of the task components.</v>
+
+115
+00:11:36.494 --> 00:11:37.154
+<v Daniel>Wow. Okay.</v>
+
+116
+00:11:37.734 --> 00:11:49.237
+<v Maya>And what's even more surprising is their prior real world experience using AI was also almost identical. 68% for the low education group and 77% for the high education group.</v>
+
+117
+00:11:50.037 --> 00:11:58.937
+<v Daniel>Okay. So if they're typing the same amount of prompts... And they have similar prior experience. Why is the university educated group still pulling ahead?</v>
+
+118
+00:11:59.577 --> 00:12:14.242
+<v Maya>Because the difference was entirely in quality. When the researchers analyzed how they spoke to the AI, the higher education users gave the machine much more detailed reasoning instructions. They were highly likely to start with a specific targeted prompt.</v>
+
+119
+00:12:14.542 --> 00:12:22.405
+<v Maya>They used structured workflows to break the problem down. And crucially, they integrated the AI's output selectively into their final answer.</v>
+
+120
+00:12:22.884 --> 00:12:27.328
+<v Daniel>Let me guess. The lower education users just asked it to do the whole thing and pasted it.</v>
+
+121
+00:12:27.468 --> 00:12:34.635
+<v Maya>Yes. The lower education users were 10.1 percentage points more likely to just copy and paste the AI output in full.</v>
+
+122
+00:12:34.855 --> 00:12:41.621
+<v Daniel>Man. So why does a degree prevent copy pasting? I think it fundamentally comes down to how universities train you to think.</v>
+
+123
+00:12:42.181 --> 00:12:42.522
+<v Maya>How so?</v>
+
+124
+00:12:43.125 --> 00:12:56.562
+<v Daniel>Well, a degree is essentially a multi-year exercise in not taking things at face value. You are trained to synthesize multiple sources, question texts, edit rough drafts. That naturally translates into how you treat an AI.</v>
+
+125
+00:12:56.962 --> 00:13:11.610
+<v Maya>That is exactly the mechanism. The high education group treated the AI like a junior analyst. They gave it a strict framework, checked its math, and selectively wove its findings into their own strategy. The low education group treated the AI like an oracle.</v>
+
+126
+00:13:11.950 --> 00:13:15.733
+<v Maya>They asked a question, took whatever it said as gospel, and pasted it directly.</v>
+
+127
+00:13:16.253 --> 00:13:20.916
+<v Daniel>Which brings us right back to that Shen and Tamkin paper we discussed earlier, the delegation trap.</v>
+
+128
+00:13:21.256 --> 00:13:21.656
+<v Maya>Exactly.</v>
+
+129
+00:13:22.419 --> 00:13:30.863
+<v Daniel>If the low education group is just copy pasting the Oracle, are they actually learning anything about the business problem or are they just delegating the thinking?</v>
+
+130
+00:13:31.143 --> 00:13:41.529
+<v Maya>And that is exactly why the no AI follow up module in this experiment is so vital. When the AI is abruptly taken away and they have to explain the problem to a boss, what happens?</v>
+
+131
+00:13:41.909 --> 00:13:44.210
+<v Daniel>Did pure delegation completely ruin them?</v>
+
+132
+00:13:44.817 --> 00:13:50.360
+<v Maya>The good news is, no, it didn't ruin them. The treated participants did no worse than the control group who never had AI.</v>
+
+133
+00:13:50.620 --> 00:13:51.941
+<v Daniel>Okay, that's something. Yeah.</v>
+
+134
+00:13:52.421 --> 00:14:03.968
+<v Maya>In fact, the low education group held on to a modest gain. They scored 0.171 standard deviations higher on the follow-up than their non-AI counterparts. So some knowledge carried over.</v>
+
+135
+00:14:04.408 --> 00:14:06.189
+<v Daniel>But there is a catch, isn't there?</v>
+
+136
+00:14:06.588 --> 00:14:12.134
+<v Maya>A massive one. The moment the AI was gone, a sizable education gap came roaring</v>
+
+137
+00:14:12.214 --> 00:14:12.434
+<v Daniel>back.</v>
+
+138
+00:14:12.915 --> 00:14:17.520
+<v Maya>The AI leveled the output during the task, but it absolutely did not level the underlying skill.</v>
+
+139
+00:14:17.880 --> 00:14:20.223
+<v Daniel>You can borrow the AI's brain, but you can't keep it.</v>
+
+140
+00:14:20.403 --> 00:14:24.147
+<v Maya>Precisely. And this leads to our second highly quotable stat for you.</v>
+
+141
+00:14:24.387 --> 00:14:24.768
+<v Daniel>Let's hear it.</v>
+
+142
+00:14:25.539 --> 00:14:38.124
+<v Maya>The researchers categorize people by how much effort they put into the task alongside the AI. Here is the finding. Heavy AI use produces strong task scores whether or not people put in human effort. The machine carries you.</v>
+
+143
+00:14:38.384 --> 00:14:38.564
+<v Daniel>Right.</v>
+
+144
+00:14:39.084 --> 00:14:46.087
+<v Maya>But follow-up performance, actual learning, is high only when heavy AI use is combined with sustained human effort.</v>
+
+145
+00:14:46.487 --> 00:14:49.068
+<v Daniel>Put some numbers on that for me. How big is the difference?</v>
+
+146
+00:14:49.515 --> 00:14:57.344
+<v Maya>Participants with heavy AI use but low personal engagement got a tiny .065 bump in their follow-up score.</v>
+
+147
+00:14:57.444 --> 00:14:58.125
+<v Daniel>Barely anything.</v>
+
+148
+00:14:58.265 --> 00:15:06.655
+<v Maya>Right. But participants with heavy AI use and high personal engagement scored .732 standard deviations higher.</v>
+
+149
+00:15:06.795 --> 00:15:19.664
+<v Daniel>That is an 11-fold increase in learning. Let me say that again, because that is wild. The people who actively engaged saw an 11-fold increase in their unassisted understanding compared to the people who just let the AI do the driving.</v>
+
+150
+00:15:19.764 --> 00:15:25.048
+<v Maya>Yes. Effort is the literal bridge between delegating a task and actually learning a skill.</v>
+
+151
+00:15:25.614 --> 00:15:40.338
+<v Daniel>So the authors interpret this to mean that generative AI dramatically narrows effective productivity and execution. Right. But your underlying human capital, your education, effort, critical thinking, still deeply shapes your unassisted performance. And it</v>
+
+152
+00:15:40.378 --> 00:15:42.679
+<v Daniel>dictates how well you use the tool in the first place.</v>
+
+153
+00:15:42.899 --> 00:15:43.399
+<v Maya>Exactly.</v>
+
+154
+00:15:43.419 --> 00:15:46.760
+<v Daniel>Now, I have to play devil's advocate on this follow-up module.</v>
+
+155
+00:15:46.780 --> 00:15:47.140
+<v Maya>Go for it.</v>
+
+156
+00:15:48.124 --> 00:15:59.066
+<v Daniel>The strongest objection here is that this is only measuring short-run memory. I mean, it's essentially a pop quiz on a task they just completed five minutes ago. It doesn't prove durable long-term skill acquisition.</v>
+
+157
+00:15:59.587 --> 00:16:08.088
+<v Maya>That is a very fair limitation. We don't know if they'd remember the root cause of that business problem a week later or if they could apply that logic to a totally new problem.</v>
+
+158
+00:16:08.508 --> 00:16:15.330
+<v Daniel>And to be truly well-informed, you always have to know the weak points of your own data. What are the other limits of this study we need to name honestly?</v>
+
+159
+00:16:15.747 --> 00:16:22.230
+<v Maya>We should list them rapidly but fairly. First, this is data from one country, Argentina. We have to be careful universalizing it.</v>
+
+160
+00:16:22.470 --> 00:16:22.710
+<v Daniel>OK.</v>
+
+161
+00:16:23.170 --> 00:16:27.972
+<v Maya>Second, as we discussed, it's a short, assigned online task, not a years-long career arc.</v>
+
+162
+00:16:28.413 --> 00:16:33.455
+<v Daniel>Right. It leans closer to the fixed Microsoft tasks than the open-ended GitHub architecture.</v>
+
+163
+00:16:33.675 --> 00:16:40.218
+<v Maya>Exactly. And third, it relies on GPT-based grading. The researchers used AI to grade the AI-assisted work.</v>
+
+164
+00:16:40.658 --> 00:16:43.059
+<v Daniel>Oh, that sounds like a conflict of interest for the machine.</v>
+
+165
+00:16:43.482 --> 00:16:52.224
+<v Maya>It does, but to be rigorous, the authors anticipated that critique. They manually validated the AI grading against human graders and found a correlation above 0.9. Okay,</v>
+
+166
+00:16:53.144 --> 00:16:56.064
+<v Daniel>so the AI and the humans agreed over 90% of the time?</v>
+
+167
+00:16:56.344 --> 00:17:07.286
+<v Maya>Yes. And they even regraded the entire experiment using completely different models, Claude and Gemini, to be absolutely sure the results held up. But it is a methodological limitation worth noting.</v>
+
+168
+00:17:07.606 --> 00:17:22.238
+<v Daniel>Fair enough. Okay, let's pull all of this together for you. We've looked at the massive leveling of output. We looked under the hood at the chat logs to see the copy-paste gap. And we looked at the follow-up to see how effort drives learning.</v>
+
+169
+00:17:23.399 --> 00:17:31.426
+<v Daniel>What does this actually mean for the real world? Specifically, what does this mean for the future of universities and the concept of a degree?</v>
+
+170
+00:17:32.062 --> 00:17:44.312
+<v Maya>This is where we hit a philosophical crisis for higher education. Think about the implications. If AI closes three quarters of the output gap on a knowledge work task, but it does not close the underlying skill gap.</v>
+
+171
+00:17:44.933 --> 00:17:47.295
+<v Daniel>What is the university degree actually certifying?</v>
+
+172
+00:17:47.663 --> 00:17:58.590
+<v Maya>Exactly. If I am an employer and I give two candidates a take home assignment and their AI assisted output is nearly identical, how do I know who can actually do the work when the Wi-Fi goes down?</v>
+
+173
+00:17:58.730 --> 00:18:04.194
+<v Daniel>You can't. How do we credential people when the final output no longer reveals who can do it alone?</v>
+
+174
+00:18:04.920 --> 00:18:16.470
+<v Maya>It forces a total rethink of assessment. Universities have historically tested output, the essay, the code, the memo. If output is commoditized by AI, higher education has to radically change.</v>
+
+175
+00:18:16.610 --> 00:18:24.977
+<v Daniel>Right. They have to partner with employers to figure out new signals of competence that measure the process, not just the product.</v>
+
+176
+00:18:25.403 --> 00:18:32.047
+<v Maya>And it completely shifts what universities have to teach. They can no longer just teach content because the AI has the content.</v>
+
+177
+00:18:32.187 --> 00:18:33.287
+<v Daniel>They have to teach the chat logs.</v>
+
+178
+00:18:33.527 --> 00:18:40.171
+<v Maya>Yes. They have to teach students how to be that junior analyst manager, how to direct, how to check, and how to interrogate an AI.</v>
+
+179
+00:18:40.651 --> 00:18:44.635
+<v Daniel>And critically, they have to explicitly teach that effortful engagement we saw in the data.</v>
+
+180
+00:18:44.795 --> 00:18:55.264
+<v Maya>Precisely. They have to show students that taking the copy-paste shortcut might get the assignment done today, but it completely bypasses the only mechanism that makes learning stick in your own brain for tomorrow.</v>
+
+181
+00:18:55.604 --> 00:19:00.729
+<v Daniel>This is incredibly urgent for specific populations to think about who stands to gain the most from this tool.</v>
+
+182
+00:19:00.929 --> 00:19:01.610
+<v Maya>Who do you have in mind?</v>
+
+183
+00:19:02.025 --> 00:19:13.930
+<v Daniel>It's early career workers, it's adult learners, first-generation students, and people who started a degree but didn't finish it. Which, by the way, makes up a massive portion of the student body in major urban university systems.</v>
+
+184
+00:19:14.130 --> 00:19:28.795
+<v Maya>Oh, absolutely. And for those non-traditional students, this technology is a massive unprecedented lever. It can instantly close 75% of the gap between them and someone with a traditional elite background. Right. But only if they are taught how to use it as a thought</v>
+
+185
+00:19:28.835 --> 00:19:30.996
+<v Maya>partner rather than an oracle. Exactly.</v>
+
+186
+00:19:31.276 --> 00:19:38.879
+<v Daniel>If they use it as an oracle, they remain forever dependent on it. If they use it as a sparring partner, they build their own human capital.</v>
+
+187
+00:19:39.599 --> 00:19:48.662
+<v Maya>The stakes for higher education have never been higher. The institutions that figure out how to teach that effortful integration will empower a whole new class of workers.</v>
+
+188
+00:19:49.262 --> 00:19:58.525
+<v Daniel>While the institutions that just try to ban it or ignore it will leave their students totally unequipped for a workforce where everyone else has an AI co-pilot.</v>
+
+189
+00:19:59.146 --> 00:19:59.946
+<v Maya>That's the reality.</v>
+
+190
+00:20:01.042 --> 00:20:15.824
+<v Daniel>I want to leave you with one last thing to mull over, building on everything we've unpacked today. In a world where generative AI makes everyone's output look highly educated, the premium in the future of work won't be on your ability to produce an</v>
+
+191
+00:20:15.924 --> 00:20:16.204
+<v Daniel>answer.</v>
+
+192
+00:20:16.825 --> 00:20:18.708
+<v Maya>It'll be on your ability to interrogate one.</v>
+
+193
+00:20:19.429 --> 00:20:26.219
+<v Daniel>Because when the x-ray machine is broken, you have to know how to ask the right questions to find out what's really going on inside.</v>
+
+194
+00:20:26.579 --> 00:20:27.060
+<v Maya>Exactly.</v>
+
+195
+00:20:27.080 --> 00:20:29.544
+<v Daniel>Until next time, keep digging.</v>

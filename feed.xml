@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 08:56:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 09:12:17 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1825,5 +1825,39 @@ Reference: Broady, K., Dunson, C., &amp; Barr, A. (2026). Rethinking Automation 
       <pubDate>Tue, 03 Nov 2026 07:38:03 +0000</pubDate>
       <itunes:episode>94</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/094%20-%20When%20Half%20The%20Jobs%20Were%20Supposed%20To%20Vanish.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>095 - When AI Narrows The Degree Gap</title>
+      <description>Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment (February 2026)
+
+In this episode we unpack an NBER working paper by Guillermo Cruces of Universidad de San Andrés and Nottingham, with Diego Fernández Meijide, Sebastian Galiani of Tulane, Ramiro Gálvez and María Lombardi of Torcuato Di Tella, which asks whether generative AI shrinks the productivity gap between people with more and less formal education. The answer from a preregistered experiment with 1,174 Argentine adults: an AI assistant closes three quarters of the gap on a workplace problem-solving task, but much of the gap returns the moment the assistant is taken away.
+
+We walk through the design, an incentivized business task of diagnosing a problem from a report and drafting an email to a boss, with or without a GPT-4.1 assistant, followed by a module with no AI. We cover the headline effects of 1.242 and 0.834 standard deviations for lower and higher education groups, the gap falling from 0.548 to 0.139, the 0.171 gain that lower-education participants keep without AI, why carry-over shows up only when heavy AI use comes with real effort, and what the chat logs show about higher-education users directing and editing the assistant while others paste its output whole. We set it against Cui and colleagues' field experiments with 4,867 developers at Microsoft, Accenture and a Fortune 100 firm, Daniotti and colleagues' Science study of 30 million GitHub commits where experienced programmers capture the gains, and Shen and Tamkin's experiments on how AI help can stunt skill formation, and close on what a degree certifies when AI can stand in for part of it.
+
+Reference: Cruces, G., Fernández Meijide, D., Galiani, S., Gálvez, R. H., &amp; Lombardi, M. (2026). Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment. NBER Working Paper 34851. https://www.nber.org/papers/w34851
+Reference: Cui, K. Z., Demirer, M., Jaffe, S., Musolff, L., Peng, S., &amp; Salz, T. (2026). The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers. Management Science. https://doi.org/10.1287/mnsc.2025.00535
+Reference: Daniotti, S., Wachs, J., Feng, X., &amp; Neffke, F. (2026). Who is using AI to code? Global diffusion and impact of generative AI. Science, 391(6787), 831-835. https://doi.org/10.1126/science.adz9311
+Reference: Shen, J. H., &amp; Tamkin, A. (2026). How AI Impacts Skill Formation. arXiv:2601.20245. https://arxiv.org/abs/2601.20245</description>
+      <guid isPermaLink="false">b7c67214f822c120a1fef1a8a72c42b3495b2b44</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/095%20-%20When%20AI%20Narrows%20The%20Degree%20Gap.m4a" length="39598716" type="audio/mp4" />
+      <pubDate>Wed, 04 Nov 2026 07:31:56 +0000</pubDate>
+      <itunes:episode>95</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/095%20-%20When%20AI%20Narrows%20The%20Degree%20Gap.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>096 - When AI Pays Off A Decade Late</title>
+      <description>Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital (August 2026)
+
+In this episode we unpack an NBER working paper by Tania Babina, Alex He and Renhao Jiang of the University of Maryland that revisits the Solow paradox for artificial intelligence. The argument: firms that invested in AI saw no productivity gains from 2010 to 2018 but clear gains from 2018 to 2024, and the reason for the lag is that AI pays off by building organization capital, the durable, firm-specific know-how that has to accumulate before it shows up in the numbers.
+
+We walk through the new measure of AI investment built from job postings and resumes across US public firms, which counts more than 300,000 AI-skilled workers by 2024, the long-difference estimates of 6.2 and 7.5 points more productivity growth over six years per standard deviation of AI investment, the instrument based on firms' early hiring ties to AI-strong universities, sales growth without employment growth, the shift toward advanced degrees and senior roles, and a new job-description measure showing that AI jobs are nearly twice as likely as other jobs to build organization capital. We set it against Brynjolfsson, Rock and Syverson's Productivity J-Curve, the Census Bureau's 2026 survey evidence from Bonney and colleagues that AI is diffusing wide but shallow, and Baslandze and colleagues' survey of nearly 750 executives that finds a productivity paradox of perceived gains outrunning measured ones, and close on why the payoff from AI depends on the people who turn a firm's own records and routines into working systems.
+
+Reference: Babina, T., He, A. X., &amp; Jiang, R. (2026). Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital. NBER Working Paper 35684. https://www.nber.org/papers/w35684
+Reference: Bonney, K., Breaux, C., Dinlersoz, E., Foster, L., Haltiwanger, J., &amp; Pande, A. (2026). The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks. U.S. Census Bureau Center for Economic Studies Working Paper CES 26-25R. https://www.census.gov/library/working-papers/series/ces-wp.html
+Reference: Baslandze, S., Edwards, Z., Graham, J., McClure, T., Meyer, B. H., Sparks, M., Waddell, S. R., &amp; Weitz, D. (2026). Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives. NBER Working Paper 34984. https://www.nber.org/papers/w34984
+Reference: Brynjolfsson, E., Rock, D., &amp; Syverson, C. (2021). The Productivity J-Curve: How Intangibles Complement General Purpose Technologies. American Economic Journal: Macroeconomics, 13(1), 333-372. https://doi.org/10.1257/mac.20180386</description>
+      <guid isPermaLink="false">496664650e4808e068eb850fb32a9045f830ac68</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/096%20-%20When%20AI%20Pays%20Off%20A%20Decade%20Late.m4a" length="39942470" type="audio/mp4" />
+      <pubDate>Wed, 04 Nov 2026 07:40:02 +0000</pubDate>
+      <itunes:episode>96</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/096%20-%20When%20AI%20Pays%20Off%20A%20Decade%20Late.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
