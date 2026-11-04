@@ -1,0 +1,629 @@
+WEBVTT
+
+1
+00:00:00.211 --> 00:00:04.194
+<v Daniel>Imagine you could buy like a time machine for your workplace.</v>
+
+2
+00:00:04.314 --> 00:00:05.615
+<v Maya>Okay. A time machine.</v>
+
+3
+00:00:05.895 --> 00:00:12.860
+<v Daniel>Right. But not one that actually goes back in time. One that specifically targets your newest, like most inexperienced rookie.</v>
+
+4
+00:00:13.240 --> 00:00:14.561
+<v Maya>Oh, I see where you're going with this.</v>
+
+5
+00:00:14.761 --> 00:00:26.009
+<v Daniel>Yeah. So you plug this thing in and instantly a person who has only been on the job for two months suddenly has the battle-tested instincts and the output of a six-month veteran.</v>
+
+6
+00:00:26.706 --> 00:00:38.932
+<v Maya>I mean, if you are managing a team or running a company, that sounds like a literal miracle. Organizations spend massive amounts of money and time just trying to drag people up that experience curve.</v>
+
+7
+00:00:39.493 --> 00:00:52.399
+<v Daniel>Exactly. But there is a hidden setting on this machine. In certain kind of unpredictable situations, if that rookie relies on it too much, it completely bypasses their common sense.</v>
+
+8
+00:00:52.860 --> 00:00:55.081
+<v Maya>Right. The guardrails just vanish.</v>
+
+9
+00:00:55.525 --> 00:01:08.027
+<v Daniel>Yeah, they stop thinking, they blindly follow a bad suggestion, and they drive a project straight into a wall. So welcome to this deep dive. Today, we are taking you into the heart of that exact paradox. Yes, it</v>
+
+10
+00:01:08.047 --> 00:01:08.907
+<v Maya>is a paradox, right? It</v>
+
+11
+00:01:08.947 --> 00:01:23.730
+<v Daniel>really is. And if you were thinking about the future of work or higher education or how we prepare the next generation for entry-level jobs, you have to look past the endless hype about generative AI. We are</v>
+
+12
+00:01:23.770 --> 00:01:30.197
+<v Daniel>looking strictly at the hard empirical evidence of how this technology is actually changing the human experience curve.</v>
+
+13
+00:01:30.357 --> 00:01:41.187
+<v Maya>Yeah, we're stripping away all the theoretical claims. We're looking at what happens when these tools hit the messy reality of millions of actual workers across different industries over the last few years.</v>
+
+14
+00:01:41.267 --> 00:01:55.961
+<v Daniel>Right. And to do that, we are looking at a stack of sources that trace this incredible arc from 2023 to 2026. We are anchored by one massive foundational study, like the absolute classic that set the terms of this</v>
+
+15
+00:01:56.021 --> 00:01:56.601
+<v Daniel>entire debate.</v>
+
+16
+00:01:56.621 --> 00:02:00.322
+<v Maya>The one everyone points to when they say, you know, AI helps novices most.</v>
+
+17
+00:02:00.422 --> 00:02:10.105
+<v Daniel>Exactly. But we are also bringing in the latest data to see how that early optimism holds up when tasks get truly complex and when we actually look at worker paychecks.</v>
+
+18
+00:02:10.389 --> 00:02:20.891
+<v Maya>And honestly, the transition from those early experiments to the more recent reality checks, it's pretty sobering. But it gives us the clearest picture yet of what human labor is actually going to look like.</v>
+
+19
+00:02:21.511 --> 00:02:33.754
+<v Daniel>So if we want to understand this shift, we have to start with the baseline. This landmark 2023 study by Brynjolfsson, Lee, and Raymond. They analyzed the customer support operation of a Fortune 500 business software firm.</v>
+
+20
+00:02:34.115 --> 00:02:36.037
+<v Maya>And the scale here is just staggering.</v>
+
+21
+00:02:36.057 --> 00:02:46.847
+<v Daniel>It really is. They looked at over 5,000 agents. The vast majority of them were based outside the U.S., primarily in the Philippines. And we are talking about the analysis of 3 million individual customer chats.</v>
+
+22
+00:02:47.087 --> 00:02:47.667
+<v Maya>3 million.</v>
+
+23
+00:02:48.048 --> 00:02:52.632
+<v Daniel>Yeah. And the intervention they used was a conversational assistant built on GPT-3.</v>
+
+24
+00:02:53.526 --> 00:03:01.853
+<v Maya>But crucially, this wasn't a chat bot talking directly to the customer. That's a common misconception. It was an AI whispering in the human agent's ear.</v>
+
+25
+00:03:02.413 --> 00:03:03.154
+<v Daniel>Like a co-pilot.</v>
+
+26
+00:03:03.294 --> 00:03:13.983
+<v Maya>Exactly. It monitored the chats in real time and suggested replies on the agent's screen. But the human was always in charge. They could ignore the suggestion, edit it, or just send it as is.</v>
+
+27
+00:03:14.163 --> 00:03:25.253
+<v Daniel>Which is key. But whenever I see a study this massive showing a productivity spike, my immediate skepticism is about cause and effect. I mean, how do we know the A.I. actually made them faster?</v>
+
+28
+00:03:25.594 --> 00:03:28.757
+<v Maya>Right. Like maybe management just threatened everyone with layoffs that month.</v>
+
+29
+00:03:28.977 --> 00:03:33.763
+<v Daniel>Yeah. Or it was a slow season and they naturally handled things quicker. Like, how do we know for sure?</v>
+
+30
+00:03:34.333 --> 00:03:43.922
+<v Maya>Well, the researchers actually had a perfect natural experiment to prove the AI was the cause. The software firm simply didn't have the capacity to train 5,000 people at once.</v>
+
+31
+00:03:44.222 --> 00:03:44.863
+<v Daniel>Oh, that makes sense.</v>
+
+32
+00:03:45.183 --> 00:03:52.690
+<v Maya>And they had a contractual cap on how many AI seats they could use simultaneously. So they staggered the rollout. They didn't just flip a switch for the whole company.</v>
+
+33
+00:03:52.990 --> 00:03:55.713
+<v Daniel>Meaning what? Different offices got it at different times?</v>
+
+34
+00:03:56.266 --> 00:04:10.373
+<v Maya>Even closer than that, agents sitting right next to each other on the exact same team got access to the AI at completely different times. Within a single team, access jumped from about 5% in October 2020 to about</v>
+
+35
+00:04:10.573 --> 00:04:12.895
+<v Maya>70% by January 2021. So you</v>
+
+36
+00:04:13.375 --> 00:04:20.839
+<v Daniel>have a built-in control group sitting in the exact same environment, dealing with the exact same seasonal spikes, side-by-side with the people using the AI.</v>
+
+37
+00:04:21.511 --> 00:04:30.775
+<v Maya>Exactly. That staggering is the gold standard for proving cause and effect. It's called the identification. It completely isolates the AI as the variable.</v>
+
+38
+00:04:31.235 --> 00:04:37.758
+<v Daniel>Okay, so let's look at what happened when that variable was introduced. The headline is that resolutions per hour jumped about 15% on average.</v>
+
+39
+00:04:38.218 --> 00:04:40.399
+<v Maya>Which is a huge jump for a company that size.</v>
+
+40
+00:04:40.659 --> 00:04:52.499
+<v Daniel>Massive. Chats got noticeably shorter. Handle time dropped by about 8.5%, down from an average of 43 minutes. Agents were juggling more chats at once, and they were actually resolving slightly more of the issues.</v>
+
+41
+00:04:52.883 --> 00:04:58.944
+<v Maya>But, you know, averages hide the real story here. The most fascinating part is who was getting faster.</v>
+
+42
+00:04:59.244 --> 00:05:14.207
+<v Daniel>Right. Here's where it gets really interesting. When you split the workers by skill level, the bottom quintile, so the lowest skilled workers, they gained 36% in speed. 36%? Yeah. Meanwhile, the top quintile, the absolute best workers, they gained absolutely zero</v>
+
+43
+00:05:14.267 --> 00:05:14.347
+<v Daniel>in</v>
+
+44
+00:05:14.367 --> 00:05:14.727
+<v Maya>speed.</v>
+
+45
+00:05:15.107 --> 00:05:20.488
+<v Daniel>Nothing at all. In fact, they saw small but significant declines in their resolution rate and customer satisfaction scores.</v>
+
+46
+00:05:21.107 --> 00:05:25.051
+<v Maya>So a huge gain for the struggling rookies and literally nothing for the veterans.</v>
+
+47
+00:05:25.431 --> 00:05:28.894
+<v Daniel>Right. And you have a quote from the study that really sums this up, don't you?</v>
+
+48
+00:05:29.255 --> 00:05:40.431
+<v Maya>Yeah, this is the quote you need to remember from this data. Stated plainly. Treated agents with two months of tenure performed like untreated agents with more than six months of experience.</v>
+
+49
+00:05:40.592 --> 00:05:44.095
+<v Daniel>I want to pause on that because it reverses decades of economic history, doesn't it?</v>
+
+50
+00:05:44.115 --> 00:05:58.888
+<v Maya>It completely flips it. Since the invention of the personal computer, the story of technology in the workplace has been that it favors the highly skilled. If you had an advanced degree, the internet and computers made you hyperproductive. If you were lower skilled, that same technology often</v>
+
+51
+00:05:58.968 --> 00:06:03.512
+<v Maya>automated your job away. It's what economists call skill-biased technical change.</v>
+
+52
+00:06:03.972 --> 00:06:06.794
+<v Daniel>But this generative AI tool did the exact opposite.</v>
+
+53
+00:06:06.854 --> 00:06:13.519
+<v Maya>Exactly. It violently compressed the skill distribution. It pulled the bottom up to the middle and did almost nothing for the top.</v>
+
+54
+00:06:14.060 --> 00:06:28.986
+<v Daniel>I mean, I buy this for customer service because that's essentially a script. It's pattern matching. But my immediate question is whether these rookies are actually learning anything or if they are just becoming like meat robots, blindly clicking accept on whatever</v>
+
+55
+00:06:29.026 --> 00:06:30.026
+<v Daniel>the machine tells them to do.</v>
+
+56
+00:06:30.226 --> 00:06:40.470
+<v Maya>That's a huge concern. Yeah. But the researchers track that by measuring adherence, basically how often the agents actually use the suggested text. The average adherence was only about 38 percent.</v>
+
+57
+00:06:41.608 --> 00:06:43.409
+<v Daniel>So they weren't just clicking accept on everything.</v>
+
+58
+00:06:43.429 --> 00:06:53.898
+<v Maya>No, not at all. And predictably, the agents who followed the suggestions more saw larger gains. High adherence led to close to a 25 percent gain in speed, while low adherence was closer to 10 percent.</v>
+
+59
+00:06:54.398 --> 00:07:06.488
+<v Daniel>So the AI acts like training wheels on a bicycle. It keeps the rookie from falling over while they get a feel for the pedals. But, you know, if you never take the training wheels off, you haven't actually learned how to balance. Do they ever learn to ride?</v>
+
+60
+00:07:07.005 --> 00:07:21.756
+<v Maya>The data says they do. And we know this because of software outages. Oh, wow. Yeah. There were periods where the AI system crashed and just vanished from their screens. Suddenly, the training wheels are gone. In a normal environment, you'd expect productivity to plummet back to zero. But</v>
+
+61
+00:07:21.936 --> 00:07:26.679
+<v Maya>agents who had been previously exposed to the AI still worked faster than those who had never had it.</v>
+
+62
+00:07:27.019 --> 00:07:32.383
+<v Daniel>They internalized the patterns. They were just outsourcing their brains. There was actual durable learning happening.</v>
+
+63
+00:07:32.684 --> 00:07:33.124
+<v Maya>Exactly.</v>
+
+64
+00:07:33.617 --> 00:07:38.679
+<v Daniel>But how does that actually work in practice? Are they learning how to solve every single type of problem faster?</v>
+
+65
+00:07:39.080 --> 00:07:44.422
+<v Maya>Not exactly. The gains were highly concentrated in what the data calls moderately rare problems.</v>
+
+66
+00:07:44.722 --> 00:07:53.026
+<v Daniel>Why moderately rare? If the AI is so smart, why wouldn't it help most with the common stuff or the incredibly weird one-off problems?</v>
+
+67
+00:07:53.645 --> 00:08:03.707
+<v Maya>Think about a highly common problem, like a customer needing a password reset. A human rookie figures out that script on their first day. They don't need an AI whispering in their ear to tell them how to do it.</v>
+
+68
+00:08:04.167 --> 00:08:04.407
+<v Daniel>Right.</v>
+
+69
+00:08:05.067 --> 00:08:17.750
+<v Maya>On the other end of the spectrum, you have the extremely rare problems, like a freak glitch in the billing software that happens once a year. The AI doesn't have enough past examples in its training data to offer a good suggestion, so it's useless there too.</v>
+
+70
+00:08:18.842 --> 00:08:27.529
+<v Daniel>But the moderately rare problem, something the human has only seen maybe twice in their two months on the job. So they usually have to put the customer on hold and dig through a manual.</v>
+
+71
+00:08:27.949 --> 00:08:40.078
+<v Maya>Exactly. The human hasn't memorized it yet, but the AI has seen it thousands of times across the entire company's history. That is the sweet spot. That is where the AI hands the novice a massive shortcut.</v>
+
+72
+00:08:40.378 --> 00:08:47.864
+<v Daniel>And it also changed how these agents communicated, didn't it? A lot of these workers were international, and the study noted that English fluency improved.</v>
+
+73
+00:08:48.383 --> 00:08:50.404
+<v Maya>Yeah, especially for the international agents.</v>
+
+74
+00:08:51.024 --> 00:09:02.868
+<v Daniel>But more than that, the actual text generated by the low skill agents started to sound identical to the communication style of the high skill agents. Like the AI was teaching them the specific cadence of a top performer.</v>
+
+75
+00:09:02.928 --> 00:09:04.129
+<v Maya>Which is huge.</v>
+
+76
+00:09:04.489 --> 00:09:13.172
+<v Daniel>Because we have to remember the human element here. Customer service is notoriously brutal. You are dealing with frustrated, angry people all day.</v>
+
+77
+00:09:13.777 --> 00:09:16.679
+<v Maya>Nobody calls customer service because they're having a great day.</v>
+
+78
+00:09:16.879 --> 00:09:17.039
+<v Daniel>Right.</v>
+
+79
+00:09:17.739 --> 00:09:28.705
+<v Maya>So because the AI was constantly suggesting empathetic, professional language, customer sentiment actually rose by about half a standard deviation. Angry requests to speak to a manager dropped by 25%.</v>
+
+80
+00:09:29.906 --> 00:09:32.527
+<v Daniel>That's a massive quality of life improvement for the worker.</v>
+
+81
+00:09:32.667 --> 00:09:42.972
+<v Maya>It really is. And because the daily grind became less hostile, attrition for the newest workers, the ones under six months who usually quit out of stress, it fell by 40%.</v>
+
+82
+00:09:43.832 --> 00:09:58.571
+<v Daniel>So faster resolutions, happier customers, employees sticking around. I mean, it paints a very rosy picture. But there is a massive, invisible tax happening here. When you look closely at the caveats the authors wrote, which everyone</v>
+
+83
+00:09:58.651 --> 00:10:02.014
+<v Daniel>usually ignores, it fundamentally changes the economics of this.</v>
+
+84
+00:10:02.680 --> 00:10:17.392
+<v Maya>Yeah, the caveats are where the real story is. First, this was one firm, one occupation using one specific tool. And they didn't have wage data. So this is just partial equilibrium. But the biggest thing,</v>
+
+85
+00:10:18.133 --> 00:10:25.059
+<v Maya>because everyone got so much faster, the firm could have handled the exact same volume of chats with 12% fewer worker hours.</v>
+
+86
+00:10:25.259 --> 00:10:36.842
+<v Daniel>Right. Efficiency goes up, which means the demand for human labor goes down. If a company can do the same work with 12% less time, they are eventually going to trim their headcount, starting with the entry-level roles.</v>
+
+87
+00:10:37.422 --> 00:10:40.485
+<v Maya>And performance targets might just ratchet up for everyone else.</v>
+
+88
+00:10:41.246 --> 00:10:49.393
+<v Daniel>And the second caveat is even more insidious. It's about those top performers who gained nothing in speed. Why did their quality actually drop slightly?</v>
+
+89
+00:10:49.603 --> 00:11:03.853
+<v Maya>Because of how the AI was built in the first place, the model was trained by analyzing the past chat logs of those exact top performers. It literally captured the tacit, hard-won expertise of the veterans and bottled it up to give to the rookies.</v>
+
+90
+00:11:04.593 --> 00:11:17.082
+<v Maya>But once the AI was running, those top performers started putting in less original effort. They were occasionally just passively accepting the AI's good-enough suggestions instead of crafting the brilliant, nuanced solutions they used to.</v>
+
+91
+00:11:17.727 --> 00:11:32.394
+<v Daniel>Wait, so if I am a senior employee, my expertise is being like digitally stripped mind to train my junior replacement, making my skills less valuable. On top of that, the machine relies on me to keep generating new, clever</v>
+
+92
+00:11:32.454 --> 00:11:38.297
+<v Daniel>solutions to feed its future updates. But I'm not getting paid a premium for generating that training data.</v>
+
+93
+00:11:38.945 --> 00:11:49.976
+<v Maya>That is the core tension of generative AI in the workplace. It is an engine for redistributing expertise from the top to the bottom, but it starves if the top performers stop producing original thought.</v>
+
+94
+00:11:50.516 --> 00:12:01.767
+<v Daniel>So we have this baseline from 2023, a highly scripted, high volume job where AI levels the playing field. Did this hold true when we look beyond customer service at jobs that aren't just pattern matching?</v>
+
+95
+00:12:02.172 --> 00:12:16.799
+<v Maya>Initially, yes. We saw a wave of experiments in 2023 confirming this exact compression effect. For example, Peng and colleagues tested developers using GitHub Copilot. They found that developers finished an HTTP server task almost</v>
+
+96
+00:12:17.640 --> 00:12:18.800
+<v Maya>56% faster.</v>
+
+97
+00:12:18.820 --> 00:12:20.141
+<v Daniel>56%? Yeah.</v>
+
+98
+00:12:20.741 --> 00:12:23.803
+<v Maya>And again, the less experienced developers got the biggest boost.</v>
+
+99
+00:12:24.623 --> 00:12:27.705
+<v Daniel>And there was another one, right? The ChatGPT writing experiment.</v>
+
+100
+00:12:28.129 --> 00:12:42.881
+<v Maya>Right. Noi and Zong published a study in Science. They did a pre-registered experiment with college-educated professionals doing writing tasks. And the time it took plummeted. The quality rose. And the gap between the weak writers and the</v>
+
+101
+00:12:42.961 --> 00:12:49.226
+<v Maya>strong writers shrank significantly, mostly because the AI substituted for the weaker writers' effort.</v>
+
+102
+00:12:49.787 --> 00:12:59.262
+<v Daniel>So the narrative was completely unified. AI lifts up the bottom everywhere. But then we hit a wall with a concept called the jagged frontier.</v>
+
+103
+00:12:59.862 --> 00:13:10.727
+<v Maya>Ah, yes. The jagged frontier. To understand this, we look at a 2023 study by Delacqua and colleagues involving over 700 consultants at the Boston Consulting Group.</v>
+
+104
+00:13:11.027 --> 00:13:16.029
+<v Daniel>BCG. So this is highly complex, knowledge-intensive strategy work, not just reading a script.</v>
+
+105
+00:13:16.392 --> 00:13:30.935
+<v Maya>Exactly. And they found that as long as the task was inside the AI's capability frontier, meaning the AI was actually competent at it, consultants using AI did 12.2% more tasks, they were 25.1% faster, and their</v>
+
+106
+00:13:31.015 --> 00:13:33.656
+<v Maya>quality was rated over 40% higher.</v>
+
+107
+00:13:34.216 --> 00:13:35.576
+<v Daniel>And did the rookies still gain the most?</v>
+
+108
+00:13:35.816 --> 00:13:45.138
+<v Maya>They did. Just like the customer service reps, the below average consultants saw a massive 43% boost, while the above average ones only saw a 17% boost.</v>
+
+109
+00:13:46.349 --> 00:14:00.414
+<v Daniel>But the word frontier implies a boundary. There are tasks that sit outside the frontier. These are tasks that might seem just as easy to a human, but for invisible technical reasons, the AI secretly stinks at them.</v>
+
+110
+00:14:00.974 --> 00:14:13.158
+<v Maya>Right. And here's the quotable stat you need from this study. On a task outside the frontier of AI's capabilities, consultants with AI were 19 percentage points less likely to be correct.</v>
+
+111
+00:14:13.816 --> 00:14:25.871
+<v Daniel>19 percentage points less likely. Having the AI actively degraded the performance of highly paid, highly educated consultants. How does a tool that makes you a genius one minute make you 19% worse the next?</v>
+
+112
+00:14:27.227 --> 00:14:34.609
+<v Maya>Because of the veneer of competence. Inside the frontier, the AI is brilliant. So the human learns to trust it. They let their guard down. They get</v>
+
+113
+00:14:34.649 --> 00:14:34.949
+<v Daniel>lazy.</v>
+
+114
+00:14:35.249 --> 00:14:50.152
+<v Maya>Yeah. And when they cross that invisible line outside the frontier, the AI doesn't warn them that it's struggling. It hallucinates an answer with the exact same confident, authoritative tone it used for the correct answers. The consultants didn't have the baseline judgment to</v>
+
+115
+00:14:50.192 --> 00:14:57.876
+<v Maya>realize they were being fed garbage. So they just passed the garbage along. The leveling effect only holds true when the tool is actually competent.</v>
+
+116
+00:14:58.316 --> 00:15:08.784
+<v Daniel>Which brings us to the data from 2025 and 2026, where this optimistic narrative really starts to fracture. What happens when tasks aren't just complex, but completely open-ended?</v>
+
+117
+00:15:09.224 --> 00:15:11.326
+<v Maya>Yeah, the 2026 complications.</v>
+
+118
+00:15:12.246 --> 00:15:23.995
+<v Daniel>Take a 2025 field experiment by Otis and colleagues, where they gave a GPT-4-based business mentor to entrepreneurs in Kenya. The AI's job was to give them advice to help grow their revenue.</v>
+
+119
+00:15:24.687 --> 00:15:32.673
+<v Maya>And the results completely broke the 2023 narrative. Overall, the AI produced no average effect on revenue or profit.</v>
+
+120
+00:15:32.693 --> 00:15:35.055
+<v Daniel>Let me guess. The averages are hiding the story again?</v>
+
+121
+00:15:35.235 --> 00:15:46.604
+<v Maya>Completely. The high performers, the savvy entrepreneurs, they may have gained over 15% in revenue. But the low performers actually did nearly 10% worse when using the AI.</v>
+
+122
+00:15:46.964 --> 00:15:53.689
+<v Daniel>Worse? Worse. So the AI actually widened the skill gap instead of closing it. Why did the low performers lose money?</v>
+
+123
+00:15:54.467 --> 00:16:08.978
+<v Maya>Think about it like using a GPS in a city you've never visited. The GPS is a powerful tool, but if it tells you to take a right turn into a lake and you lack the spatial awareness or baseline judgment to look out the window and say, that's a lake, you are going to</v>
+
+124
+00:16:09.038 --> 00:16:21.368
+<v Maya>drown. In customer service, the AI suggests a script for a broken password. It's safe. But running a business is open-ended. The AI might suggest, you know, cut your prices to gain market share.</v>
+
+125
+00:16:21.628 --> 00:16:33.212
+<v Daniel>And a high performer understands the context. They know that if they cut prices, their specific local competitors will retaliate. Margins will collapse and they'll go bankrupt. They have the judgment to filter the advice.</v>
+
+126
+00:16:33.932 --> 00:16:48.291
+<v Maya>But the low performers lacked that baseline judgment. They blindly implemented generic, highly confident advice in environments where it was toxic. So on open-ended judgment tasks, AI requires a human filter.</v>
+
+127
+00:16:48.891 --> 00:16:55.835
+<v Maya>If the human lacks the filter, the AI just accelerates their mistakes. That is the strongest challenge to the early optimism.</v>
+
+128
+00:16:56.455 --> 00:17:10.402
+<v Daniel>And this reality check isn't just about performance metrics, right? It's about what happens to the worker's wallet. If an AI makes me a quarter faster or lets me handle a dozen more clients, I expect my paycheck to reflect that newly created value.</v>
+
+129
+00:17:10.874 --> 00:17:25.857
+<v Maya>You would think so. But we now have massive administrative data from Denmark, from Humlum Investor Guard in 2026, looking at the labor market two years after chat GPT was introduced. The researchers were looking for that financial windfall. And what they found were</v>
+
+130
+00:17:25.997 --> 00:17:28.638
+<v Maya>precise null effects on earnings and hours worked.</v>
+
+131
+00:17:28.918 --> 00:17:32.699
+<v Daniel>Wait, literally zero? Their wages didn't budge a single cent?</v>
+
+132
+00:17:33.030 --> 00:17:43.016
+<v Maya>Nothing. Even though adoption of the tools was widespread and the workers themselves reported massive productivity gains, the data ruled out even a 2% bump in pay.</v>
+
+133
+00:17:43.796 --> 00:17:50.920
+<v Daniel>If the productivity gains are real, and we know from the customer service and consulting data that they are, where is the money going?</v>
+
+134
+00:17:51.508 --> 00:18:05.671
+<v Maya>The firms are absorbing it. Work is being reorganized. The individuals are doing new tasks or doing more of the same tasks. But the individual productivity gains have simply not yet shown up in pay for the workers wielding the tools.</v>
+
+135
+00:18:06.230 --> 00:18:20.734
+<v Daniel>We have covered a lot of ground, so let's synthesize what this actually means, especially if you're in the business of preparing people for the workforce, like at a university. We know beyond a doubt that in scripted, high-volume work with good training data,</v>
+
+136
+00:18:21.454 --> 00:18:32.857
+<v Daniel>AI bottles tacit expertise and hands it to beginners. It compresses the skill gap. It speeds up learning on the job. That experience curve shortcut is totally robust across the early experiments.</v>
+
+137
+00:18:33.244 --> 00:18:48.182
+<v Maya>But we also know from the 2026 evidence that the leveling effect is fragile. It depends entirely on the task being inside the AI's jagged frontier. And it requires the worker to have enough baseline judgment to evaluate the machine's advice. In open-ended work, a</v>
+
+138
+00:18:48.262 --> 00:18:51.266
+<v Maya>lack of judgment is disastrous and can actually widen the gap.</v>
+
+139
+00:18:52.026 --> 00:19:06.088
+<v Daniel>And we know that while the output goes up, the wages stay flat. And the firm might realize it needs 12% fewer hours to get the job done. So if you are sitting at a university looking at your students, this creates a profound crisis for the entry-level job.</v>
+
+140
+00:19:06.649 --> 00:19:21.122
+<v Maya>It really does, because if a two-month novice performs like a six-month veteran on day one, what is the value of the entry-level job as a training ground? Historically, companies hired three rookies knowing two would be mediocre just to find the one who would become a great veteran.</v>
+
+141
+00:19:21.442 --> 00:19:21.662
+<v Daniel>Right.</v>
+
+142
+00:19:22.163 --> 00:19:27.047
+<v Maya>Now they can just hire one rookie, give them an AI, and cut the other two entry-level roles.</v>
+
+143
+00:19:27.419 --> 00:19:42.283
+<v Daniel>Which hits specific demographics incredibly hard. Think about the makeup of a massive public university system like CUNY in New York. You have adult learners, early career workers, first generation college students. On one hand, they stand to gain the absolute most from</v>
+
+144
+00:19:42.303 --> 00:19:43.083
+<v Daniel>this technology.</v>
+
+145
+00:19:43.503 --> 00:19:50.645
+<v Maya>Oh, absolutely. The AI can instantly bridge the gap in institutional knowledge or corporate jargon. It's an incredible equalizer on the job.</v>
+
+146
+00:19:50.835 --> 00:20:02.583
+<v Daniel>But on the other hand, they are the exact demographic holding the entry level roles that a firm can now most easily automate away to save those worker hours. It creates this terrible pedagogical nightmare.</v>
+
+147
+00:20:03.363 --> 00:20:09.167
+<v Maya>Because if the entry level jobs vanish, where do students build the baseline judgment they need to survive the jagged frontier?</v>
+
+148
+00:20:09.515 --> 00:20:23.084
+<v Daniel>Exactly. If the AI is doing all the rough drafting, the basic coding, the basic execution for them while they are in school, they never build the mental muscle to know when the machine is confidently hallucinating the outside the frontier problem.</v>
+
+149
+00:20:23.985 --> 00:20:34.552
+<v Maya>This means universities have to completely rethink credentialing. You cannot just grade a student's ability to execute a basic task anymore because the machine does that for free. You have to teach and evaluate judgments.</v>
+
+150
+00:20:34.953 --> 00:20:36.114
+<v Daniel>Which is so much harder.</v>
+
+151
+00:20:36.374 --> 00:20:49.921
+<v Maya>It is. This likely means universities will have to partner heavily with employers to create apprenticeship-style learning environments with AI. Students need to be guided through the jagged frontier by human experts who can show them where the invisible lakes are.</v>
+
+152
+00:20:50.141 --> 00:21:01.547
+<v Daniel>We have to figure out how to value experience again. Because right now, we are coasting on the fumes of the past. The one idea that still organizes this entire debate is that AI bottles tacit expertise.</v>
+
+153
+00:21:01.896 --> 00:21:13.758
+<v Maya>Which leaves us with one final existential question for the listener to mull over. We know that these tools only function because they ingested the original effort, the struggle, and the tacit knowledge of top performing veterans.</v>
+
+154
+00:21:14.098 --> 00:21:16.919
+<v Daniel>The people who actually learned to ride the bike without training wheels.</v>
+
+155
+00:21:17.039 --> 00:21:30.141
+<v Maya>Right. So what happens to the next generation of AI models in five years when today's entry level workers have spent their entire careers relying on an AI assistant instead of generating their own original brilliant solutions?</v>
+
+156
+00:21:30.640 --> 00:21:45.604
+<v Daniel>If the time machine only works because it's fueled by the hard-won experience of human experts, what happens when we stop producing that fuel? We are essentially strip mining human expertise today without planting the seeds for the expertise of tomorrow. Thank you</v>
+
+157
+00:21:45.624 --> 00:21:52.115
+<v Daniel>for joining us on this deep dive. Take these realities, look closely at the invisible frontiers in your own work, and we'll see you next time.</v>
