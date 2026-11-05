@@ -1,0 +1,593 @@
+WEBVTT
+
+1
+00:00:00.131 --> 00:00:07.160
+<v Daniel>In 2016, one of the godfathers of artificial intelligence famously declared that we should completely stop training radiologists.</v>
+
+2
+00:00:07.200 --> 00:00:08.361
+<v Maya>Right. Jeffrey Hinton.</v>
+
+3
+00:00:08.602 --> 00:00:18.862
+<v Daniel>Yeah, exactly. He said algorithms would replace them within five years, plain and simple. But, I mean, fast forward a decade and radiologists are still here. Actually, they're in extremely high demand.</v>
+
+4
+00:00:19.163 --> 00:00:19.883
+<v Maya>Oh, absolutely.</v>
+
+5
+00:00:20.023 --> 00:00:33.934
+<v Daniel>And the reason why is because we fundamentally misunderstood what AI actually does. So if you're listening to this deep dive right now, you're on a mission. You're trying to master the future of work. And you need a clear, evidence-based framework to understand this massive shift.</v>
+
+6
+00:00:34.114 --> 00:00:45.475
+<v Maya>That is exactly the mission today. The whole conversation around AI taking human jobs is, well, it's so often dominated by sheer panic or just wild hype. We're going to cut straight through that noise.</v>
+
+7
+00:00:46.187 --> 00:01:00.919
+<v Daniel>And to do that, we're looking at a very specific stack of economic and behavioral studies. Our main anchor today is a modern classic, the 2019 paper by Agrawal, Gans, and Goldfarb called Artificial Intelligence, the Ambiguous Labor Market</v>
+
+8
+00:01:00.979 --> 00:01:02.521
+<v Daniel>Impact of Automating Prediction.</v>
+
+9
+00:01:02.721 --> 00:01:03.962
+<v Maya>Such an important piece of work.</v>
+
+10
+00:01:04.262 --> 00:01:19.186
+<v Daniel>It really is. But theory is only as good as its real-world application, right? So we're going to stress test their 2019 theory using five more recent follow-up studies, spanning from 2017 all the way to 2026. These observe humans</v>
+
+11
+00:01:19.366 --> 00:01:21.647
+<v Daniel>and algorithms actually interacting out in the wild.</v>
+
+12
+00:01:22.251 --> 00:01:37.142
+<v Maya>That 2019 paper is so foundational because it entirely changes how we define what AI is. The authors argue that we have to stop thinking of machine learning as, you know, some kind of artificial general intelligence. It is not a machine</v>
+
+13
+00:01:37.202 --> 00:01:43.767
+<v Maya>that thinks exactly like a human being. Machine learning at its very core is just a technology for prediction.</v>
+
+14
+00:01:44.407 --> 00:01:51.913
+<v Daniel>OK, let me make sure I'm grasping the scale of that, because when you say prediction, you don't mean like a crystal ball. You mean something highly specific.</v>
+
+15
+00:01:52.327 --> 00:02:07.219
+<v Maya>Right. In the statistical sense, prediction is taking data you have to fill in information you do not have. That's it. That is the entirety of the function. But here's the critical insight of the paper. A prediction has absolutely no value on its</v>
+
+16
+00:02:07.299 --> 00:02:07.399
+<v Maya>own.</v>
+
+17
+00:02:07.799 --> 00:02:08.260
+<v Daniel>Interesting.</v>
+
+18
+00:02:08.740 --> 00:02:12.303
+<v Maya>It only gains value if it is used as an input for a decision.</v>
+
+19
+00:02:12.738 --> 00:02:27.686
+<v Daniel>Okay. Think of modern business like a massive cargo ship. For decades, the hardest part of the job was just reading the ocean, predicting where the storms were. Now an 8-eye radar system can instantly predict the weather. The radar did the predicting, but the</v>
+
+20
+00:02:27.726 --> 00:02:29.007
+<v Daniel>radar cannot steer the ship.</v>
+
+21
+00:02:29.227 --> 00:02:29.787
+<v Maya>Exactly.</v>
+
+22
+00:02:29.947 --> 00:02:43.314
+<v Daniel>It can't decide if the cargo is worth risking a storm to arrive two days early or if they need to play it safe. That requires a captain. So if AI is doing all the thinking or predicting... What's actually left for us is the deciding.</v>
+
+23
+00:02:43.614 --> 00:02:57.057
+<v Maya>That is a brilliant way to conceptualize it because it perfectly isolates the mechanism the authors call judgment. Making a decision requires three specific components. Data, the ability to act, and judgment.</v>
+
+24
+00:02:57.718 --> 00:02:59.018
+<v Daniel>And how do they define judgment?</v>
+
+25
+00:02:59.584 --> 00:03:13.774
+<v Maya>They define it specifically as the process of working out the payoffs and the costs of each potential outcome. The AI radar doesn't know the financial stakes of your cargo. It doesn't know the human cost of sinking the ship. Only the captain possesses that context.</v>
+
+26
+00:03:14.034 --> 00:03:26.242
+<v Daniel>So it's like having a GPS that tells you there's a 90 percent chance of traffic on Route A. But the judgment is deciding whether being 10 minutes late to this specific meeting is a total disaster or just no big deal.</v>
+
+27
+00:03:26.607 --> 00:03:35.013
+<v Maya>Exactly. So if the AI is doing the predicting and the human is doing the judging, those two things are actually partners. They are perfect complements.</v>
+
+28
+00:03:35.794 --> 00:03:36.995
+<v Daniel>OK. Perfect complements.</v>
+
+29
+00:03:37.435 --> 00:03:49.684
+<v Maya>Yeah. What the authors point out is that when the cost of one complement drops, in this case, AI makes prediction incredibly cheap, the value of the other complement theoretically goes up. Human judgment becomes way more valuable.</v>
+
+30
+00:03:50.370 --> 00:03:59.617
+<v Daniel>OK, but if prediction and judgment are perfect complements, how does this practically play out in the labor market? I mean, if I'm a worker, I just want to know if my specific job is safe.</v>
+
+31
+00:04:00.097 --> 00:04:10.605
+<v Maya>Right. Well, Agrawal and his co-authors break down four direct effects on human labor. First, they're straight substitution. Capital substitutes for labor in pure prediction tasks.</v>
+
+32
+00:04:11.125 --> 00:04:13.647
+<v Daniel>Give me an example of a pure prediction task.</v>
+
+33
+00:04:14.205 --> 00:04:29.148
+<v Maya>Think of demand forecasting for a huge retail chain or a human resources worker whose main function is just screening thousands of resumes to predict who will be a good employee. If your core day-to-day skill is prediction, that specific</v>
+
+34
+00:04:29.208 --> 00:04:31.549
+<v Maya>task is absolutely being automated.</v>
+
+35
+00:04:31.989 --> 00:04:43.271
+<v Daniel>Wow. Okay. So if my job is pure prediction, I am replaced. But what if I'm the one actually making the decisions based on those predictions? Am I safe then?</v>
+
+36
+00:04:43.925 --> 00:04:50.274
+<v Maya>That leads to the second effect. Automating the prediction can sometimes raise the return to automating the decision itself.</v>
+
+37
+00:04:51.276 --> 00:04:56.504
+<v Daniel>Wait, I thought we just said humans do the deciding. Why would the machine take over the decision too?</v>
+
+38
+00:04:57.202 --> 00:05:12.192
+<v Maya>Because of the physical constraints of human beings. The classic example they use is autonomous vehicles. An AI can predict that a car two vehicles ahead is braking based on LIDAR and radar data, but a human's reaction time is simply too slow to process that</v>
+
+39
+00:05:12.232 --> 00:05:14.754
+<v Maya>prediction and physically hit the brakes in time.</v>
+
+40
+00:05:15.154 --> 00:05:15.555
+<v Daniel>Oh, I see.</v>
+
+41
+00:05:15.895 --> 00:05:28.485
+<v Maya>The machine's reaction time is vastly superior, so the return on automating the actual decision, hitting the brakes, is incredibly high. In high-speed, low-complexity environments, the human is just too slow to stay in the loop.</v>
+
+42
+00:05:28.926 --> 00:05:41.220
+<v Daniel>That makes a lot of sense. The captain might steer the cargo ship, but they definitely shouldn't be manually firing the engine's spark plugs. But what about the third effect? This is where AI actually helps us do our jobs better, right?</v>
+
+43
+00:05:41.945 --> 00:05:52.008
+<v Maya>Yes. The third effect is that better prediction augments labor. It actively enhances what human workers can do. The authors highlight this thing called the ODS medical pen.</v>
+
+44
+00:05:52.349 --> 00:05:52.569
+<v Daniel>What is</v>
+
+45
+00:05:52.589 --> 00:06:01.292
+<v Maya>that? It's a handheld pen-like camera used by brain surgeons. It scans brain tissue in real time and tells the surgeon whether the tissue is cancerous with over 90% accuracy.</v>
+
+46
+00:06:02.842 --> 00:06:07.885
+<v Daniel>So the AI predicts if the cell is cancerous, but it's obviously not performing the surgery.</v>
+
+47
+00:06:08.065 --> 00:06:22.792
+<v Maya>Correct. The surgeon uses their highly specialized judgment to decide exactly where and how to cut. They have to weigh all these risks, like if I remove this healthy tissue, what cognitive function does the patient lose? Right. If I leave this cancerous tissue, what's the risk of</v>
+
+48
+00:06:22.872 --> 00:06:29.616
+<v Maya>relapse? The AI cannot calculate the human cost of those outcomes. It just makes the surgeon's judgment infinitely more powerful.</v>
+
+49
+00:06:30.157 --> 00:06:32.779
+<v Daniel>Okay. And what is the final fourth effect?</v>
+
+50
+00:06:33.119 --> 00:06:47.848
+<v Maya>Reduced uncertainty creates entirely new, previously unviable decision tasks. Now, the authors note this one is pretty scarce and speculative. Okay. But the logic is that as prediction gets incredibly cheap, we'll start making highly customized state contingent</v>
+
+51
+00:06:47.888 --> 00:06:53.551
+<v Maya>decisions in areas where we previously just used blanket rules simply because the uncertainty was too high before.</v>
+
+52
+00:06:54.032 --> 00:07:08.701
+<v Daniel>Let's ground this in some of the real-world cases the authors explore. They look at the legal field, right, where tools like Kira Systems and Blue Jay Legal are automating the prediction of how courts will rule, or just summarizing massive contracts. But the</v>
+
+53
+00:07:08.741 --> 00:07:12.244
+<v Daniel>lawyers are still retained for the strategic judgment of how to negotiate.</v>
+
+54
+00:07:12.364 --> 00:07:12.764
+<v Maya>Exactly.</v>
+
+55
+00:07:13.324 --> 00:07:28.177
+<v Daniel>Or consider London taxi drivers. Their core skill was route prediction, knowing the incredibly complex map of London by heart. That was completely undercut by GPS. But other drivers, like Uber drivers, were massively augmented by it because</v>
+
+56
+00:07:28.378 --> 00:07:37.932
+<v Daniel>they didn't need to memorize the map anymore to do the job. And then, of course, there's radiology, which brings us right back to that opening point about Jeffrey Hinton. Why was he so wrong?</v>
+
+57
+00:07:38.440 --> 00:07:50.814
+<v Maya>Well, the authors push back on his claim by looking at the O-Net occupational database, which tracks the specific activities involved in thousands of jobs. O-Net lists 29 distinct tasks for radiologists.</v>
+
+58
+00:07:50.914 --> 00:07:51.454
+<v Daniel>29 tasks.</v>
+
+59
+00:07:51.615 --> 00:08:05.923
+<v Maya>Right. And of those 29 tasks, only two are directly affected by image recognition. The AI can predict what the anomaly on the scan is, but communicating a terrifying diagnosis to a patient, coordinating a treatment plan with a surgical team,</v>
+
+60
+00:08:06.363 --> 00:08:11.704
+<v Maya>determining the physical and emotional costs of a false positive biopsy, all of that requires human judgment.</v>
+
+61
+00:08:12.185 --> 00:08:22.588
+<v Daniel>But they do leave an open question in the paper, which is, will radiologists actually retain those other 27 tasks? Or will the role eventually be unbundled and handed off to entirely different medical professionals?</v>
+
+62
+00:08:22.788 --> 00:08:23.928
+<v Maya>It's a huge open question.</v>
+
+63
+00:08:24.508 --> 00:08:39.379
+<v Daniel>Which brings me to a point of friction I have with this paper. The authors propose a worker test that your vulnerability depends purely on how much of your core skill is prediction. But their honest ultimate conclusion is essentially that the net effect on jobs just can't be assessed yet.</v>
+
+64
+00:08:39.639 --> 00:08:39.839
+<v Maya>Yeah.</v>
+
+65
+00:08:40.140 --> 00:08:54.676
+<v Daniel>They say it is an empirical question that varies by application. And they warn against drawing broad inferences from factory automation research. But I mean, if I'm a worker or a university trying to prepare workers, isn't it's an empirical question, kind of a scary non-answer?</v>
+
+66
+00:08:55.237 --> 00:09:08.785
+<v Maya>It is a deeply frustrating answer for anyone looking for certainty, for sure. It is an honest economic assessment, but a tough pill to swallow. And that is exactly why we need to move from the 2019 theory to the hard data of the last decade.</v>
+
+67
+00:09:08.905 --> 00:09:09.866
+<v Daniel>OK, let's do it.</v>
+
+68
+00:09:10.486 --> 00:09:25.297
+<v Maya>The 2019 paper and their formal 2018 NBER model on prediction and complexity assume that because prediction and judgment are complements, human-AI collaboration is the ideal future. Keep a human in the loop and everything works out perfectly.</v>
+
+69
+00:09:25.317 --> 00:09:34.724
+<v Daniel>Okay. Theory's great. But what actually happens when you put this human-AI collaboration in a high-stakes environment? Does the human in the loop actually work?</v>
+
+70
+00:09:35.420 --> 00:09:47.351
+<v Maya>That is exactly what researchers wanted to find out. And the evidence from 2017 to 2026 reveals a much, much messier reality. Humans actually struggle immensely to collaborate with AI.</v>
+
+71
+00:09:47.571 --> 00:09:47.892
+<v Daniel>Really?</v>
+
+72
+00:09:48.232 --> 00:09:54.678
+<v Maya>Yeah. Let's look at a 2017 study by Kleinberg and his colleagues on judges making bail decisions.</v>
+
+73
+00:09:55.373 --> 00:10:08.164
+<v Daniel>Bail decisions are interesting because by law, they are supposed to be a pure prediction task, right? The judge is just predicting what is the flight risk or the crime risk of this specific defendant if I let them out.</v>
+
+74
+00:10:08.464 --> 00:10:23.354
+<v Maya>Exactly. And the study showed that judges routinely misjudge this risk. They appear to respond to... Absolute noise, as if it were a valid signal. The researchers ran a policy simulation that produced staggering numbers. By strictly using the</v>
+
+75
+00:10:23.434 --> 00:10:38.241
+<v Maya>algorithm's predictions, the system could drop crime by up to 24.8% with no change in jailing rates. Wow. Or, alternatively, they could drop the jail population by 42.0% with absolutely no rise in crime.</v>
+
+76
+00:10:38.601 --> 00:10:52.674
+<v Daniel>Those numbers are astronomical. 24.8% less crime, or 42.2% fewer people sitting in a jail cell. That is a colossal failure of human prediction. But let me push back on those numbers for a second.</v>
+
+77
+00:10:53.655 --> 00:10:58.900
+<v Daniel>How do the researchers actually know what the jailed people would have done? They were locked up.</v>
+
+78
+00:10:59.738 --> 00:11:14.389
+<v Maya>You've hit on exactly what statisticians call the selective labels problem. We only know the true crime outcomes for the people the judge has actually released. For the people kept in jail, the data is invisible. We're just modeling what they would have done based on historical similarities.</v>
+
+79
+00:11:15.009 --> 00:11:19.593
+<v Maya>The authors do rigorous work to account for this, but, you know, we have to remember it remains a simulation.</v>
+
+80
+00:11:20.453 --> 00:11:35.141
+<v Daniel>Still, even as a simulation, the gap is huge. But surely the solution is just to give the judge the algorithm, right? The machine gives the mathematically safest answer. The judge uses their human judgment to make the final call, and we get the best of both worlds.</v>
+
+81
+00:11:35.581 --> 00:11:45.246
+<v Maya>You would assume so. But a 2023 study by Angelova, Dobby, and Yang looked specifically at what happens when judges are given algorithmic recommendations and choose to override them.</v>
+
+82
+00:11:46.326 --> 00:11:46.466
+<v Daniel>And?</v>
+
+83
+00:11:47.107 --> 00:11:57.132
+<v Maya>The results are pretty sobering. When judges override the algorithm, 90% of them underperform the algorithm. Most of their overrides resulted in outcomes no better than random guessing.</v>
+
+84
+00:11:57.619 --> 00:12:05.043
+<v Daniel>Wait, I'm struggling with that. If the math is that clear, why wouldn't the judge just listen to it? Why do they fail 90% of the time when they override?</v>
+
+85
+00:12:05.601 --> 00:12:20.553
+<v Maya>It comes down to human behavioral quirks. Humans have a tendency to overweight their own gut feelings. A judge might look at a defendant who appears nervous and interpret that as a high risk of fleeing, completely ignoring the statistical baseline that says this type of defendant almost</v>
+
+86
+00:12:20.633 --> 00:12:27.538
+<v Maya>always shows up for court. They introduce cognitive biases that degrade the accuracy of a perfectly good mathematical prediction.</v>
+
+87
+00:12:28.319 --> 00:12:35.446
+<v Daniel>So human discretion actually made the outcome worse almost every time. But what about the other 10 percent?</v>
+
+88
+00:12:35.986 --> 00:12:48.883
+<v Maya>That is the crucial caveat. The remaining 10 percent of judges consistently beat the algorithm on both accuracy and fairness. And the data suggests human judgment only wins when the human utilizes private information.</v>
+
+89
+00:12:49.263 --> 00:12:51.206
+<v Daniel>Private information. Like what?</v>
+
+90
+00:12:51.760 --> 00:13:06.509
+<v Maya>Vital context the algorithm simply doesn't have access to, like knowing a defendant has a specific undocumented family emergency that explains a prior missed court date. When humans have private information, they add immense value. But having that private information is rare. That's why the</v>
+
+91
+00:13:06.669 --> 00:13:12.533
+<v Maya>10% proves AI shouldn't be fully autonomous, but the 90% shows humans often just mess up the math.</v>
+
+92
+00:13:12.777 --> 00:13:23.719
+<v Daniel>Okay. But that is the legal system, which is notoriously subjective. What about highly specialized medical experts? I mean, they are trained rigorously in the scientific method.</v>
+
+93
+00:13:24.299 --> 00:13:39.281
+<v Maya>Well, a 2023 study by Agarwal and colleagues tested this exact premise with radiologists. They ran an experiment where radiologists were given AI assistance. The expectation was a massive leap in diagnostic quality. But AI assistance had not uniformly improved</v>
+
+94
+00:13:39.301 --> 00:13:40.102
+<v Maya>their performance.</v>
+
+95
+00:13:40.162 --> 00:13:42.262
+<v Daniel>Let me guess. They also ignored the machine.</v>
+
+96
+00:13:43.270 --> 00:13:57.980
+<v Maya>Not entirely ignored, but they stubbornly underweighted the AI's information. And more importantly, they completely ignored how correlated the AI's prediction was with their own initial assumptions. They treated the AI as just another flawed human opinion rather than a</v>
+
+97
+00:13:58.041 --> 00:14:12.987
+<v Maya>statistical baseline. Wow. Yeah, the researchers concluded something that fundamentally challenges the 2019 theory. They said, unless human errors in weighting are actively corrected, the best design is to assign cases to a human or to</v>
+
+98
+00:14:13.027 --> 00:14:18.029
+<v Maya>an AI. But it is rarely optimal to assign a case to a human with AI.</v>
+
+99
+00:14:18.609 --> 00:14:27.233
+<v Daniel>Hold on. So the golden rule of always keep a human in the loop is actually a flawed design. Are we saying humans often just add noise?</v>
+
+100
+00:14:27.870 --> 00:14:33.376
+<v Maya>Yes. When the task is primarily predictive, plugging a human into the loop often subtracts value.</v>
+
+101
+00:14:33.916 --> 00:14:44.307
+<v Daniel>Which is a heavy realization. But if humans are struggling to collaborate with AI in the present moment, what happens to their long-term skills if they use AI every single day?</v>
+
+102
+00:14:45.090 --> 00:14:59.674
+<v Maya>This brings us to a massive question about learning and expertise, which a preregistered 2026 study by David Otter and his colleagues addresses. They ran a three-month trial with 133 practicing patent lawyers, giving them access to a</v>
+
+103
+00:14:59.774 --> 00:15:01.434
+<v Maya>custom AI drafting assistant.</v>
+
+104
+00:15:01.914 --> 00:15:09.696
+<v Daniel>And just to set the table, patent law is not basic data entry. It requires incredible precision, technical understanding, and strategic judgment.</v>
+
+105
+00:15:10.028 --> 00:15:20.655
+<v Maya>Absolutely. Now, initially, the results matched all the industry hype. The AI raised the quality of the lawyer's work significantly at both the 10-day mark and the 90-day mark.</v>
+
+106
+00:15:21.155 --> 00:15:23.917
+<v Daniel>But they didn't just test them while they were using the tool, did they?</v>
+
+107
+00:15:24.237 --> 00:15:38.646
+<v Maya>No. And this is where the study is so important for how judgment gets built. They tested the lawyers later on a task completely without the AI. They had them redline a complex patent application offline to see what core judgment they had actually retained.</v>
+
+108
+00:15:39.151 --> 00:15:40.131
+<v Daniel>Okay. And what happened?</v>
+
+109
+00:15:40.771 --> 00:15:50.134
+<v Maya>The treated senior lawyers, the veterans who already had years of experience, saw an enormous leap in performance, gaining 0.45 standard deviations in quality.</v>
+
+110
+00:15:50.714 --> 00:15:59.677
+<v Daniel>Translating that into plain English, the AI essentially turned a very good senior lawyer into an elite one. The tool made them better at their unassisted jobs.</v>
+
+111
+00:16:00.119 --> 00:16:10.068
+<v Maya>Exactly. But the junior lawyers, the ones just starting out, they showed absolutely no average gain in their unassisted work. In fact, their scores bifurcated.</v>
+
+112
+00:16:10.508 --> 00:16:12.930
+<v Daniel>Bifurcated meaning the group completely split down the middle.</v>
+
+113
+00:16:13.431 --> 00:16:20.417
+<v Maya>Yes. A few improved slightly, but a massive chunk of the juniors actually got much worse at their jobs without the AI.</v>
+
+114
+00:16:21.163 --> 00:16:35.695
+<v Daniel>I want to pause and point out the paradox here. The people who get the biggest immediate productivity boost from using AI, the juniors, are the exact same people who retain the least durable skill from it. That's a massive trap. Why does that happen?</v>
+
+115
+00:16:36.168 --> 00:16:50.799
+<v Maya>The mechanism here is cognitive offloading. AI accelerates skill for those who already have a deep foundation of expertise, like the seniors. But for juniors, the AI does the heavy lifting of the initial drafting. They cognitively offload the hard work. They basically</v>
+
+116
+00:16:50.839 --> 00:16:58.105
+<v Maya>bypass the frustrating, tedious struggle of wrestling with the raw material. And that struggle is exactly where expert judgment is forged.</v>
+
+117
+00:16:59.901 --> 00:17:14.324
+<v Daniel>So if you're listening to this and you're trying to translate all these studies into a framework for higher education, for universities, for developing the next generation of workers. We need to synthesize this. Let's clearly separate what the classic 2019</v>
+
+118
+00:17:14.864 --> 00:17:18.745
+<v Daniel>paper got right and what the later evidence is deeply complicated.</v>
+
+119
+00:17:18.765 --> 00:17:33.649
+<v Maya>Sure. So what the 2019 paper got absolutely right is the fundamental split between prediction and decision. Their rule of strict complementarity still holds true. As prediction gets cheaper, the decision making process, the judgment becomes more vital.</v>
+
+120
+00:17:34.489 --> 00:17:39.270
+<v Maya>They were also entirely right to warn against simple apocalyptic forecasts of total job loss.</v>
+
+121
+00:17:39.610 --> 00:17:42.731
+<v Daniel>But the last decade of real world evidence complicated things.</v>
+
+122
+00:17:42.771 --> 00:17:42.971
+<v Maya>Yes.</v>
+
+123
+00:17:43.552 --> 00:17:58.378
+<v Daniel>First, as we saw with the judges and radiologists, humans in the loop often do not add judgment. They can actively subtract value. So keep a human in the loop is not a foolproof design. Second, generative AI is doing way</v>
+
+124
+00:17:58.438 --> 00:18:09.062
+<v Daniel>more than narrow prediction now. It's writing complex code and drafting nuanced text, which raises a very real objection. Does creative writing even count as just prediction?</v>
+
+125
+00:18:09.342 --> 00:18:10.183
+<v Maya>It's a great objection.</v>
+
+126
+00:18:10.804 --> 00:18:18.372
+<v Daniel>And third, there is the creeping reality that machine learning might eventually learn judgment from vast amounts of data, too.</v>
+
+127
+00:18:18.932 --> 00:18:23.998
+<v Maya>We also have to state the academic objections to the newer studies to remain completely impartial here.</v>
+
+128
+00:18:24.398 --> 00:18:27.281
+<v Daniel>Right, like the selective labels problem in the Bale study.</v>
+
+129
+00:18:27.748 --> 00:18:39.934
+<v Maya>Yes. And for the Angelova study, where 90% of judges failed to beat the algorithm, we cannot ignore the 10% who did beat it. That proves exceptional human judgment using private info still outperforms the machine.</v>
+
+130
+00:18:40.534 --> 00:18:49.838
+<v Daniel>And regarding the Autor Lawyer study, the sample size of the junior and senior subgroups is relatively small. Plus, Gen AI capabilities are just a rapidly moving target.</v>
+
+131
+00:18:50.575 --> 00:19:02.842
+<v Maya>But even with those caveats, there is one organizing idea that still holds this entire debate together. When prediction becomes universally cheap, the truly scarce resource is knowing what you want and knowing what an error costs.</v>
+
+132
+00:19:03.542 --> 00:19:04.223
+<v Daniel>That's the core of it.</v>
+
+133
+00:19:04.523 --> 00:19:19.352
+<v Maya>And if we apply that to universities, it represents a massive paradigm shift. For decades, higher education has largely tested students on prediction tasks, memorizing data, recognizing patterns, generating the expected answer. But AI now does that instantly.</v>
+
+134
+00:19:20.365 --> 00:19:24.146
+<v Maya>How do universities shift their pedagogical model to teaching judgment?</v>
+
+135
+00:19:24.927 --> 00:19:39.452
+<v Daniel>Right. How do you teach a student to calculate the cost of a false positive versus a false negative? How do you teach them to know exactly when they should override a machine? And practically, how do universities credential that complex, invisible skill?</v>
+
+136
+00:19:40.292 --> 00:19:54.979
+<v Maya>This leads directly to what economists are calling the exposure problem. Historically, entry-level work has always been highly prediction heavy. You get a job out of college and you do the tedious grunt work of data processing, doc review, or basic coding. And through the</v>
+
+137
+00:19:54.999 --> 00:20:00.242
+<v Maya>friction of that grunt work, you slowly learn the context of the business. You build judgment.</v>
+
+138
+00:20:00.762 --> 00:20:15.199
+<v Daniel>But if AI automates all of that entry-level prediction work, the juniors never get the practice. The first rung of the career ladder is basically sawed off. This leaves early career workers, adult learners, and first-generation college students</v>
+
+139
+00:20:15.500 --> 00:20:28.727
+<v Daniel>highly exposed. And that demographic is exactly the heart of a lot of university populations, like much of CUNY's student body, for example. If universities don't step in, how do these students learn judgment?</v>
+
+140
+00:20:29.125 --> 00:20:41.707
+<v Maya>They have to partner directly with employers to fundamentally redesign apprenticeships. They need to ensure juniors still get the guided practice required to build foundational judgment without relying on the AI to do all the thinking for them.</v>
+
+141
+00:20:42.228 --> 00:20:57.090
+<v Daniel>Which brings up a really pointed question for the leaders of these institutions. If humans in the loop often subtract value and just add noise, but our juniors must be in the loop in order to learn judgment. How on earth do leaders decide which</v>
+
+142
+00:20:57.150 --> 00:21:04.712
+<v Daniel>decisions an institution should hand over to AI for efficiency and which tasks they must fiercely protect for the sake of human development?</v>
+
+143
+00:21:05.372 --> 00:21:13.774
+<v Maya>That is the defining leadership challenge of this era. If you automate everything today, you just won't have any senior experts 10 years from now.</v>
+
+144
+00:21:14.761 --> 00:21:29.030
+<v Daniel>So to summarize our deep dive into these sources for you today, the core message you need to take away is that AI is replacing prediction, but making a decision requires judgment. And judgment is a uniquely human skill that must be</v>
+
+145
+00:21:29.390 --> 00:21:33.353
+<v Daniel>deliberately protected, taught, and nurtured, especially for vulnerable students.</v>
+
+146
+00:21:33.933 --> 00:21:35.454
+<v Maya>It's an urgent educational mandate.</v>
+
+147
+00:21:35.994 --> 00:21:50.786
+<v Daniel>I want to leave you with one final provocative thought to mull over or explore on your own. We define judgment today as simply deciding the cost of an error and the value of a payoff. But if you really strip that down, aren't we just talking about our values?</v>
+
+148
+00:21:51.807 --> 00:22:03.747
+<v Daniel>As AI takes over the cold mathematical calculus of prediction, the ultimate job of human beings, of educators, and of leaders won't be processing data. It will be deciding what our institutions actually value.</v>
