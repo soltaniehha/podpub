@@ -1,0 +1,841 @@
+WEBVTT
+
+1
+00:00:00.171 --> 00:00:09.133
+<v Maya>It is Wednesday, November 4th, 2026. And you are living through, I mean, honestly, the greatest explosion of artificial intelligence technology in human history.</v>
+
+2
+00:00:09.153 --> 00:00:11.074
+<v Daniel>Oh, absolutely. It is everywhere right now.</v>
+
+3
+00:00:11.434 --> 00:00:22.237
+<v Maya>Right. Like it feels like every single morning we wake up to a new breakthrough, a new capability or, you know, some massive AI model that can seemingly do a week's worth of work in like three seconds.</v>
+
+4
+00:00:22.377 --> 00:00:23.437
+<v Daniel>Which is incredible to watch.</v>
+
+5
+00:00:23.797 --> 00:00:27.778
+<v Maya>It really is. So why aren't you working a two hour day yet?</v>
+
+6
+00:00:28.441 --> 00:00:31.443
+<v Daniel>Yeah, that is the defining paradox of our current moment, isn't it?</v>
+
+7
+00:00:31.824 --> 00:00:32.364
+<v Maya>It really is.</v>
+
+8
+00:00:33.205 --> 00:00:40.630
+<v Daniel>Everyone feels the sheer speed of the technology, but when you zoom out, the massive macroeconomic data just, well, it doesn't reflect the hype.</v>
+
+9
+00:00:41.091 --> 00:00:41.551
+<v Maya>Not at all.</v>
+
+10
+00:00:41.971 --> 00:00:44.774
+<v Daniel>The promised productivity revolution just hasn't arrived.</v>
+
+11
+00:00:45.154 --> 00:00:56.683
+<v Maya>Exactly. So our mission for today's deep dive is to figure out why. We are going to answer one massive overarching question. Does a general purpose technology ever actually pay off without organizational change?</v>
+
+12
+00:00:57.702 --> 00:01:04.806
+<v Daniel>And to unpack that, we are relying on a pretty amazing stack of sources today. We are bridging historical economics with brand new corporate data.</v>
+
+13
+00:01:05.127 --> 00:01:19.756
+<v Maya>Yeah, and we have two foundational papers that we'll give equal weight to today. The first is Paul David's 1990 classic on electric dynamos. And the second is a major firm level study from 1999 and 2002 by Bresnahan,</v>
+
+14
+00:01:19.876 --> 00:01:20.916
+<v Maya>Brynjolfsson, and Hitt.</v>
+
+15
+00:01:21.417 --> 00:01:23.518
+<v Daniel>Two absolute heavy hitters in the economics world.</v>
+
+16
+00:01:24.230 --> 00:01:37.175
+<v Maya>Okay. Let's unpack this. Starting with the when of technology. Because if we want to understand why our current AI tools aren't instantly making the global economy, you know, 50% more productive overnight, we actually have to look backward.</v>
+
+17
+00:01:37.335 --> 00:01:40.236
+<v Daniel>We do. We have to look at another massive technological shift.</v>
+
+18
+00:01:40.256 --> 00:01:41.776
+<v Maya>Right. To understand the present.</v>
+
+19
+00:01:42.016 --> 00:01:55.143
+<v Daniel>Exactly. And we have to go back to a concept called the Solow Paradox. So Robert Salo was a Nobel laureate in economics. And back in 1987, he famously quipped, we see computers everywhere but in the productivity statistics.</v>
+
+20
+00:01:55.363 --> 00:01:58.245
+<v Maya>Right, because everyone was buying them, but the output wasn't really budging.</v>
+
+21
+00:01:58.445 --> 00:02:09.712
+<v Daniel>Yeah, exactly. The economic needle wasn't moving. So what Paul David argued in his 1990 paper is that you could have looked around in the year 1900 and said the exact same thing about electric dynamos.</v>
+
+22
+00:02:10.192 --> 00:02:10.752
+<v Maya>Oh, interesting.</v>
+
+23
+00:02:10.912 --> 00:02:15.195
+<v Daniel>You could have easily said, we see electricity everywhere except in the productivity statistics.</v>
+
+24
+00:02:15.614 --> 00:02:25.018
+<v Maya>And the numbers David brings to back this up are just completely stark. I mean, we tend to think of technological revolutions as these instantaneous magic light bulb movements.</v>
+
+25
+00:02:25.339 --> 00:02:27.239
+<v Daniel>Right, like somebody flips a switch and the world changes.</v>
+
+26
+00:02:27.500 --> 00:02:34.023
+<v Maya>But the data says otherwise. In 1899, electric lighting had only reached 3% of U.S. residences.</v>
+
+27
+00:02:34.263 --> 00:02:34.463
+<v Daniel>Wow.</v>
+
+28
+00:02:34.723 --> 00:02:39.025
+<v Maya>And electric motors, they made up under 5% of factory mechanical drive.</v>
+
+29
+00:02:39.371 --> 00:02:41.313
+<v Daniel>That is a total drop in the bucket.</v>
+
+30
+00:02:41.513 --> 00:02:45.877
+<v Maya>It really is. It took roughly two decades just to reach the 50% level of diffusion.</v>
+
+31
+00:02:46.317 --> 00:02:57.227
+<v Daniel>But here is the mechanism that really matters most for our AI moment right now. Factory electrification had absolutely no real productivity impact until the early 1920s.</v>
+
+32
+00:02:57.647 --> 00:03:03.052
+<v Maya>Which is, wait, that's a full four decades after the first central power station opened for business.</v>
+
+33
+00:03:03.412 --> 00:03:05.114
+<v Daniel>Yep. 40 years of waiting.</v>
+
+34
+00:03:05.406 --> 00:03:10.409
+<v Maya>40 years of waiting for a technological miracle to actually show up in the ledger. That is wild.</v>
+
+35
+00:03:10.749 --> 00:03:18.573
+<v Daniel>It is. And to understand the why behind that massive delay, we have to look at the physical, gritty reality of a 19th century factory.</v>
+
+36
+00:03:18.973 --> 00:03:20.094
+<v Maya>Okay, set the scene for me.</v>
+
+37
+00:03:20.974 --> 00:03:29.099
+<v Daniel>So picture a massive, multi-story brick building. It is powered by a giant steam engine, or maybe a water wheel down in the basement.</v>
+
+38
+00:03:29.459 --> 00:03:29.839
+<v Maya>Got it.</v>
+
+39
+00:03:30.519 --> 00:03:35.461
+<v Daniel>That central engine turns a huge steel shaft that runs the entire length of the factory.</v>
+
+40
+00:03:35.941 --> 00:03:42.164
+<v Maya>And from that main shaft, you have this crazy labyrinth of leather belts connected to every individual machine on the floor.</v>
+
+41
+00:03:42.364 --> 00:03:47.266
+<v Daniel>Exactly. Which means the entire factory floor had to be designed around the power source.</v>
+
+42
+00:03:47.807 --> 00:03:49.247
+<v Maya>Right. Because of the physical belts.</v>
+
+43
+00:03:49.847 --> 00:03:55.630
+<v Daniel>Yeah. Machines were placed based on how close they needed to be to that central shaft, not based on any logical workflow.</v>
+
+44
+00:03:56.165 --> 00:03:59.068
+<v Maya>So the layout was terrible for actual production.</v>
+
+45
+00:03:59.268 --> 00:04:13.041
+<v Daniel>Totally inefficient. But if you are a factory owner in 1900 and someone tells you electricity is the future, it is completely unprofitable for you to tear down your working, profitable, steam-powered factory just because a new tech exists.</v>
+
+46
+00:04:13.402 --> 00:04:15.444
+<v Maya>Because the old plant is still perfectly serviceable.</v>
+
+47
+00:04:15.784 --> 00:04:18.787
+<v Daniel>Right. You wait for it to depreciate. You don't just tear it down.</v>
+
+48
+00:04:19.099 --> 00:04:26.724
+<v Maya>But they didn't just ignore electricity entirely, right? Like, they tried to use it. They just did it in a very awkward half-measure kind of way.</v>
+
+49
+00:04:27.044 --> 00:04:28.646
+<v Daniel>Yeah, they used something called group drive.</v>
+
+50
+00:04:28.866 --> 00:04:29.506
+<v Maya>Group drive, right.</v>
+
+51
+00:04:29.686 --> 00:04:40.053
+<v Daniel>So with group drive, the factory owners essentially ripped out the steam engine in the basement, bought a giant electric dynamo, and bolted that electric motor onto the exact same old system of shafts and belts.</v>
+
+52
+00:04:40.554 --> 00:04:45.257
+<v Maya>Wait, so they just attached a super-fast, modern motor to a terrible, clunky old system.</v>
+
+53
+00:04:45.447 --> 00:04:50.408
+<v Daniel>That is precisely it. It was merely an overlay of a new system onto an old framework.</v>
+
+54
+00:04:51.008 --> 00:04:53.849
+<v Maya>And because it was just an overlay, the productivity gains were minimal.</v>
+
+55
+00:04:54.149 --> 00:04:54.969
+<v Daniel>Barely moved the needle.</v>
+
+56
+00:04:55.510 --> 00:05:01.291
+<v Maya>Because you still had all the friction of the leather belts constantly breaking, and more importantly, you still couldn't reorganize the factory floor.</v>
+
+57
+00:05:01.551 --> 00:05:10.753
+<v Daniel>Exactly. The machines were still chained to the old layout. The real economic payoff didn't happen until they abandoned group drive and moved to what is called unit drive.</v>
+
+58
+00:05:11.394 --> 00:05:13.014
+<v Maya>Okay, unit drive. What was the difference?</v>
+
+59
+00:05:13.426 --> 00:05:23.815
+<v Daniel>This was the real paradigm shift. Unit drive meant throwing away the central shaft entirely and putting one small independent electric motor on every single individual machine.</v>
+
+60
+00:05:24.035 --> 00:05:27.278
+<v Maya>Oh, wow. That changes the entire geometry of the business.</v>
+
+61
+00:05:27.639 --> 00:05:28.079
+<v Daniel>Completely.</v>
+
+62
+00:05:28.179 --> 00:05:38.268
+<v Maya>Because you don't need those heavy overhead shafts pulling on the ceiling anymore, which means you don't need heavily braced multi-story buildings. You can suddenly build lighter, cheaper, single-story factories.</v>
+
+63
+00:05:38.488 --> 00:05:42.351
+<v Daniel>Yes. You can organize the machines logically based on the flow of materials.</v>
+
+64
+00:05:42.431 --> 00:05:43.692
+<v Maya>Which just makes so much more sense.</v>
+
+65
+00:05:44.012 --> 00:05:49.516
+<v Daniel>And you can add skylights and windows. And crucially, if one machine breaks down, you just fix that one machine.</v>
+
+66
+00:05:49.996 --> 00:05:55.960
+<v Maya>Oh, right. Under the steam system, if one belt snapped, you had to shut down the entire factory to fix it.</v>
+
+67
+00:05:56.280 --> 00:06:01.003
+<v Daniel>Exactly. But getting to the unit drive era wasn't just a matter of buying smaller motors.</v>
+
+68
+00:06:01.283 --> 00:06:02.004
+<v Maya>What else did it need?</v>
+
+69
+00:06:02.758 --> 00:06:10.964
+<v Daniel>It required a completely new cadre of experienced factory architects and engineers, people who actually knew how to design a completely new type of workplace.</v>
+
+70
+00:06:11.324 --> 00:06:17.028
+<v Maya>And that kind of learning, I imagine, happened slowly in a very decentralized way, factory by factory.</v>
+
+71
+00:06:17.268 --> 00:06:17.808
+<v Daniel>Very slowly.</v>
+
+72
+00:06:18.189 --> 00:06:24.673
+<v Maya>Which makes me wonder, what does group drive look like in a corporate office today?</v>
+
+73
+00:06:24.693 --> 00:06:30.617
+<v Daniel>Oh, that's a great question. Think about how most large companies are implementing artificial intelligence right now.</v>
+
+74
+00:06:31.248 --> 00:06:42.412
+<v Maya>Right. I am picturing just a massive corporate bureaucracy. Like someone uses a cutting edge generative AI to draft a brilliant, highly complex 20 page market report.</v>
+
+75
+00:06:42.552 --> 00:06:42.772
+<v Daniel>Sure.</v>
+
+76
+00:06:42.972 --> 00:06:45.073
+<v Maya>The AI does it in three seconds.</v>
+
+77
+00:06:45.648 --> 00:06:46.368
+<v Daniel>And then what happens?</v>
+
+78
+00:06:46.569 --> 00:06:56.135
+<v Maya>They have to export it to a PDF, manually review it, and route it through five different layers of human middle management for sequential sign-offs over the course of three weeks.</v>
+
+79
+00:06:56.515 --> 00:07:01.398
+<v Daniel>Yes. We just bolted an AI motor onto the old bureaucratic shaft and belt system.</v>
+
+80
+00:07:01.478 --> 00:07:05.560
+<v Maya>That's exactly the same thing. We just changed the technology, not the process.</v>
+
+81
+00:07:05.901 --> 00:07:09.763
+<v Daniel>Which perfectly explains why it doesn't show up in the macro data right away.</v>
+
+82
+00:07:10.263 --> 00:07:11.004
+<v Maya>Makes total sense.</v>
+
+83
+00:07:11.882 --> 00:07:21.804
+<v Daniel>But when they finally did figure out unit drive in the 1920s, the economic results were undeniable. Paul David points to this plain, incredibly quotable finding.</v>
+
+84
+00:07:22.144 --> 00:07:22.544
+<v Maya>Let's hear it.</v>
+
+85
+00:07:23.084 --> 00:07:31.446
+<v Daniel>He found that about half of the five percentage point acceleration in manufacturing total factor productivity growth between 1919 and 1929.</v>
+
+86
+00:07:31.886 --> 00:07:38.547
+<v Maya>And just to clarify, total factor productivity is basically how efficiently we combine labor and capital to make things.</v>
+
+87
+00:07:38.875 --> 00:07:46.257
+<v Daniel>Right. So half of that five percentage point jump is accounted for statistically by the growth in secondary electric motor capacity.</v>
+
+88
+00:07:46.837 --> 00:07:48.757
+<v Maya>That is a massive shift.</v>
+
+89
+00:07:49.118 --> 00:07:49.298
+<v Daniel>Yeah.</v>
+
+90
+00:07:49.998 --> 00:07:52.698
+<v Maya>And that's not even counting the unmeasured quality gains, is it?</v>
+
+91
+00:07:52.959 --> 00:07:53.319
+<v Daniel>Not at all.</v>
+
+92
+00:07:53.779 --> 00:08:00.560
+<v Maya>Because the new unit drive factories were cleaner. They were vastly safer without giant leather belts snapping and hitting people.</v>
+
+93
+00:08:00.680 --> 00:08:01.181
+<v Daniel>Much safer.</v>
+
+94
+00:08:01.481 --> 00:08:06.822
+<v Maya>And they had natural light. Those improvements went totally uncounted in traditional economic metrics.</v>
+
+95
+00:08:07.238 --> 00:08:13.486
+<v Daniel>They absolutely did. But, you know, we should also acknowledge the strongest objection to David's analogy here.</v>
+
+96
+00:08:13.646 --> 00:08:16.149
+<v Maya>Right, because no historical comparison is perfect.</v>
+
+97
+00:08:16.550 --> 00:08:21.356
+<v Daniel>David himself actually warned his readers. He said computers are not dynamos.</v>
+
+98
+00:08:21.663 --> 00:08:36.423
+<v Maya>Yeah, because electricity just powers things indiscriminately, right? But information, which computers and AI process, can actually create overload. Information transmitters are incentivized to broadcast as much as possible, and screening all that new</v>
+
+99
+00:08:36.463 --> 00:08:38.446
+<v Maya>information is incredibly costly.</v>
+
+100
+00:08:38.486 --> 00:08:39.608
+<v Daniel>It consumes human attention.</v>
+
+101
+00:08:40.019 --> 00:08:53.043
+<v Maya>Exactly. Which is a hard bottleneck. So this is a phenomenal reason for us to avoid undue optimism and unrealistic impatience. We might just be generating more noise, not more economic power.</v>
+
+102
+00:08:53.263 --> 00:09:06.087
+<v Daniel>That's a vital point. So if the dynamo story tells us that we have to patiently wait for a total redesign of the factory, our next question has to be, well, what does a redesigned factory actually look like inside a modern corporate spreadsheet?</v>
+
+103
+00:09:06.680 --> 00:09:16.169
+<v Maya>And that brings us to our second heavy hitter for today, the Bresnahan, Brynjolfsson, and Hitt Working Paper from 1999, which was later published in 2002.</v>
+
+104
+00:09:16.369 --> 00:09:17.390
+<v Daniel>Right, the BBH paper.</v>
+
+105
+00:09:17.911 --> 00:09:30.442
+<v Maya>This is a major firm-level study. They looked at about 400 large U.S. firms, matching their detailed organizational surveys from 1995 and 1996 to their actual IT capital data from 1987 to 1994.</v>
+
+106
+00:09:32.387 --> 00:09:34.508
+<v Daniel>And their core claim really shifts the paradigm here.</v>
+
+107
+00:09:34.729 --> 00:09:43.775
+<v Maya>It does. They say computerizing a firm means far more than just installing hardware. The organizational investment is likely much larger than the hardware bill itself.</v>
+
+108
+00:09:44.055 --> 00:09:57.084
+<v Daniel>Because they identified that three specific complements must go together. First, the information technology itself. Second, organizational change. And third, new products or service quality.</v>
+
+109
+00:09:57.644 --> 00:09:58.725
+<v Maya>Okay, so it's a triad.</v>
+
+110
+00:09:59.069 --> 00:10:05.954
+<v Daniel>Yes. These three elements have to exist in a three-part harmony. And when they do, they significantly raise the demand for skilled workers.</v>
+
+111
+00:10:06.655 --> 00:10:20.244
+<v Maya>Okay, let's break down the why there. Why does IT require different organization? Because the findings show that IT correlates heavily with decentralized decision-making, the use of more self-managing teams, and higher human capital.</v>
+
+112
+00:10:20.484 --> 00:10:20.765
+<v Daniel>It does.</v>
+
+113
+00:10:21.025 --> 00:10:23.627
+<v Maya>But what is the actual mechanism making that happen?</v>
+
+114
+00:10:24.085 --> 00:10:31.790
+<v Daniel>Well, the mechanism is that computers are great at automating routine, predictable tasks. But when you automate the routine stuff, what is left over?</v>
+
+115
+00:10:32.191 --> 00:10:35.813
+<v Maya>The weird stuff. Complex, unpredictable edge cases.</v>
+
+116
+00:10:36.153 --> 00:10:41.057
+<v Daniel>Exactly. And you can't pass those edge cases up a rigid 19th century corporate ladder.</v>
+
+117
+00:10:41.645 --> 00:10:44.487
+<v Maya>Right, because the decision-making bottleneck would just kill the company.</v>
+
+118
+00:10:44.627 --> 00:10:54.114
+<v Daniel>It would paralyze it. You have to push decision-making power down to skilled autonomous teams on the front lines who can use the IT to solve problems in real time.</v>
+
+119
+00:10:54.354 --> 00:10:57.296
+<v Maya>And they put a hard number on the benefit of getting this right, don't</v>
+
+120
+00:10:57.336 --> 00:11:04.782
+<v Daniel>they? They do. Firms that are high on both IT and skilled labor have output over 4% higher than industry peers with similar inputs.</v>
+
+121
+00:11:05.462 --> 00:11:09.425
+<v Maya>Over 4% just for getting the organizational combination right. That's huge.</v>
+
+122
+00:11:10.090 --> 00:11:14.312
+<v Daniel>But the most striking result from the BBH paper is what happens when you get the combination wrong.</v>
+
+123
+00:11:14.593 --> 00:11:14.953
+<v Maya>Oh, boy.</v>
+
+124
+00:11:15.333 --> 00:11:29.761
+<v Daniel>They call it the off-diagonal result. Firms with just one complement, say, a company that spends tens of millions on cutting-edge IT but stubbornly keeps its rigid, old-style corporate hierarchy, are often less productive than firms with neither.</v>
+
+125
+00:11:30.278 --> 00:11:35.442
+<v Maya>Wait, really? A coherent old school firm actually beats a half-changed one?</v>
+
+126
+00:11:35.882 --> 00:11:44.108
+<v Daniel>The data backs that up. A completely analog company with a traditional hierarchy functions better than a company that buys new tech but refuses to change its culture.</v>
+
+127
+00:11:44.528 --> 00:11:54.135
+<v Maya>Okay, here's where it gets really interesting. But let me play devil's advocate for a second. Sure. You are looking at 400 large companies. Couldn't this just be simple firm heterogeneity?</v>
+
+128
+00:11:54.155 --> 00:11:56.157
+<v Daniel>Okay, meaning what exactly?</v>
+
+129
+00:11:56.508 --> 00:12:11.297
+<v Maya>Meaning, isn't this just a case of the rich getting richer? Like a naturally brilliant CEO is obviously going to buy good computers and naturally hire smart people. Bad managers just don't do either. So is this actually about the technology or is it just universally good</v>
+
+130
+00:12:11.357 --> 00:12:11.837
+<v Maya>management?</v>
+
+131
+00:12:12.017 --> 00:12:18.521
+<v Daniel>That is a very fair critique. And the authors tackle that exact objection. They argue this is strict complementarity.</v>
+
+132
+00:12:19.222 --> 00:12:19.562
+<v Maya>How so?</v>
+
+133
+00:12:20.802 --> 00:12:30.488
+<v Daniel>Because if it were just a generalized good management factor driving everything, then having at least some good traits, like buying a lot of great IT, should make your firm a little bit better off.</v>
+
+134
+00:12:31.108 --> 00:12:32.569
+<v Maya>Or at the very least, no worse.</v>
+
+135
+00:12:32.970 --> 00:12:44.817
+<v Daniel>Right. But the fact that half-changed firms do actively worse than entirely old-style, low-IT firms proves it's not just about generalized good management. The pieces have to fit together.</v>
+
+136
+00:12:45.658 --> 00:12:46.058
+<v Maya>Ah, I see.</v>
+
+137
+00:12:46.787 --> 00:12:53.031
+<v Daniel>You can't just drop a Ferrari engine into a horse-drawn carriage and expect it to win a race. The carriage will tear itself apart.</v>
+
+138
+00:12:53.731 --> 00:13:08.500
+<v Maya>The structural integrity just fails. Okay, so we've established these foundational rules from the 1990s and the early 2000s. The lag, the organizational friction, the need for new skills. Right. How does this actually hold up when we test it globally? And</v>
+
+139
+00:13:08.780 --> 00:13:10.541
+<v Maya>more importantly, how does it hold up right now in 2026?</v>
+
+140
+00:13:11.688 --> 00:13:22.478
+<v Daniel>Well, we could look at a few pieces of modern evidence to track this evolution. Let's start with a 2007 paper by Bloom, Sadun, and Van Rienen titled Americans Do IT Better.</v>
+
+141
+00:13:22.698 --> 00:13:23.359
+<v Maya>I love that title.</v>
+
+142
+00:13:23.599 --> 00:13:34.429
+<v Daniel>It's a classic. They looked at U.S. multinationals operating in the U.K. and found they get significantly more productivity out of their IT than other multinationals operating in the exact same country.</v>
+
+143
+00:13:34.749 --> 00:13:35.170
+<v Maya>Oh, wow.</v>
+
+144
+00:13:35.842 --> 00:13:42.166
+<v Daniel>Furthermore, when a U.K. establishment is taken over by a U.S. firm, its IT productivity rises.</v>
+
+145
+00:13:42.586 --> 00:13:46.808
+<v Maya>And the beauty of that finding is that it completely isolates the organizational variable.</v>
+
+146
+00:13:47.048 --> 00:13:47.529
+<v Daniel>Completely.</v>
+
+147
+00:13:47.689 --> 00:13:56.954
+<v Maya>It is the exact same technology, the exact same computers on the desks operating in the exact same U.K. market, but a different organizational structure is driving a higher payoff.</v>
+
+148
+00:13:57.254 --> 00:14:04.418
+<v Daniel>Exactly. Because U.S. firms historically leaned much heavier into that decentralized management style BBH talked about.</v>
+
+149
+00:14:04.679 --> 00:14:05.359
+<v Maya>Makes total sense.</v>
+
+150
+00:14:05.960 --> 00:14:13.782
+<v Daniel>Next, if we jump forward to 2021, we have a crucial paper by Brynjolfsson, Rock, and Syverson regarding the productivity J-curve.</v>
+
+151
+00:14:14.202 --> 00:14:18.144
+<v Maya>Right. They look at why the macro data looks so dismal during a tech boom.</v>
+
+152
+00:14:18.604 --> 00:14:26.166
+<v Daniel>The J-curve idea is brilliant. They point out that when you adopt a general-purpose technology, you have to make massive intangible co-investments.</v>
+
+153
+00:14:26.541 --> 00:14:28.362
+<v Maya>Meaning you aren't just buying a software license.</v>
+
+154
+00:14:28.582 --> 00:14:38.866
+<v Daniel>Right. You are diverting your employees' time away from making products today so they can sit in training sessions, patch software, and map out entirely new business processes.</v>
+
+155
+00:14:39.246 --> 00:14:42.547
+<v Maya>And all of that is unmeasured by traditional economic statistics.</v>
+
+156
+00:14:42.907 --> 00:14:53.472
+<v Daniel>It is completely invisible to the data. And because you are diverting labor to build these intangible assets, measured productivity actually dips. That is the bottom of the J.</v>
+
+157
+00:14:53.772 --> 00:14:53.992
+<v Maya>Right.</v>
+
+158
+00:14:54.480 --> 00:15:05.625
+<v Daniel>Then later, when you finally harvest those intangible assets, productivity growth looks overstated. They explicitly applied this model to AI, arguing we are currently living in the valley of the J-curve.</v>
+
+159
+00:15:06.066 --> 00:15:12.689
+<v Maya>Which brings us right to the present day. We have a massive 2026 working paper by Vazlanze and colleagues.</v>
+
+160
+00:15:12.837 --> 00:15:14.599
+<v Daniel>This is the real 2026 test.</v>
+
+161
+00:15:14.859 --> 00:15:28.250
+<v Maya>Exactly. They surveyed nearly 750 corporate executives about AI integration, and they found that the perceived AI productivity gains inside these companies far exceed the measured gains in the revenue data.</v>
+
+162
+00:15:28.751 --> 00:15:33.795
+<v Daniel>And executives are reading this gap simply as a delay in revenue. It takes time for workflows to adapt.</v>
+
+163
+00:15:34.240 --> 00:15:34.420
+<v Maya>Yeah.</v>
+
+164
+00:15:34.821 --> 00:15:44.108
+<v Daniel>But crucially, they are already seeing the structural shift BBH predicted decades ago. Routine clerical roles are actively declining while skilled technical roles are rising.</v>
+
+165
+00:15:44.428 --> 00:15:47.411
+<v Maya>The organizational redesign is literally happening live.</v>
+
+166
+00:15:47.751 --> 00:15:48.311
+<v Daniel>It really is.</v>
+
+167
+00:15:49.813 --> 00:16:02.643
+<v Maya>So let's synthesize all of this. If we connect this to the bigger picture, we need to separate what the classic historical models got absolutely right from what our messy 2026 reality complicates.</v>
+
+168
+00:16:03.265 --> 00:16:09.190
+<v Daniel>If we connect this to the bigger picture, the classic papers from David and BBH nailed four enduring truths.</v>
+
+169
+00:16:09.971 --> 00:16:10.752
+<v Maya>Okay, let's list them.</v>
+
+170
+00:16:11.152 --> 00:16:17.078
+<v Daniel>First, the lag. The undeniable reality that technological revolutions take decades, not days.</v>
+
+171
+00:16:17.318 --> 00:16:17.478
+<v Maya>Yep.</v>
+
+172
+00:16:18.199 --> 00:16:23.643
+<v Daniel>Second, the awkward overlay stage, where we just bolt new motors onto old bureaucratic shafts.</v>
+
+173
+00:16:24.264 --> 00:16:25.085
+<v Maya>Right, group drive.</v>
+
+174
+00:16:25.635 --> 00:16:30.138
+<v Daniel>Third, the strict complementarity between technology and organizational structure.</v>
+
+175
+00:16:30.358 --> 00:16:30.898
+<v Maya>The triad.</v>
+
+176
+00:16:31.318 --> 00:16:39.783
+<v Daniel>Exactly. And fourth, the skill bias of reorganization. The fact that redesigning work historically requires higher skilled, more autonomous workers.</v>
+
+177
+00:16:40.484 --> 00:16:46.647
+<v Maya>But 2026 definitely complicates those historical models. And I think we have to push back a bit on the past year.</v>
+
+178
+00:16:47.348 --> 00:16:47.648
+<v Daniel>How so?</v>
+
+179
+00:16:48.177 --> 00:17:00.007
+<v Maya>Well, first of all, AI tools diffuse way faster than physical dynamos did in 1900. I mean, you don't have to string copper wire across a continent or dig up city streets to deploy a new large language model.</v>
+
+180
+00:17:00.427 --> 00:17:02.169
+<v Daniel>True. The physical constraints are just gone.</v>
+
+181
+00:17:02.449 --> 00:17:11.557
+<v Maya>Exactly. Software adoption doesn't have to wait for a physical factory to depreciate. You don't have to wait 30 years for a steam engine to rust before you can update a software stack.</v>
+
+182
+00:17:11.997 --> 00:17:12.938
+<v Daniel>That's a very fair point.</v>
+
+183
+00:17:13.603 --> 00:17:22.226
+<v Maya>And here is a huge departure from the BBH model. Generative AI might actually help novices and lower skilled workers close the gap with experts.</v>
+
+184
+00:17:22.286 --> 00:17:22.687
+<v Daniel>Oh, right.</v>
+
+185
+00:17:23.107 --> 00:17:36.752
+<v Maya>If a brand new AI tool can elevate a junior coder to perform like a mid-level coder instantly, it might actually be skill leveling rather than skill biased. It might blur the lines of who actually qualifies as a skilled worker.</v>
+
+186
+00:17:37.371 --> 00:17:39.952
+<v Daniel>Which directly cuts against the BBH skill bias story.</v>
+
+187
+00:17:39.972 --> 00:17:54.014
+<v Maya>Exactly. And finally, we have to admit that we don't actually have ironclad proof yet that the current AI productivity gap is a true J curve. We might just be holding our breath for an economic effect that is fundamentally smaller than the tech companies advertised.</v>
+
+188
+00:17:54.615 --> 00:18:09.376
+<v Daniel>Those are massive variables. But despite all those complications, I think there is one enduring idea that perfectly organizes this entire debate from 1899 to 2026. What's that? The economic payoff always comes from</v>
+
+189
+00:18:09.476 --> 00:18:12.898
+<v Daniel>redesigning the factory. It never comes from simply installing the motor.</v>
+
+190
+00:18:13.718 --> 00:18:27.688
+<v Maya>So what does this all mean for you? Let's bring this directly into your world. If the real payoff, the true generational leap in productivity, only comes from entirely redesigning the factory, who is training the people to do that redesign?</v>
+
+191
+00:18:28.228 --> 00:18:31.110
+<v Daniel>That falls squarely on the shoulders of higher education.</v>
+
+192
+00:18:31.512 --> 00:18:40.774
+<v Maya>It does. Higher ed institutions shouldn't just be teaching students how to use the latest AI tools. Teaching someone how to write a good AI prompt is just teaching them how to turn on the motor.</v>
+
+193
+00:18:41.115 --> 00:18:50.237
+<v Daniel>Exactly. We need universities to teach people how to redesign work itself. We need to train the modern equivalent of Paul David's cadre of factory architects.</v>
+
+194
+00:18:50.710 --> 00:19:00.099
+<v Maya>But how do universities actually credential that specific skill? Like a degree in workflow redesign doesn't really exist in most places.</v>
+
+195
+00:19:00.179 --> 00:19:12.550
+<v Daniel>It doesn't. And it suggests that higher education institutions can't just offer basic AI tool training certificates. They need to partner directly with major employers on massive fundamental organizational reorganization.</v>
+
+196
+00:19:12.991 --> 00:19:16.073
+<v Maya>Because the market is screaming for architects, not just operators.</v>
+
+197
+00:19:16.133 --> 00:19:16.633
+<v Daniel>Precisely.</v>
+
+198
+00:19:17.373 --> 00:19:24.357
+<v Maya>And we really need to think about who is most exposed during this long, painful transition phase from group drive to unit drive.</v>
+
+199
+00:19:24.977 --> 00:19:31.281
+<v Daniel>The people bearing the brunt of this friction are early career workers, adult learners, and first-generation students.</v>
+
+200
+00:19:31.721 --> 00:19:36.484
+<v Maya>Right. The people who are trying to break into a system that is actively shifting under their feet.</v>
+
+201
+00:19:36.824 --> 00:19:41.846
+<v Daniel>And explicitly, that perfectly describes much of the student body at CUNY in New York City, for example.</v>
+
+202
+00:19:41.926 --> 00:19:42.507
+<v Maya>It really does.</v>
+
+203
+00:19:43.430 --> 00:19:46.672
+<v Daniel>Those students are at the absolute epicenter of this workforce transition.</v>
+
+204
+00:19:47.252 --> 00:19:59.959
+<v Maya>And there is a serious internal threat here for universities themselves. Think about it. Universities are massive, highly complex, historically rigid organizations. Are they fundamentally redesigning their own educational models to harness these tools?</v>
+
+205
+00:20:00.726 --> 00:20:15.597
+<v Daniel>Or are they just bolting motors onto old shafts? Like, if a university just takes a 19th century lecture format, records it on video, has an AI transcribe the notes, and calls it a cutting-edge digital education, I mean, that's</v>
+
+206
+00:20:15.617 --> 00:20:23.563
+<v Daniel>just group drive. It is the ultimate group drive. It is the exact same centralized power shaft, just with a modern logo slapped on the side.</v>
+
+207
+00:20:23.683 --> 00:20:38.328
+<v Maya>It really is. The technology is new, but the architecture is antique. So we'll leave you with this final provocative thought to mull over. As you navigate the next few years of this AI revolution, whether in your career or in your institutions, ask yourself,</v>
+
+208
+00:20:38.788 --> 00:20:44.389
+<v Maya>are you training yourself to be the person who operates the new machine or the person who designs the new factory?</v>
+
+209
+00:20:44.690 --> 00:20:45.990
+<v Daniel>A great question to end on.</v>
+
+210
+00:20:46.330 --> 00:20:53.232
+<v Maya>Absolutely. Thank you for joining us on this deep dive. Keep exploring, keep questioning, and we will catch you next time.</v>

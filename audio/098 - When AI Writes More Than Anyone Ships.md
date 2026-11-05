@@ -1,0 +1,11 @@
+Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools (September 2026)
+
+In this episode we unpack an NBER working paper by Mert Demirer of MIT, Leon Musolff of Wharton and Liyuan Yang of Boston University, built on more than 500,000 GitHub developers and Microsoft usage telemetry. The argument: AI coding tools have produced enormous gains in writing code, but most of that gain disappears before anything ships, because the human stages further down the chain have not sped up.
+
+We walk through the three tool generations (autocomplete, sync agents and async agents), the matched event study behind a 240 percent cumulative rise in commits that falls to 80 percent for projects and 30 percent for releases, and the hierarchical weak-link model with its elasticity of substitution of 0.23. We cover the evidence that the lost gains are mostly experimentation, the marketplace data showing new apps roughly doubling with no rise in usage, and how this sits beside AI-Native Firms, Firm Data on AI, the Microsoft 365 Copilot experiment and a retailer field experiment on scaffolding. We close on what organizations must redesign for AI to pay off, and what universities should teach when review and judgment become the bottleneck.
+
+Reference: Demirer, M., Musolff, L., & Yang, L. (2026). Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools. NBER Working Paper 35275. https://www.nber.org/papers/w35275
+Reference: Kim, H., & Koning, R. (2026). AI-Native Firms. Harvard Business School Working Paper 26-090. https://www.hbs.edu/ris/Publication%20Files/26-090_96f92aa0-37d9-4789-beaa-5c0cb87a4032.pdf
+Reference: Yotzov, I., Barrero, J. M., Bloom, N., et al. (2026). Firm Data on AI. Federal Reserve Bank of Atlanta Working Paper 2026-3. https://doi.org/10.29338/wp2026-03
+Reference: Dillon, E. W., Jaffe, S., Peng, S., & Cambon, A. (2025). Early Impacts of M365 Copilot. arXiv:2504.11443. https://arxiv.org/abs/2504.11443
+Reference: Farach, A., Cambon, A., Tankelevitch, L., Hsueh, C., & Janssen, R. (2026). Scaffolding Human-AI Collaboration: A Field Experiment on Behavioral Protocols and Cognitive Reframing. arXiv:2604.08678. https://arxiv.org/abs/2604.08678

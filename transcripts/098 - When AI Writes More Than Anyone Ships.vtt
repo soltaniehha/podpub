@@ -1,0 +1,577 @@
+WEBVTT
+
+1
+00:00:00.189 --> 00:00:14.919
+<v Daniel>Imagine walking into this massive manufacturing plant where just overnight all the machines suddenly start working 240% faster. Oh, wow. Right. The conveyor belts are just a blur. Materials are flying through the first few stages of assembly. The</v>
+
+2
+00:00:14.979 --> 00:00:24.005
+<v Daniel>noise is deafening. But when you walk out to the loading dock at the end of the day, you see the exact same number of delivery trucks leaving as yesterday.</v>
+
+3
+00:00:24.265 --> 00:00:26.026
+<v Maya>Yeah, that's exactly what it feels like right now.</v>
+
+4
+00:00:26.508 --> 00:00:40.995
+<v Daniel>I mean, where did all those extra products go? Today, we are looking at what really has to be the defining economic mystery of the AI era. Because for you listening, you're constantly told that generative AI is</v>
+
+5
+00:00:41.075 --> 00:00:42.936
+<v Daniel>revolutionizing absolutely every industry.</v>
+
+6
+00:00:43.076 --> 00:00:46.757
+<v Maya>Right. You hear the hype. You see the mind-blowing demos online.</v>
+
+7
+00:00:46.977 --> 00:00:52.400
+<v Daniel>Exactly. So why aren't we seeing massive economy-wide productivity booms in the actual data?</v>
+
+8
+00:00:52.764 --> 00:01:07.716
+<v Maya>It is, well, it's the ultimate paradox right now. I mean, we have tools that can write code and analyze in literally seconds. You would expect to see global economic output just skyrocketing. Yet when we look at the macro data, it's like throwing a boulder into a pond</v>
+
+9
+00:01:07.776 --> 00:01:10.238
+<v Maya>and somehow seeing absolutely no ripples.</v>
+
+10
+00:01:10.318 --> 00:01:21.788
+<v Daniel>Yeah. So today, our mission is to unpack a stack of fascinating new research to answer that exact question. We're anchoring this deep dive on a massive new working paper by Demirer, Musolf, and Yang.</v>
+
+11
+00:01:22.080 --> 00:01:23.720
+<v Maya>The September 2026 version, right?</v>
+
+12
+00:01:23.880 --> 00:01:38.704
+<v Daniel>Right. The updated September version. It's called Writing Code versus Shipping Code, Productivity Effects Across Generations of AI Coding Tools. And from this research, we are going to extract one crucial insight, which is the AI only pays off when the</v>
+
+13
+00:01:38.744 --> 00:01:40.905
+<v Daniel>work around it is completely redesigned.</v>
+
+14
+00:01:41.226 --> 00:01:51.988
+<v Maya>Yeah. And while the primary setting for this Demira paper is software development, I really want to establish right up front that the lessons here apply to literally any organization trying to figure out the future of knowledge work.</v>
+
+15
+00:01:52.088 --> 00:01:52.609
+<v Daniel>Oh, absolutely.</v>
+
+16
+00:01:52.809 --> 00:02:02.971
+<v Maya>Software is just, you know, the most mature testbed. Developers have been using these tools longer and more intensely than anyone else. It's essentially our crystal ball for what happens when AI truly saturates a workplace.</v>
+
+17
+00:02:03.548 --> 00:02:16.137
+<v Daniel>And the sheer scale of this crystal ball is just staggering. I mean, to understand the disconnect between AI hype and organizational reality, we first have to look at the volume of what individual workers are actually doing with these tools.</v>
+
+18
+00:02:16.337 --> 00:02:16.518
+<v Maya>Right.</v>
+
+19
+00:02:17.038 --> 00:02:27.105
+<v Daniel>The DiMera study looks at over 500,000 GitHub developers. They combined public GitHub data with internal Microsoft telemetry from 2022 all the way to mid-2026.</v>
+
+20
+00:02:27.686 --> 00:02:33.150
+<v Maya>You know, the methodology here is what makes it so powerful because normally observational data can be incredibly noisy.</v>
+
+21
+00:02:33.606 --> 00:02:35.167
+<v Daniel>Oh, totally. Too many variables.</v>
+
+22
+00:02:35.267 --> 00:02:50.212
+<v Maya>Exactly. So to fix that, they used a rigorous matched event study design. Whenever a developer adopted an AI tool, the researchers found a control developer who was similarly active exactly one calendar week, one year earlier, and who never</v>
+
+23
+00:02:50.252 --> 00:02:50.872
+<v Maya>adopted the tool.</v>
+
+24
+00:02:51.740 --> 00:02:56.122
+<v Daniel>So it's like racing your own ghost in Mario Kart from a year ago.</v>
+
+25
+00:02:56.422 --> 00:02:57.683
+<v Maya>Yes, exactly.</v>
+
+26
+00:02:57.743 --> 00:03:05.387
+<v Daniel>It guarantees your ghost isn't secretly using AI to cheat, and you know exactly what the baseline human performance looks like under the same seasonal conditions.</v>
+
+27
+00:03:05.628 --> 00:03:20.239
+<v Maya>Precisely. And they track this across three distinct generations of AI coding tools. First, you have autocomplete. So tools like the original GitHub Copilot that just suggest a few lines of code as you type. Right. Second, they looked at sync agents. These are tools like Cloud</v>
+
+28
+00:03:20.299 --> 00:03:34.290
+<v Maya>Code that actively write and edit alongside the developer in real time. And finally, async agents. So tools like OpenAI Codex that run autonomously in the cloud. You give it a complex task, walk away, and it does the work in the background.</v>
+
+29
+00:03:34.735 --> 00:03:49.302
+<v Daniel>Okay, so let's get into what these tools actually do to a developer's weekly output. The authors measured this in commits, which is basically a save completed unit of work. Right. And the headline numbers are just mind blowing. Autocomplete tools drove a</v>
+
+30
+00:03:49.602 --> 00:04:03.526
+<v Daniel>30% cumulative increase in commits, which is already huge. Yeah, massive. But then async agents hit a 180% increase. And those ASIC agents running in the cloud, they reached a whopping 240% increase. I</v>
+
+31
+00:04:04.247 --> 00:04:08.968
+<v Daniel>mean, a 240% boost in individual output sounds exactly like the revolution we were promised.</v>
+
+32
+00:04:09.108 --> 00:04:22.712
+<v Maya>It does, yeah. At the individual task level, the productivity gains are undeniable. And they are scaling massively with each new generation of the technology. If your job is just to generate raw material, you are suddenly supercharged.</v>
+
+33
+00:04:23.453 --> 00:04:31.158
+<v Daniel>But if my Mario Kart ghost is suddenly running 240% faster, why isn't the company making 240% more software?</v>
+
+34
+00:04:31.358 --> 00:04:32.179
+<v Maya>Well, that's the catch.</v>
+
+35
+00:04:33.120 --> 00:04:40.505
+<v Daniel>Since all this extra code isn't resulting in a proportional amount of finished apps, we need to follow the workflow up the chain to see exactly where it gets stuck.</v>
+
+36
+00:04:40.985 --> 00:04:55.640
+<v Maya>Right. This is what the authors call the attenuation drop-off, and it is the absolute core of the bottleneck. Let's trace those async agents. We start with that 240% boost and commits. But when you look at the number of actual projects being</v>
+
+37
+00:04:55.681 --> 00:05:04.424
+<v Maya>created, that boost plummets to just an 80% increase. And when you look at final shipped releases, the increase is only 30%. It goes from 240% down to 30%. The</v>
+
+38
+00:05:04.484 --> 00:05:05.705
+<v Daniel>productivity just vanishes into thin air.</v>
+
+39
+00:05:10.392 --> 00:05:24.848
+<v Maya>It does. And if you think that's extreme, the data for sync agents is even wilder. When developers use sync agents, the raw lines of code are up 958%. 958. Yeah. Pull requests, which are</v>
+
+40
+00:05:25.228 --> 00:05:40.197
+<v Maya>basically requests for a human to review and merge that code, are up 86%. But final releases are up only 20%. Wow. Even the oldest generation, the basic autocomplete, shows this exact same decay. 234% more lines of code, 30% more</v>
+
+41
+00:05:40.237 --> 00:05:41.238
+<v Maya>commits, but just 9% more releases.</v>
+
+42
+00:05:46.673 --> 00:05:56.595
+<v Daniel>I need to pause on that for a second. 958% more lines of code. That means for every one line of code they used to write, they're now generating almost 10.</v>
+
+43
+00:05:56.875 --> 00:05:57.516
+<v Maya>Basically, yes.</v>
+
+44
+00:05:57.976 --> 00:06:12.332
+<v Daniel>Imagine the sheer volume of text someone has to sit down and read through. Of course, the final releases are only up 20%. You are burying your colleagues in rough drafts. But I have to ask, I mean, this is open source GitHub data, right?</v>
+
+45
+00:06:12.392 --> 00:06:12.832
+<v Maya>Yes, it is.</v>
+
+46
+00:06:13.433 --> 00:06:22.378
+<v Daniel>Open source projects are notoriously chaotic. Is it possible this is just a quirk of how hobbyists work and real enterprise companies have this under control?</v>
+
+47
+00:06:23.038 --> 00:06:35.116
+<v Maya>It's a very fair objection. And the authors do acknowledge that software is a unique domain and this data is observational. However, they cite a 2026 paper by Chen and Stratton who looked at enterprise settings.</v>
+
+48
+00:06:35.356 --> 00:06:35.756
+<v Daniel>Oh, really?</v>
+
+49
+00:06:36.016 --> 00:06:50.446
+<v Maya>Yeah. And they found the exact same attenuation pattern. The overall effects were slightly smaller, but the decay, you know, the way productivity evaporates as you move from drafting to releasing was identical. So this dynamic is very real across the board.</v>
+
+50
+00:06:50.947 --> 00:06:56.671
+<v Daniel>OK, so why is this happening? What is the actual mechanism making the productivity disappear?</v>
+
+51
+00:06:57.235 --> 00:07:12.161
+<v Maya>To explain it, the authors use an economic model called a hierarchical weak link production chain. This draws on work by economists Michael Kremer and Chad Jones. In any production process, whether it's software or legal briefs, each layer combines</v>
+
+52
+00:07:12.201 --> 00:07:21.384
+<v Maya>the output of the previous stage with human input. The researchers calculated a metric here called the elasticity of substitution, and they found it to be 0.23.</v>
+
+53
+00:07:21.604 --> 00:07:26.686
+<v Daniel>I'm going to need you to translate elasticity of substitution of 0.23 into plain English for me.</v>
+
+54
+00:07:26.985 --> 00:07:41.488
+<v Maya>Gladly. Economists measure how easily you can swap a human for a machine on a scale of 0 to 1. If it's a 1.0, you have perfect substitution. You just fire the human, plug in the AI, and the work gets done. Right. But an elasticity of</v>
+
+55
+00:07:41.548 --> 00:07:55.490
+<v Maya>0.23 is well below 1.0. It indicates strong complementarity. It means the AI is incredibly dependent on a human being there to hold its hand. You can't just substitute infinite AI cogeneration for human review.</v>
+
+56
+00:07:55.770 --> 00:08:10.742
+<v Daniel>Okay, so it's like having an AI that can write a 500-page novel in 10 minutes. That sounds incredible on paper. Yeah. But you still only have one human editor who can carefully read and fact-check 50 pages a day. Generating 1,000 pages an hour doesn't speed up the reading process.</v>
+
+57
+00:08:10.822 --> 00:08:19.469
+<v Daniel>In fact, it might slow it down because the editor is overwhelmed. Unbounded automation at the drafting step doesn't fix the human bottleneck at the review step.</v>
+
+58
+00:08:19.850 --> 00:08:34.580
+<v Maya>Exactly. If you flood a system with raw material, but the final stages still require human judgment to check, secure, and approve it, that human becomes the weak link in the chain. Making the drafting phase 10 times faster doesn't make the company 10 times more productive if the review</v>
+
+59
+00:08:34.640 --> 00:08:35.721
+<v Maya>phase hasn't changed.</v>
+
+60
+00:08:36.501 --> 00:08:46.688
+<v Daniel>But if they are writing almost 10 times more code, but only shipping 20% more releases, where is the other 900% going? Are these developers just building massively bloated applications?</v>
+
+61
+00:08:47.215 --> 00:08:56.927
+<v Maya>You might think that, which is what the authors call scope. But the data shows that scope explains very little of this. The median lines per release only went up about 2.6 times.</v>
+
+62
+00:08:57.208 --> 00:08:57.748
+<v Daniel>Oh, OK.</v>
+
+63
+00:08:58.009 --> 00:09:01.794
+<v Maya>The real mechanism driving this massive inflation of code is experimentation.</v>
+
+64
+00:09:02.413 --> 00:09:16.920
+<v Daniel>And the numbers on this are wild. Because they're tracking everything on GitHub, they can see exactly what gets thrown in the trash. And developers are throwing things away at unprecedented rates. Deletions of code are up 12.2 times, while additions are up just</v>
+
+65
+00:09:17.220 --> 00:09:18.040
+<v Daniel>7.0 times.</v>
+
+66
+00:09:18.300 --> 00:09:20.161
+<v Maya>Yeah, that ratio is crazy.</v>
+
+67
+00:09:20.301 --> 00:09:33.311
+<v Daniel>It really is. Experimental branches, which is basically when you test out a new feature without altering the main project, those are up 79%. And the share of repositories that are completely abandoned after their first month jumped from 60% to 69%.</v>
+
+68
+00:09:35.539 --> 00:09:50.025
+<v Maya>What's fascinating here is how this changes human behavior. AI dramatically lowers the cost of trying things. People are using these agents to rapidly prototype, to throw spaghetti at the wall, you know, to try vastly more ideas than they ever could before.</v>
+
+69
+00:09:50.865 --> 00:10:05.831
+<v Maya>But because of that strong complementarity we just discussed, that 0.23 elasticity, human review, quality control, and release capacity act as a strict filter. You can easily generate 100 new ideas before lunch, but</v>
+
+70
+00:10:05.871 --> 00:10:10.574
+<v Maya>you still only have the human bandwidth to properly review, secure, and ship five of them.</v>
+
+71
+00:10:11.194 --> 00:10:18.357
+<v Daniel>It's a complete psychological shift. It's like having an infinite brainstorming machine, but you still only have one brain to decide what's actually good.</v>
+
+72
+00:10:18.778 --> 00:10:29.853
+<v Maya>Precisely. And this leads to a critical lesson for leaders in the paper. The authors state there is no evidence that developers have fully re-optimized how they allocate their effort across these stages.</v>
+
+73
+00:10:30.274 --> 00:10:30.654
+<v Daniel>Interesting.</v>
+
+74
+00:10:31.194 --> 00:10:41.779
+<v Maya>We are seeing a slow adjustment to a general purpose technology. People are using these revolutionary new tools, but they are shoving them into old workflows. The chain simply hasn't been redesigned yet.</v>
+
+75
+00:10:42.468 --> 00:10:54.518
+<v Daniel>That makes perfect sense for the supply side inside the company. But I'm curious about the demand side. What happens to that 20 percent of software that does make it through the human gauntlet and gets released? Is anyone actually using it?</v>
+
+76
+00:10:55.219 --> 00:11:04.567
+<v Maya>The authors looked at that, too. They pulled data across the Apple App Store, Google Play, the Chrome Web Store and SourceForge to see what happens when this AI generated software hits the real world.</v>
+
+77
+00:11:05.255 --> 00:11:18.063
+<v Daniel>And the data shows an absolute flood. Since early 2025, the number of monthly new apps essentially doubled on average. But when they looked at usage, things like downloads, ratings, engagement, it didn't rise at all.</v>
+
+78
+00:11:18.664 --> 00:11:29.150
+<v Maya>And not only did total usage stagnate, the share of apps completely failing to find an audience climbed significantly. On iOS, for instance, the failure rate went from 78% to 87% between January 2025 and April 2026.</v>
+
+79
+00:11:34.177 --> 00:11:42.143
+<v Daniel>So we're just churning out twice as much stuff that nobody wants. I mean, is it just that the AI assisted apps are lower quality?</v>
+
+80
+00:11:42.784 --> 00:11:57.376
+<v Maya>Well, the authors explicitly state they cannot entirely separate low quality from what they call a discovery bottleneck. It could be that these new apps are buggy, derivative or just plain bad. Right. But it could also just be that human attention is</v>
+
+81
+00:11:57.416 --> 00:12:08.339
+<v Maya>finite. You can double the number of apps in the store, you can generate endless content, but you cannot double the number of hours in a consumer's day. There is a human bottleneck on the demand side, too.</v>
+
+82
+00:12:08.839 --> 00:12:23.243
+<v Daniel>This brings up a really interesting tension. Demir and his co-authors view this software setting as a leading indicator for the whole economy. Because software has the least friction, they believe this bottleneck is a preview of what every other industry is going to go through.</v>
+
+83
+00:12:23.503 --> 00:12:24.563
+<v Maya>Yeah, that's their argument.</v>
+
+84
+00:12:25.183 --> 00:12:31.968
+<v Daniel>But if we look at the other research we pulled for this deep dive, you see a completely different narrative playing out in the broader economy right now.</v>
+
+85
+00:12:32.328 --> 00:12:37.611
+<v Maya>This is where expectations collide with reality. The macro data tells a much more sluggish story.</v>
+
+86
+00:12:37.752 --> 00:12:52.642
+<v Daniel>Right. Let's look at the Otsov, Barrero, and Blumpaper firm data on AI from March 2026. They surveyed almost 6,000 global executives across the U.S., U.K., Germany, and Australia. About 70% of these firms say they are using AI.</v>
+
+87
+00:12:53.779 --> 00:12:54.140
+<v Maya>Okay.</v>
+
+88
+00:12:54.461 --> 00:13:06.547
+<v Daniel>Yet over 80% of them report zero impact on employment or productivity over a three-year period. And here's the kicker. top executives are only averaging 1.5 hours of AI use a week.</v>
+
+89
+00:13:06.787 --> 00:13:21.741
+<v Maya>Which perfectly illustrates a disconnect. Why only an hour and a half a week? Is it a lack of training? Is it fear of hallucinations? Most likely it's because executive work is heavily indexed on judgment, relationships, and high-stakes decision-making, the exact things</v>
+
+90
+00:13:21.861 --> 00:13:22.742
+<v Maya>AI struggles with.</v>
+
+91
+00:13:22.862 --> 00:13:23.303
+<v Daniel>Exactly.</v>
+
+92
+00:13:23.863 --> 00:13:30.948
+<v Maya>If you only use a tool for 90 minutes a week to summarize long emails, you haven't redesigned your workflow. You've just bought a fancy new calculator.</v>
+
+93
+00:13:31.229 --> 00:13:45.999
+<v Daniel>Exactly. But even when companies try to roll it out deeply, it doesn't automatically translate to the bottom line. Look at the Dillon study on Microsoft 365 Copilot. They ran a randomized experiment with over 6,000 workers across 56 firms.</v>
+
+94
+00:13:47.023 --> 00:13:55.767
+<v Maya>And to be fair, they found real measurable benefits. Workers saved about half an hour a week managing their email. And they finished documents 12% faster.</v>
+
+95
+00:13:56.408 --> 00:14:01.130
+<v Daniel>But getting your inbox to zero faster doesn't mean the company is making more money.</v>
+
+96
+00:14:01.502 --> 00:14:16.408
+<v Maya>Exactly. This is the crucial distinction. Individual time savings do not automatically equal organizational output. Saving 30 minutes on email might make an employee slightly less stressed, but unless the entire organizational system</v>
+
+97
+00:14:16.468 --> 00:14:22.610
+<v Maya>is rebuilt around reallocating that saved time into high-value work, the company's total output doesn't budge.</v>
+
+98
+00:14:23.318 --> 00:14:34.252
+<v Daniel>Okay, so if the old workflow is the problem, why doesn't a CEO just send out a company-wide email tomorrow morning mandating a brand new AI-optimized workflow? Just force the redesign from the top down.</v>
+
+99
+00:14:34.604 --> 00:14:44.471
+<v Maya>A major corporation actually tried exactly that, and it was a complete disaster. We can look at the Farage study from Microsoft in 2026 called Scaffolding Human AI Collaboration.</v>
+
+100
+00:14:44.611 --> 00:14:45.211
+<v Daniel>Oh, I read this one.</v>
+
+101
+00:14:45.491 --> 00:14:59.862
+<v Maya>Yeah, they looked at 388 employees at a Fortune 500 retailer. Everyone had the same AI tool, but they were placed in different structures. When the company mandated a specific pair protocol, basically forcing employees to interact with the AI in a highly</v>
+
+102
+00:14:59.922 --> 00:15:04.306
+<v Maya>structured back and forth way to ensure quality, it backfired completely.</v>
+
+103
+00:15:04.626 --> 00:15:04.846
+<v Daniel>Wow.</v>
+
+104
+00:15:05.107 --> 00:15:08.369
+<v Maya>It resulted in lower quality work and far fewer documents produced.</v>
+
+105
+00:15:08.630 --> 00:15:12.333
+<v Daniel>So they tried to force a new workflow and it actually made the workers worse.</v>
+
+106
+00:15:12.826 --> 00:15:27.459
+<v Maya>Yes. Now, we should flag that the authors of that study note some specific limitations. There was a session confound, some participant attrition, and the results were sensitive to how the LLM graded the quality of the work. But the core finding holds. Imposed</v>
+
+107
+00:15:27.519 --> 00:15:30.161
+<v Maya>structure is not automatically a good redesign.</v>
+
+108
+00:15:30.482 --> 00:15:31.502
+<v Daniel>Right. Can't just force it.</v>
+
+109
+00:15:31.863 --> 00:15:39.810
+<v Maya>You can't just bolt a rigid bureaucratic protocol onto a fluid generative tool and expect magic. Workflow redesign is incredibly difficult.</v>
+
+110
+00:15:40.461 --> 00:15:44.984
+<v Daniel>So you can't just force it from the top down in a legacy company. Does anyone actually get it right?</v>
+
+111
+00:15:45.324 --> 00:16:00.075
+<v Maya>For a glimpse of what works, we have to look at companies that have no legacy workflows to untangle. The Kim and Koning Working Paper from June 2026 looked at AI-native firms. They studied startups that were built around AI from the very start, rather than older companies</v>
+
+112
+00:16:00.115 --> 00:16:04.078
+<v Maya>trying to awkwardly wedge AI into processes that were designed in the 1990s.</v>
+
+113
+00:16:04.997 --> 00:16:07.219
+<v Daniel>And these companies look organically different, right?</v>
+
+114
+00:16:07.239 --> 00:16:16.225
+<v Maya>Completely different. At comparable valuations, these AI-native firms are 25% smaller. Their management hierarchies are half a seniority level flatter.</v>
+
+115
+00:16:16.926 --> 00:16:23.731
+<v Daniel>And here is the stat that really caught my eye. AI-native startups hire about 15% fewer entry-level workers.</v>
+
+116
+00:16:24.071 --> 00:16:25.032
+<v Maya>That's a striking number.</v>
+
+117
+00:16:25.292 --> 00:16:40.101
+<v Daniel>Okay, but let's play devil's advocate for a second. Startups are already lean, chaotic, and strapped for cash by nature. Are we absolutely sure AI is the reason they are hiring fewer juniors? Or is that just how modern startups operate? Because, I mean, these are just correlations, not a</v>
+
+118
+00:16:40.181 --> 00:16:45.244
+<v Daniel>hard proven rule that AI universally eliminates junior roles across the entire economy.</v>
+
+119
+00:16:45.524 --> 00:17:00.414
+<v Maya>That is the strongest objection to that finding. Absolutely. It is correlational. However, when you pair it with the Demerer data showing AI is incredibly good at the drafting phase. It sends a very strong signal of what a redesigned organization looks</v>
+
+120
+00:17:00.454 --> 00:17:15.236
+<v Maya>like. Right. They don't need as many people to write the rough drafts, so they hire fewer juniors. And for you listening right now, this is where the rubber meets the road. Think about the massive implications this has for the future of higher education. Think about institutions serving</v>
+
+121
+00:17:15.356 --> 00:17:21.358
+<v Maya>early career workers, adult learners, and first-generation students, much like CUNY's student body in New York.</v>
+
+122
+00:17:21.718 --> 00:17:36.264
+<v Daniel>That is such a vital connection. Because entry-level work has traditionally been the painting station, to use our earlier analogy. It's where junior employees learn the ropes by doing the drafting, the coding, the summarizing. That's how they build the</v>
+
+123
+00:17:36.344 --> 00:17:38.565
+<v Daniel>expertise to eventually become the editor.</v>
+
+124
+00:17:39.006 --> 00:17:39.486
+<v Maya>Exactly.</v>
+
+125
+00:17:40.347 --> 00:17:51.133
+<v Daniel>If AI does all the drafting and the only human bottleneck left is high-level review and judgment, how does a first-generation college student get their foot in the door? We are looking at a profound skills gap.</v>
+
+126
+00:17:51.646 --> 00:17:53.427
+<v Maya>It forces a complete curriculum shift.</v>
+
+127
+00:17:53.567 --> 00:17:53.747
+<v Daniel>Wow.</v>
+
+128
+00:17:54.067 --> 00:18:02.391
+<v Maya>What do universities teach when producing a first draft is completely cheap, but review, judgment, and deciding what to actually ship are the ultimate bottlenecks.</v>
+
+129
+00:18:02.771 --> 00:18:17.598
+<v Daniel>Right. If a student can generate a 50-page marketing analysis in 10 seconds, the valuable skill isn't the generation. It's the ability to ruthlessly edit it, to spot the AI's hallucinations, and to know if the argument actually solves a real human</v>
+
+130
+00:18:17.658 --> 00:18:21.160
+<v Daniel>business problem. How on earth do you credential judgment?</v>
+
+131
+00:18:22.101 --> 00:18:36.911
+<v Maya>That is the existential question for higher education right now. Universities have to figure out how to partner directly with employers to redesign these workflows together. They can't just teach students how to write a good prompt or license a software tool because the tool will change</v>
+
+132
+00:18:37.071 --> 00:18:39.433
+<v Maya>next year. The judgment is what matters.</v>
+
+133
+00:18:40.273 --> 00:18:55.136
+<v Daniel>And honestly, a university has to look in the mirror and treat its own processes as a chain with the weakest link. If admissions or grading or curriculum development is bottlenecked by a legacy paper-pushing process, plugging</v>
+
+134
+00:18:55.196 --> 00:19:03.358
+<v Daniel>in AI into just one step isn't going to fix the output of the university. The institution itself has to redesign how it operates if it wants to survive.</v>
+
+135
+00:19:04.128 --> 00:19:18.937
+<v Maya>And the stakes really couldn't be higher. Those adult learners and first-generation students are the most exposed if we don't adapt how we prepare them. If the AI-native economy is flattening hierarchies and shrinking entry-level roles by 15%, those students need to be</v>
+
+136
+00:19:18.997 --> 00:19:24.040
+<v Maya>equipped with higher-order judgment skills from day one, or they will be locked out of the system entirely.</v>
+
+137
+00:19:24.503 --> 00:19:39.235
+<v Daniel>Okay, let's bring this all together. The narrative arc across all this research is incredibly clear. Generative AI is unleashing massive, undeniable task-level productivity. We are seeing 240% more commits, nearly 10 times as many lines of code,</v>
+
+138
+00:19:39.715 --> 00:19:41.337
+<v Daniel>more raw material than ever before.</v>
+
+139
+00:19:41.617 --> 00:19:42.478
+<v Maya>Yeah, a flood of it.</v>
+
+140
+00:19:43.018 --> 00:19:54.147
+<v Daniel>But the weak link is human review, judgment, and organizational structure. We are drowning in a sea of experimentation. But because the chain hasn't been redesigned yet, we are shipping only a tiny fraction of it.</v>
+
+141
+00:19:54.861 --> 00:20:09.468
+<v Maya>If the true bottleneck of the AI era is human judgment and the bandwidth to review, then the most valuable skill of the future isn't knowing how to generate ideas. It's knowing which ideas to throw away. Ask yourself, in your organization, are you still rewarding people for</v>
+
+142
+00:20:09.568 --> 00:20:14.090
+<v Maya>generating sheer volume? Or are you rewarding them for the courage to ruthlessly edit?</v>
+
+143
+00:20:14.669 --> 00:20:29.126
+<v Daniel>We started this deep dive talking about a paradox. We wanted the clean, simple x-ray showing exactly where AI was boosting the economy. But instead, we found an overflowing inbox of rough drafts waiting for human approval. The boom is there.</v>
+
+144
+00:20:29.727 --> 00:20:38.497
+<v Daniel>It's just getting stuck in the pipeline of our own outdated workflows. Thank you so much for joining us on this deep dive. Keep questioning, keep learning, and we'll see you next time.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2026 10:41:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 09:12:51 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1878,5 +1878,41 @@ Reference: Humlum, A., &amp; Vestergaard, E. (2026). Still Waters, Rapid Current
       <pubDate>Wed, 04 Nov 2026 09:21:43 +0000</pubDate>
       <itunes:episode>97</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/097%20-%20When%20The%20Newest%20Agents%20Catch%20Up.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>098 - When AI Writes More Than Anyone Ships</title>
+      <description>Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools (September 2026)
+
+In this episode we unpack an NBER working paper by Mert Demirer of MIT, Leon Musolff of Wharton and Liyuan Yang of Boston University, built on more than 500,000 GitHub developers and Microsoft usage telemetry. The argument: AI coding tools have produced enormous gains in writing code, but most of that gain disappears before anything ships, because the human stages further down the chain have not sped up.
+
+We walk through the three tool generations (autocomplete, sync agents and async agents), the matched event study behind a 240 percent cumulative rise in commits that falls to 80 percent for projects and 30 percent for releases, and the hierarchical weak-link model with its elasticity of substitution of 0.23. We cover the evidence that the lost gains are mostly experimentation, the marketplace data showing new apps roughly doubling with no rise in usage, and how this sits beside AI-Native Firms, Firm Data on AI, the Microsoft 365 Copilot experiment and a retailer field experiment on scaffolding. We close on what organizations must redesign for AI to pay off, and what universities should teach when review and judgment become the bottleneck.
+
+Reference: Demirer, M., Musolff, L., &amp; Yang, L. (2026). Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools. NBER Working Paper 35275. https://www.nber.org/papers/w35275
+Reference: Kim, H., &amp; Koning, R. (2026). AI-Native Firms. Harvard Business School Working Paper 26-090. https://www.hbs.edu/ris/Publication%20Files/26-090_96f92aa0-37d9-4789-beaa-5c0cb87a4032.pdf
+Reference: Yotzov, I., Barrero, J. M., Bloom, N., et al. (2026). Firm Data on AI. Federal Reserve Bank of Atlanta Working Paper 2026-3. https://doi.org/10.29338/wp2026-03
+Reference: Dillon, E. W., Jaffe, S., Peng, S., &amp; Cambon, A. (2025). Early Impacts of M365 Copilot. arXiv:2504.11443. https://arxiv.org/abs/2504.11443
+Reference: Farach, A., Cambon, A., Tankelevitch, L., Hsueh, C., &amp; Janssen, R. (2026). Scaffolding Human-AI Collaboration: A Field Experiment on Behavioral Protocols and Cognitive Reframing. arXiv:2604.08678. https://arxiv.org/abs/2604.08678</description>
+      <guid isPermaLink="false">34fef173501af1fe0876c60980eba618558e345c</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/098%20-%20When%20AI%20Writes%20More%20Than%20Anyone%20Ships.m4a" length="39884948" type="audio/mp4" />
+      <pubDate>Thu, 05 Nov 2026 07:19:41 +0000</pubDate>
+      <itunes:episode>98</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/098%20-%20When%20AI%20Writes%20More%20Than%20Anyone%20Ships.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>099 - When The Dynamo Needed A New Factory</title>
+      <description>The Dynamo and the Computer (May 1990) + Information Technology, Workplace Organization, and the Demand for Skilled Labor (2002)
+
+In this episode we unpack two classics on one question: does a general-purpose technology pay off without organizational change? Paul David of Stanford argues that electric power took four decades to reach factory productivity because owners bolted motors onto old layouts, and Timothy Bresnahan, Erik Brynjolfsson and Lorin Hitt show in firm-level data that computers pay when they come with new ways of organizing work and more skilled people.
+
+We walk through David's move from group drive to unit drive, the redesigned single-story factory, and his warning that computers are not dynamos, then the Bresnahan, Brynjolfsson and Hitt study of about 400 large US firms and its finding that firms with only one complement can do worse than firms with none. We test both against Americans Do I.T. Better, the Productivity J-Curve and a 2026 survey of corporate executives, and close on what the lag means for generative AI and for universities training the people who redesign work.
+
+Reference: David, P. A. (1990). The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox. American Economic Review, 80(2), 355-361. https://www.jstor.org/stable/2006600
+Reference: Bresnahan, T. F., Brynjolfsson, E., &amp; Hitt, L. M. (2002). Information Technology, Workplace Organization, and the Demand for Skilled Labor: Firm-Level Evidence. Quarterly Journal of Economics, 117(1), 339-376. https://doi.org/10.1162/003355302753399526
+Reference: Bloom, N., Sadun, R., &amp; Van Reenen, J. (2007). Americans Do I.T. Better: US Multinationals and the Productivity Miracle. NBER Working Paper 13085. https://www.nber.org/papers/w13085
+Reference: Brynjolfsson, E., Rock, D., &amp; Syverson, C. (2021). The Productivity J-Curve: How Intangibles Complement General Purpose Technologies. American Economic Journal: Macroeconomics, 13(1), 333-372. https://doi.org/10.1257/mac.20180386
+Reference: Baslandze, S., Edwards, Z., Graham, J., et al. (2026). Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives. NBER Working Paper 34984. https://www.nber.org/papers/w34984</description>
+      <guid isPermaLink="false">00d4cdfbd0bd0b5c6d41a038e2d2c411523f5ad4</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/099%20-%20When%20The%20Dynamo%20Needed%20A%20New%20Factory.m4a" length="40360928" type="audio/mp4" />
+      <pubDate>Thu, 05 Nov 2026 07:30:10 +0000</pubDate>
+      <itunes:episode>99</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/099%20-%20When%20The%20Dynamo%20Needed%20A%20New%20Factory.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

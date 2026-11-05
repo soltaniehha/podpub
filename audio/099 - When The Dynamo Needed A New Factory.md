@@ -1,0 +1,11 @@
+The Dynamo and the Computer (May 1990) + Information Technology, Workplace Organization, and the Demand for Skilled Labor (2002)
+
+In this episode we unpack two classics on one question: does a general-purpose technology pay off without organizational change? Paul David of Stanford argues that electric power took four decades to reach factory productivity because owners bolted motors onto old layouts, and Timothy Bresnahan, Erik Brynjolfsson and Lorin Hitt show in firm-level data that computers pay when they come with new ways of organizing work and more skilled people.
+
+We walk through David's move from group drive to unit drive, the redesigned single-story factory, and his warning that computers are not dynamos, then the Bresnahan, Brynjolfsson and Hitt study of about 400 large US firms and its finding that firms with only one complement can do worse than firms with none. We test both against Americans Do I.T. Better, the Productivity J-Curve and a 2026 survey of corporate executives, and close on what the lag means for generative AI and for universities training the people who redesign work.
+
+Reference: David, P. A. (1990). The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox. American Economic Review, 80(2), 355-361. https://www.jstor.org/stable/2006600
+Reference: Bresnahan, T. F., Brynjolfsson, E., & Hitt, L. M. (2002). Information Technology, Workplace Organization, and the Demand for Skilled Labor: Firm-Level Evidence. Quarterly Journal of Economics, 117(1), 339-376. https://doi.org/10.1162/003355302753399526
+Reference: Bloom, N., Sadun, R., & Van Reenen, J. (2007). Americans Do I.T. Better: US Multinationals and the Productivity Miracle. NBER Working Paper 13085. https://www.nber.org/papers/w13085
+Reference: Brynjolfsson, E., Rock, D., & Syverson, C. (2021). The Productivity J-Curve: How Intangibles Complement General Purpose Technologies. American Economic Journal: Macroeconomics, 13(1), 333-372. https://doi.org/10.1257/mac.20180386
+Reference: Baslandze, S., Edwards, Z., Graham, J., et al. (2026). Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives. NBER Working Paper 34984. https://www.nber.org/papers/w34984
