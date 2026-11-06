@@ -1,0 +1,653 @@
+WEBVTT
+
+1
+00:00:00.231 --> 00:00:15.104
+<v Daniel>You know, I mean, when we picture the future of work, there's this recurring image we've all been sold. It's like a pilot sitting in this pristine glass cockpit, hands completely off the yoke, while an algorithm just flies the plane</v>
+
+2
+00:00:15.224 --> 00:00:16.725
+<v Daniel>perfectly through a violent storm.</v>
+
+3
+00:00:17.206 --> 00:00:20.809
+<v Maya>Right. That comforting myth of total frictionless automation.</v>
+
+4
+00:00:21.390 --> 00:00:30.733
+<v Daniel>Exactly. We like to think the machine just takes over, solves all the complexity for us, and the human gets to just sit back, sip a coffee, and watch the screens.</v>
+
+5
+00:00:31.273 --> 00:00:41.477
+<v Maya>Yeah, but then you step into messy, high-stakes, real-world fields, you know, like child welfare or hiring or criminal justice, and that autopilot image just kind of shatters.</v>
+
+6
+00:00:41.877 --> 00:00:50.540
+<v Daniel>It really does. The human's hands are still tightly gripping the yoke, fighting the turbulence, and the machine is literally just a blinking light on the dashboard saying, hey, watch out.</v>
+
+7
+00:00:51.202 --> 00:01:03.490
+<v Maya>And that blinking light, that represents the absolute frontier of the modern workplace right now. We are moving way past the theoretical debates about whether AI will replace us and into the gritty reality of human AI partnerships.</v>
+
+8
+00:01:03.651 --> 00:01:03.891
+<v Daniel>Right.</v>
+
+9
+00:01:04.151 --> 00:01:19.081
+<v Maya>I mean, the essential question isn't about replacing judgment anymore. It's about what happens when a machine prediction sits right alongside a professional's judgment. When nobody is forced to follow the machine, does anything actually get better? And crucially, whose judgment</v>
+
+10
+00:01:19.281 --> 00:01:20.222
+<v Maya>does it actually help?</v>
+
+11
+00:01:20.622 --> 00:01:35.220
+<v Daniel>So if you were listening to this deep dive and wondering how artificial intelligence is going to change your day-to-day job, or if you're trying to figure out how to prepare the next generation of professionals for this massive shift, this is the exact scenario you need to pay attention to.</v>
+
+12
+00:01:35.420 --> 00:01:35.980
+<v Maya>Absolutely.</v>
+
+13
+00:01:36.621 --> 00:01:51.309
+<v Daniel>And to get to the bottom of this, we are looking at a stack of incredibly revealing sources today. Our primary focus is a brand new, just fascinating experiment from September 2026 by researchers Barron, Ghosh and</v>
+
+14
+00:01:51.329 --> 00:01:51.769
+<v Daniel>Lombardo.</v>
+
+15
+00:01:51.970 --> 00:01:57.993
+<v Maya>Yeah. Predictive risk scores in the public sector. Experimental evidence from child protection investigations.</v>
+
+16
+00:01:58.466 --> 00:02:13.411
+<v Daniel>That's the one. And we're also pulling in a few background papers to really test the boundaries of these findings and frankly see where this entire model falls apart. Okay, let's unpack this, starting with the exact setup of this brand new experiment. Because in</v>
+
+17
+00:02:13.451 --> 00:02:16.872
+<v Daniel>this deep dive, the design of the study is the whole point.</v>
+
+18
+00:02:17.187 --> 00:02:27.427
+<v Maya>It really is. I mean, before we even touch the results, we have to understand the specific environment where this tool was introduced. It completely breaks the mold of how we usually think about workplace automation.</v>
+
+19
+00:02:27.768 --> 00:02:28.870
+<v Daniel>Okay, set the scene for us.</v>
+
+20
+00:02:29.421 --> 00:02:44.105
+<v Maya>So we are looking at Northampton County, Pennsylvania, over a very specific 14-month window. This is from December 18, 2023 to February 15, 2025. And the experiment covered 4,752 child</v>
+
+21
+00:02:44.186 --> 00:02:48.707
+<v Maya>referral observations, encompassing 3,488 unique children.</v>
+
+22
+00:02:49.047 --> 00:02:57.189
+<v Daniel>That is thousands of highly sensitive, incredibly complex cases. And how many human investigators were handling that volume?</v>
+
+23
+00:02:57.650 --> 00:02:58.070
+<v Maya>Just 34. Wait.</v>
+
+24
+00:02:59.725 --> 00:03:04.408
+<v Daniel>Really, just 34. That is a staggering cognitive load for 34 people.</v>
+
+25
+00:03:04.768 --> 00:03:05.429
+<v Maya>It's massive.</v>
+
+26
+00:03:06.109 --> 00:03:15.855
+<v Daniel>You are essentially asking a very small group of humans to process an avalanche of trauma and historical data, day in and day out, and somehow never make a mistake.</v>
+
+27
+00:03:16.315 --> 00:03:23.640
+<v Maya>Right. And to manage that exact cognitive load, the county introduced a tool. It was an XGBoost machine learning model.</v>
+
+28
+00:03:24.100 --> 00:03:27.102
+<v Daniel>Which in non-technical terms is what exactly?</v>
+
+29
+00:03:27.778 --> 00:03:39.541
+<v Maya>Basically, XGBoost is a highly advanced pattern recognition system. They trained it on historical county records to figure out which combinations of factors usually led to a child eventually being placed in foster care.</v>
+
+30
+00:03:39.901 --> 00:03:40.561
+<v Daniel>Okay, got it.</v>
+
+31
+00:03:41.021 --> 00:03:49.283
+<v Maya>And based on that history, the model produced a simple five-level complexity score for each new case. It ranged from very low to very high risk.</v>
+
+32
+00:03:49.908 --> 00:03:58.146
+<v Daniel>So let me guess the methodology here. They forced half the human investigators to use the tool and completely took it away from the other half to see who performed better.</v>
+
+33
+00:03:58.693 --> 00:04:05.779
+<v Maya>Actually, no. The researchers took a much more elegant approach. The experiment was pre-registered and randomized at the family level.</v>
+
+34
+00:04:05.919 --> 00:04:06.539
+<v Daniel>Oh, interesting.</v>
+
+35
+00:04:06.679 --> 00:04:20.530
+<v Maya>Yeah. The algorithm was running in the background for every single case, but the only thing that was randomized was whether the human supervisor could actually see the algorithm's score on their screen. For the control cases, the screen literally just read, score not shown.</v>
+
+36
+00:04:20.982 --> 00:04:26.564
+<v Daniel>Meaning the tool is generating a prediction for everyone, but only some supervisors get the privilege of looking at it.</v>
+
+37
+00:04:26.784 --> 00:04:39.988
+<v Maya>Exactly. And here is the most crucial insight you need to take away from this setup. Every single piece of data, like every historical input the algorithm used to calculate that risk score, was already sitting in the family's case file.</v>
+
+38
+00:04:40.277 --> 00:04:41.998
+<v Daniel>Wait, so the human already had access to it?</v>
+
+39
+00:04:42.219 --> 00:04:56.971
+<v Maya>Yes. The experiment only changed how information was presented to the human, not what information existed. And on top of that, the algorithm recommended absolutely nothing. It automated nothing. The human professionals retained 100% full</v>
+
+40
+00:04:57.011 --> 00:04:57.992
+<v Maya>discretion over the case.</v>
+
+41
+00:04:58.272 --> 00:05:10.760
+<v Daniel>Wow. It's like having a sous chef who doesn't actually cook anything, and they don't bring a single new ingredient into the kitchen. They just walk in, point a laser pointer at a pile of ingredients you already bought, and say, hey, pay attention to this.</v>
+
+42
+00:05:11.260 --> 00:05:12.161
+<v Maya>That's a great way to put it.</v>
+
+43
+00:05:12.761 --> 00:05:17.564
+<v Daniel>But, I mean, why would that even change the meal? You already had the ingredients. You already knew they were on the counter.</v>
+
+44
+00:05:18.195 --> 00:05:33.083
+<v Maya>Well, what's fascinating here is that your sous chef analogy isolates exactly why this study design is so vital. It has a very specific behavioral mechanism, like does synthesizing existing data and slapping a clear label on it alter</v>
+
+45
+00:05:33.123 --> 00:05:34.704
+<v Maya>human attention and human action?</v>
+
+46
+00:05:35.044 --> 00:05:35.225
+<v Daniel>Right.</v>
+
+47
+00:05:35.805 --> 00:05:39.327
+<v Maya>If the machine isn't giving you new facts, does it still change what you do?</v>
+
+48
+00:05:39.747 --> 00:05:46.691
+<v Daniel>Well, looking at the numbers from Northampton County, the answer is a dramatic yes, right? I mean, the humans absolutely change their behavior.</v>
+
+49
+00:05:46.977 --> 00:05:56.622
+<v Maya>They did. Let's state those numbers plainly. When supervisors could see the score, overall foster care placements rose by 0.10 standard deviations.</v>
+
+50
+00:05:56.882 --> 00:05:59.643
+<v Daniel>Okay, and to translate that into real-world impact?</v>
+
+51
+00:06:00.243 --> 00:06:06.566
+<v Maya>That is a 1.2 percentage point increase on a control rate of 1.3%. You're</v>
+
+52
+00:06:06.987 --> 00:06:08.327
+<v Daniel>saying placements nearly doubled.</v>
+
+53
+00:06:08.728 --> 00:06:09.408
+<v Maya>Essentially, yes.</v>
+
+54
+00:06:09.971 --> 00:06:17.398
+<v Daniel>Just because a risk score was made visible on a screen, the human authorities were twice as likely to remove a child from a home. I mean, that sounds incredibly aggressive.</v>
+
+55
+00:06:17.678 --> 00:06:26.867
+<v Maya>It sounds aggressive until you look at exactly where those interventions happened. The effect was intensely concentrated in the specific group the machine flagged as very high risk.</v>
+
+56
+00:06:27.167 --> 00:06:28.148
+<v Daniel>Okay, break that down for me.</v>
+
+57
+00:06:28.699 --> 00:06:43.686
+<v Maya>For that very high group, placement rose 0.46 standard deviations. And that's statistically significant with a p-value of less than 0.10. Wow. Moving a case into ongoing services rose 0.49 standard deviations. That one is</v>
+
+58
+00:06:43.746 --> 00:06:53.551
+<v Maya>highly significant with a p-value of less than 0.01. And substantiating the abuse allegation rose 0.32 standard deviations with a p-value of less than 0.05.</v>
+
+59
+00:06:54.426 --> 00:07:01.068
+<v Daniel>So they didn't just blanket increase their interventions across the board. They surgically intervened where the machine pointed the laser pointer.</v>
+
+60
+00:07:01.408 --> 00:07:01.889
+<v Maya>Exactly.</v>
+
+61
+00:07:02.489 --> 00:07:11.412
+<v Daniel>But did this mean they ignored the other cases? Like if I'm spending all my time on the very high risk files, what happens to the families flagged as very low?</v>
+
+62
+00:07:11.972 --> 00:07:20.835
+<v Maya>There was almost no change at all for the lower risk cases. The baseline level of care remained steady. The surge in action was purely concentrated at the top of the risk scale.</v>
+
+63
+00:07:21.211 --> 00:07:35.755
+<v Daniel>OK, so the action clearly changed. The humans did more. But taking a child out of a home or opening an ongoing service case, that is a massive disruption. Did all this extra action actually help the kids or did it just create more bureaucratic trauma?</v>
+
+64
+00:07:36.316 --> 00:07:44.038
+<v Maya>Well, let's look at the outcomes. The researchers used re-referrals to the child protection system within three months as their primary proxy for child safety.</v>
+
+65
+00:07:44.423 --> 00:07:51.165
+<v Daniel>Because if a family is re-referred, it usually means whatever intervention happened the first time didn't solve the underlying danger, right?</v>
+
+66
+00:07:51.285 --> 00:08:02.708
+<v Maya>Right. And under the algorithm's guidance, re-referrals fell by 3.8 points from a baseline of 25.8%. That is a 15% reduction in children returning to the system.</v>
+
+67
+00:08:02.908 --> 00:08:14.232
+<v Daniel>Okay, but let me play the skeptic for a second. If I take a bunch of high-risk children out of their abusive homes and put them into the foster care system, of course they aren't going to get re-referred for abuse in their original home.</v>
+
+68
+00:08:14.652 --> 00:08:15.872
+<v Maya>Because they aren't there anymore.</v>
+
+69
+00:08:16.152 --> 00:08:21.554
+<v Daniel>Exactly. That's not necessarily a brilliant intervention. That's just a mechanical result of removal.</v>
+
+70
+00:08:21.814 --> 00:08:31.437
+<v Maya>The researchers actually anticipated that exact critique. When you exclude the children placed in foster care from the data entirely, the reduction in re-referrals is essentially unchanged.</v>
+
+71
+00:08:31.905 --> 00:08:36.491
+<v Daniel>Oh, wow. Really? Yeah. The drop in harm wasn't a mechanical illusion.</v>
+
+72
+00:08:36.912 --> 00:08:44.722
+<v Maya>Something about the investigation itself, you know, the ongoing services, the heightened attention, it materially changed the trajectory for those families who stayed intact.</v>
+
+73
+00:08:45.072 --> 00:09:00.069
+<v Daniel>Okay, but I still have a systemic concern here. You have 34 investigators. Suddenly, an algorithm is telling them to pay hyper-attention to certain cases, and they are doubling down on services and substantiations. Didn't they just get totally</v>
+
+74
+00:09:00.209 --> 00:09:04.074
+<v Daniel>overwhelmed? I mean, you can't just magically create more hours in the day.</v>
+
+75
+00:09:04.698 --> 00:09:15.161
+<v Maya>You'd think so, but overall recorded tool use and supervisory activity did not rise across the board. The targeting improved without creating a broad, crushing increase in supervisor workload.</v>
+
+76
+00:09:15.221 --> 00:09:17.022
+<v Daniel>So they just worked smarter, not harder?</v>
+
+77
+00:09:17.662 --> 00:09:32.226
+<v Maya>Pretty much. They essentially reallocated their existing cognitive bandwidth more efficiently. And importantly, there was no evidence that racial disparities widened as a result of using the tool. There was also no evidence that the control families, the ones where the score wasn't shown, were</v>
+
+78
+00:09:32.326 --> 00:09:34.367
+<v Maya>harmed by sharing the same busy investigators.</v>
+
+79
+00:09:35.050 --> 00:09:49.618
+<v Daniel>You know, here's where it gets really interesting for me. I want to know the psychology of why this worked. Did the algorithm score actually improve the investigators' beliefs about the case? Like, oh, I didn't realize this was so dangerous until the AI told me.</v>
+
+80
+00:09:50.279 --> 00:09:51.840
+<v Daniel>Or did it just give them cover?</v>
+
+81
+00:09:52.740 --> 00:09:54.141
+<v Maya>Cover? What do you mean?</v>
+
+82
+00:09:54.473 --> 00:10:08.763
+<v Daniel>Well, think about it from the perspective of a public servant. You look at a file, you have a terrible gut feeling, but intervening is a massive, life-altering decision. It's going to invite legal scrutiny, parental anger, and a mountain of paperwork.</v>
+
+83
+00:10:09.483 --> 00:10:18.309
+<v Daniel>Sometimes a professional just needs the bureaucratic cover of a hard data point, a machine saying very high, to justify acting on the instinct they already had.</v>
+
+84
+00:10:18.577 --> 00:10:28.319
+<v Maya>That is a deeply human reality of organizational decision making. And to be scientifically rigorous, the paper explicitly cannot separate those mechanisms.</v>
+
+85
+00:10:28.479 --> 00:10:29.579
+<v Daniel>They can't tell which one it is.</v>
+
+86
+00:10:29.819 --> 00:10:44.563
+<v Maya>No, the researchers cannot tell us whether the score mathematically improved the human's beliefs, whether it simply directed their scarce attention to a file they might have skimmed, or whether it gave them the institutional cover to act on existing concerns. It could</v>
+
+87
+00:10:44.623 --> 00:10:46.043
+<v Maya>easily be a combination of all three.</v>
+
+88
+00:10:46.822 --> 00:11:01.341
+<v Daniel>Okay, but let's play devil's advocate again. This sounds almost too perfectly effective. What's the catch? Because the sample size of 34 investigators in a single county feels like a tiny foundation to build our entire philosophy of human-AI</v>
+
+89
+00:11:01.381 --> 00:11:02.002
+<v Daniel>partnership on.</v>
+
+90
+00:11:02.435 --> 00:11:16.926
+<v Maya>We definitely need to be honest about the limits of this single study. First, as you noted, this is only one county in Pennsylvania. Right. What works there might not map perfectly onto a massive urban center like New York or Los Angeles. Second,</v>
+
+91
+00:11:17.046 --> 00:11:25.752
+<v Maya>re-referral is just a proxy for child safety. It's not a perfect, omniscient measure. And the authors themselves are careful to call the evidence suggestive.</v>
+
+92
+00:11:26.305 --> 00:11:27.528
+<v Daniel>Suggestive, not definitive.</v>
+
+93
+00:11:27.708 --> 00:11:27.889
+<v Maya>Right.</v>
+
+94
+00:11:28.570 --> 00:11:34.843
+<v Daniel>And what about that massive drop in re-referrals for the very high risk group? That was the most impressive stat you cited.</v>
+
+95
+00:11:35.138 --> 00:11:43.002
+<v Maya>Right, so if you isolate just the very high group's re-referral estimate, it is actually not statistically significant on its own.</v>
+
+96
+00:11:43.283 --> 00:11:43.703
+<v Daniel>Wait, really?</v>
+
+97
+00:11:43.943 --> 00:11:58.691
+<v Maya>Yeah. It's a 0.19 standard deviation drop, but the p-value is 0.14. That means there's a 14% chance that specific isolated drop was just random noise. Also, treated children were more often</v>
+
+98
+00:11:58.731 --> 00:12:10.640
+<v Maya>recorded as white, though the researchers' statistical analysis does control for this. And finally, this is currently a working paper, meaning it is still making its way through the formal peer review process.</v>
+
+99
+00:12:11.100 --> 00:12:22.710
+<v Daniel>Good to know. But I want to zoom in on one specific finding in this paper that is arguably the weakest statistically, but easily the most fascinating conceptually. It's the 19 investigator result.</v>
+
+100
+00:12:23.187 --> 00:12:32.411
+<v Maya>Oh, yes. So the entire fall in re-referrals, that 15% overall reduction we discussed, sits almost entirely among the higher performing investigators.</v>
+
+101
+00:12:32.631 --> 00:12:34.392
+<v Daniel>And for the lower performing investigators?</v>
+
+102
+00:12:34.792 --> 00:12:39.314
+<v Maya>For the lower performing investigators, the improvement from having the algorithm is near zero.</v>
+
+103
+00:12:39.734 --> 00:12:46.577
+<v Daniel>It's like giving a high-end, professionally strung tennis racket to a touring pro versus giving it to a total beginner who just walked onto the court.</v>
+
+104
+00:12:46.697 --> 00:12:47.137
+<v Maya>Exactly.</v>
+
+105
+00:12:47.759 --> 00:13:02.157
+<v Daniel>The algorithm is the racket. It complements the pro's existing judgment, their footwork, their form. It accelerates what they are already good at. But the beginner, they're still going to hit the ball into the net, no matter how much carbon fiber you put in their hands,</v>
+
+106
+00:13:02.738 --> 00:13:05.341
+<v Daniel>because they don't have the baseline skill to utilize the tool.</v>
+
+107
+00:13:05.581 --> 00:13:20.532
+<v Maya>It's a great analogy, but I urge extreme caution with that finding. The researchers could only estimate baseline skill for 19 of the 34 investigators. Drawing massive systemic conclusions from an N of 19 is</v>
+
+108
+00:13:20.572 --> 00:13:23.254
+<v Maya>an inference, not a definitive scientific finding.</v>
+
+109
+00:13:23.614 --> 00:13:38.412
+<v Daniel>Understood. But it brings us to this massive tension in the background literature. Let's look at the broader landscape of AI in the workplace. Why did the algorithm complement the investigators so well in Northampton County when other major studies show</v>
+
+110
+00:13:38.452 --> 00:13:41.754
+<v Daniel>human discretion totally ruining algorithmic accuracy?</v>
+
+111
+00:13:42.094 --> 00:13:54.761
+<v Maya>We have to explore the multistage challenge here. The sharpest complement to our main paper is an October 2026 working paper by Jason Barron, Will Dobby, and colleagues. They examined multistage systems in Michigan's child welfare system.</v>
+
+112
+00:13:55.081 --> 00:13:56.342
+<v Daniel>Okay, multistage meaning?</v>
+
+113
+00:13:56.740 --> 00:14:04.604
+<v Maya>Meaning the system has two distinct stages. You have hotline screeners who take the initial phone call and then investigators who eventually go out to the physical house.</v>
+
+114
+00:14:05.104 --> 00:14:09.787
+<v Daniel>Okay. So stage one is triage on the phone. Stage two is gathering evidence in the field.</v>
+
+115
+00:14:10.152 --> 00:14:24.957
+<v Maya>Right. And when you test human hotline screeners against an equally selective algorithm at the initial screening stage, the humans lose terribly. The algorithm screened out calls that resulted in 11.5 percentage points less subsequent maltreatment.</v>
+
+116
+00:14:25.157 --> 00:14:30.079
+<v Maya>Wow. And out of 291 human screeners, literally zero of them beat the machine.</v>
+
+117
+00:14:30.419 --> 00:14:36.941
+<v Daniel>Wait, zero out of 291 professionals. The humans batted zero. That is a brutal indictment of human judgment.</v>
+
+118
+00:14:37.421 --> 00:14:39.302
+<v Maya>It is at that specific stage.</v>
+
+119
+00:14:39.677 --> 00:14:54.431
+<v Daniel>But downstream, in the field, 33.9% of the human investigators do beat the machine. Okay, so the field workers possess some judgment that the phone workers lack. But if the algorithm is dominating the phone stage, why not just deploy the algorithm at the hotline, get that</v>
+
+120
+00:14:54.531 --> 00:14:58.055
+<v Daniel>massive 11.5 point gain, and let the field workers handle the rest?</v>
+
+121
+00:14:58.395 --> 00:15:13.350
+<v Maya>Because of how humans respond to changes in their workflow. The authors ran estimated counterfactuals, and to be clear, these are counterfactual estimates, not a live experiment. And they found that if you deploy the algorithm at the screening stage, the system-wide</v>
+
+122
+00:15:13.390 --> 00:15:16.912
+<v Maya>improvement in reducing maltreatment shrinks to only 1.3 points.</v>
+
+123
+00:15:17.352 --> 00:15:25.255
+<v Daniel>That makes no mathematical sense. The algorithm secures an 11.5-point advantage at the front door. Where did all that benefit go by the time the process finished?</v>
+
+124
+00:15:25.732 --> 00:15:40.718
+<v Maya>downstream. Humans respond to what they receive. The algorithm, being purely mathematical, sends the field investigators a totally different, riskier pool of cases than they are used to seeing. I see. But the investigators are human, right? They</v>
+
+125
+00:15:40.758 --> 00:15:54.344
+<v Maya>rely heavily on their own prior history and experience, which the algorithm weighs differently. They look at these new algorithmically flagged families, think this doesn't fit my traditional profile of danger, and they choose not to open cases for them.</v>
+
+126
+00:15:55.172 --> 00:15:59.494
+<v Daniel>So their human skepticism completely offsets the gains the algorithm made at the screening stage?</v>
+
+127
+00:15:59.714 --> 00:16:00.134
+<v Maya>Exactly.</v>
+
+128
+00:16:00.874 --> 00:16:15.800
+<v Daniel>So the lesson here is that humans who go out into the field and gather new information, like the investigators walking into a physical house, are not competing with the prediction at all. They are adding to it. They can see things the algorithm can't see, like a terrified look from a child or</v>
+
+129
+00:16:15.840 --> 00:16:17.101
+<v Daniel>the smell of a gas leak.</v>
+
+130
+00:16:17.477 --> 00:16:26.442
+<v Maya>Right, and we see a similar complementary effect in a paper by Grimman and Mills. They ran a randomized controlled trial at the screening stage with over 4,600 cases.</v>
+
+131
+00:16:26.822 --> 00:16:27.403
+<v Daniel>And what did they find?</v>
+
+132
+00:16:28.163 --> 00:16:39.950
+<v Maya>They found a 21% drop in child injury admissions. And crucially, the workers didn't mechanically follow the algorithm, you know. They used it to complement their own process, synthesizing their judgment with the machine's flag.</v>
+
+133
+00:16:40.596 --> 00:16:55.263
+<v Daniel>Okay, but if humans gathering context in the field is the secret sauce for making AI work, what about the strongest objections to this? Because there is a mountain of evidence, particularly in corporate America and the justice system, saying humans should just get out of the way entirely.</v>
+
+134
+00:16:55.621 --> 00:17:10.236
+<v Maya>Oh, definitely. The strongest objection comes from the direct leadership case against human discretion. Take a paper by Hoffman, Kahn, and Lee. They looked at 15 firms using job screening tests for hiring. They found that when human managers use their</v>
+
+135
+00:17:10.276 --> 00:17:15.922
+<v Maya>discretion to overrule the algorithm's recommendation, they consistently ended up with worse hires.</v>
+
+136
+00:17:16.517 --> 00:17:31.283
+<v Daniel>Which makes sense. Right. Think about what a hiring manager is doing there. They look at the test score, but then they interview the person and say, I know the machine says they are a bad fit, but I really like their handshake. We went to the same college. The human gut instinct actively destroyed the</v>
+
+137
+00:17:31.363 --> 00:17:32.203
+<v Daniel>algorithm's value.</v>
+
+138
+00:17:32.503 --> 00:17:43.887
+<v Maya>And we see the exact same failure of discretion in the criminal justice system. Stevenson and Doliak published a study looking at Virginia courts. Judges were given algorithmic risk scores for defendants.</v>
+
+139
+00:17:44.107 --> 00:17:45.968
+<v Daniel>Let me guess. They ignored them.</v>
+
+140
+00:17:46.419 --> 00:18:00.346
+<v Maya>Well, the judges were influenced by the scores, but there was no robust drop in recidivism. The use of the tool actually fade in over time. Judges frequently use their discretion to give leniency to young defendants, even if the algorithm flagged them as high risk.</v>
+
+141
+00:18:00.846 --> 00:18:13.613
+<v Daniel>So in child welfare, the human overrides the machine and saves kids. In corporate hiring in the courts, the human overrides the machine and ruins the results. Why the massive difference?</v>
+
+142
+00:18:14.100 --> 00:18:29.095
+<v Maya>If we connect this to the bigger picture, it comes down to the nature of the human's task. Human in the loop works wonderfully when the human is actively gathering unseen, real-world context that the machine doesn't have access to. Like a child welfare investigator stepping into a</v>
+
+143
+00:18:29.135 --> 00:18:31.537
+<v Maya>living room and noticing there is no food in the fridge.</v>
+
+144
+00:18:32.038 --> 00:18:34.400
+<v Daniel>But the hiring manager and the judge aren't doing that.</v>
+
+145
+00:18:34.680 --> 00:18:49.675
+<v Maya>No, they aren't. Human discretion fails when the human is just sitting at a desk, second guessing the exact same static data the machine already processed perfectly. A judge reading a rap sheet isn't gathering new context. They are just letting their own subjective biases override a</v>
+
+146
+00:18:49.755 --> 00:18:51.777
+<v Maya>superior statistical calculation.</v>
+
+147
+00:18:52.177 --> 00:18:53.098
+<v Daniel>Oh, that makes so much sense.</v>
+
+148
+00:18:53.779 --> 00:19:05.589
+<v Maya>Yeah. And in the Virginia judge case, the disagreement wasn't even about accuracy. It was about goals. The algorithm optimized strictly for preventing recidivism, but the judges prioritized a social goal of leniency for youth.</v>
+
+149
+00:19:06.249 --> 00:19:20.037
+<v Daniel>So what does this all mean for the modern workforce? And if we zoom out, how does this reshape our understanding of what it means to be a professional in the age of AI, especially for institutions training the next generation, like universities, for instance?</v>
+
+150
+00:19:20.591 --> 00:19:35.498
+<v Maya>It creates a massive imperative for higher education. We can no longer just teach facts because the machine already knows the facts. We have to shift to teaching judgment. Students need to learn when to trust a mathematical model, when to override it, and critically, how to go</v>
+
+151
+00:19:35.558 --> 00:19:39.220
+<v Maya>out into the real world and gather the messy context the model cannot see.</v>
+
+152
+00:19:39.580 --> 00:19:50.185
+<v Daniel>But how do you even prove someone has that skill on a resume? I mean, we have degrees for accounting, for engineering, but how do we credential this specific type of human machine judgment?</v>
+
+153
+00:19:50.790 --> 00:20:05.439
+<v Maya>That is the open question facing universities right now. They will have to partner directly with the public agencies and employers who are adopting these tools, creating entirely new frameworks to measure and credential that exact judgment before a student</v>
+
+154
+00:20:05.599 --> 00:20:06.760
+<v Maya>ever enters the workforce.</v>
+
+155
+00:20:07.221 --> 00:20:21.945
+<v Daniel>Which brings us right back to that 19 investigator inference from Northampton County. The idea that the algorithm only helped the seasoned pros and did nothing for the beginners. If that holds true across other industries, who is most exposed in this new economy?</v>
+
+156
+00:20:22.645 --> 00:20:37.494
+<v Maya>Based on that inference, it presents a severe risk for early career workers, adult learners and first generation students. They are at risk of being handed a machines score on day one before they have ever built the foundational professional judgment that</v>
+
+157
+00:20:37.594 --> 00:20:39.035
+<v Maya>the algorithm is supposed to complement.</v>
+
+158
+00:20:39.799 --> 00:20:49.382
+<v Daniel>Man, if the future of work isn't a cage match of humans versus machines, but rather machines accelerating existing human judgment, we have a massive design problem.</v>
+
+159
+00:20:49.542 --> 00:20:50.282
+<v Maya>We really do.</v>
+
+160
+00:20:50.803 --> 00:21:05.770
+<v Daniel>Because how do we build entry-level jobs and training programs where the algorithm doesn't accidentally become a crutch? If the AI is doing all the basic synthesis, how does a junior employee ever get the reps in to become a seasoned pro? We have to make sure the digital</v>
+
+161
+00:21:05.810 --> 00:21:10.423
+<v Daniel>co-pilot doesn't prevent the human pilot from ever learning how to fly through the storm in the first place.</v>
+
+162
+00:21:10.924 --> 00:21:14.895
+<v Maya>That tension right there is going to define the next decade of organizational design.</v>
+
+163
+00:21:15.376 --> 00:21:19.648
+<v Daniel>Something for you to mull over until next time. Thanks for taking this deep dive with us.</v>
