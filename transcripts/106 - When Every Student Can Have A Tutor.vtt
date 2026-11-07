@@ -1,0 +1,785 @@
+WEBVTT
+
+1
+00:00:00.191 --> 00:00:12.935
+<v Daniel>Welcome to today's Deep Dive. We are so glad you're joining us today because we have a stack of research that is going to honestly completely reframe how you think about learning and professional training.</v>
+
+2
+00:00:13.575 --> 00:00:17.276
+<v Maya>Yeah. And really the future of human intelligence itself. It's that big.</v>
+
+3
+00:00:17.756 --> 00:00:28.660
+<v Daniel>It really is. So I want to start you off with a provocative question. What if we could take an average student, just someone sitting right smack in the middle of the bell curve?</v>
+
+4
+00:00:28.820 --> 00:00:29.000
+<v Maya>Right.</v>
+
+5
+00:00:29.975 --> 00:00:35.697
+<v Daniel>And just by changing how they are taught, make them perform better than 98% of their peers.</v>
+
+6
+00:00:36.457 --> 00:00:39.698
+<v Maya>I mean, when you say it out loud like that, it sounds like science fiction.</v>
+
+7
+00:00:39.998 --> 00:00:40.318
+<v Daniel>Totally.</v>
+
+8
+00:00:40.638 --> 00:00:45.179
+<v Maya>Or, you know, a late night infomercial promising you can learn a new language in your sleep or something.</v>
+
+9
+00:00:45.579 --> 00:00:47.360
+<v Daniel>Right. It sounds completely made up.</v>
+
+10
+00:00:47.652 --> 00:00:56.819
+<v Maya>But it's not. That exact scenario is basically the premise of this foundational text we are diving into today, which is Benjamin Bloom's classic 1984 paper.</v>
+
+11
+00:00:57.299 --> 00:00:57.679
+<v Daniel>Ah, yes.</v>
+
+12
+00:00:57.859 --> 00:00:59.120
+<v Maya>The two sigma problem.</v>
+
+13
+00:00:59.160 --> 00:01:05.885
+<v Daniel>Exactly. And let me be clear right out of the gate here. We aren't just doing some 1980s educational history lesson for you.</v>
+
+14
+00:01:06.379 --> 00:01:07.180
+<v Maya>No, definitely not.</v>
+
+15
+00:01:07.420 --> 00:01:20.390
+<v Daniel>Because with the absolute explosion of AI over the last couple of years, specifically in 2025 and 2026, this 40-year-old holy grail of learning has just been violently thrust back into the spotlight.</v>
+
+16
+00:01:20.651 --> 00:01:34.242
+<v Maya>It really has. Just to give you a sense of our roadmap today, our sources span from that original, highly influential 12-page paper from 1984 all the way to a massive 2020 meta-analysis of human tutoring.</v>
+
+17
+00:01:34.502 --> 00:01:35.703
+<v Daniel>And then right up to the present.</v>
+
+18
+00:01:36.116 --> 00:01:41.632
+<v Maya>Right, up to these cutting-edge AI trials from Harvard and the Student Bench Project in 2025 and 2026.</v>
+
+19
+00:01:43.355 --> 00:01:45.036
+<v Daniel>Okay, so let's unpack this.</v>
+
+20
+00:01:45.216 --> 00:01:45.456
+<v Maya>Okay.</v>
+
+21
+00:01:45.876 --> 00:01:54.882
+<v Daniel>Our mission for this deep dive is to break down Bloom's original incredibly bold claim and then reality check it against four decades of actual human evidence.</v>
+
+22
+00:01:55.082 --> 00:01:56.182
+<v Maya>Right, to see what holds up.</v>
+
+23
+00:01:56.462 --> 00:02:06.908
+<v Daniel>Exactly. And explore whether these latest AI tutors have finally solved this 40-year-old riddle. And crucially, what all of this means for universities and the future workforce.</v>
+
+24
+00:02:07.168 --> 00:02:07.829
+<v Maya>Which is huge.</v>
+
+25
+00:02:08.229 --> 00:02:21.874
+<v Daniel>Because on the surface, Bloom's premise sounds like, I don't know, personalized medicine. It sounds like giving every single person on Earth this bespoke billion dollar cure. It's a beautiful idea, but is it even physically possible to scale that up?</v>
+
+26
+00:02:22.114 --> 00:02:30.036
+<v Maya>Well, to really answer that, we have to deeply understand the exact benchmark we're trying to beat. We have to look at what Bloom actually reported back in 1984.</v>
+
+27
+00:02:30.537 --> 00:02:31.537
+<v Daniel>So set the scene for us.</v>
+
+28
+00:02:32.555 --> 00:02:47.370
+<v Maya>So Benjamin Bloom published this paper based on the dissertations of two University of Chicago doctoral students. Their names were Anania and Burke. Okay. They took students in grades four, five, and eight and randomly assigned them to three distinct learning</v>
+
+29
+00:02:47.410 --> 00:02:48.611
+<v Maya>conditions for about three weeks.</v>
+
+30
+00:02:49.152 --> 00:02:55.078
+<v Daniel>Okay. So it's a fairly controlled short-term burst. If I'm one of those eighth graders, what do those three conditions actually look like?</v>
+
+31
+00:02:55.962 --> 00:03:06.827
+<v Maya>So condition one is your baseline, conventional teaching. Think of your standard everyday classroom. You have about 30 students per teacher. The teacher delivers the lesson, and there are periodic tests just to grade you.</v>
+
+32
+00:03:07.228 --> 00:03:08.949
+<v Daniel>Pretty standard stuff. What's condition two?</v>
+
+33
+00:03:09.569 --> 00:03:17.813
+<v Maya>Condition two is what they called mastery learning. It's the exact same class size, same teacher usually, but they introduce formative tests and corrective work.</v>
+
+34
+00:03:18.153 --> 00:03:23.077
+<v Daniel>Let me just pause you there because formative tests sounds like kind of heavy academic jargon.</v>
+
+35
+00:03:23.737 --> 00:03:24.098
+<v Maya>Fair enough.</v>
+
+36
+00:03:24.198 --> 00:03:31.003
+<v Daniel>That basically means low stakes diagnostic quizzes. Right. The teacher's testing you not to punish your grade, but to see what you actually fail to grasp.</v>
+
+37
+00:03:31.163 --> 00:03:31.664
+<v Maya>Exactly.</v>
+
+38
+00:03:32.044 --> 00:03:39.270
+<v Daniel>And then giving you targeted exercises, the corrective work until you fundamentally master that specific concept before the whole class moves on.</v>
+
+39
+00:03:39.682 --> 00:03:47.968
+<v Maya>That is a perfect translation. It's basically building a safety net into the group setting. Now, condition three is sort of the nuclear option.</v>
+
+40
+00:03:48.228 --> 00:03:48.768
+<v Daniel>The tutoring.</v>
+
+41
+00:03:48.928 --> 00:03:59.156
+<v Maya>Right, tutoring. This was one-to-one instruction, or at most, small groups of two to three students per tutor, followed by that exact same feedback and corrective mastery process.</v>
+
+42
+00:04:00.056 --> 00:04:08.482
+<v Daniel>Okay, so we have the baseline, the group with a safety net, and the highly personalized bespoke experience. Put them head-to-head. What happened?</v>
+
+43
+00:04:09.135 --> 00:04:23.366
+<v Maya>The results were just staggering. They completely disrupted the educational world. The average tutored student performed about two standard deviations above the conventional class. And that is what two sigma means in the paper's title.</v>
+
+44
+00:04:24.126 --> 00:04:34.294
+<v Daniel>Let's translate that standard deviation math for the listener so we can really visualize the bell curve here. If I'm that tutored student, where does a two sigma jump actually put me?</v>
+
+45
+00:04:34.850 --> 00:04:44.053
+<v Maya>It moves you from dead center, so the 50th percentile, an absolute average grade, all the way up past 98% of the students in the conventional group.</v>
+
+46
+00:04:44.073 --> 00:04:46.414
+<v Daniel>Wait, really? Yes. Past 98%?</v>
+
+47
+00:04:46.454 --> 00:04:56.697
+<v Maya>Yes. To put that in an even sharper perspective, about 90% of the tutored students reached a level of achievement that only the top 20% reached in conventional classes. That</v>
+
+48
+00:04:56.757 --> 00:05:03.221
+<v Daniel>is mind-blowing. An average student just suddenly becomes valedictorian material purely because of the format.</v>
+
+49
+00:05:03.241 --> 00:05:03.421
+<v Maya>Yep.</v>
+
+50
+00:05:04.062 --> 00:05:06.283
+<v Daniel>How did the middle group, the mastery learning kids, hold up?</v>
+
+51
+00:05:06.924 --> 00:05:12.487
+<v Maya>They hit about one standard deviation higher, which places them at the 84th percentile, which is still a massive win.</v>
+
+52
+00:05:12.587 --> 00:05:13.028
+<v Daniel>For sure.</v>
+
+53
+00:05:13.688 --> 00:05:18.071
+<v Maya>But what really drives the mechanism behind these numbers is the time on task.</v>
+
+54
+00:05:18.660 --> 00:05:20.321
+<v Daniel>Oh, how much time they actually spent paying attention.</v>
+
+55
+00:05:20.521 --> 00:05:30.349
+<v Maya>Exactly. Students in conventional classes were actively engaged and on task about 65% of the time. The mastery group was engaged 75% of the time.</v>
+
+56
+00:05:30.889 --> 00:05:31.590
+<v Daniel>In the tutored group?</v>
+
+57
+00:05:32.010 --> 00:05:34.772
+<v Maya>The tutored students were engaged 90% of the time or more.</v>
+
+58
+00:05:35.313 --> 00:05:43.659
+<v Daniel>Okay. Here's where it gets really interesting to me. Because when people hear this, the immediate reaction is, well, great. Let's just hire a private tutor for every kid on earth.</v>
+
+59
+00:05:43.839 --> 00:05:45.420
+<v Maya>Right. Just solve education overnight.</v>
+
+60
+00:05:45.841 --> 00:05:47.502
+<v Daniel>But that wasn't Bloom's point at all, was it?</v>
+
+61
+00:05:48.029 --> 00:06:02.661
+<v Maya>No, not at all. And that is a really common misconception. Bloom explicitly stated that one to one tutoring is simply too costly for most societies to bear at scale. That financial and logistical bottleneck is the actual two sigma problem. The problem he</v>
+
+62
+00:06:03.001 --> 00:06:11.228
+<v Maya>was posing to the research community was, you know, how do we find methods of group instruction that come close to being as effective as one to one tutoring?</v>
+
+63
+00:06:11.557 --> 00:06:17.901
+<v Daniel>So he was hunting for a scalable formula. He wanted the two sigma results without the one-on-one price tag.</v>
+
+64
+00:06:18.241 --> 00:06:29.167
+<v Maya>Exactly. So he walked through this search for what he called alterable variables. He adapted a table from a researcher named Wahlberg, which basically quantified how different interventions impacted learning.</v>
+
+65
+00:06:29.467 --> 00:06:30.368
+<v Daniel>Well, what kind of variables?</v>
+
+66
+00:06:30.828 --> 00:06:44.577
+<v Maya>Well, tutorial instruction, as we know, gave that 2.0 sigma effect. But he looked at others too. Reinforcement yielded a 1.2 effect. Feedback corrective mastery learning was 1.0. Cooperative learning was</v>
+
+67
+00:06:44.597 --> 00:06:45.838
+<v Maya>0.80.</v>
+
+68
+00:06:46.278 --> 00:06:47.659
+<v Daniel>Did he look outside the classroom?</v>
+
+69
+00:06:48.360 --> 00:06:55.164
+<v Maya>He did. Even things outside the classroom mattered. The home environment gave a 0.50 effect. And the peer group was 0.20.</v>
+
+70
+00:06:56.670 --> 00:07:06.146
+<v Daniel>So Bloom's students looked at this menu of variables and basically started stacking them like ingredients in a recipe to see if they could brew up a 2.0 effect in a room with 30 kids.</v>
+
+71
+00:07:06.330 --> 00:07:20.998
+<v Maya>Precisely. They started testing combinations. A researcher named Leighton combined enhanced prerequisites with mastery learning and hit about a 1.6 sigma effect. Oh, wow. Yeah, and another named Norden combined enhanced cues and participation for a 1.5 effect.</v>
+
+72
+00:07:21.619 --> 00:07:32.465
+<v Maya>Tenenbaum went even further. He stacked cues, participation, and reinforcement with mastery learning and hit roughly 1.7 sigma. They were also experimenting with higher mental process teaching.</v>
+
+73
+00:07:32.962 --> 00:07:37.885
+<v Daniel>So by stacking these interventions, they are getting agonizingly close to that 2.0 mark.</v>
+
+74
+00:07:38.205 --> 00:07:38.665
+<v Maya>Very close.</v>
+
+75
+00:07:38.905 --> 00:07:45.589
+<v Daniel>But beyond just the variables, Bloom pointed out a really uncomfortable truth about the psychology of a conventional classroom, didn't he?</v>
+
+76
+00:07:46.003 --> 00:07:56.613
+<v Maya>He really did. He highlighted this issue of unequal attention. In a standard class of 30 students, teachers unintentionally give the top third of the class the vast majority of their attention.</v>
+
+77
+00:07:56.833 --> 00:07:58.976
+<v Daniel>Oh, like their encouragement and active engagement.</v>
+
+78
+00:07:59.096 --> 00:08:13.854
+<v Maya>Exactly. Tutoring inherently fixes this inequality because, well, the student can't hide in the back of the room. It forces engagement. Right. And remarkably, Bloom actually predicted in that 1984 paper that computer courses, he specifically referenced the early</v>
+
+79
+00:08:13.914 --> 00:08:18.140
+<v Maya>Plato system, might eventually help some students reach that two sigma mark.</v>
+
+80
+00:08:18.520 --> 00:08:19.983
+<v Daniel>That's wild foresight.</v>
+
+81
+00:08:20.297 --> 00:08:27.443
+<v Maya>But I have to push back here on the methodology. We are talking about highly controlled three-week bursts of instruction.</v>
+
+82
+00:08:27.563 --> 00:08:27.783
+<v Daniel>Yes.</v>
+
+83
+00:08:28.124 --> 00:08:42.356
+<v Maya>I mean, three weeks with a team of Chicago doctoral students hovering over you is basically a pedagogical sugar rush. What happens when you try to force that level of attention into an underfunded, chaotic public school for a grinding nine-month academic year?</v>
+
+84
+00:08:42.929 --> 00:08:56.693
+<v Daniel>That is the crucial question. And it brings us perfectly to the reality check. Bloom's vision was a beautiful North Star in 1984. But if we honestly look at the data when society actually tried to scale human tutoring over the following decades.</v>
+
+85
+00:08:57.273 --> 00:08:59.034
+<v Maya>The math doesn't look as good, does it?</v>
+
+86
+00:08:59.394 --> 00:09:03.395
+<v Daniel>The math looks very, very different. Let's look at the modern evidence.</v>
+
+87
+00:09:03.952 --> 00:09:18.856
+<v Maya>So in July 2020, Nikau, Oriopoulos, and Kwan published a massive meta-analysis as an ed-working paper. They didn't look at a three-week lab experiment. They looked at 96 randomized tutoring studies spanning from pre-K all the way to 12th grade.</v>
+
+88
+00:09:19.236 --> 00:09:21.857
+<v Daniel>Okay, that's a huge sample. What did they find?</v>
+
+89
+00:09:22.237 --> 00:09:29.199
+<v Maya>When they pooled all that real-world data together, the effect size for human tutoring wasn't 2 per note. It was 0.37 standard deviations.</v>
+
+90
+00:09:31.475 --> 00:09:41.021
+<v Daniel>Wait, 0.37? Yeah. That is a massive drop. It's like expecting a Ferrari and getting a golf cart. Why the huge discrepancy?</v>
+
+91
+00:09:41.361 --> 00:09:52.807
+<v Maya>Well, first, it's important to contextualize that in the world of educational interventions, a 0.37 standard deviation improvement is actually considered a large, highly impactful effect.</v>
+
+92
+00:09:53.268 --> 00:09:53.948
+<v Daniel>Okay, fair.</v>
+
+93
+00:09:54.574 --> 00:10:05.199
+<v Maya>They also found nuances. The effects were stronger when the tutors were teachers or paraprofessionals rather than volunteers or parents. And in-school tutoring worked better than after-school tutoring.</v>
+
+94
+00:10:05.739 --> 00:10:08.740
+<v Daniel>Probably because of better alignment with the curriculum and less student fatigue.</v>
+
+95
+00:10:09.360 --> 00:10:13.982
+<v Maya>Right. But you are absolutely right. It is nowhere near the two-sigma dream.</v>
+
+96
+00:10:14.623 --> 00:10:18.825
+<v Daniel>So why did Bloom see 2.0 while 40 years of follow-up only saw 0.37?</v>
+
+97
+00:10:20.160 --> 00:10:34.845
+<v Maya>Because Bloom's number was generated under highly idealized conditions. Short three-week units, custom tests that were perfectly aligned with the exact material being taught, small sample sizes, and highly controlled dissertation studies.</v>
+
+98
+00:10:35.465 --> 00:10:38.126
+<v Daniel>The real world of public education is just incredibly messy.</v>
+
+99
+00:10:38.286 --> 00:10:38.786
+<v Maya>It is.</v>
+
+100
+00:10:39.606 --> 00:10:53.365
+<v Daniel>It's the car mileage analogy. Bloom gave us the MPG you get going downhill with a tailwind on a freshly paved closed track. The 2020 study is the MPG you get sitting in real-world bumper-to-bumper gridlock.</v>
+
+101
+00:10:53.538 --> 00:11:06.064
+<v Maya>That's exactly it. So if we connect this to the bigger picture, for 40 years, human tutoring hovered at that 0.37 effect size because high quality professional tutors are incredibly expensive.</v>
+
+102
+00:11:06.084 --> 00:11:06.645
+<v Daniel>They get tired.</v>
+
+103
+00:11:07.245 --> 00:11:21.472
+<v Maya>They get tired and they are hard to scale. It is a fundamental cost and labor constraint. But let's fast forward to 2025 and 2026. What happens when the marginal cost of a world class tutor suddenly drops to almost zero?</v>
+
+104
+00:11:22.209 --> 00:11:29.715
+<v Daniel>The 2026 AI plot twist. Enter the custom AI tutors. Did we just solve the 40-year-old math problem?</v>
+
+105
+00:11:30.216 --> 00:11:45.008
+<v Maya>Let's look at the data. We have a September 2026 preprint from a project called Student Bench, published on Archive by Northcutt and colleagues. This is a massive study. 2,383 participants took GRE questions. They were</v>
+
+106
+00:11:45.048 --> 00:11:50.693
+<v Maya>assigned either an AI tutor, an expert human tutor, or no tutor at all for about a one-hour session.</v>
+
+107
+00:11:51.869 --> 00:11:52.829
+<v Daniel>So you put them head to head.</v>
+
+108
+00:11:53.030 --> 00:11:53.230
+<v Maya>Yes.</v>
+
+109
+00:11:53.650 --> 00:11:56.711
+<v Daniel>The ultimate showdown, AI versus expert human. Who wins?</v>
+
+110
+00:11:57.091 --> 00:12:01.873
+<v Maya>The AI tutoring was statistically equivalent to expert human tutoring.</v>
+
+111
+00:12:02.013 --> 00:12:02.214
+<v Daniel>Wow.</v>
+
+112
+00:12:02.834 --> 00:12:08.977
+<v Maya>In fact, on average, the best performing AI tutor actually beat the human tutor in five of the seven GRE domains they tested.</v>
+
+113
+00:12:09.357 --> 00:12:10.037
+<v Daniel>That is wild.</v>
+
+114
+00:12:10.596 --> 00:12:23.368
+<v Maya>But here is the real kicker, the number that basically changes the whole industry. One of the AI tutors matched the human tutoring learning gains at roughly 918 times lower cost per percentage point gained.</v>
+
+115
+00:12:24.349 --> 00:12:31.416
+<v Daniel>We really need to pause and let that breathe. 918 times cheaper for the exact same cognitive gain.</v>
+
+116
+00:12:31.716 --> 00:12:35.419
+<v Maya>Yes. Now, honest caveats apply here, and they are important.</v>
+
+117
+00:12:35.619 --> 00:12:36.020
+<v Daniel>Let's hear them.</v>
+
+118
+00:12:36.442 --> 00:12:45.709
+<v Maya>This is a preprint. It measures a single one-hour session, not a full grinding semester. And the ethics statement explicitly notes that Handshake AI funded the work.</v>
+
+119
+00:12:46.489 --> 00:12:54.235
+<v Daniel>Ah, okay. That is definitely vital context. But this isn't an isolated finding, is it? I mean, we are seeing this pattern replicated.</v>
+
+120
+00:12:54.375 --> 00:12:54.736
+<v Maya>We are.</v>
+
+121
+00:12:55.316 --> 00:12:58.879
+<v Daniel>Look at a 2025 paper by Keston and colleagues in Scientific Reports.</v>
+
+122
+00:12:59.599 --> 00:13:04.022
+<v Maya>They ran a randomized trial with 194 physics students at Harvard.</v>
+
+123
+00:13:04.343 --> 00:13:04.763
+<v Daniel>What did they do?</v>
+
+124
+00:13:05.410 --> 00:13:14.977
+<v Maya>They built a custom AI tutor based on the exact same active learning pedagogy used in the in-person class. So instead of just lecturing, the AI actively pushed students to solve problems.</v>
+
+125
+00:13:15.497 --> 00:13:15.958
+<v Daniel>And the outcome?</v>
+
+126
+00:13:16.498 --> 00:13:18.820
+<v Maya>The AI beat the in-person active learning class.</v>
+
+127
+00:13:19.020 --> 00:13:19.560
+<v Daniel>Seriously?</v>
+
+128
+00:13:19.740 --> 00:13:30.488
+<v Maya>Yeah. The median time spent on the AI lesson was 49 minutes compared to a 60-minute traditional class. And the effect size was 0.63 using a standard linear regression model.</v>
+
+129
+00:13:30.793 --> 00:13:45.497
+<v Daniel>Wait, I saw a phrase in that paper when I was reading it. Quantile regression correcting for ceiling effects. Oh, yes. That sounds like incredibly heavy statistical jargon. In plain English, does that just mean the test was too easy so the AI-tutored students practically aced it before</v>
+
+130
+00:13:45.898 --> 00:13:47.238
+<v Daniel>they could even show their full potential?</v>
+
+131
+00:13:47.705 --> 00:14:00.282
+<v Maya>That's exactly what it means. They learn the concepts so fast and so thoroughly that they hit the ceiling of the exam. When the researchers statistically corrected for that, the true effect size was actually between 0.73 and 1.3 standard deviations.</v>
+
+132
+00:14:02.798 --> 00:14:08.461
+<v Daniel>Again, we have to state the caveat plainly. This is one lesson in one course on one elite campus.</v>
+
+133
+00:14:08.541 --> 00:14:09.041
+<v Maya>Very true.</v>
+
+134
+00:14:09.541 --> 00:14:23.848
+<v Daniel>But wait, if AI is faster, 918 times cheaper and statistically equivalent or better than Harvard classes and expert tutors, hasn't AI just completely solved Bloom's two sigma problem? Can we all pack up and go home?</v>
+
+135
+00:14:24.608 --> 00:14:35.292
+<v Maya>Not so fast. Because giving a student an AI doesn't automatically mean they are learning. If you design it poorly, it doesn't just fail to teach them. It can actually make them objectively worse.</v>
+
+136
+00:14:36.072 --> 00:14:41.494
+<v Daniel>Okay. This brings us to the crucial caveat of the entire AI revolution. Walk us through the trap.</v>
+
+137
+00:14:41.854 --> 00:14:52.357
+<v Maya>So we need to look at a 2025 paper in PNAS by Bastani and colleagues. They ran a massive study with nearly a thousand high school math students in Turkey.</v>
+
+138
+00:14:52.377 --> 00:14:53.918
+<v Daniel>Okay. What was the setup?</v>
+
+139
+00:14:54.621 --> 00:15:05.847
+<v Maya>They integrated GPT-4 into their math practice. During the practice sessions, having access to the standard unguarded GPT-4, what they called GPT-base, raised students' grades by 48%.</v>
+
+140
+00:15:06.447 --> 00:15:07.688
+<v Daniel>That's a solid bump.</v>
+
+141
+00:15:08.108 --> 00:15:14.451
+<v Maya>Right. And having a specially guard-railed version, GPT-tutor, raised them by an astonishing 127%.</v>
+
+142
+00:15:16.110 --> 00:15:19.171
+<v Daniel>That's so on the surface. Both versions sound like a massive win for the students.</v>
+
+143
+00:15:19.412 --> 00:15:20.592
+<v Maya>During practice, yes.</v>
+
+144
+00:15:21.032 --> 00:15:35.940
+<v Daniel>But here is the mechanism behind the trap. When access to the AI was removed and the students had to sit down and take the actual unassisted exam with just a pencil in their own brain. Uh-oh. Yeah. The students who had used the unguarded GPT base</v>
+
+145
+00:15:36.480 --> 00:15:40.842
+<v Daniel>scored 17% worse than the control group who never had AI at all.</v>
+
+146
+00:15:41.262 --> 00:15:41.703
+<v Maya>Worse.</v>
+
+147
+00:15:42.124 --> 00:15:46.114
+<v Daniel>Worse? How does a tool that makes you 48% better in practice make you 17% worse in reality?</v>
+
+148
+00:15:49.408 --> 00:16:04.332
+<v Maya>Because an AI that just gives you the answers is not a tutor. It is a crutch. Right. The students using the unguarded AI completely outsource their cognitive effort. When they got stuck on a math problem, they just asked the AI to solve it. They didn't learn the math. They just learned how to</v>
+
+149
+00:16:04.372 --> 00:16:17.716
+<v Maya>copy and paste. Oh, man. Now, the guard railed GPT tutor largely avoided this harm because it was heavily prompted to act like a pedagogue. It gave hints. It asked guiding questions. And it flat out refused to just hand over the final answer.</v>
+
+150
+00:16:18.031 --> 00:16:19.592
+<v Daniel>I call this the GPS effect.</v>
+
+151
+00:16:19.752 --> 00:16:20.393
+<v Maya>Oh, I like that.</v>
+
+152
+00:16:21.333 --> 00:16:34.622
+<v Daniel>If I use GPS to drive everywhere in my city, I look like a genius navigator. I never hit traffic. I always know the fastest route. But the second my phone dies, I don't even know how to get out of my own neighborhood because I never actually built a mental map in my brain.</v>
+
+153
+00:16:34.842 --> 00:16:35.062
+<v Maya>Yes.</v>
+
+154
+00:16:35.523 --> 00:16:43.168
+<v Daniel>I outsource my spatial awareness to a machine. We risk doing the exact same thing to human cognition if we just hand kids unguarded AI.</v>
+
+155
+00:16:43.900 --> 00:16:58.609
+<v Maya>And what's fascinating here is the sheer tension of this 2026 moment. Bloom's primary constraint, the cost of scaling one-to-one tutoring, may have truly disappeared. Right. But as Bastani shows, the design of the AI dictates everything.</v>
+
+156
+00:16:59.169 --> 00:17:04.672
+<v Maya>It decides whether the tool actually teaches a student or merely substitutes for the learning process entirely.</v>
+
+157
+00:17:05.593 --> 00:17:20.514
+<v Daniel>So what does this all mean? If we synthesize this entire mountain of evidence from Bloom's 1984 lab in Chicago to the AI trials of 2026, we have to separate the enduring truths from the hype. What actually survives</v>
+
+158
+00:17:20.594 --> 00:17:21.134
+<v Daniel>from Bloom?</v>
+
+159
+00:17:21.434 --> 00:17:27.416
+<v Maya>Well, what Bloom got absolutely right is that individual feedback and correction are the true active ingredients of human learning.</v>
+
+160
+00:17:27.849 --> 00:17:29.149
+<v Daniel>Mastery truly matters.</v>
+
+161
+00:17:29.269 --> 00:17:40.713
+<v Maya>Yes. And his point about unequal attention holds up beautifully. One-on-one tutors fundamentally fix the inherent flaw of group classes where the top third of students accidentally monopolize the teacher's focus.</v>
+
+162
+00:17:40.993 --> 00:17:43.174
+<v Daniel>And what's been overturned or complicated by the data?</v>
+
+163
+00:17:43.443 --> 00:17:54.889
+<v Maya>The idea that a two sigma gain was ever the typical expectation for real world tutoring. The evidence shows human tutoring in rigorous, large scale trials looks much closer to a third of a standard deviation.</v>
+
+164
+00:17:55.229 --> 00:17:55.469
+<v Daniel>Right.</v>
+
+165
+00:17:55.850 --> 00:18:05.555
+<v Maya>The one idea that still organizes this entire debate today is the inherent tradeoff between the quality of personalized tutoring and the cost of running a group class.</v>
+
+166
+00:18:06.003 --> 00:18:20.593
+<v Daniel>Okay, if you need arguments and evidence that can go on a slide right now, let's say you're presenting to higher ed leaders, what are the bulletproof stats you need? Give me two or three hard, plain numbers for a slide deck, and more importantly, the</v>
+
+167
+00:18:20.633 --> 00:18:23.435
+<v Daniel>strongest objection the skeptics are going to hit back with.</v>
+
+168
+00:18:23.882 --> 00:18:36.611
+<v Maya>Okay, here is your first quote for the slide deck. AI can match expert human tutors at roughly 918 times lower cost per percentage point gained. That's from Northcutt, 2026.</v>
+
+169
+00:18:36.951 --> 00:18:38.412
+<v Daniel>And the strongest objection to that number?</v>
+
+170
+00:18:38.793 --> 00:18:52.202
+<v Maya>That it was measured in a one-hour sprint. A one-hour study on a GRE question does not capture a full, grinding college semester where human motivation, empathy, and relationship building actually keep a struggling student from dropping out.</v>
+
+171
+00:18:52.591 --> 00:18:54.812
+<v Daniel>Excellent. What's the second quote for this slide?</v>
+
+172
+00:18:55.393 --> 00:19:03.958
+<v Maya>Unguarded AI doesn't teach. It acts as a crutch, making students score 17% worse on unassisted tests. That is Bastani 2025.</v>
+
+173
+00:19:04.518 --> 00:19:05.979
+<v Daniel>And the counter-argument for the skeptics?</v>
+
+174
+00:19:06.519 --> 00:19:17.266
+<v Maya>That this finding assumes lazy implementation. When rigorous guardrails are applied, when the AI is forced to withhold answers and offer hints, this harm is largely mitigated, and the students actually learn.</v>
+
+175
+00:19:17.885 --> 00:19:24.007
+<v Daniel>So based on all these sources, we are looking at massive incoming structural shifts for universities. How do they adapt?</v>
+
+176
+00:19:24.487 --> 00:19:30.550
+<v Maya>First, there is an urgent systemic need to build these guarded AI tutors into gateway and remedial courses.</v>
+
+177
+00:19:30.670 --> 00:19:31.670
+<v Daniel>Because they're cheap and effective.</v>
+
+178
+00:19:31.790 --> 00:19:43.134
+<v Maya>Right. Second, universities are facing an existential crisis of assessment. How do you assess actual human learning when an unguarded AI can perfectly execute the take-home essay or the coding homework?</v>
+
+179
+00:19:43.490 --> 00:19:49.686
+<v Daniel>If the homework is just testing how well the student prompted the AI, the whole assessment model is dead.</v>
+
+180
+00:19:50.216 --> 00:20:04.481
+<v Maya>Exactly. And this leads to a forced rethinking of the faculty itself. If the raw transfer of knowledge, the actual tutoring component, is suddenly cheap and automated, what is highly paid faculty time actually for? Good question. It has to shift</v>
+
+181
+00:20:04.801 --> 00:20:17.686
+<v Maya>entirely toward mentorship, synthesis, and teaching critical thinking. Finally, we will likely see a massive shift toward credentialing the actual mastery of a subject rather than just tracking seat time in a lecture hall.</v>
+
+182
+00:20:18.136 --> 00:20:28.600
+<v Daniel>You know, if we look at who historically had access to private tutors, it was the wealthy. So drawing an inference from all this data, who stands to gain the most from virtually free world-class AI tutoring?</v>
+
+183
+00:20:29.200 --> 00:20:38.123
+<v Maya>Based on the historical barriers, we can strongly infer that the demographics most exposed to massive gains are early career workers, adult learners, and first-generation students.</v>
+
+184
+00:20:38.743 --> 00:20:43.045
+<v Daniel>The exact populations who historically were least likely to be able to afford private tutors.</v>
+
+185
+00:20:43.285 --> 00:20:43.705
+<v Maya>Exactly.</v>
+
+186
+00:20:44.265 --> 00:20:55.855
+<v Daniel>It's like we are finally democratizing the academic advantages of the top 1%. But to survive the transition, universities are going to have to entirely rewrite their rule books on testing, grading, and instruction.</v>
+
+187
+00:20:56.115 --> 00:20:58.717
+<v Maya>They do. It is a complete paradigm shift.</v>
+
+188
+00:20:59.385 --> 00:21:14.276
+<v Daniel>We've covered incredible ground today. We've gone from Benjamin Bloom's highly localized 1984 two-sigma dream to the sobering .37 reality of trying to scale human tutors to this 2026 AI explosion that</v>
+
+189
+00:21:14.316 --> 00:21:19.720
+<v Daniel>makes world-class tutoring virtually free while introducing the very dangerous crutch effect.</v>
+
+190
+00:21:20.420 --> 00:21:26.244
+<v Maya>And as we wrap up, this raises an important question, and it's a new paradigm I want to leave you to mull over.</v>
+
+191
+00:21:26.865 --> 00:21:27.205
+<v Daniel>Let's hear it.</v>
+
+192
+00:21:27.798 --> 00:21:39.866
+<v Maya>If AI eventually perfects the knowledge transfer part of Bloom's equation for pennies, then the future of human work and the future of human teaching won't be about delivering information at all.</v>
+
+193
+00:21:40.287 --> 00:21:41.107
+<v Daniel>What will it be about?</v>
+
+194
+00:21:41.648 --> 00:21:50.854
+<v Maya>It will be entirely about teaching resilience, cultivating deep curiosity, and teaching humans how to ask the questions the AI hasn't thought of yet.</v>
+
+195
+00:21:51.508 --> 00:22:06.495
+<v Daniel>We started this deep dive by comparing Bloom's two-segment problem to personalized medicine, a bespoke billion-dollar cure. It turns out we might finally have the formula to manufacture that cure for pennies. The challenge now is making</v>
+
+196
+00:22:06.655 --> 00:22:20.800
+<v Daniel>absolutely sure the patient actually builds their own cognitive immune system rather than relying on the medicine to do the thinking for them forever. Thank you for joining us on this deep dive. And as always, keep questioning the consensus.</v>

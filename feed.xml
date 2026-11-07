@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Nov 2026 08:33:38 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 09:22:46 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2023,5 +2023,23 @@ Reference: Fairlie, R. W., &amp; Wu, J. (2026). The Early Impacts of AI on Emplo
       <pubDate>Sat, 07 Nov 2026 07:28:44 +0000</pubDate>
       <itunes:episode>105</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/105%20-%20When%20Education%20Lost%20The%20Race%20To%20Technology.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>106 - When Every Student Can Have A Tutor</title>
+      <description>The 2 Sigma Problem (June 1984)
+
+In this episode we unpack Benjamin Bloom's short Educational Researcher article, the most quoted number in education technology. The argument: when two University of Chicago doctoral studies compared conventional classes of about 30 students, mastery learning, and one-to-one tutoring, the average tutored student scored about two standard deviations above the conventional class, above 98 percent of it, and the real problem is finding group methods that come close at a cost society can afford.
+
+We walk through the Anania and Burke experiments, mastery learning's feedback-corrective loop at about one sigma, Bloom's table of "alterable variables" adapted from Walberg, and the combinations his students tested to reach 1.6 and 1.7 sigma. Then we ask how it held up: Nickow, Oreopoulos and Quan's meta-analysis of 96 randomized tutoring studies finds a pooled effect of 0.37 standard deviations, Kestin and colleagues' Harvard physics trial finds an AI tutor beating active learning by 0.73 to 1.3 standard deviations in less time, Bastani and colleagues find students with unguarded GPT-4 scoring 17 percent worse once it is taken away, and Northcutt and colleagues' 2026 StudentBench finds AI tutoring statistically equivalent to expert human tutors on GRE questions at a fraction of the cost. We close on what Bloom got right, why the two sigma figure was never the typical effect, and what universities should do now that a tutor costs almost nothing.
+
+Reference: Bloom, B. S. (1984). The 2 Sigma Problem: The Search for Methods of Group Instruction as Effective as One-to-One Tutoring. Educational Researcher, 13(6), 4-16. https://doi.org/10.3102/0013189X013006004
+Reference: Nickow, A., Oreopoulos, P., &amp; Quan, V. (2020). The Impressive Effects of Tutoring on PreK-12 Learning: A Systematic Review and Meta-Analysis of the Experimental Evidence. EdWorkingPaper 20-267, Annenberg Institute at Brown University. https://doi.org/10.26300/eh0c-pc52
+Reference: Kestin, G., Miller, K., Klales, A., Milbourne, T., &amp; Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15, 17458. https://doi.org/10.1038/s41598-025-97652-6
+Reference: Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., &amp; Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of Sciences, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122
+Reference: Northcutt, C., Hasmani, I., Feng, K., Khangi, T., Plesner, A., &amp; Mueller, J. (2026). StudentBench: AI and human tutoring yield equivalent GRE learning gains. arXiv:2609.28470. https://arxiv.org/abs/2609.28470</description>
+      <guid isPermaLink="false">af15b95389eee1740c5676fe0cac6bd218f6d2a5</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/106%20-%20When%20Every%20Student%20Can%20Have%20A%20Tutor.m4a" length="43179054" type="audio/mp4" />
+      <pubDate>Sat, 07 Nov 2026 08:42:24 +0000</pubDate>
+      <itunes:episode>106</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/106%20-%20When%20Every%20Student%20Can%20Have%20A%20Tutor.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
