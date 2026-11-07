@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2026 09:54:08 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 08:33:38 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -1987,5 +1987,41 @@ Reference: Althoff, L., &amp; Reichardt, H. (2026). Task-Specific Technical Chan
       <pubDate>Fri, 06 Nov 2026 09:04:45 +0000</pubDate>
       <itunes:episode>103</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/103%20-%20When%20People%20Skills%20Became%20The%20Premium.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>104 - When Graduating Into AI Feels Like A Recession</title>
+      <description>Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors (September 2026)
+
+In this episode we unpack a U.S. Census Bureau working paper by Cody Orr, Lee Tucker and Lawrence Warren that follows 6.7 million bachelor's graduates from more than 350 institutions, CUNY among them, into their first jobs. The argument: since ChatGPT arrived, graduates of the majors most exposed to AI, led by computer science and its neighbors, have been about 5 percentage points less likely to be employed the quarter after graduation and have earned about 13 percent less when they were, a hit as large as graduating into a big recession.
+
+We walk through how the authors build AI exposure for each major from Eloundou and colleagues' GPT-4 task scores and the jobs young graduates actually hold, the event-study design comparing majors within the same college, and the finding that about half the earnings loss comes from graduates landing in retail and restaurants instead of information and professional services. We test it against Tucker's companion study of early-career hiring by industry, Oreopoulos, von Wachter and Heisz's classic evidence on graduating in a recession, Lambert and Schindler's argument that remote work rather than AI explains the broken entry ladder, and Chirikov's finding that A grades rose 13 points in AI-exposed courses, which may be blurring the signal a degree sends. We close on what universities can do when the first rung of the career ladder moves.
+
+Reference: Orr, C., Tucker, L. C., &amp; Warren, L. (2026). Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors. U.S. Census Bureau, Center for Economic Studies Working Paper CES-26-56. https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html
+Reference: Tucker, L. C. (2026). You're (Not) Hired: Artificial Intelligence and Early Career Hiring in the Quarterly Workforce Indicators. U.S. Census Bureau, Center for Economic Studies Working Paper CES-26-27. https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-27.html
+Reference: Oreopoulos, P., von Wachter, T., &amp; Heisz, A. (2012). The Short- and Long-Term Career Effects of Graduating in a Recession. American Economic Journal: Applied Economics, 4(1), 1-29. https://doi.org/10.1257/app.4.1.1
+Reference: Lambert, P. J., &amp; Schindler, Y. (2026). The Broken Ladder: AI, Remote Work, and Early-Career Hiring. Warwick Economics Research Paper 1615 (CAGE Working Paper 808). https://warwick.ac.uk/fac/soc/economics/research/workingpapers/2026/twerp_1615-lambert.pdf
+Reference: Chirikov, I. (2026). Artificial Intelligence and Grade Inflation. CSHE Higher Education Working Paper 26-3, UC Berkeley. https://escholarship.org/uc/item/80x8d3qd</description>
+      <guid isPermaLink="false">eb1f348e4d2b697bcf59d1c4ccc4e15b73ca4b34</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/104%20-%20When%20Graduating%20Into%20AI%20Feels%20Like%20A%20Recession.m4a" length="30632500" type="audio/mp4" />
+      <pubDate>Sat, 07 Nov 2026 07:21:15 +0000</pubDate>
+      <itunes:episode>104</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/104%20-%20When%20Graduating%20Into%20AI%20Feels%20Like%20A%20Recession.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>105 - When Education Lost The Race To Technology</title>
+      <description>The Race between Education and Technology (March 2007)
+
+In this episode we unpack Claudia Goldin and Lawrence Katz's NBER working paper, the chapter that gave their book its title and the framework most economists still use to explain what a college degree is worth. The argument: technology has pushed up the demand for educated workers steadily for a century, and whether the college wage premium rises or falls depends on whether schooling keeps up, which it did until about 1980 and then stopped doing.
+
+We walk through their supply, demand and institutions framework, the college wage premium from 1915 to 2005 that collapsed through the 1940s and was back at its 1915 level by 2005, the estimate that a 10 percent rise in the relative supply of college workers cuts the premium by about 6 percent, and the counterfactual that the premium would have fallen after 1980 had college supply kept growing at its 1960 to 1980 pace. We test it with the Katz and Murphy supply and demand analysis it built on, Autor, Goldin and Katz's 2020 extension to 2017 and its puzzling slowdown in demand growth since the early 1990s, Deming and Noray's evidence that the early pay advantage of computer science, engineering and business majors fades as job skills change, and Fairlie and Wu's 2026 finding that unemployment among recent graduates did not spike in summer 2026. We close on what the race means when AI shifts demand, and what universities should do about supply.
+
+Reference: Goldin, C., &amp; Katz, L. F. (2007). The Race between Education and Technology: The Evolution of U.S. Educational Wage Differentials, 1890 to 2005. NBER Working Paper 12984. https://www.nber.org/papers/w12984
+Reference: Katz, L. F., &amp; Murphy, K. M. (1992). Changes in Relative Wages, 1963-1987: Supply and Demand Factors. The Quarterly Journal of Economics, 107(1), 35-78. https://doi.org/10.2307/2118323
+Reference: Autor, D., Goldin, C., &amp; Katz, L. F. (2020). Extending the Race between Education and Technology. AEA Papers and Proceedings, 110, 347-351. https://doi.org/10.1257/pandp.20201061
+Reference: Deming, D. J., &amp; Noray, K. (2020). Earnings Dynamics, Changing Job Skills, and STEM Careers. The Quarterly Journal of Economics, 135(4), 1965-2005. https://doi.org/10.1093/qje/qjaa021
+Reference: Fairlie, R. W., &amp; Wu, J. (2026). The Early Impacts of AI on Employment among Recent College Graduates. NBER Working Paper 35796; CESifo Working Paper No. 12994. https://www.nber.org/papers/w35796</description>
+      <guid isPermaLink="false">11a83e2dffabd4a3550e4b376b8d93c9d4690849</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/105%20-%20When%20Education%20Lost%20The%20Race%20To%20Technology.m4a" length="27468379" type="audio/mp4" />
+      <pubDate>Sat, 07 Nov 2026 07:28:44 +0000</pubDate>
+      <itunes:episode>105</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/105%20-%20When%20Education%20Lost%20The%20Race%20To%20Technology.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
