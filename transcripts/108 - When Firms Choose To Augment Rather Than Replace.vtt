@@ -1,0 +1,877 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:08.895
+<v Maya>If you hire like a freelance graphic designer or a copywriter for a dollar, it currently costs just three cents to have an AI do the exact same job.</v>
+
+2
+00:00:09.115 --> 00:00:12.177
+<v Daniel>Right, which is just, I mean, it's wild to think about.</v>
+
+3
+00:00:12.277 --> 00:00:12.977
+<v Maya>It really is.</v>
+
+4
+00:00:13.037 --> 00:00:13.217
+<v Daniel>Yeah.</v>
+
+5
+00:00:13.657 --> 00:00:21.221
+<v Maya>That is a 97% cost savings. And, you know, with numbers like that, you would assume human workers are just vanishing overnight.</v>
+
+6
+00:00:21.461 --> 00:00:22.081
+<v Daniel>Oh, absolutely.</v>
+
+7
+00:00:22.301 --> 00:00:23.682
+<v Maya>You'd think the offices would be empty.</v>
+
+8
+00:00:23.882 --> 00:00:24.102
+<v Daniel>Right.</v>
+
+9
+00:00:24.382 --> 00:00:37.490
+<v Maya>But when you actually look at the data from 1.2 million actual businesses, They aren't. So welcome to the deep dive. Our mission today is to cut through all that noise and answer the defining question of the future of org.</v>
+
+10
+00:00:37.550 --> 00:00:37.950
+<v Daniel>The big one.</v>
+
+11
+00:00:38.290 --> 00:00:46.395
+<v Maya>Yeah, the big one. When organizations adopt AI, are they choosing to augment their workers or are they replacing them entirely? And, you know, what happens next?</v>
+
+12
+00:00:46.720 --> 00:00:56.842
+<v Daniel>It is genuinely the single most important economic question of our era. And to answer it today, we are going to rely primarily on a massive brand new working paper from the U.S. Census Bureau.</v>
+
+13
+00:00:57.143 --> 00:00:58.003
+<v Maya>Just published, right?</v>
+
+14
+00:00:58.103 --> 00:01:07.025
+<v Daniel>Yes. October 2026. It's by Bonnie and colleagues and gives this incredibly detailed look at the microstructure of AI diffusion.</v>
+
+15
+00:01:07.225 --> 00:01:08.045
+<v Maya>Wow. OK.</v>
+
+16
+00:01:08.225 --> 00:01:15.187
+<v Daniel>Yeah. And we also have four other cutting edge papers we're going to weave in just to give you the full context of what is happening on the ground right now.</v>
+
+17
+00:01:15.495 --> 00:01:21.778
+<v Maya>Okay, let's unpack this. Because the whole narrative of robots coming for our jobs is incredibly messy. Oh,</v>
+
+18
+00:01:21.838 --> 00:01:22.919
+<v Daniel>it's completely tangled up.</v>
+
+19
+00:01:23.099 --> 00:01:32.323
+<v Maya>Right. But before we can even look at the augment or replace question, I feel like we have a baseline problem here. How do we even measure who is using AI?</v>
+
+20
+00:01:32.683 --> 00:01:34.264
+<v Daniel>That is the perfect place to start.</v>
+
+21
+00:01:34.704 --> 00:01:38.406
+<v Maya>I mean, every headline throws out a completely different number, right? You can't make sense of it.</v>
+
+22
+00:01:38.762 --> 00:01:47.085
+<v Daniel>That discrepancy is a massive point of confusion. And, well, you can't understand the impact of a technology if you can't even establish a baseline adoption rate.</v>
+
+23
+00:01:47.185 --> 00:01:47.686
+<v Maya>Exactly. So</v>
+
+24
+00:01:48.466 --> 00:01:58.390
+<v Daniel>to clear this up, we are looking at an April 2026 Fed's note by Jeffrey Allen at the Federal Reserve. He basically investigated why all these major surveys disagree so wildly.</v>
+
+25
+00:01:58.761 --> 00:02:04.323
+<v Maya>Because the numbers are all over the map. I mean, the Census Bureau says about 18 percent of firms use AI.</v>
+
+26
+00:02:04.543 --> 00:02:04.763
+<v Daniel>Right.</v>
+
+27
+00:02:04.983 --> 00:02:12.026
+<v Maya>But then you look at the real time population survey and they report 41 percent of workers are using generative AI for work.</v>
+
+28
+00:02:12.226 --> 00:02:12.726
+<v Daniel>Huge jump.</v>
+
+29
+00:02:12.906 --> 00:02:25.751
+<v Maya>Yeah. And then the Survey of Business Uncertainty claims 78 percent of the labor force works at an AI adopting firm. I mean, 18, 41 and 78 are completely different realities. How do you build a strategy off that?</v>
+
+30
+00:02:25.986 --> 00:02:40.852
+<v Daniel>Well, Alan points out that they aren't actually contradictory. Wait, really? Yeah, they are just measuring entirely different things. The gap comes entirely from who is being asked and how the questions are framed. So if you are, say, putting together a presentation and you need a solid</v>
+
+31
+00:02:40.892 --> 00:02:43.393
+<v Daniel>number to put on a slide, here is how you use them.</v>
+
+32
+00:02:43.814 --> 00:02:44.934
+<v Maya>Okay, lay it on us.</v>
+
+33
+00:02:45.594 --> 00:02:51.117
+<v Daniel>You use the Census Bureau's 18% if you are talking about strict formal adoption by a business.</v>
+
+34
+00:02:51.237 --> 00:02:51.577
+<v Maya>Got it.</v>
+
+35
+00:02:52.283 --> 00:03:00.774
+<v Daniel>Now, if you weight that 18% by employment, meaning you factor in that bigger companies hire far more people, that number actually bumps up to 32%.</v>
+
+36
+00:03:01.885 --> 00:03:05.546
+<v Maya>Okay, so that's the firm level. What about the 41%? Right,</v>
+
+37
+00:03:05.566 --> 00:03:14.048
+<v Daniel>you use the 41% from the real-time population survey if you were talking about individual worker exposure. Like, what are the humans actually doing at their desks?</v>
+
+38
+00:03:14.248 --> 00:03:14.648
+<v Maya>Oh, I see.</v>
+
+39
+00:03:15.108 --> 00:03:24.230
+<v Daniel>And that massive 78% number, that's simply because giant corporations are adopting AI the fastest, and those mega-corporations employ the vast majority of the labor force.</v>
+
+40
+00:03:24.455 --> 00:03:29.939
+<v Maya>That makes so much sense. Think about a massive organization like a university to visualize this.</v>
+
+41
+00:03:30.260 --> 00:03:31.200
+<v Daniel>Oh, it's a great analogy.</v>
+
+42
+00:03:31.400 --> 00:03:38.066
+<v Maya>Right, because if you ask a university provost, has the institution formally adopted an enterprise AI strategy, they might say no.</v>
+
+43
+00:03:38.366 --> 00:03:40.287
+<v Daniel>Exactly. They haven't bought the enterprise license yet.</v>
+
+44
+00:03:40.347 --> 00:03:53.738
+<v Maya>Right. So that falls into your 18% category of firm adoption. But if you survey the adjunct professors and ask, are you using ChatGPT to help write your syllabus or grade papers, a huge chunk of them will say yes.</v>
+
+45
+00:03:54.298 --> 00:03:56.839
+<v Daniel>And there is your 41% worker exposure.</v>
+
+46
+00:03:56.979 --> 00:03:57.380
+<v Maya>Exactly.</v>
+
+47
+00:03:57.660 --> 00:04:02.062
+<v Daniel>The institution hasn't deployed it, but the humans on the ground are pulling it into the workflows anyway.</v>
+
+48
+00:04:02.382 --> 00:04:03.503
+<v Maya>That paints the perfect picture.</v>
+
+49
+00:04:04.003 --> 00:04:09.586
+<v Daniel>We have a huge gap between what the institution officially deploys and what the workers just do informally.</v>
+
+50
+00:04:09.826 --> 00:04:09.986
+<v Maya>Yeah.</v>
+
+51
+00:04:10.326 --> 00:04:17.770
+<v Daniel>But those macro numbers, they don't tell us what these companies are actually doing behind closed doors. And that is where this new U.S. Census Bureau paper comes in.</v>
+
+52
+00:04:18.056 --> 00:04:26.061
+<v Maya>Let's talk about the scale of this census data because it is staggering. I mean, this is the second AI supplement to the Business Trends and Outlook survey.</v>
+
+53
+00:04:26.441 --> 00:04:27.342
+<v Daniel>It's massive.</v>
+
+54
+00:04:27.642 --> 00:04:34.786
+<v Maya>They sent it to a nationally representative sample of 1.2 million businesses. And this was just between November 2025 and February 2026.</v>
+
+55
+00:04:36.770 --> 00:04:43.895
+<v Daniel>The scale is really what makes it the gold standard right now. They didn't just ask a simple binary, do you use AI kind of question.</v>
+
+56
+00:04:43.915 --> 00:04:44.956
+<v Maya>Right. They went way deeper.</v>
+
+57
+00:04:45.337 --> 00:04:53.303
+<v Daniel>Exactly. They tracked 15 specific business functions. They looked at worker tasks, changes in headcount, and shifts in capital investments.</v>
+
+58
+00:04:53.603 --> 00:04:53.843
+<v Maya>Wow.</v>
+
+59
+00:04:54.463 --> 00:05:02.509
+<v Daniel>And the data is weighted to represent the entire universe of U.S. firms. Though there is one single caveat we do need to keep in mind here.</v>
+
+60
+00:05:02.770 --> 00:05:03.130
+<v Maya>What's that?</v>
+
+61
+00:05:03.827 --> 00:05:13.112
+<v Daniel>This survey relies on a firm's respondent to judge the worker use. So we are getting management's perception of what AI is causing, not a survey of the workers themselves.</v>
+
+62
+00:05:13.532 --> 00:05:21.857
+<v Maya>Right. Management's perspective, but still across 1.2 million companies. And what they found is that adoption is heavily concentrated.</v>
+
+63
+00:05:22.337 --> 00:05:23.078
+<v Daniel>Very concentrated.</v>
+
+64
+00:05:23.598 --> 00:05:36.897
+<v Maya>We are seeing 50 to 60 percent adoption in very large firms, specifically concentrated in information, professional services and finance. But the way they actually use it is surprisingly narrow, isn't it?</v>
+
+65
+00:05:37.318 --> 00:05:38.398
+<v Daniel>It's incredibly limited.</v>
+
+66
+00:05:38.678 --> 00:05:44.102
+<v Maya>Like 57% of the adopting firms only use AI in three or fewer business functions.</v>
+
+67
+00:05:44.542 --> 00:05:46.923
+<v Daniel>And that's mostly sales and marketing, right?</v>
+
+68
+00:05:47.063 --> 00:05:48.024
+<v Maya>Almost entirely, yeah.</v>
+
+69
+00:05:48.684 --> 00:05:57.910
+<v Daniel>Furthermore, when it comes to the workers, 65% of firms limit worker use to three or fewer task types. And that is heavily led by just writing and editing.</v>
+
+70
+00:05:58.347 --> 00:06:07.232
+<v Maya>The dynamic of how it bleeds into the company is what really fascinates me. The paper breaks it down into top-down versus bottom-up adoption.</v>
+
+71
+00:06:07.412 --> 00:06:09.113
+<v Daniel>Right, the diffusion runs both ways.</v>
+
+72
+00:06:09.974 --> 00:06:21.320
+<v Maya>Yeah, so in 36% of the firms where workers are using AI, there is zero formal firm adoption. That's the bottom-up shadow IT we just talked about with the university analogy.</v>
+
+73
+00:06:21.800 --> 00:06:23.341
+<v Daniel>The workers just brought it in on their own.</v>
+
+74
+00:06:23.561 --> 00:06:33.324
+<v Maya>Exactly. But the reverse is also true. In 19% of the firms that have formally adopted AI, there is no worker use at all. That is purely top-down.</v>
+
+75
+00:06:33.624 --> 00:06:37.006
+<v Daniel>Which really highlights a fascinating bottleneck in corporate technology.</v>
+
+76
+00:06:37.646 --> 00:06:40.007
+<v Maya>Well, I have to push back on that 19%, though.</v>
+
+77
+00:06:40.027 --> 00:06:40.847
+<v Daniel>Okay, how so?</v>
+
+78
+00:06:41.972 --> 00:06:55.597
+<v Maya>If one in five companies bought the AI, but the employees aren't touching it, what is actually happening? I mean, is management just paying for expensive enterprise licenses so they can look innovative to their shareholders while the software just gathers digital dust?</v>
+
+79
+00:06:56.217 --> 00:06:57.578
+<v Daniel>It's a natural assumption for sure.</v>
+
+80
+00:06:58.082 --> 00:07:05.267
+<v Maya>But the data points to something much more systemic, which is implementation lags. Oh, meaning it just takes a long time to get running.</v>
+
+81
+00:07:05.467 --> 00:07:16.154
+<v Daniel>Exactly. Buying the software license is the easy part. But fundamentally rewiring your business processes to actually utilize it, meaning navigating compliance, ensuring data security.</v>
+
+82
+00:07:16.514 --> 00:07:18.675
+<v Maya>Integrating legacy databases, right?</v>
+
+83
+00:07:18.775 --> 00:07:27.201
+<v Daniel>Yes, and retraining staff. All of that is incredibly difficult. It takes time to build the structural implementation before a single worker ever even logs in.</v>
+
+84
+00:07:27.680 --> 00:07:37.049
+<v Maya>Which is the perfect setup for the real anxiety driving this whole conversation. When they finally do wire the plumbing and get the AI running, what is the ultimate consequence?</v>
+
+85
+00:07:37.429 --> 00:07:39.611
+<v Daniel>Do they augment or do they replace?</v>
+
+86
+00:07:39.892 --> 00:07:43.455
+<v Maya>Right. Do they augment their human staff or do they replace them?</v>
+
+87
+00:07:43.935 --> 00:07:48.520
+<v Daniel>Well, the core finding from the census paper provides a very clear picture of the present moment.</v>
+
+88
+00:07:49.537 --> 00:07:51.077
+<v Maya>And it's actually kind of good news, right?</v>
+
+89
+00:07:51.297 --> 00:07:58.699
+<v Daniel>It is. Of the firms reporting that AI has any effect on tasks, 66% say they only use it to augment worker tasks.</v>
+
+90
+00:07:59.079 --> 00:08:00.159
+<v Maya>That's a huge majority.</v>
+
+91
+00:08:00.359 --> 00:08:10.242
+<v Daniel>Yes. Pure substitution, meaning entirely replacing a human's task, and pure task creation are both very rare. These sit at about 5%. Okay,</v>
+
+92
+00:08:10.762 --> 00:08:12.262
+<v Maya>so 5%. Right.</v>
+
+93
+00:08:12.322 --> 00:08:16.403
+<v Daniel>And another 7% say they do a mix of both augmenting and substituting.</v>
+
+94
+00:08:16.722 --> 00:08:23.305
+<v Maya>And when you look at actual headcount, the reality is almost anticlimactic compared to the sci-fi panic we see online.</v>
+
+95
+00:08:23.485 --> 00:08:24.065
+<v Daniel>Oh, completely.</v>
+
+96
+00:08:24.425 --> 00:08:36.791
+<v Maya>AI-driven headcount changes only happen in about 5% of AI-using firms. And it is basically a wash. It's split almost perfectly evenly between headcount increases at 2.3% and decreases at 2.0%.</v>
+
+97
+00:08:39.487 --> 00:08:49.695
+<v Daniel>And we can see exactly where those changes happen in the data. The decreases in headcount are highly concentrated in the largest firms, specifically those that use AI to substitute for tasks.</v>
+
+98
+00:08:49.996 --> 00:08:51.657
+<v Maya>Makes sense. What about the increases?</v>
+
+99
+00:08:52.097 --> 00:09:01.585
+<v Daniel>The headcount increases are much more common in firms where AI is used to augment. But there is a fascinating secondary finding here about what AI is actually replacing.</v>
+
+100
+00:09:01.809 --> 00:09:04.250
+<v Maya>Yeah. And it isn't always human beings.</v>
+
+101
+00:09:04.370 --> 00:09:04.911
+<v Daniel>Exactly.</v>
+
+102
+00:09:05.291 --> 00:09:16.597
+<v Maya>This blew my mind. AI is actually replacing old capital much faster than it is replacing people. 16% of AI using firms reported that they replaced existing software and equipment.</v>
+
+103
+00:09:16.777 --> 00:09:17.397
+<v Daniel>Which is huge.</v>
+
+104
+00:09:17.617 --> 00:09:26.142
+<v Maya>Yeah. Think about like legacy OCR scanners that used to read physical documents or clunky, outdated sorting algorithms from the early 2000s.</v>
+
+105
+00:09:27.297 --> 00:09:35.186
+<v Daniel>It is vastly easier for a company to swap out a bad accounting program for an AI tool than it is to completely reorganize a human department.</v>
+
+106
+00:09:35.607 --> 00:09:37.189
+<v Maya>Right. Software doesn't have an HR file.</v>
+
+107
+00:09:37.589 --> 00:09:45.538
+<v Daniel>Exactly. But we have to look at the whole picture. That is the current snapshot. The census data also contains a flashing yellow light.</v>
+
+108
+00:09:46.239 --> 00:09:46.880
+<v Maya>The drift.</v>
+
+109
+00:09:47.358 --> 00:10:02.031
+<v Daniel>Yes. There is a measurable drift toward replacement. Remember that substitution is currently rare, but among the firms that do use AI to substitute, the share of them replacing a, quote, large number of tasks rose from 2.5% to 7%.</v>
+
+110
+00:10:02.091 --> 00:10:02.451
+<v Daniel>Wow,</v>
+
+111
+00:10:02.952 --> 00:10:03.672
+<v Maya>that's a big jump.</v>
+
+112
+00:10:04.173 --> 00:10:08.657
+<v Daniel>And that jump happened in just the two years since the Census Bureau's first AI supplement.</v>
+
+113
+00:10:09.137 --> 00:10:18.539
+<v Maya>So why the sudden jump? If you are a worker listening to this, trying to figure out if your specific job is safe, how do you translate that drift into a reality check?</v>
+
+114
+00:10:19.239 --> 00:10:24.360
+<v Daniel>Well, to understand the drift, we really have to look at how the technology is actively being deployed at the workflow level.</v>
+
+115
+00:10:24.540 --> 00:10:24.780
+<v Maya>Okay.</v>
+
+116
+00:10:25.700 --> 00:10:31.902
+<v Daniel>The census paper ran regressions on their data to see what specific behaviors actually correlate with a drop in employment.</v>
+
+117
+00:10:32.402 --> 00:10:47.068
+<v Maya>Real quick, let's demystify the word regression here so we aren't just throwing around statistical jargon. Sure. They basically isolated all the different variables, like who is using the AI and how, to see which specific action is actually causing the job losses, right?</v>
+
+118
+00:10:47.428 --> 00:10:57.574
+<v Daniel>Precisely. They drew a very sharp line. Breath of AI across multiple business functions combined with heavy spending on implementation correlates with employment decreases.</v>
+
+119
+00:10:57.878 --> 00:11:01.121
+<v Maya>Okay, so wide deployment and high spending.</v>
+
+120
+00:11:01.341 --> 00:11:07.967
+<v Daniel>Yes, but worker task use has no statistical link to headcount reduction once you account for those other factors.</v>
+
+121
+00:11:08.448 --> 00:11:19.097
+<v Maya>Okay, so in plain English, workers picking up AI tools to do their daily tasks faster is not what cuts jobs. The cuts show up when management deploys AI across whole business functions.</v>
+
+122
+00:11:19.297 --> 00:11:20.018
+<v Daniel>That's exactly it.</v>
+
+123
+00:11:20.285 --> 00:11:29.855
+<v Maya>Like me using a chat bot to draft an email doesn't get me fired, but management installing an automated AI system to handle all customer service emails might.</v>
+
+124
+00:11:30.496 --> 00:11:39.005
+<v Daniel>The usage data perfectly mirrors this functional divide. We can look at the January 2026 Anthropic Economic Index report by Appel and colleagues.</v>
+
+125
+00:11:39.468 --> 00:11:41.269
+<v Maya>Right, looking at their actual user data.</v>
+
+126
+00:11:41.469 --> 00:11:56.235
+<v Daniel>Yeah, they analyzed the usage data of their own AI product, Claude, from November 2025. On the Claude web interface, which is where individual human beings go to chat with the AI, conversations classified as augmented actually rose five points to</v>
+
+127
+00:11:56.275 --> 00:11:57.075
+<v Daniel>52%. Oh,</v>
+
+128
+00:11:57.695 --> 00:11:57.915
+<v Maya>wow.</v>
+
+129
+00:11:58.275 --> 00:12:01.757
+<v Daniel>And conversations classified as automated fell four points to 45%.</v>
+
+130
+00:12:02.712 --> 00:12:04.653
+<v Maya>So individuals are mostly collaborating with it?</v>
+
+131
+00:12:04.853 --> 00:12:13.216
+<v Daniel>Yes. But when you look at their business API traffic, the story flips completely. About three quarters of API traffic is automation.</v>
+
+132
+00:12:13.796 --> 00:12:18.458
+<v Maya>We should clarify what the API side actually is for people who might not be in tech.</v>
+
+133
+00:12:18.578 --> 00:12:18.998
+<v Daniel>Good idea.</v>
+
+134
+00:12:19.398 --> 00:12:29.742
+<v Maya>When we talk about the API side, we don't mean a human typing a prompt into a chat window on a website. We mean management wiring the AI directly into the company's backend servers.</v>
+
+135
+00:12:30.082 --> 00:12:30.642
+<v Daniel>It's the plumbing.</v>
+
+136
+00:12:31.389 --> 00:12:39.178
+<v Maya>Exactly. It allows the AI to automatically process, say, 10,000 invoices a minute or route 1,000 IT tickets without a human ever seeing them.</v>
+
+137
+00:12:39.318 --> 00:12:48.489
+<v Daniel>Exactly. Individuals collaborate, but systems automate. Now, we do need to note a major caveat with the Anthropic paper.</v>
+
+138
+00:12:49.523 --> 00:12:52.786
+<v Maya>Beyond the fact that it is one company analyzing its own product, right?</v>
+
+139
+00:12:53.007 --> 00:13:03.897
+<v Daniel>Right. The researchers noted that when you adjust for the AI's actual success rate at completing tasks, accounting for things like hallucinations or the need for a human to constantly re-prompt it,</v>
+
+140
+00:13:04.306 --> 00:13:05.427
+<v Maya>Because it messes up a lot?</v>
+
+141
+00:13:05.567 --> 00:13:20.522
+<v Daniel>Exactly. When you account for that, the implied productivity boost it gives the economy roughly halves. It drops from 1.8 to about 1.0 percentage points a year. AI still struggles significantly with complex long horizon</v>
+
+142
+00:13:20.542 --> 00:13:20.903
+<v Daniel>tasks.</v>
+
+143
+00:13:21.563 --> 00:13:26.909
+<v Maya>Sure, but when a task isn't complex, the replacement is very real and the economics are brutal.</v>
+
+144
+00:13:27.269 --> 00:13:27.910
+<v Daniel>Extremely brutal.</v>
+
+145
+00:13:28.235 --> 00:13:41.920
+<v Maya>And that brings us to the Stevens 2026 preprint titled Payrolls to Prompts. This paper tracked corporate card data from RAMP between 2021 and 2025. And man, it is the clearest case of functional replacement we have on the books.</v>
+
+146
+00:13:42.520 --> 00:13:55.624
+<v Daniel>The Stevens data shows that firms which relied heavily on freelancers from platforms like Upwork and Fiverr before ChatGPT have drastically cut that freelance spending while simultaneously raising their AI spending.</v>
+
+147
+00:13:56.284 --> 00:13:57.805
+<v Maya>And the math behind it explains why.</v>
+
+148
+00:13:58.120 --> 00:14:09.508
+<v Daniel>It does. Stevens calculates that it takes roughly three cents of AI spending to replace one dollar of freelance labor cut. He reads that as a 20 to 25 times cost savings.</v>
+
+149
+00:14:09.728 --> 00:14:15.412
+<v Maya>I mean, a 97 percent discount. If you are a business owner, you just cannot ignore that.</v>
+
+150
+00:14:15.712 --> 00:14:16.292
+<v Daniel>You really can't.</v>
+
+151
+00:14:16.592 --> 00:14:24.738
+<v Maya>Now, we have to acknowledge this is a single author preprint. And more importantly, freelancers on those platforms represent the most highly automatable slice of work.</v>
+
+152
+00:14:25.025 --> 00:14:28.908
+<v Daniel>Right. Basic copywriting, simple code debugging, graphic design.</v>
+
+153
+00:14:29.208 --> 00:14:42.639
+<v Maya>Yeah, it's not the core full-time workforce holding complex institutional knowledge. But still, if you're a freelancer losing your client base to an API, you aren't just upset about your wallet. This kind of economic anxiety bleeds out into society.</v>
+
+154
+00:14:42.859 --> 00:14:57.849
+<v Daniel>It does. And it fundamentally alters how the public interacts with institutions. This choice between augmenting and replacing matters far beyond the walls of the firm. Right. We have a 2026 PNAS study by Granulo, Roth, and Fuchs that</v>
+
+155
+00:14:58.270 --> 00:15:03.212
+<v Daniel>proves this. They looked at survey data from over 37,000 people across 38 European countries.</v>
+
+156
+00:15:05.530 --> 00:15:12.473
+<v Maya>Now, I want to jump in here and say we have to look at this data impartially, purely as a measure of cause and effect, regardless of anyone's political leanings.</v>
+
+157
+00:15:12.713 --> 00:15:14.594
+<v Daniel>Absolutely. We are just reporting the numbers.</v>
+
+158
+00:15:14.814 --> 00:15:17.756
+<v Maya>Right. So what did the European data actually show?</v>
+
+159
+00:15:17.976 --> 00:15:26.880
+<v Daniel>It showed that the public heavily perceives AI as labor replacing. And perceiving AI that way is directly linked to a lower satisfaction with democracy.</v>
+
+160
+00:15:27.000 --> 00:15:27.200
+<v Maya>Wow.</v>
+
+161
+00:15:27.661 --> 00:15:34.884
+<v Daniel>But the researchers went a step further. They ran two pre-registered experiments in the UK and the US with about 1,200 people in each.</v>
+
+162
+00:15:35.354 --> 00:15:36.195
+<v Maya>OK, and what happened?</v>
+
+163
+00:15:36.535 --> 00:15:46.801
+<v Daniel>They found that deliberately framing AI as labor-replacing actively caused a lower trust in democracy, and it made people less willing to engage politically on AI issues.</v>
+
+164
+00:15:47.133 --> 00:16:01.682
+<v Maya>So the perception alone is enough to destabilize institutional trust. I mean, people feel the economic ground shifting beneath them. They hear about the three cent to one dollar cost savings. Exactly. And if they don't feel institutions can protect them from that functional</v>
+
+165
+00:16:01.722 --> 00:16:06.165
+<v Maya>replacement, their anxiety lowers their trust in the entire civic system.</v>
+
+166
+00:16:06.725 --> 00:16:16.414
+<v Daniel>Which brings all of our sources into a central, really unresolved tension. Today's evidence says augmentation dominates. 66% are augmenting and job cuts are rare.</v>
+
+167
+00:16:16.575 --> 00:16:16.795
+<v Maya>Right.</v>
+
+168
+00:16:17.175 --> 00:16:28.881
+<v Daniel>But substitution is clearly intensifying. The cuts we do see sit in the largest firms with the broadest deployments. And businesses wiring AI into systems automate far more than individuals chatting with it do.</v>
+
+169
+00:16:29.385 --> 00:16:36.367
+<v Maya>So the ultimate question is, is this 66 percent augmentation a stable equilibrium or is it just an early phase?</v>
+
+170
+00:16:36.667 --> 00:16:37.047
+<v Daniel>Exactly.</v>
+
+171
+00:16:37.347 --> 00:16:37.727
+<v Maya>What do you think?</v>
+
+172
+00:16:38.328 --> 00:16:50.331
+<v Daniel>Honestly, I struggle to believe that 66 percent augmentation is a permanent state of grace. I mean, if functional substitution is 25 times cheaper, capitalism is not going to just ignore those margins.</v>
+
+173
+00:16:50.471 --> 00:17:04.998
+<v Maya>It's a very compelling economic force. Right now, the replacement is isolated to freelancers and highly automatable tasks. But as managers figure out the heavy structural implementation, like as they finish building the API plumbing across whole business functions, that</v>
+
+174
+00:17:05.338 --> 00:17:09.240
+<v Maya>7% of firms replacing a large number of tasks is going to skyrocket.</v>
+
+175
+00:17:09.620 --> 00:17:10.921
+<v Daniel>You think the plumbing is the only barrier?</v>
+
+176
+00:17:11.281 --> 00:17:18.024
+<v Maya>I really do. I think the implementation lag is the only thing protecting those jobs right now. Once the plumbing is built, the automation just takes over.</v>
+
+177
+00:17:18.865 --> 00:17:26.209
+<v Daniel>It is a strong economic argument, for sure. But you are assuming that technology is actually capable of replacing complex human workflows entirely.</v>
+
+178
+00:17:26.830 --> 00:17:28.431
+<v Maya>Okay. What's the counter argument?</v>
+
+179
+00:17:29.071 --> 00:17:39.717
+<v Daniel>The counter argument for a stable equilibrium relies on the nature of the work itself. Complex tasks in the real world require a human in the loop. Look at the anthropic data we just discussed.</v>
+
+180
+00:17:40.137 --> 00:17:41.118
+<v Maya>The hallucination stuff.</v>
+
+181
+00:17:41.461 --> 00:17:56.086
+<v Daniel>Yes. When they adjusted for actual task success, the productivity boost was cut in half. AI hallucinates. It loses the thread on long-horizon tasks. Because of those severe limitations, humans will always be needed as</v>
+
+182
+00:17:56.106 --> 00:17:58.567
+<v Daniel>editors, orchestrators, and fact-checkers.</v>
+
+183
+00:17:59.427 --> 00:18:02.068
+<v Maya>So you're saying the tech enforces collaboration?</v>
+
+184
+00:18:02.828 --> 00:18:07.810
+<v Daniel>Fundamentally, yes. Therefore, the technology enforces collaboration, not replacement.</v>
+
+185
+00:18:08.515 --> 00:18:21.082
+<v Maya>Okay, let's bring this down to earth and apply it to a real world ecosystem. Think about higher education, specifically in a massive talent-driven market like the New York City economy. How does a university process this tension?</v>
+
+186
+00:18:21.543 --> 00:18:21.903
+<v Daniel>It's tough.</v>
+
+187
+00:18:22.243 --> 00:18:25.585
+<v Maya>Because there are four major implications hiding in this data for them.</v>
+
+188
+00:18:26.105 --> 00:18:40.456
+<v Daniel>Right. First, universities are massive employers themselves. They have to decide how to deploy AI in their own sprawling administrative functions. Will they use it to augment their existing staff or will they utilize backend APIs to functionally automate the back office?</v>
+
+189
+00:18:41.096 --> 00:18:42.077
+<v Maya>That's a huge decision.</v>
+
+190
+00:18:42.477 --> 00:18:42.697
+<v Daniel>It is.</v>
+
+191
+00:18:43.117 --> 00:18:55.603
+<v Maya>Second, they are the trainers. Yes. Universities are actively educating the future managers who will be making the augment or replace calls in the corporate world a decade from now. What mindset are they instilling in those future leaders?</v>
+
+192
+00:18:56.510 --> 00:19:06.977
+<v Daniel>And third, they are partners to the broader economy. The census data explicitly showed that the most intensive sectors are information, professional services and finance.</v>
+
+193
+00:19:07.637 --> 00:19:20.065
+<v Maya>And those three sectors are the absolute bedrock of the New York City economy. They are the primary destination for local graduates. Universities have to ask, what will these highly integrated firms demand from a new graduate?</v>
+
+194
+00:19:20.506 --> 00:19:24.008
+<v Daniel>Exactly. And fourth, we have to make an inference about vulnerability here.</v>
+
+195
+00:19:24.645 --> 00:19:26.386
+<v Maya>Because the paper doesn't specify, right?</v>
+
+196
+00:19:26.627 --> 00:19:36.775
+<v Daniel>Right. The census paper does not break down its results by worker age or education level or by city. But based on the mechanisms we've discussed today, we can infer who is most exposed.</v>
+
+197
+00:19:37.155 --> 00:19:37.535
+<v Maya>Who is it?</v>
+
+198
+00:19:37.836 --> 00:19:41.839
+<v Daniel>It is early career workers, adult learners, and first-generation students.</v>
+
+199
+00:19:42.401 --> 00:19:50.563
+<v Maya>Because those populations are the ones most likely to hold the entry level and freelance style roles where the substitution shows up first. We saw it right there in the Upwork data.</v>
+
+200
+00:19:50.723 --> 00:19:51.223
+<v Daniel>Exactly.</v>
+
+201
+00:19:51.523 --> 00:19:57.244
+<v Maya>So if you were taking notes and you need to summarize this entire landscape, what are the clean, quotable findings we can pull from today?</v>
+
+202
+00:19:57.604 --> 00:20:01.225
+<v Daniel>I will give you two clear findings along with their vital objections.</v>
+
+203
+00:20:01.365 --> 00:20:01.745
+<v Maya>Perfect.</v>
+
+204
+00:20:02.225 --> 00:20:10.827
+<v Daniel>Finding number one, only 5% of AI using firms have changed their headcount and 66% only use it to augment workers.</v>
+
+205
+00:20:11.182 --> 00:20:13.263
+<v Maya>Okay, but what's the objection to put next to that?</v>
+
+206
+00:20:13.563 --> 00:20:24.487
+<v Daniel>The objection you must attach to that is that it is self-reported by firms who may have attribution bias, and it completely ignores the 75% automation rate occurring silently in API backends.</v>
+
+207
+00:20:24.687 --> 00:20:26.507
+<v Maya>Got it. Okay, finding number two.</v>
+
+208
+00:20:26.828 --> 00:20:32.049
+<v Daniel>Finding number two. AI replacement costs $0.03 on the dollar compared to human freelancers.</v>
+
+209
+00:20:32.550 --> 00:20:33.390
+<v Maya>And the objection there?</v>
+
+210
+00:20:33.903 --> 00:20:44.054
+<v Daniel>The objection is that this is based on a single preprint tracking corporate card data. And freelancers represent the most highly automatable slice of work, not the complex core workforce.</v>
+
+211
+00:20:44.514 --> 00:20:46.856
+<v Maya>Which leaves us with a final thought to mull over.</v>
+
+212
+00:20:47.137 --> 00:20:56.466
+<v Daniel>It does. If businesses use APIs to automate away the simple entry-level tasks because it is overwhelmingly cheaper, a structural gap appears.</v>
+
+213
+00:20:56.747 --> 00:20:56.987
+<v Maya>Right.</v>
+
+214
+00:20:57.762 --> 00:21:06.704
+<v Daniel>How does a junior employee ever acquire the deep foundational expertise they need to eventually become the senior manager who oversees the AI?</v>
+
+215
+00:21:07.184 --> 00:21:10.485
+<v Maya>Wow. If you automate the foundation, you eventually lose the building.</v>
+
+216
+00:21:10.645 --> 00:21:11.085
+<v Daniel>You really do.</v>
+
+217
+00:21:11.565 --> 00:21:23.268
+<v Maya>The future of work isn't just about what the technology can do. It's about what we choose to do with it once the plumbing is actually built. Thank you for joining us on this deep dive into the Census Bureau data and the mechanics of AI diffusion.</v>
+
+218
+00:21:23.428 --> 00:21:24.128
+<v Daniel>Thanks for having me.</v>
+
+219
+00:21:24.846 --> 00:21:28.725
+<v Maya>We encourage you to keep exploring these sources on your own. There is always more to learn.</v>
