@@ -1,0 +1,509 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:10.759
+<v Daniel>Welcome to the Deep Dive. You know, we have this massive stack of research on the future of work in AI right now. And honestly, the information overload is just, it's real.</v>
+
+2
+00:00:11.179 --> 00:00:12.480
+<v Maya>Oh, it is completely overwhelming.</v>
+
+3
+00:00:12.800 --> 00:00:25.610
+<v Daniel>Right. So our mission today is to just cut right through that. We want to give you the hard evidence, the bulletproof arguments you need, basically the exact kind of stuff that is perfect for dropping onto a slide or, you know, bringing up at a high level discussion.</v>
+
+4
+00:00:26.210 --> 00:00:28.932
+<v Maya>Exactly. Because this isn't just theoretical anymore.</v>
+
+5
+00:00:29.073 --> 00:00:29.573
+<v Daniel>No, it's not.</v>
+
+6
+00:00:30.185 --> 00:00:42.293
+<v Maya>And to get there, we are anchoring today's conversation on a really classic 2022 paper by the economist Erik Brynjolfsson. It's called The Touring Trap, The Promise and Peril of Human-Like Artificial Intelligence.</v>
+
+7
+00:00:42.773 --> 00:00:44.074
+<v Daniel>It is such a foundational paper.</v>
+
+8
+00:00:44.728 --> 00:00:49.609
+<v Maya>And to understand this trap he talks about, you actually have to go all the way back to 1950.</v>
+
+9
+00:00:49.889 --> 00:00:50.770
+<v Daniel>Oh, to Alan Turing.</v>
+
+10
+00:00:51.050 --> 00:01:00.112
+<v Maya>Right. Alan Turing and his famous imitation game. Turing basically proposed that, you know, the ultimate test of machine intelligence is whether it can perfectly imitate a human being.</v>
+
+11
+00:01:00.573 --> 00:01:02.153
+<v Daniel>Which makes sense as a starting point, right?</v>
+
+12
+00:01:02.444 --> 00:01:16.009
+<v Maya>It does, but it inadvertently set the goalposts for the next 70 years of computer science. Because of Turing, the tech world just became completely obsessed with creating human-like AI. And Brynjolfsson argues that this obsession, it's a trap.</v>
+
+13
+00:01:16.509 --> 00:01:19.990
+<v Daniel>Okay, wait, why is it a trap? It seems like a pretty logical goal.</v>
+
+14
+00:01:20.448 --> 00:01:33.353
+<v Maya>Here's the underlying premise. When AI is designed to just automate what humans already do, machines become direct substitutes for human workers. And when you are highly substitutable, you lose your economic and political bargaining power.</v>
+
+15
+00:01:33.753 --> 00:01:42.316
+<v Daniel>Oh, I see. Because if a machine can do exactly what you do and for cheaper, you just you don't have the leverage to demand higher wages or better conditions.</v>
+
+16
+00:01:42.680 --> 00:01:57.057
+<v Maya>Exactly. You are easily replaced. But there is an alternative path here, which is augmentation. When AI augments people, meaning it gives them entirely new capabilities rather than just mimicking their old ones, humans remain indispensable.</v>
+
+17
+00:01:57.730 --> 00:02:01.413
+<v Daniel>So you aren't competing with the machine in that scenario. You're wielding it.</v>
+
+18
+00:02:01.674 --> 00:02:16.187
+<v Maya>Precisely. You are wielding it. And because of that, you keep a claim on the economic value that gets created. So the Turing trap is basically this nightmare scenario. It's the risk of a powerless majority getting stuck in an economic equilibrium where they've been</v>
+
+19
+00:02:16.227 --> 00:02:18.248
+<v Maya>entirely automated out of the value chain.</v>
+
+20
+00:02:18.669 --> 00:02:30.508
+<v Daniel>Wow. Now, I mean, a powerless majority sounds incredibly dystopian. But teasing ahead a bit, we actually have the 2026 data now to prove there is a way out of this trap.</v>
+
+21
+00:02:30.848 --> 00:02:32.949
+<v Maya>We do. And the data is fascinating.</v>
+
+22
+00:02:33.449 --> 00:02:43.896
+<v Daniel>But OK, let's unpack this historically first, because to understand why we might be choosing the wrong path right now, we have to look at why augmentation has been the real engine of human prosperity.</v>
+
+23
+00:02:44.400 --> 00:02:56.984
+<v Maya>Right. Brynjolfsson's historical evidence is incredibly strong here. Augmentation, not automation, explains basically the last two centuries of economic growth. I mean, median wages are up more than tenfold since 1820. And</v>
+
+24
+00:02:57.565 --> 00:03:01.946
+<v Daniel>that definitely didn't happen because we just perfectly automated 19th century jobs.</v>
+
+25
+00:03:02.226 --> 00:03:10.649
+<v Maya>Exactly. It happened because technology augmented human labor, which allowed us to do completely new things. The jet engine is a perfect example of this.</v>
+
+26
+00:03:10.964 --> 00:03:12.325
+<v Daniel>Oh, I love the jet engine example.</v>
+
+27
+00:03:12.565 --> 00:03:25.975
+<v Maya>Right. When it was invented, it didn't replace pilots. It augmented them. It made flying vastly safer and faster. And because flying became better, demand skyrocketed, which ultimately multiplied the total number of human pilots that were needed.</v>
+
+28
+00:03:26.195 --> 00:03:35.942
+<v Daniel>It's wild. And it creates entirely new industries, too. I think the stat is like about 60% of people today work in occupations that didn't even exist in 1940.</v>
+
+29
+00:03:36.763 --> 00:03:39.845
+<v Maya>Which is just a staggering number when you really think about it.</v>
+
+30
+00:03:39.985 --> 00:03:51.651
+<v Daniel>It really is. And Brynjolfsson has this memorable point about ancient Greek clay pots that I think perfectly illustrates this. Imagine if we went back in time and simply automated everything the ancient Greeks did.</v>
+
+31
+00:03:52.332 --> 00:03:54.673
+<v Maya>They'd just be making the same things, but faster.</v>
+
+32
+00:03:55.014 --> 00:04:07.457
+<v Daniel>Right. They wouldn't suddenly have modern living standards. They would just have an incredibly cheap, unlimited supply of clay pots. It's like giving ancient Romans a robotic spreadsheet instead of inventing the aqueduct.</v>
+
+33
+00:04:08.660 --> 00:04:12.882
+<v Maya>That is a great way to put it. You're just optimizing the past instead of inventing the future.</v>
+
+34
+00:04:13.122 --> 00:04:24.968
+<v Daniel>Yeah, exactly. Or look at Amazon. They didn't just build a robot cashier and stick it inside a local independent bookstore. They completely reinvented and augmented how we discover and buy books.</v>
+
+35
+00:04:26.048 --> 00:04:33.852
+<v Maya>And there is a very deep economic theory explaining why this matters so much. It comes down to something called incomplete contracts theory.</v>
+
+36
+00:04:34.411 --> 00:04:41.095
+<v Daniel>Okay, incomplete contracts theory. That sounds a little dense. How does that actually work for normal people?</v>
+
+37
+00:04:42.175 --> 00:04:54.242
+<v Maya>So think about it like this. A lot of human knowledge is tacit, right? It's locked inside your brain. And because it's in your head, it is inalienable. I cannot separate your deep personal expertise from you.</v>
+
+38
+00:04:54.682 --> 00:04:59.965
+<v Daniel>Right. So if I'm, say, a master negotiator, you can't just download my negotiation skills to a flash drive.</v>
+
+39
+00:05:00.317 --> 00:05:15.160
+<v Maya>Exactly. You own your brain. And because that knowledge is distributed across millions of people, economic and political power naturally stays decentralized. But, and this is the crucial part, once that knowledge is codified and digitized by an AI,</v>
+
+40
+00:05:15.500 --> 00:05:17.380
+<v Maya>it becomes an alienable asset.</v>
+
+41
+00:05:17.980 --> 00:05:20.101
+<v Daniel>Oh, I see. So it can be owned and transferred.</v>
+
+42
+00:05:20.361 --> 00:05:28.262
+<v Maya>Yes. And most importantly, it can be highly concentrated in the hands of whoever owns the servers. Power shifts from the worker to the capital owner.</v>
+
+43
+00:05:29.069 --> 00:05:39.169
+<v Daniel>Okay, so if augmentation is clearly the bigger prize here, right? It raises wages, decentralizes power. Why on earth is society rushing headlong into this Turing trap?</v>
+
+44
+00:05:39.832 --> 00:05:46.075
+<v Maya>What's fascinating here is that Brynjolfsson identifies three very distinct groups that find the trap completely alluring.</v>
+
+45
+00:05:46.455 --> 00:05:48.716
+<v Daniel>OK, let's go through them. Who is group one?</v>
+
+46
+00:05:49.096 --> 00:06:01.202
+<v Maya>Group one is the technologists. For them, mimicking humans is just a really attractive research target because we provide an existence proof. We exist. Therefore, they know the cognitive task is physically possible.</v>
+
+47
+00:06:01.650 --> 00:06:09.676
+<v Daniel>But wait, isn't it easier to just build something that thinks like a human? Like, if we want an AI to do work, shouldn't we model it after the only working brain we know?</v>
+
+48
+00:06:10.077 --> 00:06:15.621
+<v Maya>It feels intuitive, I know. But Brynjolfsson brings up this twist on Moravec's paradox.</v>
+
+49
+00:06:16.021 --> 00:06:17.002
+<v Daniel>Moravec's paradox.</v>
+
+50
+00:06:17.622 --> 00:06:32.409
+<v Maya>Yeah, it's this idea in computer science that high-level reasoning is actually pretty easy for AI, but low-level sensory motor skills like walking are incredibly hard. So building superhuman performance in entirely new domains is often much</v>
+
+51
+00:06:32.470 --> 00:06:34.671
+<v Maya>easier than perfectly mimicking human quirks.</v>
+
+52
+00:06:35.131 --> 00:06:42.455
+<v Daniel>Oh, wow. Okay, so doing something totally new is easier than copying a human, but technologists still chase the human baseline anyway.</v>
+
+53
+00:06:42.635 --> 00:06:44.676
+<v Maya>Right, because it's an easy, measurable target.</v>
+
+54
+00:06:45.056 --> 00:06:47.317
+<v Daniel>Got it. Okay, so what about the second group?</v>
+
+55
+00:06:47.720 --> 00:06:55.746
+<v Maya>The second group is business people. And this just comes down to basic management incentives. Business leaders love plug and play task substitution.</v>
+
+56
+00:06:56.106 --> 00:07:00.690
+<v Daniel>Oh, sure. Because labor cost cutting is incredibly easy to measure on a quarterly balance sheet.</v>
+
+57
+00:07:00.830 --> 00:07:09.016
+<v Maya>Exactly. And investors disproportionately reward businesses that can scale their operations without hiring more people. It's just the path of least resistance.</v>
+
+58
+00:07:09.296 --> 00:07:23.391
+<v Daniel>Makes total sense. Which brings us to the third group, and this one is really interesting, policymakers. And just to be super clear to you listening, we are looking at this strictly as a matter of economic incentives within the tax code, okay? We are not endorsing any political side here.</v>
+
+59
+00:07:23.691 --> 00:07:31.860
+<v Maya>Right. This is just about the math of the current tax code. And the U.S. tax code distorts the market heavily. It taxes labor far more heavily than capital.</v>
+
+60
+00:07:32.290 --> 00:07:41.499
+<v Daniel>Yeah, the specifics are kind of wild. The top marginal rate on labor income is 37%, but the rate on long-term capital gains is only 20%.</v>
+
+61
+00:07:42.020 --> 00:07:52.370
+<v Maya>Plus, capital gets all these bonuses like tax deferral and something called the step-up basis, which can basically wipe out a lifetime of capital gains for tax purposes when passing on an asset.</v>
+
+62
+00:07:53.005 --> 00:08:05.376
+<v Daniel>Right. So imagine this thought experiment Brian Olson poses. You have $2 billion ventures. One employs 1,000 human workers. The other employs absolutely zero workers. It's just pure automated capital.</v>
+
+63
+00:08:05.776 --> 00:08:12.162
+<v Maya>The tax code as it stands today massively rewards the venture with zero workers. It actively punishes hiring humans.</v>
+
+64
+00:08:12.782 --> 00:08:14.804
+<v Daniel>So what are the remedies here? How do we fix it?</v>
+
+65
+00:08:15.501 --> 00:08:25.903
+<v Maya>Brynjolfsson suggests two main things. First, rebalance the tax treatment of labor versus capital. Stop subsidizing automation. And second, massively fund worker training.</v>
+
+66
+00:08:26.683 --> 00:08:32.105
+<v Daniel>Because firms underinvest in training, right? Like if I train a worker, they can just leave and go to my competitor.</v>
+
+67
+00:08:32.185 --> 00:08:42.447
+<v Maya>Exactly. But to really implement augmenting AI, firms might need to spend $9 on intangible human investment for every single dollar they spend on machine learning.</v>
+
+68
+00:08:43.013 --> 00:08:53.795
+<v Daniel>Wow. Nine to one. OK, so the incentives are obviously skewed. But how does this look in practice? Like, does AI actually have the capacity to automate entire jobs?</v>
+
+69
+00:08:54.715 --> 00:09:07.278
+<v Maya>To answer that, we have to look at the empirical base. Back in 2018, Brynjolfsson, along with Tom Mitchell and Daniel Rock, published this massive paper in the AEA. They created a suitability for machine learning rubric.</v>
+
+70
+00:09:07.815 --> 00:09:11.077
+<v Daniel>Right. And they apply this across, what, like 18,000 tasks?</v>
+
+71
+00:09:11.318 --> 00:09:26.108
+<v Maya>Over 18,156 specific tasks across 964 occupations. And the big reveal was this. Most occupations have some suitable tasks, but essentially zero occupations have all of their tasks</v>
+
+72
+00:09:26.529 --> 00:09:28.030
+<v Maya>perfectly suited for AI.</v>
+
+73
+00:09:28.250 --> 00:09:32.253
+<v Daniel>Oh, wow. So essentially zero jobs can be completely handed over to machine learning.</v>
+
+74
+00:09:32.497 --> 00:09:41.288
+<v Maya>Exactly. Brynjolfsson cited this exact paper in his Turing Trap essay to prove that the real payoff isn't replacing jobs, it's redesigning them.</v>
+
+75
+00:09:42.222 --> 00:09:56.834
+<v Daniel>Which pairs really well with the sister argument to all of this from economists Darren Acemoglu and Pascual Restrepo. In their 2019 and 2020 work, it's called The Wrong Kind of AI, they argue that the history of work is basically a</v>
+
+76
+00:09:56.994 --> 00:10:03.500
+<v Daniel>constant race between automation displacing labor and the creation of new labor intensive tasks replacing it.</v>
+
+77
+00:10:04.181 --> 00:10:07.423
+<v Maya>Right. And they strongly warn against what they call so-so automation.</v>
+
+78
+00:10:07.483 --> 00:10:08.264
+<v Daniel>So-so automation.</v>
+
+79
+00:10:08.432 --> 00:10:17.559
+<v Maya>Yeah, it's when a technology displaces human workers without actually providing big productivity gains. You know, like self-checkout kiosks that just shift the work onto the customer.</v>
+
+80
+00:10:17.799 --> 00:10:23.864
+<v Daniel>Right. It doesn't make it better, just cheaper for the store. And they use education as an example of doing it right, don't they?</v>
+
+81
+00:10:24.184 --> 00:10:34.813
+<v Maya>They do. They point out that using AI to personalize teaching could actually create more demand for human teachers, assuming the complementary skills and resources exist to do specialized interventions.</v>
+
+82
+00:10:35.772 --> 00:10:39.295
+<v Daniel>But there is a crucial tone difference here between these researchers, isn't there?</v>
+
+83
+00:10:39.475 --> 00:10:53.565
+<v Maya>Yes, absolutely. Asimoglu and Restrepo are much more pessimistic. They believe the direction of AI is society's central choice, and they warn that free markets will naturally get it wrong because the tech ecosystem specifically rewards automation.</v>
+
+84
+00:10:54.306 --> 00:10:56.287
+<v Daniel>And Brynjolfsson is slightly more optimistic.</v>
+
+85
+00:10:56.455 --> 00:11:03.639
+<v Maya>He is. He stresses that augmentation isn't just a social good. It is actually the much larger economic prize overall.</v>
+
+86
+00:11:03.799 --> 00:11:17.666
+<v Daniel>Okay. And backing up that tax argument, Asamoglu, Manera, and Restrepo published a Brookings Papers model in 2020. And here's where it gets really interesting. They showed that in the 2010s, effective labor taxes were between 25.5% and 33.5%.</v>
+
+87
+00:11:20.221 --> 00:11:28.268
+<v Maya>While effective taxes on software and equipment were hovering around 10% and dropped to like 5% after the 2017 tax reform.</v>
+
+88
+00:11:28.528 --> 00:11:38.617
+<v Daniel>Right. And their model showed that moving to optimal taxes would raise overall employment by 4.02% and increase the labor share by 0.78 points.</v>
+
+89
+00:11:39.297 --> 00:11:44.702
+<v Maya>We should carefully note, of course, that this is a calibrated economic model, not a real world experiment.</v>
+
+90
+00:11:44.940 --> 00:11:57.212
+<v Daniel>Definitely. OK, so we've looked at all the 2022 theories and the baselines, but now we are in November 2026. What happens when these theories finally hit actual payroll data?</v>
+
+91
+00:11:57.612 --> 00:12:08.943
+<v Maya>Well, first we got the 2025 study from Anthropic by Handa and colleagues. It was the first really large measurement of the split in real usage. They looked at millions of Claude conversations.</v>
+
+92
+00:12:09.303 --> 00:12:10.184
+<v Daniel>And what was the split?</v>
+
+93
+00:12:10.961 --> 00:12:18.323
+<v Maya>They found that 57% of the interactions looked like augmentation, while 43% looked like pure automation.</v>
+
+94
+00:12:18.923 --> 00:12:26.246
+<v Daniel>Okay. Let's state the caveats plainly there. This is just one company's chatbot, and it classifies conversations, not entire jobs.</v>
+
+95
+00:12:26.566 --> 00:12:27.086
+<v Maya>Exactly.</v>
+
+96
+00:12:27.466 --> 00:12:30.347
+<v Daniel>But it sets up the real payroll test beautifully.</v>
+
+97
+00:12:30.972 --> 00:12:41.994
+<v Maya>This brings us to the 2026 paper literally titled Canaries in the Coal Mine by Brynjolfsson, Chandar and Chen. They used ADP payroll data running through June 2026.</v>
+
+98
+00:12:42.414 --> 00:12:55.017
+<v Daniel>And the headline stat is stunning. Employment for 22 to 25 year olds in the most exposed occupations is 19 percent below where it would be if it had just kept pace with their less exposed peers.</v>
+
+99
+00:12:55.613 --> 00:13:03.537
+<v Maya>19% below trend for young workers. And this leads to what they call fact five. The Turing Trap's prediction actually came true in the data.</v>
+
+100
+00:13:04.357 --> 00:13:05.918
+<v Daniel>Wait, really? How so?</v>
+
+101
+00:13:06.378 --> 00:13:20.525
+<v Maya>Using the Anthropic Index, they found that these employment declines are heavily concentrated, specifically in occupations where AI mostly automates. But in occupations where AI mostly augments, employment is actually flat or even rising.</v>
+
+102
+00:13:20.813 --> 00:13:33.336
+<v Daniel>Oh, wow. So the theory totally held up, though we should give the author's own caveat here. These are descriptive indicators, not strict causal estimates. And that effect does attenuate when you control for formal education levels.</v>
+
+103
+00:13:33.676 --> 00:13:39.458
+<v Maya>Right. But it cleanly separates what the Turing trap got right from what has gotten really complicated.</v>
+
+104
+00:13:39.478 --> 00:13:46.200
+<v Daniel>Yeah, because what it got right is the automate versus augment distinction. It perfectly organizes the 2026 measurements.</v>
+
+105
+00:13:47.466 --> 00:13:56.389
+<v Maya>But what got complicated is that the line between augmenting and automating is incredibly blurry in practice. Brynjolfsson actually admitted this in his recent notes.</v>
+
+106
+00:13:57.190 --> 00:14:03.832
+<v Daniel>Yeah, because the exact same AI tool can augment a senior worker while completely replacing an entry-level one. Exactly.</v>
+
+107
+00:14:04.433 --> 00:14:15.717
+<v Maya>And on top of that, the big tax rebalancing he asked for hasn't happened. But if we connect this to the bigger picture, the one idea that still defines this entire debate is that the direction of AI is a choice.</v>
+
+108
+00:14:16.483 --> 00:14:21.045
+<v Daniel>A choice made by technologists, managers and policymakers. It is not a law of nature.</v>
+
+109
+00:14:21.605 --> 00:14:22.045
+<v Maya>Exactly.</v>
+
+110
+00:14:22.805 --> 00:14:31.728
+<v Daniel>So if the direction of AI is a choice, who actually shapes that choice? Universities sit squarely in all three of Brynjolfsson's groups.</v>
+
+111
+00:14:32.168 --> 00:14:32.288
+<v Maya>They</v>
+
+112
+00:14:32.328 --> 00:14:32.728
+<v Daniel>really do.</v>
+
+113
+00:14:33.009 --> 00:14:40.051
+<v Maya>They train the technologists. They are massive employers deciding whether to automate their own staff. And they shape public policy.</v>
+
+114
+00:14:40.595 --> 00:14:48.899
+<v Daniel>So what does this all mean for them? Should universities explicitly teach students how to design and use AI that strictly augments?</v>
+
+115
+00:14:49.160 --> 00:14:56.083
+<v Maya>And how do we even credential human judgment and new task skills, which are the exact things augmentation rewards?</v>
+
+116
+00:14:56.844 --> 00:15:09.030
+<v Daniel>Plus, what should universities be demanding of their employer partners who are right now choosing between automating entry-level roles and redesigning them? Because if you look at the Canaries data, we know who's most exposed here.</v>
+
+117
+00:15:09.235 --> 00:15:22.284
+<v Maya>Right, just drawing an inference from the Canaries paper, the people most exposed are early career workers, adult learners, and first-generation students. They disproportionately sit in those exact entry-level roles that automation-oriented AI is thinning out.</v>
+
+118
+00:15:22.924 --> 00:15:37.799
+<v Daniel>Okay, to wrap this up, if you need the absolute hardest data points for your next slide deck, here are the two most quotable findings with their specific numbers and the strongest objections to each. Finding number one. The U.S. tax system heavily favors</v>
+
+119
+00:15:37.859 --> 00:15:46.727
+<v Daniel>automation, taxing labor at an effective rate of 25.5 to 33.5 percent, while software and equipment are taxed at roughly 5 to 10 percent.</v>
+
+120
+00:15:47.507 --> 00:15:58.457
+<v Maya>And the strongest objection you'll get on that is about international mobility. Capital is highly mobile. Drastically raising taxes on capital might not rebalance the scales. It could just cause massive capital flight.</v>
+
+121
+00:15:58.772 --> 00:16:13.663
+<v Daniel>Right. And finding number two, by 2026, entry-level employment, specifically ages 22 to 25, in highly AI-exposed jobs fell 19% below trend, driven specifically by automation-focused</v>
+
+122
+00:16:13.723 --> 00:16:14.003
+<v Daniel>AI.</v>
+
+123
+00:16:14.524 --> 00:16:23.510
+<v Maya>The main objection to keeping your back pocket there is that this is a descriptive correlation, not a causal estimate. And the gap shrinks when controlling for formal education levels.</v>
+
+124
+00:16:24.591 --> 00:16:25.592
+<v Daniel>So much to think about.</v>
+
+125
+00:16:26.134 --> 00:16:40.754
+<v Maya>It is. And I want to leave you with one final thought to mull over. This raises a really important question. If AI successfully automates all the entry-level tasks, where do tomorrow's experts come from? If you can't be a novice, you can never become a</v>
+
+126
+00:16:40.794 --> 00:16:41.175
+<v Maya>master.</v>
+
+127
+00:16:41.615 --> 00:16:52.190
+<v Daniel>That is such a profound point to end on. Thank you so much for joining us on this deep dive into the Turing Trap. Take these insights, put them on those slides, and keep questioning the future of work.</v>

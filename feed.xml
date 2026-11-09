@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 08:09:46 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 08:37:04 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2113,5 +2113,24 @@ Reference: Acemoglu, D. (2025). The Simple Macroeconomics of AI. Economic Policy
       <pubDate>Mon, 09 Nov 2026 07:20:33 +0000</pubDate>
       <itunes:episode>110</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/110%20-%20When%20New%20Work%20Stops%20Keeping%20Up.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>111 - When Copying Humans Becomes A Trap</title>
+      <description>The Turing Trap: The Promise &amp; Peril of Human-Like Artificial Intelligence (2022)
+
+In this episode we unpack Erik Brynjolfsson's Daedalus essay from the Stanford Digital Economy Lab, the paper that gave the automate-or-augment debate its name. The argument: when AI is built to imitate people and replace what they already do, workers lose economic and political bargaining power, but when it augments them, people stay indispensable and the gains are larger and more widely shared, and right now technologists, business leaders and policymakers all face excess incentives to automate.
+
+We walk through his evidence that augmentation drove most of the past two centuries of growth, the knowledge-as-power argument, and the three groups drawn into the trap, including a tax code that taxes labor far more heavily than software and equipment. Then we test it against what it built on and what came after: Brynjolfsson, Mitchell and Rock's suitability-for-machine-learning rubric across 18,156 tasks, Acemoglu and Restrepo's case against "so-so automation," Acemoglu, Manera and Restrepo's estimate that optimal taxes would raise employment by about 4 percent, Anthropic's finding that 57 percent of Claude conversations look augmentative, and Brynjolfsson, Chandar and Chen's 2026 payroll evidence that job losses for young workers concentrate where AI automates while employment holds up where it augments. We close on what the essay got right, where the line between augmenting and automating blurs, and what universities should teach and ask of employers.
+
+Reference: Brynjolfsson, E. (2022). The Turing Trap: The Promise &amp; Peril of Human-Like Artificial Intelligence. Daedalus, 151(2), 272-287. https://doi.org/10.1162/daed_a_01915 (arXiv:2201.04200, https://arxiv.org/abs/2201.04200)
+Reference: Brynjolfsson, E., Mitchell, T., &amp; Rock, D. (2018). What Can Machines Learn, and What Does It Mean for Occupations and the Economy? AEA Papers and Proceedings, 108, 43-47. https://doi.org/10.1257/pandp.20181019
+Reference: Acemoglu, D., &amp; Restrepo, P. (2020). The Wrong Kind of AI? Artificial Intelligence and the Future of Labour Demand. Cambridge Journal of Regions, Economy and Society, 13(1), 25-35. https://doi.org/10.1093/cjres/rsz022
+Reference: Acemoglu, D., Manera, A., &amp; Restrepo, P. (2020). Does the US Tax Code Favor Automation? Brookings Papers on Economic Activity, 2020(1), 231-300. https://doi.org/10.1353/eca.2020.0003
+Reference: Handa, K., Tamkin, A., McCain, M., Huang, S., Durmus, E., et al. (2025). Which Economic Tasks Are Performed with AI? Evidence from Millions of Claude Conversations. arXiv:2503.04761. https://arxiv.org/abs/2503.04761
+Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence. Stanford Digital Economy Lab. https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/</description>
+      <guid isPermaLink="false">59fcada0fa8ae77630377299c5ccca1f4c339c0b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/111%20-%20When%20Copying%20Humans%20Becomes%20A%20Trap.m4a" length="32600895" type="audio/mp4" />
+      <pubDate>Mon, 09 Nov 2026 08:17:39 +0000</pubDate>
+      <itunes:episode>111</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/111%20-%20When%20Copying%20Humans%20Becomes%20A%20Trap.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
