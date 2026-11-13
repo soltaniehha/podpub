@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 08:37:04 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 07:41:17 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2132,5 +2132,24 @@ Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the
       <pubDate>Mon, 09 Nov 2026 08:17:39 +0000</pubDate>
       <itunes:episode>111</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/111%20-%20When%20Copying%20Humans%20Becomes%20A%20Trap.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>112 - When AI Proves The Code Behind Signal</title>
+      <description>AlphaProof Code: Verifying Signal's Security at the Machine-Code Level (November 2026)
+
+In this episode we unpack a new technical paper from Google DeepMind and Google, led by Swarat Chaudhuri with Jonathan Katz, Charles Sutton, Pushmeet Kohli and five co-authors, released on 10 November 2026 with its full Lean development open-sourced. The claim: AI agents have produced the first machine-checked proofs that the actual compiled code of a widely deployed cryptographic protocol, libsignal, the reference implementation behind Signal, delivers the security its design promises, and once proofs become this cheap, the hard part of verification is deciding what to prove.
+
+We walk through the AlphaProof Code framework: a human-guided specification writer, skeptical reviewer agents, a Lean semantics of AArch64 machine code, teams of 40 to 80 prover agents, and a gatekeeper that accepts only proofs Lean's kernel checks against a held-out specification. We cover the 6.5 million lines of agent-written proof that rest on about 26,000 trusted lines and took five people four weeks, the symbolic and computational security theorems for the PQXDH handshake and the Triple Ratchet, the two reintroduced historical bugs it provably catches, and the errors it surfaced in published analyses by Cheval, Jacomme and Richards, Bhargavan and colleagues, and Alwen, Coretti and Dodis. We set it against Anthropic's assembly-level verification of more than 100 libraries and DeepMind's own study of cheating agent swarms, and close on what it leaves out (trusted cryptographic primitives, group chats, post-quantum healing), how much trust 18,000 lines of specification deserve, and what changes when every code change can be proved before it ships.
+
+Reference: Chaudhuri, S., Ferraiuolo, A., Kovsharov, A., Chajed, T., Schlesinger, S., Seth, K., Katz, J., Sutton, C., &amp; Kohli, P. (2026). AlphaProof Code: Verifying Signal's security at the machine-code level. Google DeepMind. https://google-deepmind.github.io/code-verification/
+Reference: Cheval, V., Jacomme, C., &amp; Richards, J. (2026). Automated formal analysis of Signal's Double Ratchet: Attacks, fixes and security proofs. IEEE Symposium on Security and Privacy, 1522–1538. Cryptology ePrint Archive 2026/727. https://eprint.iacr.org/2026/727
+Reference: Bhargavan, K., Jacomme, C., Kiefer, F., &amp; Schmidt, R. (2024). Formal verification of the PQXDH post-quantum key agreement protocol for end-to-end secure messaging. 33rd USENIX Security Symposium, 469–486. https://www.usenix.org/conference/usenixsecurity24/presentation/bhargavan
+Reference: Alwen, J., Coretti, S., &amp; Dodis, Y. (2019). The Double Ratchet: Security notions, proofs, and modularization for the Signal protocol. EUROCRYPT 2019, LNCS 11476, 129–158. https://doi.org/10.1007/978-3-030-17653-2_5
+Reference: Lucas, K., Lynch, A., Tong, L., et al. (2026). LLMs are making formal software verification feasible at a much larger scale. Anthropic. https://www.anthropic.com/research/formal-verification
+Reference: Paglieri, D., Cross, L., Genewein, T., Leibo, J. Z., Tomasev, N., &amp; Vezhnevets, A. S. (2026). A case study on emergent cheating and whistleblowing in autonomous research swarms. arXiv:2609.04170. https://arxiv.org/abs/2609.04170</description>
+      <guid isPermaLink="false">f589426bfbbb22cf22b15502603ac15c9d2ce733</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/112%20-%20When%20AI%20Proves%20The%20Code%20Behind%20Signal.m4a" length="11845701" type="audio/mp4" />
+      <pubDate>Fri, 13 Nov 2026 07:23:43 +0000</pubDate>
+      <itunes:episode>112</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/112%20-%20When%20AI%20Proves%20The%20Code%20Behind%20Signal.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
