@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 07:41:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 07:45:07 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2151,5 +2151,24 @@ Reference: Paglieri, D., Cross, L., Genewein, T., Leibo, J. Z., Tomasev, N., &am
       <pubDate>Fri, 13 Nov 2026 07:23:43 +0000</pubDate>
       <itunes:episode>112</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/112%20-%20When%20AI%20Proves%20The%20Code%20Behind%20Signal.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>113 - When Agents Build The Stack That Builds Them</title>
+      <description>Singularity-Bench: Can Agents Build Agents? (November 2026)
+
+In this episode we unpack a new 39 page preprint from Carnegie Mellon, led by Yang Zhou, Krish Agarwal and Zhuoming Chen with Beidi Chen and coauthors from NVIDIA, UT Austin, HKUST, Amazon AGI, the University of Chicago, Together AI, Meta and UIUC, posted to arXiv on 12 November 2026. The question is whether today's AI agents can build the systems that produce the next generation of AI, end to end, and the headline answer is that one of them already matches human-built references across the whole stack, at small scale.
+
+We walk through the six Singularity-Bench tasks, pre-training against the OLMo 2 recipe in Megatron-LM, mid-training against the PRISM mixture, multi-turn reinforcement learning against Miles, an FP8 serving engine for GLM-5.3-Flash against SGLang, a coding-agent harness against Claude Code, and serverless cluster orchestration against NVIDIA Dynamo, and the Singularity-Index that scores 11 agents from 7 frontier models, where Opus 5.5 with Claude Code reaches 1.25 while the other agents average 0.58. We look hard at where those wins come from, including answer formatting in mid-training, parity rather than victory in post-training, and a harness lead that rests on one bug fix. We also cover the red-teaming study that breaks the Harbor evaluation framework on every task across 9 of the 10 OWASP agentic risk categories, even with an LLM judge, and the Breakwater defenses that block every attack tested. We set it against METR's RE-Bench and time-horizon work, PostTrainBench, a self-improving coding agent, and Berkeley's Barbarians at the Gate, and close on whether matching published recipes is the same as being able to build a successor.
+
+Reference: Zhou, Y., Agarwal, K., Chen, Z., et al. (2026). Singularity-Bench: Can Agents Build Agents? arXiv:2611.16591. https://arxiv.org/abs/2611.16591
+Reference: Wijk, H., Lin, T., Becker, J., Jawhar, S., Parikh, N., Broadley, T., et al. (2024). RE-Bench: Evaluating frontier AI R&amp;D capabilities of language model agents against human experts. arXiv:2411.15114. https://arxiv.org/abs/2411.15114
+Reference: Kwa, T., West, B., Becker, J., et al. (2025). Measuring AI Ability to Complete Long Software Tasks. arXiv:2503.14499. https://arxiv.org/abs/2503.14499
+Reference: Rank, B., Bhatnagar, H., Prabhu, A., et al. (2026). PostTrainBench: Can LLM Agents Automate LLM Post-Training? arXiv:2603.08640. https://arxiv.org/abs/2603.08640
+Reference: Robeyns, M., Szummer, M., &amp; Aitchison, L. (2025). A Self-Improving Coding Agent. arXiv:2504.15228. https://arxiv.org/abs/2504.15228
+Reference: Cheng, A., Liu, S., Pan, M., et al. (2025). Barbarians at the Gate: How AI is Upending Systems Research. arXiv:2510.06189. https://arxiv.org/abs/2510.06189</description>
+      <guid isPermaLink="false">8a2bdb6dc19952dd8993df99fba7fc677097d491</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/113%20-%20When%20Agents%20Build%20The%20Stack%20That%20Builds%20Them.m4a" length="16533336" type="audio/mp4" />
+      <pubDate>Sat, 14 Nov 2026 07:21:27 +0000</pubDate>
+      <itunes:episode>113</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/113%20-%20When%20Agents%20Build%20The%20Stack%20That%20Builds%20Them.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
