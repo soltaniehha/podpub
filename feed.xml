@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Nov 2026 07:45:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 08:17:25 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2170,5 +2170,23 @@ Reference: Cheng, A., Liu, S., Pan, M., et al. (2025). Barbarians at the Gate: H
       <pubDate>Sat, 14 Nov 2026 07:21:27 +0000</pubDate>
       <itunes:episode>113</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/113%20-%20When%20Agents%20Build%20The%20Stack%20That%20Builds%20Them.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>114 - When AI Rebundles The Freelance Job</title>
+      <description>The Rebundling of Freelance Work in the AI Age (November 2026)
+
+In this episode we unpack a new 24 page report from OpenAI Economic Research and Upwork, by Caroline Chin, Alex Martin Richmond and Carl Shan of OpenAI with Shagun Kala, Nadav Kunievsky and Teng Liu of Upwork, posted to arXiv on 10 November 2026 as part of OpenAI's Work at the Frontier series. The argument: AI is not simply taking freelance tasks away. It is changing how clients bundle work into projects, and the AI-related projects they post are broader, bigger and stitched together from tasks that were rarely bought together before.
+
+We walk through the comparison of 36,896 sampled ChatGPT conversations with Upwork Marketplace postings, where writing and advice dominate ChatGPT while clients keep hiring for technical implementation and visual production, and the ChatGPT intensity measure, where 43 of 63 work subcategories fit a substitution pattern and 20 do not. We dig into the price and quantity margins, with AI-related fixed-price budgets about 52 percent higher, posted hourly rates only about 1.5 percent higher and hours in the first 90 days about 41 percent higher, and into the rebundling evidence: task diversity in AI-related postings up about 45 percent since 2023, and historically uncommon task pairs making up 8.4 percent of pairs in AI-related jobs against 2.4 percent elsewhere. We set it against Hui, Reshef and Zhou's evidence of freelancer job losses after ChatGPT, Yiu, Seamans, Raj and Liu on how freelancers repositioned, Demirer, Horton and colleagues' theory of AI chaining tasks, and Autor, Chin and coauthors on the origins of new work, and close on the limits of descriptive platform data and what skills still sell when the project, not the task, is the unit of work.
+
+Reference: Chin, C., Kala, S., Kunievsky, N., Liu, T., Richmond, A. M., &amp; Shan, C. (2026). The Rebundling of Freelance Work in the AI Age. arXiv:2611.14708. https://arxiv.org/abs/2611.14708
+Reference: Hui, X., Reshef, O., &amp; Zhou, L. (2024). The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market. Organization Science, 35(6), 1977-1989. https://doi.org/10.1287/orsc.2023.18441
+Reference: Yiu, S., Seamans, R., Raj, M., &amp; Liu, T. (2025). Strategic Responses to Technological Change: Evidence from an Online Labor Market. arXiv:2403.15262. https://arxiv.org/abs/2403.15262
+Reference: Demirer, M., Horton, J. J., Immorlica, N., Lucier, B., &amp; Shahidi, P. (2026). Chaining Tasks, Redefining Work: A Theory of AI Automation. arXiv:2606.15960. https://arxiv.org/abs/2606.15960
+Reference: Autor, D., Chin, C., Salomons, A., &amp; Seegmiller, B. (2024). New Frontiers: The Origins and Content of New Work, 1940-2018. Quarterly Journal of Economics, 139(3), 1399-1465. NBER Working Paper 30389. https://doi.org/10.1093/qje/qjae008</description>
+      <guid isPermaLink="false">d3ae913a68f5a5be5cfa3a7759070d5f4e6dfc52</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/114%20-%20When%20AI%20Rebundles%20The%20Freelance%20Job.m4a" length="15548220" type="audio/mp4" />
+      <pubDate>Mon, 16 Nov 2026 07:12:30 +0000</pubDate>
+      <itunes:episode>114</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/114%20-%20When%20AI%20Rebundles%20The%20Freelance%20Job.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
