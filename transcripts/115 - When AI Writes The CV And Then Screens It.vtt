@@ -1,0 +1,721 @@
+WEBVTT
+
+1
+00:00:00.191 --> 00:00:13.040
+<v Daniel>Imagine you're heading to court for this like really high stakes case. You hire a brilliant top tier lawyer to draft your defense. They do what looks like a fantastic job. Right. They hand you the paperwork and you walk into the courtroom feeling pretty confident.</v>
+
+2
+00:00:13.160 --> 00:00:14.681
+<v Maya>Well, yeah. I mean, you've got the best lawyer.</v>
+
+3
+00:00:14.862 --> 00:00:23.983
+<v Daniel>Exactly. But then you look up at the bench and the judge who is about to rule in your case is the exact same person who just wrote your defense.</v>
+
+4
+00:00:24.083 --> 00:00:35.412
+<v Maya>Oh, wow. Yeah, that creates a completely closed loop. I mean, there is zero outside perspective there. Whatever assumptions your lawyer made are now like the exact same assumptions the judge is using to evaluate you.</v>
+
+5
+00:00:35.692 --> 00:00:47.992
+<v Daniel>Right. Which brings us right to you, the listener. Think about the resume you might have sitting on your desktop right now. Did you use a large language model, you know, like JetGPT or Cloud to help you polish it?</v>
+
+6
+00:00:48.610 --> 00:00:50.992
+<v Maya>Because, I mean, millions of people do at this point.</v>
+
+7
+00:00:51.112 --> 00:01:00.617
+<v Daniel>Yeah, millions of people do. But what happens when the exact same AI systems that job seekers use to write their resumes are also being used by employers to screen those exact same resumes?</v>
+
+8
+00:01:01.038 --> 00:01:01.838
+<v Maya>It's a huge question.</v>
+
+9
+00:01:02.278 --> 00:01:16.327
+<v Daniel>Welcome to this Deep Dive. Our mission for the learner today is to uncover the hidden feedback loops in AI-mediated labor markets. And, you know, we're synthesizing a stack of fresh research to shortcut your path to being well-informed without the info overload.</v>
+
+10
+00:01:16.791 --> 00:01:24.798
+<v Maya>And we are anchoring this deep dive on a really fascinating piece of research out of Bocconi University's AXA Research Lab on gender equality and INS Leon.</v>
+
+11
+00:01:25.119 --> 00:01:26.160
+<v Daniel>Which just came out, right?</v>
+
+12
+00:01:26.420 --> 00:01:39.272
+<v Maya>Yeah, it's a paper published today, actually, November 16, 2026 in PNAS. It's by Ellis, Gauthier, Notza, and Profeta, and it's called Automating Inequality, Gender Bias in AI-Mediated Labor Markets.</v>
+
+13
+00:01:39.512 --> 00:01:40.593
+<v Daniel>Such a great title.</v>
+
+14
+00:01:40.813 --> 00:01:48.938
+<v Maya>It really gets to the core premise. It asks, you know, if the AI is playing for both the applicant and the employer, how do we even begin to measure discrimination?</v>
+
+15
+00:01:48.958 --> 00:01:54.000
+<v Daniel>Yeah, to really appreciate the scale of how they tested this, I feel like we should ground it in some history.</v>
+
+16
+00:01:54.140 --> 00:01:54.401
+<v Maya>Sure.</v>
+
+17
+00:01:54.701 --> 00:02:07.948
+<v Daniel>Because I was looking through the background sources for this deep dive, and this new paper is essentially like a modern, automated version of a very famous 2004 field experiment by Bertrand and Mullenotham. That was the Emily and Greg study, right?</v>
+
+18
+00:02:08.152 --> 00:02:17.196
+<v Maya>That's the one. Yeah. So in that 2004 study, the researchers sent out identical resumes to real employers, but they only changed the names at the top.</v>
+
+19
+00:02:17.356 --> 00:02:18.357
+<v Daniel>Right. To see what would happen.</v>
+
+20
+00:02:18.697 --> 00:02:29.362
+<v Maya>Exactly. And they found that white sounding names got like 50 percent more callbacks than African-American sounding names. That methodology established what economists call a correspondence study.</v>
+
+21
+00:02:30.188 --> 00:02:33.469
+<v Daniel>So basically, you send out fake resumes to audit human HR managers.</v>
+
+22
+00:02:33.529 --> 00:02:33.709
+<v Maya>Right.</v>
+
+23
+00:02:33.869 --> 00:02:46.452
+<v Daniel>But what blew my mind about this new 2026 paper is the sheer scale they achieve by auditing machines instead. The researchers set up this massive pre-registered audit covering 98 different occupations.</v>
+
+24
+00:02:46.572 --> 00:02:47.472
+<v Maya>98 is huge.</v>
+
+25
+00:02:47.812 --> 00:02:56.634
+<v Daniel>It is. And they tested six major models. So GBT 5.4, Claude Opus 4.6, DeepSeek 3.2, Mistral Large 3.</v>
+
+26
+00:02:56.754 --> 00:02:57.754
+<v Maya>Grok 4.1.</v>
+
+27
+00:02:58.055 --> 00:02:58.975
+<v Daniel>Yeah. And Lama 3.370B.</v>
+
+28
+00:03:00.275 --> 00:03:00.455
+<v Maya>Right.</v>
+
+29
+00:03:01.256 --> 00:03:06.400
+<v Daniel>They had the AI generate 30 CVs per gender, per occupation, per model.</v>
+
+30
+00:03:06.460 --> 00:03:07.680
+<v Maya>Which is a ton of data.</v>
+
+31
+00:03:08.041 --> 00:03:20.209
+<v Daniel>It yields 35,280 CVs in total. And they did all of this using one incredibly simple prompt. Literally just, I am a man or I am a woman looking for a job in this specific occupation.</v>
+
+32
+00:03:20.410 --> 00:03:23.612
+<v Maya>The simplicity of that prompt is like the genius of the design, really.</v>
+
+33
+00:03:24.777 --> 00:03:30.440
+<v Daniel>OK, let's unpack this, because how do you measure the bias when the machine is doing both jobs?</v>
+
+34
+00:03:30.900 --> 00:03:45.427
+<v Maya>Right. So because the researchers are testing the AI at multiple stages, writing and then screening, they had to break the resulting bias down into two distinct channels. OK. The first channel is evaluation bias. That's the classic 2004 style bias.</v>
+
+35
+00:03:45.747 --> 00:03:46.767
+<v Daniel>Like the Emily and Greg thing.</v>
+
+36
+00:03:46.967 --> 00:03:52.930
+<v Maya>Exactly. You take an identical CV, swap the gender label at the top and watch the AI judge it differently.</v>
+
+37
+00:03:53.128 --> 00:03:59.152
+<v Daniel>That makes sense. The AI plays a biased judge. But the second channel, this is where the closed loop kicks in.</v>
+
+38
+00:03:59.252 --> 00:04:00.934
+<v Maya>Yes, the generation bias.</v>
+
+39
+00:04:00.974 --> 00:04:09.620
+<v Daniel>Right. This is when the actual content the model wrote specifically for a woman is judged differently later on, even if you hide the applicant's gender during the screening phase.</v>
+
+40
+00:04:09.878 --> 00:04:11.960
+<v Maya>Right, holding the display gender fixed.</v>
+
+41
+00:04:12.341 --> 00:04:26.175
+<v Daniel>It's like microphone feedback at a concert. You know, the AI generates a slight stereotype in the text, and then the AI screening tool hears that stereotype, amplifies it, and penalizes the applicant. And the total bias is roughly those two combined.</v>
+
+42
+00:04:26.760 --> 00:04:41.153
+<v Maya>What's fascinating here is that microphone feedback analogy is spot on. And we actually saw the early warning signs of this last year. Oh, really? Yeah. In 2025, researchers Boren, Hull, and Emas published a paper in the Quarterly Journal of Economics exploring</v>
+
+43
+00:04:41.553 --> 00:04:46.297
+<v Maya>systemic discrimination. They introduced this idea of an iterated audit.</v>
+
+44
+00:04:46.677 --> 00:04:47.318
+<v Daniel>Okay. What does that mean?</v>
+
+45
+00:04:47.871 --> 00:04:57.036
+<v Maya>Well, in one of their experiments, they proved that when large language models wrote recommendation letters for STEM candidates, the AI embedded gendered language into the text.</v>
+
+46
+00:04:57.096 --> 00:04:57.716
+<v Daniel>Ah, I see.</v>
+
+47
+00:04:58.096 --> 00:05:02.778
+<v Maya>And when human evaluators later read those letters, it resulted in systemic discrimination.</v>
+
+48
+00:05:03.199 --> 00:05:05.660
+<v Daniel>OK, so the AI wrote it, but a human read it.</v>
+
+49
+00:05:05.740 --> 00:05:06.240
+<v Maya>Precisely.</v>
+
+50
+00:05:06.740 --> 00:05:18.864
+<v Daniel>And what this new PNAS paper adds to the literature is, well, the final iteration of that loop. The machine is no longer just writing the document for a human to read. The machine is sitting on both sides of the desk.</v>
+
+51
+00:05:19.224 --> 00:05:19.445
+<v Maya>Wow.</v>
+
+52
+00:05:20.545 --> 00:05:31.931
+<v Daniel>So let's look at the data on what the AI actually wrote, because I dug into those numbers and they are just wild. Remember, they stripped all explicit gender markers out of these 35,000 CVs. No pronouns, no names.</v>
+
+53
+00:05:32.031 --> 00:05:33.412
+<v Maya>Right. Completely anonymous.</v>
+
+54
+00:05:33.992 --> 00:05:40.536
+<v Daniel>Yet a simple ridge classifier could recover the intended gender of the AI written CVs with 81% accuracy.</v>
+
+55
+00:05:41.096 --> 00:05:53.685
+<v Maya>Let's pause there for a second, because a ridge classifier sounds... highly technical in plain english it's just a pattern recognition algorithm you feed it a bunch of text and it looks for hidden statistical breadcrumbs</v>
+
+56
+00:05:54.045 --> 00:05:54.486
+<v Daniel>oh okay</v>
+
+57
+00:05:55.066 --> 00:06:02.428
+<v Maya>so the fact that it could guess the hidden gender 81 of the time means the ai left a massive trail of breadcrumbs in the vocabulary it chose</v>
+
+58
+00:06:02.867 --> 00:06:15.434
+<v Daniel>The invisible ink of gender was baked right into the text. And here is what that invisible ink looked like. When the AI wrote CVs for women, it used about 19% fewer terms related to physical traits.</v>
+
+59
+00:06:15.794 --> 00:06:16.254
+<v Maya>Interesting.</v>
+
+60
+00:06:16.434 --> 00:06:28.021
+<v Daniel>But it bumped up language skill terms by about 31%. It also heavily favored language related to being agreeable workplace citizenship and like what economists call non-promotable tasks.</v>
+
+61
+00:06:28.361 --> 00:06:32.883
+<v Maya>Oh, man. Those non-promotable tasks are a massive factor in workplace inequality.</v>
+
+62
+00:06:33.103 --> 00:06:43.508
+<v Daniel>Right. It's the office housekeeping. It's being the person who is somehow always expected to organize the office birthday cakes or take the notes in the meeting. It doesn't get you a raise, but it eats up your time.</v>
+
+63
+00:06:44.281 --> 00:06:53.149
+<v Maya>And we should probably explain how the AI is actually doing this behind the scenes. Large language models don't have personal beliefs, right? They operate using vector embeddings.</v>
+
+64
+00:06:53.429 --> 00:06:54.330
+<v Daniel>Vector embeddings.</v>
+
+65
+00:06:54.510 --> 00:07:05.981
+<v Maya>Yeah. Imagine a massive, multidimensional map of human language. Over billions of pages of internet data, words that frequently appear together are placed closer together on this map.</v>
+
+66
+00:07:06.181 --> 00:07:06.982
+<v Daniel>Okay. That makes sense.</v>
+
+67
+00:07:07.437 --> 00:07:22.156
+<v Maya>So mathematically, words related to agreeable or team player or communication skills are clustered slightly closer to the concept of woman in the AI's training data. When prompted to write for a woman, the algorithm naturally</v>
+
+68
+00:07:22.236 --> 00:07:24.840
+<v Maya>reaches for the words nearby in that vector space.</v>
+
+69
+00:07:25.470 --> 00:07:28.611
+<v Daniel>I see the logic there, but I have to play devil's advocate for a second.</v>
+
+70
+00:07:28.752 --> 00:07:28.932
+<v Maya>Sure.</v>
+
+71
+00:07:29.212 --> 00:07:38.216
+<v Daniel>If the AI is trained on the whole internet, isn't it just matching what companies actually ask for in the real world? Like, isn't it just being a good writer and adapting to the market?</v>
+
+72
+00:07:39.206 --> 00:07:53.757
+<v Maya>The researchers asked that exact question. They tested it by comparing the AI-generated CVs to real-world Glassdoor job descriptions. And? And the data shows that, yes, the AI is matching reality, but it's matching existing occupational</v>
+
+73
+00:07:53.797 --> 00:08:03.904
+<v Maya>segregation. Oh, wow. Yeah, the CVs it generated for men read much more like real Glassdoor ads in male-dominated jobs. And the reverse is true for female-dominated jobs.</v>
+
+74
+00:08:04.275 --> 00:08:19.015
+<v Daniel>It's acting like a funhouse mirror. You step in front of it and it reflects your reality back at you, but it slightly exaggerates the proportions. The AI isn't leveling the playing field for the applicant. It's just looking at the existing segregation in the market and baking it</v>
+
+75
+00:08:19.055 --> 00:08:20.137
+<v Daniel>directly into your resume.</v>
+
+76
+00:08:20.617 --> 00:08:33.244
+<v Maya>That is the generation bias in action. But then we have to transition to the screening stage. Once the AI writes these funhouse mirror CVs, how does it score them when acting as the HR manager?</v>
+
+77
+00:08:33.544 --> 00:08:37.207
+<v Daniel>Right. And this is where I found a really interesting tension in the source material.</v>
+
+78
+00:08:37.427 --> 00:08:37.747
+<v Maya>Oh, yeah.</v>
+
+79
+00:08:37.947 --> 00:08:49.552
+<v Daniel>Yeah. There was another study by Anne and colleagues in PNAS Nexus from 2025. They had GPT 3.5 score something like 361,000 real resumes.</v>
+
+80
+00:08:49.612 --> 00:08:50.593
+<v Maya>That's a huge sample.</v>
+
+81
+00:08:50.753 --> 00:09:05.678
+<v Daniel>Right. And they actually found a pro-female score on average alongside an anti-black male penalty. So I was reading this new 2026 paper trying to figure out if it completely disagrees. Like, are the models suddenly anti-female just one year later?</v>
+
+82
+00:09:06.038 --> 00:09:10.800
+<v Maya>That's a great catch. And looking at this impartially, the two papers don't actually disagree.</v>
+
+83
+00:09:10.820 --> 00:09:11.200
+<v Daniel>They don't?</v>
+
+84
+00:09:11.640 --> 00:09:18.043
+<v Maya>No. What the new 2026 paper reveals is that relying on a pooled overall average is a statistical trap.</v>
+
+85
+00:09:18.283 --> 00:09:18.324
+A
+
+86
+00:09:18.424 --> 00:09:20.004
+<v Daniel>trap. OK. How so?</v>
+
+87
+00:09:20.425 --> 00:09:33.151
+<v Maya>If you just look at the pooled average screening score in this new paper, the gap between men and women is close to zero. It looks perfectly fair. But that average hides massive opposite effects depending on the occupation you're looking at.</v>
+
+88
+00:09:33.491 --> 00:09:34.592
+<v Daniel>So the average is a lie.</v>
+
+89
+00:09:34.981 --> 00:09:49.910
+<v Maya>Averages often are in economics. So an average pro-female finding from one study and the occupation tracking bias from this new study can coexist perfectly well, especially when you factor in that the older study used different models, a different year of training data,</v>
+
+90
+00:09:50.330 --> 00:09:51.731
+<v Maya>and a different experimental design.</v>
+
+91
+00:09:52.322 --> 00:09:59.264
+<v Daniel>Let's look at the granular screening results from the new paper then, because the numbers show the AI is aggressively enforcing occupational boundaries.</v>
+
+92
+00:09:59.324 --> 00:10:00.285
+<v Maya>Aggressively, yes.</v>
+
+93
+00:10:00.925 --> 00:10:13.609
+<v Daniel>In jobs that are under 10% female in the real world, so heavily male-dominated fields, women score about 2.7% lower. But in jobs that are over 80% female, women score about 2.7% higher.</v>
+
+94
+00:10:14.189 --> 00:10:16.570
+<v Maya>Which might sound like a small percentage shift on paper.</v>
+
+95
+00:10:16.830 --> 00:10:25.915
+<v Daniel>It does, until you translate it into how hiring actually works in practice. the researchers applied a screened-in top 30 rule.</v>
+
+96
+00:10:26.155 --> 00:10:27.235
+<v Maya>Right, the top 30 rule.</v>
+
+97
+00:10:27.675 --> 00:10:42.075
+<v Daniel>This simulates a company feeding 100 resumes into the AI and asking for the top 30 candidates to interview. Under that rule, women are 4.8 points less likely to be selected for an interview in the most male jobs</v>
+
+98
+00:10:42.996 --> 00:10:57.784
+<v Daniel>and 11.8 points more likely to be selected in the most female jobs. Wow. So the AI isn't imposing one universal penalty against women. It's actively enforcing occupational segregation. It wants to keep people in</v>
+
+99
+00:10:57.804 --> 00:10:59.005
+<v Daniel>their statistical lanes.</v>
+
+100
+00:10:59.670 --> 00:11:02.052
+<v Maya>And this brings us to the most tangible impact of all.</v>
+
+101
+00:11:02.612 --> 00:11:02.972
+<v Daniel>The money.</v>
+
+102
+00:11:03.193 --> 00:11:11.579
+<v Maya>The money. The researchers didn't just ask the AI who to interview. They asked it what to pay them. They tested wage recommendations.</v>
+
+103
+00:11:12.139 --> 00:11:26.795
+<v Daniel>Here's where it gets really interesting. Because the compounding really shows its teeth here. The data shows that on average, women are recommended about... 0.016 log points less than men. Can you translate</v>
+
+104
+00:11:26.875 --> 00:11:29.716
+<v Daniel>log points for us? Because that sounds like a very tiny fraction.</v>
+
+105
+00:11:29.937 --> 00:11:40.402
+<v Maya>Yeah. In economics, log points are essentially a way to measure percentage differences. A gap of 0.016 log points translates roughly to a 1.6% difference in salary.</v>
+
+106
+00:11:40.643 --> 00:11:40.923
+<v Daniel>Okay.</v>
+
+107
+00:11:41.303 --> 00:11:48.967
+<v Maya>So to put that in real dollars, on a $5,000 a month salary baseline, the AI is suggesting a $79 a month penalty.</v>
+
+108
+00:11:50.564 --> 00:11:55.227
+<v Daniel>$79 a month just for checking a different gender box in the prompt.</v>
+
+109
+00:11:55.627 --> 00:11:58.788
+<v Maya>Correct. But again, remember the trap of the average.</v>
+
+110
+00:11:58.988 --> 00:12:00.049
+<v Daniel>Right. It's just a baseline.</v>
+
+111
+00:12:00.369 --> 00:12:15.157
+<v Maya>Exactly. That penalty rises to about 0.038 log points in the specific occupations that have the largest real world gender wage gaps. The AI penalizes women the most exactly in the industries where the real</v>
+
+112
+00:12:15.217 --> 00:12:17.278
+<v Maya>world already penalizes them the most.</v>
+
+113
+00:12:17.778 --> 00:12:28.104
+<v Daniel>But is that cap comparable to the actual earnings gap we see in the wider economy? Because a 3% or 4% gap seems smaller than the systemic wage gaps usually reported in the news.</v>
+
+114
+00:12:28.344 --> 00:12:35.108
+<v Maya>That's a crucial distinction. As the authors carefully note, we should not compare this to the full earnings gap.</v>
+
+115
+00:12:35.408 --> 00:12:35.688
+<v Daniel>Why not?</v>
+
+116
+00:12:35.988 --> 00:12:46.491
+<v Maya>Because the full earnings gap is much wider and includes things like promotions over time and time away from the workforce. The proper benchmark here is the reservation wage gap.</v>
+
+117
+00:12:46.771 --> 00:12:47.071
+<v Daniel>Which is?</v>
+
+118
+00:12:47.231 --> 00:12:56.073
+<v Maya>Which is the absolute minimum salary someone is willing to accept to take a job. And also the salary ask gap, which is what they initially negotiate for.</v>
+
+119
+00:12:56.093 --> 00:13:01.814
+<v Daniel>Oh, I see. And historically, data shows women tend to have lower salary asks than men going into negotiations.</v>
+
+120
+00:13:02.358 --> 00:13:17.287
+<v Maya>Exactly. When you compare the AI's penalty to those specific negotiation gaps, it's a highly accurate reflection of real world disparities. The AI has learned the historical data of what people settle for. So without anyone</v>
+
+121
+00:13:17.387 --> 00:13:27.613
+<v Maya>explicitly programming it to do so, the AI is essentially negotiating against the female candidate on behalf of the employer based purely on historical statistical norms.</v>
+
+122
+00:13:28.190 --> 00:13:42.993
+<v Daniel>Okay, so seeing these looping biases, where the AI writes a subtly gendered CV using its vector embeddings, then enforces occupational lanes, and then lowballs the wage based on historical data, the obvious question anyone would ask is,</v>
+
+123
+00:13:43.533 --> 00:13:45.273
+<v Daniel>can we just tell the AI to be fair?</v>
+
+124
+00:13:45.613 --> 00:13:45.773
+<v Maya>Right.</v>
+
+125
+00:13:46.213 --> 00:13:49.134
+<v Daniel>We are writing the prompts. Why not just tell the machine to stop?</v>
+
+126
+00:13:49.614 --> 00:13:57.575
+<v Maya>Well, they tested that exact theory with prompt interventions. If you tell the model and the prompt to be gender neutral, it changes almost nothing.</v>
+
+127
+00:13:58.151 --> 00:13:58.791
+<v Daniel>Wait, really?</v>
+
+128
+00:13:58.971 --> 00:14:01.673
+<v Maya>Yeah. The underlying bias remains totally intact.</v>
+
+129
+00:14:02.273 --> 00:14:04.935
+<v Daniel>That is wild. Does it just ignore the instruction?</v>
+
+130
+00:14:05.395 --> 00:14:16.120
+<v Maya>It obeys the surface instruction by maybe removing obvious words, you know, like pronouns. But the underlying mathematical associations in that vector space we talked about earlier, they remain unchanged.</v>
+
+131
+00:14:16.461 --> 00:14:17.181
+<v Daniel>Incredible.</v>
+
+132
+00:14:17.701 --> 00:14:23.904
+<v Maya>And if you swing the pendulum the other way and tell it to increase the female share, it causes this massive overcorrection.</v>
+
+133
+00:14:24.085 --> 00:14:24.705
+<v Daniel>How massive?</v>
+
+134
+00:14:25.353 --> 00:14:31.015
+<v Maya>you suddenly get a screened-in gap of about plus 62 points for women across all occupations.</v>
+
+135
+00:14:31.375 --> 00:14:32.956
+<v Daniel>Plus 62 points?</v>
+
+136
+00:14:33.016 --> 00:14:36.397
+<v Maya>Yeah. It completely breaks the utility of the screening tool for the employer.</v>
+
+137
+00:14:36.677 --> 00:14:46.821
+<v Daniel>Which reminds me of when a company tries to do a quick diversity fix with a blunt quota without actually changing their workplace culture. It just breaks the workflow because it's a surface-level bandage.</v>
+
+138
+00:14:47.294 --> 00:14:58.257
+<v Maya>This raises an important question about how AI alignment actually works in practice. There is a fascinating connection here to a 2024 Nature paper by Hoffman and colleagues on dialect prejudice.</v>
+
+139
+00:14:58.377 --> 00:14:59.578
+<v Daniel>Dialect prejudice. OK.</v>
+
+140
+00:14:59.878 --> 00:15:14.662
+<v Maya>Yeah. Hoffman's team showed that models whose overt surface level answers look totally fair and polite still hold deep covert stereotypes. For instance, the models would covertly penalize speakers of African-American English even while refusing to say anything overtly prejudiced.</v>
+
+141
+00:15:14.962 --> 00:15:15.282
+<v Daniel>So they're</v>
+
+142
+00:15:15.342 --> 00:15:30.305
+<v Maya>hiding it. Exactly. Alignment training often just hides the bias under a polite veneer rather than mathematically removing it. Prompting a model to be gender neutral is the exact same kind of surface fix. The model knows what you want to hear, but its</v>
+
+143
+00:15:30.345 --> 00:15:32.245
+<v Maya>internal math is still heavily biased.</v>
+
+144
+00:15:32.765 --> 00:15:44.687
+<v Daniel>That is a great way to explain it. But let's be fair to the science here and look at the limits of this new 2026 study. Because, you know, no audit is perfect. And I noticed a few caveats in the methodology that we should definitely unpack.</v>
+
+145
+00:15:44.962 --> 00:15:45.483
+<v Maya>Absolutely.</v>
+
+146
+00:15:45.983 --> 00:15:56.698
+<v Daniel>For example, what happens if I force the AI's hand? What if I say, I am a woman, but here is my master's degree and my 10 years of specific industry experience. Now write my CV.</v>
+
+147
+00:15:57.367 --> 00:16:12.214
+<v Maya>It's a great point. The researchers found that if you add standardized education and experience to the prompt, the generation bias weakens. Good. Yeah. The AI is forced to use your concrete facts instead of leaning on its statistical stereotypes to fill in the</v>
+
+148
+00:16:12.254 --> 00:16:17.516
+<v Maya>blanks. However, the evaluation bias, so the screening stage, still remains.</v>
+
+149
+00:16:17.676 --> 00:16:18.497
+<v Daniel>Even with hard facts.</v>
+
+150
+00:16:18.617 --> 00:16:29.927
+<v Maya>Even with hard facts. In fact, to prove this, the researchers ran a test using professionally written real-world resumes. from a database called LiveCareer instead of the AI generated ones.</v>
+
+151
+00:16:30.247 --> 00:16:30.748
+<v Daniel>And what happened?</v>
+
+152
+00:16:31.409 --> 00:16:38.080
+<v Maya>Even with those polished human written resumes, the AI still showed evaluation bias when grading them based on gender.</v>
+
+153
+00:16:38.380 --> 00:16:45.850
+<v Daniel>That is incredibly stubborn bias. I also saw a caveat regarding how the gender was revealed to the AI.</v>
+
+154
+00:16:45.950 --> 00:17:00.655
+<v Maya>Yes, and we must be honest about this limitation. When the researchers used only name-based gender cues, like putting Emily at the top instead of explicitly stating, I am a woman in the prompt, the screening result held up, but the wage</v>
+
+155
+00:17:00.695 --> 00:17:03.676
+<v Maya>gradient actually disappeared in the pooled sample.</v>
+
+156
+00:17:03.956 --> 00:17:06.637
+<v Daniel>Really? Why would a name fix the wage penalty?</v>
+
+157
+00:17:07.073 --> 00:17:17.685
+<v Maya>It seems to be driven specifically by one model, GPT-5.4, reacting differently to subtle name cues versus explicit identity statements.</v>
+
+158
+00:17:17.985 --> 00:17:18.786
+<v Daniel>That's so strange.</v>
+
+159
+00:17:19.828 --> 00:17:28.097
+<v Maya>It shows how sensitive these models are to exactly how you present information. Furthermore, we have to remember this is an audit, not a field experiment.</v>
+
+160
+00:17:28.382 --> 00:17:29.383
+<v Daniel>Right. There are no real stakes.</v>
+
+161
+00:17:29.763 --> 00:17:39.370
+<v Maya>Exactly. There are no real recruiters making decisions, no real job offers on the line. And the study relies strictly on English language prompts and U.S. labor market benchmarks.</v>
+
+162
+00:17:39.851 --> 00:17:49.898
+<v Daniel>And surely, as the tech gets better, this will iron itself out, right? We're on GPT 5.4 and CLOD 4.6. The newer models must be getting fairer.</v>
+
+163
+00:17:50.310 --> 00:17:53.132
+<v Maya>That is perhaps the most chilling note the authors included.</v>
+
+164
+00:17:53.153 --> 00:17:53.613
+<v Daniel>Oh, no.</v>
+
+165
+00:17:53.793 --> 00:17:57.716
+<v Maya>They found that newer model versions are, if anything, more biased than the older ones.</v>
+
+166
+00:17:57.736 --> 00:17:58.357
+<v Daniel>You're kidding.</v>
+
+167
+00:17:58.557 --> 00:18:03.281
+<v Maya>No. As the models get better at mimicking human language, they get better at mimicking human prejudices.</v>
+
+168
+00:18:03.742 --> 00:18:18.294
+<v Daniel>Man. If we connect all of this to the bigger picture, what we are looking at is a self-sealing reality. Whenever the same AI systems generate content and evaluate content, biases don't just exist, they loop and amplify.</v>
+
+169
+00:18:18.583 --> 00:18:30.369
+<v Maya>If we connect this to the bigger picture, yeah. The broader warning of this paper goes way beyond hiring. We are seeing the automation of inequality anywhere an AI writes the text and an AI grades the text.</v>
+
+170
+00:18:30.569 --> 00:18:31.129
+<v Daniel>Like where else?</v>
+
+171
+00:18:31.529 --> 00:18:46.176
+<v Maya>This applies to academic peer review, where an AI might help write a grant proposal and another AI screens it. It applies to platform moderation. And as we saw today, relying on a pooled average will always hide where the actual harm</v>
+
+172
+00:18:46.216 --> 00:18:47.497
+<v Maya>lands on a granular level.</v>
+
+173
+00:18:47.881 --> 00:19:01.270
+<v Daniel>So what does this all mean? We started this deep dive with the analogy of the lawyer and the judge being the exact same person. And we've seen that simple be fair prompts don't work. And injecting your hard skills only fixes half the problem.</v>
+
+174
+00:19:01.470 --> 00:19:01.750
+<v Maya>Right.</v>
+
+175
+00:19:02.710 --> 00:19:10.618
+<v Daniel>Which leaves us with a final thought to mull over. If the AI is locked in this feedback loop, what is the future of getting a job?</v>
+
+176
+00:19:11.058 --> 00:19:11.779
+<v Maya>It's a scary thought.</v>
+
+177
+00:19:12.099 --> 00:19:26.958
+<v Daniel>Are we going to see a premium placed on like human certified HR screening where companies brag that their process is 100% AI free? Or are job seekers going to start injecting invisible white text prompts into their PDF resumes, literally trying to hack the</v>
+
+178
+00:19:27.139 --> 00:19:29.862
+<v Daniel>HR bot's vector space just to get a fair shake at an interview?</v>
+
+179
+00:19:30.223 --> 00:19:30.744
+<v Maya>Probably both.</v>
+
+180
+00:19:31.264 --> 00:19:45.384
+<v Daniel>Because right now, the court is in session, the machine is on the bench, and it has already read the defense it wrote for you. Thank you for joining us on this deep dive into the sources. Keep questioning the systems you use every day, and we will catch you next time.</v>

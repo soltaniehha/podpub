@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 08:17:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 07:42:50 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2188,5 +2188,23 @@ Reference: Autor, D., Chin, C., Salomons, A., &amp; Seegmiller, B. (2024). New F
       <pubDate>Mon, 16 Nov 2026 07:12:30 +0000</pubDate>
       <itunes:episode>114</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/114%20-%20When%20AI%20Rebundles%20The%20Freelance%20Job.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>115 - When AI Writes The CV And Then Screens It</title>
+      <description>Automating Inequality? Gender Bias in AI-Mediated Labor Markets (November 2026)
+
+In this episode we unpack a new PNAS paper by Kenza Elass, Germain Gauthier, Debora Nozza and Paola Profeta of Bocconi University's AXA Research Lab on Gender Equality and ENS Lyon, published on 16 November 2026. The argument: the same large language models now write job seekers' CVs and screen applicants for employers, and when one kind of system sits on both sides of the hiring process, its gender biases can compound rather than cancel.
+
+We walk through the preregistered audit design, with 35,280 CVs generated across 98 occupations by GPT 5.4, Claude Opus 4.6, DeepSeek 3.2, Mistral Large 3, Grok 4.1 and Llama 3.3 70B, and the split between evaluation bias (the same CV judged differently by gender) and generation bias (the CV the model wrote for a woman judged differently), adapted from Bohren, Hull and Imas's Iterated Audit. We cover the gender-stereotyped CVs a classifier can sort with 81 percent accuracy, wage recommendations that fall furthest in occupations with the widest real pay gaps, and screening scores that penalize women in male-dominated jobs and favor them in female-dominated ones while the pooled average sits near zero. We set it against Bertrand and Mullainathan's classic correspondence study, An and coauthors' finding of a pro-female tilt in GPT resume scoring, and Hofmann and coauthors' evidence of covert dialect prejudice, and close on why "be gender neutral" prompts do almost nothing, why stronger prompts overcorrect, and what an amplification loop means anywhere AI both writes and judges.
+
+Reference: Elass, K., Gauthier, G., Nozza, D., &amp; Profeta, P. (2026). Automating inequality? Gender bias in AI-mediated labor markets. Proceedings of the National Academy of Sciences, 123(47), e2534118123. https://doi.org/10.1073/pnas.2534118123
+Reference: Bohren, J. A., Hull, P., &amp; Imas, A. (2025). Systemic Discrimination: Theory and Measurement. Quarterly Journal of Economics, 140, 1743-1799. NBER Working Paper 29820. https://doi.org/10.1093/qje/qjaf022
+Reference: Bertrand, M., &amp; Mullainathan, S. (2004). Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination. American Economic Review, 94(4), 991-1013. https://doi.org/10.1257/0002828042002561
+Reference: An, J., Huang, D., Lin, C., &amp; Tai, M. (2025). Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation. PNAS Nexus, 4, pgaf089. arXiv:2403.15281. https://doi.org/10.1093/pnasnexus/pgaf089
+Reference: Hofmann, V., Kalluri, P. R., Jurafsky, D., &amp; King, S. (2024). AI generates covertly racist decisions about people based on their dialect. Nature, 633, 147-154. arXiv:2403.00742. https://doi.org/10.1038/s41586-024-07856-5</description>
+      <guid isPermaLink="false">51c40b12d1d241c498d9c5c4e305fc68a77bb652</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/115%20-%20When%20AI%20Writes%20The%20CV%20And%20Then%20Screens%20It.m4a" length="14458227" type="audio/mp4" />
+      <pubDate>Tue, 17 Nov 2026 07:21:17 +0000</pubDate>
+      <itunes:episode>115</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/115%20-%20When%20AI%20Writes%20The%20CV%20And%20Then%20Screens%20It.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
