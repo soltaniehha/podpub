@@ -1,0 +1,685 @@
+WEBVTT
+
+1
+00:00:00.311 --> 00:00:15.060
+<v Daniel>Usually when we talk about a lie detector test, there's this expectation of absolute precision. The setup is pretty simple. You ask a suspect a question, the machine measures their heart rate or how much they sweat, and the needle jumps.</v>
+
+2
+00:00:15.500 --> 00:00:16.721
+<v Maya>Right. The reaction is clear.</v>
+
+3
+00:00:17.081 --> 00:00:24.766
+<v Daniel>Exactly. But the whole assumption there is that you have a solid, normal physiological baseline to compare against that sudden stress response.</v>
+
+4
+00:00:25.106 --> 00:00:26.887
+<v Maya>You need a normal baseline.</v>
+
+5
+00:00:27.307 --> 00:00:39.051
+<v Daniel>But imagine trying to run that exact same lie detector test on someone who is like legally required to only speak in highly scripted cliches and dense archaic jargon. Suddenly that needle is bouncing all over the place.</v>
+
+6
+00:00:39.631 --> 00:00:41.832
+<v Maya>Yeah. You can't find a baseline at all.</v>
+
+7
+00:00:42.052 --> 00:00:43.572
+<v Daniel>The machine just becomes completely useless.</v>
+
+8
+00:00:44.173 --> 00:00:58.868
+<v Maya>And that honestly paints a very accurate picture of the current state of AI detection in the American legal system right now. Testing legal documents for AI is just, it's a diagnostic nightmare, largely because the language itself is, well, it's designed to be robotic.</v>
+
+9
+00:00:59.359 --> 00:01:12.284
+<v Daniel>And Untangling That Nightmare is our mission today. Welcome to this custom-tailored deep dive. We are looking at a stack of incredibly timely sources today, but everything orbits around one brand-new paper out of Stanford's Reg Lab.</v>
+
+10
+00:01:12.344 --> 00:01:13.525
+<v Maya>Released today, actually.</v>
+
+11
+00:01:13.685 --> 00:01:13.845
+<v Daniel>Right.</v>
+
+12
+00:01:14.145 --> 00:01:15.365
+<v Maya>November 19th, 2026.</v>
+
+13
+00:01:15.986 --> 00:01:22.448
+<v Daniel>Right. But crucially, we need to establish up front for you listening, this is a working paper. It has not yet been peer-reviewed.</v>
+
+14
+00:01:22.748 --> 00:01:27.150
+<v Maya>That is a vital caveat. We are looking at bleeding-edge research here, so keep that in mind.</v>
+
+15
+00:01:27.568 --> 00:01:42.537
+<v Daniel>The paper is called Detection Objection, and it's led by Javikar Arifov and the whole Stanford team, and they are going after two massive questions. First, how much of what gets filed in American state courts today is actually drafted by generative AI?</v>
+
+16
+00:01:42.846 --> 00:01:48.588
+<v Maya>And second, can anyone actually measure that reliably without the tools just totally breaking down?</v>
+
+17
+00:01:48.828 --> 00:01:55.770
+<v Daniel>Okay, let's unpack this. Okay. Because just getting your hands on the documents to test is a monumental task on its own, right?</v>
+
+18
+00:01:55.870 --> 00:02:04.353
+<v Maya>Oh, absolutely. To grasp the scale of what the Stanford researchers pulled off, you have to understand this massive blind spot in how we usually study the American judicial system.</v>
+
+19
+00:02:04.533 --> 00:02:04.713
+<v Daniel>Right.</v>
+
+20
+00:02:05.173 --> 00:02:16.216
+<v Maya>Like, if researchers want to study federal courts, they have it easy. There is a centralized public archive called RECAP. But federal courts only handle a tiny, tiny fraction of the nation's actual legal disputes.</v>
+
+21
+00:02:16.716 --> 00:02:21.577
+<v Daniel>It's something like 98.6% of all U.S. cases are handled by state trial courts, right?</v>
+
+22
+00:02:21.857 --> 00:02:31.079
+<v Maya>Exactly. State courts are where real life happens. You know, evictions, divorces, local business disputes. But they do not have a public recap archive.</v>
+
+23
+00:02:31.699 --> 00:02:44.363
+<v Daniel>So trying to study the American justice system by only looking at federal courts is like, I don't know, it's like trying to map the ocean by analyzing a puddle in the parking lot. The 98.6% of state cases, that's the actual ocean.</v>
+
+24
+00:02:45.044 --> 00:02:59.650
+<v Maya>A very deep, very fragmented ocean. So to even begin the study, the researchers couldn't just download a neat data set. They had to basically build custom scrapers to collect and run optical character recognition on 127,518</v>
+
+25
+00:03:00.351 --> 00:03:02.211
+<v Maya>case-initiating civil complaints.</v>
+
+26
+00:03:02.472 --> 00:03:08.794
+<v Daniel>Wow. Over 127,000. And these are the documents that actually kick off a lawsuit, right? Filed between 2020 and 2026?</v>
+
+27
+00:03:10.505 --> 00:03:22.073
+<v Maya>Correct. And they pulled these from four specific places to get a good cross-section. Two counties in California, San Francisco and Santa Clara, and two in Oklahoma, which are Tulsa and Oklahoma counties.</v>
+
+28
+00:03:22.594 --> 00:03:32.981
+<v Daniel>So they finally have this massive data set. The logical next step for most people would be to just run it through one of those AI plagiarism detectors that universities use, see what gets flagged, and just call it a day.</v>
+
+29
+00:03:33.607 --> 00:03:43.420
+<v Maya>Which brings us right back to your lie detector analogy. Legal text fundamentally breaks the rules of normal language that those standard AI detectors rely on.</v>
+
+30
+00:03:44.061 --> 00:03:48.627
+<v Daniel>Okay, I need to understand the mechanics of that. Why does legal text break the machine?</v>
+
+31
+00:03:49.352 --> 00:04:03.976
+<v Maya>Well, AI detectors generally look for predictability. Large language models generate text by predicting the most probable next word, right? Making their writing highly structured. Human writing in everyday life is usually more chaotic,</v>
+
+32
+00:04:04.536 --> 00:04:05.296
+<v Maya>more surprising.</v>
+
+33
+00:04:05.616 --> 00:04:06.576
+<v Daniel>Right. Humans are messy.</v>
+
+34
+00:04:07.137 --> 00:04:10.997
+<v Maya>But legal writing is deliberately engineered to be predictable.</v>
+
+35
+00:04:11.458 --> 00:04:12.938
+<v Daniel>Because lawyers rely on templates.</v>
+
+36
+00:04:13.238 --> 00:04:13.618
+<v Maya>Exactly.</v>
+
+37
+00:04:13.918 --> 00:04:16.859
+<v Daniel>I mean, nobody reinvents the wheel when they write a contract or a lawsuit.</v>
+
+38
+00:04:17.444 --> 00:04:30.657
+<v Maya>Exactly. And the researchers quantified just how heavily templated it actually is. They found that about 26 percent of the basic units of text in these legal filings are pure boilerplate, just standard copy pasted legal formatting. Wow.</v>
+
+39
+00:04:31.057 --> 00:04:31.778
+<v Daniel>Twenty six percent.</v>
+
+40
+00:04:32.315 --> 00:04:42.583
+<v Maya>And beyond that, another 9% are what they call anchored words. These are highly specific legal terms that both a human and an AI absolutely must use to make the document legally valid.</v>
+
+41
+00:04:42.723 --> 00:04:52.631
+<v Daniel>So wait, before we even get to the actual argument of the case, like 35% of the document is virtually identical, whether it was written by a high-priced attorney or chat GPT.</v>
+
+42
+00:04:52.906 --> 00:05:04.092
+<v Maya>Yes. That dynamic forces humans and AI to sound identical. In data science, there is a way to measure the predictability of text. Think of it as a surprise factor measured in a unit called NATS.</v>
+
+43
+00:05:04.627 --> 00:05:05.188
+<v Daniel>NATS.</v>
+
+44
+00:05:05.408 --> 00:05:20.259
+<v Maya>Right. NATS. When a language model drafts text in normal domains, its surprise factor is usually between 0.43 and 0.57. But when that exact same model drafts a legal petition, the surprise factor drops to 0.35. Oh,</v>
+
+45
+00:05:20.299 --> 00:05:20.560
+<v Maya>wow.</v>
+
+46
+00:05:21.560 --> 00:05:24.603
+<v Daniel>So the vocabulary just shrinks. It becomes incredibly narrow.</v>
+
+47
+00:05:24.958 --> 00:05:39.784
+<v Maya>It's a narrow vocabulary register. And this completely breaks older, widely used detection methods. For example, there was a major study back in 2025 by a researcher named Liang and their team that looked at the widespread adoption of AI across society.</v>
+
+48
+00:05:39.804 --> 00:05:52.129
+<v Daniel>I remember that one. They found AI everywhere. They estimated it was in almost a quarter of all corporate press releases, nearly a fifth of consumer complaints, and a big chunk of UN press releases, too.</v>
+
+49
+00:05:52.413 --> 00:05:57.897
+<v Maya>Right, and they used a method that basically just counts how often certain AI-favored words show up.</v>
+
+50
+00:05:58.197 --> 00:06:00.439
+<v Daniel>Like delve or testament, right?</v>
+
+51
+00:06:00.459 --> 00:06:02.901
+<v Maya>Exactly, the classic chat GPT words.</v>
+
+52
+00:06:03.161 --> 00:06:04.742
+<v Daniel>The classic chat GPT words.</v>
+
+53
+00:06:05.182 --> 00:06:08.265
+<v Maya>Exactly. It's a population-level word frequency method.</v>
+
+54
+00:06:08.525 --> 00:06:08.745
+<v Daniel>Okay.</v>
+
+55
+00:06:08.965 --> 00:06:15.670
+<v Maya>But this new Stanford paper proves that this exact word counting method is the absolute weakest detector when it comes to legal text.</v>
+
+56
+00:06:15.928 --> 00:06:27.999
+<v Daniel>Wait, what does the failure of that word-counting method on legal text say about those massive 2025 society-wide estimates? Were those numbers totally inflated, or is the law just uniquely stubborn?</v>
+
+57
+00:06:28.412 --> 00:06:43.338
+<v Maya>The evidence suggests the law is uniquely stubborn. In consumer complaints or press releases, the vocabulary is wide enough that those AI telltale words stand out clearly. But in a legal complaint, the strict formatting and narrow vocabulary</v>
+
+58
+00:06:43.378 --> 00:06:47.619
+<v Maya>suppress those telltale words. The signal just gets drowned out by the boilerplate.</v>
+
+59
+00:06:47.779 --> 00:06:56.883
+<v Daniel>It makes a lot of sense. And there's another layer to this detection problem that the Stanford team points out, right? Like, nobody actually knows how people are using AI to write these lawsuits.</v>
+
+60
+00:06:57.430 --> 00:07:11.608
+<v Maya>It's a critical blind spot. Most AI detectors are trained on rewrites. Developers take a human document, ask an AI to rewrite it, and train the detector to spot the difference. And if you test a detector on those rewrites, it performs</v>
+
+61
+00:07:11.708 --> 00:07:14.091
+<v Maya>incredibly well. It catches about 90% of them.</v>
+
+62
+00:07:14.973 --> 00:07:20.297
+<v Daniel>But if I'm a person suing my landlord, I'm probably not asking the AI to proofread a draft I already wrote.</v>
+
+63
+00:07:20.437 --> 00:07:31.585
+<v Maya>Right. You're likely just asking the AI a series of legal questions and pasting its answers directly into a new document. And the researchers ran an experiment simulating exactly that scenario.</v>
+
+64
+00:07:31.885 --> 00:07:32.426
+<v Daniel>And what happened?</v>
+
+65
+00:07:33.206 --> 00:07:40.552
+<v Maya>Those standard detectors trained on rewrites suddenly dropped in performance. They only caught between 16 and 72 percent of the AI answers.</v>
+
+66
+00:07:40.961 --> 00:07:53.778
+<v Daniel>Because the AI is generating text in a totally different context, so the detectors are practically guessing. Which means any numbers they spit out are incredibly fragile. Like, depending on how you tune these detection models, you must go completely haywire.</v>
+
+67
+00:07:54.268 --> 00:08:09.177
+<v Maya>The swings are genuinely wild. The researchers tested different settings on an open source model called Edit Lens. It was developed earlier in 2026 specifically to look for realistic mixed human and AI editing. But even with a tool</v>
+
+68
+00:08:09.217 --> 00:08:12.218
+<v Maya>designed for realism, the settings change everything.</v>
+
+69
+00:08:12.779 --> 00:08:23.545
+<v Daniel>So if I have a smoke detector that I can tune to either go off when I light a single candle or only go off when the entire house is completely engulfed in flames, is it even a useful tool anymore?</v>
+
+70
+00:08:24.126 --> 00:08:36.395
+<v Maya>That is the perfect way to frame the dilemma. If you set the edit lens detection threshold at a conservative 0.10 on the Santa Clara complaints, it flags 9.7% of the documents as AI-assisted.</v>
+
+71
+00:08:36.415 --> 00:08:37.816
+<v Daniel>Okay, around 10%.</v>
+
+72
+00:08:38.296 --> 00:08:43.720
+<v Maya>But drop the threshold slightly to 0.05, and suddenly it flags 33.7%. Drop it to 0.01, and it flags a whopping 97.5% of all cases.</v>
+
+73
+00:08:51.043 --> 00:09:01.396
+<v Daniel>That's practically every single case. But hold on. Didn't someone already try to measure AI in the courts despite these broken tools? I feel like we saw a study on the federal courts recently.</v>
+
+74
+00:09:01.823 --> 00:09:16.586
+<v Maya>You're thinking of a paper earlier in 2026 by Cohen-Sassone. It looked at 2.8 million federal filings. It found that the rate of people representing themselves without a lawyer, pro se plaintiffs, jumped significantly after chat GPT was released. And</v>
+
+75
+00:09:16.706 --> 00:09:21.507
+<v Maya>they flagged about 13.9 percent of those non-formed civil rights complaints as AI.</v>
+
+76
+00:09:22.307 --> 00:09:26.788
+<v Daniel>So how did they get a firm 13.9 percent if the dials are so sensitive?</v>
+
+77
+00:09:27.287 --> 00:09:36.469
+<v Maya>They calibrated their detector against pre-chat GPT filings. They essentially told the detector that anything filed before late 2022 was 100% human.</v>
+
+78
+00:09:36.889 --> 00:09:37.310
+<v Daniel>Makes sense.</v>
+
+79
+00:09:37.670 --> 00:09:41.331
+<v Maya>But the Stanford authors heavily critique this exact methodology.</v>
+
+80
+00:09:41.631 --> 00:09:51.453
+<v Daniel>Why? Because establishing that baseline only stops the machine from falsely accusing humans. It tells you absolutely nothing about how much actual AI text is slipping past the detector unnoticed.</v>
+
+81
+00:09:51.673 --> 00:09:52.313
+<v Maya>Exactly.</v>
+
+82
+00:09:52.333 --> 00:09:52.593
+<v Daniel>Yeah.</v>
+
+83
+00:09:52.993 --> 00:10:07.697
+<v Maya>It bounds false positives but ignores false negatives. And false positives are a massive issue on their own. We aren't just talking about academic debates over data here. If you are listening to this and wondering if your university's AI detector is doing the exact same thing, the</v>
+
+84
+00:10:07.777 --> 00:10:09.457
+<v Maya>answer is probably yes.</v>
+
+85
+00:10:09.998 --> 00:10:24.323
+<v Daniel>The stakes are incredibly high. The source material brings up a 2023 study focusing on bias in these detectors by Liang and colleagues. They ran essays written by non-native English speakers for the TOEFL exam through seven different detectors.</v>
+
+86
+00:10:24.524 --> 00:10:25.884
+<v Maya>And the results were alarming.</v>
+
+87
+00:10:26.084 --> 00:10:30.786
+<v Daniel>Yeah, the machines falsely flagged 61% of those human written essays as AI.</v>
+
+88
+00:10:31.070 --> 00:10:41.076
+<v Maya>Over half of non-native English speakers were falsely accused. That is the fundamental reason the Stanford paper warns so heavily against document-level accusations.</v>
+
+89
+00:10:41.176 --> 00:10:52.122
+<v Daniel>Right, because you cannot point to one specific court filing and confidently declare, hey, I wrote this, based on a fragile detector. A wrong accusation in court can lead to severe disciplinary sanctions from a judge.</v>
+
+90
+00:10:52.322 --> 00:11:06.785
+<v Maya>Exactly. But knowing that detectors are broken is only half the battle. If you're a judge trying to figure out how impacted your court is, you need a tool that actually works, which forced the researchers to build something entirely new. They needed a new ground truth.</v>
+
+91
+00:11:07.105 --> 00:11:12.306
+<v Daniel>They had to find real legal documents out in the wild that they knew for a fact contained AI text.</v>
+
+92
+00:11:12.566 --> 00:11:12.766
+<v Maya>Yes.</v>
+
+93
+00:11:12.946 --> 00:11:16.287
+<v Daniel>Which sounds impossible. I mean, unless the person confesses, how do you prove it?</v>
+
+94
+00:11:16.467 --> 00:11:19.108
+<v Maya>You look for the ghosts. You look for the hallucinations. Ah,</v>
+
+95
+00:11:19.288 --> 00:11:20.108
+<v Daniel>the phantom docket.</v>
+
+96
+00:11:20.356 --> 00:11:34.033
+<v Maya>Yes, they created a new public benchmark called Phantom Docket. They went to a database, Damien Charlatan's AI Hallucination Cases database, which tracks rulings where judges actively caught lawyers citing fake hallucinated cases. Oh,</v>
+
+97
+00:11:34.053 --> 00:11:34.593
+<v Daniel>that's brilliant.</v>
+
+98
+00:11:34.973 --> 00:11:41.577
+<v Maya>The researchers traced those rulings back to the original docket entries to find the exact filings containing the AI hallucinations.</v>
+
+99
+00:11:41.857 --> 00:11:55.084
+<v Daniel>So they found 980 real court filings known to contain AI text, plus I think 538 filings from the same parties, and 771 control documents, like opposing counsel filings and judges' orders.</v>
+
+100
+00:11:55.405 --> 00:12:07.369
+<v Maya>Exactly. Finding this known AI text in the wild is the holy grail for calibrating these models. And the only reason it was possible is because public language models are notoriously terrible at legal reasoning.</v>
+
+101
+00:12:08.070 --> 00:12:16.913
+<v Daniel>Right. There was a 2024 paper out of the same Stanford lab by Dahl and team that found public models hallucinated on legal questions at least 58 percent of the time.</v>
+
+102
+00:12:17.222 --> 00:12:29.569
+<v Maya>It's deeply ironic. The AI's massive failure rate is the exact thing that gave the researchers the breadcrumbs they needed to build a reliable ground truth. So how did the detectors perform when tested against the phantom docket?</v>
+
+103
+00:12:29.895 --> 00:12:44.764
+<v Daniel>Well, a commercial model called Pangram performed the best, reaching an accuracy score or a UROC of about 0.946. The open source EditLens model hit 0.896. And that old</v>
+
+104
+00:12:44.824 --> 00:12:48.666
+<v Daniel>word counting method we discussed earlier, it only hit about 0.77.</v>
+
+105
+00:12:49.226 --> 00:12:58.271
+<v Maya>Wait, if this Pangram tool is hitting basically 95% accuracy, why are we even talking about other methods? Why doesn't the court system just buy a subscription and be done with it?</v>
+
+106
+00:12:58.491 --> 00:13:04.469
+<v Daniel>The barrier is cost. Pangram costs $0.05 per 1,000 words.</v>
+
+107
+00:13:05.369 --> 00:13:06.069
+<v Maya>Which adds up.</v>
+
+108
+00:13:06.710 --> 00:13:15.934
+<v Daniel>Fast. When you were a state court system processing millions upon millions of pages, running a commercial detector at scale would be exorbitantly expensive.</v>
+
+109
+00:13:16.674 --> 00:13:25.899
+<v Maya>So if the most accurate tool is too expensive and the open source tools swing wildly, depending on the threshold setting, how do you actually get a real reliable number?</v>
+
+110
+00:13:26.443 --> 00:13:33.706
+<v Daniel>The Stanford researchers created a mathematical calibrator they call ScoreMix. It doesn't just pick a threshold and count flags.</v>
+
+111
+00:13:34.426 --> 00:13:36.847
+<v Maya>So ScoreMix isn't a new detector itself?</v>
+
+112
+00:13:37.347 --> 00:13:46.691
+<v Daniel>No, it's more like, imagine putting a known five-pound weight on a broken digital scale to figure out exactly how far off the scale is and then adjusting your math accordingly.</v>
+
+113
+00:13:46.898 --> 00:13:48.199
+<v Maya>That is a brilliant analogy.</v>
+
+114
+00:13:48.439 --> 00:14:02.972
+<v Daniel>Thanks. ScoreMix takes the messy, uncalibrated scores from a detector like EddyLens and uses the known hallucinated filings from Phantom Docket as that five-pound weight. And then it combines that with the specific court's own pre-chat</v>
+
+115
+00:14:03.012 --> 00:14:05.074
+<v Daniel>GPT filings to ground the math.</v>
+
+116
+00:14:05.714 --> 00:14:09.496
+<v Maya>It adjusts the sensitivity based on undeniable real world evidence.</v>
+
+117
+00:14:09.676 --> 00:14:10.076
+<v Daniel>Exactly.</v>
+
+118
+00:14:10.176 --> 00:14:10.476
+<v Maya>Got it.</v>
+
+119
+00:14:10.776 --> 00:14:24.682
+<v Daniel>And it dramatically tightens the output. Instead of estimates swinging wildly by 50 percentage points based on a minor setting change, ScoreMix squishes that uncertainty spread down to just 0.6 to 5.6 percentage points.</v>
+
+120
+00:14:25.062 --> 00:14:26.563
+<v Maya>That is a huge improvement.</v>
+
+121
+00:14:27.033 --> 00:14:36.319
+<v Daniel>And to prove it works, they ran it on complaints from 2022, before ChatGBT existed. It read a maximum of 0.5%. The calibration works.</v>
+
+122
+00:14:37.039 --> 00:14:48.686
+<v Maya>So now that they have this finely calibrated tool, they finally pointed it back at those 127,518 state court filings. What is the actual timeline of AI adoption in these local courts?</v>
+
+123
+00:14:49.400 --> 00:15:00.466
+<v Daniel>The graph looks like a hockey stick. AI use was near zero before 2023, but between 2024 and 2025, it jumped by about 7.9 to 14.2 points. Wow. And by 2026, they estimated that about 37.8% of complaints in Santa Clara and 35.6% in San Francisco</v>
+
+124
+00:15:00.786 --> 00:15:01.026
+<v Maya>show</v>
+
+125
+00:15:01.046 --> 00:15:01.967
+<v Daniel>AI-assisted drafting.</v>
+
+126
+00:15:11.510 --> 00:15:19.514
+<v Maya>Approaching 40 percent. But what about the Oklahoma courts? Do they see the same massive spike or is this just a Silicon Valley early adopter phenomenon?</v>
+
+127
+00:15:20.034 --> 00:15:34.602
+<v Daniel>The geography does show a divide. In the two Oklahoma counties, the 2026 estimate was only about 16 to 17 percent. But geography might just play a small role because the researchers know that the types of cases heavily influence the numbers.</v>
+
+128
+00:15:35.423 --> 00:15:36.103
+<v Maya>The case mix.</v>
+
+129
+00:15:36.626 --> 00:15:48.591
+<v Daniel>Yes. In Oklahoma, a massive portion of the docket is made up of debt and collection complaints. Those are highly templated, fill-in-the-blank forms that require almost no original writing. They score near zero for AI.</v>
+
+130
+00:15:49.111 --> 00:15:55.154
+<v Maya>Oh, that makes sense. The California dockets featured more employment and business disputes, which require custom narratives.</v>
+
+131
+00:15:55.594 --> 00:16:01.737
+<v Daniel>Right. So let's talk about the people actually filing these suits. Who is relying on the AI the most?</v>
+
+132
+00:16:02.837 --> 00:16:15.125
+<v Maya>They broke down the representation status in Santa Clara and the numbers are staggering. Among self-represented plaintiffs, the pro se filers, the estimate went from 18.8% in 2024 to an incredible 71.6% in 2026. Over two-thirds of people representing themselves.</v>
+
+133
+00:16:20.978 --> 00:16:24.460
+<v Daniel>Are they just typing sue my landlord into chat GPT and printing out the response?</v>
+
+134
+00:16:24.681 --> 00:16:38.110
+<v Maya>It appears they are leaning heavily on generative AI to navigate a complex system, yes. But licensed attorneys are doing it too. Complaints filed by actual attorneys in Santa Clara showed AI assistance at a rate of 33.5%.</v>
+
+135
+00:16:38.711 --> 00:16:47.777
+<v Daniel>A third of licensed lawyers using it is still a massive number. And do we know if these are just lawyers experimenting once or is this becoming a standard practice?</v>
+
+136
+00:16:48.311 --> 00:17:03.282
+<v Maya>It's becoming a habit. The researchers found that attorneys flagged for AI use once were highly likely to be flagged again the next year. Between 27 and 65 percent of flagged attorneys repeated the behavior, compared to only 5 to 8 percent of unflagged attorneys.</v>
+
+137
+00:17:04.202 --> 00:17:06.424
+<v Daniel>They've essentially identified repeat offenders.</v>
+
+138
+00:17:06.644 --> 00:17:14.309
+<v Maya>Basically, yeah. And as for where in the documents the AI is actually hiding, it is doing the heavy lifting in the narrative sections.</v>
+
+139
+00:17:15.010 --> 00:17:16.811
+<v Daniel>So not the boilerplate.</v>
+
+140
+00:17:17.046 --> 00:17:25.448
+<v Maya>Right. The AI text predominantly shows up in the statement of facts and the causes of action. It is doing the storytelling and the legal framing.</v>
+
+141
+00:17:26.188 --> 00:17:39.911
+<v Daniel>Wait a second. I just realized something about the methodology. If ScoreMix is calibrated entirely on the fandom docket and fandom docket is a database of known hallucinations, doesn't that mean we are only measuring the clumsiest mistakes?</v>
+
+142
+00:17:40.519 --> 00:17:53.945
+<v Maya>You've hit on the author's major caveat. Hallucinations represent the absolute worst use of AI. If a lawyer uses AI to draft a brilliant, perfectly accurate argument, it never ends up in Charlatan's database because they never get caught.</v>
+
+143
+00:17:54.255 --> 00:18:05.597
+<v Daniel>So because ScoreMix is tuned to those clumsy failures, that massive 37.8 percent estimate in Santa Clara is probably highly conservative. The real numbers likely much higher.</v>
+
+144
+00:18:05.817 --> 00:18:19.240
+<v Maya>Exactly. Furthermore, the phantom docket benchmark is primarily made of legal briefs and motions, whereas the main corpus tested was case initiating complaints. The numbers are undeniably massive, but they are very likely an undercount.</v>
+
+145
+00:18:19.677 --> 00:18:34.508
+<v Daniel>Which pushes us right into the so what of all this data. The state courts are flooding with AI text. What are the real world implications for society here? I mean, let's talk about that 71.6% pro se number. On the surface, that sounds like a</v>
+
+146
+00:18:35.088 --> 00:18:39.291
+<v Daniel>victory for democratizing access to justice for people who can't afford a lawyer.</v>
+
+147
+00:18:39.750 --> 00:18:54.703
+<v Maya>That is the central paradox the source material presents, and it touches on some very tense debates. One perspective views this as lowering the barrier to entry, giving everyday people a tool to advocate for themselves. But another perspective worries about the systemic burden that AI</v>
+
+148
+00:18:54.823 --> 00:19:05.012
+<v Maya>is just flooding the courts with frivolous or structurally flawed complaints that swamp judges and delay justice for everyone. We aren't endorsing either view, obviously, but the tension is very real.</v>
+
+149
+00:19:05.451 --> 00:19:11.655
+<v Daniel>And the Cohen-Sasson paper we discussed earlier actually mapped out how that tension plays out in federal courts, didn't it?</v>
+
+150
+00:19:11.675 --> 00:19:24.904
+<v Maya>It did. Cohen-Sasson found that while AI helped more pro se plaintiffs file civil rights complaints, those specific AI flagged complaints were more likely to be dismissed by the judge with zero gain in overall win rates.</v>
+
+151
+00:19:25.325 --> 00:19:31.088
+<v Daniel>So they bought a ticket to the game, but they still lost and the judges were left to clean up the mess.</v>
+
+152
+00:19:31.789 --> 00:19:33.130
+<v Maya>That's one way to look at it.</v>
+
+153
+00:19:33.983 --> 00:19:38.708
+<v Daniel>So how are policymakers supposed to respond? Do courts just, like, ban AI?</v>
+
+154
+00:19:39.229 --> 00:19:51.062
+<v Maya>Well, banning it requires detecting it, and we've established how fraught detection is. The Stanford paper notes that places like California recently passed Senate Bill 574, and various judges have issued standing orders.</v>
+
+155
+00:19:51.643 --> 00:19:52.304
+<v Daniel>What do those do?</v>
+
+156
+00:19:52.987 --> 00:20:04.920
+<v Maya>The trend seems to be moving toward requiring mandatory disclosure, forcing lawyers and litigants to affirmatively state if they used AI, rather than relying on a mathematically fragile detector to catch them.</v>
+
+157
+00:20:05.567 --> 00:20:19.878
+<v Daniel>Which brings us back to you listening. If you are a teacher or a university administrator, and you are using an AI detector on a student's essay, knowing that simply turning a dial can change the flag rate from 5% to 50%,</v>
+
+158
+00:20:20.879 --> 00:20:24.982
+<v Daniel>using that tool to fail or expel a student seems incredibly dangerous.</v>
+
+159
+00:20:25.446 --> 00:20:37.060
+<v Maya>The Stanford authors advise extreme caution for courts regarding document-level accusations. That same caution should absolutely apply to the classroom. The bias against non-native speakers alone should give anyone pause.</v>
+
+160
+00:20:37.660 --> 00:20:39.302
+<v Daniel>It is a massive wake-up call.</v>
+
+161
+00:20:39.322 --> 00:20:39.542
+<v Maya>Yes.</v>
+
+162
+00:20:40.417 --> 00:20:54.843
+<v Daniel>To bring it all together for you, we've gone deep into the hidden influx of AI in the state court system. We've seen how state courts, handling 98.6% of cases, have been a blind spot until this Stanford Rake Lab scraper pulled back the curtain on over</v>
+
+163
+00:20:54.943 --> 00:20:56.464
+<v Daniel>127,000 complaints.</v>
+
+164
+00:20:56.924 --> 00:21:09.549
+<v Maya>We explored the structural reasons why detecting legal AI is so difficult, the heavy boilerplate and narrow vocabulary, and we saw the extreme fragility of uncalibrated detectors swinging wildly based on minor settings.</v>
+
+165
+00:21:10.183 --> 00:21:24.650
+<v Daniel>And we unpacked the fix, Phantom Docket and ScoreMix, using real-world hallucinations as that five-pound weight to ground the math, revealing that in places like Santa Clara, over 70% of self-represented complaints are already using AI.</v>
+
+166
+00:21:25.891 --> 00:21:28.472
+<v Daniel>But I want to leave you with one final thought to ponder.</v>
+
+167
+00:21:29.072 --> 00:21:30.493
+<v Maya>Oh? What's the thought?</v>
+
+168
+00:21:30.947 --> 00:21:45.693
+<v Daniel>We know that these massive generative AI models are trained by scraping public data, right, including public court records. As more and more AI-generated text floods into the public court archives today, what happens in a year or two? What</v>
+
+169
+00:21:45.733 --> 00:22:00.258
+<v Daniel>happens when the next generation of AI models uses these newly filed AI-generated 2026 legal documents as its training data? Will we enter a closed loop where the AI simply learns legal reasoning from its own clumsy, hallucinated past?</v>
+
+170
+00:22:00.702 --> 00:22:02.191
+<v Maya>That is quite the loop.</v>
+
+171
+00:22:03.076 --> 00:22:06.115
+<v Daniel>Something to chew on. Thanks for diving deep with us.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 08:17:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 08:40:14 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2242,5 +2242,24 @@ Reference: Liang, W., Zhang, Y., Wu, Z., Lepp, H., Ji, W., Zhao, X., et al. (202
       <pubDate>Thu, 19 Nov 2026 07:22:45 +0000</pubDate>
       <itunes:episode>117</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/117%20-%20When%20Scientists%20Feel%20Faster%20But%20Science%20Looks%20The%20Same.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>118 - When AI Writes The Lawsuit And Detectors Disagree</title>
+      <description>Detection Objection: Documenting, Calibrating, and Detecting the Rise of AI-Assisted Text in U.S. State Courts (November 2026)
+
+In this episode we unpack a new working paper from Stanford's RegLab by Javokhir Arifov, Alexander Spangher, Jonathan Hennessy, Diya Karan, Emaan Hariri and Daniel E. Ho, which they describe as the first study of generative AI prevalence across state trial court systems. Measuring 127,518 civil complaints from San Francisco, Santa Clara, Tulsa and Oklahoma counties, they find that AI-assisted drafting was near zero before 2023 and reaches about 36 to 38 percent of 2026 complaints in the two California courts and 16 to 17 percent in Oklahoma, and they show why the number depends on how the detector is set up.
+
+We walk through why legal text defeats detectors (about a quarter of the words are boilerplate, and the vocabulary is narrow), how one detector's flagged share swings from under 5 percent to almost 50 percent across reasonable settings, the new PhantomDocket benchmark of 980 real filings known to contain AI hallucinations, the detector comparison in which Pangram 3.3.2 reaches an AUROC of 0.946, EditLens 0.896 and the word-frequency MLE method about 0.77, and the ScoreMix calibrated prevalence estimator that narrows the spread. We cover the jump among self-represented plaintiffs in Santa Clara to an estimated 71.6 percent, set it against Cohen-Sasson's federal evidence on the new pro se surge, Liang and coauthors' society-wide estimates and their finding that detectors are biased against non-native English writers, EditLens and the RegLab's earlier work on legal hallucinations, and close on access to justice, disclosure rules, and what unreliable detectors mean for courts and classrooms.
+
+Reference: Arifov, J., Spangher, A., Hennessy, J., Karan, D., Hariri, E., &amp; Ho, D. E. (2026). Detection Objection: Documenting, Calibrating, and Detecting the Rise of AI-Assisted Text in U.S. State Courts. Stanford RegLab working paper. https://dho.stanford.edu/wp-content/uploads/GenAI_Courts.pdf
+Reference: Cohen-Sasson, O. (2026). The New Pro Se: Generative AI and the Surge in Federal Civil Self-Representation. arXiv:2605.29493. https://arxiv.org/abs/2605.29493
+Reference: Liang, W., Zhang, Y., Codreanu, M., Wang, J., Cao, H., &amp; Zou, J. (2025). The widespread adoption of large language model-assisted writing across society. Patterns, 6(12), 101366. arXiv:2502.09747. https://doi.org/10.1016/j.patter.2025.101366
+Reference: Liang, W., Yuksekgonul, M., Mao, Y., Wu, E., &amp; Zou, J. (2023). GPT detectors are biased against non-native English writers. Patterns, 4(7), 100779. https://doi.org/10.1016/j.patter.2023.100779
+Reference: Thai, K., Emi, B., Masrour, E., &amp; Iyyer, M. (2026). EditLens: Quantifying the Extent of AI Editing in Text. ICLR 2026. arXiv:2510.03154. https://arxiv.org/abs/2510.03154
+Reference: Dahl, M., Magesh, V., Suzgun, M., &amp; Ho, D. E. (2024). Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models. Journal of Legal Analysis, 16(1), 64-93. arXiv:2401.01301. https://doi.org/10.1093/jla/laae003</description>
+      <guid isPermaLink="false">f53c63f9508e8a5ff09546d3ed8336acdcb5ed3b</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/118%20-%20When%20AI%20Writes%20The%20Lawsuit%20And%20Detectors%20Disagree.m4a" length="16174196" type="audio/mp4" />
+      <pubDate>Fri, 20 Nov 2026 07:21:55 +0000</pubDate>
+      <itunes:episode>118</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/118%20-%20When%20AI%20Writes%20The%20Lawsuit%20And%20Detectors%20Disagree.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
