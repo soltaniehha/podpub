@@ -1,0 +1,645 @@
+WEBVTT
+
+1
+00:00:00.091 --> 00:00:13.641
+<v Maya>Welcome to today's deep dive. If you're the kind of naturally curious learner who loves getting past the hype to see how things actually work, you are definitely in the right place because today we're looking at a concept that has completely captivated the tech industry lately.</v>
+
+2
+00:00:14.001 --> 00:00:15.122
+<v Daniel>Oh, totally. It's everywhere.</v>
+
+3
+00:00:15.302 --> 00:00:29.233
+<v Maya>Right. Like for centuries, physical engineers were obsessed with building a perpetual motion machine, you know, a device that just powers itself forever. We know physics doesn't allow that, but software engineers think they might have just found their own digital version of it.</v>
+
+4
+00:00:29.521 --> 00:00:44.267
+<v Daniel>Yeah, it really is the ultimate free lunch. The pitch going around Silicon Valley right now is this whole idea of recursive self-improvement. Right. Imagine an AI agent that can just rewrite its own code, critique its own prompts, update its own skills, all in a closed loop. It just gets continually</v>
+
+5
+00:00:44.367 --> 00:00:46.088
+<v Daniel>smarter without any human intervention.</v>
+
+6
+00:00:46.680 --> 00:01:01.363
+<v Maya>the algorithmic perpetual motion machine. So we're asking if that's actually happening or if we're just staring at a really convincing mirage. And to figure this out, we're diving into two brand new, not yet peer reviewed archive preprints.</v>
+
+7
+00:01:01.583 --> 00:01:08.624
+<v Daniel>Yeah. And for context, Archive is an open repository where researchers post their early cutting edge work before it goes through formal academic vetting.</v>
+
+8
+00:01:09.004 --> 00:01:13.965
+<v Maya>Exactly. And these two papers were released just days apart this very week, November 17th and 19th, 2026.</v>
+
+9
+00:01:15.671 --> 00:01:23.896
+<v Daniel>What makes these two papers so compelling to read side by side is that they are asking the exact same question, but they approach it from completely opposite directions.</v>
+
+10
+00:01:24.496 --> 00:01:32.441
+<v Maya>Yeah, they both want to know, can an AI agent actually improve itself when there's nothing outside the agent telling it whether it got better?</v>
+
+11
+00:01:32.947 --> 00:01:47.199
+<v Daniel>And the shared conclusion they reach is fascinating, but definitely a reality check. One paper argues that even when you give the AI a scoring system to tell it how it's doing, that grading signal is just far too noisy to identify real improvements.</v>
+
+12
+00:01:47.559 --> 00:01:57.828
+<v Maya>Right. And then the other paper argues that if you take away the scoring signal completely, quote unquote, improving just results in the AI slowly erasing valuable human expertise.</v>
+
+13
+00:01:58.239 --> 00:02:07.822
+<v Daniel>Exactly. When you synthesize them, a very clear thesis emerges here. The bottleneck for self-improving agents isn't a lack of good ideas or, you know, a lack of compute power.</v>
+
+14
+00:02:08.302 --> 00:02:09.583
+<v Maya>It's outside ground truth.</v>
+
+15
+00:02:09.863 --> 00:02:13.564
+<v Daniel>Yes. They fundamentally need a reliable external grader.</v>
+
+16
+00:02:13.977 --> 00:02:21.499
+<v Maya>So we're essentially looking at an AI trying to pull itself up by its own bootstraps. But what happens if the boots don't even have straps?</v>
+
+17
+00:02:21.960 --> 00:02:36.224
+<v Daniel>Yeah, you just end up tripping over your own feet. Right. But before we get into the heavy data from this week, we really should quickly establish the baseline expectations the industry had going into this. Like, why did everyone think self-improvement was just around the corner?</v>
+
+18
+00:02:36.505 --> 00:02:38.666
+<v Maya>Well, that traces back to 2023. There you</v>
+
+19
+00:02:38.686 --> 00:02:38.846
+<v Daniel>go.</v>
+
+20
+00:02:38.986 --> 00:02:46.330
+<v Maya>There was a highly influential paper presented at NeurIPS, which, if you aren't familiar, is one of the biggest global AI conferences out there.</v>
+
+21
+00:02:46.390 --> 00:02:47.270
+<v Daniel>Huge conference, yeah.</v>
+
+22
+00:02:47.570 --> 00:03:01.417
+<v Maya>So a researcher named Madan and his colleagues introduced a method called self-refine. This was basically the optimistic case. They demonstrated that a single model could generate an output, critique its own work, and then revise it.</v>
+
+23
+00:03:01.565 --> 00:03:06.469
+<v Daniel>Right. And across seven different tasks, they saw an average absolute improvement of 20 percent.</v>
+
+24
+00:03:06.569 --> 00:03:07.330
+<v Maya>Which is massive.</v>
+
+25
+00:03:07.710 --> 00:03:18.839
+<v Daniel>It was a huge moment. It suggested that models possess this latent ability to spot their own flaws and fix them just by being prompted to look closer. But the honeymoon phase didn't last long.</v>
+
+26
+00:03:18.939 --> 00:03:19.100
+<v Maya>No.</v>
+
+27
+00:03:20.100 --> 00:03:31.442
+<v Daniel>A few months later in 2024, a team from Google DeepMind, Huang and colleagues, published a paper at another major conference, ICLR, that threw complete cold water on the entire concept.</v>
+
+28
+00:03:31.542 --> 00:03:39.344
+<v Maya>I remember reading about that DeepMind paper. They basically said the earlier gains were a bit of an illusion because they relied on what they called Oracle labels.</v>
+
+29
+00:03:39.984 --> 00:03:41.584
+<v Daniel>Right. The hidden ground truth.</v>
+
+30
+00:03:42.102 --> 00:03:54.787
+<v Maya>Exactly. Meaning the system secretly had access to the right answer. So it knew exactly when to stop correcting itself. And once DeepMind removed that hidden feedback, the model's reasoning didn't just stall out. It actively degraded.</v>
+
+31
+00:03:55.447 --> 00:04:02.550
+<v Daniel>Which leaves us with a paradox, right? How can self-refine show a 20% improvement while DeepMind shows the model's getting worse?</v>
+
+32
+00:04:03.142 --> 00:04:16.026
+<v Maya>Well, let me see if I can frame this. Because I think of it like proofreading your own essay. If I write something, I might catch a few missing commas or fix a typo on a second read-through. That feels like the self-refined paper.</v>
+
+33
+00:04:16.866 --> 00:04:24.088
+<v Daniel>But... But if your entire core argument makes no logical sense, reading it a fifth time isn't going to help you realize it.</v>
+
+34
+00:04:24.328 --> 00:04:31.870
+<v Maya>Because the blind spot is built in. I can smooth out the grammar, sure, but I can't generate a structural insight that I didn't possess in the first place.</v>
+
+35
+00:04:32.214 --> 00:04:44.944
+<v Daniel>That is a brilliant way to put it. You can optimize the surface, but you can't self-generate new structural truth without an external perspective. And that exact tension brings us to the first of our new preprints this week from Guo and colleagues.</v>
+
+36
+00:04:45.004 --> 00:04:46.486
+<v Maya>Right. The one from November 19th.</v>
+
+37
+00:04:46.866 --> 00:04:57.395
+<v Daniel>Yeah. They decided to rigorously test the no feedback scenario. And they extend that deep mind finding from just answering a single question to rewriting a persistent document 30 times.</v>
+
+38
+00:04:58.430 --> 00:05:12.537
+<v Maya>And the setup they chose is highly relevant to anyone working in enterprise tech right now. Models are increasingly being asked to rewrite their own agent skills. For anyone wondering, an agent skill is basically a short document where a human expert has written down procedural knowledge.</v>
+
+39
+00:05:12.835 --> 00:05:19.840
+<v Daniel>Right. Think of it like a highly specific manual on how to navigate a proprietary database or, you know, format a company's legal documents.</v>
+
+40
+00:05:20.020 --> 00:05:29.105
+<v Maya>Exactly. So the researchers took six different state-of-the-art models. This included GPT-5.6 Luna, GPT-6.1 Sol, Claude Haiku 5.5, MIMO V2.5 Pro, and the latest QEN 3.7 and 3.8 models.</v>
+
+41
+00:05:36.210 --> 00:05:37.191
+<v Daniel>Basically the heavy hitters.</v>
+
+42
+00:05:37.431 --> 00:05:45.298
+<v Maya>Yeah. And they instructed them to identify problems and improve these expert skills. But crucially, they gave them zero feedback.</v>
+
+43
+00:05:45.519 --> 00:05:54.427
+<v Daniel>None. No test to see if it worked, no practice run, and no judge. They just let the AI rewrite the skill for 30 recursive rounds.</v>
+
+44
+00:05:54.877 --> 00:06:01.102
+<v Maya>So if that optimistic, self-refined theory held true, the skills should have become incredibly sharp and well-adapted, right?</v>
+
+45
+00:06:01.262 --> 00:06:15.974
+<v Daniel>They really should have. But the decline they documented is actually staggering. Let's look at the numbers. On a benchmark called SkillsBench, which has 87 complex tasks, the very first rewrite, just round one, cost them 7.1 points in</v>
+
+46
+00:06:16.034 --> 00:06:17.054
+<v Daniel>performance on average.</v>
+
+47
+00:06:17.835 --> 00:06:18.836
+<v Maya>Wait, just round one?</v>
+
+48
+00:06:19.134 --> 00:06:33.745
+<v Daniel>Just round one. After five rounds, it was down 10.9 points. And it just keeps compounding. By round 30, performance dropped by 14.6 points. Wow. Every single one of the six models ended up 10.3 to 23.0 points below the</v>
+
+49
+00:06:33.765 --> 00:06:34.986
+<v Daniel>original human written skill.</v>
+
+50
+00:06:38.597 --> 00:06:50.781
+<v Maya>It gets even worse depending on the test, too. On LogicBench, accuracy fell from 86.2% down to 71.4%. And I really want to highlight why that 71.4% is so important.</v>
+
+51
+00:06:50.821 --> 00:06:51.761
+<v Daniel>Well, this part is crazy.</v>
+
+52
+00:06:51.962 --> 00:07:01.685
+<v Maya>It is. That is the exact same score the model gets if you give it absolutely no skill document at all. It literally erased the entire value of the human instruction.</v>
+
+53
+00:07:02.377 --> 00:07:10.164
+<v Daniel>And on the MedCalc benchmark, it actually fell from 89.7 to 78.7, which is below the 81.1 baseline of having no skill. It made the model worse than going in blind.</v>
+
+54
+00:07:15.814 --> 00:07:30.781
+<v Maya>Okay, so here is the part that genuinely confused me at first. The researchers made sure that the exact same model rewrote the skill and then used the skill to solve the task. Right. So it wasn't a mismatch where GPT rewrites the manual and then Claude</v>
+
+55
+00:07:30.841 --> 00:07:42.387
+<v Maya>gets confused trying to read it. The AI is reading its own writing. Shouldn't customizing the document into its own words make it better for that specific model to use? Why is it actively hurting itself?</v>
+
+56
+00:07:42.655 --> 00:07:57.551
+<v Daniel>So to understand the mechanics of why that happens, we have to talk about a concept called a model's prior. Every AI model has a natural gravitation towards certain types of generic, highly probable language based on the massive internet</v>
+
+57
+00:07:57.591 --> 00:08:03.718
+<v Daniel>data it was trained on. Left to its own devices, a model wants to produce average, typical text.</v>
+
+58
+00:08:04.319 --> 00:08:10.741
+<v Maya>So you're saying the human expert wrote something unusual and the AI's prior is just pulling it back to the average.</v>
+
+59
+00:08:10.881 --> 00:08:25.644
+<v Daniel>Yes, exactly. There was a famous 2024 Nature paper by Shumailov and colleagues about model collapse. That paper proved that when you train an AI on data generated by other AIs, the models eventually collapse</v>
+
+60
+00:08:26.084 --> 00:08:28.405
+<v Daniel>because they lose the tails of the original distribution.</v>
+
+61
+00:08:28.667 --> 00:08:29.969
+<v Maya>The tails being the rare stuff.</v>
+
+62
+00:08:30.409 --> 00:08:38.581
+<v Daniel>Right. The rare, weird, highly specific human eccentricities just get averaged out until you are left with bland, generic output.</v>
+
+63
+00:08:38.977 --> 00:08:47.541
+<v Maya>Wait, let me make sure I'm following here. Are these researchers retraining the AI on its own outputs? Because that sounds incredibly expensive.</v>
+
+64
+00:08:47.901 --> 00:09:01.187
+<v Daniel>No, no, they are not. And that is a vital distinction to make here. The model weights in this week's paper are completely frozen. Nothing is being retrained. Model collapse is just a very strong analogy here, not the exact same mechanism.</v>
+
+65
+00:09:01.507 --> 00:09:02.208
+<v Maya>Okay, I see.</v>
+
+66
+00:09:02.548 --> 00:09:16.237
+<v Daniel>But the effect on the text of the skill document is remarkably similar. By rewriting the document over and over without feedback, the model's prior acts like an eraser, slowly smoothing away the rare, highly specific expert knowledge.</v>
+
+67
+00:09:17.043 --> 00:09:31.713
+<v Maya>And the researchers actually designed a pretty clever way to prove this mechanism. They wanted to measure this prior you mentioned. So before the main experiment, they gave the models just a one sentence topic and asked them to write 10 skills from scratch with no human</v>
+
+68
+00:09:31.793 --> 00:09:32.853
+<v Maya>expert document provided.</v>
+
+69
+00:09:33.454 --> 00:09:39.958
+<v Daniel>That establishes a baseline. It shows us exactly what the model naturally wants to write about a topic when nobody is guiding it.</v>
+
+70
+00:09:40.293 --> 00:09:51.978
+<v Maya>Right. Then they tracked every single item, every bullet point, every piece of logic from the human expert's original skill across the 30 rounds of rewrites. The data here is the smoking gun.</v>
+
+71
+00:09:52.458 --> 00:09:52.978
+<v Daniel>It really is.</v>
+
+72
+00:09:53.338 --> 00:10:02.962
+<v Maya>After 30 rounds, if an item was something the model naturally wrote in its baseline, it had an 84.2% survival rate. It stayed in the rewritten document.</v>
+
+73
+00:10:03.518 --> 00:10:13.803
+<v Daniel>But if the item was unique to the human expert, meaning the model never came up with it during those 10 baseline attempts, only 23.1% of those unique items survived.</v>
+
+74
+00:10:14.163 --> 00:10:20.326
+<v Maya>So the model is systematically dropping the knowledge that only the expert possessed and keeping the stuff it already knew anyway.</v>
+
+75
+00:10:20.546 --> 00:10:30.231
+<v Daniel>Yes. And to prove this was the root cause, they ran a causal test. They took that heavily degraded round 30 skill and they just pasted the lost rare items back in.</v>
+
+76
+00:10:31.092 --> 00:10:31.752
+<v Maya>And what happened?</v>
+
+77
+00:10:32.063 --> 00:10:46.902
+<v Daniel>Restoring just those specific rare items recovered 8.8 points on SkillsBench. To put that into perspective, that is double the 4.4 points they recovered when they tried restoring the generic items it lost. And restoring everything only got them to</v>
+
+78
+00:10:46.922 --> 00:10:47.122
+<v Daniel>10.2.</v>
+
+79
+00:10:47.743 --> 00:10:58.592
+<v Maya>Wow. It mathematically quantifies human expertise. The entire value of the expert is located in the nuanced edge cases the AI just wouldn't think to write on its own.</v>
+
+80
+00:10:58.752 --> 00:10:59.153
+<v Daniel>Exactly.</v>
+
+81
+00:10:59.533 --> 00:11:11.102
+<v Maya>So asking an AI to automatically tidy up a company's procedural playbook is basically like asking a teenager to edit the tax code. They are just going to delete all the complex loopholes they don't understand because it doesn't fit the worldview.</v>
+
+82
+00:11:11.423 --> 00:11:23.500
+<v Daniel>That is a perfect way to visualize it. They symbolify the world to match their level of understanding. But, you know, the researchers didn't just point out the problem. They proposed a brilliant, elegant fix called SkillDiff.</v>
+
+83
+00:11:23.880 --> 00:11:26.601
+<v Maya>And the best part is it requires zero feedback loops.</v>
+
+84
+00:11:26.861 --> 00:11:41.507
+<v Daniel>None at all. They compare the original expert text to the model's prior. And they locate all the rare items the model wouldn't naturally write. Then they leave the skills text totally untouched. But they mark the rare items and add a</v>
+
+85
+00:11:41.627 --> 00:11:44.908
+<v Daniel>single note telling the agent to carry them into its plan.</v>
+
+86
+00:11:45.570 --> 00:11:55.358
+<v Maya>And just doing that, just putting a highlighter on the weird human stuff, raised the pass rate by 4.8 points on average. No evolution, no rewriting. Just pointing at the expertise.</v>
+
+87
+00:11:55.919 --> 00:11:59.541
+<v Daniel>Which shows that without a feedback signal, self-evolution is nothing but drift.</v>
+
+88
+00:12:00.382 --> 00:12:11.151
+<v Maya>Which naturally leads to the next logical assumption, right? If feedback-free evolution fails, we should just test the rewrites. Let's score them and only keep the ones that actually perform better. Problem solved.</v>
+
+89
+00:12:11.713 --> 00:12:25.338
+<v Daniel>Right. Which sounds absolutely foolproof until you read the second preprint from this week. This one is by Zheng, Lan, Lu, and colleagues, released on November 17th. And they look specifically at agent evolution with feedback.</v>
+
+90
+00:12:26.038 --> 00:12:28.499
+<v Maya>This is often called a proposer-selector loop, right?</v>
+
+91
+00:12:28.799 --> 00:12:40.943
+<v Daniel>Exactly. A proposer model writes a bunch of candidate prompts or skills or whatever. You run them on a task to get a score. And a selector keeps whichever one scores higher. It's essentially Darwinian evolution applied to code.</v>
+
+92
+00:12:41.319 --> 00:12:56.255
+<v Maya>And the authors of this paper propose something called the resolution hypothesis. Their claim is that this evolutionary loop stalls out not because the AI is incapable of proposing better ideas, but because the automated grading process is too noisy.</v>
+
+93
+00:12:56.459 --> 00:13:06.225
+<v Daniel>Yeah. The graders simply cannot tell which ideas are actually better. And we really have to emphasize the sheer scale of this study because it gives their claims massive statistical weight.</v>
+
+94
+00:13:06.345 --> 00:13:07.046
+<v Maya>Oh, it's huge.</v>
+
+95
+00:13:07.506 --> 00:13:21.575
+<v Daniel>They didn't just run a handful of tests. They looked at seven different evolution methods, things like JEPA, Skillopt Lite, Trace2Skill, a bunch of others. They used six models across four different agent benchmarks, including ALF World and Terminal Bench.</v>
+
+96
+00:13:22.180 --> 00:13:23.661
+<v Maya>And the volume of data.</v>
+
+97
+00:13:23.942 --> 00:13:33.230
+<v Daniel>We are talking about over 1,030 independent evolution runs, more than 2.1 million test trajectories, and over 10 million LLM calls.</v>
+
+98
+00:13:33.611 --> 00:13:36.613
+<v Maya>10 million calls gives them immense statistical power.</v>
+
+99
+00:13:37.034 --> 00:13:47.744
+<v Daniel>And they use that power to split the random noise in the grading system into two distinct buckets. They identified evaluation noise, which they call sigma, and run-to-run variance, which they call tau.</v>
+
+100
+00:13:48.715 --> 00:14:03.163
+<v Maya>Hold on. So this sounds like trying to track a one pound weight loss on a broken bathroom scale. Evaluation noise or sigma is like when you step on the scale, step off and step immediately back on and the scale gives you a different number just because it's glitchy.</v>
+
+101
+00:14:03.744 --> 00:14:12.128
+<v Daniel>Right. So in AI terms, that's scoring the exact same artifact twice and getting different results because the LLM judge acts a little differently each time.</v>
+
+102
+00:14:12.348 --> 00:14:23.074
+<v Maya>Exactly. And the run-to-run variants, that's like trying a whole new diet for a week and then trying it again the next week. You might lose weight one week, but the next week your body reacts completely differently.</v>
+
+103
+00:14:23.734 --> 00:14:32.258
+<v Daniel>Okay. So in the AI world, that's when you run the whole evolution method twice from scratch, and it hallucinates a totally different skill path each time.</v>
+
+104
+00:14:32.545 --> 00:14:44.567
+<v Maya>Right. So the bathroom scale is the perfect analogy for the resolution hypothesis. Your scale simply does not have the resolution to reliably detect a one-pound change amidst all those random five-pound fluctuations.</v>
+
+105
+00:14:45.421 --> 00:15:00.344
+<v Daniel>And when they applied this lens to the published literature in the AI industry, the results were really eye-opening. They looked at 171 results across nine published agent evolution papers. Usually when a new method is published, it</v>
+
+106
+00:15:00.404 --> 00:15:04.645
+<v Daniel>claims to beat the old method by a median of about 3.4 points.</v>
+
+107
+00:15:05.305 --> 00:15:07.606
+<v Maya>Which sounds like a solid, publishable win.</v>
+
+108
+00:15:07.706 --> 00:15:22.415
+<v Daniel>But none of them report a variance estimate. And only six average over more than one run. Zeng's team calculated the noise, and to reliably detect a true 3.4-point margin through all that evaluation noise, you would need to run</v>
+
+109
+00:15:22.475 --> 00:15:26.737
+<v Daniel>about 23 independent trials per method on a benchmark like Terminal Bench.</v>
+
+110
+00:15:27.757 --> 00:15:30.478
+<v Maya>Let me guess, nobody is running 23 independent trials.</v>
+
+111
+00:15:30.858 --> 00:15:42.401
+<v Daniel>Almost nobody. The standard practice is a single-run results table, and this paper notes that a single-run table only picks the truly best method out of four options 33% of the time on Terminal Bench.</v>
+
+112
+00:15:42.787 --> 00:15:44.948
+<v Maya>But random guessing would get you 25%. I</v>
+
+113
+00:15:45.089 --> 00:15:46.189
+<v Daniel>know.</v>
+
+114
+00:15:46.850 --> 00:16:00.859
+<v Maya>Publishing a paper based on a single run is barely better than throwing darts blindfolded. But I have to push back here because we aren't just talking about tiny 3.4 point margins, right? What about the papers that claim massive leaps like 10, 20 or 40 point gains?</v>
+
+115
+00:16:02.233 --> 00:16:16.947
+<v Daniel>That is where we have to discuss a prominent 2026 paper by Agrawal and colleagues called GEPA. GEPA was highly celebrated because it reported beating a major reinforcement learning baseline, GRPO, by 6% on average and up to</v>
+
+116
+00:16:17.128 --> 00:16:22.553
+<v Daniel>20% on specific tasks. Wow. And while using up to 35 times fewer rollouts.</v>
+
+117
+00:16:23.228 --> 00:16:30.571
+<v Maya>And a rollout is basically just the AI practicing the task, right? So they claimed they got much better results with way less practice.</v>
+
+118
+00:16:30.931 --> 00:16:45.797
+<v Daniel>Exactly. Now, to be fair, PaperOne does not claim that methods like JIPA never help, but they decided to audit the actual artifacts. The specific prompts and skills released alongside JIPA and Skill Off Light to trace exactly where those massive 10</v>
+
+119
+00:16:46.057 --> 00:16:47.598
+<v Daniel>to 40 point gains were coming from.</v>
+
+120
+00:16:48.173 --> 00:17:03.037
+<v Maya>The gain audit was easily the most striking part of this entire deep dive for me. When they dug into the code, they found that those massive leaps in performance weren't coming from brilliant new reasoning strategies. No. In almost every case, Zhang's team was able to reproduce the</v>
+
+121
+00:17:03.117 --> 00:17:09.838
+<v Maya>massive reported gains by appending just one single sentence to the unevolved agent. One sentence.</v>
+
+122
+00:17:10.258 --> 00:17:16.920
+<v Daniel>Yeah, that single sentence recovered a median of 90% of the gain across 27 different model and benchmark pairs.</v>
+
+123
+00:17:17.333 --> 00:17:19.274
+<v Maya>I mean, how does one sentence do that?</v>
+
+124
+00:17:19.694 --> 00:17:34.398
+<v Daniel>Because that one sentence figured out how to game the grader. The automated evaluator was flawed. For example, it might only award points if the final answer was formatted in a highly specific way, like wrapped in specific XML tags or matching one exact answer</v>
+
+125
+00:17:34.438 --> 00:17:34.859
+<v Daniel>format.</v>
+
+126
+00:17:35.059 --> 00:17:35.459
+<v Maya>Oh, wow.</v>
+
+127
+00:17:35.879 --> 00:17:42.381
+<v Daniel>Yeah. The evolution loop just randomly stumbled onto that formatting trick. The score skyrocketed and the loop decided to keep it.</v>
+
+128
+00:17:42.831 --> 00:17:57.296
+<v Maya>So the model isn't getting smarter. It just figured out what the teacher wants to hear. And when Zhang's team manually repaired the evaluation, grading the answers based on actual meaning rather than strict formatting, the median gain for these evolutionary methods plummeted from</v>
+
+129
+00:17:57.316 --> 00:18:01.258
+<v Maya>17.6 points down to just 0.8. The</v>
+
+130
+00:18:01.298 --> 00:18:11.782
+<v Daniel>system is just optimizing for the test, not for actual intelligence. And we see this tragedy play out fully when the paper drills down to examine the individual candidate ideas the AI is proposing.</v>
+
+131
+00:18:12.542 --> 00:18:27.455
+<v Maya>Because the crazy part is, the AI is proposing good ideas. When the researchers generated a pool of 100 candidate skills and evaluated them perfectly, the success rate of the best skill climbed from 49.2% to 61.8% as the pool went from 1 to 100. Right. The proposer is doing its job. Good candidates</v>
+
+132
+00:18:27.495 --> 00:18:27.675
+<v Maya>exist.</v>
+
+133
+00:18:33.502 --> 00:18:48.117
+<v Daniel>One shared skill even beat the pool mean by 8.3 points. But the selector, the automated grader, is failing completely. When they tested execution-based selection, they found it picks the better of two skills only 49.7% of the time. Wait, 49.7%? That's a literal coin flip.</v>
+
+134
+00:18:51.768 --> 00:19:03.874
+<v Daniel>It is a literal coin flip. And because it's a coin flip, terrible ideas slip through. They found that regressions, skills that actively made the agent worse, made up 30.5% of the proposed ideas.</v>
+
+135
+00:19:04.535 --> 00:19:06.436
+<v Maya>Okay, that makes sense for a brainstorming phase.</v>
+
+136
+00:19:06.736 --> 00:19:14.420
+<v Daniel>Right. But because the grading is so noisy, those regressions ended up making up 62.1% of what actually got accepted into the final system.</v>
+
+137
+00:19:14.742 --> 00:19:19.247
+<v Maya>over half of the quote-unquote improvements were actually making the AI dumber.</v>
+
+138
+00:19:19.547 --> 00:19:25.613
+<v Daniel>Exactly. They even tried having a separate LLM judge read the full trajectory of the agent's execution to see if that helped.</v>
+
+139
+00:19:25.793 --> 00:19:26.114
+<v Maya>Did it?</v>
+
+140
+00:19:26.534 --> 00:19:35.163
+<v Daniel>Not at all. The rank correlation between a candidate's score and its true quality was a dismal .054. The LLM judges did no better.</v>
+
+141
+00:19:35.745 --> 00:19:42.731
+<v Maya>And when you compound those coin flips over multiple rounds of an evolution loop, the results are deeply misleading for developers, aren't they?</v>
+
+142
+00:19:42.931 --> 00:19:50.478
+<v Daniel>Oh, incredibly misleading. Because during the loop, the AI looks at its own scores and says, hey, look at me. My score has climbed by 6.9 to 9.0 points. I'm evolving.</v>
+
+143
+00:19:52.780 --> 00:20:07.692
+<v Maya>But when Zeng's team carefully re-evaluated those same final artifacts, the true performance was entirely flat. It ranged from a 0.4 point gain to a 3.2 point loss. The scores go up, but the artifacts do not get better. The loop is just keeping lucky</v>
+
+144
+00:20:07.732 --> 00:20:08.993
+<v Maya>draws from the noisy grader.</v>
+
+145
+00:20:09.433 --> 00:20:23.981
+<v Daniel>It is evolutionary survival of the luckiest, not the fittest. To fix this, the authors propose relying on lower noise behavioral checks instead of just a pass-fail at the end of a task. and evaluating the proposers and selectors separately.</v>
+
+146
+00:20:24.542 --> 00:20:30.530
+<v Maya>So when you synthesize everything we've talked about today, it forces a massive rethink of where the industry is heading.</v>
+
+147
+00:20:30.750 --> 00:20:31.311
+<v Daniel>It really does.</v>
+
+148
+00:20:31.771 --> 00:20:37.980
+<v Maya>The bottleneck for recursive self-improvement is not intelligence. It's the ability to evaluate that intelligence.</v>
+
+149
+00:20:38.311 --> 00:20:51.976
+<v Daniel>which has immediate real-world implications. I mean, think about all the enterprise products launching right now that pitch autonomous agents that can edit their own memories, update their own instructions, and tidy up an organization's playbook without a human in the loop.</v>
+
+150
+00:20:52.668 --> 00:21:03.118
+<v Maya>Based on this week's science, those organizations are walking into a trap. Without rigorous, high-resolution external testing, those agents are just going to overwrite rare institutional knowledge with generic defaults.</v>
+
+151
+00:21:03.218 --> 00:21:16.409
+<v Daniel>Exactly. And if they are given an automated grader, they are just going to optimize for whatever noisy metric they are judged against until the performance hollows out entirely. Now, we do need to note the scientific boundaries of these findings.</v>
+
+152
+00:21:16.489 --> 00:21:17.289
+<v Maya>Right. Fair enough.</v>
+
+153
+00:21:17.509 --> 00:21:32.014
+<v Daniel>First, neither of these papers is peer-reviewed yet. Second, Paper 1's candidate-level experiments were only conducted on terminal bench. And both papers are dealing with frozen weight models rewriting text, not deep reinforcement learning where the neural weights are actively</v>
+
+154
+00:21:32.314 --> 00:21:32.674
+<v Daniel>updating.</v>
+
+155
+00:21:33.034 --> 00:21:42.357
+<v Maya>And Paper 2 relies on an LLM judge to decide which items survived the rewrites. Though, to be fair, they did double-check it with a second judge to be mathematically safe.</v>
+
+156
+00:21:42.692 --> 00:21:57.460
+<v Daniel>Right. But even with those limits, the sheer scale of the data is incredibly compelling. It proves that the perpetual motion machine of AI actually has friction, the friction of noise and the gravity of the model's own</v>
+
+157
+00:21:57.500 --> 00:21:58.000
+<v Daniel>biases.</v>
+
+158
+00:21:58.683 --> 00:22:13.617
+<v Maya>Which leaves us with a fascinating kind of mind-expanding thought to end on. If AI has reached the point where it can easily generate brilliant ideas, but it absolutely cannot reliably evaluate if those ideas are actually good, then the</v>
+
+159
+00:22:13.697 --> 00:22:18.482
+<v Maya>real race to artificial superintelligence isn't about building a better AI brain anymore.</v>
+
+160
+00:22:18.909 --> 00:22:21.535
+<v Daniel>No, it's about building a better AI grader.</v>
+
+161
+00:22:21.735 --> 00:22:35.302
+<v Maya>Exactly. It forces you to wonder, how do we ever teach a machine to recognize a truth it hasn't seen before? That is definitely something to mull over on your own. Thanks for joining us on the Deep Dive, and we'll see you next time.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 08:40:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 07:46:53 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2261,5 +2261,24 @@ Reference: Dahl, M., Magesh, V., Suzgun, M., &amp; Ho, D. E. (2024). Large Legal
       <pubDate>Fri, 20 Nov 2026 07:21:55 +0000</pubDate>
       <itunes:episode>118</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/118%20-%20When%20AI%20Writes%20The%20Lawsuit%20And%20Detectors%20Disagree.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>119 - When Agents Improve Themselves Without A Referee</title>
+      <description>The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements (November 2026) + How Feedback-Free Self-Evolution Reshapes Agent Skills: A Systematic Study (November 2026)
+
+In this episode we unpack two new arXiv preprints, posted two days apart, that ask whether an AI agent can improve itself when nothing outside it says whether it got better. Yuanhao Zeng, Shaocheng Lan, Ao Lu and colleagues at ShanghaiTech, ByteDance, BIGAI and SUSTech, led by Kan Ren, argue that agent evolution stalls not because models cannot propose better prompts and skills but because noisy evaluations cannot tell which ones are better. Litao Guo, Man Chen and colleagues at HKUST Guangzhou, led by Ying-Cong Chen, show what happens when there is no evaluation at all: models asked to improve expert skill documents erase the very knowledge that made them useful.
+
+We walk through the Resolution study's 1,030 evolution runs and 2.1 million trajectories across GEPA, SkillOpt-Lite, Trace2Skill, ReasoningBank, HarnessLens, Meta-Harness and AHE, the finding that a one-run results table picks the best of four methods on Terminal-Bench only 33 percent of the time, the gain audit in which a single grader-fitting sentence reproduces a median 90 percent of the largest reported gains, and selection that picks the better of two skills 49.7 percent of the time. We then cover thirty rounds of feedback-free rewriting by six models, which cuts SkillsBench pass rates by 14.6 points on average and pushes LogicBench and MedCalc-Bench to or below the no-skill level, the drift of every skill toward the model's own prior, the restoration experiment that recovers 8.8 points, and SkillDiff's 4.8 point gain without changing a word. We set both against Self-Refine, Huang and colleagues' finding that models cannot self-correct reasoning without outside feedback, GEPA's claims, and model collapse, and close on whether evaluation, not intelligence, is now the bottleneck for self-improving AI.
+
+Reference: Zeng, Y., Lan, S., Lu, A., Yan, K., Lin, H., Xu, X., Luo, Y., Wang, Y., Li, Y., Shan, R., &amp; Ren, K. (2026). The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements. arXiv:2611.23068. https://arxiv.org/abs/2611.23068
+Reference: Guo, L., Chen, M., Xu, X., Zhou, J., Zhang, Z., &amp; Chen, Y.-C. (2026). How Feedback-Free Self-Evolution Reshapes Agent Skills: A Systematic Study. arXiv:2611.25534. https://arxiv.org/abs/2611.25534
+Reference: Madaan, A., Tandon, N., Gupta, P., et al. (2023). Self-Refine: Iterative Refinement with Self-Feedback. NeurIPS 2023. arXiv:2303.17651. https://arxiv.org/abs/2303.17651
+Reference: Huang, J., Chen, X., Mishra, S., Zheng, H. S., Yu, A. W., Song, X., &amp; Zhou, D. (2024). Large Language Models Cannot Self-Correct Reasoning Yet. ICLR 2024. arXiv:2310.01798. https://arxiv.org/abs/2310.01798
+Reference: Agrawal, L. A., Tan, S., Soylu, D., et al. (2026). GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning. ICLR 2026. arXiv:2507.19457. https://arxiv.org/abs/2507.19457
+Reference: Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., &amp; Gal, Y. (2024). AI models collapse when trained on recursively generated data. Nature, 631, 755-759. https://doi.org/10.1038/s41586-024-07566-y</description>
+      <guid isPermaLink="false">29a26506e1355b2c50f6536b39a9247e3d86b19f</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/119%20-%20When%20Agents%20Improve%20Themselves%20Without%20A%20Referee.m4a" length="16528802" type="audio/mp4" />
+      <pubDate>Sat, 21 Nov 2026 07:21:36 +0000</pubDate>
+      <itunes:episode>119</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/119%20-%20When%20Agents%20Improve%20Themselves%20Without%20A%20Referee.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
