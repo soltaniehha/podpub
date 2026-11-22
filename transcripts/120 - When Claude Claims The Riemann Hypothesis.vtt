@@ -1,0 +1,789 @@
+WEBVTT
+
+1
+00:00:00.111 --> 00:00:07.976
+<v Maya>Today is Saturday, November 21st, 2026. And well, yesterday, the mathematical world basically experienced a massive earthquake.</v>
+
+2
+00:00:08.336 --> 00:00:11.858
+<v Daniel>Yeah, that is honestly not an overstatement. It's a total shock to the system.</v>
+
+3
+00:00:12.140 --> 00:00:19.902
+<v Maya>Right, and there's a massive catch to this breakthrough. The entity that ostensibly solved this 167-year-old mystery isn't human.</v>
+
+4
+00:00:20.142 --> 00:00:20.562
+<v Daniel>No, it's not.</v>
+
+5
+00:00:20.942 --> 00:00:28.344
+<v Maya>And the proof it generated is this, like, 250,000-page document of machine code that literally no human brain can even read right now.</v>
+
+6
+00:00:28.585 --> 00:00:30.185
+<v Daniel>Which is just wild to think about.</v>
+
+7
+00:00:30.585 --> 00:00:41.028
+<v Maya>It really is. Welcome to the Deep Dive, everyone. For you listening today, we are unpacking a stack of sources centered entirely around one single, highly explosive four-page document.</v>
+
+8
+00:00:41.232 --> 00:00:45.194
+<v Daniel>Yeah, it's a note with the very unassuming title of remark.pdf.</v>
+
+9
+00:00:45.394 --> 00:00:47.776
+<v Maya>Remark.pdf. Just so casual.</v>
+
+10
+00:00:47.856 --> 00:00:55.840
+<v Daniel>Right. It was posted just yesterday on the personal website of Levent Alpogue. He's a number theorist and anthropic currently on leave from Harvard.</v>
+
+11
+00:00:56.121 --> 00:00:59.322
+<v Maya>And the claim in those four pages is just staggering.</v>
+
+12
+00:00:59.542 --> 00:01:00.403
+<v Daniel>Oh, absolutely.</v>
+
+13
+00:01:00.743 --> 00:01:09.008
+<v Maya>Alpogue writes that he, working alongside the AI model Claude, has discovered and actually formally verified a proof of the Riemann hypothesis.</v>
+
+14
+00:01:09.315 --> 00:01:11.457
+<v Daniel>Arguably the greatest unsolved problem in mathematics.</v>
+
+15
+00:01:11.797 --> 00:01:14.139
+<v Maya>Plus the generalized Riemann hypothesis on top of it.</v>
+
+16
+00:01:14.399 --> 00:01:15.640
+<v Daniel>Yeah, you just throws that in there, too.</v>
+
+17
+00:01:17.361 --> 00:01:23.745
+<v Maya>But, you know, he didn't release a normal manuscript. There are no elegant equations for mathematicians to sit around and read.</v>
+
+18
+00:01:23.926 --> 00:01:27.588
+<v Daniel>No, exactly. He released a 14-part archive of lean machine code.</v>
+
+19
+00:01:27.848 --> 00:01:28.649
+<v Maya>Just machine code.</v>
+
+20
+00:01:29.062 --> 00:01:30.342
+<v Daniel>No human readable text at all.</v>
+
+21
+00:01:30.623 --> 00:01:30.823
+<v Maya>Right.</v>
+
+22
+00:01:31.243 --> 00:01:36.925
+<v Daniel>Which completely shatters our traditional understanding of how mathematical breakthroughs are supposed to happen. Because</v>
+
+23
+00:01:36.945 --> 00:01:41.506
+<v Maya>we're used to a paradigm where a proof is a logical argument designed to convince a human mind.</v>
+
+24
+00:01:41.746 --> 00:01:47.628
+<v Daniel>Exactly. And instead, we now have this verified answer that literally no human mind currently understands.</v>
+
+25
+00:01:48.479 --> 00:01:55.605
+<v Maya>So to figure out how we arrived at this profoundly murky landscape, I feel like we first have to understand the monster they claim to have slain.</v>
+
+26
+00:01:55.765 --> 00:01:56.786
+<v Daniel>The Riemann hypothesis.</v>
+
+27
+00:01:57.106 --> 00:02:03.932
+<v Maya>Right. It's one of the million-dollar clay millennium prize problems. What makes this the undisputed holy grail of math?</v>
+
+28
+00:02:04.452 --> 00:02:10.417
+<v Daniel>Well, we can actually look at Enrico Bombieri's description from the clay millennium text to sort of ground this for everyone.</v>
+
+29
+00:02:10.597 --> 00:02:11.418
+<v Maya>Okay, yeah, let's do that.</v>
+
+30
+00:02:11.918 --> 00:02:18.155
+<v Daniel>It all revolves around something called the Riemann zeta function. And without diving into heavy complex analysis here.</v>
+
+31
+00:02:18.335 --> 00:02:18.876
+<v Maya>Please don't.</v>
+
+32
+00:02:19.036 --> 00:02:24.680
+<v Daniel>Right? I'll spare you. Basically, this function has certain inputs that make its output equal to zero.</v>
+
+33
+00:02:25.501 --> 00:02:25.781
+<v Maya>Okay.</v>
+
+34
+00:02:25.981 --> 00:02:40.412
+<v Daniel>Mathematicians care deeply about what they call the non-trivial zeros. And back in 1859, Bernhard Riemann hypothesized that every single one of these non-trivial zeros lies on a very specific vertical line in the complex plane.</v>
+
+35
+00:02:41.068 --> 00:02:44.692
+<v Maya>And this is a line where the real part of the number is exactly one half, right?</v>
+
+36
+00:02:44.812 --> 00:02:54.763
+<v Daniel>Yes, the critical line. The statement itself is beautifully simple, honestly. The non-trivial zeros of the zeta function all have a real part equal to one half.</v>
+
+37
+00:02:55.705 --> 00:03:00.130
+<v Maya>Okay, let's unpack this because the implications of that are massive, especially for prime numbers, right?</v>
+
+38
+00:03:00.490 --> 00:03:02.192
+<v Daniel>Huge. It's all about the primes.</v>
+
+39
+00:03:02.892 --> 00:03:10.373
+<v Maya>Because primes are like the atomic building blocks of all mathematics. But if you look at them on a number line, they seem totally wild, unpredictable.</v>
+
+40
+00:03:10.613 --> 00:03:11.453
+<v Daniel>Yeah, they look like noise.</v>
+
+41
+00:03:12.194 --> 00:03:18.275
+<v Maya>I always like to think of prime numbers like, you know, weeds growing in this infinitely massive chaotic field.</v>
+
+42
+00:03:18.635 --> 00:03:19.575
+<v Daniel>That's a good way to picture it.</v>
+
+43
+00:03:20.435 --> 00:03:35.125
+<v Maya>And for centuries, mathematicians were walking through this field thinking these weeds were just popping up randomly. But what Riemann essentially argued was, well, I have this incredibly complex map, the zeta function. Right. And I hypothesize that if you look</v>
+
+44
+00:03:35.185 --> 00:03:44.029
+<v Maya>closely at this map, it proves these weeds aren't random at all. They're actually distributed in a highly complex, perfectly balanced, predictable pattern.</v>
+
+45
+00:03:44.309 --> 00:03:55.735
+<v Daniel>Exactly. It completely bounds the error. If all those zeros sit exactly on that one half line, it means the distribution of prime numbers deviates from our best estimates by the absolute minimum amount possible.</v>
+
+46
+00:03:56.115 --> 00:03:59.597
+<v Maya>Wow. So if the hypothesis were false...</v>
+
+47
+00:04:00.253 --> 00:04:03.254
+<v Daniel>If it were false, it would mean our fundamental understanding of numbers is deeply flawed.</v>
+
+48
+00:04:03.694 --> 00:04:04.855
+<v Maya>So the stakes couldn't be higher.</v>
+
+49
+00:04:05.755 --> 00:04:11.778
+<v Daniel>Which brings me to the timeline for this claimed proof, because this is where my skepticism really flared up when I was reading through our sources.</v>
+
+50
+00:04:11.978 --> 00:04:12.398
+<v Maya>Oh, I bet.</v>
+
+51
+00:04:12.838 --> 00:04:22.503
+<v Daniel>Yeah. Because if we rewind just three months ago to August 2026, Claude actually published a different, formally verified paper on this exact topic.</v>
+
+52
+00:04:22.963 --> 00:04:24.003
+<v Maya>Right. The August paper.</v>
+
+53
+00:04:24.263 --> 00:04:28.185
+<v Daniel>They proved that about 67.25 percent of the zeros were on that critical line.</v>
+
+54
+00:04:28.431 --> 00:04:32.533
+<v Maya>But they used a really specific technique for that. Something called the Montgomery-Taylor window.</v>
+
+55
+00:04:32.613 --> 00:04:33.913
+<v Daniel>Yeah, which is a known method.</v>
+
+56
+00:04:34.273 --> 00:04:41.897
+<v Maya>And when Anthropic published that in August, they explicitly stated they did not expect those techniques to lead to a full proof of the hypothesis.</v>
+
+57
+00:04:42.217 --> 00:04:45.318
+<v Daniel>Correct. They thought they had squeezed that method for all it was worth.</v>
+
+58
+00:04:45.842 --> 00:04:55.104
+<v Maya>So how on earth do we jump from hitting a wall at 67% in August to a claimed 100% full proof by mid-November?</v>
+
+59
+00:04:55.224 --> 00:04:56.065
+<v Daniel>I mean, it's wild.</v>
+
+60
+00:04:56.425 --> 00:05:01.646
+<v Maya>90 days to close a gap that humans couldn't close in a century and a half. How does that happen? It's</v>
+
+61
+00:05:01.686 --> 00:05:11.469
+<v Daniel>a brilliant question. And I think it speaks to the sheer unpredictable velocity of AI right now. Because the August paper was a massive achievement, but fundamentally it was an iterative one.</v>
+
+62
+00:05:11.969 --> 00:05:12.629
+<v Maya>Iterative how?</v>
+
+63
+00:05:13.187 --> 00:05:22.757
+<v Daniel>Well, they were using analytic inputs and rank trace inequalities to like slowly push the known boundaries of the zeros. It was essentially brute force scaling of existing human methods.</v>
+
+64
+00:05:22.917 --> 00:05:23.398
+<v Maya>Ah, okay.</v>
+
+65
+00:05:23.999 --> 00:05:34.650
+<v Daniel>But what happened between October 6th and November 16th, which is the timeline of this new sprint, wasn't scaling up. It was a complete lateral leap into a totally different mathematical universe.</v>
+
+66
+00:05:35.085 --> 00:05:38.126
+<v Maya>Alpogue describes himself as the navigator in this sprint, right?</v>
+
+67
+00:05:38.326 --> 00:05:52.908
+<v Daniel>Exactly. He actually spent his student days secretly preparing for this problem. He was familiarizing himself with all these obscure tools. So he abandons the august approach entirely, and he steers Claude toward combining ideas from a toy setting.</v>
+
+68
+00:05:53.488 --> 00:05:57.569
+<v Maya>Okay. Specifically, he points Claude toward a descendant of Stepanov's method.</v>
+
+69
+00:05:57.769 --> 00:06:04.250
+<v Daniel>Yeah. And Stepanov's method is a technique originally used to prove the Riemann hypothesis over function fields.</v>
+
+70
+00:06:04.824 --> 00:06:12.087
+<v Maya>Which is, to oversimplify, a sort of analogous, slightly easier mathematical sandbox compared to our standard integers.</v>
+
+71
+00:06:12.327 --> 00:06:19.129
+<v Daniel>Right. Sandbox is a perfect word for it. But you can't just, you know, copy-paste a solution from a sandbox into the real world.</v>
+
+72
+00:06:19.749 --> 00:06:23.931
+<v Maya>Because Stepanov's method relies on using a divisor with multiplicity, right?</v>
+
+73
+00:06:24.111 --> 00:06:29.913
+<v Daniel>Yes. And finding an equivalent to multiplicity over standard integers is notoriously impossible.</v>
+
+74
+00:06:30.626 --> 00:06:34.830
+<v Maya>I think Alpogae actually compares it to trying to differentiate whole numbers.</v>
+
+75
+00:06:35.430 --> 00:06:38.133
+<v Daniel>Yeah, he says it fundamentally doesn't make sense in that universe.</v>
+
+76
+00:06:38.493 --> 00:06:53.066
+<v Maya>So to bridge that gap, Alpogae feeds Claude this high-level strategy. He suggests they try chaining together these things called theta lifts to mimic that missing multiplicity. Right. And here is where I think we really need to translate for the listener, because theta lifts just sounds like pure</v>
+
+77
+00:06:53.166 --> 00:06:53.547
+<v Maya>jargon.</v>
+
+78
+00:06:53.867 --> 00:06:54.988
+<v Daniel>It absolutely is jargon.</v>
+
+79
+00:06:55.733 --> 00:07:06.475
+<v Maya>Think of a ThetaLift like a highly advanced mathematical translator. Imagine you have this beautiful complex poem, but the language you're trying to translate it into is entirely missing key vowels.</v>
+
+80
+00:07:06.995 --> 00:07:07.695
+<v Daniel>Oh, that's interesting.</v>
+
+81
+00:07:07.815 --> 00:07:17.377
+<v Maya>Yeah. So a ThetaLift allows you to structurally map the problem into a different theoretical space where those tools suddenly exist, solve it there, and then pull the implications back.</v>
+
+82
+00:07:17.978 --> 00:07:26.176
+<v Daniel>That's a really strong way to conceptualize it. So Alpague knew they needed to chain these translators together to build a proxy for multiplicity.</v>
+
+83
+00:07:26.256 --> 00:07:26.496
+<v Maya>Right.</v>
+
+84
+00:07:26.656 --> 00:07:41.611
+<v Daniel>But knowing what to do is very different from knowing how to execute it. When you're analyzing primes, you're typically evaluating something called the von Mengel sum over a length. Let's call it x. Okay, x. To make this translation work without breaking the math, you</v>
+
+85
+00:07:41.631 --> 00:07:43.933
+<v Daniel>have to chain the exact right number of theta lifts.</v>
+
+86
+00:07:44.390 --> 00:07:46.991
+<v Maya>Because if you chain too few, the translation fails.</v>
+
+87
+00:07:47.231 --> 00:07:47.651
+<v Daniel>Exactly.</v>
+
+88
+00:07:47.871 --> 00:07:53.812
+<v Maya>And if you chain too many, the mathematical noise or the error terms explode, and that ruins the proof.</v>
+
+89
+00:07:54.432 --> 00:07:58.533
+<v Daniel>And this is where Alpague admits that Claude just completely took over.</v>
+
+90
+00:07:58.833 --> 00:08:03.254
+<v Maya>Yeah, he writes that Claude flew and danced and sparkled near that finish line.</v>
+
+91
+00:08:03.554 --> 00:08:12.716
+<v Daniel>Which is such poetic language for AI. But it was Claude's suggestion that the length of the chain of theta lifts should be exactly the square root of x.</v>
+
+92
+00:08:13.367 --> 00:08:20.804
+<v Maya>Okay, but why the square root of x? What makes that the magic number that makes mathematicians, as El Pogue put it, fall out of their chairs?</v>
+
+93
+00:08:21.465 --> 00:08:36.400
+<v Daniel>Well, because it's the perfect fulcrum. Trying to balance the main equation and the exploding error terms in this context is like trying to balance a skyscraper on a needle. Wow. By choosing exactly the square root of x, Claude essentially realized</v>
+
+94
+00:08:36.420 --> 00:08:38.562
+<v Daniel>you could geometrically fold the problem in half.</v>
+
+95
+00:08:38.762 --> 00:08:39.142
+<v Maya>Okay.</v>
+
+96
+00:08:39.582 --> 00:08:46.387
+<v Daniel>And that allowed the immense error terms to perfectly cancel themselves out, leaving only the pure mathematical truth behind.</v>
+
+97
+00:08:47.027 --> 00:08:47.908
+<v Maya>That is wild.</v>
+
+98
+00:08:48.386 --> 00:09:01.002
+<v Daniel>Alpog notes, you know, in retrospect, what else could it be? But it's this massive synthetic leap of intuition. A human might take a decade to risk trying that, assuming they ever saw the connection at all.</v>
+
+99
+00:09:01.492 --> 00:09:09.098
+<v Maya>So they sprint through this. They verify it in the lean programming language without any assumptions. And the machine says, proof accepted.</v>
+
+100
+00:09:09.238 --> 00:09:09.399
+<v Daniel>Yep.</v>
+
+101
+00:09:10.199 --> 00:09:23.010
+<v Maya>Which brings us to the catch. Alpoge asks Claude to draft a human-readable written version of what they just did. Oh, yeah. And Claude spits out over 250,000 pages of what Alpoge bluntly calls slop.</v>
+
+102
+00:09:23.810 --> 00:09:29.195
+<v Daniel>A quarter of a million pages of raw, unedited, machine-generated logic.</v>
+
+103
+00:09:29.933 --> 00:09:39.962
+<v Maya>I mean, Elpuga's candor here is actually startling. He admits that parts of his own four-page summary are just paraphrasing Claude's slop and might make zero sense.</v>
+
+104
+00:09:40.202 --> 00:09:41.123
+<v Daniel>He literally says that.</v>
+
+105
+00:09:41.423 --> 00:09:50.851
+<v Maya>He confesses he hasn't even mastered the automorphic forms involved in the proof yet. He fully expects that once the community digests this, massively shorter, elegant proofs will follow.</v>
+
+106
+00:09:50.991 --> 00:09:51.451
+<v Daniel>Oh, for sure.</v>
+
+107
+00:09:51.652 --> 00:09:54.414
+<v Maya>But for now, he's only releasing the 14-part code archive.</v>
+
+108
+00:09:54.763 --> 00:10:00.384
+<v Daniel>because he views this current release as just planting the flag. The code runs. The machine is satisfied.</v>
+
+109
+00:10:00.717 --> 00:10:05.979
+<v Maya>Okay, but let me stop you there because we have to talk about the optics of this. I am putting on my cynics hat right now.</v>
+
+110
+00:10:06.219 --> 00:10:06.980
+<v Daniel>I knew this was coming.</v>
+
+111
+00:10:07.160 --> 00:10:21.125
+<v Maya>You have an anthropic researcher releasing an unreadable machine code proof claiming to solve the biggest problem in mathematics, and he drops it on a Friday. Right. Now look at the wider context from the Nature News story in our stack. Anthropic just had a multi-trillion dollar IPO days prior.</v>
+
+112
+00:10:21.385 --> 00:10:21.886
+<v Daniel>Yes, they did.</v>
+
+113
+00:10:22.306 --> 00:10:30.229
+<v Maya>On Thursday, November 19th, their stock valuation took a noticeable dip. And then the very next day, November 20th, this world-shattering news drops.</v>
+
+114
+00:10:30.369 --> 00:10:31.369
+<v Daniel>That's quite the coincidence.</v>
+
+115
+00:10:31.769 --> 00:10:39.371
+<v Maya>Alpaga must know how this looks. Does he have any defense that this was purely a mathematical timing and not a coordinated financial PR stunt?</v>
+
+116
+00:10:39.711 --> 00:10:44.412
+<v Daniel>He actually tackles that head on in his note. He calls it an obvious cynical view.</v>
+
+117
+00:10:44.652 --> 00:10:44.952
+<v Maya>OK.</v>
+
+118
+00:10:45.653 --> 00:10:53.274
+<v Daniel>But he insists the timeline is strictly tied to the math. According to his account, the final machine verification cleared late Sunday night.</v>
+
+119
+00:10:53.454 --> 00:10:53.655
+<v Maya>Right.</v>
+
+120
+00:10:54.195 --> 00:10:59.716
+<v Daniel>And he spent the week reaching out to leadership and trusted mathematicians trying to figure out how to announce it responsibly.</v>
+
+121
+00:11:00.204 --> 00:11:01.604
+<v Maya>But then he just drops it on Friday.</v>
+
+122
+00:11:02.405 --> 00:11:14.528
+<v Daniel>He claims he is unilaterally responsible for the Friday release, simply because he couldn't stomach keeping the secret a day longer. He said the psychological burden of sitting on the solution to the Riemann hypothesis was just too heavy.</v>
+
+123
+00:11:15.009 --> 00:11:21.951
+<v Maya>I mean, I can sympathize with the psychological burden, but this forces the entire mathematical community into a highly uncomfortable corner.</v>
+
+124
+00:11:22.151 --> 00:11:22.731
+<v Daniel>It really does.</v>
+
+125
+00:11:22.951 --> 00:11:29.653
+<v Maya>We are being asked to trust a machine-checked proof that no human can read. How do we even know the computer isn't hallucinating?</v>
+
+126
+00:11:30.185 --> 00:11:40.473
+<v Daniel>Well, we have a great framework for this exact tension in our substack. There's an essay by the mathematician Thomas Hales, which he posted on Terence Tao's blog last month in October 2026.</v>
+
+127
+00:11:41.073 --> 00:11:43.435
+<v Maya>Right. Hales is a pioneer in formalizing math.</v>
+
+128
+00:11:43.816 --> 00:11:50.421
+<v Daniel>Exactly. And he warns that a proven lean should never be blindly believed just because the software says success.</v>
+
+129
+00:11:50.821 --> 00:11:51.962
+<v Maya>Because software has bugs.</v>
+
+130
+00:11:52.719 --> 00:12:01.028
+<v Daniel>Software has bugs. The core program that checks the logic is called the kernel. And Hales points to the summer of soundness bugs earlier in 2026. Oh,</v>
+
+131
+00:12:01.188 --> 00:12:02.590
+<v Maya>I remember reading about that.</v>
+
+132
+00:12:02.890 --> 00:12:10.078
+<v Daniel>Yeah. Foundational logic errors in lean kernels actually had to be patched. So the kernel itself must be pristine.</v>
+
+133
+00:12:10.098 --> 00:12:11.039
+<v Maya>Okay. Okay.</v>
+
+134
+00:12:11.717 --> 00:12:18.498
+<v Daniel>But even if the kernel is flawless, Hales warns that humans must rigorously audit something called statement fidelity.</v>
+
+135
+00:12:18.738 --> 00:12:24.000
+<v Maya>Statement fidelity. This is the crucial concept here. Let's use an analogy for the listener.</v>
+
+136
+00:12:24.100 --> 00:12:24.460
+<v Daniel>Go for it.</v>
+
+137
+00:12:24.840 --> 00:12:29.821
+<v Maya>Imagine you have a flawless, entirely literal-minded genie. That's the lean prover.</v>
+
+138
+00:12:29.981 --> 00:12:30.161
+<v Daniel>Right.</v>
+
+139
+00:12:30.521 --> 00:12:35.962
+<v Maya>You hand the genie a piece of paper asking for a million bucks. You are obviously expecting a million dollars.</v>
+
+140
+00:12:36.022 --> 00:12:36.422
+<v Daniel>Naturally.</v>
+
+141
+00:12:36.882 --> 00:12:40.863
+<v Maya>But the genie executes your request flawlessly and hands you a million male deer.</v>
+
+142
+00:12:41.183 --> 00:12:42.404
+<v Daniel>a million actual bucks.</v>
+
+143
+00:12:42.664 --> 00:12:55.831
+<v Maya>Exactly. The logic was perfectly executed, but your definition of the terms was slightly off. So if Alpoge and Claude defined the Riemann hypothesis in their code in a way that was even slightly misaligned with standard mathematics?</v>
+
+144
+00:12:56.351 --> 00:13:00.794
+<v Daniel>The AI might have flawlessly proven a theorem, but it's the wrong theorem.</v>
+
+145
+00:13:01.157 --> 00:13:11.339
+<v Maya>Right. Which is why the skeptic's first target is always the definitions. What would a skeptic check first? How do we know Claude didn't move the goalposts to make the problem solvable?</v>
+
+146
+00:13:11.739 --> 00:13:20.640
+<v Daniel>Well, the ultimate defense against that is the groundwork laid by David Leffler and Michael Stoll. We have their 2025 paper from the Annals of Formalized Mathematics.</v>
+
+147
+00:13:21.180 --> 00:13:21.941
+<v Maya>Okay, what did they do?</v>
+
+148
+00:13:22.461 --> 00:13:29.542
+<v Daniel>They spent years meticulously formalizing the theory of zeta functions into Lean's shared library, which is called MathLib.</v>
+
+149
+00:13:29.902 --> 00:13:30.362
+<v Maya>Ah, okay.</v>
+
+150
+00:13:31.218 --> 00:13:44.407
+<v Daniel>They had already formalized the exact community-vetted statement of the Riemann hypothesis, which is that all zeros of zeta, other than the trivial ones at negative even integers, have a real part of one half.</v>
+
+151
+00:13:45.268 --> 00:13:48.851
+<v Maya>So the definitions were locked in before Claude ever even touched the problem.</v>
+
+152
+00:13:49.131 --> 00:13:56.257
+<v Daniel>Exactly. Okay. By a neutral third party. And Leffler and Stoll actually share a cautionary tale in their 2025 paper about this.</v>
+
+153
+00:13:56.418 --> 00:13:56.758
+<v Maya>Oh, really?</v>
+
+154
+00:13:56.998 --> 00:14:03.684
+<v Daniel>Yeah. An earlier version of their code accidentally assigned a junk value to a specific part of the function outside its domain.</v>
+
+155
+00:14:03.904 --> 00:14:04.144
+<v Maya>Oops.</v>
+
+156
+00:14:04.865 --> 00:14:11.831
+<v Daniel>And if that was left unchecked, that tiny error could have accidentally made the Riemann hypothesis trivially false in the software.</v>
+
+157
+00:14:12.471 --> 00:14:13.152
+<v Maya>That's terrifying.</v>
+
+158
+00:14:13.831 --> 00:14:25.761
+<v Daniel>So they rigorously patched it to ensure absolute fidelity to human mathematics. Because of that 2025 groundwork, Alpogee and Claude were forced to prove the community's definition, not their own.</v>
+
+159
+00:14:26.690 --> 00:14:32.514
+<v Maya>Okay, so the definitions hold water, but I want to be extremely careful here about what is and isn't verified right now.</v>
+
+160
+00:14:32.754 --> 00:14:33.134
+<v Daniel>Absolutely.</v>
+
+161
+00:14:33.355 --> 00:14:39.079
+<v Maya>Because as of today, November 21st, nobody has checked the argument by reading it.</v>
+
+162
+00:14:39.399 --> 00:14:39.659
+<v Daniel>No one.</v>
+
+163
+00:14:40.199 --> 00:14:50.566
+<v Maya>The single piece of outside verification we have comes from a Scientific American report, which states that MIT mathematician Andrew Sutherland independently compiled Alpoge's lean code.</v>
+
+164
+00:14:50.766 --> 00:14:52.868
+<v Daniel>Right. It compiles. It runs.</v>
+
+165
+00:14:53.211 --> 00:14:56.994
+<v Maya>But a machine verifying machine code is very different from human comprehension.</v>
+
+166
+00:14:57.415 --> 00:15:09.025
+<v Daniel>And that gap between machine verification and human comprehension is exactly what's driving the visceral reactions we're seeing. The Nature piece by David Kastelvecki captures this perfectly.</v>
+
+167
+00:15:09.326 --> 00:15:15.131
+<v Maya>It's a complete spectrum of reactions. I mean, you have James Maynard, a Fields medalist, who is incredibly optimistic.</v>
+
+168
+00:15:15.291 --> 00:15:19.735
+<v Daniel>Yeah, he calls it clearly a historic milestone and suspects the proof will turn out to be correct.</v>
+
+169
+00:15:20.143 --> 00:15:24.826
+<v Maya>But then on the other side, you have Andrew Granville at the University of Montreal, who is visibly frustrated.</v>
+
+170
+00:15:24.986 --> 00:15:26.227
+<v Daniel>Oh, he's not happy.</v>
+
+171
+00:15:26.427 --> 00:15:26.607
+<v Maya>No.</v>
+
+172
+00:15:27.367 --> 00:15:28.968
+<v Daniel>He called the release garbled.</v>
+
+173
+00:15:29.228 --> 00:15:41.676
+<v Maya>He argued that Alpoga should have waited until he had a clear human readable write up. And then Tristan Buckmaster at NYU warned that this code base is crazily complicated and will take a massive amount of time to untangle.</v>
+
+174
+00:15:41.976 --> 00:15:44.037
+<v Daniel>It's just polarizing the entire community.</v>
+
+175
+00:15:44.503 --> 00:15:53.847
+<v Maya>And to add to the sheer chaos of yesterday, the Nature article notes that on the exact same day, Stanford mathematician Ravi Vakil posted a rival draft proof.</v>
+
+176
+00:15:54.148 --> 00:15:55.588
+<v Daniel>I know, you can't make this up.</v>
+
+177
+00:15:55.748 --> 00:16:05.833
+<v Maya>An entirely human-written draft proof of the Riemann hypothesis by Alessandro Maria Masullo. It's like the moment the anthropic news leaked, everyone just scrambled to empty their drafts folder.</v>
+
+178
+00:16:06.317 --> 00:16:20.325
+<v Daniel>The community isn't an absolute frenzy. But, you know, setting the rival proof aside, if we zoom out and just look at the implications of Alpoga and Claude's code archive, we are standing at the threshold of a fundamental shift in science.</v>
+
+179
+00:16:20.585 --> 00:16:30.731
+<v Maya>Because for millennia, understanding and verification were the exact same process. Right. You couldn't verify a proof without understanding it. But now those two concepts are totally divorced.</v>
+
+180
+00:16:31.447 --> 00:16:37.969
+<v Daniel>We are entering an era where profound mathematical truths arrive long before human understanding catches up.</v>
+
+181
+00:16:38.489 --> 00:16:40.930
+<v Maya>Which raises complex questions about credit, doesn't it?</v>
+
+182
+00:16:41.130 --> 00:16:51.672
+<v Daniel>Oh, definitely. If Alpogier acted as the navigator, but Claude made the intuitive leap to chain the square root of X theta lifts, a leap that ultimately solved the problem, who gets the credit?</v>
+
+183
+00:16:52.573 --> 00:16:55.534
+<v Maya>And how does a community peer review something it cannot read?</v>
+
+184
+00:16:55.814 --> 00:16:57.254
+<v Daniel>It's completely uncharted territory.</v>
+
+185
+00:16:57.900 --> 00:17:05.866
+<v Maya>But Alpogée seems to view this not as an ending, but a beginning. In his note, he calls this moment one dawn across science of something far greater.</v>
+
+186
+00:17:06.106 --> 00:17:06.627
+<v Daniel>It is a dawn.</v>
+
+187
+00:17:07.227 --> 00:17:10.349
+<v Maya>But we really have to maintain a careful, balanced tone here.</v>
+
+188
+00:17:10.369 --> 00:17:10.790
+<v Daniel>Yes, we do.</v>
+
+189
+00:17:10.970 --> 00:17:22.178
+<v Maya>Until the mathematical community painstakingly reverse-engineers this lean code, masters the automorphic forms involved, and actually writes a human-readable translation, it remains a claimed proof.</v>
+
+190
+00:17:22.499 --> 00:17:25.721
+<v Daniel>Exactly. A claimed proof. A dawn, but a foggy one.</v>
+
+191
+00:17:25.841 --> 00:17:40.027
+<v Maya>And that leaves you, the listener, with a final thought to mull over today. For all of human history, the glory of science has been the act of exploration. Venturing into the dark with a lantern, slowly piecing together the clues, and finally discovering the answer.</v>
+
+192
+00:17:40.327 --> 00:17:41.227
+<v Daniel>The eureka moment.</v>
+
+193
+00:17:41.647 --> 00:17:55.533
+<v Maya>Right. But if the ultimate answers to our universe's greatest mysteries are increasingly discovered by machines in a matter of weeks and delivered to us in massive, cold archives of code, does the joy of science fundamentally shift?</v>
+
+194
+00:17:55.818 --> 00:17:56.681
+<v Daniel>That's a deep question.</v>
+
+195
+00:17:57.022 --> 00:18:06.208
+<v Maya>Do we stop being the explorers who find the answers and instead become the archaeologists, spending our lives simply trying to comprehend the profound artifacts we've already been handed?</v>
+
+196
+00:18:06.669 --> 00:18:10.420
+<v Daniel>It's a fascinating paradigm shift for a totally new era of mathematics.</v>
+
+197
+00:18:10.841 --> 00:18:14.511
+<v Maya>It really is. Thank you for joining us on this deep dive. We'll see you next time.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2026 07:46:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 07:50:41 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2280,5 +2280,24 @@ Reference: Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., &
       <pubDate>Sat, 21 Nov 2026 07:21:36 +0000</pubDate>
       <itunes:episode>119</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/119%20-%20When%20Agents%20Improve%20Themselves%20Without%20A%20Referee.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>120 - When Claude Claims The Riemann Hypothesis</title>
+      <description>A Claude-Assisted Proof of the Riemann Hypothesis (November 2026)
+
+In this episode we unpack a four page note posted on 20 November 2026 by Levent Alpöge, a number theorist at Anthropic on leave from Harvard, who writes that working with Claude he has discovered a proof of the Riemann Hypothesis, the most famous open problem in mathematics, and of the Generalized Riemann Hypothesis too. The unusual part is the form: there is no readable paper yet, only a complete formalization in the Lean proof assistant, which Alpöge says he and Claude produced without assumptions.
+
+We walk through what the note actually describes, a descendant of Stepanov's function field method in which chains of theta lifts supply the missing multiplicity over the integers, with Claude proposing a chain of length the square root of X, and a timeline from 6 October to 16 November 2026. We set it against Claude's August 2026 result that more than two thirds of the zeta zeros are simple and on the critical line, Bombieri's Clay Millennium Prize statement of the problem, Loeffler and Stoll's formal RiemannHypothesis statement in Mathlib, and Thomas Hales's warning that a Lean proof needs both a kernel check and a human audit of statement fidelity. We cover the reactions reported by Nature, from James Maynard's cautious optimism to Andrew Granville's objection that the release is garbled, MIT's Andrew Sutherland independently compiling the code, and Alessandro Maria Masullo's rival, entirely human draft posted the same day, and close on what it means for mathematics when a machine-checked proof arrives before anyone understands it.
+
+Reference: Alpöge, L. (2026). [Remark on a proof of the Riemann Hypothesis with Claude]. Author's website, 20 November 2026. https://alpo.ge/remark.pdf
+Reference: Claude (Anthropic). (2026). More than two thirds of the zeros of the Riemann zeta function are simple and on the critical line. Anthropic, 10 August 2026. https://www.anthropic.com/research/riemann-zeta
+Reference: Loeffler, D., &amp; Stoll, M. (2025). Formalizing zeta and L-functions in Lean. Annals of Formalized Mathematics, 1, 43–56. arXiv:2503.00959. https://doi.org/10.46298/afm.15328
+Reference: Hales, T. (2026). What mathematicians should know about the Lean Theorem Prover: questions of reliability and AI. Guest post on Terence Tao's blog, 9 October 2026.
+Reference: Bombieri, E. (2000). Problems of the Millennium: the Riemann Hypothesis. Clay Mathematics Institute. https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf
+Reference: Castelvecchi, D. (2026). Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis. Nature (news), 20 November 2026. https://doi.org/10.1038/d41586-026-03812-7</description>
+      <guid isPermaLink="false">5267f28d4115e25208aa1a59498748c4a743eb20</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/120%20-%20When%20Claude%20Claims%20The%20Riemann%20Hypothesis.m4a" length="13351230" type="audio/mp4" />
+      <pubDate>Sun, 22 Nov 2026 07:17:50 +0000</pubDate>
+      <itunes:episode>120</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/120%20-%20When%20Claude%20Claims%20The%20Riemann%20Hypothesis.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
