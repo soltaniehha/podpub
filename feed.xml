@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2026 07:50:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 08:01:13 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2299,5 +2299,24 @@ Reference: Castelvecchi, D. (2026). Mathematicians astounded by AI and human-wri
       <pubDate>Sun, 22 Nov 2026 07:17:50 +0000</pubDate>
       <itunes:episode>120</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/120%20-%20When%20Claude%20Claims%20The%20Riemann%20Hypothesis.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>121 - When AI Agents Thin Out The Junior Job Ads</title>
+      <description>The Rise of Agents and the Human Labor Market (November 2026)
+
+In this episode we unpack a new working paper by Nicola Borri, Anton Cheremukhin, Yukun Liu and Aleh Tsyvinski (Luiss, the Dallas Fed, Rochester and Yale), posted to arXiv on 20 November 2026, which offers what it calls the first economy-wide, cross-model evidence on how AI agents affect labor demand. The finding: public firms whose stock prices move most with the growth of agentic AI use go on to post noticeably fewer jobs, and the cut falls on junior roles, not senior ones.
+
+We walk through the data, about two quadrillion tokens of paid AI use across more than 400 models from OpenRouter matched to 34.8 million Lightcast job postings, and the agentic share of tokens climbing from under 9 percent to 76.8 percent after the release of Claude Code 2.0. We explain the market-implied "agentic beta", its validation against SEC filings and earnings calls, and the results: 2.11 percent lower posting growth over six months per standard deviation of exposure, 4.73 percent in the Claude Code 2.0 event study, concentrated in non-senior jobs and jobs asking under six years of experience, with no drop in posted wages. We set it against Acemoglu, Autor, Hazell and Restrepo's vacancy evidence, the occupational exposure measures of Eloundou et al. and Anthropic, and the junior-worker findings of Brynjolfsson, Chandar and Chen and of Hosseini and Lichtinger, and close on whether a stock-market measure can identify substitution, why fewer postings are not yet fewer jobs, and what it means for entry-level careers.
+
+Reference: Borri, N., Cheremukhin, A., Liu, Y., &amp; Tsyvinski, A. (2026). The Rise of Agents and the Human Labor Market. arXiv:2611.27210. https://arxiv.org/abs/2611.27210
+Reference: Acemoglu, D., Autor, D., Hazell, J., &amp; Restrepo, P. (2022). Artificial Intelligence and Jobs: Evidence from Online Vacancies. Journal of Labor Economics, 40(S1), S293–S340. https://doi.org/10.1086/718327
+Reference: Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). GPTs are GPTs: Labor market impact potential of large language models. Science, 384(6702), 1306–1308. arXiv:2303.10130. https://arxiv.org/abs/2303.10130
+Reference: Massenkoff, M., &amp; McCrory, P. (2026). Labor market impacts of AI: A new measure and early evidence. Anthropic. https://www.anthropic.com/research/labor-market-impacts
+Reference: Brynjolfsson, E., Chandar, B., &amp; Chen, R. (2026). Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence. Stanford Digital Economy Lab. https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/
+Reference: Hosseini, S. M., &amp; Lichtinger, G. (2026). Generative AI as Seniority-Biased Technological Change: Evidence from U.S. Résumé and Job Posting Data. Working paper. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555</description>
+      <guid isPermaLink="false">010e68b90e5d039becaf092b127b1d550cbd217c</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/121%20-%20When%20AI%20Agents%20Thin%20Out%20The%20Junior%20Job%20Ads.m4a" length="15860582" type="audio/mp4" />
+      <pubDate>Mon, 23 Nov 2026 07:19:12 +0000</pubDate>
+      <itunes:episode>121</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/121%20-%20When%20AI%20Agents%20Thin%20Out%20The%20Junior%20Job%20Ads.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>

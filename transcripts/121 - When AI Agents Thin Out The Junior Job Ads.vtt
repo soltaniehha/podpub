@@ -1,0 +1,649 @@
+WEBVTT
+
+1
+00:00:00.111 --> 00:00:03.713
+<v Daniel>For centuries, you know, the way you learned to trade was always through an apprenticeship.</v>
+
+2
+00:00:04.113 --> 00:00:06.034
+<v Maya>Right. A very hands-on kind of thing.</v>
+
+3
+00:00:06.074 --> 00:00:16.599
+<v Daniel>Exactly. It was this deeply physical, observable process. You'd sweep the floors of the shop. You'd watch the master carpenter carve the wood. You know, you hand them the tools when they ask.</v>
+
+4
+00:00:16.679 --> 00:00:17.440
+<v Maya>You do the grunt work.</v>
+
+5
+00:00:17.680 --> 00:00:25.524
+<v Daniel>Yeah, you do the grunt work. And then eventually you get to carve a simple table leg yourself. The progression of your skills was just entirely visible.</v>
+
+6
+00:00:25.923 --> 00:00:35.525
+<v Maya>Because the pipeline of human capital used to be, well, perfectly linear. You put in the time doing the basics and the reward was this gradual transfer of tacit knowledge.</v>
+
+7
+00:00:36.125 --> 00:00:50.968
+<v Daniel>But imagine if just overnight that master carpenter buys a machine that flawlessly executes all those entry-level tasks. Oh, wow. Right? Yeah. The sweeping, the tool fetching, the basic carving, it's entirely automated now. So the apprentice is just</v>
+
+8
+00:00:51.008 --> 00:00:52.748
+<v Daniel>left standing there with absolutely nothing to do.</v>
+
+9
+00:00:53.129 --> 00:00:56.791
+<v Maya>And the master is probably thrilled, right? Because production is up, costs are down.</v>
+
+10
+00:00:57.091 --> 00:01:10.279
+<v Daniel>Exactly. But 10 years from now, you have to wonder where the new master carpenters are actually going to come from. And we are watching this exact tension unfold right now, not in a woodworking shop, but across the entire global knowledge economy.</v>
+
+11
+00:01:10.299 --> 00:01:11.240
+<v Maya>It's happening everywhere.</v>
+
+12
+00:01:11.400 --> 00:01:23.821
+<v Daniel>It is. So our mission for this deep dive is to extract the most vital insights from... a stack of economic research to understand exactly how artificial intelligence is shifting human labor out in the real world.</v>
+
+13
+00:01:24.348 --> 00:01:31.450
+<v Maya>And our primary focal point today is just a fascinating brand new working paper. I mean, it hasn't even been peer reviewed yet.</v>
+
+14
+00:01:31.590 --> 00:01:32.470
+<v Daniel>Hot off the presses.</v>
+
+15
+00:01:32.670 --> 00:01:46.353
+<v Maya>Literally. It was published just two days ago on Friday, November 20th, 2026. It's titled The Rise of Agents and the Human Labor Market. And it comes from this great team of researchers at Lewis University, the Dallas Fed, Rochester and Yale.</v>
+
+16
+00:01:46.453 --> 00:01:46.993
+<v Daniel>Go ahead to line up.</v>
+
+17
+00:01:47.273 --> 00:02:01.816
+<v Maya>Yeah. And they are presenting what they claim is the very first economy wide evidence on how specifically agentic A.I. affects labor demand. We will weave in five older background studies to just to trace how the research got here. But we are</v>
+
+18
+00:02:01.896 --> 00:02:04.437
+<v Maya>primarily going to be swimming in the waters of this new paper.</v>
+
+19
+00:02:04.557 --> 00:02:13.039
+<v Daniel>OK, let's unpack this, because before we can even begin to measure what A.I. is doing to the job market, we have to understand what A.I. is actually doing out in the wild.</v>
+
+20
+00:02:13.239 --> 00:02:13.519
+<v Maya>Right.</v>
+
+21
+00:02:13.919 --> 00:02:21.688
+<v Daniel>And the data these researchers got their hands on is It's frankly mind-boggling. They secured this proprietary data set from OpenRouter.</v>
+
+22
+00:02:21.989 --> 00:02:22.569
+<v Maya>Which is huge.</v>
+
+23
+00:02:22.789 --> 00:02:36.153
+<v Daniel>Yeah. For you listening, OpenRouter is essentially an AI inference provider. Think of it as a massive central switchboard that connects millions of developers and users to hundreds of different AI models, all in one place.</v>
+
+24
+00:02:36.516 --> 00:02:46.307
+<v Maya>the sheer scale of what they analyzed here is unprecedented for this type of research. We are talking about two quadrillion tokens of realized paid AI consumption.</v>
+
+25
+00:02:46.447 --> 00:02:47.368
+<v Daniel>Two quadrillion.</v>
+
+26
+00:02:47.468 --> 00:02:55.978
+<v Maya>Yeah, two quadrillion. And this completely bypasses that old methodology of sending out surveys and just asking companies if they plan to use AI.</v>
+
+27
+00:02:56.198 --> 00:02:59.040
+<v Daniel>Which, you know, people just lie or guess on those anyway.</v>
+
+28
+00:02:59.140 --> 00:03:14.069
+<v Maya>Exactly. This is a ledger of actual paid usage, spanning more than 400 different models. It includes the major closed-weight models like OpenAI's GPT, Anthropix Cloud, Google's Gemini, alongside the open-weight alternatives like Meta's Llama,</v>
+
+29
+00:03:14.389 --> 00:03:15.570
+<v Maya>DeepSeq, and Quinn.</v>
+
+30
+00:03:15.956 --> 00:03:26.260
+<v Daniel>And just for context, this data set covers about 2% of total global token consumption. But, you know, the total volume isn't even the real headline here.</v>
+
+31
+00:03:26.521 --> 00:03:27.141
+<v Maya>No, it's not.</v>
+
+32
+00:03:27.301 --> 00:03:41.408
+<v Daniel>The breakthrough is the composition of that data. Out of those two quadrillion tokens, 1.1 quadrillion are what the authors classify as agentic tokens. Let's make sure we define that clearly because agentic is thrown around</v>
+
+33
+00:03:41.808 --> 00:03:42.608
+<v Daniel>constantly these days.</v>
+
+34
+00:03:42.688 --> 00:03:57.413
+<v Maya>Oh, absolutely. So a token is just a fragment of a word that the AI processes, right? Right. But an agentic token is a piece of data in the model's response that ends up calling an external tool. It is the fundamental difference between text generation</v>
+
+35
+00:03:57.573 --> 00:03:58.914
+<v Maya>and autonomous action.</v>
+
+36
+00:03:59.354 --> 00:04:00.335
+<v Daniel>It's actually doing something.</v>
+
+37
+00:04:00.495 --> 00:04:15.346
+<v Maya>Exactly. When an AI generates a standard token, it's essentially just predicting the next word in a sentence based on its training data. When it generates an agentic token, it is writing a string of code that triggers an API. It is reaching outside of its own neural</v>
+
+38
+00:04:15.426 --> 00:04:21.170
+<v Maya>network to query a live database or execute a Python script or read and write a file on a local server.</v>
+
+39
+00:04:21.735 --> 00:04:34.569
+<v Daniel>So the best way to visualize this, I think, is comparing a chatbot to a digital intern. Like the early 2024 era of AI gave us chatbots, which are basically highly educated encyclopedias sitting on your desk.</v>
+
+40
+00:04:34.629 --> 00:04:35.530
+<v Maya>That's a great analogy.</v>
+
+41
+00:04:35.750 --> 00:04:50.624
+<v Daniel>Right. You can ask the encyclopedia for a recipe and it will talk to you, but it cannot physically go to the grocery store. An agent is the digital intern. You tell it to analyze last quarter's sales, and it autonomously opens Excel, runs the SQL query,</v>
+
+42
+00:04:51.125 --> 00:04:54.928
+<v Daniel>parses the data, and drafts the executive summary without you holding its hand.</v>
+
+43
+00:04:55.329 --> 00:05:07.039
+<v Maya>And what's fascinating here is the specific timeline the authors traced within that open router data. They pinpointed the exact moment the ecosystem evolved from passive chatting to that autonomous tool calling.</v>
+
+44
+00:05:07.419 --> 00:05:08.460
+<v Daniel>Oh, right, the jump in the data.</v>
+
+45
+00:05:08.839 --> 00:05:17.145
+<v Maya>Yeah. If you look at the period from June to September of 2025, the agentic share of tokens was sitting very quietly around 8% to 9%.</v>
+
+46
+00:05:17.665 --> 00:05:22.288
+<v Daniel>Just a complete blip. Exactly. Almost entirely experimental usage by developers at that point.</v>
+
+47
+00:05:22.668 --> 00:05:37.458
+<v Maya>Exactly. But then came September 29, 2025. Anthropic released Claude Code 2.0 alongside Claude Sonnet 4.5. And this release represented a massive leap in how reliably an AI could handle complex multi-step tool use.</v>
+
+48
+00:05:38.272 --> 00:05:39.033
+<v Daniel>It actually worked.</v>
+
+49
+00:05:39.613 --> 00:05:54.364
+<v Maya>It did. And the open router data shows an absolute explosion following that date. The agentic share rose every single month. By December 2025, it hit 21.5%. By the spring of 2026, it passed the halfway mark,</v>
+
+50
+00:05:54.464 --> 00:06:01.089
+<v Maya>meaning more than 50% of all paid usage was agentic. Wow. And by September 2026, it reached a staggering 76.8%.</v>
+
+51
+00:06:02.630 --> 00:06:17.364
+<v Daniel>Wait, almost 77%? Over three quarters of all paid AI usage on this massive platform shifted from conversational text to digital interns actually executing tasks. That is wild. We have moved from asking for advice to</v>
+
+52
+00:06:17.425 --> 00:06:31.173
+<v Daniel>delegating actual work. But knowing the technology evolved is really only the first step here. To figure out if these digital interns were actually replacing human labor, the researchers needed a reliable way to measure which specific companies were adopting them.</v>
+
+53
+00:06:31.193 --> 00:06:32.614
+<v Maya>Right. The exposure problem.</v>
+
+54
+00:06:32.674 --> 00:06:41.059
+<v Daniel>Yeah. Which brings us to what I find to be the most clever yet maybe heavily debatable mechanism in the paper, the agentic beta.</v>
+
+55
+00:06:41.418 --> 00:06:55.682
+<v Maya>Oh, this is such a cool metric. The agentic beta is a market implied exposure metric. Basically, the researchers calculated how much a given firm's weekly stock return moved in tandem with the weekly growth in aggregate agentic token consumption.</v>
+
+56
+00:06:55.992 --> 00:07:10.547
+<v Daniel>OK, wait, let me just break that down for a second. So if the global usage of AI agents spikes dramatically in a given week and a specific company's stock price constantly spikes at the exact same time, the market is essentially signaling that this specific company stands to benefit massively</v>
+
+57
+00:07:11.108 --> 00:07:12.029
+<v Daniel>from AI agents.</v>
+
+58
+00:07:12.269 --> 00:07:26.625
+<v Maya>Exactly. They have a high agentic beta. It builds on a long tradition in financial economics, specifically the framework developed by Kogan and Papanikolaou, which uses stock market co-movement to measure a company's exposure to technological shocks.</v>
+
+59
+00:07:27.026 --> 00:07:27.266
+<v Daniel>Okay.</v>
+
+60
+00:07:27.933 --> 00:07:42.887
+<v Maya>The stock market acts as this giant decentralized supercomputer. Millions of investors are constantly processing news, earnings reports, supply chain rumors, you know, to place financial bets on which firms will see their profit margins transformed by these agents.</v>
+
+61
+00:07:43.563 --> 00:07:54.830
+<v Daniel>See, I have to challenge this methodology, though. Is a stock market beta a true measure of actual on-the-ground technological deployment? I mean, we have seen massive market bubbles before.</v>
+
+62
+00:07:54.950 --> 00:07:55.471
+<v Maya>Sure, we have.</v>
+
+63
+00:07:55.771 --> 00:08:05.617
+<v Daniel>Investors hear a company mention AI on an earnings call. The stock goes parabolic. And the CEO might just proactively freeze human hiring just to lean into the hype and please Wall Street.</v>
+
+64
+00:08:06.361 --> 00:08:08.142
+<v Maya>Right. You're saying it's just expectations?</v>
+
+65
+00:08:08.262 --> 00:08:13.784
+<v Daniel>Yeah. That is fundamentally different from a digital intern actively replacing a human worker's daily output.</v>
+
+66
+00:08:14.264 --> 00:08:25.129
+<v Maya>Well, the authors fully anticipated that skepticism. To prove the beta wasn't just capturing detached market noise or speculative hype, they cross-referenced it with actual corporate behavior.</v>
+
+67
+00:08:25.729 --> 00:08:26.009
+<v Daniel>How so?</v>
+
+68
+00:08:26.473 --> 00:08:41.347
+<v Maya>They analyzed the text of SEC filings, the 10-Ks and 10-Qs, and the earnings call transcripts. And they found that firms with higher agentic betas actually went on to detail their AI agent deployment significantly more in their subsequent filings over the next six months.</v>
+
+69
+00:08:41.995 --> 00:08:56.759
+<v Daniel>Okay. And the numbers do back that up beautifully. A firm with a significantly higher than average agentic beta had a 1.39 percentage point higher chance of explicitly mentioning agentic AI in their SEC filings over the following six</v>
+
+70
+00:08:56.799 --> 00:08:57.019
+<v Daniel>months.</v>
+
+71
+00:08:57.259 --> 00:08:57.499
+<v Maya>Right.</v>
+
+72
+00:08:58.179 --> 00:09:11.982
+<v Daniel>And while 1.39% sounds tiny to you listening, you have to consider that the average chance of any firm mentioning it at all was only about 5.5%. So that increase represents roughly a quarter of the entire sample mean.</v>
+
+73
+00:09:12.382 --> 00:09:20.768
+<v Maya>Exactly. The stock market wasn't just guessing. It was accurately predicting which companies were actually integrating these digital interns into their operations.</v>
+
+74
+00:09:20.868 --> 00:09:21.608
+<v Daniel>It's pretty impressive.</v>
+
+75
+00:09:21.728 --> 00:09:33.515
+<v Maya>It is. And this firm level approach is a massive paradigm shift in how labor economists are studying artificial intelligence. We can briefly pull in our background sources here to see the contrast.</v>
+
+76
+00:09:33.575 --> 00:09:34.196
+<v Daniel>Yeah, let's do that.</v>
+
+77
+00:09:34.837 --> 00:09:49.800
+<v Maya>If you look at foundational papers like the Science 2024 study by Elundu and colleagues or the March 2026 paper by Massinkoff and McCorry over at Anthropic, they focused heavily on occupational exposure. They analyzed the list of job tasks and</v>
+
+78
+00:09:49.840 --> 00:09:53.401
+<v Maya>determined that, say, accountants are highly exposed while roofers are not.</v>
+
+79
+00:09:53.841 --> 00:10:04.043
+<v Daniel>But, you know, knowing an occupation is exposed doesn't tell you if a specific accounting firm in Ohio is actually buying the software. The occupational approach is very theoretical.</v>
+
+80
+00:10:04.354 --> 00:10:19.022
+<v Maya>Exactly. This new Lewis and Yale paper shifts the lens entirely to the firm level. They prove that a company's agentic stock exposure predicts actual changes in their hiring, even when you mathematically control for those older occupational measures. It's just a</v>
+
+81
+00:10:19.102 --> 00:10:33.969
+<v Maya>far more precise instrument. And this leads us to the core labor data. The authors took their validated firm level agentic beta and merged it with a massive database from Lightcast, which covers the full text of 34.8 million. U.S.</v>
+
+82
+00:10:34.009 --> 00:10:38.694
+<v Maya>job postings across 1784 public parent companies.</v>
+
+83
+00:10:38.875 --> 00:10:40.356
+<v Daniel>That is a lot of job postings.</v>
+
+84
+00:10:40.376 --> 00:10:47.644
+<v Maya>It's massive. And when they map the firm level AI exposure onto their hiring habits, the theoretical impact just became undeniable.</v>
+
+85
+00:10:48.003 --> 00:11:01.175
+<v Daniel>The first major finding here is that a significant increase in a firm's agentic exposure predicts a 2.11% lower job posting growth over the following six months and a 3.20% drop over nine months.</v>
+
+86
+00:11:01.516 --> 00:11:01.696
+<v Maya>Right.</v>
+
+87
+00:11:02.136 --> 00:11:17.074
+<v Daniel>And the crucial detail here is that the authors also tested a broad AI exposure metric, meaning exposure to the general volume of all AI tokens, including standard chatbots. And that broad chatbot exposure did not predict a drop in job postings once</v>
+
+88
+00:11:17.134 --> 00:11:18.857
+<v Daniel>the agentic tool calling was factored in.</v>
+
+89
+00:11:19.077 --> 00:11:20.339
+<v Maya>That's the smoking gun right there.</v>
+
+90
+00:11:20.539 --> 00:11:24.665
+<v Daniel>Yeah. The hiring data doesn't care about chatbots. It only reacts to agents.</v>
+
+91
+00:11:24.915 --> 00:11:39.645
+<v Maya>And to establish causality, the researchers anchored an event study specifically around that September 29th, 2025 release of Clawed Code 2.0. They locked in every firm's agentic beta on September 26th, right before the</v>
+
+92
+00:11:39.665 --> 00:11:40.385
+<v Maya>product dropped.</v>
+
+93
+00:11:40.405 --> 00:11:40.666
+<v Daniel>Smart.</v>
+
+94
+00:11:40.986 --> 00:11:54.675
+<v Maya>Yeah. Before that release date, there was absolutely no significant difference in the hiring trends between high exposure and low exposure firms. Their trajectories were perfectly parallel. But immediately following the release, the paths diverged sharply.</v>
+
+95
+00:11:55.324 --> 00:12:10.317
+<v Daniel>a heavily exposed firm saw its job posting growth drop by 4.73% over the next six months compared to a low-exposure firm. Let's just ground that percentage in human terms. For a typical firm in their data set, which normally posts about 2,000 job openings over a six-month</v>
+
+96
+00:12:10.357 --> 00:12:13.520
+<v Daniel>window, a 4.73% drop translates to roughly 82 fewer job postings.</v>
+
+97
+00:12:16.088 --> 00:12:20.513
+<v Maya>That is 82 open positions that simply vanished from the careers page.</v>
+
+98
+00:12:20.933 --> 00:12:33.307
+<v Daniel>But I still want to maintain a healthy dose of skepticism here. Can a single product release really carry the entire identification weight of a macroeconomic study? Did other economic factors maybe shift in late 2025?</v>
+
+99
+00:12:34.328 --> 00:12:35.169
+<v Maya>That's a fair question.</v>
+
+100
+00:12:35.369 --> 00:12:49.997
+<v Daniel>Right. For the board, job postings are not actual jobs. Fewer ads on a job board is a signal that labor demand is cooling, but it is not absolute proof of mass layoffs or shrinking total headcount. A company might just be leaving a vacant role unfilled.</v>
+
+101
+00:12:50.337 --> 00:13:03.305
+<v Maya>That distinction between labor demand and total employment is absolutely critical. Postings are a leading indicator. If we look at the historical context, this methodology echoes the landmark 2022 paper by Duran Asimoglu and his colleagues.</v>
+
+102
+00:13:03.550 --> 00:13:04.831
+<v Daniel>Oh, the earlier Lightcast study.</v>
+
+103
+00:13:04.951 --> 00:13:19.742
+<v Maya>Yes. They used the same Lightcast vacancy data from 2010 to 2018 to study the early wave of AI. Asimoglu found that establishments heavily exposed to AI were cutting hiring for non-AI positions, but they found absolutely no detectable</v>
+
+104
+00:13:19.782 --> 00:13:22.064
+<v Maya>effect at the broader occupation or industry level.</v>
+
+105
+00:13:22.503 --> 00:13:23.443
+<v Daniel>It was very localized.</v>
+
+106
+00:13:23.683 --> 00:13:36.048
+<v Maya>Very localized. Almost invisible substitution. The burning question this new paper raises is whether the agentic era is finally breaking that 2022 verdict, you know, pushing us into an economy-wide suppression of labor demand.</v>
+
+107
+00:13:36.488 --> 00:13:51.014
+<v Daniel>Well, if a typical highly exposed firm is pulling 82 jobs off the board, we really need to know exactly which jobs are vanishing, right? Oh, this is the best part. Well, and here's where it gets really interesting, right? The pain is highly concentrated.</v>
+
+108
+00:13:51.878 --> 00:14:02.095
+<v Daniel>The drop in job postings is almost entirely isolated to non-senior roles. Specifically, jobs asking for under six years of experience absorbed a massive 4.5% to 4.9% drop in posting growth.</v>
+
+109
+00:14:04.698 --> 00:14:19.528
+<v Maya>And the contrast with senior roles is what makes that so striking. Jobs requiring six or more years of experience didn't show a statistically significant drop at all. The digital interns are absorbing the human entry-level tasks and leaving the management,</v>
+
+110
+00:14:19.608 --> 00:14:21.630
+<v Maya>leaving the director layers completely intact.</v>
+
+111
+00:14:22.212 --> 00:14:36.660
+<v Daniel>But the authors found an incredible twist within that junior data. When they filtered for job postings that explicitly expected workers to use AI tools, jobs with descriptions demanding like AI-assisted workflow or generative AI leverage,</v>
+
+112
+00:14:37.320 --> 00:14:47.205
+<v Daniel>those postings barely responded to the agentic shock. They held steady. Wow. Yeah. The jobs that did not have those AI requirements were the ones that plummeted, dropping by 5.23%.</v>
+
+113
+00:14:48.879 --> 00:15:00.345
+<v Maya>And this presents a fascinating economic puzzle. If the demand for traditional junior workers is dropping so sharply, basic supply and demand dictates that the wages offered for those roles should also fall.</v>
+
+114
+00:15:00.625 --> 00:15:01.306
+<v Daniel>Yeah, exactly.</v>
+
+115
+00:15:01.586 --> 00:15:04.727
+<v Maya>Yet the researchers found no decline in posted wages.</v>
+
+116
+00:15:05.468 --> 00:15:13.272
+<v Daniel>So how do you explain that anomaly? Why are companies hiring fewer juniors but refusing to pay the ones they do hire any less?</v>
+
+117
+00:15:13.980 --> 00:15:28.458
+<v Maya>It likely points to a combination of sticky wages and a shifting skill premium. Companies aren't necessarily looking for cheaper labor. They are looking for higher leverage labor. The few juniors they are continuing to hire are expected to be sort of</v>
+
+118
+00:15:28.959 --> 00:15:29.840
+<v Maya>agent wranglers.</v>
+
+119
+00:15:30.335 --> 00:15:32.255
+<v Daniel>Ah, I like that. Right. Agent Wranglers.</v>
+
+120
+00:15:32.315 --> 00:15:44.958
+<v Maya>Right. The firm is willing to pay the standard or even a premium entry-level salary because that single junior worker, armed with an army of digital interns, is now producing the output of three traditional junior workers.</v>
+
+121
+00:15:45.498 --> 00:15:54.140
+<v Daniel>And this junior worker squeeze does not exist in a vacuum either. When you synthesize this new paper with our background sources, a pretty glaring pattern emerges.</v>
+
+122
+00:15:55.060 --> 00:15:55.560
+<v Maya>It really does.</v>
+
+123
+00:15:56.414 --> 00:16:11.184
+<v Daniel>The Stanford Digital Economy Lab paper by Eric Brynjolfsson and his team, revised in August 2026, looked at actual employment demographics. They found that employment for 22 to 25-year-olds in highly AI-exposed occupations</v>
+
+124
+00:16:11.724 --> 00:16:14.766
+<v Daniel>was tracking 19% below the long-term trend.</v>
+
+125
+00:16:15.186 --> 00:16:16.007
+<v Maya>19%. And</v>
+
+126
+00:16:16.567 --> 00:16:22.171
+<v Daniel>critically, that drop was driven by reduced hiring, not by companies firing their young staff.</v>
+
+127
+00:16:22.455 --> 00:16:36.716
+<v Maya>The front door was locked, but nobody was pushed out the back. You see the exact same phenomenon in the May 2026 working paper by Hosseini and Lichtinger. They analyzed a staggering 65 million resumes across 200.</v>
+
+128
+00:16:37.557 --> 00:16:51.242
+<v Maya>80,000 firms. It's a massive data set. Insane, right? And their data showed that after firms adopt generative AI, junior employment falls sharply through slower hiring, while senior employment barely moves.</v>
+
+129
+00:16:51.662 --> 00:17:06.271
+<v Daniel>So Brynjolfsson saw it in the demographic data. Hosseini and Lichtinger saw it in the resume histories. And now this new Lewis and Yale paper sees it in the job postings. while successfully tracing the causality directly to the rise of agentic</v>
+
+130
+00:17:06.411 --> 00:17:07.372
+<v Daniel>tool-calling AI.</v>
+
+131
+00:17:08.013 --> 00:17:11.237
+<v Maya>It's the third independent confirmation of the junior worker squeeze.</v>
+
+132
+00:17:11.669 --> 00:17:26.403
+<v Daniel>It is a really robust triangulation. But we do need to establish the boundaries of this effect. The authors ran several sanity checks to see where this dynamic holds true and where it kind of breaks down. For instance, the type of AI model matters immensely.</v>
+
+133
+00:17:26.983 --> 00:17:41.695
+<v Daniel>The drop in job postings is heavily concentrated in exposure to closed-weight frontier models, the heavy hitters from the major labs like Anthropic and OpenAI. Exposure to open weight models did not show the same predictive power for dropping job postings.</v>
+
+134
+00:17:42.336 --> 00:17:57.144
+<v Maya>Well, that makes perfect sense when you think about the underlying mechanics. Writing code to autonomously navigate an enterprise database requires an intense level of complex reasoning and error correction. The major, heavily funded closed weight models simply have a significant</v>
+
+135
+00:17:57.384 --> 00:18:00.605
+<v Maya>edge in agentic reliability over the open source alternatives right now.</v>
+
+136
+00:18:01.166 --> 00:18:07.029
+<v Daniel>But is this phenomenon just isolated to the tech sector? Like, are we just watching Silicon Valley automate itself?</v>
+
+137
+00:18:07.547 --> 00:18:22.292
+<v Maya>The breadth of the data proves otherwise, actually. The authors tested this across all five broad Fama French industry categories. OK. This means they looked beyond tech and finance, analyzing manufacturing, health care, consumer goods, retail. They also checked across all</v>
+
+138
+00:18:22.372 --> 00:18:23.812
+<v Maya>four US census regions.</v>
+
+139
+00:18:24.333 --> 00:18:24.473
+<v Daniel>And?</v>
+
+140
+00:18:25.033 --> 00:18:33.816
+<v Maya>The effect is pervasive everywhere. A manufacturing firm in the Midwest is substituting entry level labor with agents at a similar conceptual rate as a software firm on the coast.</v>
+
+141
+00:18:34.056 --> 00:18:40.425
+<v Daniel>Wow. OK, so if we connect this to the bigger picture, How alarmed should the average listener be?</v>
+
+142
+00:18:40.946 --> 00:18:55.794
+<v Maya>Well, we must keep the effect size anchored in reality. A 5% decline in entry-level job postings is highly statistically real, and it is economically painful if you are, say, a graduating senior navigating that headwind. But a 5%</v>
+
+143
+00:18:55.814 --> 00:18:58.875
+<v Maya>contraction is not a systemic collapse of the labor market.</v>
+
+144
+00:18:59.035 --> 00:18:59.236
+<v Daniel>Right.</v>
+
+145
+00:18:59.576 --> 00:19:01.777
+<v Maya>It is a highly targeted structural shift.</v>
+
+146
+00:19:02.242 --> 00:19:17.015
+<v Daniel>So what does this all mean? We have a newly validated metric in the agentic beta. We know autonomous tool calling tokens have just taken over the AI ecosystem. And we have economy-wide proof that firms exposed to these agents are deliberately</v>
+
+147
+00:19:17.075 --> 00:19:23.340
+<v Daniel>cutting job postings for junior non-AI using roles. Where does that leave the future of work?</v>
+
+148
+00:19:24.095 --> 00:19:38.826
+<v Maya>It forces us to confront a pretty profound structural question about corporate training and the lifecycle of a career. If agents primarily replace the hiring of juniors, we are effectively removing the bottom rung of the corporate ladder. The entire architecture of the knowledge economy</v>
+
+149
+00:19:39.207 --> 00:19:45.912
+<v Maya>relies on a flow of entry-level workers making mistakes, learning the institutional ropes, and gradually maturing into senior management.</v>
+
+150
+00:19:46.282 --> 00:19:58.357
+<v Daniel>Which loops us right back to the apprentice and the master carpenter. If you never hire the apprentice to sweep the floor and carve the simple table legs, where do the master carpenters of 2036 even come from?</v>
+
+151
+00:19:58.637 --> 00:19:59.017
+<v Maya>Exactly.</v>
+
+152
+00:19:59.796 --> 00:20:14.742
+<v Daniel>For a business analytics student listening to this right now, the most actionable piece of advice comes straight from the data anomaly we discussed earlier. Postings expecting AI tool use did not fall. Your value in the marketplace is no longer</v>
+
+153
+00:20:14.802 --> 00:20:24.646
+<v Daniel>derived from your ability to execute routine tasks. No, it's not. Your value is entirely dependent on your ability to orchestrate and audit the digital agents that execute those tasks.</v>
+
+154
+00:20:25.371 --> 00:20:39.731
+<v Maya>And we must also remember that this lead paper is a newly posted working paper. The science is unfolding in real time, and it has not yet undergone formal peer review. We will need years of ex-post employment data to finally settle the tension we explored earlier.</v>
+
+155
+00:20:40.066 --> 00:20:41.527
+<v Daniel>Whether it's hype or reality.</v>
+
+156
+00:20:41.687 --> 00:20:55.972
+<v Maya>Right. Is this a true permanent technological substitution of human labor or is it just an ongoing shock to corporate expectations? CEOs might be pausing their entry level hiring today because they think the agents can handle the workload only to realize in two years that they</v>
+
+157
+00:20:56.192 --> 00:20:58.853
+<v Maya>desperately still need human intuition at the ground level.</v>
+
+158
+00:20:59.469 --> 00:21:14.335
+<v Daniel>Which leaves you with a deeply provocative thought to mull over. We always assumed that automation would come for the physical, repetitive labor first. But it turns out the exact environments where tacit human knowledge, intuition, and mentorship are</v>
+
+159
+00:21:14.535 --> 00:21:20.837
+<v Daniel>forged, the entry-level white-collar jobs, are the ones being most aggressively absorbed by agents.</v>
+
+160
+00:21:21.505 --> 00:21:22.267
+<v Maya>It's ironic, really.</v>
+
+161
+00:21:22.467 --> 00:21:37.398
+<v Daniel>It is. Are we inadvertently dismantling our own training grounds? Will the future workplace be governed by a generation of senior managers who never actually had to learn the ground level ropes themselves? Keep exploring that</v>
+
+162
+00:21:37.438 --> 00:21:40.424
+<v Daniel>thought and keep learning. We'll catch you on the next deep dive.</v>
