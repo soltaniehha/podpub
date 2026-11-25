@@ -1,0 +1,669 @@
+WEBVTT
+
+1
+00:00:00.151 --> 00:00:10.674
+<v Maya>Right now, sitting on GitHub, there are well over 100 pages of perfectly verified, flawless mathematical logic that claims to prove a 47-year-old mystery.</v>
+
+2
+00:00:10.934 --> 00:00:11.694
+<v Daniel>It's really something.</v>
+
+3
+00:00:12.094 --> 00:00:22.697
+<v Maya>And the machine says it is 100% correct. The problem? Not a single human being on Earth actually understands how it works yet. So welcome to the new frontier of artificial intelligence.</v>
+
+4
+00:00:23.078 --> 00:00:28.844
+<v Daniel>It's a profound paradox. It is. I mean, we basically have mathematical certainty without mathematical understanding.</v>
+
+5
+00:00:29.245 --> 00:00:29.405
+<v Maya>Right.</v>
+
+6
+00:00:30.006 --> 00:00:43.300
+<v Daniel>And this isn't just like an isolated incident. We are looking at a situation where two frontier AI labs, Anthropic and OpenAI, have published papers claiming their systems settled a massive conjecture. And they did it within about a day of each other.</v>
+
+7
+00:00:43.648 --> 00:00:56.981
+<v Maya>Yeah, which is wild. So whether you are prepping for a meeting on AI capabilities or maybe catching up on computational complexity, or you're just insanely curious, today's deep dive is about a really historic milestone.</v>
+
+8
+00:00:57.161 --> 00:00:57.641
+<v Daniel>Absolutely.</v>
+
+9
+00:00:57.982 --> 00:01:07.310
+<v Maya>And just for context, this is actually the third such race this autumn, following those recent rival claims we saw about the Riemann hypothesis and the exponential time hypothesis.</v>
+
+10
+00:01:07.871 --> 00:01:08.752
+<v Daniel>It's been a busy season.</v>
+
+11
+00:01:09.110 --> 00:01:24.008
+<v Maya>To say the least. So today we are treating both of these new papers as equal leads. We're going to explore exactly what each paper claims to have proven, the frankly bizarre geometric methods they both used, and the most crucial question. What should you</v>
+
+12
+00:01:24.129 --> 00:01:27.553
+<v Maya>actually believe before human experts have even had time to read the proofs?</v>
+
+13
+00:01:28.209 --> 00:01:39.073
+<v Daniel>Right, because to really appreciate the magnitude of what these machines have produced, we have to start with the problem itself, which is often called the algebraic cousin of P versus NP.</v>
+
+14
+00:01:39.513 --> 00:01:44.375
+<v Maya>Okay, let's unpack this for anyone who isn't a complexity theorist. What are we talking about here?</v>
+
+15
+00:01:44.735 --> 00:01:52.397
+<v Daniel>Well, there's a 2024 survey by Peter Bergerser, which lays this out beautifully. He explains this concept of arithmetic circuits.</v>
+
+16
+00:01:52.978 --> 00:01:54.078
+<v Maya>Arithmetic circuits.</v>
+
+17
+00:01:54.453 --> 00:02:01.394
+<v Daniel>Yeah. In regular computer science, we normally think about Boolean circuits, you know, gates that manipulate binary bits, zeros and ones.</v>
+
+18
+00:02:01.914 --> 00:02:04.295
+<v Maya>Right. And gates or gates, that kind of thing.</v>
+
+19
+00:02:04.775 --> 00:02:15.797
+<v Daniel>Exactly. But this problem exists in a totally different universe. An arithmetic circuit computes polynomials using only additions and multiplications over a field of numbers.</v>
+
+20
+00:02:16.297 --> 00:02:17.337
+<v Maya>So no dividing.</v>
+
+21
+00:02:17.937 --> 00:02:20.498
+<v Daniel>No. No greater than or less than logic.</v>
+
+22
+00:02:21.038 --> 00:02:21.238
+<v Maya>Okay.</v>
+
+23
+00:02:22.027 --> 00:02:27.349
+<v Daniel>No, just adding and multiplying numbers together to build up these complex polynomial equations.</v>
+
+24
+00:02:27.870 --> 00:02:28.270
+<v Maya>Got it.</v>
+
+25
+00:02:28.990 --> 00:02:38.574
+<v Daniel>And in this arithmetic world, we have two main complexity classes that were first proposed by Leslie Valiant back in 1979. First, you have VP.</v>
+
+26
+00:02:39.355 --> 00:02:40.515
+<v Maya>VP. Okay.</v>
+
+27
+00:02:40.695 --> 00:02:50.800
+<v Daniel>Think of VP as the efficient class. These are polynomials that can be computed by circuits whose size grows manageably, polynomially.</v>
+
+28
+00:02:51.260 --> 00:02:52.241
+<v Maya>As the problem gets bigger.</v>
+
+29
+00:02:52.661 --> 00:02:59.524
+<v Daniel>Right. A classic example in VP is computing the determinant of a matrix. It's considered computationally feasible. It's easy.</v>
+
+30
+00:02:59.764 --> 00:03:03.006
+<v Maya>Okay, so VP is the good stuff, the solvable category.</v>
+
+31
+00:03:03.286 --> 00:03:09.569
+<v Daniel>Exactly. But then you have VNP. And this is the computationally agonizing class.</v>
+
+32
+00:03:09.989 --> 00:03:10.570
+<v Maya>The hard stuff.</v>
+
+33
+00:03:10.770 --> 00:03:22.877
+<v Daniel>Yeah. Valiant showed that computing something called the permanent of a matrix, which looks almost exactly like the determinant, but differs only in how it handles negative signs, is incredibly difficult.</v>
+
+34
+00:03:23.318 --> 00:03:23.578
+<v Maya>Huh.</v>
+
+35
+00:03:23.958 --> 00:03:24.539
+<v Daniel>Just the signs.</v>
+
+36
+00:03:24.899 --> 00:03:25.619
+<v Maya>Just the signs.</v>
+
+37
+00:03:26.680 --> 00:03:36.086
+<v Daniel>And he proved that the permanent, outside of characteristic two, and another problem called the Hamiltonian cycle polynomial, are complete for this hard class, VNP.</v>
+
+38
+00:03:36.493 --> 00:03:41.550
+<v Maya>Wait, pause right there. For those of us who aren't currently grading math midterms, what in the world is characteristic 2?</v>
+
+39
+00:03:42.263 --> 00:03:56.808
+<v Daniel>Ah, yeah. Fair point. Okay. Think of how a clock wraps around after 12 hours. Right. In modular arithmetic, numbers wrap around. So in a field of characteristic two, the math wraps around after just the number two.</v>
+
+40
+00:03:57.508 --> 00:03:59.809
+<v Daniel>So one plus one equals zero.</v>
+
+41
+00:04:00.309 --> 00:04:00.830
+<v Maya>Oh, weird.</v>
+
+42
+00:04:01.170 --> 00:04:14.316
+<v Daniel>Yeah. It creates this bizarre mirror world where addition and subtraction basically act identically. And because the permanent and determinate only differ by their plus and minus signs, they become the exact same thing in characteristic two.</v>
+
+43
+00:04:14.677 --> 00:04:20.260
+<v Maya>Oh, I see. So any proof separating them has to specifically exclude that weird mirror world.</v>
+
+44
+00:04:20.620 --> 00:04:34.813
+<v Daniel>Exactly. So the holy grail here, the goal of this 47-year-old conjecture, is to prove that VP does not equal VNP. Meaning, you want to prove that computing the permanent or the Hamiltonian cycle absolutely requires</v>
+
+45
+00:04:35.313 --> 00:04:37.455
+<v Daniel>superpolynomially many gates.</v>
+
+46
+00:04:38.376 --> 00:04:40.457
+<v Maya>You can't cheat your way to an efficient shortcut.</v>
+
+47
+00:04:40.537 --> 00:04:50.885
+<v Daniel>Right. If you can prove they require superpolynomially many gates, you separate the two classes. You prove VNP is fundamentally, inescapably harder than VP.</v>
+
+48
+00:04:51.238 --> 00:05:00.684
+<v Maya>Okay, but I need to firmly jump in here and make a really crucial clarification because both of these AI papers stress this heavily. This does not settle P versus NP.</v>
+
+49
+00:05:00.884 --> 00:05:01.405
+<v Daniel>No, not at all.</v>
+
+50
+00:05:01.825 --> 00:05:16.555
+<v Maya>Right. Like, if you are listening to this and thinking the ultimate computer science mystery is solved, hold on. An arithmetic circuit has to work for every ingredient in the mathematical pantry, right? Every single element in a given field of numbers. It can't just rely on the salt and</v>
+
+51
+00:05:16.575 --> 00:05:28.480
+<v Maya>pepper, you know, the zeros and ones of Boolean logic. Exactly. So because an arithmetic circuit is forced to work for all these infinite ingredients, these super polynomial lower bounds say absolutely nothing about Boolean circuits.</v>
+
+52
+00:05:28.920 --> 00:05:39.383
+<v Daniel>That distinction is so vital. I mean, proving something is hard when you're forced to use general arithmetic operations does not prove it's hard when you can cleverly manipulate binary bits.</v>
+
+53
+00:05:39.984 --> 00:05:52.017
+<v Maya>Right. So before we get into the, you know, alien intelligence of it all, let's establish the human baseline. What was the absolute limit of human achievement on this mountain before November 2026?</v>
+
+54
+00:05:53.048 --> 00:05:59.670
+<v Daniel>Well, the last big human breakthrough was a paper by Limay, Srinivasan, and Tavanas, usually called the LST paper.</v>
+
+55
+00:05:59.690 --> 00:06:00.331
+<v Maya>LST, okay.</v>
+
+56
+00:06:00.671 --> 00:06:13.555
+<v Daniel>It was presented at FOCS in 2021 and published in the Journal of the ACM in 2025. And what LST did was find the first superpolynomial lower bounds for all constant depths in characteristic zero or large.</v>
+
+57
+00:06:14.316 --> 00:06:15.256
+<v Maya>Constant depths?</v>
+
+58
+00:06:15.296 --> 00:06:15.456
+<v Daniel>Yeah.</v>
+
+59
+00:06:16.136 --> 00:06:17.537
+<v Maya>What does that mean in plain English?</v>
+
+60
+00:06:17.888 --> 00:06:32.791
+<v Daniel>Well, they used set multilinear circuits and a highly sophisticated Neeson-Wigderson style technique. But essentially, constant depth means the circuit is restricted. Imagine a chess computer that's only allowed to look three moves ahead, no matter how long the</v>
+
+61
+00:06:32.831 --> 00:06:33.331
+<v Daniel>game goes on.</v>
+
+62
+00:06:33.571 --> 00:06:34.871
+<v Maya>Oh, okay. Restricted vision.</v>
+
+63
+00:06:35.291 --> 00:06:44.533
+<v Daniel>Right. Before LST, the best general lower bound anyone had was the Strawson and Bauer-Strawson bound, which was just n times log d.</v>
+
+64
+00:06:45.003 --> 00:06:45.724
+<v Maya>That's not very big.</v>
+
+65
+00:06:45.964 --> 00:06:57.014
+<v Daniel>No. And for the permanent specifically, nothing larger than M squared times log M was known. LST broke through that, but again, only for those restricted constant depth circuits.</v>
+
+66
+00:06:57.514 --> 00:07:10.626
+<v Maya>So, OK, so the human limit was this like restricted model. But what these two new AI papers claim is this is like the massive leap to unrestricted depth circuits, like a chess computer that can just look ahead as far as it wants.</v>
+
+67
+00:07:10.806 --> 00:07:11.167
+<v Daniel>Exactly.</v>
+
+68
+00:07:12.457 --> 00:07:26.531
+<v Maya>And here is like the sheer scale difference that I want you, the listener, to picture. So that breakthrough, that LST, it's a short, it's a highly readable human paper. In contrast, these new AI papers are like dense</v>
+
+69
+00:07:26.932 --> 00:07:34.459
+<v Maya>70 to 80 page documents like accompanied with this. They come with these massive repositories of formalized computer code.</v>
+
+70
+00:07:34.639 --> 00:07:37.300
+<v Daniel>It's just a totally different scale of mathematical production.</v>
+
+71
+00:07:37.540 --> 00:07:37.741
+<v Maya>Right.</v>
+
+72
+00:07:38.041 --> 00:07:42.103
+<v Daniel>Which, I mean, that brings us to the first of our two leads today.</v>
+
+73
+00:07:42.483 --> 00:07:43.363
+<v Maya>The Anthropic claim.</v>
+
+74
+00:07:43.563 --> 00:07:54.409
+<v Daniel>Right. So on November 23rd, Anthropic posted a 70-page paper to their formal Math GitHub repository, and the listed author is literally just Claude. I know.</v>
+
+75
+00:07:54.709 --> 00:08:07.887
+<v Maya>Claude? Yeah, the readme file says that an internal research Claude model discovered the result, wrote the paper, and wrote the lean code. All of it. And no human mathematician has checked the proof. It's wild.</v>
+
+76
+00:08:08.607 --> 00:08:13.411
+<v Daniel>And the specific mathematical bound Claude claims to have achieved is really fascinating.</v>
+
+77
+00:08:13.852 --> 00:08:14.392
+<v Maya>What's the number?</v>
+
+78
+00:08:15.013 --> 00:08:24.942
+<v Daniel>The main theorem states that over every field, any circuit for the Hamiltonian cycle polynomial needs more than m to the power of a constant times the cube root of log m gates.</v>
+
+79
+00:08:25.362 --> 00:08:26.403
+<v Maya>Okay, that's a mouthful.</v>
+
+80
+00:08:26.852 --> 00:08:34.716
+<v Daniel>Equivalently, that's 2 to the power of order log m to the 4 thirds. And it proves this holds for the permanent 2, as long as the characteristic is not 2.</v>
+
+81
+00:08:35.076 --> 00:08:40.539
+<v Maya>So that number, 2 to the power of order log m to the 4 thirds, how does that stack up against human bounds?</v>
+
+82
+00:08:40.799 --> 00:08:52.445
+<v Daniel>Well, it's quasi-polynomial. I mean, it's a super-polynomial bound, which is exactly what you need to separate VP from VNP. But it's still far below the known exponential upper bounds, like Reiser's formula.</v>
+
+83
+00:08:53.226 --> 00:08:53.606
+<v Maya>Oh, I see.</v>
+
+84
+00:08:54.131 --> 00:09:06.683
+<v Daniel>Yeah, and the paper itself even notes there's plenty of room to tighten this bound. It also covers approximating circuits, dealing with border complexity, which basically proves VNP is not contained in the closure of VP.</v>
+
+85
+00:09:07.184 --> 00:09:15.232
+<v Maya>Okay, so we need to keep the dense math accessible here. How does an AI actually prove something like this? What's the mechanism under the hood?</v>
+
+86
+00:09:15.752 --> 00:09:22.250
+<v Daniel>The proof idea is incredibly inventive. It basically turns tensor ranks into a measure of distance.</v>
+
+87
+00:09:22.790 --> 00:09:23.271
+<v Maya>Tensors,</v>
+
+88
+00:09:23.711 --> 00:09:33.860
+<v Daniel>right. Yeah. So a tensor is just a multidimensional array of numbers. Think of an Excel spreadsheet as a 2D matrix. A tensor is like a 3D Rubik's Cube of data.</v>
+
+89
+00:09:34.660 --> 00:09:35.301
+<v Maya>Okay, I'm with you.</v>
+
+90
+00:09:36.200 --> 00:09:46.643
+<v Daniel>The Claude paper takes these tensors and uses something called spectral points from a concept known as Strassen's asymptotic spectrum. The paper calls these spectral points prices.</v>
+
+91
+00:09:47.424 --> 00:09:47.924
+<v Maya>Prices.</v>
+
+92
+00:09:48.364 --> 00:09:55.186
+<v Daniel>Yeah. And it shows that if you treat these prices as a geometric metric space, the space has non-positive curvature.</v>
+
+93
+00:09:55.782 --> 00:10:10.768
+<v Maya>Okay, let me see if I can translate that. Think of a massive algebra problem as a wildly tangled ball of yarn. It's impossible to measure directly. So what the AI did was map that tangled yarn onto a 3D geometric space. And by proving that this new</v>
+
+94
+00:10:10.808 --> 00:10:19.691
+<v Maya>space has a specific inward curve, that non-positive curvature, it created a mathematical shortcut to measure the yarn without ever having to untangle it.</v>
+
+95
+00:10:20.169 --> 00:10:32.436
+<v Daniel>And it's a highly effective way to visualize it. And from that curved space, the proof splits into two possible geometric cases. First is the flat case, which bounds a wire network polynomial on a complete graph.</v>
+
+96
+00:10:32.977 --> 00:10:33.537
+<v Maya>And the second?</v>
+
+97
+00:10:34.057 --> 00:10:47.205
+<v Daniel>The contracting case. And this ends in a really complex diagonal argument about a small, non-deterministic program trying to simulate its own count. And the permanent really only enters the picture at the very end through Valiant's completeness there.</v>
+
+98
+00:10:47.582 --> 00:11:00.546
+<v Maya>But reading through the source material, there is a massive philosophical catch here, right? Because the paper proves that one of these two cases must hold. But it doesn't actually know which one holds, not even over real numbers.</v>
+
+99
+00:11:00.746 --> 00:11:01.566
+<v Daniel>Right. It doesn't.</v>
+
+100
+00:11:02.266 --> 00:11:13.449
+<v Maya>And more importantly, you mentioned those spectral points it uses to build this whole curved geometry. The paper admits those points aren't explicit. They only exist mathematically because of Zorn's lemma.</v>
+
+101
+00:11:13.879 --> 00:11:24.306
+<v Daniel>Yes. Zorn's Lemma is a non-constructive axiom of choice. It basically guarantees that a maximal element exists in a certain set, even if you can't explicitly construct or locate it.</v>
+
+102
+00:11:24.906 --> 00:11:34.892
+<v Maya>Wait, hold on. So the AI is proving this geometric shortcut space exists, but it can't actually point to it. It's just using a mathematical loophole to say, trust me, it's there?</v>
+
+103
+00:11:35.032 --> 00:11:36.073
+<v Daniel>Pretty much. Yeah.</v>
+
+104
+00:11:36.539 --> 00:11:43.587
+<v Maya>how does that get past the known barriers to lower bounds? Like human mathematicians have hit walls for decades trying to do exactly that.</v>
+
+105
+00:11:43.907 --> 00:11:56.721
+<v Daniel>That is the million-dollar question. And the paper handles it in a really unusual way. The AI explicitly admits that it has not analyzed whether its proof bypasses the well-known relativization or algebraization barriers.</v>
+
+106
+00:11:57.143 --> 00:11:57.864
+<v Maya>It just ignores them.</v>
+
+107
+00:11:58.184 --> 00:12:06.712
+<v Daniel>It essentially says, here is the formal logic. It checks out. But I haven't checked it against the philosophical meta-barriers human mathematicians worry about.</v>
+
+108
+00:12:07.053 --> 00:12:16.362
+<v Maya>It's just such an alien way of doing math. It sidesteps human intuition entirely. But just as we're trying to digest Anthropic's geometric universe, OpenAI enters the chat.</v>
+
+109
+00:12:16.711 --> 00:12:17.652
+<v Daniel>Literally the next day.</v>
+
+110
+00:12:17.812 --> 00:12:32.206
+<v Maya>Right. Just one day later, on November 24th, OpenAI posts an 80-page paper to their math repository. And I should quickly note, this is part of a larger November 24 release that also includes a separate VP versus VNP proof using a grid</v>
+
+111
+00:12:32.266 --> 00:12:37.772
+<v Maya>polynomial and some other claims. But we're keeping our focus squarely on their circuit lower bounds paper today.</v>
+
+112
+00:12:37.952 --> 00:12:52.626
+<v Daniel>Yeah. Let's unpack OpenAI's theorem 1.1. They claim that over every field, circuits for the directed Hamiltonian cycle polynomial of order n need at least the exponential of a constant times log n</v>
+
+113
+00:12:52.686 --> 00:12:56.590
+<v Daniel>squared divided by log log n squared. Gates.</v>
+
+114
+00:12:56.910 --> 00:13:05.499
+<v Maya>Whoa. Okay. Claude had log m to the four thirds in the exponent. OpenAI has log n squared divided by log log n squared.</v>
+
+115
+00:13:05.760 --> 00:13:18.569
+<v Daniel>Right. OpenAI is claiming a significantly larger exponent than Anthropic's headline bound. And just like Claude, the same holds for the permanent outside characteristic too, and even for circuits that only approximate the coefficients.</v>
+
+116
+00:13:18.829 --> 00:13:20.030
+<v Maya>That's a huge claim.</v>
+
+117
+00:13:20.310 --> 00:13:28.716
+<v Daniel>It is. They also note that their bound is already attained on sparse graphs, meaning networks with at most three edges in and out per vertex.</v>
+
+118
+00:13:29.295 --> 00:13:37.261
+<v Maya>But here's where it gets really interesting, because there is a massive scope nuance here that changes how we should look at OpenAI's paper.</v>
+
+119
+00:13:37.621 --> 00:13:38.582
+<v Daniel>The formalization gap.</v>
+
+120
+00:13:38.942 --> 00:13:49.190
+<v Maya>Exactly. If you look at OpenAI's own scope note, they admit that their formalized lean code, you know, the part the machine actually checked, only proves the basic super polynomial version.</v>
+
+121
+00:13:49.554 --> 00:13:54.997
+<v Daniel>Right. Meaning the machine only verify that you need more than N to the power of C gates for every fixed C.</v>
+
+122
+00:13:55.157 --> 00:14:09.865
+<v Maya>Yes. The much stronger, specific, quantitative bound that you just mentioned, that remains unformalized. It's just written in human readable text in the abstract. Yeah. So I have to ask you, and the listener too, if you are explaining this at a dinner</v>
+
+123
+00:14:09.905 --> 00:14:16.308
+<v Maya>party, which claim should you repeat? The one the machine actually verified or the shiny one in the abstract?</v>
+
+124
+00:14:16.646 --> 00:14:31.592
+<v Daniel>I mean, the verified claim is absolutely the one to stand by. The discrepancy between what's claimed in English and what's proven in code is like the central dilemma of modern AI mathematics. For sure. But if we connect this to the bigger picture, what makes this entire situation even more</v>
+
+125
+00:14:31.632 --> 00:14:37.515
+<v Daniel>shocking isn't the slight difference in their bounds. It's the spooky resemblance between the two papers.</v>
+
+126
+00:14:38.158 --> 00:14:39.199
+<v Maya>The twin architectures.</v>
+
+127
+00:14:39.519 --> 00:14:45.804
+<v Daniel>Yes. The OpenAI proof architecture looks strikingly, almost unbelievably like anthropics.</v>
+
+128
+00:14:46.404 --> 00:14:46.844
+<v Maya>In what ways?</v>
+
+129
+00:14:47.225 --> 00:15:01.856
+<v Daniel>Well, OpenAI also uses prices from Strassen's asymptotic specter. They also use wire metric spaces. They also split their proof into two cases, depending on a nonlinear Poincaré expansion property, which they call ports. Wow. And in one of their cases, there's an</v>
+
+130
+00:15:01.916 --> 00:15:07.780
+<v Daniel>explicit 0, 1 tensor of minus. And in the other, a program that would simulate its own count and add 1.</v>
+
+131
+00:15:08.323 --> 00:15:21.828
+<v Maya>Which sounds exactly like Claude's contracting case. And OpenAI relies heavily on a companion paper they released about Euclidean geometry in the asymptotic spectrum of tensors. The parallels are everywhere, but neither paper cites the other.</v>
+
+132
+00:15:22.268 --> 00:15:32.631
+<v Daniel>Right. And because we are impartial observers here, we really have to look at this objectively. Nobody outside those two labs knows what happened. We can't speculate about copying.</v>
+
+133
+00:15:33.152 --> 00:15:34.852
+<v Maya>Right. No, we're not saying that.</v>
+
+134
+00:15:35.092 --> 00:15:48.052
+<v Daniel>But there are two highly plausible readings. The first is convergent discovery. You have two massive frontier AI models. They're trained on similar corpuses of human math, and they're prompted to solve the exact same algebra problem.</v>
+
+135
+00:15:48.332 --> 00:15:54.174
+<v Maya>So it's entirely possible their neural networks both just converged on the exact same bizarre geometric path.</v>
+
+136
+00:15:54.574 --> 00:16:07.678
+<v Daniel>Exactly. The second reading is that there was some shared uncredited idea, you know, maybe a preprint, a blog post, or a seminar talk floating around the field that both models ingested and used as the seed for their architectures.</v>
+
+137
+00:16:07.869 --> 00:16:20.175
+<v Maya>Whichever reading is true, the fact remains, two separate systems generated over 70 pages of novel, highly similar geometry-based tensor math to solve a 47-year-old conjecture within 24 hours of each other.</v>
+
+138
+00:16:20.575 --> 00:16:24.577
+<v Daniel>It's historic. Which brings us to the most urgent part of this deep dive.</v>
+
+139
+00:16:25.077 --> 00:16:35.022
+<v Maya>The verification reality. I mean, how can anyone trust 80 pages of AI-generated, densely complex mathematics that literally no human being has read yet?</v>
+
+140
+00:16:35.811 --> 00:16:44.714
+<v Daniel>Well, this is where we have to look at how formal theorem provers actually work. There is a brilliant guest post from October 2026 by Thomas Hales on Terence Tao's blog.</v>
+
+141
+00:16:44.954 --> 00:16:46.055
+<v Maya>Oh, yeah. The one about lean.</v>
+
+142
+00:16:46.795 --> 00:16:59.020
+<v Daniel>Right. Hales talks specifically about lean, which is the programming language both labs use to formalize their proofs. Hales argues that a lean proof requires two distinct things to be trusted. First, you need a kernel check.</v>
+
+143
+00:16:59.420 --> 00:17:00.000
+<v Maya>A kernel check.</v>
+
+144
+00:17:00.317 --> 00:17:08.666
+<v Daniel>Yeah. This is the machine validating the logic step by step. The lean software compiles the code and ensures absolutely no mathematical rules were broken.</v>
+
+145
+00:17:09.367 --> 00:17:20.879
+<v Maya>Let's use an analogy here. The lean kernel is like a notary public. It verifies that the signatures on a contract are real. The dates match. The legal clauses don't contradict each other. The document is logically sound.</v>
+
+146
+00:17:21.242 --> 00:17:27.647
+<v Daniel>That's a great way to put it. But the second requirement, Hales points out, is a human audit of statement fidelity.</v>
+
+147
+00:17:28.047 --> 00:17:29.048
+<v Maya>Statement fidelity.</v>
+
+148
+00:17:29.328 --> 00:17:35.893
+<v Daniel>Meaning a human has to verify that the formal code statement actually says what we think it says in plain English.</v>
+
+149
+00:17:36.216 --> 00:17:45.919
+<v Maya>Right. So to continue the analogy, the notary public ensures the contract is legally binding, but the notary doesn't check if you're accidentally buying a bridge in Brooklyn for $10 million.</v>
+
+150
+00:17:45.959 --> 00:17:46.399
+<v Daniel>Exactly.</v>
+
+151
+00:17:46.679 --> 00:18:01.664
+<v Maya>That's statement fidelity. If the AI accidentally redefined the Hamiltonian cycle to be something slightly easier in the code, the machine kernel would still verify the logic is perfect, but the proof would be practically worthless. It takes a human to read the contract and say,</v>
+
+152
+00:18:01.824 --> 00:18:04.265
+<v Maya>yes, this is actually what we wanted to prove.</v>
+
+153
+00:18:04.802 --> 00:18:19.395
+<v Daniel>That is precisely the danger. And in fact, if you look at Anthropic's repository, they went to great lengths for the kernel check. Every numbered statement has a lean counterpart proved from Mathlib with no sorry placeholders, and only standard</v>
+
+154
+00:18:19.495 --> 00:18:23.298
+<v Daniel>axioms, except for one consequence for determinantal complexity.</v>
+
+155
+00:18:23.587 --> 00:18:24.928
+<v Maya>Wow, so they were thorough.</v>
+
+156
+00:18:25.288 --> 00:18:37.995
+<v Daniel>Very. They even use a second independent kernel called NanoDA via a tool called Comparator for continuous integration rechecks. So they are immensely confident in the notary public.</v>
+
+157
+00:18:38.235 --> 00:18:49.121
+<v Maya>But Empiropic's own readme comes with a glaring warning. It literally says, and I'm quoting here, Lean checks the proofs, but no machine checks that this file says what is claimed.</v>
+
+158
+00:18:49.613 --> 00:19:02.543
+<v Daniel>They are actively warning the reader about statement fidelity. And this connects directly back to what we notice with OpenAI. OpenAI formalized a weaker statement than their abstract claimed. The machine can only verify exactly what it's fed.</v>
+
+159
+00:19:02.683 --> 00:19:17.132
+<v Maya>Which is the terrifying part. As of November 25th, the day after these papers dropped, there are zero human expert reviews reported. None. The press coverage so far is limited entirely to tech outlets, not peer-reviewed mathematical journals. We have two</v>
+
+160
+00:19:17.352 --> 00:19:22.514
+<v Maya>claimed proofs, but no human mathematician has verified either paper. So what does this all mean?</v>
+
+161
+00:19:23.134 --> 00:19:36.898
+<v Daniel>It really forces us to ask, what happens to mathematical discovery when formal, verified proofs exist before any human actually understands them? Like, who is going to check these 80-page papers? And how fast can they realistically do it?</v>
+
+162
+00:19:37.233 --> 00:19:51.963
+<v Maya>Right. We started this deep dive talking about the sheer, terrifying speed of AI discovery. Now we are staring at hundreds of pages of verified, logical code that claims to prove a foundational computer science conjecture. But the logic uses</v>
+
+163
+00:19:52.083 --> 00:19:59.969
+<v Maya>non-explicit objects like Zorn's lemma, and it creates entire geometric universes that no human has actually conceptually parsed yet.</v>
+
+164
+00:20:00.407 --> 00:20:07.713
+<v Daniel>The landscape has permanently shifted. I mean, the bottleneck is no longer generating the proof. The bottleneck is human comprehension.</v>
+
+165
+00:20:08.166 --> 00:20:22.975
+<v Maya>I want to leave you, the listener, with a final thought to mull over. If AI models can now synthesize entirely new mathematical architectures, you know, bending geometry to solve algebra to bypass the very barriers that have stumped humans for decades, is the</v>
+
+166
+00:20:23.035 --> 00:20:37.825
+<v Maya>future of mathematics really about humans writing proofs anymore? Or is it about humans becoming mere auditors of statement fidelity for alien machines that think in ways we can barely even comprehend? Keep an ear out, because the era of</v>
+
+167
+00:20:37.926 --> 00:20:40.550
+<v Maya>human-only math might have just quietly closed.</v>
