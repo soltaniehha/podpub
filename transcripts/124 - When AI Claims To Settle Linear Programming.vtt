@@ -1,0 +1,609 @@
+WEBVTT
+
+1
+00:00:00.171 --> 00:00:10.439
+<v Daniel>Imagine you are managing a global shipping network or maybe you're running this massive factory, right? And you're trying to plan out a production schedule for the next five years.</v>
+
+2
+00:00:10.880 --> 00:00:12.861
+<v Maya>Right, which is just an absolute logistical nightmare.</v>
+
+3
+00:00:13.181 --> 00:00:26.592
+<v Daniel>Oh, totally. You are constantly trying to maximize efficiency across, I mean, millions of variables and competing constraints. You have to balance the trucks, fluctuating fuel costs, labor hours, warehouse space, weather delays.</v>
+
+4
+00:00:27.341 --> 00:00:40.390
+<v Maya>Yeah, and underneath the software that makes all of that logistics magic happen is this mathematical engine called linear programming. It is basically the beating heart of operations research and economics and modern analytics.</v>
+
+5
+00:00:40.670 --> 00:00:54.080
+<v Daniel>Exactly. And today, for this deep dive, we are looking at a sudden, just massive drop of AI-generated mathematics that, well, it threatens to completely rewrite our theoretical understanding of that very engine.</v>
+
+6
+00:00:54.404 --> 00:01:08.511
+<v Maya>It really does. I mean, on Tuesday, November 24th, 2026, OpenAI just published this batch of unpolished, what they called raw research data from an unnamed internal model straight to their public GitHub repository.</v>
+
+7
+00:01:08.651 --> 00:01:10.292
+<v Daniel>Straight to OpenAI math, right?</v>
+
+8
+00:01:10.312 --> 00:01:22.278
+<v Maya>Yeah, exactly. And we are focusing on two companion papers from this release. Together, they're over 110 pages, and they both attack the exact same fundamental question from totally opposite directions.</v>
+
+9
+00:01:22.418 --> 00:01:25.561
+<v Daniel>Which is, how hard is linear programming really?</v>
+
+10
+00:01:26.081 --> 00:01:33.207
+<v Maya>Right. And it's a question that has frustrated mathematicians and computer scientists for, well, for half a century at this point.</v>
+
+11
+00:01:33.447 --> 00:01:41.454
+<v Daniel>Okay. Let's unpack this. Yeah. Because our mission today is to understand how these two papers tackle that central question. And the stakes are high, right?</v>
+
+12
+00:01:41.734 --> 00:01:49.319
+<v Maya>Oh, incredibly high. The first paper actually claims to solve one of the most famous open questions in math. It's known as Smale's ninth problem.</v>
+
+13
+00:01:49.399 --> 00:01:54.862
+<v Daniel>Right. By proving linear programming can be solved in what's called strongly polynomial time.</v>
+
+14
+00:01:55.102 --> 00:02:08.270
+<v Maya>Exactly. And then the second paper proves that the classic way we usually solve these problems, which is by mathematically walking along the edges of a geometric shape. Well, it proves that can be forced to take an impossibly long time.</v>
+
+15
+00:02:08.597 --> 00:02:12.240
+<v Daniel>Which basically disproves a decades-old guess called the Hirsch conjecture.</v>
+
+16
+00:02:12.340 --> 00:02:19.485
+<v Maya>Right. So to understand why this is such a seismic event, we really need to look at the historical hurdle that researchers have been trying to declare.</v>
+
+17
+00:02:19.545 --> 00:02:20.826
+<v Daniel>The bit model problem, right?</v>
+
+18
+00:02:21.246 --> 00:02:36.217
+<v Maya>Yeah. So for decades, we've had algorithms that run in what is called polynomial time in the bit model. Like back in 1979, Katchian introduced the ellipsoid method. And then in 1984, Karmakar developed the</v>
+
+19
+00:02:36.277 --> 00:02:37.318
+<v Maya>interior point method.</v>
+
+20
+00:02:37.903 --> 00:02:43.649
+<v Daniel>And those were huge breakthroughs. I mean, they proved linear programming was solvable efficiently. But there was a catch.</v>
+
+21
+00:02:44.230 --> 00:02:50.817
+<v Maya>A pretty big one. Their running time grows based on the number of bits, like the actual sheer data size of the input.</v>
+
+22
+00:02:51.062 --> 00:03:02.190
+<v Daniel>Okay, let me try to translate that for you listening. It's like, imagine measuring a road trip not by the number of turns you have to make, but by the exact molecular length of the pavement.</v>
+
+23
+00:03:02.370 --> 00:03:03.771
+<v Maya>Oh, I like that. Right? Yeah.</v>
+
+24
+00:03:04.112 --> 00:03:15.320
+<v Daniel>Like, if the input numbers in your equation are incredibly precise or just astronomically large, the algorithm takes longer and longer to run, even if the actual physical structure of the route hasn't changed at all.</v>
+
+25
+00:03:15.973 --> 00:03:23.834
+<v Maya>That is a brilliant way to picture it. The holy grail of optimization has always been finding an algorithm that runs in strongly polynomial time.</v>
+
+26
+00:03:24.135 --> 00:03:30.216
+<v Daniel>So taking the road trip analogy, strongly polynomial means the trip's length is measured strictly by the number of turns you take.</v>
+
+27
+00:03:30.496 --> 00:03:42.878
+<v Maya>Exactly. The step count should depend only on the dimensions of the problem, like just the number of variables and the number of constraints you have. It shouldn't matter if the numbers at those turns are microscopically tiny or, you know, massively huge.</v>
+
+28
+00:03:43.361 --> 00:03:49.806
+<v Daniel>And this brings us to Steve Smale, right? Because in 1998, he wrote this famous essay called Mathematical Problems for the Next Century.</v>
+
+29
+00:03:50.166 --> 00:03:54.329
+<v Maya>Yeah, he basically created a list of the biggest mathematical white whales out there.</v>
+
+30
+00:03:54.789 --> 00:04:09.299
+<v Daniel>Right, placing this right alongside legendary brain-breaking problems like the Ryman hypothesis and P versus NP. Problem 9 on that list asks essentially this. Is there an algorithm over the real numbers that can decide if a system of linear equations is</v>
+
+31
+00:04:09.459 --> 00:04:12.982
+<v Daniel>feasible with the time measured strictly in arithmetic operations?</v>
+
+32
+00:04:13.523 --> 00:04:20.928
+<v Maya>And for years, human researchers chipped away at this and just kept running into brick walls. I mean, let's look at those interior point methods we just mentioned.</v>
+
+33
+00:04:21.388 --> 00:04:22.889
+<v Daniel>The ones that fly through the middle of the shape?</v>
+
+34
+00:04:23.209 --> 00:04:34.656
+<v Maya>Right. These algorithms work by navigating through the inside of the feasible region. Imagine a giant geometric shape created by all your constraints. And the algorithm tries to fly through the hollow middle to find the best point.</v>
+
+35
+00:04:34.996 --> 00:04:35.757
+<v Daniel>Makes sense in theory.</v>
+
+36
+00:04:36.244 --> 00:04:47.733
+<v Maya>But in 2018, a team of researchers, Alamajon, Benchimol, Gobert, and Joswig, they proved that standard log barrier interior point methods are fundamentally blocked from ever being strongly polynomial.</v>
+
+37
+00:04:48.133 --> 00:04:50.014
+<v Daniel>Wait, so they essentially built a mathematical trap?</v>
+
+38
+00:04:50.335 --> 00:05:01.183
+<v Maya>They did. They used something called tropical geometry to construct a really specific family of linear programs. Think of it like a funhouse mirror that severely distorts the space inside the shape.</v>
+
+39
+00:05:01.523 --> 00:05:04.025
+<v Daniel>Oh, wow. So they just warped the inside entirely.</v>
+
+40
+00:05:04.297 --> 00:05:18.147
+<v Maya>Yeah. By setting up a relatively small number of inequalities, specifically 3r plus 1 inequalities in dimension 2r, they created an environment where the path the algorithm tries to follow just becomes wildly curved.</v>
+
+41
+00:05:18.707 --> 00:05:27.713
+<v Daniel>So it just bends and winds so exponentially many times that finding the exit in a strongly polynomial number of steps becomes mathematically impossible.</v>
+
+42
+00:05:28.114 --> 00:05:32.937
+<v Maya>Exactly. It forces on the order of 2 to the r iterations. It's a total blockade.</v>
+
+43
+00:05:33.433 --> 00:05:42.600
+<v Daniel>I'm looking at this and feeling kind of stuck. I mean, if flying through the interior of the shape is this impossible funhouse maze, what happens if we just walk around the outside?</v>
+
+44
+00:05:43.481 --> 00:05:45.122
+<v Maya>Which is the classic simplex method.</v>
+
+45
+00:05:45.342 --> 00:05:55.550
+<v Daniel>Right. The one they teach in every introductory analytics class. The algorithm just walks along the outside edges of the shape from corner to corner until it hits the optimal spot.</v>
+
+46
+00:05:56.137 --> 00:06:05.020
+<v Maya>Which brings us directly to the second OpenAI paper, our second lead source today. To understand why walking the edges is so complicated, we have to talk about the Hirsch conjecture.</v>
+
+47
+00:06:05.500 --> 00:06:06.320
+<v Daniel>OK, lay it on me.</v>
+
+48
+00:06:07.000 --> 00:06:21.965
+<v Maya>So this was proposed by Warren Hirsch back in 1957 and later popularized by Danzig. Hirsch basically guessed that if you have a d-dimensional shape with n facets, like flat faces, the maximum number of steps to cross the graph diameter should never be more than n</v>
+
+49
+00:06:22.205 --> 00:06:22.605
+<v Maya>minus d.</v>
+
+50
+00:06:23.535 --> 00:06:26.577
+<v Daniel>I mean, that sounds so clean. It's really intuitive.</v>
+
+51
+00:06:26.977 --> 00:06:36.363
+<v Maya>Well, intuition in high-dimensional geometry is incredibly dangerous. In 2012, a mathematician named Francisco Santos found the first counterexample to the bounded-Hirsch conjecture.</v>
+
+52
+00:06:36.724 --> 00:06:38.185
+<v Daniel>Right, the 2012 Santos favor.</v>
+
+53
+00:06:38.405 --> 00:06:38.545
+<v Maya>Right.</v>
+
+54
+00:06:39.165 --> 00:06:45.669
+<v Daniel>He managed to build a shape in 43 dimensions with 86 facets, and he proved it took 44 steps to cross.</v>
+
+55
+00:06:46.110 --> 00:06:46.450
+<v Maya>Exactly.</v>
+
+56
+00:06:47.231 --> 00:06:53.616
+<v Daniel>Wait, so he beat the n minus d rule, but he had to build a 43-dimensional shape just to miss the target by a single step.</v>
+
+57
+00:06:53.857 --> 00:06:55.498
+<v Maya>Yeah, he was just off by one.</v>
+
+58
+00:06:55.678 --> 00:07:02.143
+<v Daniel>That must have felt like a massive yet hollow victory. I mean, he proved the strict rule was false, but just barely.</v>
+
+59
+00:07:02.884 --> 00:07:14.614
+<v Maya>Right, it was a very narrow defeat for the conjecture. Santos proved the exact n minus d bound didn't work, but he left open the possibility that a slightly looser polynomial version of the bound still existed.</v>
+
+60
+00:07:14.940 --> 00:07:19.803
+<v Daniel>Like maybe it takes n squared steps or n cubed, which would still be incredibly fast.</v>
+
+61
+00:07:20.064 --> 00:07:31.131
+<v Maya>Exactly. But what the AI does in the second paper is completely obliterate that hope. Theorem 1.1 proves that the polynomial version of the Hirsch conjecture is definitively false.</v>
+
+62
+00:07:31.752 --> 00:07:43.200
+<v Daniel>The AI's construction here sounds like a total nightmare for an algorithm. It proves that for a large n, there are these simple, rational polytopes where the dimension grows slower than any power of n.</v>
+
+63
+00:07:43.520 --> 00:07:47.001
+<v Maya>but the diameter grows faster than any fixed power event. Yeah.</v>
+
+64
+00:07:47.321 --> 00:07:47.901
+<v Daniel>That's crazy.</v>
+
+65
+00:07:48.381 --> 00:08:03.225
+<v Maya>Even if you allow the algorithm to cheat and move across faces of small dimension instead of strictly walking the edges, it doesn't help. The distance between the best and worst points is just super polynomially far apart. And the mechanism the AI used to build this</v>
+
+66
+00:08:03.305 --> 00:08:12.607
+<v Maya>nightmare shape is just fascinating. Rather than just plotting points, it introduces a linear time coordinate to give the geometric shape a sense of chronological progression.</v>
+
+67
+00:08:13.168 --> 00:08:15.408
+<v Daniel>Okay, so adding time to the geometry.</v>
+
+68
+00:08:15.708 --> 00:08:24.050
+<v Maya>Right. And then it implements strict lower bounds, essentially mathematical walls, that force any path attempting to cross the shape to constantly bend and detour.</v>
+
+69
+00:08:24.370 --> 00:08:25.970
+<v Daniel>So it's literally building a labyrinth.</v>
+
+70
+00:08:26.210 --> 00:08:39.793
+<v Maya>A deeply malicious labyrinth. It nests these forced detours inside what it calls episodes, so the bends just multiply. And to ensure the shape doesn't have an infinite number of walls, it uses a scheduler of shared clock inequalities.</v>
+
+71
+00:08:40.171 --> 00:08:47.730
+<v Daniel>Oh, man. So it's like an evil architect syncing up trap doors so that a single wall blocks you at multiple different times during your journey?</v>
+
+72
+00:08:47.918 --> 00:09:02.751
+<v Maya>Perfectly said. The path length skyrockets into a super polynomial nightmare, while the actual number of walls stays relatively small. Corollary 14.3 even shows this for packing LPs, where the path from the worst point to the optimum is super polynomially</v>
+
+73
+00:09:02.811 --> 00:09:03.131
+<v Maya>long.</v>
+
+74
+00:09:03.551 --> 00:09:18.245
+<v Daniel>Okay, but I have to push back here. If walking the edges is theoretically this terrible in the worst case, like if an algorithm can get trapped in an exponentially winding labyrinth... Why does the simplex method work so incredibly well?</v>
+
+75
+00:09:18.785 --> 00:09:20.446
+<v Maya>That's the billion dollar question, right?</v>
+
+76
+00:09:20.626 --> 00:09:30.531
+<v Daniel>Yeah. I mean, every airline routing planes, every logistics company moving freight, they use simplex every single day and it runs blindingly fast.</v>
+
+77
+00:09:31.011 --> 00:09:42.857
+<v Maya>What's fascinating here is how theory and reality diverge. And we actually have a great framework for understanding this. Back in 2004, Spielman and Tang introduced a concept called smoothed analysis.</v>
+
+78
+00:09:43.077 --> 00:09:44.198
+<v Daniel>Smoothed analysis, right.</v>
+
+79
+00:09:44.770 --> 00:09:53.815
+<v Maya>They prove that while worst case edge walks, like the labyrinth the AI just built, are horribly long, those specific nightmare shapes are incredibly fragile.</v>
+
+80
+00:09:54.496 --> 00:09:56.997
+<v Daniel>Fragile how? Like they just break if you touch them?</v>
+
+81
+00:09:57.418 --> 00:10:12.126
+<v Maya>Basically, yeah. If you introduce even a microscopic amount of random noise into the data, which happens naturally in the real world due to, you know, measurement limits or tiny sensor errors or even just floating point math on a computer, the nightmare shape</v>
+
+82
+00:10:12.186 --> 00:10:13.247
+<v Maya>completely dissolves.</v>
+
+83
+00:10:13.902 --> 00:10:21.707
+<v Daniel>Wow. So the perfectly synced trapdoors misalign, the labyrinth falls apart, and the path just becomes short again.</v>
+
+84
+00:10:22.127 --> 00:10:31.572
+<v Maya>Exactly. And Lee 2's theoretical construction actually perfectly respects the known upper bounds, like Kali and Kleitman's quasi-polynomial bound and Larmann's bounds.</v>
+
+85
+00:10:31.832 --> 00:10:42.979
+<v Daniel>Oh, that makes total sense. So both things are true. Mathematically, the ultimate worst-case edgewalk is a super-polynomial, inescapable labyrinth. But in the real world, with a little noise, it's totally fine.</v>
+
+86
+00:10:43.352 --> 00:10:56.341
+<v Maya>Right. But it still leaves theoretical computer science in a massive bind. Because if interior point algorithms are trapped by a funhouse mirror on the inside, and simplex algorithms are trapped by superpolynomial labyrinths on the outside...</v>
+
+87
+00:10:56.461 --> 00:11:01.165
+<v Daniel>Then both of our standard navigation methods are theoretically blocked from solving Smale's ninth problem.</v>
+
+88
+00:11:01.425 --> 00:11:05.207
+<v Maya>Exactly. Both standard families of methods were already known to be blocked.</v>
+
+89
+00:11:05.488 --> 00:11:13.674
+<v Daniel>Here's where it gets really interesting. If both of our classic methods are blocked... How did the AI in the first paper actually solve Smale's problem?</v>
+
+90
+00:11:14.094 --> 00:11:19.055
+<v Maya>Right. If it's not walking the edges and it's not following a path through the middle, what is it doing?</v>
+
+91
+00:11:19.135 --> 00:11:19.935
+<v Daniel>Yeah. What's the trick?</v>
+
+92
+00:11:20.575 --> 00:11:29.697
+<v Maya>It abandons path following entirely. The first paper introduces a deterministic algorithm that operates purely on sign queries and rescaling.</v>
+
+93
+00:11:30.357 --> 00:11:32.458
+<v Daniel>Sign queries. Okay. How does that work?</v>
+
+94
+00:11:32.951 --> 00:11:47.156
+<v Maya>Well, the fundamental challenge in linear programming is that an essential number in a mathematical certificate, the proof you need for the answer, it can be invisibly tiny compared to the massive numbers in the rest of the matrix. The critical signals just get drowned out.</v>
+
+95
+00:11:47.777 --> 00:11:56.820
+<v Daniel>It's like looking at a national budget in trillions of dollars. If there is a critical discrepancy of three cents, it is functionally invisible. You can't make a decision based on it.</v>
+
+96
+00:11:56.960 --> 00:12:02.242
+<v Maya>That's a perfect analogy. So what if you could dynamically change the currency?</v>
+
+97
+00:12:02.978 --> 00:12:03.679
+<v Daniel>Oh, I see.</v>
+
+98
+00:12:04.019 --> 00:12:16.309
+<v Maya>If you change the units of the coordinates, what the paper calls changing prices, you can bring those small entries into view. Suddenly, that three-cent discrepancy isn't invisible anymore. It is the largest, most obvious number in the room.</v>
+
+99
+00:12:16.649 --> 00:12:22.474
+<v Daniel>And because they rescaled it, the algorithm can finally see the mathematical signs, whether they are positive or negative, clear as day.</v>
+
+100
+00:12:22.723 --> 00:12:36.969
+<v Maya>Precisely. It gets reliable signs only where those rescaled entries are the absolute largest. Then it combines the signs from many of these queries using what Theorem 2 calls extremal prices to identify the exact structure of the hidden</v>
+
+101
+00:12:37.249 --> 00:12:38.029
+<v Maya>mathematical proof.</v>
+
+102
+00:12:38.810 --> 00:12:43.612
+<v Daniel>And once it knows the structure, it just uses standard linear algebra to recover the exact answer.</v>
+
+103
+00:12:44.032 --> 00:12:46.653
+<v Maya>Yep, it recovers the support of the witness perfectly.</v>
+
+104
+00:12:47.448 --> 00:13:00.080
+<v Daniel>But wait, if we're scaling numbers up to find tiny discrepancies, wouldn't the numbers eventually get so massively huge that they crash the strongly polynomial runtime? I know the paper mentions a specific trick for this.</v>
+
+105
+00:13:00.420 --> 00:13:04.945
+<v Maya>It does. It uses a brilliant technique called logarithmic compression on demand.</v>
+
+106
+00:13:05.245 --> 00:13:07.247
+<v Daniel>Logarithmic compression on demand.</v>
+
+107
+00:13:07.627 --> 00:13:21.578
+<v Maya>Yeah. To prevent the math from blowing up, the AI essentially replaces those massive, bloated log magnitudes of subdeterminants with short, manageable substitutes. So each query remains just an ordinary linear program with small, simple numbers.</v>
+
+108
+00:13:22.318 --> 00:13:33.567
+<v Daniel>That is so elegant. So after doing all this rescaling and compression, what does the algorithm actually spit out? The paper lists three possible outcomes in Theorem 1, right?</v>
+
+109
+00:13:33.969 --> 00:13:44.659
+<v Maya>Yes. For arbitrary real numbers, this algorithm returns one of three things in strongly polynomial time. The first is a strictly complementary optimal primal dual pair.</v>
+
+110
+00:13:45.339 --> 00:13:50.884
+<v Daniel>Meaning it found the absolute best answer along with the mathematical proof that you cannot possibly do any better.</v>
+
+111
+00:13:51.144 --> 00:13:57.250
+<v Maya>Yes. The second outcome is a feasible point plus an improving ray, which means it's unbounded.</v>
+
+112
+00:13:57.755 --> 00:14:00.257
+<v Daniel>Okay. So the problem is open-ended and shoots off to infinity.</v>
+
+113
+00:14:00.417 --> 00:14:05.241
+<v Maya>Right. And the third outcome is a sparse Farkas certificate of infeasibility.</v>
+
+114
+00:14:06.322 --> 00:14:13.407
+<v Daniel>Basically, it hands you a mathematical receipt proving that your constraints are fundamentally contradicting each other, meaning no solution can possibly exist.</v>
+
+115
+00:14:13.547 --> 00:14:18.551
+<v Maya>Exactly. And the support of that Farkas certificate is at most one plus the rank of matrix A.</v>
+
+116
+00:14:18.991 --> 00:14:25.496
+<v Daniel>That's incredibly precise. And we should probably give some historical context here, right? Because humans have been trying to build this for a long time.</v>
+
+117
+00:14:25.805 --> 00:14:32.648
+<v Maya>Oh, absolutely. The paper's own history section points this out. We've had partial, strongly polynomial results before.</v>
+
+118
+00:14:33.208 --> 00:14:39.371
+<v Daniel>Like Eva Tardos, right? She developed algorithms where the step count depended only on the size of the constraint matrix entries.</v>
+
+119
+00:14:39.631 --> 00:14:51.836
+<v Maya>Right. And Megiddo figured out fixed dimension and two variable results. We've seen progress from Vavasas and Yi and all the circuit imbalance work by Dadush, Natura, Veg, and their co-authors.</v>
+
+120
+00:14:52.255 --> 00:15:06.702
+<v Daniel>The paper even cites a 2025 archive claim by a researcher named Awania for a pivot-based, strongly polynomial algorithm. So this is not the first claim out there. What makes this OpenAI claim fundamentally different?</v>
+
+121
+00:15:07.402 --> 00:15:13.585
+<v Maya>Well, the unique certificate structure we just talked about is a big part of it. But crucially, it's the lean formalization.</v>
+
+122
+00:15:14.513 --> 00:15:23.981
+<v Daniel>The AI didn't just write a math paper in English. It wrote the proof in Lean, which is a computer programming language that strictly verifies every single logical step.</v>
+
+123
+00:15:24.301 --> 00:15:37.652
+<v Maya>Exactly. And the consequences, the paper claims, are staggering. It says this breakthrough extends to strongly polynomial convex quadratic programming, algorithms for turn-based mean payoff games.</v>
+
+124
+00:15:37.732 --> 00:15:39.213
+<v Daniel>And max norm contractions, right?</v>
+
+125
+00:15:39.505 --> 00:15:49.330
+<v Maya>Yes, a fixed-point algorithm for max-norm contractions, plus tropical linear feasibility. It basically sweeps across a whole landscape of operations research problems.</v>
+
+126
+00:15:49.990 --> 00:16:03.377
+<v Daniel>Though it does have its own open questions in Section 5. Like, some comparisons have a degree that's exponential in the dimensions, so it asks if it could be done with predicates of polynomial degree. And polyhedra given by separation oracles aren't covered at all.</v>
+
+127
+00:16:04.089 --> 00:16:13.015
+<v Maya>This raises an important question, though. How much can we actually trust this? You mentioned right at the top that this was released as raw research data.</v>
+
+128
+00:16:13.478 --> 00:16:28.407
+<v Daniel>Right. Let's do a harsh reality check for everyone listening. It's Thursday, November 26, 2026. This data was just dumped unceremoniously onto GitHub a couple days ago. As of right now, no human expert has published a peer review. No major</v>
+
+129
+00:16:28.487 --> 00:16:40.534
+<v Daniel>errors have been reported, but quality mainstream scientific outlets haven't really touched it yet. It's mostly just blowing up on hacker news. We have to heavily use the word claimed for all of these proofs.</v>
+
+130
+00:16:41.099 --> 00:16:55.911
+<v Maya>We also need to be incredibly precise about the lean verification itself. OpenAI's lean scope note says the code formally proves strongly polynomial feasibility and optimization for rational data on fixed</v>
+
+131
+00:16:56.031 --> 00:16:57.152
+<v Maya>rational RAM programs.</v>
+
+132
+00:16:57.572 --> 00:16:58.493
+<v Daniel>Okay, rational data.</v>
+
+133
+00:16:58.902 --> 00:17:11.541
+<v Maya>and it also formally verifies the refutation of the polynomial Hirsch conjecture. However, Smale's ninth problem, as Steve Smale actually posed it, explicitly asks for a solution over the real numbers.</v>
+
+134
+00:17:12.172 --> 00:17:26.478
+<v Daniel>Yes, that is a massive boundary we need to highlight. The claim that this algorithm works over the real numbers is written in the text of the paper, but it is not in the lean statement. Right. So we cannot say Smale's problem is fully formally verified by a computer.</v>
+
+135
+00:17:27.139 --> 00:17:34.442
+<v Daniel>The rational number part is locked in, but the real number part is still pending either human or machine verification.</v>
+
+136
+00:17:34.798 --> 00:17:42.501
+<v Maya>It's a vital distinction. But honestly, even if only the rational data proof holds up, this algorithmic approach is a total paradigm shift.</v>
+
+137
+00:17:42.881 --> 00:17:57.687
+<v Daniel>And it perfectly fits into this crazy autumn of AI math we've been having. Just as a quick context drop, this exact same OpenAI release contained a separate claim that sets the matrix multiplication exponent to exactly nine-fourths, which is currently taking</v>
+
+138
+00:17:57.747 --> 00:17:59.047
+<v Daniel>over Scott Aronson's blog.</v>
+
+139
+00:17:59.328 --> 00:18:00.068
+<v Maya>Oh yeah, it's everywhere.</v>
+
+140
+00:18:00.490 --> 00:18:09.956
+<v Daniel>Between this, our recent deep dive on the valiant conjecture race, and Claude's Riemann claim earlier this fall, it's just been an insane run of AI mathematics claims.</v>
+
+141
+00:18:10.296 --> 00:18:11.017
+<v Maya>It really has.</v>
+
+142
+00:18:11.377 --> 00:18:26.267
+<v Daniel>So what does this all mean? Let's connect it directly back to you, the listener, maybe running that global shipping network we talked about at the very beginning. If an AI really settled Smale's ninth problem, what actually changes for your business analytics tomorrow?</v>
+
+143
+00:18:26.865 --> 00:18:39.335
+<v Maya>Practically speaking, very little in the short term. Simplex and interior point solvers already work incredibly well for daily operations. So your supply chain software isn't going to suddenly route trucks 10 times faster tomorrow morning.</v>
+
+144
+00:18:39.655 --> 00:18:45.480
+<v Daniel>But theoretically, it reshapes the entire foundational boundary of computer science and operations research.</v>
+
+145
+00:18:46.100 --> 00:18:55.928
+<v Maya>It proves that the barrier we thought existed in linear programming was just a matter of perspective. We just needed a completely alien way to rescale the geometry to see past the trap.</v>
+
+146
+00:18:56.160 --> 00:19:11.150
+<v Daniel>And that leads to a rather provocative final thought for you to mull over. Just consider the sheer strangeness of the era we have just entered. A 58-page answer to an open problem from the 1980s didn't come from a tenured professor working quietly in</v>
+
+147
+00:19:11.190 --> 00:19:12.310
+<v Daniel>a cabin for a decade.</v>
+
+148
+00:19:12.370 --> 00:19:12.991
+<v Maya>No, not at all.</v>
+
+149
+00:19:13.451 --> 00:19:22.977
+<v Daniel>It was dumped onto GitHub as unpolished, raw research data by an unnamed internal AI model, generated faster than any human expert could even read it.</v>
+
+150
+00:19:23.097 --> 00:19:24.338
+<v Maya>It's wild to think about.</v>
+
+151
+00:19:24.938 --> 00:19:39.931
+<v Daniel>Are we moving into a future where AI casually generates profound foundational mathematical truths and human mathematicians are reduced to archaeologists just sifting through AI data dumps, trying to reverse engineer and understand the brilliance of the proofs it leaves</v>
+
+152
+00:19:39.991 --> 00:19:43.078
+<v Daniel>behind? Something to think about the next time you look at a shipping route.</v>

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 07:47:09 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 07:47:09 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2355,5 +2355,24 @@ Reference: Hales, T. (2026). What mathematicians should know about the Lean Theo
       <pubDate>Wed, 25 Nov 2026 07:24:50 +0000</pubDate>
       <itunes:episode>123</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/123%20-%20Two%20AI%20Labs%20Claim%20Valiants%20Conjecture%20In%20One%20Week.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>124 - When AI Claims To Settle Linear Programming</title>
+      <description>Strongly Polynomial Linear Programming (November 2026) + Superpolynomial Graph Diameter of Simple Polytopes (November 2026)
+
+In this episode we unpack two companion papers that OpenAI posted to its openai/math GitHub repository on 24 November 2026, both written by an unnamed internal OpenAI model and released with Lean formalizations. The first, a 58 page paper, claims a deterministic strongly polynomial algorithm for linear programming, which would answer Smale's ninth problem: the number of arithmetic steps depends only on the numbers of variables and constraints, not on the size of the numbers. The second, 57 pages, claims to disprove the polynomial Hirsch conjecture by building polytopes whose shortest edge paths grow faster than any polynomial. Together they say linear programming can be solved strongly polynomially, just not by walking along edges the way the simplex method does.
+
+We walk through the first paper's three certificates (a strictly complementary optimum, an improving ray, a sparse Farkas certificate), its "extremal prices" search that rescales coordinates to read reliable signs and its logarithmic compression on demand, and the claimed spin-offs for convex quadratic programming, contractions and mean-payoff games. We then cover the second paper's superpolynomial diameter construction and its packing linear programs with superpolynomially long edge paths between explicit optima. We use Steve Smale's 1998 problem list for the question itself, Francisco Santos's 43 dimensional Hirsch counterexample, Spielman and Teng's smoothed analysis of why the simplex method works in practice, and Allamigeon, Benchimol, Gaubert and Joswig's proof that log-barrier interior point methods are not strongly polynomial. We close on what the Lean code does and does not check (rational inputs, not Smale's real-number setting), the fact that no human expert has yet reviewed either paper, and what a machine-written answer to a decades-old problem means for optimization and business analytics.
+
+Reference: OpenAI. (2026). Strongly polynomial linear programming. OpenAI Math Release preprint, 24 November 2026. https://github.com/openai/math/tree/main/preprints/Strongly-polynomial-linear-programming-November-24-2026
+Reference: OpenAI. (2026). Superpolynomial graph diameter of simple polytopes. OpenAI Math Release preprint, 24 November 2026. https://github.com/openai/math/tree/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026
+Reference: Smale, S. (1998). Mathematical problems for the next century. The Mathematical Intelligencer, 20(2), 7–15. https://doi.org/10.1007/BF03025291
+Reference: Santos, F. (2012). A counterexample to the Hirsch conjecture. Annals of Mathematics, 176(1), 383–412. arXiv:1006.2814. https://arxiv.org/abs/1006.2814
+Reference: Spielman, D. A., &amp; Teng, S.-H. (2004). Smoothed analysis of algorithms: Why the simplex algorithm usually takes polynomial time. Journal of the ACM, 51(3), 385–463. arXiv:cs/0111050. https://arxiv.org/abs/cs/0111050
+Reference: Allamigeon, X., Benchimol, P., Gaubert, S., &amp; Joswig, M. (2018). Log-barrier interior point methods are not strongly polynomial. SIAM Journal on Applied Algebra and Geometry, 2(1), 140–178. arXiv:1708.01544. https://arxiv.org/abs/1708.01544</description>
+      <guid isPermaLink="false">36e91586e686c5a29240de074b7ecb49cd31da55</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/124%20-%20When%20AI%20Claims%20To%20Settle%20Linear%20Programming.m4a" length="14429554" type="audio/mp4" />
+      <pubDate>Thu, 26 Nov 2026 07:26:21 +0000</pubDate>
+      <itunes:episode>124</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/124%20-%20When%20AI%20Claims%20To%20Settle%20Linear%20Programming.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
