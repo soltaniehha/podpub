@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 07:47:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 07:37:48 +0000</lastBuildDate>
     <itunes:author>Mohammad Soltaniehha</itunes:author>
     <itunes:block>yes</itunes:block>
     <itunes:category text="Education" />
@@ -2374,5 +2374,24 @@ Reference: Allamigeon, X., Benchimol, P., Gaubert, S., &amp; Joswig, M. (2018). 
       <pubDate>Thu, 26 Nov 2026 07:26:21 +0000</pubDate>
       <itunes:episode>124</itunes:episode>
     <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/124%20-%20When%20AI%20Claims%20To%20Settle%20Linear%20Programming.vtt" type="text/vtt" language="en" /></item>
+    <item>
+      <title>125 - Can AI Agents Pass A Research Entrance Exam</title>
+      <description>REE: A Scientific Research Entrance Exam for AI Agents (November 2026)
+
+In this episode we unpack a new benchmark from Zeqi Zhou, Weihao Xuan and 18 co-authors at TokenWave AI, the University of Tokyo, Carnegie Mellon, Toronto and other universities, posted to arXiv on 25 November 2026. REE poses 100 expert-reviewed open research problems across 23 domains, from materials science and seizure detection to linguistics and science of science, and gives an AI agent 12 hours to improve a working starter solution. Its central finding: judged against an established expert solution run under the same conditions, the two leading agents, Claude Opus 5.5 and GPT-6.1 Sol, do better on 86 and 81 percent of the problems.
+
+We walk through REE's design (a 0 to 100 scale from the starter solution to the metric's upper bound, held-out test instances the agent never sees, and checkpoints at 1, 2, 4, 8 and 12 hours), the scores (39.6 and 38.2 for the leaders against 24.4 for the expert solutions, with GLM-5.3 and Grok 4.7 close to the experts), and the finding that the leaders pass the experts within about two hours. We look at how they win: an LLM judge finds the best methods mostly tailor the field's standard method (51 percent of tasks) or combine existing ones (45 percent), with case studies on structural breaks in time series, CO2 uptake in porous frameworks and confluence proofs, where both leaders fall short. We set this against MLE-bench, METR's RE-Bench, AlphaEvolve, Google's Co-Scientist and Anthropic's Agent4Sci, which found agents' gains came mostly from engineering tricks rather than research insight. We close on the limits (only problems a program can score, one run per agent) and what it means for doing and teaching research.
+
+Reference: Zhou, Z., Liu, M., Liu, J., et al. (2026). REE: A Scientific Research Entrance Exam for AI Agents. arXiv:2611.34646. https://arxiv.org/abs/2611.34646
+Reference: Zhong, M., Li, S., Carlini, N., &amp; Jagielski, M. (2026). Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild? arXiv:2610.28763. https://arxiv.org/abs/2610.28763
+Reference: Chan, J. S., Chowdhury, N., Jaffe, O., et al. (2025). MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering. ICLR 2025. arXiv:2410.07095. https://arxiv.org/abs/2410.07095
+Reference: Wijk, H., Lin, T., Becker, J., Jawhar, S., Parikh, N., Broadley, T., et al. (2024). RE-Bench: Evaluating frontier AI R&amp;D capabilities of language model agents against human experts. arXiv:2411.15114. https://arxiv.org/abs/2411.15114
+Reference: Novikov, A., Vũ, N., Eisenberger, M., et al. (2025). AlphaEvolve: A coding agent for scientific and algorithmic discovery. arXiv:2506.13131. https://arxiv.org/abs/2506.13131
+Reference: Gottweis, J., Weng, W.-H., Daryin, A., et al. (2026). Accelerating scientific discovery with Co-Scientist. Nature, 655, 487–496. arXiv:2502.18864. https://arxiv.org/abs/2502.18864</description>
+      <guid isPermaLink="false">961dcf1a873245e3fd5dac6cc61946c54f2634d6</guid>
+      <enclosure url="https://soltaniehha.com/podpub/audio/125%20-%20Can%20AI%20Agents%20Pass%20A%20Research%20Entrance%20Exam.m4a" length="11284471" type="audio/mp4" />
+      <pubDate>Fri, 27 Nov 2026 07:21:21 +0000</pubDate>
+      <itunes:episode>125</itunes:episode>
+    <podcast:transcript url="https://soltaniehha.com/podpub/transcripts/125%20-%20Can%20AI%20Agents%20Pass%20A%20Research%20Entrance%20Exam.vtt" type="text/vtt" language="en" /></item>
   </channel>
 </rss>
