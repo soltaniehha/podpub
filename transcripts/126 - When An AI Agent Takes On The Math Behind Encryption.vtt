@@ -1,0 +1,613 @@
+WEBVTT
+
+1
+00:00:00.220 --> 00:00:06.024
+<v Daniel>You know, usually when we talk about digital security, there's this expectation of absolute permanence.</v>
+
+2
+00:00:06.564 --> 00:00:08.025
+<v Maya>Right, like a mathematical fortress.</v>
+
+3
+00:00:08.286 --> 00:00:21.575
+<v Daniel>Exactly. You lock your bank data or, you know, your private messages inside. You turn the key, and the underlying math basically guarantees that the safe won't open for billions of years, even if you had, like, a whole warehouse full of supercomputers chipping away at it.</v>
+
+4
+00:00:22.312 --> 00:00:36.782
+<v Maya>Well, yeah. And I mean, we build our entire modern digital infrastructure on that very assumption. The core idea is that certain math problems are just fundamentally too hard and too time consuming to solve because, you know, if they weren't, the digital economy would just collapse overnight.</v>
+
+5
+00:00:37.348 --> 00:00:52.296
+<v Daniel>But then, and this is wild, you look at what happened just two days ago, on November 25, 2026, and suddenly you realize someone, or well, rather something, just quietly published a 150-page blueprint</v>
+
+6
+00:00:52.776 --> 00:00:56.158
+<v Daniel>for how you might actually dismantle the walls of that fortress.</v>
+
+7
+00:00:56.716 --> 00:00:57.878
+<v Maya>It really is staggering.</v>
+
+8
+00:00:58.158 --> 00:01:12.820
+<v Daniel>It's humbling. I mean, I struggle to get an AI to write a coherent grocery list without, you know, hallucinating that I need industrial-grade titanium. But this AI just generated three world-class mathematical papers with zero human intervention.</v>
+
+9
+00:01:13.275 --> 00:01:27.786
+<v Maya>Yeah, it is the absolute definition of a paradigm shift. What we are looking at today is a historic tectonic moment in theoretical computer science. But I should add, it is also a moment that requires incredibly</v>
+
+10
+00:01:27.886 --> 00:01:36.712
+<v Maya>careful, critical thinking to separate the actual verified facts from the wild, frankly, apocalyptic fiction currently spreading online.</v>
+
+11
+00:01:37.378 --> 00:01:52.326
+<v Daniel>So true. So welcome to your custom tailored deep dive. Our mission today is to unpack three highly complex groundbreaking math papers that Google Research just dropped onto GitHub. Now the hook here, read the footnote on the very</v>
+
+12
+00:01:52.386 --> 00:01:53.486
+<v Daniel>first page of each paper.</v>
+
+13
+00:01:53.886 --> 00:01:55.187
+<v Maya>Yeah, that footnote is incredible.</v>
+
+14
+00:01:55.542 --> 00:02:10.417
+<v Daniel>It explicitly states there was absolutely zero human interaction beyond the initial prompt. No human mathematician guiding the proofs. No exhausted grad students checking the logic late at night. Generated entirely by an AI system called</v>
+
+15
+00:02:10.497 --> 00:02:13.420
+<v Daniel>Cogentic, running on Google's Gemini 4 model.</v>
+
+16
+00:02:14.038 --> 00:02:28.749
+<v Maya>The output is just, it's hard to overstate. We are talking about a combined total of around 150 pages of the densest, most elite number theory imaginable, solving problems that have stumped human geniuses for three decades.</v>
+
+17
+00:02:29.130 --> 00:02:43.903
+<v Daniel>It's mind blowing. So we're going to use these three brand new Google papers as our core story today. But to give you the full picture, we're also pulling from a background paper from September 2026 about the Cogentic system itself. plus a couple of older</v>
+
+18
+00:02:43.983 --> 00:02:52.730
+<v Daniel>foundational benchmark papers by mathematicians like Lenstra, Pomeranz, Klein-Yun, and Wesolowski, just to provide some much-needed historical context.</v>
+
+19
+00:02:53.210 --> 00:02:54.731
+<v Maya>Which is very necessary here.</v>
+
+20
+00:02:55.092 --> 00:03:09.603
+<v Daniel>Definitely. Okay, let's unpack this. Before we can even look at what the AI actually proved, we have to talk about the mechanics. How does a machine write 150 pages of flawless, world-class math from a single prompt?</v>
+
+21
+00:03:10.143 --> 00:03:24.688
+<v Maya>Right. So the architecture of the Cogentic system is what makes this possible. And it is vastly different from, say, a standard chatbot just predicting the next word in a sentence. Right. Cogentic is actually a multi-agent harness for automated proof discovery. It</v>
+
+22
+00:03:25.168 --> 00:03:40.074
+<v Maya>operates through this continuous adversarial loop. You start with an orchestrator agent. And its job is to survey the mathematical landscape and then assign a whole population of independent prover agents to explore different logical directions</v>
+
+23
+00:03:40.114 --> 00:03:40.874
+<v Maya>simultaneously.</v>
+
+24
+00:03:41.395 --> 00:03:56.201
+<v Daniel>So if we translate that, it's like a hyperspeed university math department, right? The orchestrator is the department chair handing out assignments, and the provers are this army of brilliant, tireless grad students working on different angles of a</v>
+
+25
+00:03:56.261 --> 00:03:57.322
+<v Daniel>theorem in parallel.</v>
+
+26
+00:03:57.897 --> 00:04:08.029
+<v Maya>That is a perfect visualization, actually. But the crucial part is what happens to their work after that. Once those provers draft their mathematical steps, they are subjected to verifiers.</v>
+
+27
+00:04:08.529 --> 00:04:08.809
+<v Daniel>Uh-oh.</v>
+
+28
+00:04:09.030 --> 00:04:23.767
+<v Maya>Yeah. These verifiers are separate, completely adversarial AI agents. They start with the fundamental assumption that every single step the provers wrote is dead wrong. And they ruthlessly attack the logic. Only the steps that survived this brutal gauntlet make it into</v>
+
+29
+00:04:23.847 --> 00:04:33.921
+<v Maya>what Cogente calls a persistent verified ledger. Wow. And then subsequent rounds of provers just build upon that ledger step by step until a final consolidated proof emerges.</v>
+
+30
+00:04:34.438 --> 00:04:49.206
+<v Daniel>Honestly, those verifiers sound exactly like my old university thesis defense committee. Just ruthless peer reviewers looking for any excuse to tear your work apart. But listen, before we get into the math those provers actually produced,</v>
+
+31
+00:04:49.987 --> 00:04:51.908
+<v Daniel>I have to address the massive elephant in the room.</v>
+
+32
+00:04:52.308 --> 00:04:53.188
+<v Maya>The internet rumors?</v>
+
+33
+00:04:53.408 --> 00:05:07.984
+<v Daniel>Yes. If you've been on the internet or tech forums in the last 24 hours, you've seen the panic. Yesterday, there was a news explainer in Nature where Scott Aronson relayed rumors that AI labs had found polynomial time attacks on RSA encryption.</v>
+
+34
+00:05:08.865 --> 00:05:14.407
+<v Daniel>People are terrified that the internet is fundamentally broken right now. Is that what these three Google papers are?</v>
+
+35
+00:05:14.873 --> 00:05:29.656
+<v Maya>I am very glad you brought this up because we need to completely and immediately deflate that rumor. No, the Internet is not broken. These three Google papers are absolutely not the rumored polynomial time bombshell that Scott Aronson was discussing.</v>
+
+36
+00:05:29.936 --> 00:05:44.649
+<v Maya>OK. Yeah, the AI did not break RSA encryption. These are what mathematicians call sub-exponential theory results. It is incredibly important for you to understand this distinction so we stay grounded in reality as we dig into the</v>
+
+37
+00:05:44.669 --> 00:05:48.211
+<v Maya>mathematics, rather than getting swept up in all this internet hysteria.</v>
+
+38
+00:05:48.469 --> 00:06:03.442
+<v Daniel>Thank goodness. I was about to go withdraw all my cash from the ATM. So since we've established your bank account is still secure today, let's look at what the AI actually did achieve in its first paper regarding integer factorization, which is the mathematical bedrock of</v>
+
+39
+00:06:03.582 --> 00:06:04.242
+<v Daniel>RSA encryption.</v>
+
+40
+00:06:04.663 --> 00:06:19.641
+<v Maya>Right. To appreciate the breakthrough here, we have to understand how computer scientists classify the difficulty of math problems. Integer factorization, the process of taking a massive number and finding the two prime numbers that multiply together to create it, is basically</v>
+
+41
+00:06:19.701 --> 00:06:22.163
+<v Maya>the lock and key of public key encryption.</v>
+
+42
+00:06:22.403 --> 00:06:27.648
+<v Daniel>And we categorize algorithms that try to pick that lock by how their runtime scales as the numbers get bigger,</v>
+
+43
+00:06:27.968 --> 00:06:28.548
+<v Maya>right?</v>
+
+44
+00:06:29.249 --> 00:06:44.141
+<v Daniel>So think of it in three distinct buckets for a second. First, you have polynomial time. That bucket is fast and practical. If an RSA-breaking algorithm fell into this bucket, cryptography as we know it would be dead. Then, at the absolute opposite extreme, you</v>
+
+45
+00:06:44.161 --> 00:06:50.687
+<v Daniel>have exponential time. That means the time required to solve the problem grows astronomically fast as the numbers get bigger.</v>
+
+46
+00:06:51.028 --> 00:06:52.989
+<v Maya>Which makes encryption virtually unbreakable.</v>
+
+47
+00:06:53.310 --> 00:06:58.633
+<v Daniel>Right. But then you have this awkward, messy middle ground called sub-exponential time.</v>
+
+48
+00:06:59.073 --> 00:07:13.823
+<v Maya>And mathematicians use a specific tool called L notation to describe that messy middle ground. In plain words, L notation is essentially a mathematical slider that sits between 0 and 1. If your slider is all the way down at 0, you are in that fast polynomial time.</v>
+
+49
+00:07:14.424 --> 00:07:18.867
+<v Daniel>And if your slider is pushed all the way up to 1, you are in the astronomically slow exponential time.</v>
+
+50
+00:07:19.167 --> 00:07:19.507
+<v Maya>Correct.</v>
+
+51
+00:07:20.616 --> 00:07:25.100
+<v Daniel>So if I'm looking at this first AI paper, where exactly does its algorithm sit on that slider?</v>
+
+52
+00:07:25.420 --> 00:07:40.013
+<v Maya>Well, paper one claims to unconditionally factor integers in expected time L sub n of one third 105. It achieves this with a workspace of one third 40. But the critical number there is the one third. That is where the slider sits.</v>
+
+53
+00:07:40.418 --> 00:07:55.142
+<v Daniel>Let's give that some serious historical weight because that one-third is a massive, massive deal for theorists. Up until two days ago, the best method humans had was something called the general number field sieve. It is operated at a slider position of one-third, specifically</v>
+
+54
+00:07:55.922 --> 00:08:00.483
+<v Daniel>L of one-third, roughly 1.92, since the early 1990s.</v>
+
+55
+00:08:01.203 --> 00:08:03.384
+<v Maya>Right, but there is a huge asterisk there.</v>
+
+56
+00:08:04.069 --> 00:08:18.698
+<v Daniel>Exactly. It only worked based on unproven heuristics, basically incredibly educated guesses that mathematicians assumed were true, but nobody could rigorously mathematically prove. If we look at our background sources, the best proven rigorous</v>
+
+57
+00:08:18.778 --> 00:08:29.344
+<v Daniel>bound where a human actually proved the math beyond a shadow of a doubt was by Lenstra and Pomerantz all the way back in 1992, and their slider was stuck at one half.</v>
+
+58
+00:08:30.172 --> 00:08:44.660
+<v Maya>So what Cogenic just did was take that one-third exponent, which humans have relied on via blind guesswork for 30 years, and turned it into an ironclad unconditional theorem. The AI proved that the boundary of rigorous mathematics actually sits at one-third.</v>
+
+59
+00:08:45.280 --> 00:08:51.884
+<v Maya>It claims a zero-error Las Vegas algorithm that fully factors every integer without any unproven hypotheses.</v>
+
+60
+00:08:52.710 --> 00:09:07.504
+<v Daniel>Here's where it gets really interesting. To do this, to make that leap from a guess to a proven theorem, the AI had to overcome four massive historical obstacles that had completely stumped human mathematicians for decades. And it</v>
+
+61
+00:09:07.584 --> 00:09:08.345
+<v Daniel>did it alone.</v>
+
+62
+00:09:08.826 --> 00:09:17.034
+<v Maya>The obstacles are deeply technical, but they represent fundamental brick walls in number theory. For instance, the AI had to navigate around Siegel zeros.</v>
+
+63
+00:09:17.214 --> 00:09:23.800
+<v Daniel>Well, stop right there. You're going to have to translate that into English for me. What on earth is a Siegel zero and why is it an obstacle?</v>
+
+64
+00:09:24.132 --> 00:09:35.455
+<v Maya>Fair enough. Think of Siegel zeros as theoretical landmines buried in the math. We don't actually know if they exist, but if they do, they completely ruin our ability to predict how prime numbers are distributed.</v>
+
+65
+00:09:35.855 --> 00:09:36.235
+<v Daniel>Okay.</v>
+
+66
+00:09:36.635 --> 00:09:51.521
+<v Maya>Normally, primes follow certain predictable patterns. A Siegel zero would be a bizarre exception that causes primes to clump together unpredictably. Because human mathematicians couldn't prove these landmines don't exist, they couldn't guarantee their factoring algorithms would always work. The</v>
+
+67
+00:09:51.601 --> 00:09:57.924
+<v Maya>AI bypassed this entirely by inventing a novel mathematical tool it calls a Siegel zero-free smooth weight.</v>
+
+68
+00:09:58.885 --> 00:10:04.268
+<v Daniel>So instead of trying to prove the landmine doesn't exist, the AI basically invented a hovercraft to float right over it.</v>
+
+69
+00:10:04.328 --> 00:10:11.532
+<v Maya>Precisely that. And that was just one obstacle. It also had to mathematically guarantee the smoothness of polynomial values along a descent.</v>
+
+70
+00:10:12.157 --> 00:10:18.188
+<v Daniel>meaning it had to prove certain massive equations would always break down into small, manageable prime factors.</v>
+
+71
+00:10:18.482 --> 00:10:32.893
+<v Maya>Right. It had to figure out a new way of certifying algebraic squares, which it did using something called three-adic-Newton-Henzel square roots. And finally, it had to guarantee fruitfulness, ensuring the algorithm actually produces a useful answer rather than just</v>
+
+72
+00:10:33.373 --> 00:10:35.314
+<v Maya>looping back on itself infinitely.</v>
+
+73
+00:10:35.495 --> 00:10:46.963
+<v Daniel>It's an absolute flex of creative mathematics. The AI also introduced a discrete Laplace polynomial sampler and elegantly designed the algorithm to call itself recursively on its own cofactors.</v>
+
+74
+00:10:47.453 --> 00:10:48.313
+<v Maya>It really is elegant.</v>
+
+75
+00:10:48.674 --> 00:11:03.639
+<v Daniel>But I need to push back on something here because earlier you mentioned a specific number that caught my ear. Let's look at the constants for a second. You said the old heuristic sieve had a constant of about 1.92, but the AI's newly proven algorithm has a constant of</v>
+
+76
+00:11:03.659 --> 00:11:15.724
+<v Daniel>105. I'm no cryptographer, but doesn't a constant of 105 in an exponent mean this new algorithm is astronomically slower to actually run on a computer?</v>
+
+77
+00:11:16.377 --> 00:11:31.082
+<v Maya>Oh, absolutely. The practical impact for hacking or computation is essentially nil. A constant of 105 in the exponent means this algorithm is absurdly, hilariously slower in practice than the heuristic sieves we currently use. You would never, ever run this</v>
+
+78
+00:11:31.182 --> 00:11:34.403
+<v Maya>AI-generated algorithm to actually factor a number in the real world.</v>
+
+79
+00:11:34.563 --> 00:11:36.704
+<v Daniel>Right. The heat death of the universe would happen first.</v>
+
+80
+00:11:37.084 --> 00:11:51.789
+<v Maya>Exactly. But you have to separate practical code breaking from theoretical mathematics. This is a theoretical triumph. The A.I. conquered the theory, providing an unconditional proof that the fundamental limit is one third, even if the algorithm itself is useless for a</v>
+
+81
+00:11:51.829 --> 00:11:52.169
+<v Maya>hacker.</v>
+
+82
+00:11:52.730 --> 00:12:07.459
+<v Daniel>Got it. So it's about drawing the absolute boundaries of what is mathematically true, not building a faster lockpick. So factoring is one major pillar of cryptography. But the other pillar is the discrete logarithm problem.</v>
+
+83
+00:12:08.281 --> 00:12:12.648
+<v Daniel>And that naturally brings us to the AI's second paper, which tackles exactly that.</v>
+
+84
+00:12:13.498 --> 00:12:28.482
+<v Maya>Yes. So while integer factoring is about splitting a massive number into primes, discrete logarithms deal with finding a hidden exponent within a finite field. If I give you a base number and a final result, the discrete log problem asks, well, how many times was</v>
+
+85
+00:12:28.542 --> 00:12:33.623
+<v Maya>that base multiplied by itself in the specific enclosed modular arithmetic system?</v>
+
+86
+00:12:34.485 --> 00:12:46.231
+<v Daniel>The best analogy I can think of for discrete logs is mixing paint. If I give you a bucket of yellow paint and a bucket of blue paint, it is incredibly easy for you to mix them together to create a specific shade of green.</v>
+
+87
+00:12:46.771 --> 00:12:47.572
+<v Maya>Very easy, yeah.</v>
+
+88
+00:12:47.692 --> 00:13:00.298
+<v Daniel>But if I hand you that mixed bucket of green paint and ask you to unmix it, like to mathematically separate it back into the exact original proportions of the starting colors, it's practically impossible.</v>
+
+89
+00:13:00.607 --> 00:13:15.181
+<v Maya>The mixing is easy. The unmixing is incredibly hard. And Paper 2 tackles the unmixing process in what are called small characteristic finite fields. The AI claims an expected time of p to the power of little o of log n for discrete logs in these</v>
+
+90
+00:13:15.241 --> 00:13:15.961
+<v Maya>specific fields.</v>
+
+91
+00:13:16.302 --> 00:13:22.307
+<v Daniel>And to give you some context on why that matters, we have to look at our background source by Klein-Young and Wesolowski from 2022.</v>
+
+92
+00:13:23.240 --> 00:13:35.203
+<v Maya>Right. Klein-Young and Wesolowski did groundbreaking work to establish a quasi-polynomial bound. They essentially took a famous heuristic algorithm from 2014, the Barbalescu-Gaudry-Joutoumet algorithm, and made it rigorous.</v>
+
+93
+00:13:35.603 --> 00:13:37.463
+<v Daniel>Okay, so what did the AI do?</v>
+
+94
+00:13:37.983 --> 00:13:46.645
+<v Maya>What Comagica has done in paper two is push the mathematical boundary strictly below that quasi-polynomial bound into sub-quasi-polynomial territory.</v>
+
+95
+00:13:47.168 --> 00:13:53.869
+<v Daniel>How exactly did it pull that off? The previous Klein-Young paper hit a wall because of the way they were reducing the size of the equations, right?</v>
+
+96
+00:13:54.069 --> 00:14:08.472
+<v Maya>Yes. The prior human models were limited because they could only reduce the field extension degrees by a constant factor at each step. It was a bottleneck. Comagica completely bypassed that obstruction. It used a brand new method it calls linearized Frobenius pencils</v>
+
+97
+00:14:09.072 --> 00:14:12.973
+<v Maya>over a slowly growing intermediate field alongside elliptic presentations.</v>
+
+98
+00:14:13.409 --> 00:14:28.238
+<v Daniel>Okay, I have to throw a flag on the play again. Linearized Frobenius pencils over a slowly growing intermediate field? That is some heavy, dense terminology. Can we unpack that? Why does a slowly growing</v>
+
+99
+00:14:28.419 --> 00:14:29.599
+<v Daniel>field help solve this?</v>
+
+100
+00:14:30.400 --> 00:14:45.321
+<v Maya>Think of it like trying to build a bridge across a massive canyon. The old mathematical methods were essentially trying to stretch one massive, heavy piece of steel all the way across in a single go. The math gets incredibly complex and heavy, and eventually it breaks</v>
+
+101
+00:14:45.401 --> 00:14:46.121
+<v Maya>under its own weight.</v>
+
+102
+00:14:46.381 --> 00:14:46.801
+<v Daniel>Makes sense.</v>
+
+103
+00:14:47.541 --> 00:15:02.443
+<v Maya>What the AI realized is that instead of trying to solve the discrete log in one massive mathematical space, it builds a slowly growing intermediate field. It solves a tiny piece of the puzzle in a very simple space and then carefully expands the space</v>
+
+104
+00:15:02.723 --> 00:15:07.164
+<v Maya>step by step, carrying the solution with it. It builds the bridge pillar by pillar.</v>
+
+105
+00:15:08.044 --> 00:15:11.985
+<v Daniel>So it's trading one big messy problem for a bunch of smaller manageable ones.</v>
+
+106
+00:15:12.525 --> 00:15:23.558
+<v Maya>Exactly. Instead of standard polynomials, it utilizes an additive structure that trades a massive, unused mathematical budget for an unbounded ability to reduce the degree of the problem.</v>
+
+107
+00:15:24.118 --> 00:15:39.035
+<v Daniel>You'd found a much smarter, sparser pathway through the math by building it up slowly. But let me stop you there, because we need to bring this back to the real world. If the AI is breaking discrete logs in sub-quasi-polynomial time, doesn't that mean standard Diffie-Hellman</v>
+
+108
+00:15:39.055 --> 00:15:44.583
+<v Daniel>encryption is compromised? Because Diffie-Hellman is a protocol that secures a vast amount of our daily internet traffic.</v>
+
+109
+00:15:45.043 --> 00:15:59.892
+<v Maya>Once again, you can breathe easy. The deployed Diffie-Hellman protocols that protect your actual data do not use these specific small characteristic fields. They use large characteristic fields or elliptic curves, which are fundamentally different mathematical structures and</v>
+
+110
+00:15:59.952 --> 00:16:02.713
+<v Maya>are entirely unaffected by this specific breakthrough.</v>
+
+111
+00:16:03.194 --> 00:16:03.634
+<v Daniel>Good to know.</v>
+
+112
+00:16:04.034 --> 00:16:08.677
+<v Maya>Yeah, it is a monumental leap in finite field theory, but your secure messages remain secure.</v>
+
+113
+00:16:09.526 --> 00:16:24.412
+<v Daniel>Okay, so paper is one in two-year brilliant, mind-bending achievements. But they both share a fundamental flaw, at least in the eyes of pure mathematicians. They rely on something called randomness. In computer science, they call these Las Vegas algorithms. They rely</v>
+
+114
+00:16:24.472 --> 00:16:38.118
+<v Daniel>on rolling the dice. And for a theorist, luck is a dirty word. They want absolute ironclad certainty. Did the AI give them a way to solve this without the dice roll? Because that brings us to paper three.</v>
+
+115
+00:16:38.598 --> 00:16:50.075
+<v Maya>Well, a Las Vegas algorithm always gives the correct answer eventually, but its running time depends on random coin flips inside the code. Sometimes it's fast, sometimes it's slow, but on average, it hits the target.</v>
+
+116
+00:16:50.374 --> 00:17:05.043
+<v Daniel>Think of a randomized Las Vegas algorithm like trying to find a specific house in a giant neighborhood by just wandering around and making random turns. Eventually, you will stumble upon it, and you'll know it's the right house. But the time it</v>
+
+117
+00:17:05.083 --> 00:17:18.931
+<v Daniel>takes relies completely on luck. A deterministic algorithm, on the other hand, is a guaranteed systematic grid search. You check block by block, street by street. No dice rolls, no luck, just absolute certainty.</v>
+
+118
+00:17:19.284 --> 00:17:34.220
+<v Maya>If we connect this to the bigger picture, Mathematicians crave that grid search. They want to know the absolute guaranteed worst case scenario for solving a problem. And in paper three, the AI claims a completely deterministic factoring algorithm in time</v>
+
+119
+00:17:34.340 --> 00:17:38.163
+<v Maya>exponential to the power of three times the natural log of n to the three quarters.</v>
+
+120
+00:17:38.383 --> 00:17:50.973
+<v Daniel>Which absolutely shatters the previous best known deterministic bound. Previously, human mathematicians, Harvey and Harvey Hitmeyer, had it at n to the one fifth. The AI blew past that like it was standing still.</v>
+
+121
+00:17:51.296 --> 00:18:02.993
+<v Maya>It didn't stop there either. Paper 3 also claims a deterministic, sub-exponential way to find a quadratic non-residue modulo a prime. And the most shocking part is how it did it, without assuming the Riemann hypothesis.</v>
+
+122
+00:18:03.314 --> 00:18:18.258
+<v Daniel>Now, that is huge. We need to explain why that matters. The Riemann hypothesis is basically a mathematical cheat code. It's an unsolved problem about how prime numbers are spaced out. Usually, when human mathematicians want to make massive leaps like this, they have to</v>
+
+123
+00:18:18.278 --> 00:18:24.519
+<v Daniel>put a disclaimer on their work. They have to say, you know, assuming the Riemann hypothesis is true, then our shortcut works.</v>
+
+124
+00:18:25.039 --> 00:18:26.400
+<v Maya>Right. It's a huge caveat.</v>
+
+125
+00:18:26.700 --> 00:18:32.621
+<v Daniel>It's like building a house on a foundation you're just praying is solid. But the AI didn't need to borrow that credit card.</v>
+
+126
+00:18:32.896 --> 00:18:47.888
+<v Maya>No, it didn't. By proving this unconditionally, the AI beat the Burgess-Vinogradov bound. That is an exponential barrier that has stood like a brick wall in number theory since 1957. Generations of mathematicians have bashed their heads against it.</v>
+
+127
+00:18:48.329 --> 00:18:50.310
+<v Daniel>Wow. And the AI just went around it.</v>
+
+128
+00:18:50.911 --> 00:18:58.257
+<v Maya>It sidestepped the wall completely by pulling the quadratic character back into biquadratic composita and proving Walsh-Hadamard positivity.</v>
+
+129
+00:18:58.799 --> 00:19:13.528
+<v Daniel>Again, that is deeply technical. But the core takeaway here is that the AI found a backdoor that humans missed for almost 70 years. And even if this deterministic algorithm is slower in practice than the randomized ones in papers one and two, removing the</v>
+
+130
+00:19:13.588 --> 00:19:19.732
+<v Daniel>randomness entirely, removing the need for luck or unproven cheat codes, is a theoretical masterpiece.</v>
+
+131
+00:19:20.392 --> 00:19:25.375
+<v Maya>It really is. It completely redefines what we thought was possible in computational number theory.</v>
+
+132
+00:19:25.687 --> 00:19:38.642
+<v Daniel>So we now have three revolutionary papers. They solve 30-year-old problems in a single week. But there is a massive looming tension we have to address here before we wrap up. It's the crisis of verification.</v>
+
+133
+00:19:39.330 --> 00:19:47.136
+<v Maya>Yeah, the mathematics is beautiful, but the context of how it was delivered is highly problematic for the traditional scientific method.</v>
+
+134
+00:19:47.256 --> 00:20:02.226
+<v Daniel>Look at the background source on the cognetic system from September 2026. The creators explicitly stated that those earlier smaller results were independently verified by domain experts. Human beings sat down and checked the math. But these new November 25</v>
+
+135
+00:20:02.546 --> 00:20:04.608
+<v Daniel>papers have absolutely no such claim.</v>
+
+136
+00:20:05.311 --> 00:20:19.876
+<v Maya>They were dumped directly onto GitHub. There was no peer review. The AI wrote 150 pages of the densest, most complex number theory possible, combining novel techniques that human experts have never seen before with zero human</v>
+
+137
+00:20:19.976 --> 00:20:20.436
+<v Maya>oversight.</v>
+
+138
+00:20:21.136 --> 00:20:33.980
+<v Daniel>How can the mathematical community possibly trust this? I mean, we are talking about an AI that operates without human intuition, outputting results that would take human experts months, if not years, to properly read, let alone verify.</v>
+
+139
+00:20:34.832 --> 00:20:49.576
+<v Maya>This raises an important question about the future of peer review itself. If you read the README files on the Google GitHub repository, they promise that complete formalizations in Lean 4, which is a specialized computer-based interactive theorem prover,</v>
+
+140
+00:20:50.177 --> 00:20:51.857
+<v Maya>are coming in a companion submission.</v>
+
+141
+00:20:52.317 --> 00:20:54.578
+<v Daniel>But as of today, those Lean 4 files aren't there.</v>
+
+142
+00:20:54.936 --> 00:21:05.640
+<v Maya>No, as of today, nobody outside of Google can run the code to check it. We are looking at a fundamental crisis of trust. How should mathematics treat unreviewed AI-generated proofs of this magnitude?</v>
+
+143
+00:21:05.888 --> 00:21:06.648
+<v Daniel>It's unprecedented.</v>
+
+144
+00:21:06.988 --> 00:21:21.651
+<v Maya>Exactly. And we are in the middle of a frantic AI math race right now. November 2026 has seen breathtaking claims from several different AI labs trying to outdo each other. The speed of progress is violently fast. What counts as</v>
+
+145
+00:21:21.711 --> 00:21:32.793
+<v Maya>confirmation now? If an AI writes a 150 page proof that no single human can easily comprehend and we have to rely on another AI system like Lean 4 to tell us if it's correct, where does that leave us?</v>
+
+146
+00:21:33.175 --> 00:21:48.006
+<v Daniel>It's dizzying. So what does this all mean for you listening? Let's summarize the landscape. We have just witnessed an incredible historic week for theoretical computer science. An AI agent independently broke major historical bounds,</v>
+
+147
+00:21:48.406 --> 00:21:57.633
+<v Daniel>approved the LL1 third slider for factoring, achieved sub-quasi-polynomial bounds for discrete logs, and shattered deterministic records without needing the Riemann hypothesis.</v>
+
+148
+00:21:57.833 --> 00:21:59.074
+<v Maya>Just an unbelievable week.</v>
+
+149
+00:21:59.314 --> 00:22:11.571
+<v Daniel>But, crucially, there is absolutely no immediate threat to the encryption keeping your data safe today. The practical constants are too large, and the specific fields targeted aren't the ones your bank uses. The fortress holds.</v>
+
+150
+00:22:11.877 --> 00:22:26.603
+<v Maya>The real takeaway isn't about encryption breaking today. It's about the philosophical shift and how scientific discovery happens. I want to leave you with this thought to ponder. If an AI can independently generate a 150-page proof that settles a</v>
+
+151
+00:22:26.863 --> 00:22:41.381
+<v Maya>30-year-old math problem in just a few days, and humans now have to rely on other AI systems just to verify if it is true, What is the actual role of the human mathematician in the year 2027 and beyond? Are we</v>
+
+152
+00:22:41.421 --> 00:22:47.496
+<v Maya>transitioning from being the creators and pioneers of mathematics to merely becoming the spectators of it?</v>
+
+153
+00:22:47.656 --> 00:22:56.819
+<v Daniel>It's a wild thought. The mathematical fortress hasn't been breached by hackers, but the AI just showed us it can see the blueprint of the walls better than the architects who built them.</v>
